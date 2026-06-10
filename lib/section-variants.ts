@@ -195,7 +195,11 @@ export function getSectionVariant<T extends SectionVariantConfig>(
  */
 export function getSectionClasses(config: SectionVariantConfig): string {
   const baseClasses = 'section-variant';
-  
+  // Defensive: System S contract-shaped pages (seeded in Phase 0D) carry section
+  // variants the legacy renderer doesn't know; fall back instead of crashing until
+  // the Phase 1 section renderer replaces this path.
+  if (!config) return baseClasses;
+
   const layoutClasses = {
     container: 'container-custom',
     'full-width': 'w-full',

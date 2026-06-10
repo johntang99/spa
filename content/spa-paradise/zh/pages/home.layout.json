@@ -1,34 +1,17 @@
 {
   "sections": [
-    {
-      "id": "hero"
-    },
-    {
-      "id": "credentials"
-    },
-    {
-      "id": "reviewsWidget"
-    },
-    {
-      "id": "howItWorks"
-    },
-    {
-      "id": "conditions"
-    },
-    {
-      "id": "services"
-    },
-    {
-      "id": "blog"
-    },
-    {
-      "id": "firstVisit"
-    },
-    {
-      "id": "whyChooseUs"
-    },
-    {
-      "id": "cta"
-    }
+    { "id": "hero", "mode": "dark" },
+    { "id": "trustBar", "mode": "light" },
+    { "id": "categoryGrid", "mode": "light" },
+    { "id": "serviceCards", "mode": "well" },
+    { "id": "steps", "mode": "light" },
+    { "id": "iconGrid", "mode": "dark" },
+    { "id": "featurePanel", "mode": "light" },
+    { "id": "promoStrip", "mode": "well" },
+    { "id": "testimonials", "mode": "light" },
+    { "id": "teamGrid", "mode": "light" },
+    { "id": "napHours", "mode": "dark" },
+    { "id": "mapBlock", "mode": "dark" },
+    { "id": "ctaBanner", "mode": "dark" }
   ]
 }
