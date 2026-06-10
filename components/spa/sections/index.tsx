@@ -9,6 +9,8 @@ import {
 } from '@/lib/spa/catalog';
 import { shouldRenderRating } from '@/lib/contracts/validation-rules';
 import TreatmentSelector from './TreatmentSelector';
+import Faq from './Faq';
+import RelatedLinks from './RelatedLinks';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -16,6 +18,11 @@ export interface SectionCtx {
   catalog: Catalog;
   testimonials: any[];
   team: any[];
+  faqs: any[];
+  packages: any[];
+  giftCards: any[];
+  /** category id when rendering a /services/[category] page */
+  categoryId?: string;
   mode?: 'light' | 'well' | 'dark';
 }
 
@@ -343,4 +350,7 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   mapBlock: MapBlock,
   ctaBanner: CtaBanner,
   treatmentSelector: TreatmentSelector,
+  faq: Faq,
+  relatedLinks: RelatedLinks,
+  conditionLinks: RelatedLinks,
 };

@@ -14,23 +14,38 @@ export interface SpaPageBundle {
   ctx: SectionCtx;
 }
 
-export async function loadSpaPage(pageName: string, locale: Locale): Promise<SpaPageBundle> {
+/** Load just the SectionCtx (collections + site info) — for routes that build their
+ *  own sections (e.g. /services/[category], dynamic SEO pages). */
+export async function loadSpaContext(locale: Locale): Promise<SectionCtx> {
   const siteId = await getRequestSiteId();
-  const [page, layout, catalog, testimonials, team, siteInfo] = await Promise.all([
-    loadPageContent<Record<string, any>>(pageName, locale, siteId),
-    loadPageContent<{ sections?: LayoutSection[] }>(`${pageName}.layout`, locale, siteId),
+  const [catalog, testimonials, team, faqs, packages, giftCards, siteInfo] = await Promise.all([
     loadContent<Catalog>(siteId, locale, 'collections/services.json'),
     loadContent<{ items: any[] }>(siteId, locale, 'collections/testimonials.json'),
     loadContent<{ items: any[] }>(siteId, locale, 'collections/team.json'),
+    loadContent<{ items: any[] }>(siteId, locale, 'collections/faqs.json'),
+    loadContent<{ items: any[] }>(siteId, locale, 'collections/packages.json'),
+    loadContent<{ items: any[] }>(siteId, locale, 'collections/gift-cards.json'),
     loadSiteInfo(siteId, locale),
   ]);
-  const ctx: SectionCtx = {
+  return {
     locale: (locale === 'zh' ? 'zh' : 'en') as 'en' | 'zh',
     siteInfo: (siteInfo as Record<string, any>) || {},
     catalog: catalog || { categories: [], services: [], addons: [] },
     testimonials: testimonials?.items || [],
     team: team?.items || [],
+    faqs: faqs?.items || [],
+    packages: packages?.items || [],
+    giftCards: giftCards?.items || [],
   };
+}
+
+export async function loadSpaPage(pageName: string, locale: Locale): Promise<SpaPageBundle> {
+  const siteId = await getRequestSiteId();
+  const [page, layout, ctx] = await Promise.all([
+    loadPageContent<Record<string, any>>(pageName, locale, siteId),
+    loadPageContent<{ sections?: LayoutSection[] }>(`${pageName}.layout`, locale, siteId),
+    loadSpaContext(locale),
+  ]);
   return { page, layout, ctx };
 }
 

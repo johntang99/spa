@@ -1,7 +1,7 @@
 # Chinese Medicine Template
 
 
-lsof -ti:3003 | xargs kill -9
+lsof -ti:3080 | xargs kill -9
 rm -rf .next
 npm run dev
 

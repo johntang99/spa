@@ -14,7 +14,7 @@ import { getSiteDisplayName } from '@/lib/siteInfo';
 export function getBaseUrlFromHost(host?: string | null): URL {
   const trimmed = (host || '').trim();
   if (!trimmed) {
-    return new URL('http://localhost:3003');
+    return new URL('http://localhost:3080');
   }
 
   const isLocal =
@@ -22,7 +22,8 @@ export function getBaseUrlFromHost(host?: string | null): URL {
     trimmed.endsWith('.local') ||
     trimmed.startsWith('127.0.0.1') ||
     trimmed.endsWith(':3000') ||
-    trimmed.endsWith(':3003');
+    trimmed.endsWith(':3003') ||
+    trimmed.endsWith(':3080');
   const protocol = isLocal ? 'http' : 'https';
   return new URL(`${protocol}://${trimmed}`);
 }
