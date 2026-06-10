@@ -1,27 +1,45 @@
 {
-  "intro": "By using this website, you agree to the following terms. If you do not agree, please do not use this site.",
-  "title": "Terms of Use",
+  "title": "Terms of Service",
+  "intro": "By using this website and booking with Spa Paradise, you agree to the following terms. This is a template provided for review; please confirm it with your own legal counsel before launch.",
   "sections": [
     {
-      "body": "Information on this site is provided for general educational purposes and does not replace professional medical advice.",
-      "heading": "Website Use"
+      "heading": "Bookings & Cancellations",
+      "body": "No payment is required to book — you pay after your treatment. If you need to cancel or reschedule, please give us at least 4 hours' notice and there is no charge. Repeated no-shows may be asked to prepay for future appointments."
     },
     {
-      "body": "Submitting a request does not guarantee an appointment. We will confirm availability directly with you.",
-      "heading": "Appointments and Services"
+      "heading": "Pricing & Payment",
+      "body": "All prices are published on our menu and are the same for everyone. Gratuity is appreciated but never required, and there is no service charge. We accept card, cash, Apple Pay, and Spa Paradise gift cards."
     },
     {
-      "body": "All content, design, and materials on this site are owned by Dr Huang Clinic unless otherwise stated.",
-      "heading": "Intellectual Property"
+      "heading": "Gift Cards",
+      "body": "Spa Paradise gift cards and gift certificates do not expire and carry no dormancy, service, or maintenance fees, consistent with New York State law. Any remaining balance stays on the card for future use. Gift cards are redeemable for services and are not redeemable for cash except where required by law.",
+      "bullets": [
+        "No expiration date",
+        "No fees of any kind",
+        "Remaining balance carries over"
+      ]
     },
     {
-      "body": "We are not responsible for any damages resulting from the use of this website or reliance on its content.",
-      "heading": "Limitation of Liability"
+      "heading": "Health & Wellness Notice",
+      "body": "Our services are provided for relaxation and general wellness. They are not medical care and are not a substitute for professional medical advice from a qualified healthcare provider. If you have a medical condition, are pregnant, or have any health concerns, please consult your doctor before booking, and let your therapist know so we can keep you comfortable and safe."
     },
     {
-      "body": "We may update these terms periodically. The latest version will always be available on this page.",
-      "heading": "Changes to Terms"
+      "heading": "Conduct & Safety",
+      "body": "We are a professional, licensed establishment. All treatments are non-sexual in nature. We reserve the right to end a session and decline service for inappropriate conduct."
+    },
+    {
+      "heading": "Changes & Contact",
+      "body": "We may update these terms from time to time; the current version is always posted here. Questions? Contact Spa Paradise at 12 Grove St, Middletown, NY 10940, (845) 800-6600, or spa.paradise.middletown@gmail.com."
     }
   ],
-  "updatedAt": "2026-02-10"
+  "updatedAt": "2026-06-10",
+  "seo": {
+    "title": "Terms of Service | Spa Paradise Middletown, NY",
+    "description": "Booking, cancellation, pricing, gift-card, and wellness terms for Spa Paradise in Middletown, NY.",
+    "h1": "Terms of Service",
+    "canonicalUrl": "/en/terms",
+    "schema": ["WebPage"],
+    "keywords": ["spa paradise terms of service"],
+    "noindex": false, "changefreq": "yearly", "priority": 0.2, "keywordCluster": "terms", "pageType": "terms"
+  }
 }
