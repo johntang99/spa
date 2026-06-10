@@ -14,6 +14,9 @@ import RelatedLinks from './RelatedLinks';
 import MenuTable from './MenuTable';
 import RichText from './RichText';
 import AddOnsList from './AddOnsList';
+import StatsBand from './StatsBand';
+import Checklist from './Checklist';
+import GalleryGrid from './GalleryGrid';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -361,4 +364,8 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   richTextPolicies: RichText,
   addOnsList: AddOnsList,
   promoStripPackages: PromoStrip,
+  statsBand: StatsBand,
+  checklist: Checklist,
+  galleryGrid: GalleryGrid,
+  galleryGridVideo: GalleryGrid,
 };
