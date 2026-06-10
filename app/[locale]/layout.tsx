@@ -137,6 +137,16 @@ export default async function LocaleLayout({
   const themeRadius = theme?.shape?.radius || '8px';
   const themeShadow = theme?.shape?.shadow || '0 4px 20px rgba(0,0,0,0.08)';
 
+  // System S "Jade Hour" primitive tokens — emitted from theme.tokens.primitives so
+  // a preset swap (theme.json) reskins the whole site with zero markup change.
+  // Semantic/component tokens live in globals.css and reference these primitives.
+  const primitives = (theme as { tokens?: { primitives?: Record<string, string> } })?.tokens?.primitives;
+  const primitivesCss = primitives
+    ? Object.entries(primitives)
+        .map(([key, value]) => `      --${key}: ${value};`)
+        .join('\n')
+    : '';
+
   // Generate inline style for theme variables
   const themeStyle = theme ? `
     :root {
@@ -175,6 +185,9 @@ export default async function LocaleLayout({
 
       /* Layout */
       --section-padding-y: ${themeSectionPaddingY};
+
+      /* System S primitive tokens (Jade Hour / active preset) */
+${primitivesCss}
     }
   ` : '';
   
@@ -213,7 +226,7 @@ export default async function LocaleLayout({
         />
       )}
       
-      <div className="min-h-screen flex flex-col relative">
+      <div className="spa-site min-h-screen flex flex-col relative" lang={locale}>
         <Header
           locale={locale as Locale}
           siteId={site.id}

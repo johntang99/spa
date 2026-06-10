@@ -11,14 +11,14 @@
   },
   "colors": {
     "primary": {
-      "50": "#E7ECEA",
-      "100": "#C7D2CD",
+      "50": "#ECE6DC",
+      "100": "#E2DACB",
       "dark": "#16221E",
       "light": "#2C4138",
       "DEFAULT": "#1E2D28"
     },
     "secondary": {
-      "50": "#F6EEDD",
+      "50": "#E2DACB",
       "dark": "#A98444",
       "light": "#D9B873",
       "DEFAULT": "#C9A35C"

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { defaultLocale, locales, type Locale } from '@/lib/i18n';
+import { fontVariables } from '@/lib/fonts';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function RootLayout({
   const htmlLang = getLocaleFromPath();
   return (
     <html lang={htmlLang} suppressHydrationWarning>
-      <body>
+      <body className={fontVariables}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

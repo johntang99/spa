@@ -1,68 +1,37 @@
 {
   "cta": {
-    "link": "/zh/contact",
-    "text": "線上預約"
+    "link": "/zh/book",
+    "text": "立即预约"
   },
   "menu": {
     "logo": {
-      "text": "黃醫生診所",
+      "text": "天堂水疗",
       "emoji": "",
       "image": {
-        "alt": "黃醫生診所",
-        "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/home/drhuang-2.svg"
+        "alt": "天堂水疗",
+        "src": ""
       },
-      "subtext": "傳統中醫與針灸"
+      "subtext": "米德尔敦日间水疗"
     },
     "items": [
-      {
-        "url": "/zh",
-        "text": "首頁"
-      },
-      {
-        "url": "/zh/services",
-        "text": "服務項目"
-      },
-      {
-        "url": "/zh/conditions",
-        "text": "治療病症"
-      },
-      {
-        "url": "/zh/about",
-        "text": "關於我們"
-      },
-      {
-        "url": "/zh/case-studies",
-        "text": ""
-      },
-      {
-        "url": "/zh/pricing",
-        "text": "收費標準"
-      },
-      {
-        "url": "/zh/blog",
-        "text": "網誌"
-      },
-      {
-        "url": "/zh/gallery",
-        "text": "圖片集錦"
-      },
-      {
-        "url": "/zh/contact",
-        "text": "聯繫我們"
-      }
+      { "url": "/zh", "text": "首页" },
+      { "url": "/zh/services", "text": "护理项目" },
+      { "url": "/zh/pricing", "text": "价格" },
+      { "url": "/zh/gift-cards", "text": "礼品卡" },
+      { "url": "/zh/packages", "text": "套餐" },
+      { "url": "/zh/about", "text": "关于我们" },
+      { "url": "/zh/contact", "text": "联系我们" }
     ],
-    "variant": "transparent"
+    "variant": "mega",
+    "fontWeight": "semibold"
   },
   "topbar": {
-    "badge": "接受新患者",
-    "hours": "週一至週五 9:00-18:00",
-    "phone": "(845) 381-1106",
-    "address": "71 East Main Street, Middletown, NY 10940",
-    "phoneHref": "tel:+18453811106",
-    "addressHref": "https://maps.google.com/?q=71+East+Main+Street,+Middletown,+NY+10940"
+    "badge": "每天营业",
+    "hours": "每天 9:00–21:00",
+    "phone": "(845) 800-6600",
+    "address": "12 Grove St, Middletown, NY 10940",
+    "phoneHref": "tel:+18458006600",
+    "addressHref": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940"
   },
-  "languages": [
-    "en",
-    "zh"
-  ]
+  "languages": ["en", "zh"]
 }

@@ -1,9 +1,9 @@
 {
   "_preset": {
-    "id": "jade-hour",
-    "name": "Jade Hour",
-    "category": "luxury",
-    "description": "Dusk calm, East-meets-West premium. Porcelain/ink-pine surfaces, candle gold accent."
+    "id": "porcelain-blush",
+    "name": "Porcelain Blush",
+    "category": "warm",
+    "description": "Bright, feminine day-spa. Warm white / deep taupe surfaces, clay rose accent, soft gold secondary."
   },
   "shape": {
     "radius": "16px",
@@ -11,21 +11,21 @@
   },
   "colors": {
     "primary": {
-      "50": "#E7ECEA",
-      "100": "#C7D2CD",
-      "dark": "#16221E",
-      "light": "#2C4138",
-      "DEFAULT": "#1E2D28"
+      "50": "#F2E9E3",
+      "100": "#E8DAD1",
+      "dark": "#3A312D",
+      "light": "#5C4F49",
+      "DEFAULT": "#4A3F3A"
     },
     "secondary": {
-      "50": "#F6EEDD",
-      "dark": "#A98444",
-      "light": "#D9B873",
-      "DEFAULT": "#C9A35C"
+      "50": "#E8DAD1",
+      "dark": "#9E5F50",
+      "light": "#D29A8A",
+      "DEFAULT": "#BE7C6B"
     },
     "backdrop": {
-      "primary": "#F7F4EE",
-      "secondary": "#ECE6DC"
+      "primary": "#FBF7F4",
+      "secondary": "#F2E9E3"
     }
   },
   "layout": {
@@ -50,20 +50,20 @@
   "tokens": {
     "divider": "ripple-curve",
     "primitives": {
-      "ink-pine": "#1E2D28",
-      "pine-soft": "#2C4138",
-      "pine-deep": "#16221E",
-      "porcelain": "#F7F4EE",
-      "linen": "#ECE6DC",
-      "linen-deep": "#E2DACB",
-      "candle": "#C9A35C",
-      "candle-bright": "#D9B873",
-      "candle-deep": "#A98444",
-      "blush-stone": "#C98D7B",
-      "mist": "#9FB0A9",
-      "mist-strong": "#7E948B",
-      "char": "#23211D",
-      "char-soft": "#4A463E",
+      "ink-pine": "#4A3F3A",
+      "pine-soft": "#5C4F49",
+      "pine-deep": "#3A312D",
+      "porcelain": "#FBF7F4",
+      "linen": "#F2E9E3",
+      "linen-deep": "#E8DAD1",
+      "candle": "#BE7C6B",
+      "candle-bright": "#D29A8A",
+      "candle-deep": "#9E5F50",
+      "blush-stone": "#D8B877",
+      "mist": "#B3A8A0",
+      "mist-strong": "#94877E",
+      "char": "#2E2723",
+      "char-soft": "#5A4F49",
       "white": "#FFFFFF"
     }
   }

@@ -1,18 +1,19 @@
 {
   "home": {
-    "title": "Traditional Chinese Medicine & Acupuncture in Middletown, NY | Dr Huang Clinic",
-    "description": "Offering acupuncture, herbal medicine, and holistic care in Middletown, NY. Book an appointment today."
+    "title": "Day Spa & Massage in Middletown, NY | Spa Paradise",
+    "description": "Licensed therapeutic massage, foot reflexology, facials, and body care in Middletown, NY. Transparent pricing, online booking, open every day, English & Chinese."
   },
   "pages": {
     "about": {
-      "title": "About Dr. Huang | Dr Huang Clinic",
-      "description": "Meet Dr. Huang and our clinic story."
+      "title": "About Us | Spa Paradise Middletown",
+      "description": "Meet our licensed therapists and the story behind Middletown's complete day-spa destination."
     },
     "services": {
-      "title": "Acupuncture & Herbal Medicine | Dr Huang Clinic",
-      "description": "Personalized treatments for pain, stress, and wellness."
+      "title": "Spa Services & Treatments | Spa Paradise Middletown",
+      "description": "Massage, foot reflexology, facials, body treatments, and more — one menu, one destination, transparent pricing."
     }
   },
-  "title": "Dr Huang Clinic",
-  "description": "Traditional Chinese Medicine & Acupuncture in Middletown, NY."
+  "titleTemplate": "%s | Spa Paradise Middletown",
+  "title": "Spa Paradise Middletown",
+  "description": "Middletown's complete day-spa destination — licensed massage, reflexology, facials, and body care in English and Chinese."
 }
