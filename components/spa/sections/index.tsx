@@ -11,6 +11,9 @@ import { shouldRenderRating } from '@/lib/contracts/validation-rules';
 import TreatmentSelector from './TreatmentSelector';
 import Faq from './Faq';
 import RelatedLinks from './RelatedLinks';
+import MenuTable from './MenuTable';
+import RichText from './RichText';
+import AddOnsList from './AddOnsList';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -353,4 +356,9 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   faq: Faq,
   relatedLinks: RelatedLinks,
   conditionLinks: RelatedLinks,
+  menuTable: MenuTable,
+  richText: RichText,
+  richTextPolicies: RichText,
+  addOnsList: AddOnsList,
+  promoStripPackages: PromoStrip,
 };
