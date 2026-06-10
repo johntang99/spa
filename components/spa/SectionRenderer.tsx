@@ -19,7 +19,7 @@ export default function SectionRenderer({
 }) {
   const sections = layout?.sections || [];
   const isDark = (m?: string) => m === 'dark';
-  let prevMode: string | undefined;
+  let prevMode: LayoutSection['mode'];
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function SectionRenderer({
         }
         // Ripple divider at every mode switch into/out of a dark immersion section.
         const divider = i > 0 && isDark(prevMode) !== isDark(s.mode)
-          ? <RippleDivider key={`d-${i}`} variant="ripple-curve" />
+          ? <RippleDivider key={`d-${i}`} variant="ripple-curve" fromMode={prevMode || 'light'} toMode={s.mode || 'light'} />
           : null;
         prevMode = s.mode;
         return (
