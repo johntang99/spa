@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "id": "gc-50", "type": "denomination", "label": "$50 Gift Card", "amount": 50, "image": "", "stripeLink": "", "active": true, "order": 1 },
+    { "id": "gc-100", "type": "denomination", "label": "$100 Gift Card", "amount": 100, "image": "", "stripeLink": "", "active": true, "order": 2 },
+    { "id": "gc-150", "type": "denomination", "label": "$150 Gift Card", "amount": 150, "image": "", "stripeLink": "", "active": true, "order": 3 },
+    { "id": "gift-signature-facial", "type": "treatment", "label": "Signature Facial Gift", "amount": 75, "serviceRef": "signature-facial", "image": "", "stripeLink": "", "active": true, "order": 4 },
+    { "id": "gift-couples-massage", "type": "treatment", "label": "Couples Massage Gift (60 min)", "amount": 170, "serviceRef": "couples-massage", "image": "", "stripeLink": "", "active": true, "order": 5 }
+  ]
+}

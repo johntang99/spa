@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "id": "mei-lin-chen", "name": "Mei-Lin Chen", "photo": "", "credential": "NY LMT · 12 years", "years": 12, "specialties": ["deep-tissue-massage", "tui-na-bodywork", "massage-cupping"], "languages": ["en", "zh"], "bio": "Mei-Lin trained in both Western therapeutic massage and traditional Tui Na, and leads our East Asian therapies. Clients come to her for deep, focused work on long-standing tension.", "order": 1 },
+    { "id": "james-park", "name": "James Park", "photo": "", "credential": "NY LMT · 8 years", "years": 8, "specialties": ["sports-massage", "deep-tissue-massage"], "languages": ["en"], "bio": "A former athletic trainer, James specializes in sports and recovery work for runners, lifters, and weekend warriors across Orange County.", "order": 2 },
+    { "id": "sofia-reyes", "name": "Sofia Reyes", "photo": "", "credential": "NY LMT · 10 years", "years": 10, "specialties": ["prenatal-massage", "swedish-massage", "hot-stone-massage"], "languages": ["en", "es"], "bio": "Certified in prenatal massage, Sofia creates calm, side-lying comfort for expecting clients and is a favorite for hot stone and Swedish relaxation.", "order": 3 },
+    { "id": "grace-wong", "name": "Grace Wong", "photo": "", "credential": "Licensed Esthetician · 9 years", "years": 9, "specialties": ["signature-facial", "anti-aging-facial", "deep-cleansing-facial"], "languages": ["en", "zh"], "bio": "Grace leads our facial and skincare menu, tailoring each treatment to the skin in front of her rather than a one-size protocol.", "order": 4 }
+  ]
+}

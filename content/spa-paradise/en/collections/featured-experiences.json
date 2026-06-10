@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "id": "marathon-recovery", "title": "Marathon Recovery", "treatmentRef": "sports-massage", "situation": "Training for the Wallkill half-marathon left tight calves and a nagging IT band.", "outcome": "A 90-minute sports session before race week loosened the stride — and a standing monthly slot since.", "photo": "", "order": 1 },
+    { "id": "date-night-reset", "title": "Date-Night Reset", "treatmentRef": "couples-massage", "situation": "An anniversary with two busy schedules and no time to plan something special.", "outcome": "A side-by-side 90-minute couples massage with tea service became the easiest gift to repeat.", "photo": "", "order": 2 },
+    { "id": "first-trimester-calm", "title": "First-Trimester Calm", "treatmentRef": "prenatal-massage", "situation": "Lower-back pressure and trouble settling at the end of a long week.", "outcome": "Certified side-lying prenatal work that finally felt safe and genuinely restful.", "photo": "", "order": 3 },
+    { "id": "desk-bound-no-more", "title": "Desk-Bound No More", "treatmentRef": "deep-tissue-massage", "situation": "Years of laptop work had locked up the neck and shoulders.", "outcome": "Focused deep-tissue work plus simple between-visit advice that actually stuck.", "photo": "", "order": 4 },
+    { "id": "bridal-glow", "title": "Bridal Glow", "treatmentRef": "signature-facial", "situation": "A bride wanting calm, clear skin the week before the wedding.", "outcome": "A tailored signature facial — no surprises, no harsh peels, just glow.", "photo": "", "order": 5 },
+    { "id": "on-her-feet-all-day", "title": "On Her Feet All Day", "treatmentRef": "foot-reflexology", "situation": "A nurse finishing twelve-hour shifts with aching, swollen feet.", "outcome": "Reflexology in the recliner lounge became the weekly reset that made the shifts bearable.", "photo": "", "order": 6 }
+  ]
+}

@@ -116,7 +116,7 @@ export const giftCardProductSchema = z.object({
   amount: z.number().nonnegative(),
   serviceRef: ref.optional(),
   image: mediaRef.optional(),
-  stripeLink: z.string().url().optional(), // empty → button disabled + admin flag
+  stripeLink: z.string().url().optional().or(z.literal('')), // empty → button disabled + admin flag
   stripePriceId: z.string().optional(),
   active: z.boolean().default(true),
   order: z.number().int().default(0),
@@ -132,7 +132,7 @@ export const packageSchema = z.object({
   valueTotal: z.number().nonnegative().optional(), // computed read-only
   perks: z.array(loc).optional(),
   purchaseMode: z.enum(['stripe', 'inquiry']), // membership locked to "inquiry" until Phase 5
-  stripeLink: z.string().url().optional(),
+  stripeLink: z.string().url().optional().or(z.literal('')),
   active: z.boolean().default(true),
 }).refine((p) => p.kind !== 'membership' || p.purchaseMode === 'inquiry', {
   message: 'membership packages must use purchaseMode "inquiry" until Phase 5',

@@ -1,0 +1,39 @@
+{
+  "categories": [
+    { "id": "massage", "name": "按摩", "intro": "持证理疗按摩——放松、恢复与舒缓。", "order": 1 },
+    { "id": "foot-reflexology", "name": "足部与反射疗法", "intro": "躺椅休息区的足部穴位疗法。", "order": 2 },
+    { "id": "east-asian-therapies", "name": "东方传统疗法", "intro": "传统的拔罐、刮痧与推拿理疗。", "order": 3 },
+    { "id": "facials", "name": "面部护理", "intro": "适合各种肤质的清洁、护理与补水。", "order": 4 },
+    { "id": "body-treatments", "name": "身体护理", "intro": "磨砂、裹敷与背部护理，焕活全身。", "order": 5 },
+    { "id": "combos-packages", "name": "套组与套餐", "intro": "精心搭配的多重护理与超值套餐。", "order": 6 },
+    { "id": "add-ons", "name": "附加项目", "intro": "为任意符合条件的护理升级加分。", "order": 7 }
+  ],
+  "services": [
+    { "id": "swedish-massage", "categoryId": "massage", "name": "瑞典式按摩", "slug": "swedish-massage", "short": "舒缓流畅的手法，带来全身放松。", "image": "", "tiers": [{ "minutes": 30, "price": 45 }, { "minutes": 60, "price": 75 }, { "minutes": 90, "price": 110 }], "badge": "popular", "goalTags": ["relaxation", "stress-relief"], "intensity": 1, "enabled": true, "order": 1 },
+    { "id": "deep-tissue-massage", "categoryId": "massage", "name": "深层组织按摩", "slug": "deep-tissue-massage", "short": "缓慢而集中的力度，化解顽固的紧绷与结节。", "image": "", "tiers": [{ "minutes": 30, "price": 50 }, { "minutes": 60, "price": 85 }, { "minutes": 90, "price": 120 }], "badge": "popular", "goalTags": ["pain-relief", "muscle-tension", "recovery"], "intensity": 3, "relatedConditionRefs": ["massage-for-back-pain-middletown-ny", "massage-for-neck-shoulder-tension-middletown-ny"], "enabled": true, "order": 2 },
+    { "id": "hot-stone-massage", "categoryId": "massage", "name": "热石按摩", "slug": "hot-stone-massage", "short": "温热玄武岩层层融化紧张。", "image": "", "tiers": [{ "minutes": 60, "price": 95 }, { "minutes": 90, "price": 130 }], "goalTags": ["relaxation", "muscle-tension"], "intensity": 2, "enabled": true, "order": 3 },
+    { "id": "couples-massage", "categoryId": "massage", "name": "情侣按摩", "slug": "couples-massage", "short": "在私密情侣房中并肩享受。每对价格。", "image": "", "tiers": [{ "minutes": 60, "price": 170 }, { "minutes": 90, "price": 240 }], "badge": "popular", "goalTags": ["couples", "relaxation", "occasion"], "intensity": 1, "enabled": true, "order": 4 },
+    { "id": "prenatal-massage", "categoryId": "massage", "name": "孕期按摩", "slug": "prenatal-massage", "short": "持证侧卧护理，适合孕期第4–9个月。", "image": "", "tiers": [{ "minutes": 60, "price": 80 }, { "minutes": 90, "price": 115 }], "goalTags": ["prenatal", "relaxation"], "intensity": 1, "relatedConditionRefs": ["massage-for-prenatal-comfort-middletown-ny"], "enabled": true, "order": 5 },
+    { "id": "sports-massage", "categoryId": "massage", "name": "运动按摩", "slug": "sports-massage", "short": "针对训练与赛事的恢复手法。", "image": "", "tiers": [{ "minutes": 30, "price": 50 }, { "minutes": 60, "price": 85 }, { "minutes": 90, "price": 120 }], "goalTags": ["recovery", "pain-relief", "muscle-tension"], "intensity": 3, "enabled": true, "order": 6 },
+    { "id": "chair-massage", "categoryId": "massage", "name": "椅式按摩", "slug": "chair-massage", "short": "着装快速的颈肩背放松。", "image": "", "tiers": [{ "minutes": 30, "price": 35 }], "goalTags": ["quick", "stress-relief"], "intensity": 2, "enabled": true, "order": 7 },
+    { "id": "tui-na-bodywork", "categoryId": "massage", "name": "推拿", "slug": "tui-na-bodywork", "short": "传统中式理疗按摩。", "image": "", "tiers": [{ "minutes": 30, "price": 50 }, { "minutes": 60, "price": 85 }, { "minutes": 90, "price": 120 }], "goalTags": ["pain-relief", "muscle-tension"], "intensity": 3, "enabled": true, "order": 8 },
+    { "id": "aromatherapy-massage", "categoryId": "massage", "name": "芳香精油按摩", "slug": "aromatherapy-massage", "short": "瑞典式手法搭配精油调配。", "image": "", "tiers": [{ "minutes": 60, "price": 85 }, { "minutes": 90, "price": 120 }], "goalTags": ["relaxation", "stress-relief"], "intensity": 1, "enabled": true, "order": 9 },
+    { "id": "foot-reflexology", "categoryId": "foot-reflexology", "name": "足部反射疗法", "slug": "foot-reflexology", "short": "躺椅休息区的足部穴位疗法。", "image": "", "tiers": [{ "minutes": 30, "price": 40 }, { "minutes": 60, "price": 65 }], "badge": "popular", "goalTags": ["relaxation", "foot", "quick"], "intensity": 2, "enabled": true, "order": 10 },
+    { "id": "foot-body-combo", "categoryId": "foot-reflexology", "name": "足部+身体套组", "slug": "foot-body-combo", "short": "30分钟足疗，30分钟背肩。", "image": "", "tiers": [{ "minutes": 60, "price": 75 }], "goalTags": ["relaxation", "foot", "muscle-tension"], "intensity": 2, "enabled": true, "order": 11 },
+    { "id": "massage-cupping", "categoryId": "east-asian-therapies", "name": "按摩+拔罐", "slug": "massage-cupping", "short": "理疗按摩后以传统拔罐收尾。", "image": "", "tiers": [{ "minutes": 30, "price": 45 }, { "minutes": 60, "price": 90 }, { "minutes": 90, "price": 125 }], "goalTags": ["muscle-tension", "recovery"], "intensity": 3, "enabled": true, "order": 12 },
+    { "id": "gua-sha", "categoryId": "east-asian-therapies", "name": "刮痧护理", "slug": "gua-sha", "short": "传统刮痧手法，可于任意60分钟以上按摩中加做。", "image": "", "tiers": [{ "minutes": 30, "price": 15 }], "goalTags": ["muscle-tension"], "intensity": 2, "enabled": true, "order": 13 },
+    { "id": "signature-facial", "categoryId": "facials", "name": "招牌面部护理", "slug": "signature-facial", "short": "清洁、去角质、护理、补水。", "image": "", "tiers": [{ "minutes": 60, "price": 75 }], "badge": "popular", "goalTags": ["skincare", "relaxation"], "intensity": 1, "enabled": true, "order": 14 },
+    { "id": "deep-cleansing-facial", "categoryId": "facials", "name": "深层清洁面部护理", "slug": "deep-cleansing-facial", "short": "适合易堵塞或油性肌肤。", "image": "", "tiers": [{ "minutes": 60, "price": 85 }], "goalTags": ["skincare"], "intensity": 1, "enabled": true, "order": 15 },
+    { "id": "anti-aging-facial", "categoryId": "facials", "name": "抗衰老面部护理", "slug": "anti-aging-facial", "short": "紧致护理搭配针对性精华。", "image": "", "tiers": [{ "minutes": 60, "price": 95 }], "goalTags": ["skincare"], "intensity": 1, "enabled": true, "order": 16 },
+    { "id": "body-scrub", "categoryId": "body-treatments", "name": "身体磨砂", "slug": "body-scrub", "short": "全身去角质，并以补水收尾。", "image": "", "tiers": [{ "minutes": 60, "price": 70 }], "goalTags": ["skincare", "relaxation"], "intensity": 1, "enabled": true, "order": 17 },
+    { "id": "body-wrap", "categoryId": "body-treatments", "name": "身体裹敷", "slug": "body-wrap", "short": "温热裹敷，柔软肌肤、促进循环。", "image": "", "tiers": [{ "minutes": 60, "price": 85 }], "goalTags": ["skincare", "relaxation"], "intensity": 1, "enabled": true, "order": 18 },
+    { "id": "back-treatment", "categoryId": "body-treatments", "name": "背部护理", "slug": "back-treatment", "short": "专为背部设计的“面部护理”。", "image": "", "tiers": [{ "minutes": 30, "price": 45 }], "goalTags": ["skincare"], "intensity": 1, "enabled": true, "order": 19 }
+  ],
+  "addons": [
+    { "id": "hot-stones", "name": "热石", "price": 15, "appliesTo": "all" },
+    { "id": "aromatherapy", "name": "芳香精油", "price": 10, "appliesTo": "all" },
+    { "id": "cupping-finish", "name": "拔罐收尾", "price": 20, "appliesTo": "all" },
+    { "id": "scalp-massage", "name": "头皮按摩", "price": 10, "appliesTo": "all" },
+    { "id": "extra-30", "name": "加时30分钟", "price": 35, "appliesTo": "all" }
+  ]
+}

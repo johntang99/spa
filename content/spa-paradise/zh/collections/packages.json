@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "id": "massage-facial-combo", "name": "按摩 + 招牌面部护理套组", "kind": "package", "includes": [{ "serviceRef": "swedish-massage", "tierMinutes": 60 }, { "serviceRef": "signature-facial", "tierMinutes": 60 }], "price": 145, "purchaseMode": "stripe", "active": true, "order": 1 },
+    { "id": "couples-retreat", "name": "情侣静享套餐", "kind": "package", "includes": [{ "serviceRef": "couples-massage", "tierMinutes": 90 }], "price": 260, "perks": ["90分钟情侣按摩", "双人茶点服务", "私密情侣房"], "purchaseMode": "stripe", "active": true, "order": 2 },
+    { "id": "spa-day", "name": "水疗一日", "kind": "package", "includes": [{ "serviceRef": "swedish-massage", "tierMinutes": 60 }, { "serviceRef": "signature-facial", "tierMinutes": 60 }, { "serviceRef": "body-scrub", "tierMinutes": 60 }], "price": 210, "perks": ["按摩", "招牌面部护理", "身体磨砂", "午餐休息"], "purchaseMode": "stripe", "active": true, "order": 3 },
+    { "id": "relax-renew-3pack", "name": "放松焕新三次套票", "kind": "package", "includes": [{ "serviceRef": "swedish-massage", "tierMinutes": 60 }, { "serviceRef": "swedish-massage", "tierMinutes": 60 }, { "serviceRef": "swedish-massage", "tierMinutes": 60 }], "price": 225, "perks": ["三次60分钟按摩", "6个月内使用", "可与亲友共享"], "purchaseMode": "stripe", "active": true, "order": 4 },
+    { "id": "monthly-membership", "name": "月度会员", "kind": "membership", "includes": [{ "serviceRef": "swedish-massage", "tierMinutes": 60 }], "price": 69, "perks": ["每月一次60分钟按摩，享会员价", "所有额外护理均享折扣", "当月未用按摩可顺延", "店内办理——随时取消"], "purchaseMode": "inquiry", "active": true, "order": 5 }
+  ]
+}
