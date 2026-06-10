@@ -78,11 +78,11 @@ const RESOURCES = [
   {
     slug: 'how-much-does-a-massage-cost-middletown-ny', cluster: 'resource-cost',
     en: { h1: 'How Much Does a Massage Cost in Middletown, NY?', title: 'How Much Does a Massage Cost in Middletown, NY?',
-      desc: 'Massage prices in Middletown, NY range from about {priceMin} to {priceMax}. Here is what you pay, with no hidden fees.',
+      desc: 'A clear guide to massage prices in Middletown, NY — every treatment and length, with no hidden fees.',
       answer: 'At Spa Paradise, massage in Middletown, NY ranges from about {priceMin} to {priceMax} depending on the treatment and length. Every price is published — what you see is what you pay, with no service charge and gratuity always optional.',
       body: '## What you pay\nOur menu lists a price for every treatment and length, from a 30-minute reset to a 90-minute deep session. Nothing is charged when you book; you pay after your treatment.\n\n## What affects the price\nLength is the biggest factor, followed by the type of work — a specialized treatment like hot stone or couples costs more than a standard Swedish. Add-ons such as hot stones or cupping are a small flat fee.\n\n## Tipping and fees\nGratuity is appreciated but never required, and there is no service charge or surprise add-on. The menu price is the treatment price.' },
     zh: { h1: '纽约米德尔敦按摩多少钱？', title: '纽约米德尔敦按摩多少钱？',
-      desc: '纽约米德尔敦的按摩价格约为 {priceMin} 至 {priceMax}。以下是您需要支付的费用，绝无隐藏收费。',
+      desc: '纽约米德尔敦按摩价格的清晰指南——每项护理与时长，绝无隐藏收费。',
       answer: '在天堂水疗，纽约米德尔敦的按摩价格约为 {priceMin} 至 {priceMax}，取决于护理类型与时长。每个价格都公开透明——所见即所付，没有服务费，小费始终自愿。',
       body: '## 您需要支付什么\n我们的菜单为每项护理与时长都标明价格，从30分钟的快速放松到90分钟的深层护理。预约时不收取任何费用，护理结束后再付款。\n\n## 哪些因素影响价格\n时长是最主要的因素，其次是护理类型——热石或情侣等专门护理会比标准瑞典式更贵。热石或拔罐等附加项目为小额固定费用。\n\n## 小费与费用\n小费我们心存感谢，但从不强制；没有服务费，也没有意外加价。菜单价格就是护理价格。' },
     svc: 'swedish-massage',
