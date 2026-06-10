@@ -43,6 +43,11 @@ export interface SectionCtx {
 }
 
 const t = (loc: string, en: string, zh: string) => (loc === 'zh' ? zh : en);
+const BADGE_LABELS: Record<string, { en: string; zh: string }> = {
+  popular: { en: 'popular', zh: '热门' },
+  new: { en: 'new', zh: '新品' },
+};
+const badgeLabel = (badge: string, loc: string) => (BADGE_LABELS[badge] ? (loc === 'zh' ? BADGE_LABELS[badge].zh : BADGE_LABELS[badge].en) : badge);
 const Section: React.FC<{ mode?: string; id?: string; className?: string; children: React.ReactNode }> = ({ mode = 'light', id, className = '', children }) => (
   <section id={id} className={`section on-${mode} ${className}`}>{children}</section>
 );
@@ -159,7 +164,7 @@ export function ServiceCards({ data, ctx }: { data: any; ctx: SectionCtx }) {
             <div key={s.id} className="card reveal">
               <div className="ph" style={{ aspectRatio: '4/3' }} data-label={s.name} />
               <div className="card-body">
-                <h3 style={{ marginBottom: 4 }}>{s.name}{s.badge ? <span className="pill-tag" style={{ marginLeft: 8 }}>{s.badge}</span> : null}</h3>
+                <h3 style={{ marginBottom: 4 }}>{s.name}{s.badge ? <span className="pill-tag" style={{ marginLeft: 8 }}>{badgeLabel(s.badge, ctx.locale)}</span> : null}</h3>
                 <p className="small" style={{ marginBottom: 12 }}>{s.short}</p>
                 {data.showTierChips !== false && <TierChips service={s} locale={ctx.locale} />}
               </div>
