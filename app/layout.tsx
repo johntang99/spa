@@ -39,6 +39,14 @@ export default function RootLayout({
   return (
     <html lang={htmlLang} suppressHydrationWarning>
       <body className={fontVariables}>
+        {/* Progressive enhancement: only hide .reveal content once JS confirms it can animate.
+            Runs during HTML parse (before paint) so JS users get the animation with no flash,
+            while no-JS / crawler / slow-connection users always see fully-visible content. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('reveal-ready')",
+          }}
+        />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
