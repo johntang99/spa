@@ -1,21 +1,8 @@
 {
   "sites": [
     {
-      "id": "dr-huang-clinic",
-      "name": "Dr Huang Clinic",
-      "domain": "drhuangclinic.com",
-      "enabled": true,
-      "defaultLocale": "en",
-      "supportedLocales": [
-        "en",
-        "zh"
-      ],
-      "createdAt": "2025-01-15T00:00:00Z",
-      "updatedAt": "2026-02-04T06:45:02.741Z"
-    },
-    {
-      "id": "golden-lotus-test",
-      "name": "Golden Lotus Acupuncture",
+      "id": "spa-paradise",
+      "name": "Spa Paradise",
       "domain": "",
       "enabled": true,
       "defaultLocale": "en",
@@ -23,47 +10,8 @@
         "en",
         "zh"
       ],
-      "createdAt": "2026-03-03T08:53:57.606Z",
-      "updatedAt": "2026-03-03T08:53:57.607Z"
-    },
-    {
-      "id": "acu-flushing",
-      "name": "Flushing Acupuncture",
-      "domain": "acupunctureflushing.com",
-      "enabled": true,
-      "defaultLocale": "en",
-      "supportedLocales": [
-        "en",
-        "zh"
-      ],
-      "createdAt": "2026-03-09T09:09:24.250Z",
-      "updatedAt": "2026-03-09T09:09:24.250Z"
-    },
-    {
-      "id": "acu-gangshi",
-      "name": "Gang Shi Acupuncture",
-      "domain": "shiacupuncture.com",
-      "enabled": true,
-      "defaultLocale": "en",
-      "supportedLocales": [
-        "en",
-        "zh"
-      ],
-      "createdAt": "2026-03-09T21:24:04.401Z",
-      "updatedAt": "2026-03-09T21:24:04.401Z"
-    },
-    {
-      "id": "goshen-acupuncture",
-      "name": "Kingsfoil Acupuncture",
-      "domain": "goshenacupuncture.com",
-      "enabled": true,
-      "defaultLocale": "en",
-      "supportedLocales": [
-        "en",
-        "zh"
-      ],
-      "createdAt": "2026-05-11T00:00:00.000Z",
-      "updatedAt": "2026-05-11T00:00:00.000Z"
+      "createdAt": "2026-06-10T00:00:00Z",
+      "updatedAt": "2026-06-10T00:00:00Z"
     }
   ]
 }

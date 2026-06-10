@@ -1,0 +1,546 @@
+{
+  "cta": {
+    "title": "不確定我們能否幫助您？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "預約免費諮詢"
+    },
+    "description": "安排免費諮詢以討論您的具體健康問題",
+    "secondaryCta": {
+      "link": "tel:+18453811106",
+      "text": "致電我們"
+    }
+  },
+  "hero": {
+    "title": "治療病症",
+    "variant": "split-photo-right",
+    "subtitle": "傳統中醫為各種健康問題提供自然、有效的解決方案",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/needles-sterile.jpg"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "icon": "Grid",
+      "name": "所有病症",
+      "description": "查看所有病症"
+    },
+    {
+      "id": "pain-management",
+      "icon": "Activity",
+      "name": "疼痛管理",
+      "description": "急性和慢性疼痛的自然緩解"
+    },
+    {
+      "id": "mental-health",
+      "icon": "Brain",
+      "name": "心理與情緒健康",
+      "description": "壓力、焦慮、抑鬱和情緒健康的支持"
+    },
+    {
+      "id": "digestive",
+      "icon": "Apple",
+      "name": "消化系統健康",
+      "description": "消化系統疾病和腸道健康的解決方案"
+    },
+    {
+      "id": "womens-health",
+      "icon": "Heart",
+      "name": "婦女健康",
+      "description": "婦女健康問題的綜合護理"
+    },
+    {
+      "id": "respiratory",
+      "icon": "Wind",
+      "name": "呼吸系統問題",
+      "description": "呼吸和呼吸系統的支持"
+    },
+    {
+      "id": "immune-system",
+      "icon": "Shield",
+      "name": "免疫系統",
+      "description": "增強身體的自然防禦"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "back-pain",
+      "icon": "Activity",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/home/welcome-section.jpg",
+      "title": "腰背痛",
+      "category": "pain-management",
+      "featured": true,
+      "symptoms": [
+        "下背部疼痛",
+        "上背部僵硬",
+        "坐骨神經痛",
+        "椎間盤突出疼痛",
+        "肌肉痙攣",
+        "活動受限"
+      ],
+      "description": "無論是急性還是慢性，針灸和中醫療法都能有效緩解下背部疼痛、上背部疼痛和坐骨神經痛，無需藥物或手術。",
+      "tcmApproach": "中醫認為背痛是經絡中氣血流動的阻塞。我們使用針灸來釋放阻塞，拔罐來改善循環，以及中藥來減少炎症和增強背部。",
+      "treatmentMethods": [
+        "針灸",
+        "拔罐療法",
+        "推拿",
+        "中藥",
+        "艾灸"
+      ]
+    },
+    {
+      "id": "neck-shoulder-pain",
+      "icon": "Activity",
+      "title": "頸肩疼痛",
+      "category": "pain-management",
+      "symptoms": [
+        "頸部僵硬",
+        "肩部緊張",
+        "頭痛",
+        "活動範圍受限",
+        "肌肉結節",
+        "疼痛放射到手臂"
+      ],
+      "description": "緩解由壓力、姿勢不良或受傷引起的頸肩緊張、僵硬和疼痛。",
+      "tcmApproach": "頸肩疼痛通常由氣滯和血瘀引起。我們用針灸釋放觸發點，用推拿放鬆緊張的肌肉，用拔罐改善循環。",
+      "treatmentMethods": [
+        "針灸",
+        "刮痧",
+        "推拿",
+        "拔罐療法",
+        "拉伸指導"
+      ]
+    },
+    {
+      "id": "arthritis",
+      "icon": "Activity",
+      "title": "關節炎和關節疼痛",
+      "category": "pain-management",
+      "symptoms": [
+        "關節疼痛和腫脹",
+        "晨僵",
+        "活動能力下降",
+        "炎症",
+        "天氣變化時疼痛加劇"
+      ],
+      "description": "骨關節炎、類風濕性關節炎和一般關節炎症的自然疼痛管理。",
+      "tcmApproach": "關節炎通常被視為『痹症』，涉及風、寒、濕或熱等致病因素阻塞關節。治療側重於驅除這些因素，減少炎症和增強身體。",
+      "treatmentMethods": [
+        "針灸",
+        "艾灸",
+        "中藥",
+        "飲食療法",
+        "生活方式諮詢"
+      ]
+    },
+    {
+      "id": "headaches-migraines",
+      "icon": "Activity",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/acupuncture-12.jpeg",
+      "title": "頭痛和偏頭痛",
+      "category": "pain-management",
+      "featured": true,
+      "symptoms": [
+        "反覆頭痛",
+        "偏頭痛發作",
+        "太陽穴緊張",
+        "畏光",
+        "頭痛伴噁心",
+        "頸部緊張"
+      ],
+      "description": "無需藥物即可有效治療緊張性頭痛、偏頭痛和慢性頭痛。",
+      "tcmApproach": "頭痛在中醫中有各種證型，包括肝陽上亢、血虛或外邪因素。我們識別您的具體證型並相應地用針灸和中藥治療。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "刮痧",
+        "飲食療法",
+        "壓力管理"
+      ]
+    },
+    {
+      "id": "anxiety",
+      "icon": "Brain",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/anxiate-3.jpeg",
+      "title": "焦慮和恐慌症",
+      "category": "mental-health",
+      "featured": true,
+      "symptoms": [
+        "過度擔憂",
+        "思緒飛馳",
+        "恐慌發作",
+        "坐立不安",
+        "注意力難以集中",
+        "身體緊張",
+        "睡眠問題"
+      ],
+      "description": "焦慮、恐慌發作和一般緊張的自然、無藥物支持。",
+      "tcmApproach": "焦慮通常涉及心腎不交、肝氣鬱結或神不安。我們安神、調節氣流、滋養臟腑以恢復情緒平衡。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "呼吸練習",
+        "生活方式諮詢",
+        "飲食建議"
+      ]
+    },
+    {
+      "id": "depression",
+      "icon": "Brain",
+      "title": "抑鬱和情緒低落",
+      "category": "mental-health",
+      "symptoms": [
+        "持續悲傷",
+        "失去興趣",
+        "疲勞",
+        "睡眠改變",
+        "食欲改變",
+        "注意力難以集中",
+        "絕望感"
+      ],
+      "description": "抑鬱、低能量和缺乏動力的整體支持。",
+      "tcmApproach": "抑鬱可能涉及肝氣鬱結、心血虛或脾氣虛。治療側重於疏通鬱結的氣、滋養虛弱和振奮精神。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "生活方式諮詢",
+        "運動指導",
+        "飲食療法"
+      ]
+    },
+    {
+      "id": "insomnia",
+      "icon": "Brain",
+      "title": "失眠和睡眠障礙",
+      "category": "mental-health",
+      "symptoms": [
+        "難以入睡",
+        "夜間醒來",
+        "早醒",
+        "睡眠不解乏",
+        "白天疲勞",
+        "睡前思緒飛馳"
+      ],
+      "description": "難以入睡、保持睡眠或睡眠品質差的自然解決方案。",
+      "tcmApproach": "睡眠問題通常源於心腎不平衡、陰虛有熱或神不安。我們滋陰、安心和鎮定神以獲得安寧的睡眠。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "睡眠衛生指導",
+        "飲食建議",
+        "冥想技巧"
+      ]
+    },
+    {
+      "id": "stress",
+      "icon": "Brain",
+      "title": "壓力與倦怠",
+      "category": "mental-health",
+      "symptoms": [
+        "感到不知所措",
+        "精疲力竭",
+        "易怒",
+        "注意力不集中",
+        "肌肉緊張",
+        "消化問題",
+        "睡眠問題"
+      ],
+      "description": "面對慢性壓力或倦怠時恢復平衡和韌性。",
+      "tcmApproach": "慢性壓力耗氣並導致肝鬱。我們調節肝、補虛並提供壓力管理技巧以恢復平衡並建立韌性。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥適應原",
+        "減壓技巧",
+        "生活方式諮詢",
+        "呼吸練習"
+      ]
+    },
+    {
+      "id": "ibs",
+      "icon": "Apple",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/blog/digestive-health.jpg",
+      "title": "腸易激綜合徵和消化問題",
+      "category": "digestive",
+      "featured": true,
+      "symptoms": [
+        "腹痛",
+        "腹脹",
+        "便秘或腹瀉",
+        "脹氣",
+        "痙攣",
+        "食物敏感"
+      ],
+      "description": "有效緩解腸易激綜合徵、腹脹、脹氣和消化不適。",
+      "tcmApproach": "IBS通常涉及肝脾不和，即壓力影響消化。我們調節肝氣、增強脾功能和協調消化系統。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "飲食療法",
+        "壓力管理",
+        "生活方式調整"
+      ]
+    },
+    {
+      "id": "acid-reflux",
+      "icon": "Apple",
+      "title": "胃酸逆流和胃食道逆流病",
+      "category": "digestive",
+      "symptoms": [
+        "燒心",
+        "胃酸逆流",
+        "胸部不適",
+        "吞咽困難",
+        "慢性咳嗽",
+        "聲音嘶啞"
+      ],
+      "description": "燒心、胃酸逆流和胃食道逆流病（GERD）的自然治療。",
+      "tcmApproach": "逆流涉及胃氣上逆，通常伴有熱或痰。我們將胃氣向下引導，清熱並增強消化功能。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "飲食建議",
+        "生活方式調整",
+        "減壓"
+      ]
+    },
+    {
+      "id": "constipation",
+      "icon": "Apple",
+      "title": "便秘",
+      "category": "digestive",
+      "symptoms": [
+        "排便不頻繁",
+        "大便乾硬",
+        "用力排便",
+        "排便不完全",
+        "腹部不適",
+        "腹脹"
+      ],
+      "description": "慢性便秘和不規則排便的溫和、有效緩解。",
+      "tcmApproach": "便秘可能由氣滯、血虛、陰虛或脾氣虛引起。治療根據您的具體證型量身定制，以恢復正常腸道功能。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "飲食纖維指導",
+        "腹部按摩",
+        "生活方式改變"
+      ]
+    },
+    {
+      "id": "fertility",
+      "icon": "Heart",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/fertility-2.jpg",
+      "title": "生育支持",
+      "category": "womens-health",
+      "featured": true,
+      "symptoms": [
+        "難以受孕",
+        "月經不規律",
+        "卵子質量差",
+        "精子數量低（男性）",
+        "荷爾蒙失調",
+        "既往流產"
+      ],
+      "description": "為自然受孕和人工受孕（IVF）提供全面支持，適用於女性和男性。",
+      "tcmApproach": "我們專注於調節月經週期、滋養腎精、改善生殖器官血流和減輕壓力。治療根據每個伴侶的需求定制。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "飲食療法",
+        "生活方式諮詢",
+        "減壓"
+      ]
+    },
+    {
+      "id": "menstrual-issues",
+      "icon": "Heart",
+      "title": "月經失調",
+      "category": "womens-health",
+      "symptoms": [
+        "痛經",
+        "月經不規律",
+        "月經量大",
+        "經前綜合症症狀",
+        "情緒波動",
+        "腹脹和痙攣"
+      ],
+      "description": "痛經、月經不規律、經前綜合症（PMS）和月經相關問題的自然治療。",
+      "tcmApproach": "月經問題通常涉及肝氣鬱結、血虛或子宮寒。我們調節週期、養血、行氣和驅除致病因素。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "飲食建議",
+        "生活方式調整",
+        "壓力管理"
+      ]
+    },
+    {
+      "id": "menopause",
+      "icon": "Heart",
+      "title": "更年期症狀",
+      "category": "womens-health",
+      "symptoms": [
+        "潮熱",
+        "盜汗",
+        "情緒波動",
+        "睡眠問題",
+        "陰道乾燥",
+        "性慾低下",
+        "體重增加"
+      ],
+      "description": "潮熱、盜汗、情緒變化和其他更年期症狀的自然緩解。",
+      "tcmApproach": "更年期涉及腎陰陽衰退。我們滋養腎陰、協調陰陽和安神以緩解過渡並減少症狀。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "飲食療法",
+        "生活方式諮詢",
+        "減壓"
+      ]
+    },
+    {
+      "id": "pcos",
+      "icon": "Heart",
+      "title": "多囊卵巢綜合症",
+      "category": "womens-health",
+      "symptoms": [
+        "月經不規律或閉經",
+        "體重增加",
+        "痤瘡",
+        "多毛",
+        "難以受孕",
+        "胰島素抵抗"
+      ],
+      "description": "調節荷爾蒙、恢復月經週期和管理多囊卵巢綜合症（PCOS）症狀的整體治療。",
+      "tcmApproach": "多囊卵巢綜合症涉及腎虛、痰濕蓄積和肝氣鬱結。治療側重於化痰、調氣和滋養腎功能。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "體重管理",
+        "飲食調整",
+        "生活方式改變"
+      ]
+    },
+    {
+      "id": "allergies",
+      "icon": "Wind",
+      "title": "過敏和花粉症",
+      "category": "respiratory",
+      "symptoms": [
+        "打噴嚏",
+        "流鼻涕或鼻塞",
+        "眼睛發癢",
+        "鼻涕倒流",
+        "鼻竇壓力",
+        "疲勞"
+      ],
+      "description": "季節性過敏、花粉症和環境敏感的自然緩解。",
+      "tcmApproach": "過敏由衛氣虛弱和內部失衡引起。我們增強衛氣、清除致病因素並減少炎症反應。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "飲食建議",
+        "免疫支持",
+        "預防性治療"
+      ]
+    },
+    {
+      "id": "asthma",
+      "icon": "Wind",
+      "title": "哮喘",
+      "category": "respiratory",
+      "symptoms": [
+        "喘息",
+        "呼吸急促",
+        "胸悶",
+        "咳嗽",
+        "呼吸困難",
+        "運動誘發的症狀"
+      ],
+      "description": "哮喘管理的補充支持，減少發作的頻率和嚴重程度。",
+      "tcmApproach": "哮喘涉及肺腎虛伴痰蓄積。我們增強肺腎功能、化痰並減少反應性。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥配方",
+        "呼吸練習",
+        "飲食療法",
+        "生活方式調整"
+      ]
+    },
+    {
+      "id": "chronic-cough",
+      "icon": "Wind",
+      "title": "慢性咳嗽",
+      "category": "respiratory",
+      "symptoms": [
+        "持續乾咳",
+        "有痰咳嗽",
+        "喉嚨刺激",
+        "夜間加重",
+        "說話時加重",
+        "病毒感染後咳嗽"
+      ],
+      "description": "治療對常規方法無反應的持續咳嗽。",
+      "tcmApproach": "慢性咳嗽有各種證型，包括肺陰虛、肺熱或痰蓄積。我們識別具體證型並相應治療。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥",
+        "飲食調整",
+        "喉嚨舒緩療法",
+        "生活方式調整"
+      ]
+    },
+    {
+      "id": "frequent-colds",
+      "icon": "Shield",
+      "title": "頻繁感冒和流感",
+      "category": "immune-system",
+      "symptoms": [
+        "容易感冒",
+        "恢復緩慢",
+        "反覆感染",
+        "低能量",
+        "免疫反應弱",
+        "頻繁喉嚨痛"
+      ],
+      "description": "增強免疫力以減少感冒和呼吸道感染的頻率和嚴重程度。",
+      "tcmApproach": "頻繁生病表明衛氣虛弱。我們增強衛氣、補肺脾功能並建立整體免疫韌性。",
+      "treatmentMethods": [
+        "針灸",
+        "增強免疫中藥",
+        "艾灸",
+        "飲食療法",
+        "生活方式建議"
+      ]
+    },
+    {
+      "id": "fatigue",
+      "icon": "Shield",
+      "title": "慢性疲勞",
+      "category": "immune-system",
+      "symptoms": [
+        "持續精疲力竭",
+        "低能量",
+        "腦霧",
+        "耐力差",
+        "睡眠不解乏",
+        "難以完成日常任務"
+      ],
+      "description": "在經歷持續疲倦和低能量時恢復能量和活力。",
+      "tcmApproach": "慢性疲勞通常涉及脾、腎或兩者的氣虛，可能伴有血虛。我們補虛並恢復活力。",
+      "treatmentMethods": [
+        "針灸",
+        "中藥補品",
+        "艾灸",
+        "飲食療法",
+        "休息和活動平衡"
+      ]
+    }
+  ],
+  "introduction": {
+    "note": "沒有看到您的病症？請聯繫我們 — 我們可能仍然可以幫助您！",
+    "text": "在黃醫生診所，我們治療整個人，而不僅僅是症狀。我們的綜合方法在提供即時緩解的同時，解決疾病的根本原因。以下是我們常見治療的一些病症，並取得了良好的效果。",
+    "variant": "centered"
+  },
+  "layoutVariant": "category-detail-alternating"
+}

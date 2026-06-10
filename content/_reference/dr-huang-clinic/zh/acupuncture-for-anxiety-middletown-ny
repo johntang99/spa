@@ -1,0 +1,76 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约就诊"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "焦虑症治疗通常需要8-12次针灸疗程。急性焦虑可能在3-5次治疗后显著改善，慢性焦虑需要更长期的调理。Dr. Huang会定期评估进展并调整治疗方案。",
+        "question": "针灸治疗焦虑需要多少次？"
+      },
+      {
+        "answer": "针灸对惊恐发作很有帮助。通过调节神经系统和内分泌平衡，可以减少惊恐发作的频率和强度。我们还会教授应急穴位按压技巧，帮助您应对突发情况。",
+        "question": "针灸能帮助恐慌发作吗？"
+      },
+      {
+        "answer": "针灸可以与抗焦虑药物安全配合使用，通常还能帮助减少药物用量。任何药物调整都需要在您的精神科医生指导下进行，我们会与其协调治疗。",
+        "question": "针灸可以和抗焦虑药同时使用吗？"
+      },
+      {
+        "answer": "针灸治疗焦虑时，大多数患者会感到深度放松，紧张情绪逐渐消散。有些人感到温暖的能量流动，思维变得清晰平静。治疗过程舒适安全，让您身心都得到放松。",
+        "question": "焦虑患者做针灸是什么感觉？"
+      }
+    ],
+    "heading": "焦虑针灸 — 常见问题"
+  },
+  "seo": {
+    "h1": "Middletown NY焦虑症中医针灸治疗",
+    "title": "Middletown NY焦虑症针灸治疗 - Dr. Huang中医调理",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Middletown专业焦虑症中医治疗。Dr. Huang黄医师运用针灸、中药调理焦虑抑郁。缓解压力，平衡情绪，改善心理健康。预约咨询。",
+    "canonicalUrl": "/zh/acupuncture-for-anxiety-middletown-ny"
+  },
+  "hero": {
+    "h1": "Middletown NY焦虑症中医针灸治疗",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "预约咨询",
+    "openingParagraph": "焦虑症是现代社会常见的心理健康问题，表现为持续性担忧、紧张不安、心慌气短等症状，严重影响日常生活和工作。Dr. Huang黄医师在Middletown为患者提供专业的中医针灸治疗，运用传统中医理论调节情志，平衡脏腑功能。中医认为焦虑多与心神不宁、肝气郁结有关，通过针灸调理经络气血，配合中药养心安神，能够有效缓解焦虑症状。我们的治疗方法温和自然，无药物副作用和依赖性，帮助患者从根本上改善情绪状态，重建内在的平衡与和谐，让您重新获得内心的宁静与自信。"
+  },
+  "pageType": "seo-condition",
+  "condition": "anxiety",
+  "howItWorks": {
+    "body": "中医理论认为焦虑主要源于心神不宁、肝气郁结、心脾两虚等证候。Dr. Huang通过中医四诊合参，详细了解患者的情绪模式、身体症状和生活压力，准确辨识证型。针灸治疗重点选择神门、太冲、百会、四神聪等宁神定志的穴位，通过调节神经内分泌系统，平衡交感和副交感神经功能，从而减轻焦虑症状。同时根据个体体质特点，配合相应的中药调理，如甘麦大枣汤、逍遥散等经典方剂，内调外治，标本兼顾。治疗过程还会教授患者简单的呼吸调节和冥想技巧，帮助建立长期的情绪管理能力。",
+    "heading": "Middletown NY焦虑症中医针灸治疗"
+  },
+  "testimonial": {
+    "heading": "Middletown患者的真实反馈"
+  },
+  "whatToExpect": {
+    "body": "首次就诊Dr. Huang会详细评估您的焦虑症状、触发因素和身体状况。针灸治疗在安静私密的环境中进行，选择相关穴位施针时患者通常感到非常放松。治疗过程约45分钟，许多患者在治疗中就感到紧张感明显减轻。治疗后您可能感到平静、清明，焦虑思绪得到缓解。Dr. Huang还会提供生活方式建议，帮助您在日常生活中更好地管理压力。",
+    "heading": "Dr. Huang Clinic的治疗流程"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-back-pain-middletown-ny",
+        "label": "针灸治疗腰痛"
+      },
+      {
+        "slug": "acupuncture-for-insomnia-middletown-ny",
+        "label": "针灸治疗失眠"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "助孕针灸"
+      }
+    ],
+    "heading": "Dr. Huang Clinic治疗的其他病症"
+  }
+}

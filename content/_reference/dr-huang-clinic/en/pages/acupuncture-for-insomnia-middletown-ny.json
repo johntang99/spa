@@ -1,0 +1,128 @@
+{
+  "faq": {
+    "items": [
+      {
+        "answer": "Most patients begin noticing improvements in sleep quality within 3–4 sessions. Some experience better sleep after the very first treatment, while others see gradual improvement over several weeks. A full course of 6–8 sessions typically provides lasting results. The speed of improvement depends on the severity and duration of your insomnia, as well as your overall health.",
+        "question": "How quickly does acupuncture work for insomnia?"
+      },
+      {
+        "answer": "Many patients are able to reduce or eliminate sleep medication after a course of acupuncture, but this should always be done gradually and under the guidance of your prescribing physician. Acupuncture addresses the root cause of insomnia rather than masking symptoms, which is why results tend to be more sustainable. Dr. Huang can work alongside your doctor to develop a safe transition plan.",
+        "question": "Can acupuncture replace sleep medication?"
+      },
+      {
+        "answer": "They work best together. Acupuncture provides immediate nervous system regulation during each session, while herbal medicine offers sustained support between treatments — particularly at bedtime. Dr. Huang often combines both modalities for insomnia patients, adjusting the herbal formula as your sleep pattern improves over the course of treatment.",
+        "question": "Is acupuncture or herbal medicine better for sleep problems?"
+      },
+      {
+        "answer": "The most common TCM patterns behind insomnia include Heart-Kidney disharmony (the mind cannot settle), Liver Qi stagnation (stress and frustration prevent relaxation), Blood or Yin deficiency (the body lacks nourishment for rest), and Phlegm-Heat disturbing the Heart (restless sleep with vivid dreams). Dr. Huang identifies your specific pattern at your first visit and tailors treatment to address it directly.",
+        "question": "What TCM patterns cause insomnia?"
+      }
+    ],
+    "title": "Acupuncture for Sleep — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Insomnia in Middletown, NY",
+    "title": "Acupuncture for Insomnia in Middletown, NY | Dr. Huang Clinic",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "changefreq": "monthly",
+    "description": "Struggling with sleep? Acupuncture at Dr. Huang Clinic in Middletown, NY helps restore natural sleep patterns. Book a visit today.",
+    "canonicalUrl": "/en/acupuncture-for-insomnia-middletown-ny"
+  },
+  "hero": {
+    "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/anxiate-3.jpeg",
+    "title": "Acupuncture for Insomnia in Middletown, NY",
+    "primaryCta": {
+      "link": "/en/contact",
+      "text": "Book a Sleep Consultation"
+    },
+    "description": "Insomnia affects roughly 1 in 3 adults, and the consequences go far beyond feeling tired. Difficulty falling asleep, staying asleep, or waking too early are signs of underlying imbalances in the nervous system, stress hormones, or organ function. In Traditional Chinese Medicine, these patterns are treated at the root — not masked with medication. At Dr. Huang Clinic in Middletown, NY, Dr. Huang uses acupuncture and herbal support to calm the nervous system and restore natural, restful sleep."
+  },
+  "backLink": {
+    "url": "/en/acupuncture-middletown-ny",
+    "text": "acupuncture in Middletown, NY"
+  },
+  "howItWorks": {
+    "title": "How Acupuncture Restores Healthy Sleep",
+    "sections": [
+      {
+        "content": "In Traditional Chinese Medicine, insomnia is not a single condition — it reflects specific internal imbalances. The most common patterns include Heart-Kidney disharmony (the mind cannot settle at night), Liver Qi stagnation (stress and frustration keep you wired), and Blood deficiency (the body lacks the nourishment needed for deep rest). Dr. Huang identifies your specific pattern through pulse diagnosis, tongue reading, and a detailed health history, then targets treatment accordingly.",
+        "subtitle": "TCM Patterns That Cause Insomnia"
+      },
+      {
+        "content": "Research has shown that acupuncture helps regulate cortisol levels, increase melatonin production, and shift the nervous system from a sympathetic (fight-or-flight) state into a parasympathetic (rest-and-digest) state. By stimulating specific points — particularly on the Heart, Kidney, and Liver meridians — acupuncture calms the overactive mind, reduces nighttime waking, and deepens sleep quality. Many patients report feeling noticeably drowsy during treatment itself.",
+        "subtitle": "How Acupuncture Regulates Sleep"
+      },
+      {
+        "content": "For many sleep patients, Dr. Huang combines acupuncture with Chinese herbal formulas that support the treatment between sessions. Classic formulas like Suan Zao Ren Tang (Sour Jujube Decoction) and Gui Pi Tang (Restore the Spleen Decoction) have been used for centuries to nourish the Heart, calm the spirit, and promote deep sleep. All herbal prescriptions are customized to your specific pattern and adjusted as your sleep improves.",
+        "subtitle": "The Role of Herbal Medicine"
+      }
+    ]
+  },
+  "patientStory": {
+    "title": "Real Results for Middletown Patients",
+    "testimonial": {
+      "name": "Jennifer L.",
+      "quote": "I hadn't slept through the night in over two years. I was exhausted, irritable, and my work was suffering. A friend in Middletown recommended Dr. Huang, and I'm so glad I listened. After my third acupuncture session, I slept six hours straight for the first time in years. By session seven, I was sleeping through most nights without waking. Dr. Huang also gave me an herbal tea formula that I take before bed — it's become part of my nightly routine.",
+      "location": "Middletown, NY",
+      "condition": "Chronic Insomnia"
+    }
+  },
+  "whatToExpect": {
+    "steps": [
+      {
+        "title": "Sleep & Lifestyle Assessment",
+        "number": 1,
+        "description": "Dr. Huang reviews your sleep diary, daily habits, stress levels, diet, exercise routine, and any medications or supplements you're taking. This helps identify both the TCM pattern and any lifestyle factors contributing to your insomnia."
+      },
+      {
+        "title": "TCM Diagnosis",
+        "number": 2,
+        "description": "Through pulse and tongue diagnosis, Dr. Huang determines the underlying imbalance — Heart-Kidney disharmony, Liver Qi stagnation, Blood deficiency, or another pattern — and creates a targeted treatment plan."
+      },
+      {
+        "title": "Acupuncture Treatment",
+        "number": 3,
+        "description": "Fine needles are placed at points that calm the nervous system and address your specific sleep pattern. Common points include Heart 7 (Shenmen), Kidney 6, and Anmian (a point specifically for sleep). Sessions last 45–60 minutes."
+      },
+      {
+        "title": "Treatment Plan & Herbal Support",
+        "number": 4,
+        "description": "A typical insomnia treatment plan involves 6–8 sessions, usually once or twice per week. Dr. Huang may also prescribe a custom herbal formula and offer specific lifestyle recommendations for sleep hygiene. Most patients notice improvement within 3–4 sessions."
+      }
+    ],
+    "title": "What Your Insomnia Treatment Looks Like"
+  },
+  "relatedConditions": {
+    "cta": {
+      "text": "Ready to sleep better? Book your first visit today.",
+      "primaryCta": {
+        "link": "/en/contact",
+        "text": "Book Your Appointment"
+      }
+    },
+    "items": [
+      {
+        "link": "/en/acupuncture-for-back-pain-middletown-ny",
+        "name": "Back Pain",
+        "description": "Relieve chronic and acute back pain naturally"
+      },
+      {
+        "link": "/en/acupuncture-for-anxiety-middletown-ny",
+        "name": "Anxiety & Stress",
+        "description": "Find calm and reduce nervous tension naturally"
+      },
+      {
+        "link": "/en/conditions#gynecology",
+        "name": "Fertility Support",
+        "description": "Natural fertility support and reproductive health"
+      }
+    ],
+    "title": "Other Conditions We Treat at Dr. Huang Clinic"
+  }
+}

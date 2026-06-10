@@ -1,0 +1,76 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约就诊"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "针灸对腰背痛的效果通常是持久的，特别是配合生活方式调整时。急性疼痛通常3-6次治疗即可显著改善，慢性疼痛需要更长期的治疗巩固效果。",
+        "question": "针灸能根治腰痛吗？"
+      },
+      {
+        "answer": "急性腰背痛通常需要4-8次治疗，慢性疼痛可能需要10-15次。Dr. Huang会根据您的具体情况制定个性化治疗计划，定期评估进展。",
+        "question": "腰痛需要做多少次针灸？"
+      },
+      {
+        "answer": "针灸和物理治疗可以很好地配合使用。针灸主要调节内在的气血平衡，物理治疗侧重外在的肌肉强化。两者结合往往能获得更好的治疗效果。",
+        "question": "针灸和理疗哪个更适合治疗腰痛？"
+      },
+      {
+        "answer": "针灸治疗通常不会疼痛。您可能感到轻微的针刺感或酸胀感，这是正常的得气反应，表明针灸正在发挥作用。治疗过程舒适安全。",
+        "question": "针灸治疗腰痛会痛吗？"
+      }
+    ],
+    "heading": "腰痛针灸 — 常见问题"
+  },
+  "seo": {
+    "h1": "Middletown NY腰背痛针灸治疗",
+    "title": "Middletown NY腰背痛针灸治疗 - Dr. Huang黄医师",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Middletown专业腰背痛针灸治疗。Dr. Huang黄医师运用传统中医针灸有效缓解慢性腰痛、肌肉紧张。安全无副作用，立即预约。",
+    "canonicalUrl": "/zh/acupuncture-for-back-pain-middletown-ny"
+  },
+  "hero": {
+    "h1": "Middletown NY腰背痛针灸治疗",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "预约咨询",
+    "openingParagraph": "腰背痛是现代人常见的健康问题，长时间久坐、姿势不良或运动损伤都可能导致腰背疼痛。Dr. Huang黄医师在Middletown为患者提供专业的中医针灸治疗，运用传统中医理论诊断病因，通过针灸调理经络气血，配合推拿手法，有效缓解各种腰背痛症状。我们的治疗方法安全自然，无药物副作用，帮助患者从根本上改善疼痛问题，恢复正常生活质量。"
+  },
+  "pageType": "seo-condition",
+  "condition": "back-pain",
+  "howItWorks": {
+    "body": "中医认为腰背痛多因肾虚、气血瘀滞或外邪侵袭所致。Dr. Huang通过详细的中医诊断，包括望闻问切四诊合参，准确辨识病因病机。针灸治疗选择相应穴位如肾俞、委中、阿是穴等，通过刺激特定穴位调节经络气血运行，消除局部炎症，放松紧张肌肉。同时配合电针或艾灸增强疗效，促进血液循环，加速组织修复。治疗过程中还会根据患者体质特点调整治疗方案，确保达到最佳治疗效果，让患者在舒适的环境中获得显著的疼痛缓解。",
+    "heading": "Middletown NY腰背痛针灸治疗"
+  },
+  "testimonial": {
+    "heading": "Middletown患者的真实反馈"
+  },
+  "whatToExpect": {
+    "body": "首次治疗Dr. Huang会进行全面的中医评估，了解疼痛性质、部位和诱因。治疗时患者平躺或俯卧，医师会在相关穴位轻柔地插入细针。大多数患者会感到轻微的针感，随后是温暖放松的感觉。每次治疗约30-45分钟，治疗后疼痛通常会有明显缓解。Dr. Huang还会指导您进行适当的功能锻炼和日常保健，帮助预防疼痛复发。",
+    "heading": "Dr. Huang Clinic的治疗流程"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-insomnia-middletown-ny",
+        "label": "针灸治疗失眠"
+      },
+      {
+        "slug": "acupuncture-for-anxiety-middletown-ny",
+        "label": "针灸治疗焦虑"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "助孕针灸"
+      }
+    ],
+    "heading": "Dr. Huang Clinic治疗的其他病症"
+  }
+}

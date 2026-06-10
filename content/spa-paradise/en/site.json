@@ -1,0 +1,20 @@
+{
+  "zip": "10940",
+  "city": "Middletown",
+  "email": "spa.paradise.middletown@gmail.com",
+  "phone": "(845) 800-6600",
+  "state": "NY",
+  "social": {
+    "wechat": "https://wechat.com/",
+    "youtube": "https://youtube.com/",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/"
+  },
+  "address": "12 Grove St, Middletown, NY 10940",
+  "tagline": "Middletown's complete day-spa destination",
+  "clinicName": "Spa Paradise",
+  "description": "Licensed therapeutic massage, foot reflexology, facials, and body care under one roof — transparent pricing, online booking, open every day, in English and Chinese.",
+  "addressMapUrl": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940",
+  "headerVariant": "stacked",
+  "iconCharacter": "S"
+}

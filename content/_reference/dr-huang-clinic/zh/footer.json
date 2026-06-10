@@ -1,0 +1,83 @@
+{
+  "brand": {
+    "name": "黃醫生診所 (Dr Huang Clinic)",
+    "logoText": "TCM",
+    "description": "以傳統中醫和針灸為社區提供整體治療。"
+  },
+  "hours": [
+    "星期一至三、五至日：10:30 AM - 5:00 PM",
+    "星期四：休息"
+  ],
+  "contact": {
+    "email": "info@clinic.com",
+    "phone": "(845) 381-1106",
+    "emailLink": "mailto:info@clinic.com",
+    "phoneLink": "tel:+18453811106",
+    "addressLines": [
+      "71 East Main Street, Middletown, NY 10940"
+    ]
+  },
+  "services": [
+    {
+      "url": "/zh/services#acupuncture",
+      "text": "針灸"
+    },
+    {
+      "url": "/zh/services#herbs",
+      "text": "中藥"
+    },
+    {
+      "url": "/zh/services#cupping",
+      "text": "拔罐"
+    },
+    {
+      "url": "/zh/services#tuina",
+      "text": "推拿"
+    }
+  ],
+  "copyright": "© {year} 黃醫生診所. 版權所有。",
+  "legalLinks": [
+    {
+      "url": "/zh/privacy",
+      "text": "隱私政策"
+    },
+    {
+      "url": "/zh/terms",
+      "text": "服務條款"
+    }
+  ],
+  "quickLinks": [
+    {
+      "url": "/zh/about",
+      "text": "關於我們"
+    },
+    {
+      "url": "/zh/services",
+      "text": "服務項目"
+    },
+    {
+      "url": "/zh/conditions",
+      "text": "治療病症"
+    },
+    {
+      "url": "/zh/case-studies",
+      "text": "案例研究"
+    },
+    {
+      "url": "/zh/new-patients",
+      "text": "首次就診"
+    },
+    {
+      "url": "/zh/blog",
+      "text": "網誌"
+    },
+    {
+      "url": "/zh/gallery",
+      "text": "圖片集錦"
+    },
+    {
+      "url": "/zh/contact",
+      "text": "聯繫我們"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { CalendarCheck } from 'lucide-react';
-import { BookingWidget } from '@/components/booking/BookingWidget';
-import { BookingLookup } from '@/components/booking/BookingLookup';
+import { BookingWidget } from '@/components/_reference/booking/BookingWidget';
+import { BookingLookup } from '@/components/_reference/booking/BookingLookup';
 import { getRequestSiteId } from '@/lib/content';
 import { buildPageMetadata } from '@/lib/seo';
 import { Locale } from '@/lib/types';

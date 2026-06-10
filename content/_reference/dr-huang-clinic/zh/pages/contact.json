@@ -1,0 +1,189 @@
+{
+  "cta": {
+    "title": "初次了解服務？",
+    "subtitle": "了解首次預約前需要準備的內容",
+    "buttonLink": "/zh/new-patients",
+    "buttonText": "新手指南"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "是的，我們僅接受預約患者。這確保您獲得我們的全部關注，並且等待時間最少。請致電或使用上面的表格進行安排。",
+        "question": "我需要預約嗎？"
+      },
+      {
+        "answer": "我們偶爾有當天預約。請提前致電確認是否有空位，而非直接到訪。",
+        "question": "你們接受臨時到訪嗎？"
+      },
+      {
+        "answer": "我們提供免費的簡短電話諮詢（10至15分鐘），以回答問題並確認中醫是否適合您。完整的面對面諮詢包含治療，按我們的初次到訪費率收費。",
+        "question": "你們提供免費諮詢嗎？"
+      }
+    ],
+    "title": "常見問題",
+    "variant": "accordion"
+  },
+  "map": {
+    "title": "找到我們",
+    "showMap": true,
+    "variant": "shown",
+    "embedUrl": "https://www.google.com/maps?q=71+East+Main+Street,+Middletown,+NY+10940&output=embed",
+    "directions": "我們位於米德爾頓市中心的東大街，從211號公路和I-84號州際公路均可方便到達。提供免費路邊停車，我們建築物後方亦設有公共停車場。"
+  },
+  "form": {
+    "title": "給我們留言",
+    "fields": {
+      "name": {
+        "label": "全名",
+        "required": true,
+        "placeholder": "張三"
+      },
+      "email": {
+        "label": "電子郵件地址",
+        "required": true,
+        "placeholder": "zhang@example.com"
+      },
+      "phone": {
+        "label": "電話號碼",
+        "required": true,
+        "placeholder": "(555) 123-4567"
+      },
+      "reason": {
+        "label": "聯絡原因",
+        "options": [
+          "安排新患者預約",
+          "安排覆診預約",
+          "關於療程的問題",
+          "關於收費的問題",
+          "索取資料",
+          "其他"
+        ],
+        "required": true,
+        "placeholder": "選擇原因"
+      },
+      "message": {
+        "label": "留言",
+        "required": true,
+        "placeholder": "請告訴我們您需要什麼協助..."
+      }
+    },
+    "variant": "single-column",
+    "subtitle": "請填寫以下表格，我們會盡快回覆您",
+    "senderName": "黃醫師診所",
+    "senderEmail": "no-reply@baamplatform.com",
+    "errorMessage": "抱歉，發送訊息時出現錯誤。請直接致電我們 (845) 381-1106。",
+    "submitButton": {
+      "text": "發送訊息"
+    },
+    "successMessage": "感謝您聯絡我們！我們將於24小時內回覆您。",
+    "autoReplyMessage": "感謝您聯絡 <strong>{businessName}</strong>。我們已收到您的留言，會盡快回覆。",
+    "notificationEmail": "sancai.acu@gmail.com",
+    "notificationEmails": [],
+    "notificationMessage": "⚡ 需要處理：收到新的客戶諮詢"
+  },
+  "hero": {
+    "title": "聯絡我們",
+    "variant": "centered",
+    "subtitle": "我們在此為您解答疑問，並協助您開展康復之旅",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/contact/hero-bg.jpg"
+  },
+  "hours": {
+    "note": "最後一個預約於關門前1小時開始。當天預約請提前致電。",
+    "title": "營業時間",
+    "variant": "grid",
+    "schedule": [
+      {
+        "day": "週一",
+        "time": "10:30 AM - 5:00 PM",
+        "isOpen": true
+      },
+      {
+        "day": "週二",
+        "time": "10:30 AM - 5:00 PM",
+        "isOpen": true
+      },
+      {
+        "day": "週三",
+        "note": "社區針灸日",
+        "time": "10:30 AM - 5:00 PM",
+        "isOpen": true
+      },
+      {
+        "day": "週四",
+        "time": "休息",
+        "isOpen": false
+      },
+      {
+        "day": "週五",
+        "time": "10:30 AM - 5:00 PM",
+        "isOpen": true
+      },
+      {
+        "day": "週六",
+        "time": "10:30 AM - 5:00 PM",
+        "isOpen": true
+      },
+      {
+        "day": "週日",
+        "time": "10:30 AM - 5:00 PM",
+        "isOpen": true
+      }
+    ]
+  },
+  "emergency": {
+    "phone": "911",
+    "title": "醫療緊急情況？",
+    "message": "如果您遇到醫療緊急情況，請立即致電911或前往最近的急診室。",
+    "visible": true
+  },
+  "introduction": {
+    "text": "對傳統中醫有疑問或準備安排首次預約？我們很樂意聆聽您的需求。歡迎致電、發送電子郵件或使用以下表格與我們聯絡。",
+    "variant": "centered"
+  },
+  "contactMethods": [
+    {
+      "icon": "Phone",
+      "title": "致電我們",
+      "action": {
+        "link": "tel:+18453811106",
+        "text": "立即致電"
+      },
+      "primary": "(845) 381-1106",
+      "secondary": null,
+      "description": "週一至週三、週五至週日：上午10時30分至下午5時"
+    },
+    {
+      "icon": "Mail",
+      "title": "電子郵件",
+      "action": {
+        "link": "mailto:sancai.acu@gmail.com",
+        "text": "發送電子郵件"
+      },
+      "primary": "sancai.acu@gmail.com",
+      "secondary": null,
+      "description": "我們通常於24小時內回覆"
+    },
+    {
+      "icon": "MapPin",
+      "title": "到訪我們",
+      "action": {
+        "link": "https://maps.google.com/?q=71+East+Main+Street,+Middletown,+NY+10940",
+        "text": "獲取路線"
+      },
+      "primary": "71 East Main Street, Middletown, NY 10940",
+      "secondary": null,
+      "description": "提供免費停車"
+    },
+    {
+      "icon": "Calendar",
+      "title": "網上預約",
+      "action": {
+        "link": "/zh/book",
+        "text": "立即預約"
+      },
+      "primary": "新患者預約",
+      "secondary": null,
+      "description": "選擇方便的就診時間"
+    }
+  ]
+}
