@@ -25,7 +25,20 @@ async function listJsonSlugs(dirPath: string): Promise<string[]> {
 }
 
 /** Page JSON filenames that are not public routes (partials, drafts with no page.tsx). */
-const PAGE_SLUG_DENYLIST = new Set(['faq']);
+const PAGE_SLUG_DENYLIST = new Set<string>([]);
+
+/** Service category ids → /services/[category] routes (from the catalog). */
+async function listServiceCategorySlugs(siteId: string, locale: Locale): Promise<string[]> {
+  try {
+    const raw = await fs.readFile(path.join(CONTENT_DIR, siteId, locale, 'collections', 'services.json'), 'utf-8');
+    const data = JSON.parse(raw);
+    return (data.categories || [])
+      .map((c: { id: string }) => c.id)
+      .filter((id: string) => !['combos-packages', 'add-ons'].includes(id));
+  } catch {
+    return [];
+  }
+}
 
 async function listPageSlugs(siteId: string, locale: Locale) {
   const pagesDir = path.join(CONTENT_DIR, siteId, locale, 'pages');
@@ -88,6 +101,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       entries.push({
         url: new URL(`/${locale}/${slug}`, baseUrl).toString(),
         lastModified: new Date(),
+      });
+    }
+
+    // Service category pages (/services/[category])
+    const categorySlugs = await listServiceCategorySlugs(site.id, locale);
+    for (const slug of categorySlugs) {
+      entries.push({
+        url: new URL(`/${locale}/services/${slug}`, baseUrl).toString(),
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
       });
     }
 

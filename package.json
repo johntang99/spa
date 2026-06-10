@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
+    "check:all": "npx tsx scripts/checks/check-all.ts",
     "ci:check": "npm run type-check && npm run lint && npm run build",
     "media:migrate": "node scripts/migrate-media-to-supabase.mjs",
     "content:normalize-media-urls": "node scripts/normalize-content-media-urls.mjs",

@@ -9,7 +9,7 @@
   "ctaBanner": { "variant": "solid-token", "heading": "选好了吗？预约只需一分钟。", "ctaPrimary": { "label": "立即预约", "href": "/book" } },
   "seo": {
     "title": "水疗与按摩价目表 | 天堂水疗 米德尔敦",
-    "description": "纽约米德尔敦透明的水疗与按摩价格。瑞典式$45起，深层组织、热石、情侣、面部护理等。公开标价，绝无意外。",
+    "description": "纽约米德尔敦透明的水疗与按摩价格。瑞典式、深层组织、热石、情侣、面部护理等。公开标价，绝无意外。",
     "h1": "每个价格，公开透明。",
     "canonicalUrl": "/zh/pricing",
     "schema": ["OfferCatalog", "Offer", "FAQPage"],

@@ -9,7 +9,7 @@
   "ctaBanner": { "variant": "solid-token", "heading": "Found the one? It takes a minute to book.", "ctaPrimary": { "label": "Book Now", "href": "/book" } },
   "seo": {
     "title": "Spa Menu & Massage Prices | Spa Paradise Middletown",
-    "description": "Transparent spa & massage pricing in Middletown, NY. Swedish from $45, deep tissue, hot stone, couples, facials & more. Published prices, no surprises.",
+    "description": "Transparent spa & massage pricing in Middletown, NY. Swedish, deep tissue, hot stone, couples, facials & more. Published prices, no surprises.",
     "h1": "Every price, published.",
     "canonicalUrl": "/en/pricing",
     "schema": ["OfferCatalog", "Offer", "FAQPage"],

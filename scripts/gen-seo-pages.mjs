@@ -158,21 +158,42 @@ for (const r of RESOURCES) {
 
 // ---- 10 near-location town pages (seo-near-location) ----
 // Honest framing: located in Middletown, serving each town. Same NAP. Town-specific drive copy.
+// Distinct, town-specific drive copy per page (avoids doorway-page similarity; check:uniqueness gate).
 const TOWNS = [
-  { slug: 'goshen', en: 'Goshen', zh: '戈申', min: 10, route: 'Route 17M', landmark: 'the Orange County government center' },
-  { slug: 'wallkill', en: 'Wallkill', zh: '沃尔基尔', min: 15, route: 'Route 208', landmark: 'the Wallkill River valley' },
-  { slug: 'scotchtown', en: 'Scotchtown', zh: '斯科奇敦', min: 8, route: 'Route 211', landmark: 'just north of Middletown' },
-  { slug: 'monroe', en: 'Monroe', zh: '门罗', min: 20, route: 'Route 17', landmark: 'Museum Village' },
-  { slug: 'chester', en: 'Chester', zh: '切斯特', min: 15, route: 'Routes 17 & 94', landmark: 'the Chester train station' },
-  { slug: 'montgomery', en: 'Montgomery', zh: '蒙哥马利', min: 20, route: 'Route 211', landmark: 'historic Village of Montgomery' },
-  { slug: 'pine-bush', en: 'Pine Bush', zh: '派恩布什', min: 20, route: 'Route 302', landmark: 'downtown Pine Bush' },
-  { slug: 'otisville', en: 'Otisville', zh: '奥蒂斯维尔', min: 12, route: 'Route 211 West', landmark: 'the Otisville hamlet' },
-  { slug: 'washingtonville', en: 'Washingtonville', zh: '华盛顿维尔', min: 20, route: 'Routes 208 & 94', landmark: 'Brotherhood Winery' },
-  { slug: 'new-hampton', en: 'New Hampton', zh: '新汉普顿', min: 10, route: 'Route 17M West', landmark: 'the New Hampton crossroads' },
+  { slug: 'goshen', en: 'Goshen', zh: '戈申', min: 10, route: 'Route 17M',
+    enDrive: "Just up Route 17M, Goshen sits barely ten minutes from our door — close enough that plenty of Goshen regulars stop in on a lunch break. If you work near the Orange County government center or shop along Main Street, an unhurried massage or facial is only a short hop south into Middletown.",
+    zhDrive: "沿17M公路向上，戈申距我们门口仅约十分钟——近到许多戈申常客会趁午休顺道而来。若您在橙县政府中心一带工作，或在主街附近购物，向南到米德尔敦稍作停留，便能享受一次从容的按摩或面部护理。" },
+  { slug: 'wallkill', en: 'Wallkill', zh: '沃尔基尔', min: 15, route: 'Route 208',
+    enDrive: "From the Wallkill area it's a relaxed fifteen-minute drive down Route 208 into town. Guests come from across the Wallkill River valley — some after a morning on the rail trail — for licensed therapists and the kind of published, no-surprise pricing that's hard to find nearby.",
+    zhDrive: "从沃尔基尔一带沿208公路进城，是一段轻松的十五分钟车程。客人们从沃尔基尔河谷各处赶来——有些人是在铁路步道上晨练之后——只为持牌理疗师，以及周边难得一见的公开、透明、无意外的价格。" },
+  { slug: 'scotchtown', en: 'Scotchtown', zh: '斯科奇敦', min: 8, route: 'Route 211',
+    enDrive: "Scotchtown is practically next door — about eight minutes south on Route 211, our closest neighborhood of all. It's the easiest trip in the area, whether you're squeezing in a quick reflexology session or settling in for a full ninety-minute massage.",
+    zhDrive: "斯科奇敦几乎就在隔壁——沿211公路向南约八分钟，是我们最近的街区。无论是抽空做一次快速足疗，还是安心享受整整九十分钟的按摩，这都是周边最便捷的一趟。" },
+  { slug: 'monroe', en: 'Monroe', zh: '门罗', min: 20, route: 'Route 17',
+    enDrive: "Coming from Monroe, Route 17 west brings you over in about twenty minutes. Many guests turn a day near Museum Village into an afternoon for two, booking our private couples room with tea service and making the drive part of the treat.",
+    zhDrive: "从门罗出发，沿17号公路向西约二十分钟即到。许多客人会把博物馆村附近的一天，延伸为双人的午后时光——预订我们的私密情侣房并附茶点，连这段车程也成了享受的一部分。" },
+  { slug: 'chester', en: 'Chester', zh: '切斯特', min: 15, route: 'Routes 17 & 94',
+    enDrive: "Chester is a straightforward fifteen minutes via Routes 17 and 94. If you commute through the Chester train station, we're an easy stop on the way home — trade the platform for a warm room and some hard-earned quiet.",
+    zhDrive: "从切斯特经17号与94号公路过来，约十五分钟便捷直达。若您每天经切斯特火车站通勤，我们正是回家路上顺道的一站——把站台换成一间温暖的房间，享受来之不易的宁静。" },
+  { slug: 'montgomery', en: 'Montgomery', zh: '蒙哥马利', min: 20, route: 'Route 211',
+    enDrive: "From the historic Village of Montgomery, Route 211 leads to us in about twenty minutes — a pleasant drive along the Wallkill that ends, fittingly, in a calm and unhurried treatment. It's a favorite reset for folks who like to make an outing of it.",
+    zhDrive: "从历史悠久的蒙哥马利村出发，沿211公路约二十分钟即达——一段沿沃尔基尔河的宜人车程，恰好以一场从容平静的护理收尾。对于喜欢顺道出游的人来说，这是深受欢迎的放松之选。" },
+  { slug: 'pine-bush', en: 'Pine Bush', zh: '派恩布什', min: 20, route: 'Route 302',
+    enDrive: "Pine Bush guests reach us in roughly twenty minutes along Route 302. It's worth the drive from the village for a spa that publishes every price, speaks both English and 中文, and keeps the same menu open seven days a week.",
+    zhDrive: "派恩布什的客人沿302公路约二十分钟即可抵达。为了一家公开每项价格、中英文皆通、且全周无休保持同一菜单的水疗，从镇上专程一趟也十分值得。" },
+  { slug: 'otisville', en: 'Otisville', zh: '奥蒂斯维尔', min: 12, route: 'Route 211 West',
+    enDrive: "Otisville is a short twelve-minute hop east on Route 211. Whether you're driving in from the hamlet for foot reflexology after a long shift or a deep-tissue session on the weekend, we keep things simple, transparent, and easy to book.",
+    zhDrive: "奥蒂斯维尔沿211公路向东，仅约十二分钟的短途车程。无论您是值完长班后从村里赶来做足部反射疗法，还是周末来一场深层组织按摩，我们都让一切保持简单、透明、易于预约。" },
+  { slug: 'washingtonville', en: 'Washingtonville', zh: '华盛顿维尔', min: 20, route: 'Routes 208 & 94',
+    enDrive: "From Washingtonville, Routes 208 and 94 bring you over in about twenty minutes. It's an easy add-on to a day at Brotherhood Winery — swap the tasting room for a treatment room and let a massage or facial round out the afternoon.",
+    zhDrive: "从华盛顿维尔经208号与94号公路过来约二十分钟。把它顺道加进兄弟会酒庄的一日行程再合适不过——将品酒室换作护理室，让一场按摩或面部护理为午后画上句点。" },
+  { slug: 'new-hampton', en: 'New Hampton', zh: '新汉普顿', min: 10, route: 'Route 17M West',
+    enDrive: "New Hampton is just ten minutes west on Route 17M. From the crossroads you're only minutes from a full menu of massage, reflexology, and body care — close enough to make a standing weekly appointment genuinely effortless.",
+    zhDrive: "新汉普顿沿17M公路向西仅约十分钟。从十字路口出发，您距离按摩、反射疗法与身体护理的完整菜单只有几分钟之遥——近到把每周固定预约真正变成轻而易举的事。" },
 ];
 for (const tn of TOWNS) {
-  const enCtx = `Spa Paradise is located in Middletown, NY and proudly serves guests from ${tn.en}. We are about ${tn.min} minutes away via ${tn.route} — an easy drive from ${tn.landmark}. You will find the same licensed therapists, transparent pricing, and full menu of massage, reflexology, facials, and body care, open every day.`;
-  const zhCtx = `天堂水疗位于纽约州米德尔敦，竭诚为来自${tn.zh}的客人服务。沿${tn.route}约${tn.min}分钟车程，从${tn.landmark}出发十分便捷。这里有同样的持牌理疗师、透明价格，以及按摩、反射疗法、面部与身体护理的完整菜单，每天营业。`;
+  const enCtx = tn.enDrive;
+  const zhCtx = tn.zhDrive;
   pages.push({
     slug: `massage-${tn.slug}-ny`, pageType: 'seo-near-location', serviceRef: 'swedish-massage', townSlug: tn.slug,
     en: { h1: `Massage near ${tn.en}, NY`, title: clip(`Massage near ${tn.en}, NY | Spa Paradise`, 60), desc: clip(`Licensed massage serving ${tn.en}, NY — about ${tn.min} min from Middletown via ${tn.route}. Transparent pricing, open every day.`, 155), kw: [`massage ${tn.en.toLowerCase()} ny`, `massage near ${tn.en.toLowerCase()}`], cluster: `near-${tn.slug}`, _drive: enCtx },
