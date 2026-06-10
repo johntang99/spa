@@ -310,6 +310,8 @@ export const config = {
      * - favicon.ico (favicon file)
      * - uploads (uploaded media)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|icon|apple-icon|uploads).*)',
+    // Also exclude any root path with a file extension (static files such as the IndexNow
+    // key .txt, robots.txt, sitemap.xml, og images) so they are served directly, not locale-rewritten.
+    '/((?!api|_next/static|_next/image|favicon.ico|icon|apple-icon|uploads|[^/]+\\.[a-z0-9]+$).*)',
   ],
 };
