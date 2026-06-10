@@ -16,5 +16,16 @@
   "description": "Licensed therapeutic massage, foot reflexology, facials, and body care under one roof — transparent pricing, online booking, open every day, in English and Chinese.",
   "addressMapUrl": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940",
   "headerVariant": "stacked",
-  "iconCharacter": "S"
+  "iconCharacter": "S",
+  "timezone": "America/New_York",
+  "hours": [
+    { "days": [0, 1, 2, 3, 4, 5, 6], "open": "09:00", "close": "21:00" }
+  ],
+  "languagesSpoken": ["en", "zh"],
+  "wechatId": "",
+  "externalBookingUrl": "",
+  "responsePromise": "We reply within 1 business hour",
+  "licenseLine": "All therapists licensed by New York State (LMT)",
+  "geo": { "lat": 41.4459, "lng": -74.4229 },
+  "gbp": { "rating": 4.8, "reviewCount": 212 }
 }

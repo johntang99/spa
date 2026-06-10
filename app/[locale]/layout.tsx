@@ -11,8 +11,10 @@ import {
   loadSiteInfo,
 } from '@/lib/content';
 import type { FooterSection, SeoConfig, SiteInfo } from '@/lib/types';
-import Header, { type HeaderConfig } from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import { type HeaderConfig } from '@/components/layout/Header';
+import SpaHeader from '@/components/spa/SpaHeader';
+import SpaFooter from '@/components/spa/SpaFooter';
+import StickyMobileBookBar from '@/components/spa/StickyMobileBookBar';
 import GtmLoader from '@/components/analytics/GtmLoader';
 import { getBaseUrlFromHost } from '@/lib/seo';
 import { getSiteDisplayName } from '@/lib/siteInfo';
@@ -118,12 +120,20 @@ export default async function LocaleLayout({
   const theme = await loadTheme(site.id);
   
   // Load site info for header/footer
-  const [siteInfo, seo, footer, headerConfig] = await Promise.all([
+  const [siteInfo, seo, footer, headerConfig, servicesCatalog] = await Promise.all([
     loadSiteInfo(site.id, locale as Locale) as Promise<SiteInfo | null>,
     loadSeo(site.id, locale as Locale) as Promise<SeoConfig | null>,
     loadFooter<FooterSection>(site.id, locale as Locale),
     loadContent<HeaderConfig>(site.id, locale as Locale, 'header.json'),
+    loadContent<{ categories?: Array<{ id: string; name: string }> }>(site.id, locale as Locale, 'collections/services.json'),
   ]);
+  const spaLocale = (locale === 'zh' ? 'zh' : 'en') as 'en' | 'zh';
+  const siteAny = (siteInfo ?? {}) as Record<string, any>;
+  const headerAny = (headerConfig ?? {}) as Record<string, any>;
+  // Mega-menu shows treatment categories (exclude the packages/add-ons meta categories).
+  const megaCategories = (servicesCatalog?.categories || []).filter(
+    (c) => !['combos-packages', 'add-ons'].includes(c.id)
+  );
   const baseUrl = getBaseUrlFromHost(host);
   
   const spacingDensityMap: Record<string, string> = {
@@ -227,22 +237,21 @@ ${primitivesCss}
       )}
       
       <div className="spa-site min-h-screen flex flex-col relative" lang={locale}>
-        <Header
-          locale={locale as Locale}
-          siteId={site.id}
-          supportedLocales={site.supportedLocales}
-          siteInfo={siteInfo ?? undefined}
-          variant={headerConfig?.menu?.variant || siteInfo?.headerVariant || 'default'}
-          headerConfig={headerConfig ?? undefined}
+        <SpaHeader
+          locale={spaLocale}
+          logoText={headerAny?.menu?.logo?.text || siteAny.clinicName || 'Spa Paradise'}
+          navItems={headerAny?.menu?.items || []}
+          ctaLabel={headerAny?.cta?.text || (spaLocale === 'zh' ? '立即预约' : 'Book Now')}
+          ctaHref={headerAny?.cta?.link || `/${spaLocale}/book`}
+          hours={siteAny.hours || []}
+          timezone={siteAny.timezone || 'America/New_York'}
+          categories={megaCategories}
         />
         <div id="main-content" tabIndex={-1} className="flex-grow">
           {children}
         </div>
-        <Footer
-          locale={locale as Locale}
-          siteId={site.id}
-          footer={footer ?? undefined}
-        />
+        <SpaFooter locale={spaLocale} footer={footer as any} siteInfo={siteAny} />
+        <StickyMobileBookBar locale={spaLocale} phone={siteAny.phone} wechatId={siteAny.wechatId} />
       </div>
     </>
   );

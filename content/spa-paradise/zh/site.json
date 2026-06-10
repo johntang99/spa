@@ -15,5 +15,16 @@
   "clinicName": "天堂水疗",
   "description": "持牌理疗按摩、足部反射疗法、面部护理与身体护理，一站式服务——价格透明、在线预约、每天营业，提供中英文服务。",
   "addressMapUrl": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940",
-  "headerVariant": "stacked"
+  "headerVariant": "stacked",
+  "timezone": "America/New_York",
+  "hours": [
+    { "days": [0, 1, 2, 3, 4, 5, 6], "open": "09:00", "close": "21:00" }
+  ],
+  "languagesSpoken": ["en", "zh"],
+  "wechatId": "",
+  "externalBookingUrl": "",
+  "responsePromise": "我们将在一个工作小时内回复",
+  "licenseLine": "所有理疗师均持纽约州执照 (LMT)",
+  "geo": { "lat": 41.4459, "lng": -74.4229 },
+  "gbp": { "rating": 4.8, "reviewCount": 212 }
 }
