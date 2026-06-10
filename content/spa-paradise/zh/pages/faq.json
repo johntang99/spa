@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "variant": "split",
+    "eyebrow": "帮助",
+    "headline": "您的疑问，一一解答。",
+    "subline": "预约、价格、护理、礼品卡——可搜索或浏览。仍有疑问？致电 (845) 800-6600。",
+    "ctaPrimary": { "label": "立即预约", "href": "/book" },
+    "media": { "image": "", "scrim": 40 }
+  },
+  "faq": { "variant": "search", "heading": "常见问题", "source": {} },
+  "ctaBanner": {
+    "variant": "solid-token",
+    "heading": "没找到答案？",
+    "subline": "我们很乐意帮忙——致电或留言。",
+    "ctaPrimary": { "label": "联系我们", "href": "/contact" },
+    "ctaSecondary": { "label": "立即预约", "href": "/book" }
+  },
+  "seo": {
+    "title": "常见问题 | 天堂水疗 米德尔敦",
+    "description": "关于天堂水疗预约、价格、护理与礼品卡的解答。纽约米德尔敦，每天营业，提供中英文服务。",
+    "h1": "您的疑问，一一解答。",
+    "canonicalUrl": "/zh/faq",
+    "schema": ["FAQPage"],
+    "keywords": ["天堂水疗 常见问题", "米德尔敦按摩 问题", "米德尔敦水疗 FAQ"],
+    "noindex": false, "changefreq": "monthly", "priority": 0.5, "keywordCluster": "faq", "pageType": "faq"
+  }
+}

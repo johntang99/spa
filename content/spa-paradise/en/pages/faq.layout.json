@@ -1,0 +1,7 @@
+{
+  "sections": [
+    { "id": "hero", "mode": "dark" },
+    { "id": "faq", "mode": "light" },
+    { "id": "ctaBanner", "mode": "dark" }
+  ]
+}
