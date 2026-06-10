@@ -17,6 +17,7 @@ import AddOnsList from './AddOnsList';
 import StatsBand from './StatsBand';
 import Checklist from './Checklist';
 import GalleryGrid from './GalleryGrid';
+import ContactForm from './ContactForm';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -368,4 +369,5 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   checklist: Checklist,
   galleryGrid: GalleryGrid,
   galleryGridVideo: GalleryGrid,
+  contactForm: ContactForm,
 };
