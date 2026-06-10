@@ -23,6 +23,22 @@ function storedBody(content: any, type: string, variant?: string): string | unde
   return undefined;
 }
 
+/** find a stored section block by type */
+function findStored(content: any, type: string): any | undefined {
+  for (const s of content.sections || []) if (s[type]) return s[type];
+  return undefined;
+}
+
+/** lowest/highest catalog prices (for the cost-guide resource). */
+function priceRange(ctx: SectionCtx): { min: number; max: number } {
+  const prices = (ctx.catalog.services || []).filter((s) => s.enabled).flatMap((s) => s.tiers.map((t) => t.price));
+  return { min: prices.length ? Math.min(...prices) : 0, max: prices.length ? Math.max(...prices) : 0 };
+}
+
+function slugifyHeading(text: string): string {
+  return text.toLowerCase().replace(/[^\w一-鿿]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'section';
+}
+
 export function buildSeoPage(content: any, ctx: SectionCtx): { page: Record<string, any>; layout: { sections: LayoutSection[] } } {
   const loc = ctx.locale;
   const h1 = content.seo?.h1 || '';
@@ -70,6 +86,34 @@ export function buildSeoPage(content: any, ctx: SectionCtx): { page: Record<stri
     return { page, layout: { sections: [
       { id: 'hero', mode: 'dark' }, { id: 'richText', mode: 'light' }, { id: 'serviceCards', mode: 'well' },
       { id: 'faq', mode: 'light' }, { id: 'protectedNotice', mode: 'well' }, { id: 'ctaBanner', mode: 'dark' },
+    ] } };
+  }
+
+  if (content.pageType === 'seo-resource') {
+    const ah = findStored(content, 'articleHero') || {};
+    let body: string = findStored(content, 'richText')?.body || '';
+    let directAnswer: string = ah.directAnswer || '';
+    // Cost-guide resource: inject live catalog price range (single source).
+    const { min, max } = priceRange(ctx);
+    const injectPrice = (s: string) => s.replace(/\{priceMin\}/g, `$${min}`).replace(/\{priceMax\}/g, `$${max}`);
+    body = injectPrice(body);
+    directAnswer = injectPrice(directAnswer);
+    const headings = body.split(/\n{2,}/).filter((p) => p.trim().startsWith('## ')).map((p) => {
+      const label = p.trim().slice(3).trim();
+      return { label, anchor: slugifyHeading(label) };
+    });
+    const reviewedBy = findStored(content, 'reviewedBy');
+    const page: Record<string, any> = {
+      articleHero: { headline: h1, directAnswer },
+      toc: { items: headings },
+      richText: { variant: 'article', body },
+      reviewedBy: reviewedBy || { teamRef: ctx.team?.[0]?.id, dateReviewed: '' },
+      faq: { variant: 'accordion', heading: tr(loc, 'Related questions', '相关问题'), source: { scopeTag: 'general', limit: 4 } },
+      ctaBanner: { variant: 'soft', heading: tr(loc, 'Ready to book?', '准备好预约了吗？'), subline: tr(loc, 'Massage in Middletown, NY — open every day.', '纽约米德尔敦按摩——每天营业。'), ctaPrimary: { label: tr(loc, 'Book Now', '立即预约'), href: '/book' } },
+    };
+    return { page, layout: { sections: [
+      { id: 'articleHero', mode: 'dark' }, { id: 'toc', mode: 'well' }, { id: 'richText', mode: 'light' },
+      { id: 'reviewedBy', mode: 'light' }, { id: 'faq', mode: 'well' }, { id: 'ctaBanner', mode: 'dark' },
     ] } };
   }
 

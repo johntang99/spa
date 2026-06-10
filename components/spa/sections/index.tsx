@@ -24,6 +24,9 @@ import AltPaths from './AltPaths';
 import ProductGrid from './ProductGrid';
 import PackageGrid from './PackageGrid';
 import ComparisonTable from './ComparisonTable';
+import ArticleHero from './ArticleHero';
+import ReviewedBy from './ReviewedBy';
+import Toc from './Toc';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -385,4 +388,7 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   productGridTreatments: ProductGrid,
   packageGrid: PackageGrid,
   comparisonTable: ComparisonTable,
+  articleHero: ArticleHero,
+  reviewedBy: ReviewedBy,
+  toc: Toc,
 };
