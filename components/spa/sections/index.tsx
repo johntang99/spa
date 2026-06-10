@@ -18,6 +18,7 @@ import StatsBand from './StatsBand';
 import Checklist from './Checklist';
 import GalleryGrid from './GalleryGrid';
 import ContactForm from './ContactForm';
+import ProtectedNotice from './ProtectedNotice';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -360,6 +361,7 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   faq: Faq,
   relatedLinks: RelatedLinks,
   conditionLinks: RelatedLinks,
+  relatedServices: RelatedLinks,
   menuTable: MenuTable,
   richText: RichText,
   richTextPolicies: RichText,
@@ -370,4 +372,5 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   galleryGrid: GalleryGrid,
   galleryGridVideo: GalleryGrid,
   contactForm: ContactForm,
+  protectedNotice: ProtectedNotice,
 };

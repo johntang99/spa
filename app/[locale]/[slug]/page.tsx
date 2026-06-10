@@ -1,92 +1,81 @@
+// Dynamic SEO renderer (Phase 1H/1I) — resolves /[locale]/[slug] against the seeded
+// site_seo_pages content (seo-pages/<slug>.json), builds the section stack by pageType,
+// and renders via the shared SectionRenderer. Emits head metadata + hreflang from the
+// page's seo object. 404 on unknown/unpublished. Honors redirects.
 import { notFound, permanentRedirect, redirect } from 'next/navigation';
-import { getRequestSiteId } from '@/lib/content';
-import { fetchContentEntry } from '@/lib/contentDb';
-import { checkSiteRedirect, getHreflangAlternates } from '@/lib/redirects';
-import SEOLocalLandingLayout from '@/components/seo/SEOLocalLandingLayout';
-import SEOConditionLayout from '@/components/seo/SEOConditionLayout';
-import SEOResourceLayout from '@/components/seo/SEOResourceLayout';
-import SEOServiceLayout from '@/components/seo/SEOServiceLayout';
 import type { Metadata } from 'next';
-import type { Locale } from '@/lib/types';
+import { getRequestSiteId, loadContent } from '@/lib/content';
+import { checkSiteRedirect } from '@/lib/redirects';
 import { getBaseUrlFromRequest } from '@/lib/seo';
+import { locales, type Locale } from '@/lib/i18n';
+import SectionRenderer from '@/components/spa/SectionRenderer';
+import { loadSpaContext } from '@/lib/spa/page-data';
+import { buildSeoPage } from '@/lib/spa/seo-page';
 
 export const dynamic = 'force-dynamic';
 
-interface Props {
-  params: { locale: Locale; slug: string };
+interface Props { params: { locale: Locale; slug: string } }
+
+async function loadSeoEntry(locale: Locale, slug: string) {
+  const siteId = await getRequestSiteId();
+  return loadContent<any>(siteId, locale, `seo-pages/${slug}.json`);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  try {
-    const { locale } = params;
-    // Next.js 14 may pass URL-encoded slugs — decode for DB lookup
-    const slug = decodeURIComponent(params.slug);
-    const siteId = await getRequestSiteId();
-
-    // Check redirects first — skip metadata for redirected pages
-    const redir = checkSiteRedirect(siteId, locale, slug);
-    if (redir) return {};
-
-    const entry = await fetchContentEntry(siteId, locale, slug);
-    if (!entry?.data) return {};
-
-    const content = entry.data as Record<string, any>;
-    const alternates: Metadata['alternates'] = { canonical: content.seo?.canonicalUrl };
-
-    const hreflang = getHreflangAlternates(siteId, locale, slug);
-    if (hreflang) {
-      alternates.languages = hreflang;
-    }
-
-    return {
-      title: content.seo?.title,
-      description: content.seo?.description,
-      alternates,
-      openGraph: {
-        title: content.seo?.ogTitle ?? content.seo?.title,
-        description: content.seo?.ogDescription ?? content.seo?.description,
-      },
-    };
-  } catch {
-    return {};
-  }
+  const slug = decodeURIComponent(params.slug);
+  const content = await loadSeoEntry(params.locale, slug);
+  if (!content?.seo) return {};
+  const base = getBaseUrlFromRequest();
+  const canonical = new URL(`/${params.locale}/${slug}`, base).toString();
+  const languages = locales.reduce<Record<string, string>>((acc, l) => {
+    acc[l] = new URL(`/${l}/${slug}`, base).toString();
+    return acc;
+  }, {});
+  return {
+    title: content.seo.title,
+    description: content.seo.description,
+    alternates: { canonical, languages: { ...languages, 'x-default': new URL(`/en/${slug}`, base).toString() } },
+    robots: content.seo.noindex ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: content.seo.ogTitle ?? content.seo.title,
+      description: content.seo.ogDescription ?? content.seo.description,
+      url: canonical,
+    },
+  };
 }
 
 export default async function SEOPage({ params }: Props) {
   const { locale } = params;
-  // Next.js 14 may pass URL-encoded slugs — decode for DB lookup
   const slug = decodeURIComponent(params.slug);
   const siteId = await getRequestSiteId();
 
-  // Check redirects BEFORE DB lookup — ensures redirect even if old DB entry exists
   const redir = checkSiteRedirect(siteId, locale, slug);
   if (redir) {
-    // Encode non-ASCII characters for the HTTP Location header
     const encoded = redir.destination.split('/').map(encodeURIComponent).join('/');
     if (redir.permanent) permanentRedirect(encoded);
     else redirect(encoded);
   }
 
-  const entry = await fetchContentEntry(siteId, locale, slug);
+  const content = await loadSeoEntry(locale, slug);
+  if (!content || content.published === false) notFound();
 
-  if (!entry?.data) {
-    notFound();
-  }
+  const ctx = await loadSpaContext(locale);
+  const { page, layout } = buildSeoPage(content, ctx);
 
-  const content = entry.data as Record<string, any>;
-  const base = getBaseUrlFromRequest();
-  const siteBaseOrigin = `${base.protocol}//${base.host}`;
-
-  switch (content.pageType) {
-    case 'seo-local-landing':
-      return <SEOLocalLandingLayout content={content} locale={locale} siteBaseOrigin={siteBaseOrigin} />;
-    case 'seo-condition':
-      return <SEOConditionLayout content={content} locale={locale} siteBaseOrigin={siteBaseOrigin} />;
-    case 'seo-resource':
-      return <SEOResourceLayout content={content} locale={locale} siteBaseOrigin={siteBaseOrigin} />;
-    case 'seo-service':
-      return <SEOServiceLayout content={content} locale={locale} siteBaseOrigin={siteBaseOrigin} />;
-    default:
-      notFound();
-  }
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': content.pageType === 'seo-condition' ? 'WebPage' : 'Service',
+            name: content.seo?.h1,
+            areaServed: 'Middletown, NY',
+          }),
+        }}
+      />
+      <SectionRenderer page={page} layout={layout} ctx={ctx} />
+    </>
+  );
 }
