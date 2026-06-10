@@ -54,6 +54,12 @@ const conditions = [
   { slug: 'neck-shoulder-tension', en: 'Neck & Shoulder Tension', zh: '颈肩紧绷', svc: 'deep-tissue-massage' },
   { slug: 'prenatal-comfort', en: 'Prenatal Comfort', zh: '孕期舒缓', svc: 'prenatal-massage' },
   { slug: 'stress-relief', en: 'Stress Relief', zh: '舒缓压力', svc: 'swedish-massage' },
+  { slug: 'tension-headaches', en: 'Tension Headaches', zh: '紧张性头痛', svc: 'deep-tissue-massage' },
+  { slug: 'sports-recovery', en: 'Sports Recovery', zh: '运动恢复', svc: 'sports-massage' },
+  { slug: 'tired-feet', en: 'Tired, Aching Feet', zh: '足部疲劳酸痛', svc: 'foot-reflexology' },
+  { slug: 'desk-posture-tension', en: 'Desk & Posture Tension', zh: '久坐姿势性紧绷', svc: 'deep-tissue-massage' },
+  { slug: 'better-sleep', en: 'Better Sleep & Relaxation', zh: '改善睡眠与放松', svc: 'aromatherapy-massage' },
+  { slug: 'muscle-soreness', en: 'Muscle Soreness', zh: '肌肉酸痛', svc: 'hot-stone-massage' },
 ];
 for (const c of conditions) {
   pages.push({
