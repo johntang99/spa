@@ -156,12 +156,36 @@ for (const r of RESOURCES) {
   });
 }
 
+// ---- 10 near-location town pages (seo-near-location) ----
+// Honest framing: located in Middletown, serving each town. Same NAP. Town-specific drive copy.
+const TOWNS = [
+  { slug: 'goshen', en: 'Goshen', zh: '戈申', min: 10, route: 'Route 17M', landmark: 'the Orange County government center' },
+  { slug: 'wallkill', en: 'Wallkill', zh: '沃尔基尔', min: 15, route: 'Route 208', landmark: 'the Wallkill River valley' },
+  { slug: 'scotchtown', en: 'Scotchtown', zh: '斯科奇敦', min: 8, route: 'Route 211', landmark: 'just north of Middletown' },
+  { slug: 'monroe', en: 'Monroe', zh: '门罗', min: 20, route: 'Route 17', landmark: 'Museum Village' },
+  { slug: 'chester', en: 'Chester', zh: '切斯特', min: 15, route: 'Routes 17 & 94', landmark: 'the Chester train station' },
+  { slug: 'montgomery', en: 'Montgomery', zh: '蒙哥马利', min: 20, route: 'Route 211', landmark: 'historic Village of Montgomery' },
+  { slug: 'pine-bush', en: 'Pine Bush', zh: '派恩布什', min: 20, route: 'Route 302', landmark: 'downtown Pine Bush' },
+  { slug: 'otisville', en: 'Otisville', zh: '奥蒂斯维尔', min: 12, route: 'Route 211 West', landmark: 'the Otisville hamlet' },
+  { slug: 'washingtonville', en: 'Washingtonville', zh: '华盛顿维尔', min: 20, route: 'Routes 208 & 94', landmark: 'Brotherhood Winery' },
+  { slug: 'new-hampton', en: 'New Hampton', zh: '新汉普顿', min: 10, route: 'Route 17M West', landmark: 'the New Hampton crossroads' },
+];
+for (const tn of TOWNS) {
+  const enCtx = `Spa Paradise is located in Middletown, NY and proudly serves guests from ${tn.en}. We are about ${tn.min} minutes away via ${tn.route} — an easy drive from ${tn.landmark}. You will find the same licensed therapists, transparent pricing, and full menu of massage, reflexology, facials, and body care, open every day.`;
+  const zhCtx = `天堂水疗位于纽约州米德尔敦，竭诚为来自${tn.zh}的客人服务。沿${tn.route}约${tn.min}分钟车程，从${tn.landmark}出发十分便捷。这里有同样的持牌理疗师、透明价格，以及按摩、反射疗法、面部与身体护理的完整菜单，每天营业。`;
+  pages.push({
+    slug: `massage-${tn.slug}-ny`, pageType: 'seo-near-location', serviceRef: 'swedish-massage', townSlug: tn.slug,
+    en: { h1: `Massage near ${tn.en}, NY`, title: clip(`Massage near ${tn.en}, NY | Spa Paradise`, 60), desc: clip(`Licensed massage serving ${tn.en}, NY — about ${tn.min} min from Middletown via ${tn.route}. Transparent pricing, open every day.`, 155), kw: [`massage ${tn.en.toLowerCase()} ny`, `massage near ${tn.en.toLowerCase()}`], cluster: `near-${tn.slug}`, _drive: enCtx },
+    zh: { h1: `${tn.zh}附近的按摩`, title: clip(`${tn.zh}附近的按摩 | 天堂水疗`, 60), desc: clip(`服务${tn.zh}的持牌按摩——距米德尔敦约${tn.min}分钟（沿${tn.route}）。价格透明，每天营业。`, 155), kw: [`${tn.zh}按摩`, `${tn.zh}附近按摩`], cluster: `near-${tn.slug}`, _drive: zhCtx },
+  });
+}
+
 function buildContent(p, loc) {
   const d = p[loc];
   const seo = {
     title: d.title, description: d.desc, h1: d.h1,
     canonicalUrl: `/${loc}/${p.slug}`,
-    schema: p.pageType === 'seo-condition' ? ['Service', 'FAQPage'] : p.pageType === 'seo-resource' ? ['Article', 'FAQPage'] : ['Service', 'Offer', 'FAQPage'],
+    schema: p.pageType === 'seo-condition' ? ['Service', 'FAQPage'] : p.pageType === 'seo-resource' ? ['Article', 'FAQPage'] : p.pageType === 'seo-near-location' ? ['LocalBusiness', 'FAQPage'] : ['Service', 'Offer', 'FAQPage'],
     keywords: d.kw, noindex: false, changefreq: 'monthly', priority: 0.7,
     keywordCluster: d.cluster, pageType: p.pageType,
   };
@@ -174,6 +198,11 @@ function buildContent(p, loc) {
       { articleHero: { headline: d.h1, directAnswer: res.answer } },
       { richText: { variant: 'article', body: res.body } },
       { reviewedBy: { teamRef: 'mei-lin-chen', dateReviewed: '2026-06-01' } },
+    ];
+  } else if (p.pageType === 'seo-near-location') {
+    sections = [
+      { hero: { variant: 'local', headline: d.h1, subline: '' } },
+      { richText: { variant: 'driveContext', body: d._drive } },
     ];
   } else if (p.pageType === 'seo-condition') {
     sections = [{ hero: { variant: 'empathy', headline: d.h1, subline: '' } }, { richText: { variant: 'howHelps', body: '' } }, { protectedNotice: { variant: 'seeDoctor', body: 'If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.', locked: true } }];

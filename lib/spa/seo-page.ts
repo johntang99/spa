@@ -117,6 +117,22 @@ export function buildSeoPage(content: any, ctx: SectionCtx): { page: Record<stri
     ] } };
   }
 
+  if (content.pageType === 'seo-near-location') {
+    const drive = findStored(content, 'richText')?.body || '';
+    const page: Record<string, any> = {
+      hero: { variant: 'local', headline: h1, subline: tr(loc, 'Located in Middletown — an easy drive away.', '位于米德尔敦——轻松车程即达。'), ctaPrimary: { label: tr(loc, 'Book Now', '立即预约'), href: '/book' }, ctaSecondary: { label: tr(loc, 'See pricing', '查看价格'), href: '/pricing' } },
+      richText: { variant: 'driveContext', heading: tr(loc, 'Getting here', '如何到达'), body: drive },
+      serviceCards: { variant: 'top', heading: tr(loc, 'Popular treatments', '热门护理'), source: { mode: 'tag', tag: 'popular', limit: 4 } },
+      mapBlock: { variant: 'serviceArea', heading: tr(loc, 'Find us in Middletown', '在米德尔敦找到我们') },
+      faq: { variant: 'mini', heading: tr(loc, 'Questions', '常见问题'), source: { scopeTag: 'location', limit: 3 } },
+      ctaBanner: ctaNap,
+    };
+    return { page, layout: { sections: [
+      { id: 'hero', mode: 'dark' }, { id: 'richText', mode: 'light' }, { id: 'serviceCards', mode: 'well' },
+      { id: 'mapBlock', mode: 'dark' }, { id: 'faq', mode: 'light' }, { id: 'ctaBanner', mode: 'dark' },
+    ] } };
+  }
+
   // seo-local-landing (core landing)
   const page: Record<string, any> = {
     hero: { variant: 'local', headline: h1, subline: tr(loc, 'Licensed massage, reflexology, facials & body care — transparent pricing, open every day.', '持牌按摩、反射疗法、面部与身体护理——价格透明，每天营业。'), ctaPrimary: { label: tr(loc, 'Book Now', '立即预约'), href: '/book' }, ctaSecondary: { label: tr(loc, 'See pricing', '查看价格'), href: '/pricing' } },
