@@ -1,3 +1,16 @@
 {
-  "sections": [ { "id": "galleryGrid galleryGridVideo ctaBanner" } ]
+  "sections": [
+    {
+      "id": "galleryGrid",
+      "mode": "light"
+    },
+    {
+      "id": "galleryGridVideo",
+      "mode": "dark"
+    },
+    {
+      "id": "ctaBanner",
+      "mode": "dark"
+    }
+  ]
 }

@@ -1,3 +1,36 @@
 {
-  "sections": [ { "id": "hero statsBand teamGrid checklist galleryGrid iconGrid testimonials ctaBanner" } ]
+  "sections": [
+    {
+      "id": "hero",
+      "mode": "dark"
+    },
+    {
+      "id": "statsBand",
+      "mode": "light"
+    },
+    {
+      "id": "teamGrid",
+      "mode": "light"
+    },
+    {
+      "id": "checklist",
+      "mode": "well"
+    },
+    {
+      "id": "galleryGrid",
+      "mode": "light"
+    },
+    {
+      "id": "iconGrid",
+      "mode": "dark"
+    },
+    {
+      "id": "testimonials",
+      "mode": "light"
+    },
+    {
+      "id": "ctaBanner",
+      "mode": "dark"
+    }
+  ]
 }

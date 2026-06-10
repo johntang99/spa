@@ -1,3 +1,20 @@
 {
-  "sections": [ { "id": "napHours mapBlock contactForm faq" } ]
+  "sections": [
+    {
+      "id": "napHours",
+      "mode": "light"
+    },
+    {
+      "id": "mapBlock",
+      "mode": "well"
+    },
+    {
+      "id": "contactForm",
+      "mode": "light"
+    },
+    {
+      "id": "faq",
+      "mode": "well"
+    }
+  ]
 }

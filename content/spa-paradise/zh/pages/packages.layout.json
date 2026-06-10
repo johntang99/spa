@@ -1,3 +1,28 @@
 {
-  "sections": [ { "id": "hero packageGrid featurePanel comparisonTable faq ctaBanner" } ]
+  "sections": [
+    {
+      "id": "hero",
+      "mode": "dark"
+    },
+    {
+      "id": "packageGrid",
+      "mode": "light"
+    },
+    {
+      "id": "featurePanel",
+      "mode": "well"
+    },
+    {
+      "id": "comparisonTable",
+      "mode": "light"
+    },
+    {
+      "id": "faq",
+      "mode": "well"
+    },
+    {
+      "id": "ctaBanner",
+      "mode": "dark"
+    }
+  ]
 }

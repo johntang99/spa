@@ -8,6 +8,7 @@ import {
   bookHref, resolveServiceSource, getService,
 } from '@/lib/spa/catalog';
 import { shouldRenderRating } from '@/lib/contracts/validation-rules';
+import TreatmentSelector from './TreatmentSelector';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -341,4 +342,5 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   napHours: NapHours,
   mapBlock: MapBlock,
   ctaBanner: CtaBanner,
+  treatmentSelector: TreatmentSelector,
 };

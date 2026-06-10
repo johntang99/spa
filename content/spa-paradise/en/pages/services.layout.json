@@ -1,3 +1,20 @@
 {
-  "sections": [ { "id": "hero categoryGrid treatmentSelector ctaBanner" } ]
+  "sections": [
+    {
+      "id": "hero",
+      "mode": "dark"
+    },
+    {
+      "id": "categoryGrid",
+      "mode": "light"
+    },
+    {
+      "id": "treatmentSelector",
+      "mode": "well"
+    },
+    {
+      "id": "ctaBanner",
+      "mode": "dark"
+    }
+  ]
 }
