@@ -14,6 +14,7 @@ import {
 import { canWriteContent, requireSiteAccess } from '@/lib/admin/permissions';
 import { locales } from '@/lib/i18n';
 import { normalizeMediaUrlsInData } from '@/lib/media-url';
+import { validateContentOnSave } from '@/lib/contracts';
 
 function isEmptyHeaderPayload(filePath: string, data: any): boolean {
   if (filePath !== 'header.json' || !data || typeof data !== 'object') return false;
@@ -193,6 +194,22 @@ export async function PUT(request: NextRequest) {
   if (blogValidationError) {
     return NextResponse.json({ message: blogValidationError }, { status: 400 });
   }
+
+  // System S contract validation (0C): hard-block medical claims + incomplete SEO on
+  // publish; shape mismatches are logged as warnings (do not block content seeding).
+  if (normalizedParsed && typeof normalizedParsed === 'object' && !Array.isArray(normalizedParsed)) {
+    const { errors, warnings } = validateContentOnSave(normalizedParsed as Record<string, unknown>);
+    if (warnings.length) {
+      console.warn(`[contracts] ${siteId}/${locale}/${filePath} warnings:`, warnings.slice(0, 20));
+    }
+    if (errors.length) {
+      return NextResponse.json(
+        { message: `Content validation failed:\n${errors.join('\n')}`, errors },
+        { status: 400 }
+      );
+    }
+  }
+
   const normalizedContent = JSON.stringify(normalizedParsed, null, 2);
 
   if (canUseContentDb()) {
