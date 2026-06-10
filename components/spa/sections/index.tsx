@@ -19,6 +19,8 @@ import Checklist from './Checklist';
 import GalleryGrid from './GalleryGrid';
 import ContactForm from './ContactForm';
 import ProtectedNotice from './ProtectedNotice';
+import BookingForm from './BookingForm';
+import AltPaths from './AltPaths';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -373,4 +375,6 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   galleryGridVideo: GalleryGrid,
   contactForm: ContactForm,
   protectedNotice: ProtectedNotice,
+  bookingForm: BookingForm,
+  altPaths: AltPaths,
 };
