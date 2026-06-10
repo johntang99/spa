@@ -1,34 +1,3 @@
 {
-  "sections": [
-    {
-      "id": "hero"
-    },
-    {
-      "id": "profile"
-    },
-    {
-      "id": "staffs"
-    },
-    {
-      "id": "credentials"
-    },
-    {
-      "id": "specializations"
-    },
-    {
-      "id": "philosophy"
-    },
-    {
-      "id": "journey"
-    },
-    {
-      "id": "affiliationsEducation"
-    },
-    {
-      "id": "clinic"
-    },
-    {
-      "id": "cta"
-    }
-  ]
+  "sections": [ { "id": "hero statsBand teamGrid checklist galleryGrid iconGrid testimonials ctaBanner" } ]
 }

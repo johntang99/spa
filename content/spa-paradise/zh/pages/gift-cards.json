@@ -1,0 +1,22 @@
+{
+  "hero": { "variant": "seasonal", "eyebrow": "礼品卡", "headline": "把一个悠闲的下午送给所爱之人。", "subline": "天堂水疗礼品卡永不过期、无任何费用，一分钟即可通过电子邮件送达。", "ctaPrimary": { "label": "选择金额", "href": "#denominations" }, "media": { "image": "", "scrim": 45 }, "campaignAware": true },
+  "productGridDenominations": { "variant": "denominations", "heading": "赠送金额", "intro": "由对方自由选择护理。", "productRefs": ["gc-50", "gc-100", "gc-150"] },
+  "productGridTreatments": { "variant": "treatments", "heading": "赠送护理", "intro": "送上一次特定的体验。", "productRefs": ["gift-signature-facial", "gift-couples-massage"] },
+  "steps": { "variant": "horizontal", "heading": "使用流程", "items": [
+    { "title": "选择", "body": "挑选金额或指定护理。" },
+    { "title": "付款", "body": "在线安全结账——只需一分钟。" },
+    { "title": "兑换", "body": "收礼人会通过电子邮件收到礼券，可预约任意服务。" }
+  ] },
+  "featurePanel": { "variant": "corporate", "eyebrow": "企业礼赠", "heading": "企业与批量礼赠", "body": "以天堂水疗礼品卡感谢团队或答谢客户。告诉我们您的需求，我们来安排。", "media": "", "mediaSide": "left", "cta": { "label": "提交咨询", "href": "#corporate" } },
+  "faq": { "variant": "accordion", "heading": "礼品卡问题", "source": { "scopeTag": "gift" } },
+  "testimonials": { "variant": "carousel", "heading": "送礼之选", "filter": { "scopeTag": "gift", "limit": 4 }, "showSource": true },
+  "seo": {
+    "title": "水疗礼品卡 | 天堂水疗 米德尔敦",
+    "description": "购买纽约米德尔敦的水疗与按摩礼品卡。永不过期、无费用、一分钟邮件送达。可选金额或指定护理，支持企业礼赠。",
+    "h1": "把一个悠闲的下午送给所爱之人。",
+    "canonicalUrl": "/zh/gift-cards",
+    "schema": ["Product", "Offer", "FAQPage"],
+    "keywords": ["米德尔敦水疗礼品卡", "米德尔敦按摩礼品卡", "水疗礼券"],
+    "noindex": false, "changefreq": "monthly", "priority": 0.8, "keywordCluster": "gift-cards", "pageType": "gift-cards"
+  }
+}

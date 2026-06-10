@@ -1,0 +1,24 @@
+{
+  "bookingForm": { "variant": "full", "successHeading": "已为您预约——期待与您相见。", "successBody": "我们已发送确认信息。预约未收取任何费用，护理结束后再付款。需要更改？致电 (845) 800-6600 即可。" },
+  "trustBar": { "variant": "column", "items": [
+    { "type": "rating" },
+    { "type": "licensed", "label": "纽约州持牌理疗师" },
+    { "type": "hygiene", "label": "预约无需付款" },
+    { "type": "custom", "label": "一个工作小时内回复", "iconKey": "clock" }
+  ] },
+  "altPaths": { "showCall": true, "showWechat": true, "showExternal": true },
+  "steps": { "variant": "expect", "heading": "护理流程", "items": [
+    { "title": "提前几分钟到达", "body": "告诉我们您的目标，以及需要重点处理或避开的部位。" },
+    { "title": "放松享受护理", "body": "理疗师全程依您的舒适调整力度。" },
+    { "title": "护理后付款，小费随意", "body": "预约不收取费用；小费完全由您决定。" }
+  ] },
+  "seo": {
+    "title": "预约按摩或水疗护理 | 天堂水疗 米德尔敦",
+    "description": "在纽约米德尔敦预约按摩、反射疗法、面部护理等。在线预约不到一分钟——无需付款。每天营业，提供中英文服务。",
+    "h1": "预约您的到访",
+    "canonicalUrl": "/zh/book",
+    "schema": ["LocalBusiness"],
+    "keywords": ["米德尔敦预约按摩", "米德尔敦水疗预约", "米德尔敦按摩预约"],
+    "noindex": false, "changefreq": "monthly", "priority": 0.9, "keywordCluster": "book", "pageType": "book"
+  }
+}

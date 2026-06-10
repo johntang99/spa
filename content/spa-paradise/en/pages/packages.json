@@ -1,0 +1,17 @@
+{
+  "hero": { "variant": "split", "eyebrow": "Packages & memberships", "headline": "More spa, better value.", "subline": "Curated combinations and member pricing for the people who make us a habit.", "ctaPrimary": { "label": "See packages", "href": "#packages" }, "media": { "image": "", "scrim": 40 } },
+  "packageGrid": { "heading": "Our packages", "refs": "all" },
+  "featurePanel": { "variant": "membership", "eyebrow": "Membership", "heading": "Monthly Membership", "body": "One 60-minute massage each month at a member rate, plus discounts on everything else. Set up in spa, cancel anytime.", "media": "", "mediaSide": "right", "cta": { "label": "Ask about membership", "href": "/book?package=monthly-membership" }, "packageRef": "monthly-membership" },
+  "comparisonTable": { "heading": "Member vs. regular", "packageRef": "monthly-membership" },
+  "faq": { "variant": "accordion", "heading": "Package & membership questions", "source": { "scopeTag": "packages" } },
+  "ctaBanner": { "variant": "split-offer", "heading": "Make it a habit.", "subline": "Start with a package or ask about membership at your next visit.", "ctaPrimary": { "label": "Book Now", "href": "/book" } },
+  "seo": {
+    "title": "Spa Packages & Membership | Spa Paradise Middletown",
+    "description": "Spa day packages, couples retreats, massage 3-packs, and monthly membership in Middletown, NY. Better value for regulars — transparent pricing.",
+    "h1": "More spa, better value.",
+    "canonicalUrl": "/en/packages",
+    "schema": ["Product", "Offer"],
+    "keywords": ["spa packages middletown ny", "spa membership middletown", "spa day package middletown"],
+    "noindex": false, "changefreq": "monthly", "priority": 0.7, "keywordCluster": "packages", "pageType": "packages"
+  }
+}

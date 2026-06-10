@@ -97,10 +97,12 @@ interface HeaderMenuConfig {
    }
  
   const { hero, introduction, categories, images, cta } = content;
-  const displayImages = images
+  // Defensive (Phase 0D): contract-shaped pages lack legacy fields; Phase 1 (1G)
+  // replaces this renderer. Fall back to empties so the route doesn't 500.
+  const displayImages = (images || [])
     .filter((image) => Boolean(image?.src))
     .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
-  const displayCategories = categories;
+  const displayCategories = categories || [];
    const heroFeatures = [
      { icon: Camera, text: locale === 'en' ? 'Virtual tour' : '虚拟参观' },
      { icon: Sparkles, text: locale === 'en' ? 'Clean & modern' : '干净现代' },

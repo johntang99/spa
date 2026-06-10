@@ -1,298 +1,34 @@
 {
-  "cta": {
-    "title": "準備開始您的康復之旅？",
-    "variant": "centered",
-    "primaryCta": {
-      "link": "/zh/contact",
-      "text": "預約諮詢"
-    },
-    "description": "安排您的初次諮詢，討論您的健康目標，並了解中醫如何幫助您恢復到最佳狀態。",
-    "secondaryCta": {
-      "link": "tel:+18453811106",
-      "text": "今天致電我們"
-    }
-  },
-  "hero": {
-    "title": "認識黃醫生",
-    "variant": "split-photo-right",
-    "subtitle": "致力於通過傳統中醫為您的健康和保健服務",
-    "description": "以歷久彌新的智慧與個性化關懷，陪伴您的康復之路。",
-    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/dr-huang-lecture-20.png"
-  },
-  "clinic": {
-    "title": "關於我們的診所",
-    "values": [
-      {
-        "icon": "Heart",
-        "title": "富有同情心的護理",
-        "description": "我們以尊重、同情和對其福祉的真誠關懷對待每位患者。"
-      },
-      {
-        "icon": "Award",
-        "title": "臨床卓越",
-        "description": "我們保持最高的實踐標準，使用優質草藥和無菌技術。"
-      },
-      {
-        "icon": "Users",
-        "title": "以患者為中心",
-        "description": "您的需求、關切和目標是我們所做一切的核心。"
-      },
-      {
-        "icon": "Leaf",
-        "title": "自然癒合",
-        "description": "我們相信支持身體自我癒合的自然能力。"
-      }
-    ],
-    "variant": "split",
-    "features": [
-      "無障礙通道",
-      "停車便利",
-      "多語言服務（英語、中文）",
-      "接受新患者",
-      "乾淨、現代的治療室",
-      "寧靜、舒緩的環境"
-    ],
-    "description": [
-      "黃醫生診所成立於2010年，使命簡單：為米德爾敦（Middletown）社區提供便捷、高品質的傳統中醫護理。",
-      "從一個小診所開始，已經發展成為一個值得信賴的健康中心，幫助1,000多名患者自然實現更好的健康。"
-    ],
-    "environment": "我們的診所提供寧靜、溫馨的環境，旨在促進放鬆和癒合。從您進入的那一刻起，您就會感受到不同——寧靜的色彩、舒適的治療室和溫暖、友好的氛圍讓患者感到輕鬆自在。"
-  },
-  "staffs": {
-    "title": "專家導師",
-    "members": [
-      {
-        "name": "汪衛東 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774412916267-wangweidong.jpg",
-        "title": "主任醫師",
-        "description": "中醫心理學專業委員會會長、世界中聯睡眠醫學專業委員會常務副會長、中國睡眠研究會副理事長、國家中醫藥管理局中醫心理學重點學科帶頭人。曾任廣安門醫院副院長。擅長：各類心理疾病、失眠、焦慮、抑鬱、強迫症等。我於 2010 年至 2013 年在廣安門醫院心理睡眠門診隨師學習。"
-      },
-      {
-        "name": "劉艷驕 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471067557--.jpg",
-        "title": "醫學博士、主任醫師",
-        "description": "北京中醫藥大學臨床特聘專家，世界中聯睡眠醫學專業委員會名譽會長。主要研究中國睡眠醫學理論與臨床。擅長治療各種睡眠障礙（失眠、發作性睡病、打鼾及睡眠呼吸中止症候群）、過敏性疾病（哮喘、花粉症、皮炎）及神經內分泌疾病。"
-      },
-      {
-        "name": "花寶金 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471078946--.jpg",
-        "title": "主任醫師、醫學博士",
-        "description": "曾任廣安門醫院副院長、中國中醫科學院腫瘤研究所常務副所長。國家中醫腫瘤臨床重點專科帶頭人。研究方向聚焦於中醫藥治療腫瘤術後復發轉移之臨床研究，以及經方在腫瘤治療中的應用。"
-      },
-      {
-        "name": "張如心 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471091007--.jpg",
-        "title": "主任醫師、教授",
-        "description": "1954年畢業於北京中醫學校。擅長激發經氣、循經感傳手法。曾任美國中醫藥評估委員會委員、美國國際針灸學院教授。對面肌痙攣、三叉神經痛、肩周炎、哮喘、坐骨神經痛等疑難雜症療效顯著。"
-      },
-      {
-        "name": "郭榮娟 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471100003--.jpg",
-        "title": "主任醫師、博士生導師",
-        "description": "世界中聯心身醫學專業委員會會長，中華中醫藥學會心身醫學分會主任委員。北京市中醫藥管理局「薪火傳承 3＋3 工程」王永炎名醫傳承工作站負責人，致力於心身醫學與卒中中西醫結合防治研究。"
-      },
-      {
-        "name": "田從豁 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471110387--.jpg",
-        "title": "主任醫師、國醫名師",
-        "description": "廣安門醫院針灸科主任，國家級非物質文化遺產針灸項目代表性傳承人，全國 500 名著名中醫師帶徒導師。祖傳中醫，1951年畢業於中國醫科大學。在針灸學術經驗繼承工作上具有崇高地位。"
-      },
-      {
-        "name": "桑希生 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471118924--.jpg",
-        "title": "教授、博士後",
-        "description": "黑龍江中醫藥大學中醫基礎理論教研室主任。倡導「以病為綱」的中醫學術思路，對內、婦、兒、皮膚、疼痛科疾病有獨特見解。與中醫同道研創「乂針」，臨床效果顯著。擔任中國臨床腫瘤學會（CSCO）專家委員會常委。"
-      },
-      {
-        "name": "林曉峰 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471131717--.jpg",
-        "title": "主任醫師",
-        "description": "黑龍江中醫藥大學附屬第一醫院主任醫師。擅長冠心病、心肌炎等心腦血管疾病及疑難病症。研究方向聚焦中醫臟腑證候機理。我於 2009 年至 2010 年門診隨師學習。"
-      },
-      {
-        "name": "毛大鵬 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471138431--.jpg",
-        "title": "主任醫師",
-        "description": "北京社區名老中醫，出身中醫世家，傳承「易水學派」與「補土學說」。從事臨床 40 餘年，原創「益氣充絡」法治療心腦血管病。擅長糖尿病、心腦血管病、腎病症候群及失眠症等老年病症。"
-      },
-      {
-        "name": "肖德華 醫師",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471148509--.jpg",
-        "title": "針刀醫師",
-        "description": "針刀醫學早期實踐者，師從發明者朱漢章教授。擔任中華中醫藥學會針刀醫學分會副主任委員。主要從事針刀教育推廣，擅長處理各類痛症。我於 2021 年參加首屆北京基層針刀培訓班隨師學習。"
-      },
-      {
-        "name": "王修身 醫師",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471156010--.jpg",
-        "title": "主任醫師",
-        "description": "中國宮廷御醫第三代傳人。身懷「一穴多針、透拉針、舌針、五龍針法」等絕技。擁有 50 多年臨床經驗，發明許多獨特針法，業績入錄多部國際辭典，被譽為中醫針灸界的瑰寶。"
-      },
-      {
-        "name": "楊志勳 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471162740--.jpg",
-        "title": "著名中醫",
-        "description": "中醫世家傳人，北京世紀楊氏新藥管療法研究所所長。擅長「內病外治」、「順氣養氣、淨化體液」治療一身數病。致力於中醫啟蒙工作。我於 2017 年至 2018 年隨師學習中醫適宜技術藥管術。"
-      },
-      {
-        "name": "周煒 教授",
-        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1774471168887--.jpg",
-        "title": "主任醫師",
-        "description": "北京護國寺中醫醫院主任醫師。針灸師從王居易，內科師從周耀庭、郝萬山等名家。擅長應用經絡醫學與五運六氣理論。我於 2018 年參加經絡診察精英培訓班，學習經絡診察理論和實操。"
-      }
-    ]
-  },
-  "journey": {
-    "story": "",
-    "title": "",
-    "variant": ""
-  },
-  "profile": {
-    "bio": "碩士研究生學歷 本科畢業於黑龍江中醫藥大學，碩士畢業於中國中醫科學院，曾入選名老中醫“學術經驗繼承人”計劃，師從多位國醫名師。\n\n行醫十餘年，臨床與研究並重，擅長運用針灸，中藥等中醫療法治療 心理、睡眠疾病、內科、外科，婦科，兒科等各科疾病及疑難雜癥，各類痛癥等。\n\n> 真正的治癒來自於解決根本原因，而不僅僅是抑制症狀。每個患者都是獨一無二的，治療必須反映這種個性。\n\n**黃醫生，針灸師，中醫碩士**",
-    "name": "黃醫生，針灸師，中醫碩士",
-    "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/dr-huang-11.png",
-    "title": "美國執業針灸師和中醫執業醫師",
-    "variant": "split",
-    "signature": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/signature.png"
-  },
-  "philosophy": {
-    "title": "針灸療程",
-    "variant": "cards",
-    "principles": [
-      {
-        "title": "中醫診斷、體質分析",
-        "description": "黃醫生會根據病情擬定治療方案，告訴您針灸治療的大致部位"
-      },
-      {
-        "title": "進針",
-        "description": "黃醫生會使用一次性或嚴格消毒的針具，以不同的深度插入選定穴位"
-      },
-      {
-        "title": "運針",
-        "description": "黃醫生會輕輕移動或旋轉針頭，這時會產生酸麻、脹痛等針感"
-      },
-      {
-        "title": "拔針",
-        "description": "針通常留在穴位20分鐘後，黃醫生會拔出針，拔針時通常不會感到不適。但一部分人拔針後仍有酸脹感，屬正常穴位反應，一般這種感覺很快就會消失。"
-      }
-    ],
-    "introduction": "黃醫生的治療方法植根於傳統中醫的基本原則，同時融合現代臨床理解。"
-  },
-  "credentials": {
-    "items": [
-      {
-        "icon": "GraduationCap",
-        "year": "2011-2018",
-        "location": "北京廣安門醫院",
-        "credential": "傳統中醫資歷",
-        "institution": "中國中醫科學院 廣安門醫院碩士研究生\n\n中國中醫科學院廣安門醫院學術經驗繼承"
-      },
-      {
-        "icon": "GraduationCap",
-        "year": "2011-2018",
-        "location": "北京大學人民醫院",
-        "credential": "心理與睡眠醫學",
-        "institution": "\n北京大學人民醫院睡眠醫學中心進修，學習睡眠監測與睡眠相關疾病（2011）\n\n首屆國際心理學與睡眠醫學科研方法高階培訓課程（2012）\n\n創傷治療與哀傷輔導連續訓練項目，結業（2013，紐瀚斯心理事業發展中心）\n\n心理危機介入技術建構與提升訓練班（2018，北京豐台區南苑醫院）\n"
-      },
-      {
-        "icon": "Certificate",
-        "year": "2008 - 2015",
-        "location": "",
-        "credential": "中醫心理學與資質",
-        "institution": "國際催眠師認證（2008，World Medical Executive Certification Center）\n\n國家中醫管理局人才交流中心 · 中醫心理師培訓，獲二級證書（2015）"
-      },
-      {
-        "icon": "Certificate",
-        "year": "2018 - 2019",
-        "location": "文憑持有者",
-        "credential": "兒童臨床帶教資格",
-        "institution": "兒科醫療人員強化訓練（2018，北京市衛計委）\n\n北市中醫管理局 · 中醫兒科師資培訓，取得臨床帶教資格（2019）\n"
-      },
-      {
-        "icon": "GraduationCap",
-        "year": "2017 - 2018",
-        "location": "",
-        "credential": "中醫内科培訓",
-        "institution": "北京中醫藥大學繼續教育學院 · “經脈與級聯理論”臨床應用培訓班（2017）\n\n鮑艷舉六經辨證工作坊（2018）"
-      },
-      {
-        "icon": "GraduationCap",
-        "year": "2018 - 2020",
-        "location": "",
-        "credential": "針灸、針刀、推拿、拔罐技術",
-        "institution": "台灣董氏針灸訓練班（2018）\n\n經絡診察精英班訓練（2019）\n\n首屆北京基層針刀訓練班，師從針刀大家肖德華教授，獲針刀合格證（2021）\n\n北京中西醫結合學會 · 中醫藥健康養老示範工程十項適宜技術訓練（2017–2018）\n\n中醫適宜技術藥管術第二期菁英班（2018–2019）\n\n無痛正骨臨床技術培訓（2020）\n\n產後修復手法實操班（2020）"
-      }
-    ],
-    "title": "教育和資質",
-    "variant": "list"
-  },
-  "affiliations": {
-    "title": "專業會員資格和附屬機構",
-    "variant": "compact",
-    "organizations": [
-      {
-        "name": "世界中醫藥學會聯合會中醫心理學專業委員會理事",
-        "role": "專業委員會理事"
-      },
-      {
-        "name": "世界中醫藥學會聯合會睡眠醫學專業委員會理事",
-        "role": "專業委員會理事"
-      },
-      {
-        "name": "中國針灸推拿協會會員",
-        "role": "協會會員"
-      },
-      {
-        "name": "北京中西醫結合學會會員",
-        "role": "學會會員"
-      },
-      {
-        "name": "中國中西醫結合學會會員",
-        "role": "學會會員"
-      },
-      {
-        "name": "北京針灸學會會員",
-        "role": "學會會員"
-      }
-    ]
-  },
-  "specializations": {
-    "areas": [
-      {
-        "icon": "Activity",
-        "title": "疼痛管理",
-        "description": "運動損傷、慢性疼痛、關節炎和肌肉骨骼疾病"
-      },
-      {
-        "icon": "Heart",
-        "title": "婦女健康",
-        "description": "生育支持、月經失調、孕期護理和更年期"
-      },
-      {
-        "icon": "Brain",
-        "title": "壓力和心理健康",
-        "description": "焦慮、抑鬱、失眠和壓力相關疾病"
-      },
-      {
-        "icon": "Apple",
-        "title": "消化系統疾病",
-        "description": "腸易激綜合徵（IBS）、胃酸逆流、腹脹和慢性消化問題"
-      }
-    ],
-    "title": "專業領域",
-    "variant": "grid-2",
-    "description": "通過多年的臨床實踐和繼續教育，黃醫生在幾個關鍵領域發展了特殊的專業知識："
-  },
-  "continuingEducation": {
-    "items": [
-      "高級運動醫學針灸認證（2019年）",
-      "生育和生殖健康專業化（2016年）",
-      "與 Heiner Fruehauf 博士的經典中藥研討會",
-      "每年參加國家中醫會議",
-      "與當地中醫執業者的定期學習小組",
-      "每年 30+ 小時的繼續教育（要求：每 3 年 30 小時）"
-    ],
-    "title": "繼續教育和培訓",
-    "variant": "compact",
-    "description": "黃醫生積極參與中醫社區，並定期尋求高級培訓："
+  "hero": { "variant": "story", "eyebrow": "我们的故事", "headline": "米德尔敦真正的日间水疗。", "subline": "我们创立天堂水疗，是想为街坊带来一家安静、专业、价格透明的水疗——提供中英文服务，每天营业。", "media": { "image": "", "scrim": 40 } },
+  "statsBand": { "items": [
+    { "value": "4.8", "label": "平均评分", "source": "reviewCount" },
+    { "value": "", "suffix": "+", "label": "五星好评", "source": "reviewCount" },
+    { "value": "", "label": "持牌理疗师", "source": "teamCount" },
+    { "value": "", "label": "菜单护理项目", "source": "servicesCount" }
+  ], "animate": true },
+  "teamGrid": { "variant": "cards", "heading": "我们的持牌理疗师", "refs": "all" },
+  "checklist": { "variant": "standards", "heading": "我们的标准", "items": [
+    { "iconKey": "license", "label": "每位理疗师均持纽约州执照" },
+    { "iconKey": "linen", "label": "每次更换干净布草、消毒房间" },
+    { "iconKey": "drape", "label": "始终使用专业盖布" },
+    { "iconKey": "tag", "label": "公开标价——人人一致" },
+    { "iconKey": "globe", "label": "提供中英文服务" }
+  ] },
+  "galleryGrid": { "variant": "strip", "heading": "走进水疗", "collections": ["rooms", "details"] },
+  "iconGrid": { "variant": "values", "heading": "我们的理念", "items": [
+    { "iconKey": "heart", "title": "用心而非推销", "body": "我们推荐对您有帮助的，而不是更贵的。" },
+    { "iconKey": "calm", "title": "宁静本身就是产品", "body": "安静的房间、从容的护理、不催时间。" },
+    { "iconKey": "welcome", "title": "欢迎每一位", "body": "双语贴心服务，每天营业，无需会员。" }
+  ] },
+  "testimonials": { "variant": "spotlight", "heading": "客人的真实评价", "filter": { "limit": 3 }, "showSource": true },
+  "ctaBanner": { "variant": "image-bg", "heading": "欢迎亲自来体验。", "ctaPrimary": { "label": "立即预约", "href": "/book" }, "ctaSecondary": { "label": "联系我们", "href": "/contact" }, "media": "" },
+  "seo": {
+    "title": "关于我们 | 天堂水疗 米德尔敦",
+    "description": "认识天堂水疗背后的持牌理疗师——米德尔敦透明、双语的日间水疗。我们的故事、标准与团队。",
+    "h1": "米德尔敦真正的日间水疗。",
+    "canonicalUrl": "/zh/about",
+    "schema": ["AboutPage", "Person"],
+    "keywords": ["天堂水疗 关于", "米德尔敦按摩师", "米德尔敦日间水疗"],
+    "noindex": false, "changefreq": "yearly", "priority": 0.6, "keywordCluster": "about", "pageType": "about"
   }
 }

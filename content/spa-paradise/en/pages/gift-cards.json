@@ -1,0 +1,22 @@
+{
+  "hero": { "variant": "seasonal", "eyebrow": "Gift cards", "headline": "Give the gift of an afternoon off.", "subline": "Spa Paradise gift cards never expire, carry no fees, and arrive by email in a minute.", "ctaPrimary": { "label": "Choose an amount", "href": "#denominations" }, "media": { "image": "", "scrim": 45 }, "campaignAware": true },
+  "productGridDenominations": { "variant": "denominations", "heading": "Gift an amount", "intro": "They choose the treatment.", "productRefs": ["gc-50", "gc-100", "gc-150"] },
+  "productGridTreatments": { "variant": "treatments", "heading": "Gift a treatment", "intro": "Give a specific experience.", "productRefs": ["gift-signature-facial", "gift-couples-massage"] },
+  "steps": { "variant": "horizontal", "heading": "How it works", "items": [
+    { "title": "Choose", "body": "Pick an amount or a specific treatment." },
+    { "title": "Pay", "body": "Checkout securely online — it takes a minute." },
+    { "title": "They redeem", "body": "The recipient gets a certificate by email to book any service." }
+  ] },
+  "featurePanel": { "variant": "corporate", "eyebrow": "For business", "heading": "Corporate & bulk gifting", "body": "Thank a team or delight clients with Spa Paradise gift cards. Tell us what you need and we'll set it up.", "media": "", "mediaSide": "left", "cta": { "label": "Make an inquiry", "href": "#corporate" } },
+  "faq": { "variant": "accordion", "heading": "Gift card questions", "source": { "scopeTag": "gift" } },
+  "testimonials": { "variant": "carousel", "heading": "Loved by gift-givers", "filter": { "scopeTag": "gift", "limit": 4 }, "showSource": true },
+  "seo": {
+    "title": "Spa Gift Cards | Spa Paradise Middletown, NY",
+    "description": "Buy spa & massage gift cards in Middletown, NY. Never expire, no fees, emailed in a minute. Amounts or specific treatments — corporate gifting available.",
+    "h1": "Give the gift of an afternoon off.",
+    "canonicalUrl": "/en/gift-cards",
+    "schema": ["Product", "Offer", "FAQPage"],
+    "keywords": ["spa gift card middletown ny", "massage gift card middletown", "spa gift certificate"],
+    "noindex": false, "changefreq": "monthly", "priority": 0.8, "keywordCluster": "gift-cards", "pageType": "gift-cards"
+  }
+}

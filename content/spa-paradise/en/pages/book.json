@@ -1,0 +1,24 @@
+{
+  "bookingForm": { "variant": "full", "successHeading": "You're booked — see you soon.", "successBody": "We've sent a confirmation. No payment was taken; you'll pay after your treatment. Need to change it? Just call (845) 800-6600." },
+  "trustBar": { "variant": "column", "items": [
+    { "type": "rating" },
+    { "type": "licensed", "label": "Licensed NY therapists" },
+    { "type": "hygiene", "label": "No payment required to book" },
+    { "type": "custom", "label": "We reply within 1 business hour", "iconKey": "clock" }
+  ] },
+  "altPaths": { "showCall": true, "showWechat": true, "showExternal": true },
+  "steps": { "variant": "expect", "heading": "What to expect", "items": [
+    { "title": "Arrive a few minutes early", "body": "Tell us your goals and any areas to focus on or avoid." },
+    { "title": "Relax into your treatment", "body": "Your therapist adjusts pressure to your comfort throughout." },
+    { "title": "Pay after, tip if you like", "body": "Nothing is charged to book; gratuity is always your choice." }
+  ] },
+  "seo": {
+    "title": "Book a Massage or Spa Treatment | Spa Paradise Middletown",
+    "description": "Book massage, reflexology, facials & more in Middletown, NY. Online booking in under a minute — no payment required. Open every day, English & 中文.",
+    "h1": "Book your visit",
+    "canonicalUrl": "/en/book",
+    "schema": ["LocalBusiness"],
+    "keywords": ["book massage middletown ny", "spa booking middletown", "massage appointment middletown"],
+    "noindex": false, "changefreq": "monthly", "priority": 0.9, "keywordCluster": "book", "pageType": "book"
+  }
+}
