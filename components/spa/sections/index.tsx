@@ -21,6 +21,9 @@ import ContactForm from './ContactForm';
 import ProtectedNotice from './ProtectedNotice';
 import BookingForm from './BookingForm';
 import AltPaths from './AltPaths';
+import ProductGrid from './ProductGrid';
+import PackageGrid from './PackageGrid';
+import ComparisonTable from './ComparisonTable';
 
 export interface SectionCtx {
   locale: 'en' | 'zh';
@@ -377,4 +380,9 @@ export const SECTION_COMPONENTS: Record<string, React.FC<{ data: any; ctx: Secti
   protectedNotice: ProtectedNotice,
   bookingForm: BookingForm,
   altPaths: AltPaths,
+  productGrid: ProductGrid,
+  productGridDenominations: ProductGrid,
+  productGridTreatments: ProductGrid,
+  packageGrid: PackageGrid,
+  comparisonTable: ComparisonTable,
 };

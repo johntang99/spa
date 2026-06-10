@@ -1,6 +1,13 @@
 # Chinese Medicine Template
 
 
+admin@spaparadise.local / SpaParadise!2026
+admin@spa.com/admin123
+
+
+
+
+
 lsof -ti:3080 | xargs kill -9
 rm -rf .next
 npm run dev
