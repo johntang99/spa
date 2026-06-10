@@ -342,6 +342,13 @@
 .spa-site p { margin: 0 0 1em; }
 .spa-site img { max-width: 100%; display: block; }
 .spa-site a { color: inherit; }
+
+/* Gradient image placeholders (prototype standard — no broken <img> before real photos). */
+.spa-site .ph { background: linear-gradient(135deg, var(--pine-soft), var(--ink-pine) 55%, var(--candle-deep)); position: relative; }
+.spa-site .ph::after { content: attr(data-label); position: absolute; inset: auto 12px 10px auto;
+  font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(247,244,238,.65); }
+.spa-site .ph-warm { background: linear-gradient(135deg, var(--blush-stone), var(--candle-deep) 60%, var(--ink-pine)); }
+.spa-site .ph-light { background: linear-gradient(135deg, var(--linen-deep), var(--mist) 70%, var(--pine-soft)); }
 .spa-site .small, .spa-site .caption { font-size: .875rem; color: var(--text-secondary); }
 .spa-site .eyebrow {
   font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;

@@ -7,7 +7,7 @@
     { "title": "Pay", "body": "Checkout securely online — it takes a minute." },
     { "title": "They redeem", "body": "The recipient gets a certificate by email to book any service." }
   ] },
-  "featurePanel": { "variant": "corporate", "eyebrow": "For business", "heading": "Corporate & bulk gifting", "body": "Thank a team or delight clients with Spa Paradise gift cards. Tell us what you need and we'll set it up.", "media": "", "mediaSide": "left", "cta": { "label": "Make an inquiry", "href": "#corporate" } },
+  "featurePanel": { "variant": "corporate", "eyebrow": "For business", "heading": "Corporate & bulk gifting", "body": "Thank a team or delight clients with Spa Paradise gift cards. Tell us what you need and we'll set it up.", "media": "", "mediaSide": "left", "cta": { "label": "Make an inquiry", "href": "/contact" } },
   "faq": { "variant": "accordion", "heading": "Gift card questions", "source": { "scopeTag": "gift" } },
   "testimonials": { "variant": "carousel", "heading": "Loved by gift-givers", "filter": { "scopeTag": "gift", "limit": 4 }, "showSource": true },
   "seo": {

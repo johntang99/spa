@@ -7,7 +7,7 @@
     { "title": "付款", "body": "在线安全结账——只需一分钟。" },
     { "title": "兑换", "body": "收礼人会通过电子邮件收到礼券，可预约任意服务。" }
   ] },
-  "featurePanel": { "variant": "corporate", "eyebrow": "企业礼赠", "heading": "企业与批量礼赠", "body": "以天堂水疗礼品卡感谢团队或答谢客户。告诉我们您的需求，我们来安排。", "media": "", "mediaSide": "left", "cta": { "label": "提交咨询", "href": "#corporate" } },
+  "featurePanel": { "variant": "corporate", "eyebrow": "企业礼赠", "heading": "企业与批量礼赠", "body": "以天堂水疗礼品卡感谢团队或答谢客户。告诉我们您的需求，我们来安排。", "media": "", "mediaSide": "left", "cta": { "label": "提交咨询", "href": "/contact" } },
   "faq": { "variant": "accordion", "heading": "礼品卡问题", "source": { "scopeTag": "gift" } },
   "testimonials": { "variant": "carousel", "heading": "送礼之选", "filter": { "scopeTag": "gift", "limit": 4 }, "showSource": true },
   "seo": {

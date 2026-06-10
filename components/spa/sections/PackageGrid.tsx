@@ -21,7 +21,7 @@ export default function PackageGrid({ data, ctx }: { data: any; ctx: SectionCtx 
   }
 
   return (
-    <section className={`section on-${ctx.mode || 'light'}`}>
+    <section id="packages" className={`section on-${ctx.mode || 'light'}`}>
       <div className="container">
         {data.heading && <h2 className="reveal" style={{ marginBottom: 24 }}>{data.heading}</h2>}
         <div className="grid cols-2">

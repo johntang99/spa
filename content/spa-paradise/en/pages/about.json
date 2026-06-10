@@ -1,34 +1,139 @@
 {
-  "hero": { "variant": "story", "eyebrow": "Our story", "headline": "A real day spa for Middletown.", "subline": "We built Spa Paradise to be the calm, professional, transparently-priced spa our neighbors deserve — in English and Chinese, open every day.", "media": { "image": "", "scrim": 40 } },
-  "statsBand": { "items": [
-    { "value": "4.8", "label": "Average rating", "source": "reviewCount" },
-    { "value": "", "suffix": "+", "label": "Five-star reviews", "source": "reviewCount" },
-    { "value": "", "label": "Licensed therapists", "source": "teamCount" },
-    { "value": "", "label": "Treatments on the menu", "source": "servicesCount" }
-  ], "animate": true },
-  "teamGrid": { "variant": "cards", "heading": "Our licensed therapists", "refs": "all" },
-  "checklist": { "variant": "standards", "heading": "Our standards", "items": [
-    { "iconKey": "license", "label": "Every therapist licensed by New York State" },
-    { "iconKey": "linen", "label": "Fresh linens and sanitized rooms every session" },
-    { "iconKey": "drape", "label": "Professional draping, always" },
-    { "iconKey": "tag", "label": "Published prices — the same for everyone" },
-    { "iconKey": "globe", "label": "Service in English and 中文" }
-  ] },
-  "galleryGrid": { "variant": "strip", "heading": "Inside the spa", "collections": ["rooms", "details"] },
-  "iconGrid": { "variant": "values", "heading": "What we believe", "items": [
-    { "iconKey": "heart", "title": "Care over upsell", "body": "We recommend what helps you, not what costs more." },
-    { "iconKey": "calm", "title": "Calm is the product", "body": "Quiet rooms, unhurried sessions, no clock-watching." },
-    { "iconKey": "welcome", "title": "Everyone is welcome", "body": "Bilingual hospitality, open every day, no membership required." }
-  ] },
-  "testimonials": { "variant": "spotlight", "heading": "In our guests' words", "filter": { "limit": 3 }, "showSource": true },
-  "ctaBanner": { "variant": "image-bg", "heading": "Come see for yourself.", "ctaPrimary": { "label": "Book Now", "href": "/book" }, "ctaSecondary": { "label": "Contact us", "href": "/contact" }, "media": "" },
+  "hero": {
+    "variant": "story",
+    "eyebrow": "Our story",
+    "headline": "A real day spa for Middletown.",
+    "subline": "We built Spa Paradise to be the calm, professional, transparently-priced spa our neighbors deserve — in English and Chinese, open every day.",
+    "media": {
+      "image": "",
+      "scrim": 40
+    }
+  },
+  "statsBand": {
+    "items": [
+      {
+        "value": "4.8",
+        "label": "Average rating",
+        "source": "rating"
+      },
+      {
+        "value": "",
+        "suffix": "+",
+        "label": "Five-star reviews",
+        "source": "reviewCount"
+      },
+      {
+        "value": "",
+        "label": "Licensed therapists",
+        "source": "teamCount"
+      },
+      {
+        "value": "",
+        "label": "Treatments on the menu",
+        "source": "servicesCount"
+      }
+    ],
+    "animate": true
+  },
+  "teamGrid": {
+    "variant": "cards",
+    "heading": "Our licensed therapists",
+    "refs": "all"
+  },
+  "checklist": {
+    "variant": "standards",
+    "heading": "Our standards",
+    "items": [
+      {
+        "iconKey": "license",
+        "label": "Every therapist licensed by New York State"
+      },
+      {
+        "iconKey": "linen",
+        "label": "Fresh linens and sanitized rooms every session"
+      },
+      {
+        "iconKey": "drape",
+        "label": "Professional draping, always"
+      },
+      {
+        "iconKey": "tag",
+        "label": "Published prices — the same for everyone"
+      },
+      {
+        "iconKey": "globe",
+        "label": "Service in English and 中文"
+      }
+    ]
+  },
+  "galleryGrid": {
+    "variant": "strip",
+    "heading": "Inside the spa",
+    "collections": [
+      "rooms",
+      "details"
+    ]
+  },
+  "iconGrid": {
+    "variant": "values",
+    "heading": "What we believe",
+    "items": [
+      {
+        "iconKey": "heart",
+        "title": "Care over upsell",
+        "body": "We recommend what helps you, not what costs more."
+      },
+      {
+        "iconKey": "calm",
+        "title": "Calm is the product",
+        "body": "Quiet rooms, unhurried sessions, no clock-watching."
+      },
+      {
+        "iconKey": "welcome",
+        "title": "Everyone is welcome",
+        "body": "Bilingual hospitality, open every day, no membership required."
+      }
+    ]
+  },
+  "testimonials": {
+    "variant": "spotlight",
+    "heading": "In our guests' words",
+    "filter": {
+      "limit": 3
+    },
+    "showSource": true
+  },
+  "ctaBanner": {
+    "variant": "image-bg",
+    "heading": "Come see for yourself.",
+    "ctaPrimary": {
+      "label": "Book Now",
+      "href": "/book"
+    },
+    "ctaSecondary": {
+      "label": "Contact us",
+      "href": "/contact"
+    },
+    "media": ""
+  },
   "seo": {
     "title": "About Us | Spa Paradise Middletown, NY",
     "description": "Meet the licensed therapists behind Spa Paradise — Middletown's transparent, bilingual day spa. Our story, standards, and team.",
     "h1": "A real day spa for Middletown.",
     "canonicalUrl": "/en/about",
-    "schema": ["AboutPage", "Person"],
-    "keywords": ["spa paradise about", "massage therapists middletown ny", "day spa middletown ny"],
-    "noindex": false, "changefreq": "yearly", "priority": 0.6, "keywordCluster": "about", "pageType": "about"
+    "schema": [
+      "AboutPage",
+      "Person"
+    ],
+    "keywords": [
+      "spa paradise about",
+      "massage therapists middletown ny",
+      "day spa middletown ny"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.6,
+    "keywordCluster": "about",
+    "pageType": "about"
   }
 }

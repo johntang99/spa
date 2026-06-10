@@ -48,6 +48,13 @@ const BADGE_LABELS: Record<string, { en: string; zh: string }> = {
   new: { en: 'new', zh: '新品' },
 };
 const badgeLabel = (badge: string, loc: string) => (BADGE_LABELS[badge] ? (loc === 'zh' ? BADGE_LABELS[badge].zh : BADGE_LABELS[badge].en) : badge);
+// Locale-prefix internal paths only; leave same-page anchors (#), tel:, mailto:, and external URLs alone.
+const linkHref = (href: string | undefined, loc: string): string => {
+  if (!href) return '#';
+  if (/^(#|tel:|mailto:|https?:)/.test(href)) return href;
+  if (href.startsWith('/')) return href === `/${loc}` || href.startsWith(`/${loc}/`) ? href : `/${loc}${href}`;
+  return href;
+};
 const Section: React.FC<{ mode?: string; id?: string; className?: string; children: React.ReactNode }> = ({ mode = 'light', id, className = '', children }) => (
   <section id={id} className={`section on-${mode} ${className}`}>{children}</section>
 );
@@ -95,8 +102,8 @@ export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
           </div>
         ) : null}
         <div className="reveal" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8 }}>
-          {data.ctaPrimary && <Link className="btn btn-primary" href={`/${ctx.locale}${data.ctaPrimary.href}`.replace(`/${ctx.locale}/${ctx.locale}`, `/${ctx.locale}`)}>{data.ctaPrimary.label}</Link>}
-          {data.ctaSecondary && <Link className="btn btn-outline" href={`/${ctx.locale}${data.ctaSecondary.href}`.replace(`/${ctx.locale}/${ctx.locale}`, `/${ctx.locale}`)}>{data.ctaSecondary.label}</Link>}
+          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
+          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
         </div>
         <TrustCluster ctx={ctx} />
       </div>
@@ -229,7 +236,7 @@ export function FeaturePanel({ data, ctx }: { data: any; ctx: SectionCtx }) {
           <h2>{data.heading}</h2>
           <p>{data.body}</p>
           {data.bullets?.length ? <ul>{data.bullets.map((b: string, i: number) => <li key={i}>{b}</li>)}</ul> : null}
-          {data.cta && <Link className="btn btn-outline" href={`/${ctx.locale}${data.cta.href}`.replace(`/${ctx.locale}/${ctx.locale}`, `/${ctx.locale}`)}>{data.cta.label}</Link>}
+          {data.cta && <Link className="btn btn-outline" href={linkHref(data.cta.href, ctx.locale)}>{data.cta.label}</Link>}
         </div>
         {!flip && <div className="ph ph-warm" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} data-label={data.heading} />}
       </div>
@@ -244,7 +251,7 @@ export function PromoStrip({ data, ctx }: { data: any; ctx: SectionCtx }) {
       <div className="container reveal" style={{ textAlign: 'center' }}>
         <h2 style={{ marginBottom: 8 }}>{data.heading}</h2>
         {data.subline && <p style={{ marginBottom: 16 }}>{data.subline}</p>}
-        {data.cta && <Link className="btn btn-primary" href={`/${ctx.locale}${data.cta.href}`.replace(`/${ctx.locale}/${ctx.locale}`, `/${ctx.locale}`)}>{data.cta.label}</Link>}
+        {data.cta && <Link className="btn btn-primary" href={linkHref(data.cta.href, ctx.locale)}>{data.cta.label}</Link>}
       </div>
     </Section>
   );
@@ -347,8 +354,8 @@ export function CtaBanner({ data, ctx }: { data: any; ctx: SectionCtx }) {
         <h2 style={{ maxWidth: '24ch', margin: '0 auto 12px' }}>{data.heading}</h2>
         {data.subline && <p style={{ color: 'var(--text-inverse-muted)', marginBottom: 18 }}>{data.subline}</p>}
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          {data.ctaPrimary && <Link className="btn btn-primary" href={`/${ctx.locale}${data.ctaPrimary.href}`.replace(`/${ctx.locale}/${ctx.locale}`, `/${ctx.locale}`)}>{data.ctaPrimary.label}</Link>}
-          {data.ctaSecondary && <Link className="btn btn-outline" href={data.ctaSecondary.href.startsWith('tel:') ? data.ctaSecondary.href : `/${ctx.locale}${data.ctaSecondary.href}`}>{data.ctaSecondary.label}</Link>}
+          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
+          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}><TrustCluster ctx={ctx} /></div>
       </div>

@@ -10,6 +10,7 @@ export default function StatsBand({ data, ctx }: { data: any; ctx: SectionCtx })
       case 'servicesCount': return String((ctx.catalog.services || []).filter((s) => s.enabled).length);
       case 'teamCount': return String((ctx.team || []).length);
       case 'reviewCount': return shouldRenderRating(gbp.reviewCount) ? String(gbp.reviewCount) : null;
+      case 'rating': return shouldRenderRating(gbp.reviewCount) && gbp.rating ? String(gbp.rating) : null;
       case 'yearsInBusiness': return ctx.siteInfo?.yearsInBusiness ? String(ctx.siteInfo.yearsInBusiness) : null;
       default: return item.value || null;
     }

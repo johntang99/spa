@@ -1,34 +1,139 @@
 {
-  "hero": { "variant": "story", "eyebrow": "我们的故事", "headline": "米德尔敦真正的日间水疗。", "subline": "我们创立天堂水疗，是想为街坊带来一家安静、专业、价格透明的水疗——提供中英文服务，每天营业。", "media": { "image": "", "scrim": 40 } },
-  "statsBand": { "items": [
-    { "value": "4.8", "label": "平均评分", "source": "reviewCount" },
-    { "value": "", "suffix": "+", "label": "五星好评", "source": "reviewCount" },
-    { "value": "", "label": "持牌理疗师", "source": "teamCount" },
-    { "value": "", "label": "菜单护理项目", "source": "servicesCount" }
-  ], "animate": true },
-  "teamGrid": { "variant": "cards", "heading": "我们的持牌理疗师", "refs": "all" },
-  "checklist": { "variant": "standards", "heading": "我们的标准", "items": [
-    { "iconKey": "license", "label": "每位理疗师均持纽约州执照" },
-    { "iconKey": "linen", "label": "每次更换干净布草、消毒房间" },
-    { "iconKey": "drape", "label": "始终使用专业盖布" },
-    { "iconKey": "tag", "label": "公开标价——人人一致" },
-    { "iconKey": "globe", "label": "提供中英文服务" }
-  ] },
-  "galleryGrid": { "variant": "strip", "heading": "走进水疗", "collections": ["rooms", "details"] },
-  "iconGrid": { "variant": "values", "heading": "我们的理念", "items": [
-    { "iconKey": "heart", "title": "用心而非推销", "body": "我们推荐对您有帮助的，而不是更贵的。" },
-    { "iconKey": "calm", "title": "宁静本身就是产品", "body": "安静的房间、从容的护理、不催时间。" },
-    { "iconKey": "welcome", "title": "欢迎每一位", "body": "双语贴心服务，每天营业，无需会员。" }
-  ] },
-  "testimonials": { "variant": "spotlight", "heading": "客人的真实评价", "filter": { "limit": 3 }, "showSource": true },
-  "ctaBanner": { "variant": "image-bg", "heading": "欢迎亲自来体验。", "ctaPrimary": { "label": "立即预约", "href": "/book" }, "ctaSecondary": { "label": "联系我们", "href": "/contact" }, "media": "" },
+  "hero": {
+    "variant": "story",
+    "eyebrow": "我们的故事",
+    "headline": "米德尔敦真正的日间水疗。",
+    "subline": "我们创立天堂水疗，是想为街坊带来一家安静、专业、价格透明的水疗——提供中英文服务，每天营业。",
+    "media": {
+      "image": "",
+      "scrim": 40
+    }
+  },
+  "statsBand": {
+    "items": [
+      {
+        "value": "4.8",
+        "label": "平均评分",
+        "source": "rating"
+      },
+      {
+        "value": "",
+        "suffix": "+",
+        "label": "五星好评",
+        "source": "reviewCount"
+      },
+      {
+        "value": "",
+        "label": "持牌理疗师",
+        "source": "teamCount"
+      },
+      {
+        "value": "",
+        "label": "菜单护理项目",
+        "source": "servicesCount"
+      }
+    ],
+    "animate": true
+  },
+  "teamGrid": {
+    "variant": "cards",
+    "heading": "我们的持牌理疗师",
+    "refs": "all"
+  },
+  "checklist": {
+    "variant": "standards",
+    "heading": "我们的标准",
+    "items": [
+      {
+        "iconKey": "license",
+        "label": "每位理疗师均持纽约州执照"
+      },
+      {
+        "iconKey": "linen",
+        "label": "每次更换干净布草、消毒房间"
+      },
+      {
+        "iconKey": "drape",
+        "label": "始终使用专业盖布"
+      },
+      {
+        "iconKey": "tag",
+        "label": "公开标价——人人一致"
+      },
+      {
+        "iconKey": "globe",
+        "label": "提供中英文服务"
+      }
+    ]
+  },
+  "galleryGrid": {
+    "variant": "strip",
+    "heading": "走进水疗",
+    "collections": [
+      "rooms",
+      "details"
+    ]
+  },
+  "iconGrid": {
+    "variant": "values",
+    "heading": "我们的理念",
+    "items": [
+      {
+        "iconKey": "heart",
+        "title": "用心而非推销",
+        "body": "我们推荐对您有帮助的，而不是更贵的。"
+      },
+      {
+        "iconKey": "calm",
+        "title": "宁静本身就是产品",
+        "body": "安静的房间、从容的护理、不催时间。"
+      },
+      {
+        "iconKey": "welcome",
+        "title": "欢迎每一位",
+        "body": "双语贴心服务，每天营业，无需会员。"
+      }
+    ]
+  },
+  "testimonials": {
+    "variant": "spotlight",
+    "heading": "客人的真实评价",
+    "filter": {
+      "limit": 3
+    },
+    "showSource": true
+  },
+  "ctaBanner": {
+    "variant": "image-bg",
+    "heading": "欢迎亲自来体验。",
+    "ctaPrimary": {
+      "label": "立即预约",
+      "href": "/book"
+    },
+    "ctaSecondary": {
+      "label": "联系我们",
+      "href": "/contact"
+    },
+    "media": ""
+  },
   "seo": {
     "title": "关于我们 | 天堂水疗 米德尔敦",
     "description": "认识天堂水疗背后的持牌理疗师——米德尔敦透明、双语的日间水疗。我们的故事、标准与团队。",
     "h1": "米德尔敦真正的日间水疗。",
     "canonicalUrl": "/zh/about",
-    "schema": ["AboutPage", "Person"],
-    "keywords": ["天堂水疗 关于", "米德尔敦按摩师", "米德尔敦日间水疗"],
-    "noindex": false, "changefreq": "yearly", "priority": 0.6, "keywordCluster": "about", "pageType": "about"
+    "schema": [
+      "AboutPage",
+      "Person"
+    ],
+    "keywords": [
+      "天堂水疗 关于",
+      "米德尔敦按摩师",
+      "米德尔敦日间水疗"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.6,
+    "keywordCluster": "about",
+    "pageType": "about"
   }
 }
