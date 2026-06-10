@@ -446,7 +446,7 @@
 .spa-site .lang-switch:hover { color: var(--candle-deep); border-color: var(--candle-deep); }
 .spa-site .open-now { display: inline-flex; align-items: center; gap: 7px; font-size: .82rem; font-weight: 500; color: var(--char-soft); }
 .spa-site .open-now .dot { width: 8px; height: 8px; border-radius: 50%; background: #4F9D6B; box-shadow: 0 0 0 3px rgba(79,157,107,.18); }
-.spa-site .nav-toggle { display: none; background: none; border: 1px solid var(--border-light); border-radius: 10px; padding: 9px 11px; cursor: pointer; }
+.spa-site .nav-toggle { display: none; background: none; border: 1px solid var(--border-light); border-radius: 10px; padding: 12px; cursor: pointer; }
 .spa-site .nav-toggle span { display: block; width: 20px; height: 2px; background: var(--ink-pine); margin: 4px 0; transition: transform .2s; }
 .spa-site .nav-toggle:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
@@ -529,6 +529,36 @@
   .spa-site .footer-grid { grid-template-columns: 1fr; }
   .spa-site .menu-row { grid-template-columns: 1fr; gap: 8px; }
   .spa-site .menu-tiers { justify-content: flex-start; }
+}
+
+/* ---------- SIGNATURE MENU TABLE (responsive, collapses on mobile) ---------- */
+.spa-site .menu-head {
+  display: grid; grid-template-columns: 1fr repeat(3, 86px); gap: 18px; padding: 8px 0;
+  border-bottom: 2px solid var(--char); font-size: .78rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--char-soft);
+}
+.spa-site .menu-grid-row {
+  display: grid; grid-template-columns: 1fr repeat(3, 86px); gap: 18px;
+  align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border-light);
+}
+@media (max-width: 640px) {
+  .spa-site .menu-head { display: none; }
+  .spa-site .menu-grid-row { grid-template-columns: 1fr; gap: 8px; }
+  .spa-site .menu-grid-row .price { text-align: left !important; }
+  .spa-site .menu-grid-row .price[data-min]::before {
+    content: attr(data-min) " min — "; color: var(--char-soft); font-weight: 400;
+  }
+}
+
+/* ---------- FOCUS RING FALLBACK (inline-styled buttons / chips used as controls) ---------- */
+.spa-site button:focus-visible,
+.spa-site [role="button"]:focus-visible,
+.spa-site a.chip:focus-visible,
+.spa-site select:focus-visible,
+.spa-site [tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 8px;
 }
 
 /* ---------- REDUCED MOTION ---------- */

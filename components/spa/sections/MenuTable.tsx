@@ -14,17 +14,19 @@ function priceFor(s: Service, minutes: number): number | null {
 
 function Row({ s, locale }: { s: Service; locale: string }) {
   return (
-    <div className="menu-grid-row" style={{ display: 'grid', gridTemplateColumns: '1fr repeat(3, 86px)', gap: 18, alignItems: 'baseline', padding: '18px 0', borderBottom: '1px solid var(--border-light)' }}>
+    <div className="menu-grid-row">
       <div>
         <div className="menu-name"><span>{s.name}</span><span className="leader" /></div>
         <div className="menu-note">{s.short}</div>
       </div>
       {DURATIONS.map((m) => {
         const p = priceFor(s, m);
-        return (
-          <span key={m} className="num" style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>
-            {p != null ? <Link href={bookHref(locale, s.id, m)} style={{ textDecoration: 'none', color: 'var(--char)' }}>{fmtPrice(p)}</Link> : <span style={{ color: 'var(--mist)' }}>—</span>}
+        return p != null ? (
+          <span key={m} className="price num" data-min={m} style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>
+            <Link href={bookHref(locale, s.id, m)} style={{ textDecoration: 'none', color: 'var(--char)' }}>{fmtPrice(p)}</Link>
           </span>
+        ) : (
+          <span key={m} className="price num" style={{ textAlign: 'right', color: 'var(--mist)' }}>—</span>
         );
       })}
     </div>
@@ -67,7 +69,7 @@ export default function MenuTable({ data, ctx }: { data: any; ctx: SectionCtx })
           return (
             <div key={cat.id} id={`m-${cat.id}`} style={{ marginBottom: 40 }}>
               <h2 className="reveal" style={{ marginBottom: 8 }}>{cat.name}</h2>
-              <div className="menu-head" style={{ display: 'grid', gridTemplateColumns: '1fr repeat(3, 86px)', gap: 18, padding: '8px 0', borderBottom: '2px solid var(--char)', fontSize: '.78rem', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--char-soft)' }}>
+              <div className="menu-head">
                 <span>{ctx.locale === 'zh' ? '护理' : 'Treatment'}</span>
                 {DURATIONS.map((m) => <span key={m} style={{ textAlign: 'right' }}>{m} {ctx.locale === 'zh' ? '分钟' : 'min'}</span>)}
               </div>
