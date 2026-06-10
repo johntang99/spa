@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "introduction"
+    },
+    {
+      "id": "featured"
+    },
+    {
+      "id": "filters"
+    },
+    {
+      "id": "posts"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

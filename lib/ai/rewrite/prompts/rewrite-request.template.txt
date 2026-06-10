@@ -1,0 +1,46 @@
+Task: Rewrite selected content entries for onboarding/admin rewrite studio.
+
+Site context:
+- Site ID: {{siteId}}
+- Locale: {{locale}}
+- Scope: {{scope}}
+- Rewrite mode: {{mode}}
+
+Mode instructions:
+{{modeInstructions}}
+
+Voice profile:
+{{voiceProfile}}
+
+Hard requirements:
+{{requirements}}
+
+Target files:
+{{targetPaths}}
+
+Field allowlist (JSONPath-like):
+{{fieldAllowlist}}
+
+Input JSON payload:
+{{inputJson}}
+
+Return JSON exactly with this shape:
+{
+  "items": [
+    {
+      "path": "pages/services.json",
+      "fieldPath": "services[0].summary",
+      "rewrittenText": "..."
+    }
+  ]
+}
+
+Rules:
+1) Preserve meaning and intent.
+2) Keep medically safe wording.
+3) Make meaningful sentence/paragraph changes (restructure clauses, vary sentence openings, rewrite transitions).
+4) Keep approximately similar length unless requirements say otherwise.
+5) Keep required terms if listed.
+6) Avoid forbidden terms and unsupported medical claims.
+7) Do not add fields not present in the output contract.
+8) Do not change IDs, URLs, names, credentials, addresses, phone numbers, or other factual entities.

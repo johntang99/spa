@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#f0fdf4",
+      "100": "#dcfce7",
+      "light": "#6ee7b7",
+      "DEFAULT": "#059669",
+      "dark": "#065f46"
+    },
+    "secondary": {
+      "50": "#fef9c3",
+      "light": "#fde047",
+      "DEFAULT": "#854d0e",
+      "dark": "#5c3708"
+    },
+    "backdrop": {
+      "primary": "#f6fef9",
+      "secondary": "#fef9c3"
+    }
+  },
+  "typography": {
+    "display": "3rem",
+    "heading": "2.25rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Georgia, Times New Roman, serif",
+      "heading": "Georgia, Times New Roman, serif",
+      "subheading": "Arial, Helvetica Neue, sans-serif",
+      "body": "Arial, Helvetica Neue, sans-serif",
+      "small": "Arial, Helvetica Neue, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "6px",
+    "shadow": "0 2px 12px rgba(5, 150, 105, 0.08)"
+  },
+  "layout": {
+    "heroVariant": "split",
+    "featureVariant": "grid",
+    "spacingDensity": "comfortable"
+  },
+  "_preset": {
+    "id": "classic-forest",
+    "name": "Classic Forest",
+    "category": "classic",
+    "description": "Professional evergreen palette with timeless typography."
+  }
+}

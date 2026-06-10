@@ -1,0 +1,31 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "introduction"
+    },
+    {
+      "id": "whatToExpect"
+    },
+    {
+      "id": "preparation"
+    },
+    {
+      "id": "whatToBring"
+    },
+    {
+      "id": "forms"
+    },
+    {
+      "id": "insurance"
+    },
+    {
+      "id": "faq"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

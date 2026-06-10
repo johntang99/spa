@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "locale": "en",
+  "sites": {
+    "dr-huang-clinic": {
+      "clinicName": "Dr. Huang Clinic",
+      "toneDescriptor": "measured and clinically grounded",
+      "localContext": "Care is individualized with clear progress checkpoints.",
+      "lexiconReplacements": {
+        "personalized": "individualized",
+        "supports": "helps support"
+      },
+      "templates": {
+        "shortDescription": "{core} {localContext}",
+        "fullDescriptionLead": "{title} is delivered with a {toneDescriptor} style at {clinicName}.",
+        "whatToExpectLead": "At {clinicName}, each session begins with focused assessment and a treatment plan review."
+      }
+    },
+    "acupuncture-flushing": {
+      "clinicName": "Acupuncture Flushing",
+      "toneDescriptor": "warm, family-focused, and structured",
+      "localContext": "Treatment is tailored for both symptom relief and long-term balance.",
+      "lexiconReplacements": {
+        "supports": "helps support",
+        "practical": "easy-to-follow"
+      },
+      "templates": {
+        "shortDescription": "{core} {localContext}",
+        "fullDescriptionLead": "{title} is offered with a {toneDescriptor} approach at {clinicName}.",
+        "whatToExpectLead": "At {clinicName}, you receive a clear plan, treatment pacing, and follow-up guidance."
+      }
+    }
+  }
+}

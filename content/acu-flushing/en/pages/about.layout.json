@@ -1,0 +1,25 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "profile"
+    },
+    {
+      "id": "staffs"
+    },
+    {
+      "id": "credentials"
+    },
+    {
+      "id": "specializations"
+    },
+    {
+      "id": "philosophy"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

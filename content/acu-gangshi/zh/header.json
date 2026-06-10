@@ -1,0 +1,67 @@
+{
+  "cta": {
+    "link": "/zh/contact",
+    "text": "联系我们"
+  },
+  "menu": {
+    "logo": {
+      "text": "Gang Shi Acupuncture",
+      "emoji": "",
+      "image": {
+        "alt": "Gang Shi Acupuncture",
+        "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-gangshi/onboarding-overrides/1773091206979-logo-1.png"
+      },
+      "subtext": "传统中医与针灸"
+    },
+    "items": [
+      {
+        "url": "/zh",
+        "text": "首页"
+      },
+      {
+        "url": "/zh/大颈中医针灸",
+        "text": "针灸"
+      },
+      {
+        "url": "/zh/services",
+        "text": "服务项目"
+      },
+      {
+        "url": "/zh/conditions",
+        "text": "治疗病症"
+      },
+      {
+        "url": "/zh/about",
+        "text": "关于我们"
+      },
+      {
+        "url": "/zh/case-studies",
+        "text": "案例分享"
+      },
+      {
+        "url": "/zh/new-patients",
+        "text": "首次就诊"
+      },
+      {
+        "url": "/zh/blog",
+        "text": "部落格"
+      },
+      {
+        "url": "/zh/contact",
+        "text": "联系我们"
+      }
+    ],
+    "variant": "transparent"
+  },
+  "topbar": {
+    "badge": "",
+    "hours": "周一至周五 9:00-18:00",
+    "phone": "516-466-4018",
+    "address": "935 Northern Boulevard, Suite Number 303, Great Neck, NY 11021",
+    "phoneHref": "tel:+15164664018",
+    "addressHref": "https://maps.google.com/?q=935+Northern+Boulevard+Suite+Number+303+Great+Neck+NY+11021"
+  },
+  "languages": [
+    "en"
+  ]
+}

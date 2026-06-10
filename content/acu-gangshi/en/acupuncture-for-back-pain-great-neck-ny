@@ -1,0 +1,78 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Many patients achieve lasting relief, especially when combining acupuncture with lifestyle modifications Dr. Shi recommends. While individual results vary, regular maintenance sessions can help prevent recurrence and manage chronic conditions effectively.",
+        "question": "Can acupuncture fix back pain permanently?"
+      },
+      {
+        "answer": "Most back pain conditions respond well within 6-10 sessions. Acute injuries may improve faster, while chronic pain may require additional treatments for optimal results.",
+        "question": "How many sessions do I need for back pain?"
+      },
+      {
+        "answer": "Acupuncture and physical therapy work beautifully together. While PT focuses on strengthening and mobility, acupuncture excels at reducing pain and inflammation, making physical therapy more effective and comfortable.",
+        "question": "Is acupuncture better than physiotherapy for back pain?"
+      },
+      {
+        "answer": "The needles used are extremely fine - much thinner than injection needles. Most patients feel only a brief, mild sensation upon insertion, followed by deep relaxation as the treatment works.",
+        "question": "Does acupuncture for back pain hurt?"
+      }
+    ],
+    "heading": "Back Pain Acupuncture — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Back Pain in Great Neck, NY",
+    "title": "Acupuncture for Back Pain in Great Neck, NY | Gang Shi",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Natural back pain relief in Great Neck through expert acupuncture. Dr. Gang Shi treats root causes, not just symptoms. Schedule consultation.",
+    "canonicalUrl": "/en/acupuncture-for-back-pain-great-neck-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture for Back Pain in Great Neck, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Consultation",
+    "openingParagraph": "Back pain affects over 80% of adults at some point, often becoming a chronic struggle that impacts work, sleep, and daily activities. Rather than masking symptoms, acupuncture addresses the root causes of pain by improving circulation, reducing inflammation, and releasing muscle tension. At Gang Shi Acupuncture in Great Neck, Dr. Shi has helped countless patients find lasting relief from both acute injuries and chronic back conditions through personalized treatment plans that restore your body's natural healing capacity."
+  },
+  "pageType": "seo-condition",
+  "condition": "back-pain",
+  "howItWorks": {
+    "body": "Acupuncture works by stimulating specific points that correspond to your pain patterns, releasing endorphins and improving blood flow to affected areas. Dr. Shi treats various back pain conditions including herniated discs, muscle strain, sciatica, and arthritis-related pain. Each session involves precise needle placement along meridians that govern the spine and supporting muscles. The treatment helps reset your nervous system's pain response while encouraging tissue repair. Most patients experience significant improvement within 6-8 sessions, with many achieving long-term relief.",
+    "heading": "How Acupuncture Treats Back Pa— How It Works"
+  },
+  "testimonial": {
+    "quote": "I suffered with lower back pain for years before seeing Dr. Shi. After just a few sessions in Great Neck, I could sleep through the night again and return to hiking.",
+    "heading": "Real Results for Great Neck Patients",
+    "attribution": "Michael, Great Neck"
+  },
+  "whatToExpect": {
+    "body": "Your first visit begins with a detailed assessment of your pain history, triggers, and movement patterns. Dr. Shi will examine your posture and may perform orthopedic tests to understand your condition fully. Needles are placed along your back, legs, and sometimes arms or head, depending on your pain pattern. You'll rest for 20-30 minutes as the treatment works. Many patients find the experience surprisingly relaxing, and some notice immediate relief upon standing.",
+    "heading": "What to Expect at Gang Shi Acupuncture"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-insomnia-great-neck-ny",
+        "label": "Acupuncture for Insomnia"
+      },
+      {
+        "slug": "acupuncture-for-anxiety-great-neck-ny",
+        "label": "Acupuncture for Anxiety"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "Fertility Acupuncture"
+      }
+    ],
+    "heading": "Other Conditions We Treat at Gang Shi Acupuncture"
+  }
+}

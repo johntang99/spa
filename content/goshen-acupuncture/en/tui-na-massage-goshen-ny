@@ -1,0 +1,108 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment",
+    "backLink": {
+      "href": "/en/acupuncture-goshen-ny",
+      "text": "Learn more about acupuncture in Goshen, NY"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "While acupuncture uses thin needles inserted at specific points, Tui Na massage uses hands-on techniques like pressing, kneading, and stretching to stimulate the same meridian system. Both work with qi flow but through different methods, and Tui Na doesn't involve needles, making it ideal for those uncomfortable with acupuncture.",
+        "question": "How does Tui Na Massage differ from acupuncture?"
+      },
+      {
+        "answer": "Tui Na typically feels like a combination of massage and stretching with focused pressure on specific points. While some techniques may cause temporary discomfort, especially over tight areas, the pressure is always kept within your tolerance. Most patients find it deeply relaxing and therapeutic rather than painful.",
+        "question": "Is Tui Na Massage painful / what does it feel like?"
+      },
+      {
+        "answer": "The number of sessions varies based on your condition and individual response. Acute issues may improve within 3-6 sessions, while chronic conditions often require 8-12 treatments for optimal results. Dr. Liang will discuss a personalized treatment plan during your initial consultation based on your specific needs.",
+        "question": "How many Tui Na Massage sessions will I need?"
+      },
+      {
+        "answer": "Yes, Tui Na integrates excellently with other TCM modalities. Dr. Liang often combines it with acupuncture, cupping, or herbal medicine to enhance therapeutic effects. The combination approach addresses multiple aspects of your condition simultaneously, potentially leading to more comprehensive and lasting results.",
+        "question": "Can Tui Na Massage be combined with other TCM treatments?"
+      },
+      {
+        "answer": "Session count depends on symptom severity, chronicity, and treatment goals. Many patients start with a short concentrated phase, then taper frequency as outcomes improve and remain stable.",
+        "question": "How many tui na massage sessions are usually needed?"
+      },
+      {
+        "answer": "Yes. We frequently integrate this service with acupuncture, movement-based rehab, and medical care plans when appropriate. Combining methods can improve durability when treatment goals are clearly coordinated.",
+        "question": "Can tui na massage be combined with other treatments?"
+      },
+      {
+        "answer": "In most cases, yes. Technique, intensity, and session pacing are adjusted for comfort, age, medical complexity, and symptom sensitivity. We use a conservative start when needed and increase intensity only when response supports it.",
+        "question": "Is tui na massage safe for sensitive patients?"
+      },
+      {
+        "answer": "Between visits, simple actions such as hydration, sleep consistency, mobility work, and trigger management can improve carryover. We provide brief home-care guidance tailored to your case so gains are reinforced between appointments.",
+        "question": "What should I do between tui na massage sessions?"
+      }
+    ],
+    "heading": "Tui Na Massage — Common Questions"
+  },
+  "seo": {
+    "h1": "Tui Na Massage in Goshen, NY",
+    "title": "Tui Na Massage in Goshen, NY | Kingsfoil Acupuncture",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Experience therapeutic Tui Na massage in Goshen, NY with Dr. Jennifer Liang. Traditional Chinese bodywork for pain relief & wellness. Book today.",
+    "canonicalUrl": "/en/tui-na-massage-goshen-ny"
+  },
+  "hero": {
+    "h1": "Tui Na Massage in Goshen, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Tui Na Massage Consultation",
+    "description": "Tui Na Massage at Kingsfoil Acupuncture in Goshen, NY is delivered as part of a structured care plan designed around your symptoms, recovery goals, and treatment tolerance. We focus on practical outcomes such as pain reduction, better mobility, improved sleep, and lower day-to-day symptom burden, then adjust the plan based on your actual response. This approach gives patients a clear roadmap instead of open-ended trial-and-error care."
+  },
+  "service": "tui-na-massage",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "Tui Na Massage is used in Chinese medicine as a targeted intervention to improve function and reduce symptom burden through individualized treatment design.\n\nRather than applying the same protocol to every patient, we evaluate symptom patterns, progression history, stress load, and recovery capacity before determining the right treatment intensity and frequency.\n\nThis individualized model helps patients in Goshen receive care that is both clinically focused and practical for real-world schedules.\n\nTui Na massage is a structured Chinese medicine bodywork method that combines soft-tissue release, joint mobilization, and channel-based manual techniques. It helps reduce pain sensitivity, improve movement quality, and restore tolerance for normal daily activity.\n\nRather than generalized massage pressure, treatment is selected by pattern and tissue response. Sessions can be calming and restorative or more corrective depending on your current presentation and recovery goals.\n\nIn Goshen, Tui Na is frequently paired with acupuncture for patients managing recurring neck, shoulder, and low-back strain who need better long-term functional stability.",
+    "heading": "What Is Tui Na Massage?"
+  },
+  "howItWorks": {
+    "body": "Treatment begins with a focused reassessment at each visit so adjustments can be made in real time based on progress and symptom change.\n\nEarly sessions prioritize stabilization and symptom relief. As symptoms improve, care shifts toward function restoration, relapse prevention, and sustainable self-management strategies.\n\nWhen appropriate, we combine modalities and home-care guidance to improve carryover between visits and support longer-lasting results.\n\nIf progress slows, we re-evaluate diagnosis assumptions and treatment pacing rather than repeating static protocols. That responsiveness is a key part of achieving durable outcomes in both acute and chronic cases.",
+    "heading": "What to Expect During Tui Na Massage at Kingsfoil Acupuncture"
+  },
+  "whatItTreats": {
+    "heading": "Conditions Treated with Tui Na Massage",
+    "conditions": [
+      {
+        "name": "Back Pain",
+        "slug": "acupuncture-for-back-pain-goshen-ny"
+      },
+      {
+        "name": "Insomnia",
+        "slug": "acupuncture-for-insomnia-goshen-ny"
+      },
+      {
+        "name": "Anxiety",
+        "slug": "acupuncture-for-anxiety-goshen-ny"
+      },
+      {
+        "name": "Neck and Shoulder Tension"
+      },
+      {
+        "name": "Stress-Related Headache"
+      },
+      {
+        "name": "Recovery Fatigue"
+      },
+      {
+        "name": "General Muscle Tightness"
+      },
+      {
+        "name": "Postural Strain"
+      }
+    ]
+  }
+}

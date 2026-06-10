@@ -1,0 +1,37 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "credentials"
+    },
+    {
+      "id": "testimonials"
+    },
+    {
+      "id": "howItWorks"
+    },
+    {
+      "id": "conditions"
+    },
+    {
+      "id": "services"
+    },
+    {
+      "id": "blog"
+    },
+    {
+      "id": "gallery"
+    },
+    {
+      "id": "firstVisit"
+    },
+    {
+      "id": "whyChooseUs"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "wash-fold-pickup",
+    "name": "Initial Consultation",
+    "serviceType": "pickup_delivery",
+    "pricingModel": "by_weight",
+    "durationMinutes": 45,
+    "price": 1.99,
+    "unitLabel": "lb",
+    "leadTimeHours": 8,
+    "capacityPerSlot": 8,
+    "rushFee": 8,
+    "recurringEligible": true,
+    "commercialEligible": false,
+    "active": true
+  },
+  {
+    "id": "dry-cleaning",
+    "name": "Acupuncture Treatment Session",
+    "serviceType": "pickup_delivery",
+    "pricingModel": "by_item",
+    "durationMinutes": 30,
+    "price": 7.5,
+    "unitLabel": "item",
+    "leadTimeHours": 18,
+    "capacityPerSlot": 6,
+    "recurringEligible": false,
+    "commercialEligible": false,
+    "active": true
+  },
+  {
+    "id": "dropoff-wash-fold",
+    "name": "Follow-up Visit",
+    "serviceType": "dropoff",
+    "pricingModel": "by_weight",
+    "durationMinutes": 30,
+    "price": 1.69,
+    "unitLabel": "lb",
+    "leadTimeHours": 2,
+    "capacityPerSlot": 12,
+    "recurringEligible": true,
+    "commercialEligible": false,
+    "active": true
+  },
+  {
+    "id": "self-service-reservation",
+    "name": "Tuina / Bodywork Session",
+    "serviceType": "self_service",
+    "pricingModel": "flat",
+    "durationMinutes": 60,
+    "price": 10,
+    "unitLabel": "machine",
+    "leadTimeHours": 1,
+    "capacityPerSlot": 20,
+    "recurringEligible": false,
+    "commercialEligible": false,
+    "active": true
+  },
+  {
+    "id": "commercial-account",
+    "name": "Corporate Wellness Program",
+    "serviceType": "commercial",
+    "pricingModel": "quote",
+    "durationMinutes": 45,
+    "price": 0,
+    "leadTimeHours": 24,
+    "capacityPerSlot": 8,
+    "recurringEligible": true,
+    "commercialEligible": true,
+    "active": true
+  }
+]

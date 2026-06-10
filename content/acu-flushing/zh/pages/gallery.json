@@ -1,0 +1,116 @@
+{
+  "cta": {
+    "title": "准备亲自参观？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "预约参观"
+    },
+    "description": "安排您的预约，亲身体验我们温馨的环境",
+    "secondaryCta": {
+      "link": "https://maps.google.com/?q=71+East+Main+Street+New York+NY+10001",
+      "text": "获取路线"
+    }
+  },
+  "hero": {
+    "title": "参观我们的诊所",
+    "variant": "split-photo-left",
+    "subtitle": "虚拟参观我们宁静、温馨的治疗空间",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/hero-bg.jpg"
+  },
+  "images": [
+    {
+      "id": "exterior-1",
+      "alt": "黄医生诊所正门",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/hero-bg.jpg",
+      "order": 1,
+      "title": "诊所入口",
+      "category": "exterior",
+      "featured": true,
+      "description": "我们在米德尔敦东大街71号的温馨入口"
+    },
+    {
+      "id": "reception-1",
+      "alt": "接待台区域",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/exterior-sign.jpg",
+      "order": 4,
+      "title": "接待台",
+      "category": "reception",
+      "featured": true,
+      "description": "您将在我们友好的前台受到欢迎"
+    },
+    {
+      "id": "treatment-1",
+      "alt": "主治疗室",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/exterior-parking.jpg",
+      "order": 8,
+      "title": "治疗室1",
+      "category": "treatment-rooms",
+      "featured": true,
+      "description": "宽敞、私密的治疗室为您提供舒适"
+    },
+    {
+      "id": "herbs-1",
+      "alt": "中药抽屉墙",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/reception-desk.jpg",
+      "order": 13,
+      "title": "中药房",
+      "category": "herbal-pharmacy",
+      "featured": true,
+      "description": "库存超过200种传统中药"
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "icon": "Grid",
+      "name": "所有照片",
+      "description": "查看所有诊所照片"
+    },
+    {
+      "id": "exterior",
+      "icon": "Home",
+      "name": "外观和入口",
+      "description": "我们的建筑和温馨的入口"
+    },
+    {
+      "id": "reception",
+      "icon": "Sofa",
+      "name": "接待区",
+      "description": "您的治疗之旅从这里开始"
+    },
+    {
+      "id": "treatment-rooms",
+      "icon": "Bed",
+      "name": "治疗室",
+      "description": "您治疗的宁静空间"
+    },
+    {
+      "id": "herbal-pharmacy",
+      "icon": "Leaf",
+      "name": "中药房",
+      "description": "我们广泛的中药收藏"
+    },
+    {
+      "id": "equipment",
+      "icon": "Syringe",
+      "name": "设备和工具",
+      "description": "我们的专业工具"
+    },
+    {
+      "id": "details",
+      "icon": "Sparkles",
+      "name": "细节",
+      "description": "使我们诊所特别的小细节"
+    }
+  ],
+  "virtualTour": {
+    "title": "360°虚拟参观即将推出",
+    "available": false,
+    "description": "我们正在制作完整的虚拟参观，以便您可以在家中舒适地探索我们的诊所。"
+  },
+  "introduction": {
+    "text": "我们的诊所被设计成治疗的圣地——一个宁静、舒适的环境，您可以在这里放松并专注于您的健康。浏览我们的图库，在您首次访问之前了解我们的空间。",
+    "variant": "centered"
+  }
+}

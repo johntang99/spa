@@ -1,0 +1,19 @@
+{
+  "zip": "10940",
+  "city": "Middletown",
+  "email": "sancai.acu@gmail.com",
+  "phone": "(845) 381-1106",
+  "state": "NY",
+  "social": {
+    "wechat": "https://wechat.com/",
+    "youtube": "https://youtube.com/",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/"
+  },
+  "address": "71 East Main Street, Middletown, NY 10940",
+  "tagline": "传统中医与针灸",
+  "clinicName": "黄医生诊所",
+  "description": "在纽约州米德尔敦通过传统中医进行整体治疗",
+  "addressMapUrl": "https://maps.google.com/?q=71+East+Main+Street,+Middletown,+NY+10940",
+  "headerVariant": "stacked"
+}

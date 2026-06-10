@@ -1,0 +1,83 @@
+{
+  "brand": {
+    "name": "Kingsfoil Acupuncture",
+    "logoText": "TCM",
+    "description": "Traditional Chinese Medicine and Acupuncture serving the community with holistic healing."
+  },
+  "hours": [
+    "Mon: 9:00 AM - 5:00 PM",
+    "Tue: 9:00 AM - 5:00 PM",
+    "Wed: 9:00 AM - 5:00 PM",
+    "Thu: 9:00 AM - 5:00 PM",
+    "Fri: 9:00 AM - 5:00 PM",
+    "Sat: 9:00 AM - 1:00 PM",
+    "Sun: Closed"
+  ],
+  "contact": {
+    "email": "jenniferjliang@gmail.com",
+    "phone": "(845)682-0809",
+    "emailLink": "mailto:jenniferjliang@gmail.com",
+    "phoneLink": "tel:+18456820809",
+    "addressLines": [
+      "75 Main Street, Suite 1R",
+      "Goshen, NY 10924"
+    ]
+  },
+  "services": [
+    {
+      "url": "/en/acupuncture-goshen-ny",
+      "text": "Acupuncture in Goshen"
+    },
+    {
+      "url": "/en/chinese-herbal-medicine-goshen-ny",
+      "text": "Herbal Medicine in Goshen"
+    },
+    {
+      "url": "/en/cupping-therapy-goshen-ny",
+      "text": "Cupping Therapy in Goshen"
+    },
+    {
+      "url": "/en/moxibustion-goshen-ny",
+      "text": "Moxibustion in Goshen"
+    },
+    {
+      "url": "/en/tui-na-massage-goshen-ny",
+      "text": "Tui Na Massage in Goshen"
+    }
+  ],
+  "copyright": "© 2026 Kingsfoil Acupuncture. All rights reserved.",
+  "legalLinks": [
+    {
+      "url": "/en/privacy",
+      "text": "Privacy Policy"
+    },
+    {
+      "url": "/en/terms",
+      "text": "Terms of Service"
+    }
+  ],
+  "quickLinks": [
+    {
+      "url": "/en/acupuncture-cost-goshen-ny",
+      "text": "Acupuncture Cost Guide"
+    },
+    {
+      "url": "/en/acupuncture-for-back-pain-goshen-ny",
+      "text": "Back Pain Guide"
+    },
+    {
+      "url": "/en/acupuncture-for-insomnia-goshen-ny",
+      "text": "Insomnia Guide"
+    },
+    {
+      "url": "/en/acupuncture-for-anxiety-goshen-ny",
+      "text": "Anxiety Guide"
+    },
+    {
+      "url": "/en/blog",
+      "text": "Blog"
+    }
+  ],
+  "servicesTitle": "Service Areas",
+  "quickLinksTitle": "Resources"
+}

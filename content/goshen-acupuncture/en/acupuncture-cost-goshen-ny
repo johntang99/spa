@@ -1,0 +1,108 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your First Visit"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Most patients see significant improvement within 6-10 sessions, though this varies by individual and condition severity. Acute issues may resolve faster, while chronic conditions typically require the full course for optimal results.",
+        "question": "How many acupuncture sessions will I need?"
+      },
+      {
+        "answer": "Some insurance plans in New York do cover acupuncture, particularly for pain management. Coverage varies widely by insurer and specific plan. We recommend calling your insurance company to verify your benefits before your first appointment.",
+        "question": "Is acupuncture covered by health insurance in NY?"
+      },
+      {
+        "answer": "Yes, acupuncture is a qualified medical expense for both HSA and FSA accounts. We can provide the necessary documentation for reimbursement when you pay with these pre-tax healthcare dollars.",
+        "question": "Can I use my HSA or FSA for acupuncture?"
+      },
+      {
+        "answer": "We occasionally offer new patient specials and community wellness promotions. Contact our Goshen clinic directly to inquire about current offers and payment plan options that make quality care more accessible.",
+        "question": "Do you offer a first-visit discount?"
+      },
+      {
+        "answer": "Initial consultations are 90 minutes and include comprehensive health assessment, Traditional Chinese Medicine diagnosis, and first treatment, typically costing $125-$150. Follow-up sessions are 45-60 minutes focused on treatment and cost $75-$100.",
+        "question": "What is the difference between the initial visit and a follow-up?"
+      },
+      {
+        "answer": "Estimate based on three parts: initial visit pricing, expected follow-up frequency for the first month, and your insurance or self-pay structure. A realistic estimate should include reassessment points where frequency can be reduced as symptoms improve.",
+        "question": "How can I estimate my total treatment cost?"
+      },
+      {
+        "answer": "Not always. Packages can reduce per-visit cost, but value depends on whether the treatment plan matches your actual needs. We recommend selecting packages only after discussing expected frequency and clinical goals.",
+        "question": "Is package pricing always the best option?"
+      },
+      {
+        "answer": "Pricing strategy should be revisited whenever visit frequency changes, insurance status changes, or major symptom milestones are reached. Regular review helps keep care both clinically appropriate and financially predictable.",
+        "question": "How often should pricing be re-evaluated during treatment?"
+      }
+    ],
+    "heading": "Acupuncture Cost — Common Questions"
+  },
+  "seo": {
+    "h1": "How Much Does Acupuncture Cost in Goshen, NY?",
+    "title": "Acupuncture Cost Goshen, NY | Pricing | Kingsfoil",
+    "schema": [
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.7,
+    "description": "Acupuncture costs $75-$150 in Goshen, NY. Initial consultation, follow-ups, insurance info. HSA/FSA accepted. Affordable natural healthcare.",
+    "canonicalUrl": "/en/acupuncture-cost-goshen-ny"
+  },
+  "worthIt": {
+    "body": "For many patients, the value of acupuncture is measured by function: better sleep, reduced pain medication reliance, improved work tolerance, and fewer high-severity flare-ups. When treatment is individualized and progress is reviewed regularly, patients often see stronger long-term return than short-cycle symptom suppression alone.\n\nThe most cost-effective plan is usually the one that balances clinical progress, sustainable scheduling, and clear communication about expected timelines.",
+    "heading": "Is Acupuncture Worth the Cost?",
+    "testimonial": {
+      "quote": "The investment in acupuncture was worth every penny. My chronic headaches are gone and I'm sleeping better than I have in years. The value I received from Dr. Liang's treatment here in Goshen far exceeded what I spent on medications that weren't working.",
+      "attribution": "Jennifer, Goshen"
+    }
+  },
+  "pageType": "seo-resource",
+  "insurance": {
+    "body": "Coverage for acupuncture varies by insurer and plan design. Some plans cover specific diagnoses, while others require referrals, prior authorization, or in-network providers.\n\nBefore your first visit, verify benefits such as deductible status, co-pay/co-insurance responsibility, visit limits, and any diagnosis restrictions. If needed, we can provide billing documentation or visit summaries to support reimbursement workflows.\n\nIf your plan has limited coverage, we can discuss practical self-pay pacing so treatment remains sustainable while still clinically effective.",
+    "heading": "Does Insurance Cover Acupuncture in NY?"
+  },
+  "directAnswer": {
+    "h1": "How Much Does Acupuncture Cost in Goshen, NY?",
+    "body": "In Goshen, NY, acupuncture pricing typically depends on provider experience, visit length, treatment complexity, and whether care is part of a short-term or longer-term plan. Most patients should expect a range rather than one flat number, because the first visit and follow-up phases are often structured differently. At Kingsfoil Acupuncture, we emphasize transparent pricing discussions so you can understand expected total cost before beginning care. This helps patients compare options based on total value and outcomes, not headline pricing alone.",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "See New Patient Specials"
+  },
+  "resourceType": "cost",
+  "priceBreakdown": {
+    "items": [
+      {
+        "label": "Initial consultation and first treatment",
+        "price": "$120-$180"
+      },
+      {
+        "label": "Standard follow-up treatment",
+        "price": "$85-$130"
+      },
+      {
+        "label": "Extended complex follow-up (when needed)",
+        "price": "$120-$160"
+      },
+      {
+        "label": "Focused short treatment visit",
+        "price": "$65-$95"
+      },
+      {
+        "label": "Package pricing per visit (when offered)",
+        "price": "$70-$110"
+      },
+      {
+        "label": "Insurance-adjusted patient responsibility",
+        "price": "Varies by plan"
+      }
+    ],
+    "heading": "Kingsfoil Acupuncture Acupuncture Pricing"
+  },
+  "whatAffectsCost": {
+    "body": "Total cost is influenced by more than per-session price. Key factors include condition complexity, number of areas treated, visit frequency during the initial phase, and whether additional modalities are incorporated.\n\nPatients with long-standing symptoms often need a more structured early schedule, while newer issues may require fewer sessions. Progress reviews help determine when spacing visits farther apart is appropriate.\n\nChoosing care based only on the lowest sticker price can lead to higher total cost if treatment planning is not personalized or adjusted as symptoms evolve.",
+    "heading": "What Affects Acupuncture Costs in NY?"
+  }
+}

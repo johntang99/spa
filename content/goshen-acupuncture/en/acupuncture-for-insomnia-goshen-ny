@@ -1,0 +1,94 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Most patients notice some improvement in sleep quality within 3-4 sessions, with significant changes often occurring after the first treatment. Full results typically develop over 6-8 sessions as your body's natural sleep rhythms are restored and underlying stress patterns are addressed.",
+        "question": "How quickly does acupuncture work for insomnia?"
+      },
+      {
+        "answer": "Acupuncture can be an excellent complement to sleep medications, and some patients eventually reduce dependence on sleep aids. However, never discontinue prescription medications without consulting your prescribing physician. We coordinate care with your other healthcare providers when appropriate.",
+        "question": "Can acupuncture replace sleep medication?"
+      },
+      {
+        "answer": "Acupuncture and herbal medicine work synergistically for sleep issues. Acupuncture immediately calms the nervous system and regulates sleep hormones, while herbs provide sustained support between sessions and help maintain healthy sleep patterns long-term.",
+        "question": "Is acupuncture or herbal medicine better for sleep?"
+      },
+      {
+        "answer": "In simple terms, stress and emotional tension can disrupt the heart's ability to maintain calm awareness, while depleted energy reserves affect the kidneys' role in deep, restorative sleep. Liver stress from daily pressures can cause restless, interrupted sleep with vivid dreams or early waking.",
+        "question": "What TCM patterns cause insomnia?"
+      },
+      {
+        "answer": "Response speed varies by severity, chronicity, sleep quality, stress load, and overall health history. Some patients feel early improvement in the first few sessions, while complex or long-standing cases usually require a structured multi-week plan.",
+        "question": "How quickly can acupuncture help insomnia?"
+      },
+      {
+        "answer": "Not always. Many patients complete a focused treatment phase and then transition to maintenance only as needed. The goal is to build durable improvement and reduce relapse frequency, not keep you on an indefinite intensive schedule.",
+        "question": "Will I need ongoing care for insomnia?"
+      },
+      {
+        "answer": "Positive signs include lower symptom intensity, fewer flare-ups, better sleep quality, improved daily activity tolerance, and reduced fear of triggering episodes. We track these markers over time to ensure progress is practical and meaningful.",
+        "question": "What signs show that treatment for insomnia is working?"
+      },
+      {
+        "answer": "Yes. Sleep regularity, stress regulation, movement pacing, and hydration can significantly improve treatment carryover. We provide simple, realistic guidance to reinforce your in-clinic progress.",
+        "question": "Can lifestyle changes improve outcomes for insomnia?"
+      }
+    ],
+    "heading": "Acupuncture for Sleep — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Insomnia in Goshen, NY",
+    "title": "Acupuncture for Insomnia Goshen, NY | Kingsfoil",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Natural sleep solutions with acupuncture for insomnia in Goshen, NY. Dr. Liang treats sleep disorders with TCM. Better sleep starts here.",
+    "canonicalUrl": "/en/acupuncture-for-insomnia-goshen-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture for Insomnia in Goshen, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Consultation",
+    "openingParagraph": "Insomnia can affect concentration, sleep quality, activity tolerance, and overall confidence in daily life. At Kingsfoil Acupuncture, we use acupuncture and integrative Chinese medicine strategies in Goshen, NY to reduce symptom intensity while improving resilience between flare-ups. Your treatment plan is tailored to your symptom history, trigger profile, and recovery goals, so care remains specific and actionable rather than generic. Patients receive clear milestone checkpoints so progress is easy to evaluate and adjust."
+  },
+  "pageType": "seo-condition",
+  "condition": "insomnia",
+  "howItWorks": {
+    "body": "Acupuncture for insomnia focuses on improving circulation, regulating nervous system overactivation, and reducing inflammatory or stress-related amplification patterns that can keep symptoms persistent.\n\nIn clinical practice, we combine point selection with treatment pacing based on how your body responds week to week. Early sessions often prioritize symptom reduction, while later sessions emphasize stability and recurrence prevention.\n\nWhen appropriate, we also include adjunctive methods and home-care guidance so improvements continue outside the clinic, especially for patients managing high workloads, poor sleep, or repeated stress exposure.\n\nThis layered approach helps improve consistency so gains are not dependent on one single treatment day.",
+    "heading": "How Acupuncture Treats Insomnia — How It Works"
+  },
+  "testimonial": {
+    "quote": "After weeks of inconsistent relief, I finally had a plan that made sense. The team explained each step, adjusted treatment as my symptoms changed, and I began noticing steadier progress in my daily routine.",
+    "heading": "Real Results for Goshen Patients",
+    "attribution": "Lisa, Goshen"
+  },
+  "whatToExpect": {
+    "body": "Your first visit includes a full intake, timeline review, and treatment plan discussion so expectations are clear from day one.\n\nMost sessions last about 45-60 minutes including reassessment. Depending on severity and chronicity, we may recommend a short intensive phase before spacing visits farther apart.\n\nProgress is evaluated using practical outcomes: symptom frequency, symptom intensity, sleep quality, mobility, and day-to-day function. If response is slower than expected, we refine protocol instead of repeating the same approach.\n\nOur emphasis is on predictable, steady progress that remains workable with your real-life schedule.",
+    "heading": "What to Expect at Kingsfoil Acupuncture"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-back-pain-goshen-ny",
+        "label": "Acupuncture for Back Pain"
+      },
+      {
+        "slug": "acupuncture-for-anxiety-goshen-ny",
+        "label": "Acupuncture for Anxiety"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "Fertility Acupuncture"
+      }
+    ],
+    "heading": "Other Conditions We Treat at Kingsfoil Acupuncture"
+  }
+}

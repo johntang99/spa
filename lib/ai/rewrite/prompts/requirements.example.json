@@ -1,0 +1,21 @@
+{
+  "preserveMeaning": true,
+  "maxLengthDeltaPct": 20,
+  "minSimilarity": 0.82,
+  "requiredTerms": [
+    "licensed",
+    "consultation",
+    "personalized"
+  ],
+  "forbiddenTerms": [
+    "cure",
+    "guaranteed",
+    "miracle",
+    "risk-free"
+  ],
+  "style": {
+    "tone": "professional, calm, compassionate",
+    "readingLevel": "grade-8",
+    "sentenceLength": "mixed-short"
+  }
+}

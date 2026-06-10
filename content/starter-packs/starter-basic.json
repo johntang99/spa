@@ -1,0 +1,85 @@
+{
+  "name": "starter-basic",
+  "description": "Small neighborhood clinic with consultation, follow-up, and treatment scheduling.",
+  "siteTemplate": {
+    "defaultLocale": "en",
+    "supportedLocales": ["en", "zh"],
+    "enabled": true
+  },
+  "userTemplate": [
+    {
+      "role": "super_admin",
+      "sites": []
+    },
+    {
+      "role": "site_admin",
+      "sites": ["<new-site-id>"]
+    }
+  ],
+  "bookingServices": [
+    {
+      "id": "wash-fold-pickup",
+      "name": "Initial Consultation",
+      "serviceType": "pickup_delivery",
+      "pricingModel": "by_weight",
+      "unitLabel": "lb",
+      "durationMinutes": 60,
+      "price": 1.95,
+      "minOrderValue": 35,
+      "leadTimeHours": 12,
+      "capacityPerSlot": 4,
+      "recurringEligible": true,
+      "commercialEligible": false,
+      "active": true
+    },
+    {
+      "id": "wash-fold-dropoff",
+      "name": "Follow-up Visit",
+      "serviceType": "dropoff",
+      "pricingModel": "by_weight",
+      "unitLabel": "lb",
+      "durationMinutes": 30,
+      "price": 1.75,
+      "leadTimeHours": 2,
+      "capacityPerSlot": 8,
+      "recurringEligible": true,
+      "active": true
+    },
+    {
+      "id": "self-service-reservation",
+      "name": "Acupuncture Session Reservation",
+      "serviceType": "self_service",
+      "pricingModel": "flat",
+      "unitLabel": "load",
+      "durationMinutes": 90,
+      "price": 14,
+      "leadTimeHours": 1,
+      "capacityPerSlot": 10,
+      "active": true
+    }
+  ],
+  "bookingSettings": {
+    "timezone": "America/New_York",
+    "bufferMinutes": 15,
+    "minNoticeHours": 4,
+    "maxDaysAhead": 45,
+    "defaultServiceType": "pickup_delivery",
+    "serviceAreaZips": ["10940", "10941", "10924"],
+    "blackoutWindows": [],
+    "rushLeadHours": 6,
+    "maxOrdersPerSlot": 4,
+    "recurringEnabled": true,
+    "businessHours": [
+      { "day": "Mon", "open": "08:00", "close": "20:00" },
+      { "day": "Tue", "open": "08:00", "close": "20:00" },
+      { "day": "Wed", "open": "08:00", "close": "20:00" },
+      { "day": "Thu", "open": "08:00", "close": "20:00" },
+      { "day": "Fri", "open": "08:00", "close": "20:00" },
+      { "day": "Sat", "open": "09:00", "close": "18:00" },
+      { "day": "Sun", "open": "09:00", "close": "16:00", "closed": false }
+    ],
+    "blockedDates": [],
+    "notificationEmails": ["ops@example.com"],
+    "notificationPhones": []
+  }
+}

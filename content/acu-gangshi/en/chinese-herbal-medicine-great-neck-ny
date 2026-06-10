@@ -1,0 +1,83 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment",
+    "backLink": {
+      "href": "/en/acupuncture-great-neck-ny",
+      "text": "Learn more about acupuncture in Great Neck, NY"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "While acupuncture uses needles to stimulate energy points on the body's surface, Chinese Herbal Medicine works internally through ingested natural substances. Herbs provide sustained therapeutic effects throughout the day, while acupuncture treatments occur at specific intervals. Many patients find combining both modalities enhances overall treatment effectiveness.",
+        "question": "How does Chinese Herbal Medicine differ from acupuncture?"
+      },
+      {
+        "answer": "Chinese Herbal Medicine involves no pain as it's taken orally. Raw herb teas may have strong, sometimes bitter tastes that some find challenging initially. Powdered extracts and capsules offer more convenient, milder-tasting options. Most patients quickly adapt to the taste and appreciate the gentle, sustained therapeutic effects.",
+        "question": "Is Chinese Herbal Medicine painful / what does it feel like?"
+      },
+      {
+        "answer": "Treatment duration varies based on your condition's nature and severity. Acute issues may improve within weeks, while chronic conditions typically require several months of consistent use. Dr. Shi will provide a realistic timeline during your initial consultation and adjust your treatment plan based on your progress.",
+        "question": "How many Chinese Herbal Medicine sessions will I need?"
+      },
+      {
+        "answer": "Yes, Chinese Herbal Medicine combines excellently with acupuncture, cupping, and other TCM modalities. This integrated approach often enhances treatment effectiveness by addressing your condition from multiple therapeutic angles. Dr. Shi will recommend the most appropriate combination based on your specific needs and health goals.",
+        "question": "Can Chinese Herbal Medicine be combined with other TCM treatments?"
+      }
+    ],
+    "heading": "Chinese Herbal Medicine — Common Questions"
+  },
+  "seo": {
+    "h1": "Chinese Herbal Medicine in Great Neck, NY",
+    "title": "Chinese Herbal Medicine Great Neck, NY | Gang Shi...",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Expert Chinese Herbal Medicine in Great Neck, NY. Dr. Gang Shi creates personalized herbal formulas for natural wellness. Book consultation today.",
+    "canonicalUrl": "/en/chinese-herbal-medicine-great-neck-ny"
+  },
+  "hero": {
+    "h1": "Chinese Herbal Medicine in Great Neck, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Chinese Herbal Medicine Consultation",
+    "description": "Chinese Herbal Medicine offers a time-tested approach to supporting your body's natural healing processes through carefully selected medicinal herbs. At Gang Shi Acupuncture, Dr. Gang Shi combines traditional wisdom with modern understanding to create personalized herbal formulas tailored to your unique health needs. Our Great Neck practice provides authentic Chinese herbs sourced from reputable suppliers, ensuring quality and safety in every formula. Whether you're seeking support for chronic conditions or looking to enhance your overall wellness, Chinese Herbal Medicine may offer the gentle yet effective approach you've been searching for."
+  },
+  "service": "chinese-herbal-medicine",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "Chinese Herbal Medicine is a foundational pillar of Traditional Chinese Medicine that has been refined over thousands of years. Unlike acupuncture, which uses needles to stimulate specific points, herbal medicine works internally through carefully crafted combinations of medicinal plants, minerals, and other natural substances. Each herb has unique properties and therapeutic actions, and when combined in precise formulations, they work synergistically to restore balance within the body. What makes Chinese Herbal Medicine unique is its highly individualized approach—no two patients receive identical formulas. Instead, prescriptions are tailored based on your specific constitution, symptoms, and the underlying patterns of imbalance identified through traditional diagnostic methods including tongue and pulse examination.",
+    "heading": "What Is Chinese Herbal Medicine?"
+  },
+  "howItWorks": {
+    "body": "Your Chinese Herbal Medicine journey begins with a comprehensive consultation where Dr. Shi evaluates your health history, current symptoms, and performs traditional diagnostic techniques including tongue and pulse examination. Based on this assessment, a personalized herbal formula is created specifically for your needs. Herbs are typically provided as dried raw materials for brewing into tea, convenient powdered extracts, or easy-to-take capsules. You'll receive detailed instructions on preparation and dosing. Many patients notice subtle improvements within the first few weeks, though some herbs work immediately while others build effects over time. Regular follow-up appointments allow for formula adjustments as your condition improves, ensuring optimal therapeutic outcomes throughout your treatment.",
+    "heading": "What to Expect During Chinese Herbal Medicine at Gang Shi Acupuncture"
+  },
+  "whatItTreats": {
+    "heading": "Conditions Treated with Chinese Herbal Medicine",
+    "conditions": [
+      {
+        "name": "Digestive disorders and stomach discomfort"
+      },
+      {
+        "name": "Sleep disturbances and insomnia"
+      },
+      {
+        "name": "Chronic fatigue and low energy"
+      },
+      {
+        "name": "Respiratory conditions and allergies"
+      },
+      {
+        "name": "Women's health and menstrual irregularities"
+      },
+      {
+        "name": "Stress-related symptoms and anxiety"
+      }
+    ]
+  }
+}

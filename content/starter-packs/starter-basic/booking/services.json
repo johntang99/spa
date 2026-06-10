@@ -1,0 +1,30 @@
+[
+  {
+    "id": "wash-fold-pickup",
+    "name": "Initial Consultation",
+    "serviceType": "pickup_delivery",
+    "pricingModel": "by_weight",
+    "durationMinutes": 45,
+    "price": 1.89,
+    "unitLabel": "lb",
+    "leadTimeHours": 8,
+    "capacityPerSlot": 4,
+    "recurringEligible": true,
+    "commercialEligible": false,
+    "active": true
+  },
+  {
+    "id": "wash-fold-dropoff",
+    "name": "Follow-up Visit",
+    "serviceType": "dropoff",
+    "pricingModel": "by_weight",
+    "durationMinutes": 30,
+    "price": 1.59,
+    "unitLabel": "lb",
+    "leadTimeHours": 2,
+    "capacityPerSlot": 6,
+    "recurringEligible": true,
+    "commercialEligible": false,
+    "active": true
+  }
+]

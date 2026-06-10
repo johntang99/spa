@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#f8f8f8",
+      "100": "#f0f0f0",
+      "light": "#9ca3af",
+      "DEFAULT": "#1c1917",
+      "dark": "#0c0a09"
+    },
+    "secondary": {
+      "50": "#f0f9ff",
+      "light": "#7dd3fc",
+      "DEFAULT": "#0ea5e9",
+      "dark": "#0369a1"
+    },
+    "backdrop": {
+      "primary": "#fafafa",
+      "secondary": "#f0f9ff"
+    }
+  },
+  "typography": {
+    "display": "4rem",
+    "heading": "2.75rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "EB Garamond, Georgia, serif",
+      "heading": "EB Garamond, Georgia, serif",
+      "subheading": "DM Sans, system-ui, sans-serif",
+      "body": "DM Sans, system-ui, sans-serif",
+      "small": "DM Sans, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "4px",
+    "shadow": "0 2px 8px rgba(0, 0, 0, 0.06)"
+  },
+  "layout": {
+    "heroVariant": "centered",
+    "featureVariant": "masonry",
+    "spacingDensity": "spacious"
+  },
+  "_preset": {
+    "id": "luxury-charcoal",
+    "name": "Luxury Charcoal",
+    "category": "luxury",
+    "description": "Near-black neutral theme with elevated blue accents."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "cta": {
+    "title": "Could TCM Help You?",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/en/contact",
+      "text": "Book Your Consultation"
+    },
+    "description": "Schedule a consultation to discuss your specific health concerns and create a personalized treatment plan",
+    "secondaryCta": {
+      "link": "/en/services",
+      "text": "Learn About Our Services"
+    }
+  },
+  "hero": {
+    "title": "Patient Success Stories",
+    "variant": "centered",
+    "subtitle": "Real cases, real results - see how Traditional Chinese Medicine has transformed lives",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/home/hero-bg.jpg"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "icon": "Grid",
+      "name": "All Cases"
+    },
+    {
+      "id": "pain-management",
+      "icon": "Activity",
+      "name": "Pain Management"
+    },
+    {
+      "id": "womens-health",
+      "icon": "Heart",
+      "name": "Women's Health"
+    },
+    {
+      "id": "mental-health",
+      "icon": "Brain",
+      "name": "Mental Health"
+    },
+    {
+      "id": "digestive",
+      "icon": "Apple",
+      "name": "Digestive Health"
+    },
+    {
+      "id": "other",
+      "icon": "Sparkles",
+      "name": "Other Conditions"
+    }
+  ],
+  "statistics": {
+    "stats": [
+      {
+        "icon": "Users",
+        "label": "Patients Treated",
+        "number": "1000+"
+      },
+      {
+        "icon": "Star",
+        "label": "Satisfaction Rate",
+        "number": "95%"
+      },
+      {
+        "icon": "Award",
+        "label": "Years Experience",
+        "number": "15+"
+      },
+      {
+        "icon": "TrendingUp",
+        "label": "Report Significant Improvement",
+        "number": "85%"
+      }
+    ],
+    "title": "Our Track Record",
+    "variant": "grid-2x2"
+  },
+  "caseStudies": [
+    {
+      "id": "chronic-back-pain",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773871148187-photo-1508028922235-7b9a1b690358.jpg",
+      "summary": "An approximately 80-year-old patient came to us after spinal fracture surgery. Even while taking pain medication as instructed, he still had persistent pain, whole-body discomfort, irritability, and poor sleep.\n\nFrom a TCM perspective, major surgery can disrupt qi and blood circulation, which may present as lingering pain, emotional agitation, and sleep disturbance. We prescribed an herbal formula focused on promoting blood circulation, regulating qi, and supporting sleep quality.\n\nBecause the patient had limited mobility, his daughter-in-law came to the clinic to pick up herbs and report symptom changes. After about two treatment courses (roughly one week each), pain and discomfort decreased significantly, sleep improved, and mood became more stable.\n\nThis case reflects the whole-body approach of Chinese medicine: by improving internal circulation and systemic balance, patients can see improvements across pain, sleep, and emotional well-being.",
+      "category": "pain-management",
+      "condition": "Post-Spinal-Surgery Pain and Irritability",
+      "afterImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773871148187-photo-1508028922235-7b9a1b690358.jpg",
+      "beforeImage": ""
+    },
+    {
+      "id": "sweathead",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773871603909-photo-1534180477871-5d6cc81f3920.jpg",
+      "summary": "An elderly woman in her 80s first visited for low back and leg pain, and also reported a distressing symptom: heavy sweating from the head even during cold weather.\n\nThis was not heat-related sweating. She described constant scalp perspiration that made daily life uncomfortable. Based on TCM pattern differentiation, the presentation was consistent with an imbalance of defensive qi (wei qi), leading to poor control of pores and sweating.\n\nWe treated her with acupuncture to harmonize qi and blood and strengthen defensive qi function. By her second follow-up, symptoms had clearly improved; after two to three treatments, the excessive head sweating had almost completely resolved.\n\nShe was very satisfied, noting that while the problem was not life-threatening, it had significantly affected comfort and quality of life.",
+      "category": "mental-health",
+      "condition": "Acupuncture for Excessive Scalp Sweating",
+      "afterImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773871603909-photo-1534180477871-5d6cc81f3920.jpg",
+      "beforeImage": ""
+    },
+    {
+      "id": "cuppingblood",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773871433196-photo-1745327883389-17150e99dcf7.jpg",
+      "summary": "A Chinese patient in his late 50s sought acupuncture and cupping, specifically requesting bloodletting-assisted cupping because he had benefited from a similar treatment years earlier.\n\nHe works long hours on a computer and had chronic neck and shoulder tightness and stiffness. Since this treatment style is not commonly available, he searched extensively and came to our clinic after confirming we offer it.\n\nDuring treatment, we performed cupping, added localized bloodletting, and then reapplied cups to help draw out stasis. He reported immediate relaxation and clear relief in neck and shoulder tension.\n\nHe was very happy with the outcome, took photos during treatment, and said he planned to recommend the clinic to family and friends with similar symptoms.",
+      "category": "other",
+      "condition": "Cupping + Bloodletting for Neck and Shoulder Tension",
+      "afterImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773871433196-photo-1745327883389-17150e99dcf7.jpg",
+      "beforeImage": ""
+    },
+    {
+      "id": "painrelease",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773851086832-photo-1606083644716-36b939094c0a.jpg",
+      "summary": "A female patient in her mid-60s, still working full-time in Manhattan, came in with ankle weakness, ankle pain, and long-term sleep problems.\n\nAfter a period of TCM treatment, her ankle strength and pain improved noticeably, making daily activity easier. We then adjusted treatment to focus more on sleep and prescribed herbal medicine.\n\nShe reported better sleep quality after the first course of herbs, with easier sleep onset and more stable rest. At follow-up, she also asked about prominent under-eye bags. We adjusted her formula according to her overall constitution.\n\nAt subsequent visits, not only did sleep continue to improve, but her under-eye bags were also greatly reduced. She was pleasantly surprised because she initially came mainly for sleep and pain concerns.",
+      "category": "pain-management",
+      "condition": "Improved Sleep and Ankle Pain, with Visible Cosmetic Improvement",
+      "afterImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773851086832-photo-1606083644716-36b939094c0a.jpg",
+      "beforeImage": ""
+    },
+    {
+      "id": "acupunctureskin",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773872978920-photo-1609542499975-4ca8bde933db.jpg",
+      "summary": "A male patient in his early 50s working in hospital IT came in with carpal tunnel syndrome from long-term computer use. He had reduced hand flexibility that affected his work.\n\nAfter one to two acupuncture sessions, hand symptoms improved noticeably and finger movement became easier. With growing confidence in treatment, he asked for help with additional concerns.\n\nHe had also developed a persistent facial rash about six months earlier. Western medication initially suppressed it temporarily, but the rash repeatedly returned and later became less responsive to medication.\n\nWe prescribed a customized herbal formula based on his overall condition. Through follow-up messages, he reported clear improvement in the facial rash. This case illustrates how whole-body TCM regulation can improve both local symptoms and broader health issues over time.",
+      "category": "other",
+      "condition": "Acupuncture and Herbal Medicine for Carpal Tunnel and Facial Rash",
+      "afterImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773872978920-photo-1609542499975-4ca8bde933db.jpg",
+      "beforeImage": ""
+    },
+    {
+      "id": "case-6",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773873367675-photo-1769483713351-8c42b6b70d09.jpg",
+      "summary": "A Hong Kong patient around age 60 came to our clinic with significant hand pain and visible finger deformity that had persisted for about ten years.\n\nSymptoms had gradually worsened over time. Hospital evaluations did not provide a definitive diagnosis; although some signs resembled rheumatoid arthritis, lab findings did not clearly match, and she had no effective treatment plan.\n\nWe treated her with a combination of acupuncture and Tui Na (medical therapeutic massage) tailored to her presentation. Over time, she experienced meaningful pain reduction and easier hand movement.\n\nBecause she felt clear benefits, she continued treatment regularly. With ongoing care, pain gradually decreased and her quality of life improved.",
+      "category": "pain-management",
+      "condition": "Acupuncture and Tui Na for Hand Pain and Deformity",
+      "afterImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/general/1773873367675-photo-1769483713351-8c42b6b70d09.jpg",
+      "beforeImage": ""
+    }
+  ],
+  "introduction": {
+    "note": "Individual results may vary. These cases represent typical outcomes but cannot guarantee specific results for any individual.",
+    "text": "These case studies represent real patients who have experienced significant health improvements through our TCM treatments. All names have been changed to protect patient privacy, but the stories and outcomes are genuine.",
+    "variant": "centered"
+  }
+}

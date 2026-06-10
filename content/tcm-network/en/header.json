@@ -1,0 +1,73 @@
+{
+  "cta": {
+    "link": "/en/book",
+    "text": "Book Online"
+  },
+  "menu": {
+    "logo": {
+      "text": "TCM Network",
+      "emoji": "",
+      "image": {
+        "alt": "TCM Network",
+        "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/tcm-network/onboarding-overrides/1772870216635-tcm-network-1.svg"
+      },
+      "subtext": "Traditional Chinese Medicine & Acupuncture"
+    },
+    "items": [
+      {
+        "url": "/en",
+        "text": "Home"
+      },
+      {
+        "url": "/en/services",
+        "text": "Services"
+      },
+      {
+        "url": "/en/conditions",
+        "text": "Conditions"
+      },
+      {
+        "url": "/en/about",
+        "text": "About"
+      },
+      {
+        "url": "/en/case-studies",
+        "text": "Case Studies"
+      },
+      {
+        "url": "/en/gallery",
+        "text": "Gallery"
+      },
+      {
+        "url": "/en/new-patients",
+        "text": "New Visit"
+      },
+      {
+        "url": "/en/pricing",
+        "text": "Pricing"
+      },
+      {
+        "url": "/en/blog",
+        "text": "Blog"
+      },
+      {
+        "url": "/en/contact",
+        "text": "Contact"
+      }
+    ],
+    "variant": "transparent",
+    "fontWeight": "semibold"
+  },
+  "topbar": {
+    "badge": "Welcoming New Patients",
+    "hours": "Mon-Fri 9:00-18:00",
+    "phone": "9172291229",
+    "address": "220 W 30th Street, New York, NY 10001",
+    "phoneHref": "tel:+19172291229",
+    "addressHref": "https://maps.google.com/?q=71+East+Main+Street+New York+NY+10001"
+  },
+  "languages": [
+    "en",
+    "zh"
+  ]
+}

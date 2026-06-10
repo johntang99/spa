@@ -1,0 +1,108 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment",
+    "backLink": {
+      "href": "/en/acupuncture-goshen-ny",
+      "text": "Learn more about acupuncture in Goshen, NY"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "While acupuncture uses thin needles to stimulate specific points, moxibustion uses the therapeutic heat of burning mugwort. Moxibustion is particularly effective for conditions that may benefit from warming therapy and can be used alone or combined with acupuncture. The treatment feels like gentle, penetrating warmth rather than needle sensations.",
+        "question": "How does Moxibustion differ from acupuncture?"
+      },
+      {
+        "answer": "Moxibustion is generally very comfortable and relaxing. You'll feel a gentle, warming sensation that gradually builds as the moxa burns. The heat penetrates deeply but should never be painful or cause burns. Dr. Liang carefully monitors the temperature and can adjust the intensity based on your comfort level throughout the session.",
+        "question": "Is Moxibustion painful / what does it feel like?"
+      },
+      {
+        "answer": "The number of sessions varies based on your individual health goals and response to treatment. Some people notice benefits after just a few sessions, while others may benefit from longer-term support. Dr. Liang will develop a personalized treatment plan and regularly assess your progress to determine the optimal course of care.",
+        "question": "How many Moxibustion sessions will I need?"
+      },
+      {
+        "answer": "Yes, moxibustion works beautifully alongside other Traditional Chinese Medicine therapies. It's commonly combined with acupuncture to enhance treatment effects, and can also complement herbal medicine and other TCM modalities. Dr. Liang will design an integrated approach that may include multiple therapies to best support your health goals.",
+        "question": "Can Moxibustion be combined with other TCM treatments?"
+      },
+      {
+        "answer": "Session count depends on symptom severity, chronicity, and treatment goals. Many patients start with a short concentrated phase, then taper frequency as outcomes improve and remain stable.",
+        "question": "How many moxibustion sessions are usually needed?"
+      },
+      {
+        "answer": "Yes. We frequently integrate this service with acupuncture, movement-based rehab, and medical care plans when appropriate. Combining methods can improve durability when treatment goals are clearly coordinated.",
+        "question": "Can moxibustion be combined with other treatments?"
+      },
+      {
+        "answer": "In most cases, yes. Technique, intensity, and session pacing are adjusted for comfort, age, medical complexity, and symptom sensitivity. We use a conservative start when needed and increase intensity only when response supports it.",
+        "question": "Is moxibustion safe for sensitive patients?"
+      },
+      {
+        "answer": "Between visits, simple actions such as hydration, sleep consistency, mobility work, and trigger management can improve carryover. We provide brief home-care guidance tailored to your case so gains are reinforced between appointments.",
+        "question": "What should I do between moxibustion sessions?"
+      }
+    ],
+    "heading": "Moxibustion — Common Questions"
+  },
+  "seo": {
+    "h1": "Moxibustion in Goshen, NY",
+    "title": "Moxibustion in Goshen, NY | Kingsfoil Acupuncture",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Experience traditional moxibustion therapy in Goshen, NY with Dr. Jennifer Liang. Natural heat therapy to support your wellness. Schedule today.",
+    "canonicalUrl": "/en/moxibustion-goshen-ny"
+  },
+  "hero": {
+    "h1": "Moxibustion in Goshen, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Moxibustion Consultation",
+    "description": "Moxibustion at Kingsfoil Acupuncture in Goshen, NY is delivered as part of a structured care plan designed around your symptoms, recovery goals, and treatment tolerance. We focus on practical outcomes such as pain reduction, better mobility, improved sleep, and lower day-to-day symptom burden, then adjust the plan based on your actual response. This approach gives patients a clear roadmap instead of open-ended trial-and-error care."
+  },
+  "service": "moxibustion",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "Moxibustion is used in Chinese medicine as a targeted intervention to improve function and reduce symptom burden through individualized treatment design.\n\nRather than applying the same protocol to every patient, we evaluate symptom patterns, progression history, stress load, and recovery capacity before determining the right treatment intensity and frequency.\n\nThis individualized model helps patients in Goshen receive care that is both clinically focused and practical for real-world schedules.\n\nMoxibustion provides therapeutic warmth to support circulation, reduce cold-pattern discomfort, and improve tolerance in patients with fatigue-related or chronic pain presentations. It is especially useful when symptoms are aggravated by cold exposure, low energy states, or prolonged deficiency patterns.\n\nTreatment is dosed carefully to balance comfort and effectiveness. We reassess response each visit and adjust location, duration, and treatment frequency so progress remains steady.\n\nFor Goshen patients, moxibustion is often integrated with acupuncture to improve recovery momentum in cases where symptoms fluctuate with weather or stress load.",
+    "heading": "What Is Moxibustion?"
+  },
+  "howItWorks": {
+    "body": "Treatment begins with a focused reassessment at each visit so adjustments can be made in real time based on progress and symptom change.\n\nEarly sessions prioritize stabilization and symptom relief. As symptoms improve, care shifts toward function restoration, relapse prevention, and sustainable self-management strategies.\n\nWhen appropriate, we combine modalities and home-care guidance to improve carryover between visits and support longer-lasting results.\n\nIf progress slows, we re-evaluate diagnosis assumptions and treatment pacing rather than repeating static protocols. That responsiveness is a key part of achieving durable outcomes in both acute and chronic cases.",
+    "heading": "What to Expect During Moxibustion at Kingsfoil Acupuncture"
+  },
+  "whatItTreats": {
+    "heading": "Conditions Treated with Moxibustion",
+    "conditions": [
+      {
+        "name": "Back Pain",
+        "slug": "acupuncture-for-back-pain-goshen-ny"
+      },
+      {
+        "name": "Insomnia",
+        "slug": "acupuncture-for-insomnia-goshen-ny"
+      },
+      {
+        "name": "Anxiety",
+        "slug": "acupuncture-for-anxiety-goshen-ny"
+      },
+      {
+        "name": "Neck and Shoulder Tension"
+      },
+      {
+        "name": "Stress-Related Headache"
+      },
+      {
+        "name": "Recovery Fatigue"
+      },
+      {
+        "name": "General Muscle Tightness"
+      },
+      {
+        "name": "Postural Strain"
+      }
+    ]
+  }
+}

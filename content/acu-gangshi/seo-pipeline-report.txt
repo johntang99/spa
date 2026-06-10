@@ -1,0 +1,27 @@
+SEO Pipeline Report — Gang Shi Acupuncture
+Generated: 2026-03-31T03:13:40.621Z
+Pages: 9 slugs × 2 locales = 18
+QA: 10 pass, 4 warn, 0 fail
+Status: READY
+
+Pages:
+  seo-local-landing: /acupuncture-great-neck-ny
+  seo-condition: /acupuncture-for-back-pain-great-neck-ny
+  seo-condition: /acupuncture-for-insomnia-great-neck-ny
+  seo-condition: /acupuncture-for-anxiety-great-neck-ny
+  seo-resource: /acupuncture-cost-great-neck-ny
+  seo-service: /chinese-herbal-medicine-great-neck-ny
+  seo-service: /cupping-therapy-great-neck-ny
+  seo-service: /moxibustion-great-neck-ny
+  seo-service: /tui-na-massage-great-neck-ny
+
+GSC URLs:
+  https://[acu-gangshi domain]/en/acupuncture-great-neck-ny
+  https://[acu-gangshi domain]/en/acupuncture-for-back-pain-great-neck-ny
+  https://[acu-gangshi domain]/en/acupuncture-for-insomnia-great-neck-ny
+  https://[acu-gangshi domain]/en/acupuncture-for-anxiety-great-neck-ny
+  https://[acu-gangshi domain]/en/acupuncture-cost-great-neck-ny
+  https://[acu-gangshi domain]/en/chinese-herbal-medicine-great-neck-ny
+  https://[acu-gangshi domain]/en/cupping-therapy-great-neck-ny
+  https://[acu-gangshi domain]/en/moxibustion-great-neck-ny
+  https://[acu-gangshi domain]/en/tui-na-massage-great-neck-ny

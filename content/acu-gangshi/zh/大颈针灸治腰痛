@@ -1,0 +1,76 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约就诊"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "针灸治疗背痛的效果通常较持久，尤其配合生活方式调整。急性背痛治疗后复发率较低，慢性问题则建议定期维护。",
+        "question": "针灸能根治腰痛吗？"
+      },
+      {
+        "answer": "急性背痛通常需要3-6次治疗，慢性背痛可能需要8-12次。具体次数取决于疼痛严重度、持续时间与个人体质。",
+        "question": "腰痛需要做多少次针灸？"
+      },
+      {
+        "answer": "针灸和物理治疗可以很好地结合。针灸更擅长快速止痛和整体调理，物理治疗则著重肌力和活动功能恢复。",
+        "question": "针灸和理疗哪个更适合治疗腰痛？"
+      },
+      {
+        "answer": "针灸治疗背痛时通常不会明显疼痛。进针时可能有轻微刺感，随后是舒适酸胀感，代表治疗正在发挥作用。",
+        "question": "针灸治疗腰痛会痛吗？"
+      }
+    ],
+    "heading": "腰痛针灸 — 常见问题"
+  },
+  "seo": {
+    "h1": "大颈针灸治腰痛",
+    "title": "大颈针灸治腰痛｜Gang Shi Acupuncture",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "大颈（Great Neck）专业针灸治疗腰背痛。石刚医师经验丰富，可调理下背痛、颈肩痛、坐骨神经痛。天然疗法、接受保险。",
+    "canonicalUrl": "/zh/大颈针灸治腰痛"
+  },
+  "hero": {
+    "h1": "大颈针灸治腰痛",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "预约咨询",
+    "openingParagraph": "背痛是现代人常见健康问题之一，常影响工作与生活品质。石刚医师在Great Neck以传统中医针灸结合临床经验，为患者提供安全有效的腰背痛调理方案，适用于下背痛、颈肩痛与坐骨神经痛等常见情况。"
+  },
+  "pageType": "seo-condition",
+  "condition": "back-pain",
+  "howItWorks": {
+    "body": "中医认为背痛多与气血不通、经络阻滞有关。针灸透过刺激特定穴位，能疏通经络、调和气血、减轻发炎反应。现代研究也指出，针灸可促进内源性止痛物质释放并改善局部循环。我们会依照疼痛位置与病因制定个人化治疗方案，必要时配合推拿、拔罐等辅助疗法以提高效果。",
+    "heading": "大颈针灸治腰痛的原理"
+  },
+  "testimonial": {
+    "heading": "Great Neck患者的真实回馈"
+  },
+  "whatToExpect": {
+    "body": "初诊时石刚医师会详细了解疼痛史与生活习惯，再进行针灸治疗。多数患者在治疗中会感到放松，每次约30-45分钟。通常3-5次后可感受到明显改善，后续再依恢复情况调整治疗频率。",
+    "heading": "Gang Shi Acupuncture治疗流程"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "大颈失眠针灸",
+        "label": "针灸治疗失眠"
+      },
+      {
+        "slug": "大颈针灸治焦虑",
+        "label": "针灸治疗焦虑"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "助孕针灸"
+      }
+    ],
+    "heading": "Gang Shi Acupuncture治疗的其他病症"
+  }
+}

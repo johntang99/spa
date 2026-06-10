@@ -1,0 +1,20 @@
+{
+  "zip": "10940",
+  "city": "Middletown",
+  "email": "sancai.acu@gmail.com",
+  "phone": "(845) 381-1106",
+  "state": "NY",
+  "social": {
+    "wechat": "https://wechat.com/",
+    "youtube": "https://youtube.com/",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/"
+  },
+  "address": "71 East Main Street, Middletown, NY 10940",
+  "tagline": "Traditional Chinese Medicine & Acupuncture",
+  "clinicName": "Dr Huang Clinic",
+  "description": "Holistic healing through Traditional Chinese Medicine in Middletown, NY",
+  "addressMapUrl": "https://maps.google.com/?q=71+East+Main+Street,+Middletown,+NY+10940",
+  "headerVariant": "stacked",
+  "iconCharacter": "H"
+}

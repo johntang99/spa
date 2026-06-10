@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "overview"
+    },
+    {
+      "id": "services"
+    },
+    {
+      "id": "faq"
+    },
+    {
+      "id": "relatedReading"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Most patients notice some improvement in sleep quality within 3-4 sessions. Full results typically develop over 6-8 treatments as your body's natural rhythms restore balance. Some patients experience better sleep immediately after their first treatment.",
+        "question": "How quickly does acupuncture work for insomnia?"
+      },
+      {
+        "answer": "Acupuncture can be used alongside sleep medications and may help reduce dependence over time. However, never stop prescription medications without consulting your prescribing physician. Many patients gradually reduce reliance on sleep aids as their natural sleep improves.",
+        "question": "Can acupuncture replace sleep medication?"
+      },
+      {
+        "answer": "Acupuncture and herbal medicine work synergistically for insomnia. While acupuncture rebalances your energy and calms the nervous system, herbs provide gentle, sustained support for healthy sleep patterns. The combination often produces faster, more lasting results than either therapy alone.",
+        "question": "Is acupuncture or herbal medicine better for sleep?"
+      },
+      {
+        "answer": "In TCM terms, insomnia often involves 'Heart-Kidney not communicating,' meaning your body's cooling, restorative energy is depleted, or 'Liver Qi stagnation,' where stress and emotions create internal tension. These patterns guide personalized treatment to restore your natural sleep rhythms.",
+        "question": "What TCM patterns cause insomnia?"
+      }
+    ],
+    "heading": "Acupuncture for Sleep — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Insomnia in Middletown, NY",
+    "title": "Acupuncture for Insomnia Middletown, NY | Dr. Huang",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Natural insomnia treatment in Middletown, NY. Dr. Huang's acupuncture restores healthy sleep patterns. Gentle, effective care. Schedule today.",
+    "canonicalUrl": "/en/acupuncture-for-insomnia-middletown-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture for Insomnia in Middletown, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Consultation",
+    "openingParagraph": "One in three adults struggles with insomnia, often turning to medications that provide temporary relief but don't address underlying causes. Traditional Chinese Medicine views sleep disorders as imbalances in the body's natural rhythms, often involving the heart, kidneys, and liver systems. At Dr. Huang Clinic in Middletown, patients discover how acupuncture can naturally restore healthy sleep patterns by calming the nervous system and addressing the root imbalances that keep them awake at night."
+  },
+  "pageType": "seo-condition",
+  "condition": "insomnia",
+  "howItWorks": {
+    "body": "Acupuncture helps regulate the hormones responsible for sleep, particularly cortisol and melatonin production. From a TCM perspective, insomnia often stems from patterns like Heart-Kidney disharmony, where stress depletes the body's cooling, calming energy, or Liver Qi stagnation, where unexpressed emotions create internal tension. Treatment points calm the mind, nourish depleted systems, and restore natural circadian rhythms. Dr. Huang often combines acupuncture with customized herbal formulas that support deeper, more restorative sleep without morning grogginess.",
+    "heading": "How Acupuncture Treats Insomnia — How It Works"
+  },
+  "testimonial": {
+    "quote": "I hadn't slept through the night in years before seeing Dr. Huang. Her acupuncture treatments not only helped me fall asleep faster but gave me the deep, refreshing sleep I'd forgotten was possible.",
+    "heading": "Real Results for Middletown Patients",
+    "attribution": "Jennifer, Middletown"
+  },
+  "whatToExpect": {
+    "body": "Your treatment begins with a detailed sleep history and lifestyle assessment. Dr. Huang may ask you to keep a sleep diary to identify patterns and triggers. Most patients require 6-8 sessions, with many noticing improved sleep quality within 3-4 treatments. Sessions focus on calming points that help quiet mental chatter and prepare your body for natural rest.",
+    "heading": "What to Expect at Dr. Huang Clinic"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-back-pain-middletown-ny",
+        "label": "Acupuncture for Back Pain"
+      },
+      {
+        "slug": "acupuncture-for-anxiety-middletown-ny",
+        "label": "Acupuncture for Anxiety"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "Fertility Acupuncture"
+      }
+    ],
+    "heading": "Other Conditions We Treat at Dr. Huang Clinic"
+  }
+}

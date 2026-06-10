@@ -1,0 +1,24 @@
+{
+  "timezone": "America/New_York",
+  "bufferMinutes": 15,
+  "minNoticeHours": 4,
+  "maxDaysAhead": 60,
+  "defaultServiceType": "pickup_delivery",
+  "serviceAreaZips": ["10940", "10941", "10924", "10918", "10950", "10917"],
+  "blackoutWindows": [],
+  "rushLeadHours": 4,
+  "maxOrdersPerSlot": 8,
+  "recurringEnabled": true,
+  "businessHours": [
+    { "day": "Mon", "open": "07:00", "close": "21:00" },
+    { "day": "Tue", "open": "07:00", "close": "21:00" },
+    { "day": "Wed", "open": "07:00", "close": "21:00" },
+    { "day": "Thu", "open": "07:00", "close": "21:00" },
+    { "day": "Fri", "open": "07:00", "close": "21:00" },
+    { "day": "Sat", "open": "08:00", "close": "20:00" },
+    { "day": "Sun", "open": "08:00", "close": "18:00" }
+  ],
+  "blockedDates": [],
+  "notificationEmails": ["ops@example.com", "dispatch@example.com"],
+  "notificationPhones": []
+}

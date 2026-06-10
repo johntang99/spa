@@ -1,0 +1,122 @@
+{
+  "name": "starter-pro",
+  "description": "Advanced clinic operation with provider scheduling, recurring care plans, and higher slot capacity.",
+  "siteTemplate": {
+    "defaultLocale": "en",
+    "supportedLocales": ["en", "zh"],
+    "enabled": true
+  },
+  "userTemplate": [
+    {
+      "role": "super_admin",
+      "sites": []
+    },
+    {
+      "role": "site_admin",
+      "sites": ["<new-site-id>"]
+    },
+    {
+      "role": "editor",
+      "sites": ["<new-site-id>"]
+    }
+  ],
+  "bookingServices": [
+    {
+      "id": "pickup-wash-fold",
+      "name": "Initial Consultation",
+      "serviceType": "pickup_delivery",
+      "pricingModel": "by_weight",
+      "category": "residential",
+      "durationMinutes": 60,
+      "price": 1.95,
+      "unitLabel": "lb",
+      "minOrderValue": 35,
+      "leadTimeHours": 12,
+      "capacityPerSlot": 6,
+      "rushFee": 10,
+      "recurringEligible": true,
+      "commercialEligible": false,
+      "active": true
+    },
+    {
+      "id": "pickup-dry-cleaning",
+      "name": "Acupuncture Treatment Session",
+      "serviceType": "pickup_delivery",
+      "pricingModel": "by_item",
+      "category": "dry_cleaning",
+      "durationMinutes": 60,
+      "price": 0,
+      "unitLabel": "item",
+      "leadTimeHours": 18,
+      "capacityPerSlot": 4,
+      "commercialEligible": true,
+      "active": true
+    },
+    {
+      "id": "dropoff-wash-fold",
+      "name": "Follow-up Visit",
+      "serviceType": "dropoff",
+      "pricingModel": "by_weight",
+      "category": "residential",
+      "durationMinutes": 30,
+      "price": 1.6,
+      "unitLabel": "lb",
+      "leadTimeHours": 2,
+      "capacityPerSlot": 10,
+      "recurringEligible": true,
+      "active": true
+    },
+    {
+      "id": "self-service-reservation",
+      "name": "Tuina / Bodywork Session",
+      "serviceType": "self_service",
+      "pricingModel": "flat",
+      "category": "self_service",
+      "durationMinutes": 45,
+      "price": 8,
+      "unitLabel": "slot",
+      "leadTimeHours": 1,
+      "capacityPerSlot": 8,
+      "active": true
+    },
+    {
+      "id": "commercial-linen-program",
+      "name": "Corporate Wellness Program",
+      "serviceType": "commercial",
+      "pricingModel": "quote",
+      "category": "commercial",
+      "durationMinutes": 90,
+      "price": 0,
+      "unitLabel": "quote",
+      "leadTimeHours": 24,
+      "capacityPerSlot": 3,
+      "recurringEligible": true,
+      "commercialEligible": true,
+      "active": true
+    }
+  ],
+  "bookingSettings": {
+    "timezone": "America/New_York",
+    "bufferMinutes": 15,
+    "minNoticeHours": 6,
+    "maxDaysAhead": 60,
+    "defaultServiceType": "pickup_delivery",
+    "serviceAreaZips": ["10940", "10941", "10924", "10918", "10950"],
+    "blackoutWindows": [],
+    "rushLeadHours": 6,
+    "maxOrdersPerSlot": 6,
+    "recurringEnabled": true,
+    "businessHours": [
+      { "day": "Mon", "open": "07:00", "close": "21:00" },
+      { "day": "Tue", "open": "07:00", "close": "21:00" },
+      { "day": "Wed", "open": "07:00", "close": "21:00" },
+      { "day": "Thu", "open": "07:00", "close": "21:00" },
+      { "day": "Fri", "open": "07:00", "close": "21:00" },
+      { "day": "Sat", "open": "08:00", "close": "19:00" },
+      { "day": "Sun", "open": "08:00", "close": "18:00", "closed": false }
+    ],
+    "blockedDates": [],
+    "notificationEmails": ["ops@example.com", "manager@example.com"],
+    "notificationPhones": []
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment",
+    "backLink": {
+      "href": "/en/acupuncture-goshen-ny",
+      "text": "Learn more about acupuncture in Goshen, NY"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Chinese Herbal Medicine works internally through ingested substances that address systemic imbalances, while acupuncture uses needles to stimulate specific points externally. Herbal medicine provides sustained therapeutic effects throughout the day, whereas acupuncture treatments have more immediate but shorter-lasting effects. Both can complement each other beautifully.",
+        "question": "How does Chinese Herbal Medicine differ from acupuncture?"
+      },
+      {
+        "answer": "Chinese Herbal Medicine is not painful, though the herbs often have strong, distinctive tastes that may be bitter, sweet, or earthy. Some people experience mild digestive changes initially as their body adjusts. Most patients find the taste becomes more tolerable over time, and many develop an appreciation for the natural flavors.",
+        "question": "Is Chinese Herbal Medicine painful / what does it feel like?"
+      },
+      {
+        "answer": "Treatment duration varies based on your condition's nature and severity. Acute conditions may improve within 1-2 weeks, while chronic issues typically require 6-12 weeks or longer. Dr. Liang will provide a realistic timeline during your consultation and adjust your formula as your condition progresses, ensuring optimal therapeutic benefit.",
+        "question": "How many Chinese Herbal Medicine sessions will I need?"
+      },
+      {
+        "answer": "Yes, Chinese Herbal Medicine combines excellently with acupuncture, cupping, and other TCM modalities. This integrated approach often enhances therapeutic outcomes by addressing your condition from multiple angles. Dr. Liang will recommend the most appropriate combination based on your specific needs and treatment goals.",
+        "question": "Can Chinese Herbal Medicine be combined with other TCM treatments?"
+      },
+      {
+        "answer": "Session count depends on symptom severity, chronicity, and treatment goals. Many patients start with a short concentrated phase, then taper frequency as outcomes improve and remain stable.",
+        "question": "How many chinese herbal medicine sessions are usually needed?"
+      },
+      {
+        "answer": "Yes. We frequently integrate this service with acupuncture, movement-based rehab, and medical care plans when appropriate. Combining methods can improve durability when treatment goals are clearly coordinated.",
+        "question": "Can chinese herbal medicine be combined with other treatments?"
+      },
+      {
+        "answer": "In most cases, yes. Technique, intensity, and session pacing are adjusted for comfort, age, medical complexity, and symptom sensitivity. We use a conservative start when needed and increase intensity only when response supports it.",
+        "question": "Is chinese herbal medicine safe for sensitive patients?"
+      },
+      {
+        "answer": "Between visits, simple actions such as hydration, sleep consistency, mobility work, and trigger management can improve carryover. We provide brief home-care guidance tailored to your case so gains are reinforced between appointments.",
+        "question": "What should I do between chinese herbal medicine sessions?"
+      }
+    ],
+    "heading": "Chinese Herbal Medicine — Common Questions"
+  },
+  "seo": {
+    "h1": "Chinese Herbal Medicine in Goshen, NY",
+    "title": "Chinese Herbal Medicine Goshen NY | Kingsfoil Acupuncture",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Expert Chinese Herbal Medicine in Goshen, NY with Dr. Jennifer Liang. Personalized herbal formulas for natural wellness. Book consultation today.",
+    "canonicalUrl": "/en/chinese-herbal-medicine-goshen-ny"
+  },
+  "hero": {
+    "h1": "Chinese Herbal Medicine in Goshen, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Chinese Herbal Medicine Consultation",
+    "description": "Chinese Herbal Medicine at Kingsfoil Acupuncture in Goshen, NY is delivered as part of a structured care plan designed around your symptoms, recovery goals, and treatment tolerance. We focus on practical outcomes such as pain reduction, better mobility, improved sleep, and lower day-to-day symptom burden, then adjust the plan based on your actual response. This approach gives patients a clear roadmap instead of open-ended trial-and-error care."
+  },
+  "service": "chinese-herbal-medicine",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "Chinese Herbal Medicine is used in Chinese medicine as a targeted intervention to improve function and reduce symptom burden through individualized treatment design.\n\nRather than applying the same protocol to every patient, we evaluate symptom patterns, progression history, stress load, and recovery capacity before determining the right treatment intensity and frequency.\n\nThis individualized model helps patients in Goshen receive care that is both clinically focused and practical for real-world schedules.\n\nChinese herbal medicine uses formula design based on pattern differentiation rather than symptom-only matching. Formulas are selected and adjusted to support systems such as digestion, sleep, stress adaptation, and recovery resilience.\n\nAt our clinic, herbal planning is practical and staged: we review your response, refine dosing strategy, and adapt formulas as your presentation shifts. This helps patients avoid static one-time plans that do not match real recovery changes over time.\n\nFor patients in Goshen, herbal care is often combined with acupuncture so treatment gains can continue between visits and remain stable through workload or seasonal stress changes.",
+    "heading": "What Is Chinese Herbal Medicine?"
+  },
+  "howItWorks": {
+    "body": "Treatment begins with a focused reassessment at each visit so adjustments can be made in real time based on progress and symptom change.\n\nEarly sessions prioritize stabilization and symptom relief. As symptoms improve, care shifts toward function restoration, relapse prevention, and sustainable self-management strategies.\n\nWhen appropriate, we combine modalities and home-care guidance to improve carryover between visits and support longer-lasting results.\n\nIf progress slows, we re-evaluate diagnosis assumptions and treatment pacing rather than repeating static protocols. That responsiveness is a key part of achieving durable outcomes in both acute and chronic cases.",
+    "heading": "What to Expect During Chinese Herbal Medicine at Kingsfoil Acupuncture"
+  },
+  "whatItTreats": {
+    "heading": "Conditions Treated with Chinese Herbal Medicine",
+    "conditions": [
+      {
+        "name": "Back Pain",
+        "slug": "acupuncture-for-back-pain-goshen-ny"
+      },
+      {
+        "name": "Insomnia",
+        "slug": "acupuncture-for-insomnia-goshen-ny"
+      },
+      {
+        "name": "Anxiety",
+        "slug": "acupuncture-for-anxiety-goshen-ny"
+      },
+      {
+        "name": "Neck and Shoulder Tension"
+      },
+      {
+        "name": "Stress-Related Headache"
+      },
+      {
+        "name": "Recovery Fatigue"
+      },
+      {
+        "name": "General Muscle Tightness"
+      },
+      {
+        "name": "Postural Strain"
+      }
+    ]
+  }
+}

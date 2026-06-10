@@ -1,0 +1,27 @@
+SEO Pipeline Report — Dr. Huang Clinic
+Generated: 2026-03-24T13:02:47.197Z
+Pages: 9 slugs × 2 locales = 18
+QA: 10 pass, 4 warn, 0 fail
+Status: READY
+
+Pages:
+  seo-local-landing: /acupuncture-middletown-ny
+  seo-condition: /acupuncture-for-back-pain-middletown-ny
+  seo-condition: /acupuncture-for-insomnia-middletown-ny
+  seo-condition: /acupuncture-for-anxiety-middletown-ny
+  seo-resource: /acupuncture-cost-middletown-ny
+  seo-service: /chinese-herbal-medicine-middletown-ny
+  seo-service: /cupping-therapy-middletown-ny
+  seo-service: /moxibustion-middletown-ny
+  seo-service: /tui-na-massage-middletown-ny
+
+GSC URLs:
+  https://[dr-huang-clinic domain]/en/acupuncture-middletown-ny
+  https://[dr-huang-clinic domain]/en/acupuncture-for-back-pain-middletown-ny
+  https://[dr-huang-clinic domain]/en/acupuncture-for-insomnia-middletown-ny
+  https://[dr-huang-clinic domain]/en/acupuncture-for-anxiety-middletown-ny
+  https://[dr-huang-clinic domain]/en/acupuncture-cost-middletown-ny
+  https://[dr-huang-clinic domain]/en/chinese-herbal-medicine-middletown-ny
+  https://[dr-huang-clinic domain]/en/cupping-therapy-middletown-ny
+  https://[dr-huang-clinic domain]/en/moxibustion-middletown-ny
+  https://[dr-huang-clinic domain]/en/tui-na-massage-middletown-ny

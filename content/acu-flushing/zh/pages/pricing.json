@@ -1,0 +1,245 @@
+{
+  "cta": {
+    "note": "新患者：您的首次访问是全面的90分钟咨询，包括治疗（$120）",
+    "title": "准备开始？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "安排咨询（$120）"
+    },
+    "description": "预约您的初次咨询，迈出通往更好健康的第一步",
+    "secondaryCta": {
+      "link": "tel:+19172291229",
+      "text": "有问题？致电我们"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "这因病症而异。急性问题可能在3-6次疗程中改善，而慢性病症通常需要10-15次或更多治疗。我们将在您的初次咨询期间创建个性化治疗计划，并根据您的进展进行调整。",
+        "question": "我需要多少次治疗？"
+      },
+      {
+        "answer": "我们接受包括针灸保险的大多数主要保险计划。我们将核实您的福利并处理账单。即使我们不在网络内，我们也可以提供详细的账单以供报销。",
+        "question": "我可以使用保险吗？"
+      },
+      {
+        "answer": "不，套餐是可选的。如果您愿意，可以按次付费。但是，套餐提供显著节省，建议需要多次治疗的慢性病症使用。",
+        "question": "套餐是必需的吗？"
+      },
+      {
+        "answer": "对于没有保险的患者，我们可以根据具体情况讨论付款计划选项。请与我们讨论您的情况。",
+        "question": "您提供付款计划吗？"
+      }
+    ],
+    "title": "定价常见问题",
+    "variant": "accordion"
+  },
+  "hero": {
+    "title": "透明定价",
+    "variant": "centered",
+    "subtitle": "价格实惠、高质量的传统中医护理，灵活的付款选项",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/pricing/hero-bg.jpg"
+  },
+  "packages": {
+    "items": [
+      {
+        "name": "入门套餐",
+        "bestFor": "急性病症，首次患者",
+        "popular": false,
+        "savings": "$25",
+        "includes": [
+          "5次随访针灸疗程",
+          "3个月内有效",
+          "可额外收费添加疗法"
+        ],
+        "sessions": 5,
+        "totalPrice": "$400",
+        "description": "非常适合尝试中医或解决急性问题",
+        "regularPrice": "$425",
+        "perSessionPrice": "$80"
+      },
+      {
+        "name": "健康套餐",
+        "bestFor": "慢性疼痛，生育支持，持续健康",
+        "popular": true,
+        "savings": "$100",
+        "includes": [
+          "10次随访针灸疗程",
+          "1次免费拔罐或刮痧附加",
+          "6个月内有效",
+          "中药配方10%折扣"
+        ],
+        "sessions": 10,
+        "totalPrice": "$750",
+        "description": "我们最受欢迎的慢性病症选择",
+        "regularPrice": "$850",
+        "perSessionPrice": "$75"
+      },
+      {
+        "name": "康复之旅套餐",
+        "bestFor": "复杂慢性病症，预防性护理，最佳健康",
+        "popular": false,
+        "savings": "$300",
+        "includes": [
+          "20次随访针灸疗程",
+          "3次免费附加疗法（拔罐、刮痧或艾灸）",
+          "12个月内有效",
+          "中药配方15%折扣",
+          "免费饮食疗法咨询（价值$75）"
+        ],
+        "sessions": 20,
+        "totalPrice": "$1,400",
+        "description": "针对复杂或长期病症的全面护理",
+        "regularPrice": "$1,700",
+        "perSessionPrice": "$70"
+      },
+      {
+        "name": "每月维护",
+        "bestFor": "长期健康，预防，慢性病管理",
+        "popular": false,
+        "savings": "$40",
+        "includes": [
+          "每月4次疗程（每周一次）",
+          "每月自动续订",
+          "可随时暂停或取消",
+          "优先安排"
+        ],
+        "sessions": 4,
+        "totalPrice": "$300",
+        "description": "持续护理以保持健康和预防疾病",
+        "regularPrice": "$340",
+        "perSessionPrice": "$75"
+      }
+    ],
+    "title": "治疗套餐",
+    "variant": "grid-3",
+    "subtitle": "通过我们的套餐优惠省钱 - 您对健康的承诺越多，节省的越多"
+  },
+  "policies": {
+    "title": "政策",
+    "variant": "grid",
+    "packages": {
+      "title": "套餐政策",
+      "policy": "治疗套餐必须在指定时间范围内使用。套餐不可退款，但可转让给直系亲属。如果您因长期疾病或旅行需要暂停套餐，请与我们联系。"
+    },
+    "lateArrival": {
+      "title": "迟到",
+      "policy": "请在预定预约前5-10分钟到达。如果您迟到超过15分钟，我们可能需要缩短您的治疗或重新安排，并将收取全额费用。"
+    },
+    "newPatients": {
+      "title": "新患者表格",
+      "policy": "请在首次访问前完成新患者表格（可在我们的网站上获得），或提前15分钟到达以填写。"
+    },
+    "cancellation": {
+      "title": "取消政策",
+      "policy": "我们理解日程会改变。如果您需要取消或重新安排预约，请至少提前24小时通知。延迟取消（少于24小时）或未出现将收取治疗费的50%。紧急情况例外。"
+    }
+  },
+  "insurance": {
+    "hsa": {
+      "title": "HSA/FSA合格",
+      "description": "我们所有的治疗都符合使用健康储蓄账户（HSA）和灵活支出账户（FSA）付款的资格。我们为您的记录提供详细的收据。"
+    },
+    "title": "保险和付款",
+    "variant": "split",
+    "insuranceInfo": {
+      "title": "保险覆盖",
+      "weProvide": [
+        "保险福利核实",
+        "直接向保险公司开账单（网络内计划）",
+        "网络外报销的详细账单",
+        "如需要，协助预授权"
+      ],
+      "whatToAsk": [
+        "我有针灸保险吗？",
+        "每年覆盖多少次访问？",
+        "我的共付额或共同保险是多少？",
+        "我需要家庭医生的转诊吗？",
+        "有任何预授权要求吗？"
+      ],
+      "description": "许多保险计划现在为某些病症提供针灸保险。保险范围因计划而异，因此我们建议您在首次访问前致电您的保险公司以核实您的福利。"
+    },
+    "paymentMethods": {
+      "title": "接受的付款方式",
+      "methods": [
+        "现金",
+        "信用卡/借记卡（Visa、Mastercard、Amex、Discover）",
+        "HSA/FSA卡",
+        "支票",
+        "Venmo、Zelle（老患者）"
+      ]
+    },
+    "acceptedInsurance": [
+      "Aetna",
+      "蓝十字蓝盾",
+      "Cigna",
+      "联合医疗保健",
+      "Empire BCBS",
+      "Oxford",
+      "Medicare（有补充针灸保险）",
+      "大多数有针灸福利的主要保险计划"
+    ]
+  },
+  "introduction": {
+    "note": "今天投资您的健康 - 预防的成本远低于疾病的成本。",
+    "text": "我们相信治疗应该是可及的。我们的定价直截了当，没有隐藏费用。我们提供套餐折扣，使持续护理更实惠，并且我们与大多数保险计划合作。",
+    "variant": "centered"
+  },
+  "individualTreatments": {
+    "items": [
+      {
+        "name": "初次咨询和治疗",
+        "notes": "包括治疗计划和建议",
+        "price": "$120",
+        "duration": "90分钟",
+        "description": "全面的90分钟首次访问，包括完整的健康史、中医诊断和首次针灸治疗"
+      },
+      {
+        "name": "随访针灸疗程",
+        "notes": "最常见的治疗类型",
+        "price": "$85",
+        "duration": "60分钟",
+        "description": "标准针灸治疗伴简短检查"
+      },
+      {
+        "name": "延长针灸疗程",
+        "notes": "根据需要包括额外疗法",
+        "price": "$105",
+        "duration": "75分钟",
+        "description": "针对复杂病症或多个部位的较长疗程"
+      },
+      {
+        "name": "拔罐疗法（附加）",
+        "notes": "非常适合肌肉紧张",
+        "price": "$20",
+        "duration": "15分钟",
+        "description": "针灸疗程中添加拔罐"
+      },
+      {
+        "name": "推拿医疗按摩",
+        "notes": "可与针灸结合",
+        "price": "$95",
+        "duration": "60分钟",
+        "description": "传统中医治疗性按摩"
+      },
+      {
+        "name": "中药咨询",
+        "notes": "价格取决于配方复杂性。草药成本另计。",
+        "price": "$45-$95",
+        "duration": "30分钟",
+        "description": "中药配方咨询和配药"
+      },
+      {
+        "name": "社区针灸",
+        "notes": "根据支付能力的滑动比例。仅限周三。",
+        "price": "$35-$55",
+        "duration": "45分钟",
+        "description": "在共享的宁静空间中进行价格实惠的针灸"
+      }
+    ],
+    "title": "个人治疗定价",
+    "variant": "grid-3",
+    "subtitle": "所有服务的按次付费选项"
+  }
+}

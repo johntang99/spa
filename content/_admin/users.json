@@ -1,0 +1,27 @@
+[
+  {
+    "id": "admin-1",
+    "email": "admin@example.com",
+    "name": "Super Admin",
+    "role": "super_admin",
+    "sites": [
+      "dr-huang-clinic",
+      "acupuncture-flushing"
+    ],
+    "passwordHash": "$2b$10$6X5Bk08gd9Fl84n.dXn8T.GBdsrua4Mswq1YIA3KMk.6ED9mfquJ.",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "lastLoginAt": "2026-02-02T21:25:58.624Z"
+  },
+  {
+    "id": "user-1770166350179",
+    "email": "jackylee@example.com",
+    "name": "Jacky Lee",
+    "role": "site_admin",
+    "sites": [
+      "dr-huang-clinic"
+    ],
+    "passwordHash": "$2b$10$6AYZkx9FT/rc.snMRAhwnuU9YHk0wxdmddMZFztUIoEQ2EAEkoEUi",
+    "createdAt": "2026-02-04T00:52:30.179Z",
+    "lastLoginAt": "2026-02-04T00:52:30.179Z"
+  }
+]

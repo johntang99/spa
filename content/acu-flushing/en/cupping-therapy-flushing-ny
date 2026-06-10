@@ -1,0 +1,83 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment",
+    "backLink": {
+      "href": "/en/acupuncture-flushing-ny",
+      "text": "Learn more about acupuncture in Flushing, NY"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "While acupuncture uses fine needles to stimulate specific points, cupping creates gentle suction over broader areas to promote circulation. Cupping focuses on drawing blood to the surface, whereas acupuncture targets energy meridians. Many patients find cupping more relaxing and less intimidating than needles.",
+        "question": "How does Cupping Therapy differ from acupuncture?"
+      },
+      {
+        "answer": "Most patients describe cupping as a gentle pulling sensation rather than pain. The suction creates a unique feeling that many find deeply relaxing, similar to a reverse massage. Any discomfort is typically minimal and brief, with most people becoming comfortable within the first few minutes of treatment.",
+        "question": "Is Cupping Therapy painful / what does it feel like?"
+      },
+      {
+        "answer": "Treatment frequency varies based on individual needs and goals. Some patients notice benefits after one session, while others may benefit from a series of treatments over several weeks. Dr. Jiang will develop a personalized treatment plan during your initial consultation based on your specific condition and response to therapy.",
+        "question": "How many Cupping Therapy sessions will I need?"
+      },
+      {
+        "answer": "Yes, cupping often complements other traditional Chinese medicine modalities beautifully. Dr. Jiang frequently combines cupping with acupuncture, herbal consultations, or other therapeutic approaches to create comprehensive treatment plans. This integrative approach may enhance overall therapeutic benefits and address multiple aspects of your wellness goals.",
+        "question": "Can Cupping Therapy be combined with other TCM treatments?"
+      }
+    ],
+    "heading": "Cupping Therapy — Common Questions"
+  },
+  "seo": {
+    "h1": "Cupping Therapy in Flushing, NY",
+    "title": "Cupping Therapy in Flushing, NY | Flushing Acupuncture & TCM",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Experience traditional cupping therapy in Flushing, NY. Dr. Jiang uses time-tested techniques to support muscle recovery and wellness. Book consultation.",
+    "canonicalUrl": "/en/cupping-therapy-flushing-ny"
+  },
+  "hero": {
+    "h1": "Cupping Therapy in Flushing, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Cupping Therapy Consultation",
+    "description": "Cupping therapy is an ancient healing practice that uses specially designed cups to create gentle suction on the skin, promoting blood flow and supporting the body's natural healing processes. This traditional technique may help with muscle tension, circulation issues, and overall wellness. Dr. Jiang brings years of experience in traditional Chinese medicine to provide personalized cupping treatments for residents of Flushing and surrounding areas, combining time-honored techniques with modern understanding of therapeutic benefits."
+  },
+  "service": "cupping-therapy",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "Cupping therapy dates back thousands of years in Chinese medicine, where it developed as a complementary healing modality alongside acupuncture and herbal medicine. The practice involves placing specialized cups on specific areas of the body to create controlled suction, which draws blood to the surface and may help improve circulation. Unlike acupuncture, which uses fine needles to stimulate energy points, cupping works through gentle suction and pressure to target broader areas of muscle and tissue. The technique creates distinctive circular marks that typically fade within a few days to a week. What makes cupping unique is its ability to provide both localized relief and systemic support, as practitioners believe it helps move stagnant energy and blood throughout the body's meridian system.",
+    "heading": "What Is Cupping Therapy?"
+  },
+  "howItWorks": {
+    "body": "Your cupping session begins with Dr. Jiang conducting a thorough consultation to understand your specific concerns and health goals. During treatment, sterilized glass or silicone cups are carefully placed on targeted areas of your body. The practitioner creates gentle suction using either heat or mechanical pumps, drawing the skin slightly upward into the cup. You'll feel a pulling sensation that most patients find surprisingly relaxing. Sessions typically last 15-30 minutes, during which you can rest comfortably. After cup removal, circular marks may appear where cups were placed - these are normal and indicate increased blood flow to the area. These marks are painless and gradually fade over several days. Dr. Jiang will provide aftercare instructions, which may include staying hydrated and avoiding strenuous activity immediately following treatment.",
+    "heading": "What to Expect During Cupping Therapy at Flushing Acupuncture & TCM"
+  },
+  "whatItTreats": {
+    "heading": "Conditions Treated with Cupping Therapy",
+    "conditions": [
+      {
+        "name": "Muscle tension and stiffness"
+      },
+      {
+        "name": "Sports injuries and recovery"
+      },
+      {
+        "name": "Respiratory discomfort"
+      },
+      {
+        "name": "Stress-related tension"
+      },
+      {
+        "name": "Poor circulation"
+      },
+      {
+        "name": "General wellness support"
+      }
+    ]
+  }
+}

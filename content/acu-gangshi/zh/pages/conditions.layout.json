@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "introduction"
+    },
+    {
+      "id": "featured"
+    },
+    {
+      "id": "categories"
+    },
+    {
+      "id": "relatedReading"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

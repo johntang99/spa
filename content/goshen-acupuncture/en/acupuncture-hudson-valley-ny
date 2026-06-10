@@ -1,0 +1,209 @@
+{
+  "faq": {
+    "items": [
+      {
+        "answer": "Most Hudson Valley patients begin with a focused phase of 1-2 visits per week for 2-4 weeks, then taper as symptoms stabilize. Acute concerns can improve sooner, while long-standing conditions usually need a longer care arc. We reassess progress regularly and adjust the plan based on pain, sleep, mobility, and daily function.",
+        "question": "How many acupuncture sessions do Hudson Valley patients usually need?"
+      },
+      {
+        "answer": "Yes. Many patients use acupuncture alongside primary care, physical therapy, orthopedic care, or behavioral health support. Our team focuses on complementary care and encourages coordinated communication with your broader healthcare team.",
+        "question": "Can I combine acupuncture with my current medical treatment?"
+      },
+      {
+        "answer": "You may feel immediate relief, deeper relaxation, or gradual improvement over 24-72 hours. Some patients notice temporary soreness or fatigue after early sessions, which usually resolves quickly. We provide post-visit guidance so recovery remains smooth.",
+        "question": "What should I expect after my first visit?"
+      },
+      {
+        "answer": "No. While pain care is common, we also support stress and anxiety patterns, sleep disruption, headache frequency, and recovery-related fatigue. Treatment recommendations are tailored to your goals and health history.",
+        "question": "Do you only treat pain-related cases in Hudson Valley?"
+      },
+      {
+        "answer": "We personalize treatment by combining your symptom timeline, trigger patterns, constitutional findings, and response to prior sessions. This helps us adapt point selection, modality mix, and visit frequency as your condition changes.",
+        "question": "How do you personalize treatment plans?"
+      },
+      {
+        "answer": "When performed by a licensed provider using sterile single-use needles, acupuncture is generally well tolerated across age groups. For older adults or medically complex patients, we adjust technique and intensity to prioritize comfort and safety.",
+        "question": "Is acupuncture safe for older adults?"
+      },
+      {
+        "answer": "Yes. Many Hudson Valley patients seek care for jaw tension, neck/shoulder tightness, sleep disruption, and fatigue linked to prolonged stress. Our protocols focus on calming the nervous system while improving circulation and physical recovery.",
+        "question": "Can treatment help reduce stress-related physical symptoms?"
+      },
+      {
+        "answer": "After your primary goals are met, many patients shift to maintenance every 2-6 weeks depending on stress load, activity level, and recurrence history. Maintenance helps preserve gains and reduce severe flare-ups over time.",
+        "question": "When should I schedule maintenance visits?"
+      }
+    ],
+    "heading": "Frequently Asked Questions About Acupuncture in Hudson Valley, NY"
+  },
+  "seo": {
+    "h1": "Acupuncture in Hudson Valley, NY",
+    "title": "Acupuncture in Hudson Valley, NY | Kingsfoil Acupuncture",
+    "schema": [
+      "LocalBusiness",
+      "Service",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.9,
+    "description": "Expert acupuncture for back pain, anxiety, insomnia and stress relief in Hudson Valley, NY. Kingsfoil Acupuncture in Goshen serves regional patients.",
+    "canonicalUrl": "/en/acupuncture-hudson-valley-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture in Hudson Valley, NY",
+    "intro": "Kingsfoil Acupuncture provides regional acupuncture care for Hudson Valley patients from our Goshen clinic. Instead of using a one-size-fits-all protocol, we begin with a complete intake that reviews symptom patterns, sleep quality, stress load, recovery history, and day-to-day triggers. That evaluation helps us prioritize the right treatment sequence, whether you need pain-focused support, nervous system regulation, sleep restoration, or whole-body maintenance care. Our goal is practical: help you feel better in daily life, not only during the treatment hour.",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book Your First Visit",
+    "subheading": "Regional Acupuncture Care from Goshen for Hudson Valley Patients",
+    "trustItems": [
+      {
+        "label": "Years in Practice",
+        "value": "16+"
+      },
+      {
+        "label": "Patients Treated",
+        "value": "2000+"
+      },
+      {
+        "label": "Google Rating",
+        "value": "5.0★"
+      }
+    ]
+  },
+  "location": {
+    "nap": {
+      "zip": "10924",
+      "city": "Goshen",
+      "name": "Kingsfoil Acupuncture",
+      "email": "jenniferliang@gmail.com",
+      "phone": "(845)682-0809",
+      "state": "NY",
+      "address": "75 Main Street, Suite 1R"
+    },
+    "hours": [
+      {
+        "day": "Monday",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9:00 AM - 7:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM - 2:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "intro": "Our Goshen clinic serves patients throughout Hudson Valley and nearby Orange County communities who want structured, conservative, and personalized care. If you are comparing providers, contact us for a consultation to discuss goals, expected timeline, and the treatment approach that fits your case.",
+    "ctaHref": "/en/contact",
+    "heading": "Visit Kingsfoil Acupuncture in Goshen (Serving Hudson Valley)",
+    "ctaLabel": "Book Your Appointment",
+    "hoursLabel": "Hours",
+    "mapEmbedUrl": "https://www.google.com/maps?q=75%20Main%20Street%2C%20Suite%201R%2C%20Goshen%2C%20NY%2010924&output=embed"
+  },
+  "pageType": "seo-local-landing",
+  "services": {
+    "items": [
+      {
+        "name": "Acupuncture",
+        "description": "Precision point-based treatment used to reduce pain, calm stress response, improve circulation, and support recovery without relying on medication-first strategies. For Hudson Valley patients, we often combine this with staged planning so treatment intensity matches symptom severity and response."
+      },
+      {
+        "link": "/en/chinese-herbal-medicine-goshen-ny",
+        "name": "Chinese Herbal Medicine",
+        "description": "Customized herbal formulas selected by pattern diagnosis to support sleep, digestion, hormonal balance, and long-term recovery between office visits."
+      },
+      {
+        "link": "/en/cupping-therapy-goshen-ny",
+        "name": "Cupping Therapy",
+        "description": "Targeted soft-tissue decompression that helps release stubborn muscle tension, improve local blood flow, and support post-activity or post-work recovery."
+      },
+      {
+        "link": "/en/moxibustion-goshen-ny",
+        "name": "Moxibustion",
+        "description": "Gentle therapeutic heat used to warm cold or deficient patterns, improve comfort, and support circulation in patients with chronic fatigue or pain sensitivity."
+      },
+      {
+        "link": "/en/tui-na-massage-goshen-ny",
+        "name": "Tui Na",
+        "description": "Chinese therapeutic massage targeting meridians and acupressure points."
+      }
+    ],
+    "heading": "Acupuncture & TCM Services for Hudson Valley Patients"
+  },
+  "conditions": {
+    "intro": "Hudson Valley patients commonly visit us for musculoskeletal pain, stress-related symptoms, sleep disruption, and chronic tension that has not fully improved with short-term approaches. The pages below explain where acupuncture can fit into a practical care plan and how progress is tracked over time.",
+    "items": [
+      {
+        "name": "Back Pain",
+        "slug": "acupuncture-for-back-pain-hudson-valley-ny"
+      },
+      {
+        "name": "Anxiety & Stress",
+        "slug": "acupuncture-for-anxiety-hudson-valley-ny"
+      },
+      {
+        "name": "Insomnia",
+        "slug": "acupuncture-for-insomnia-goshen-ny"
+      },
+      {
+        "name": "Acupuncture Cost",
+        "slug": "acupuncture-cost-hudson-valley-ny"
+      },
+      {
+        "name": "Neck Pain",
+        "slug": "acupuncture-hudson-valley-ny"
+      },
+      {
+        "name": "Digestive Issues",
+        "slug": "acupuncture-hudson-valley-ny"
+      },
+      {
+        "name": "Headaches",
+        "slug": "acupuncture-hudson-valley-ny"
+      },
+      {
+        "name": "Fatigue",
+        "slug": "acupuncture-hudson-valley-ny"
+      }
+    ],
+    "heading": "What Conditions Can Acupuncture Help With in Hudson Valley?"
+  },
+  "whyChooseUs": {
+    "items": [
+      {
+        "body": "Every plan starts with a detailed intake and pattern assessment so treatment choices are based on your current presentation, not generic symptom labels.",
+        "title": "Clinical Evaluation First"
+      },
+      {
+        "body": "We define short-term and mid-term goals, then adjust frequency, modalities, and home-care steps as your function improves and flare-ups decrease.",
+        "title": "Progress-Focused Care Plans"
+      },
+      {
+        "body": "Hudson Valley patients receive clear scheduling guidance, transparent communication, and treatment pacing that fits real family and work demands.",
+        "title": "Regional Access with Personalized Care"
+      }
+    ],
+    "heading": "Why Hudson Valley Patients Choose Kingsfoil Acupuncture",
+    "testimonial": {
+      "quote": "I was looking for a provider I could trust from outside Goshen. The plan was clear, practical, and tailored to my schedule. Within a few weeks I noticed steadier pain control and better sleep.",
+      "attribution": "Hudson Valley Patient"
+    }
+  }
+}

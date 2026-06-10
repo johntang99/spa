@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#f1f8f1",
+      "100": "#dcf0dc",
+      "light": "#86c986",
+      "DEFAULT": "#4d7c0f",
+      "dark": "#365708"
+    },
+    "secondary": {
+      "50": "#fffbeb",
+      "light": "#fcd34d",
+      "DEFAULT": "#b45309",
+      "dark": "#8c4009"
+    },
+    "backdrop": {
+      "primary": "#f6fbf0",
+      "secondary": "#fffbeb"
+    }
+  },
+  "typography": {
+    "display": "3rem",
+    "heading": "2.25rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Nunito, system-ui, sans-serif",
+      "heading": "Nunito, system-ui, sans-serif",
+      "subheading": "Nunito, system-ui, sans-serif",
+      "body": "Open Sans, system-ui, sans-serif",
+      "small": "Open Sans, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "12px",
+    "shadow": "0 4px 16px rgba(77, 124, 15, 0.10)"
+  },
+  "layout": {
+    "heroVariant": "split",
+    "featureVariant": "grid",
+    "spacingDensity": "comfortable"
+  },
+  "_preset": {
+    "id": "warm-sage",
+    "name": "Warm Sage",
+    "category": "warm",
+    "description": "Earthy green with rounded UI and calm readable typography."
+  }
+}

@@ -1,0 +1,549 @@
+{
+  "cta": {
+    "title": "不确定我们是否适合帮助您？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "预约一次免费咨询"
+    },
+    "description": "安排一场免费咨询，和我们聊聊您的具体健康困扰",
+    "secondaryCta": {
+      "link": "tel:+15164664018",
+      "text": "来电咨询"
+    }
+  },
+  "hero": {
+    "title": "可调理的病症",
+    "variant": "split-photo-right",
+    "subtitle": "石刚医师在大颈以辨证为主，结合针灸、拔罐、艾灸与方剂，处理您关心的具体困扰——不堆砌空泛口号。",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/needles-sterile.jpg"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "icon": "Grid",
+      "name": "所有病症",
+      "description": "浏览全部病症"
+    },
+    {
+      "id": "pain-management",
+      "icon": "Activity",
+      "name": "疼痛管理",
+      "description": "久坐、搬抬、受凉后的急性发作与反复僵硬，先厘清是否需西医影像"
+    },
+    {
+      "id": "mental-health",
+      "icon": "Brain",
+      "name": "心理与情绪健康",
+      "description": "睡不沉、胸闷紧、脑子停不下来——与您原有身心科医嘱并行时最合适"
+    },
+    {
+      "id": "digestive",
+      "icon": "Apple",
+      "name": "消化系统健康",
+      "description": "肠躁、胀气、反酸等功能性问题，先排除肿瘤与溃疡等急症"
+    },
+    {
+      "id": "womens-health",
+      "icon": "Heart",
+      "name": "妇女健康",
+      "description": "月经、更年期、备孕调理，与妇产科/生殖中心沟通后再进行"
+    },
+    {
+      "id": "respiratory",
+      "icon": "Wind",
+      "name": "呼吸系统问题",
+      "description": "花粉季、久咳、胸闷——辅助缓解，不取代已规则使用的吸入药物"
+    },
+    {
+      "id": "immune-system",
+      "icon": "Shield",
+      "name": "免疫系统",
+      "description": "反复感冒、恢复慢──补卫气与调脾胃，配合疫苗与公卫建议"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "back-pain",
+      "icon": "Activity",
+      "link": "/zh/大颈针灸治腰痛",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/home/welcome-section.jpg",
+      "title": "腰背部疼痛",
+      "category": "pain-management",
+      "featured": true,
+      "symptoms": [
+        "下背部疼痛",
+        "上背部僵硬",
+        "坐骨神经痛",
+        "椎间盘突出疼痛",
+        "肌肉痉挛",
+        "活动受限"
+      ],
+      "description": "椎间盘压迫感、搬抬后急性扭伤，或久坐导致的下背部「断裂感」——先排除骨折与肿瘤后，再以针刺与体表松动处理气机。",
+      "tcmApproach": "膀胱、胆经沿线常见寒凝或瘀阻；深浅与艾灸是否并用，依触诊与舌脉决定，不公式化到底。",
+      "treatmentMethods": [
+        "针灸",
+        "拔罐疗法",
+        "推拿",
+        "中药",
+        "艾灸"
+      ]
+    },
+    {
+      "id": "neck-shoulder-pain",
+      "icon": "Activity",
+      "title": "颈部与肩部疼痛",
+      "category": "pain-management",
+      "symptoms": [
+        "颈部僵硬",
+        "肩部紧张",
+        "头痛",
+        "活动范围受限",
+        "肌肉结节",
+        "疼痛放射到手臂"
+      ],
+      "description": "低头族、长途开车、单肩背包——上交叉症候群的日常累积，常在这里先用推拿再决定是否加针。",
+      "tcmApproach": "阳明、太阳经区可刮痧轻开表邪；急性椎间盘水肿期不做猛扳，以免雪上加霜。",
+      "treatmentMethods": [
+        "针灸",
+        "刮痧",
+        "推拿",
+        "拔罐疗法",
+        "拉伸指导"
+      ]
+    },
+    {
+      "id": "arthritis",
+      "icon": "Activity",
+      "title": "关节炎与关节疼痛",
+      "category": "pain-management",
+      "symptoms": [
+        "关节疼痛和肿胀",
+        "晨僵",
+        "活动能力下降",
+        "炎症",
+        "天气变化时疼痛加剧"
+      ],
+      "description": "晨起僵、天变痛、膝关节水肿——在您的风湿免疫科追踪下，作辅助舒缓。",
+      "tcmApproach": "寒痹喜温灸，热痹忌盲目热补；痰瘀互结者兼顾化浊与通络。",
+      "treatmentMethods": [
+        "针灸",
+        "艾灸",
+        "中药",
+        "食疗",
+        "生活方式咨询"
+      ]
+    },
+    {
+      "id": "headaches-migraines",
+      "icon": "Activity",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/acupuncture-12.jpeg",
+      "title": "头痛及偏头痛",
+      "category": "pain-management",
+      "featured": true,
+      "symptoms": [
+        "反复头痛",
+        "偏头痛发作",
+        "太阳穴紧张",
+        "畏光",
+        "头痛伴恶心",
+        "颈部紧张"
+      ],
+      "description": "头皮紧、太阳穴脉跳、颈后连带痛——分辨是血虚、肝阳或颈源性再下针。",
+      "tcmApproach": "远端取穴＋局部松解并用；生活触发因子（咖啡因、睡眠债）会写进卫教，不靠神秘话术。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "刮痧",
+        "食疗",
+        "压力管理"
+      ]
+    },
+    {
+      "id": "anxiety",
+      "icon": "Brain",
+      "link": "/zh/大颈针灸治焦虑",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/anxiate-3.jpeg",
+      "title": "焦虑与恐慌症",
+      "category": "mental-health",
+      "featured": true,
+      "symptoms": [
+        "过度担忧",
+        "思绪飞驰",
+        "恐慌发作",
+        "坐立不安",
+        "注意力难以集中",
+        "身体紧张",
+        "睡眠问题"
+      ],
+      "description": "心慌、浅眠、脑中停不下剧本——若已在服用抗焦虑药，请勿自行停药，我们作辅助调理。",
+      "tcmApproach": "心肾不交、肝气郁结辨证不同；针刺以安神定志为主，呼吸节奏回家可复练。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "呼吸练习",
+        "生活方式咨询",
+        "饮食建议"
+      ]
+    },
+    {
+      "id": "depression",
+      "icon": "Brain",
+      "title": "抑郁与情绪低落",
+      "category": "mental-health",
+      "symptoms": [
+        "持续悲伤",
+        "失去兴趣",
+        "疲劳",
+        "睡眠改变",
+        "食欲改变",
+        "注意力难以集中",
+        "绝望感"
+      ],
+      "description": "情绪低落与体力塌方并存时，先确认甲状腺、贫血与精神科评估是否同步进行。",
+      "tcmApproach": "疏肝不伤正、养血不滋腻；若需心理师深度谈话，会明确建议转介。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "生活方式咨询",
+        "运动指导",
+        "食疗"
+      ]
+    },
+    {
+      "id": "insomnia",
+      "icon": "Brain",
+      "link": "/zh/大颈失眠针灸",
+      "title": "失眠与睡眠问题",
+      "category": "mental-health",
+      "symptoms": [
+        "难以入睡",
+        "夜间醒来",
+        "早醒",
+        "睡眠不解乏",
+        "白天疲劳",
+        "睡前思绪飞驰"
+      ],
+      "description": "翻来覆去、凌晨三点眼睛瞪大、睡很久仍累——辨「虚烦」与「胆怯」两条路线。",
+      "tcmApproach": "滋阴清热与交通心肾方剂不可混用；针灸并用傍晚收束作息的具体步骤，方剂从最小有效剂量试起。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "睡眠卫生指导",
+        "饮食建议",
+        "冥想技巧"
+      ]
+    },
+    {
+      "id": "stress",
+      "icon": "Brain",
+      "title": "压力过大与倦怠",
+      "category": "mental-health",
+      "symptoms": [
+        "感到不知所措",
+        "精疲力竭",
+        "易怒",
+        "注意力不集中",
+        "肌肉紧张",
+        "消化问题",
+        "睡眠问题"
+      ],
+      "description": "Deadline 轰炸、脑袋像浆糊、喝咖啡也救不了——先拆「肝郁」还是「脾虚」象。",
+      "tcmApproach": "边治边调整微习惯：十分钟步行、午休关通知，比空谈冥想口号管用。",
+      "treatmentMethods": [
+        "针灸",
+        "中药适应原",
+        "减压技巧",
+        "生活方式咨询",
+        "呼吸练习"
+      ]
+    },
+    {
+      "id": "ibs",
+      "icon": "Apple",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/blog/digestive-health.jpg",
+      "title": "肠易激综合征与消化问题",
+      "category": "digestive",
+      "featured": true,
+      "symptoms": [
+        "腹痛",
+        "腹胀",
+        "便秘或腹泻",
+        "胀气",
+        "痉挛",
+        "食物敏感"
+      ],
+      "description": "压力大就拉肚子或便秘交替——在肠胃内视镜正常的前提下再谈肝脾不调。",
+      "tcmApproach": "痛泻要方类思路兼顾情绪与运化；辛辣与手摇饮先减量，免得方剂白吃。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "食疗",
+        "压力管理",
+        "生活方式调整"
+      ]
+    },
+    {
+      "id": "acid-reflux",
+      "icon": "Apple",
+      "title": "胃酸倒流与胃食管反流病",
+      "category": "digestive",
+      "symptoms": [
+        "烧心",
+        "胃酸反流",
+        "胸部不适",
+        "吞咽困难",
+        "慢性咳嗽",
+        "声音嘶哑"
+      ],
+      "description": "针对烧心、胃酸倒流及胃食管反流病的自然调理。",
+      "tcmApproach": "这类反流问题多与胃气上逆有关，常可见热象或痰阻。我们的治疗重点是和降胃气、清解郁热，并帮助改善消化功能。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "饮食建议",
+        "生活方式调整",
+        "减压"
+      ]
+    },
+    {
+      "id": "constipation",
+      "icon": "Apple",
+      "title": "便秘问题",
+      "category": "digestive",
+      "symptoms": [
+        "排便不频繁",
+        "大便干硬",
+        "用力排便",
+        "排便不完全",
+        "腹部不适",
+        "腹胀"
+      ],
+      "description": "羊屎便、排便不干净、依赖软便药——分气滞、血少、阳不足，不一律泻下。",
+      "tcmApproach": "健脾润肠与通腑急攻路径相反；纤维与喝水量的实际克数会写进卫教。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "饮食纤维指导",
+        "腹部按摩",
+        "生活方式改变"
+      ]
+    },
+    {
+      "id": "fertility",
+      "icon": "Heart",
+      "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/fertility-2.jpg",
+      "title": "生育调理支持",
+      "category": "womens-health",
+      "featured": true,
+      "symptoms": [
+        "难以受孕",
+        "月经不规律",
+        "卵子质量差",
+        "精子数量低（男性）",
+        "荷尔蒙失衡",
+        "既往流产"
+      ],
+      "description": "周期排序、黄体支持、精虫参数——所有促排与取卵时程请以生殖中心为主。",
+      "tcmApproach": "冲任督带分阶段取穴；进入 IVF 刺激期针数与方剂会再保守。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "食疗",
+        "生活方式咨询",
+        "减压"
+      ]
+    },
+    {
+      "id": "menstrual-issues",
+      "icon": "Heart",
+      "title": "月经周期失调",
+      "category": "womens-health",
+      "symptoms": [
+        "痛经",
+        "月经不规律",
+        "月经量大",
+        "经前综合症症状",
+        "情绪波动",
+        "腹胀和痉挛"
+      ],
+      "description": "血瘀经痛、周期忽长忽短、经前爆痘——基础体温表有助看排卵品质。",
+      "tcmApproach": "温经与清热不可混汤；含川牛膝等活血药会再确认妊娠孕否。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "饮食建议",
+        "生活方式调整",
+        "压力管理"
+      ]
+    },
+    {
+      "id": "menopause",
+      "icon": "Heart",
+      "title": "更年期相关症状",
+      "category": "womens-health",
+      "symptoms": [
+        "潮热",
+        "盗汗",
+        "情绪波动",
+        "睡眠问题",
+        "阴道干燥",
+        "性欲低下",
+        "体重增加"
+      ],
+      "description": "热潮夜汗、情绪像云霄飞车——荷尔蒙检查与妇科追踪并行。",
+      "tcmApproach": "滋肾清肝与交通心肾轮替；潮红发作频率当成调方指标。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "食疗",
+        "生活方式咨询",
+        "减压"
+      ]
+    },
+    {
+      "id": "pcos",
+      "icon": "Heart",
+      "title": "多囊卵巢综合征",
+      "category": "womens-health",
+      "symptoms": [
+        "月经不规律或闭经",
+        "体重增加",
+        "痤疮",
+        "多毛",
+        "难以受孕",
+        "胰岛素抵抗"
+      ],
+      "description": "月经稀发、雄激素皮肤表现、胰岛素阻抗——生活减糖与针灸并重，不夸大捷径。",
+      "tcmApproach": "体胖多痰者运化痰，瘦而多郁者疏肝；周期第五天才开始猛活血。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "体重管理",
+        "饮食调整",
+        "生活方式改变"
+      ]
+    },
+    {
+      "id": "allergies",
+      "icon": "Wind",
+      "title": "过敏与花粉症",
+      "category": "respiratory",
+      "symptoms": [
+        "打喷嚏",
+        "流鼻涕或鼻塞",
+        "眼睛发痒",
+        "鼻后滴漏",
+        "鼻窦压力",
+        "疲劳"
+      ],
+      "description": "纳苏郡花粉季喷嚏、鼻塞到头痛——发作前两周扶正比发作后硬压有效。",
+      "tcmApproach": "补卫气与宣肺并行；鼻涕黄绿先排除感染，不硬扛。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "饮食建议",
+        "免疫支持",
+        "预防性治疗"
+      ]
+    },
+    {
+      "id": "asthma",
+      "icon": "Wind",
+      "title": "哮喘支持调理",
+      "category": "respiratory",
+      "symptoms": [
+        "喘息",
+        "呼吸急促",
+        "胸闷",
+        "咳嗽",
+        "呼吸困难",
+        "运动诱发的症状"
+      ],
+      "description": "喘鸣胸闷在急诊用药稳定后，再谈冬季巩固；急性发作请先救急。",
+      "tcmApproach": "缓解期补肾撷纳，发作期化痰宣肺，方剂大寒大热都避免过猛。",
+      "treatmentMethods": [
+        "针灸",
+        "中药配方",
+        "呼吸练习",
+        "食疗",
+        "生活方式调整"
+      ]
+    },
+    {
+      "id": "chronic-cough",
+      "icon": "Wind",
+      "title": "持续性慢性咳嗽",
+      "category": "respiratory",
+      "symptoms": [
+        "持续干咳",
+        "有痰咳嗽",
+        "喉咙刺激",
+        "夜间加重",
+        "说话时加重",
+        "病毒感染后咳嗽"
+      ],
+      "description": "喉痒干咳、痰黏难出、感冒后咳没完——胸片与百日咳筛检该做就做。",
+      "tcmApproach": "肺阴亏少痰与痰热壅肺用药南辕北辙；夜咳加重先问胃食道逆流。",
+      "treatmentMethods": [
+        "针灸",
+        "中药",
+        "饮食调整",
+        "喉咙舒缓疗法",
+        "生活方式调整"
+      ]
+    },
+    {
+      "id": "frequent-colds",
+      "icon": "Shield",
+      "title": "反复感冒与流感",
+      "category": "immune-system",
+      "symptoms": [
+        "容易感冒",
+        "恢复缓慢",
+        "反复感染",
+        "低能量",
+        "免疫反应弱",
+        "频繁喉咙痛"
+      ],
+      "description": "家里第一的「感冒王」、恢复永远比同事慢——不一定是「缺维他命」而已。",
+      "tcmApproach": "玉屏风类扶正与健脾助运并进；睡眠不足先修，别靠药硬扛。",
+      "treatmentMethods": [
+        "针灸",
+        "增强免疫中药",
+        "艾灸",
+        "食疗",
+        "生活方式建议"
+      ]
+    },
+    {
+      "id": "fatigue",
+      "icon": "Shield",
+      "title": "长期疲劳",
+      "category": "immune-system",
+      "symptoms": [
+        "持续精疲力竭",
+        "低能量",
+        "精神迷雾",
+        "耐力差",
+        "睡眠不解乏",
+        "难以完成日常任务"
+      ],
+      "description": "睡满八小时仍像没睡、喝咖啡也撑不住——先排除甲状腺、睡眠呼吸中止与忧郁。",
+      "tcmApproach": "脾阳不振与肾阳虚衰补法不同；过度艾灸恐助热，需再评估。",
+      "treatmentMethods": [
+        "针灸",
+        "中药补品",
+        "艾灸",
+        "食疗",
+        "休息和活动平衡"
+      ]
+    }
+  ],
+  "introduction": {
+    "note": "列表没有您的状况？请来电，很多问题仍可归入下列证型由医师评估。",
+    "text": "下列为大颈诊所临床最常遇见的「症状群」。列出代表可能适合中医介入，并非保证疗效；是否需要检查或转诊，当场会直说。",
+    "variant": "centered"
+  },
+  "layoutVariant": "category-detail-alternating"
+}

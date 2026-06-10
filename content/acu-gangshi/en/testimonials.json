@@ -1,0 +1,61 @@
+{
+  "showRatings": true,
+  "displayCount": 6,
+  "testimonials": [
+    {
+      "id": "t001",
+      "date": "2026-01-13",
+      "text": "After years of chronic back pain, Dr. Gang Shi's acupuncture treatments have given me my life back. His gentle approach and deep understanding of energy flow helped where nothing else could. I'm finally sleeping through the night again.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "language": "en",
+      "patientName": "Maria Rodriguez",
+      "serviceCategory": "pain-management"
+    },
+    {
+      "id": "t002",
+      "date": "2025-12-18",
+      "text": "Dr. Gang Shi's herbal formulas completely transformed my digestive issues and monthly cycle irregularities. His ability to speak both English and Chinese made me feel truly understood and comfortable throughout my treatment.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "language": "en",
+      "patientName": "Jennifer Chen",
+      "serviceCategory": "herbal-medicine"
+    },
+    {
+      "id": "t003",
+      "date": "2026-01-05",
+      "text": "The anxiety that plagued me for years has significantly diminished thanks to Dr. Gang Shi's holistic approach. His acupuncture sessions are deeply relaxing, and his lifestyle guidance has been invaluable for my overall wellbeing.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "language": "en",
+      "patientName": "Robert Thompson",
+      "serviceCategory": "acupuncture"
+    },
+    {
+      "id": "t004",
+      "date": "2025-11-02",
+      "text": "Cupping therapy with Dr. Gang Shi helped clear my respiratory congestion when conventional treatments failed. His knowledge of traditional techniques combined with genuine care makes every visit healing on multiple levels.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "language": "en",
+      "patientName": "Lisa Wang",
+      "serviceCategory": "cupping"
+    },
+    {
+      "id": "t005",
+      "date": "2025-09-23",
+      "text": "Dr. Gang Shi's Tuina massage and moxibustion treatments have strengthened my immune system remarkably. I rarely get sick anymore, and when I do, I recover much faster than before starting treatment.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "language": "en",
+      "patientName": "David Kim",
+      "serviceCategory": "massage"
+    }
+  ]
+}

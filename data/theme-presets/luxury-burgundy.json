@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#fdf2f4",
+      "100": "#fce7ea",
+      "light": "#e88a99",
+      "DEFAULT": "#7f1d1d",
+      "dark": "#5c1414"
+    },
+    "secondary": {
+      "50": "#fefce8",
+      "light": "#fde047",
+      "DEFAULT": "#ca8a04",
+      "dark": "#a16207"
+    },
+    "backdrop": {
+      "primary": "#fdf8f8",
+      "secondary": "#fefce8"
+    }
+  },
+  "typography": {
+    "display": "3.5rem",
+    "heading": "2.5rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Playfair Display, Georgia, serif",
+      "heading": "Playfair Display, Georgia, serif",
+      "subheading": "Lato, system-ui, sans-serif",
+      "body": "Lato, system-ui, sans-serif",
+      "small": "Lato, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "0px",
+    "shadow": "none"
+  },
+  "layout": {
+    "heroVariant": "split",
+    "featureVariant": "grid",
+    "spacingDensity": "spacious"
+  },
+  "_preset": {
+    "id": "luxury-burgundy",
+    "name": "Luxury Burgundy",
+    "category": "luxury",
+    "description": "Rich burgundy palette with formal serif heading style."
+  }
+}

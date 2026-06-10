@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#fef3ee",
+      "100": "#fde3d1",
+      "light": "#f4a57a",
+      "DEFAULT": "#c2510f",
+      "dark": "#9a3d08"
+    },
+    "secondary": {
+      "50": "#fdf4ff",
+      "light": "#e879f9",
+      "DEFAULT": "#a21caf",
+      "dark": "#701a75"
+    },
+    "backdrop": {
+      "primary": "#fff8f4",
+      "secondary": "#fdf4ff"
+    }
+  },
+  "typography": {
+    "display": "3rem",
+    "heading": "2.25rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Merriweather, Georgia, serif",
+      "heading": "Merriweather, Georgia, serif",
+      "subheading": "Source Sans Pro, system-ui, sans-serif",
+      "body": "Source Sans Pro, system-ui, sans-serif",
+      "small": "Source Sans Pro, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "8px",
+    "shadow": "0 4px 20px rgba(194, 81, 15, 0.10)"
+  },
+  "layout": {
+    "heroVariant": "fullbleed",
+    "featureVariant": "alternating",
+    "spacingDensity": "comfortable"
+  },
+  "_preset": {
+    "id": "warm-terracotta",
+    "name": "Warm Terracotta",
+    "category": "warm",
+    "description": "Warm terracotta tone with inviting serif-forward style."
+  }
+}

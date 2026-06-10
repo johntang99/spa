@@ -1,0 +1,275 @@
+{
+  "cta": {
+    "title": "Take the First Step Toward Natural, Whole-Body Wellness",
+    "variant": "centered",
+    "subtitle": "A consultation is a strong place to start when you’re ready to focus on your health. We’ll listen closely to what you want to achieve, review options that fit your situation, and build a care plan tailored to you.",
+    "primaryCta": {
+      "link": "/en/contact",
+      "text": "Schedule a Consultation"
+    },
+    "secondaryCta": {
+      "link": "tel:845-381-1106",
+      "text": "Call: 845-381-1106"
+    }
+  },
+  "faq": {
+    "faqs": [
+      {
+        "answer": "Many people describe acupuncture as relaxing and easy to tolerate, with minimal discomfort. The needles are extremely thin—much finer than injection needles—so you may feel only a quick, mild sensation during insertion, if you feel anything at all. After the needles are placed, it’s common to feel deeply relaxed, and some patients even drift off to sleep before the session ends.",
+        "question": "Does acupuncture hurt?"
+      },
+      {
+        "answer": "The right number of visits varies based on what you’re treating, how long it has been going on, and how you respond. Some acute concerns may start to improve in about 3–6 sessions, while longer-term issues often do best with 10–15 treatments or more. At your first appointment, we’ll outline a plan designed for you and refine it over time as we track your progress.",
+        "question": "How many acupuncture sessions are typically recommended?"
+      },
+      {
+        "answer": "When provided by a qualified, licensed practitioner, Chinese medicine is widely regarded as a safe approach to care. We use sterile, single-use needles for every treatment and maintain strict safety procedures throughout your visit. Chinese herbal medicine has been developed over thousands of years, and we obtain herbs only from reputable suppliers that follow high-quality testing standards. Side effects can happen, but they are uncommon and usually mild.",
+        "question": "Is Chinese medicine considered safe?"
+      },
+      {
+        "answer": "Yes—TCM is commonly used alongside Western medical care. Many patients add acupuncture to help with medication or procedure side effects, to support recovery, or to address symptoms that haven’t fully improved with conventional treatment alone. We recommend keeping your full healthcare team informed so your care remains coordinated.",
+        "question": "Can I use TCM while also receiving Western medical care?"
+      },
+      {
+        "answer": "Choose comfortable, loose clothing—items that can roll up easily are ideal so we can access areas like your arms, legs, and back. If you need one, a gown is available. We also ask that you skip perfume and other strong fragrances on the day of your visit, since some patients are sensitive to scents.",
+        "question": "What’s the best clothing to wear for an acupuncture visit?"
+      },
+      {
+        "answer": "We take most major insurance plans that include acupuncture benefits. If your plan requires self-submission, we can provide a detailed superbill for you to send to your insurer for possible reimbursement. It’s best to contact us ahead of time to confirm your specific coverage. If you’re paying out of pocket, we offer self-pay rates and package pricing options to help keep care within reach.",
+        "question": "Do you take insurance?"
+      },
+      {
+        "answer": "Plan to eat a light meal about one to two hours beforehand—arriving on an empty stomach isn’t recommended. On the day of treatment, try to limit alcohol and avoid too much caffeine. Wear comfortable clothes, and bring a list of any medications or supplements you use. Be prepared to review your health history, and feel free to bring any questions you’d like to discuss.",
+        "question": "How do I get ready for my first appointment?"
+      },
+      {
+        "answer": "It’s completely normal to feel uneasy about needles, and many people share that concern—yet patients are often surprised by how comfortable acupuncture feels. The needles are very fine, and insertion is typically painless. We’ll move at a pace that feels comfortable for you, talk you through what we’re doing, and can begin with fewer needles if that helps. If you prefer to avoid needles, we can also discuss options such as herbal medicine, cupping, and Tui Na massage.",
+        "question": "What if I’m nervous about acupuncture needles?"
+      }
+    ],
+    "title": "Frequently Asked Questions",
+    "variant": "accordion",
+    "subtitle": "Simple answers to common questions about our services, safety practices, and what to expect when you’re here"
+  },
+  "hero": {
+    "title": "Traditional Chinese Medicine (TCM) Treatments",
+    "variant": "split-photo-right",
+    "subtitle": "An inclusive selection of therapeutic options, customized to match your individual health needs",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/tcm-emotion-1.webp"
+  },
+  "overview": {
+    "title": "What Our Approach Can Help Support",
+    "variant": "centered",
+    "benefits": [
+      "Pain support with less dependence on medication",
+      "Natural support for stress and anxiety",
+      "Helping maintain healthy immune system function",
+      "Better energy and an increased sense of vitality",
+      "Support for hormonal balance and regulation",
+      "Better sleep quality",
+      "Digestive wellness and gut health support",
+      "Support during injury recovery and physical rehabilitation"
+    ],
+    "introduction": "At Dr. Jiang Clinic, we provide a broad selection of Traditional Chinese Medicine therapies, chosen and adapted to fit your specific concerns and wellness goals. Our care blends long-standing healing traditions with modern clinical insight, offering a natural, whole-person approach that focuses on potential root causes—not only the symptoms you’re noticing."
+  },
+  "trustBar": {
+    "items": [
+      {
+        "icon": "Award",
+        "title": "Licensed Practitioners",
+        "description": "Care guided by evidence-informed clinical practice"
+      },
+      {
+        "icon": "Users",
+        "title": "Plans Tailored to You",
+        "description": "Your treatment plan is designed around your needs and health goals"
+      },
+      {
+        "icon": "Shield",
+        "title": "Safe, Professional Care",
+        "description": "We follow consistent hygiene practices and professional standards every day"
+      }
+    ]
+  },
+  "legacyLabels": {
+    "servicePrefix": "Service",
+    "keyBenefitsTitle": "Highlights & Benefits",
+    "whatToExpectTitle": "What to Expect at Your Appointment"
+  },
+  "servicesList": {
+    "badge": "OUR SERVICES",
+    "items": [
+      {
+        "id": "acupuncture",
+        "icon": "Syringe",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/acupuncture-10.jpeg",
+        "order": 1,
+        "title": "Acupuncture Treatment",
+        "benefits": [
+          "A drug-free option for pain relief and pain management support",
+          "Reduced inflammation",
+          "Improved circulation",
+          "Helps promote balanced, healthy immune system function",
+          "Can help reduce feelings of stress and ease anxiety-related symptoms",
+          "Better sleep quality",
+          "Hormonal balance",
+          "Increased energy levels"
+        ],
+        "featured": true,
+        "whatToExpect": "After you get comfortable, your practitioner will place ultra-fine, hair-thin needles at specific points chosen for your needs. Most people describe the sensation as minimal or only mildly noticeable. You’ll then relax for about 20–30 minutes with the needles in place. Many patients report feeling deeply relaxed during this rest period, and some may even doze off.",
+        "fullDescription": "Acupuncture uses carefully placed needles along the body’s meridians to encourage smoother movement of Qi and blood and to support balance between Yin and Yang. **Scope of Application** Acute and chronic pain conditions (including neck, shoulder, back, and leg pain, headaches, and arthritis), internal medicine concerns (such as insomnia, gastrointestinal disorders, and hypertension), surgical and soft tissue issues (including soft tissue injuries and skin conditions), gynecological concerns (such as irregular menstruation and menopausal syndrome), pediatric conditions (including indigestion and low immunity), men's health (including prostate enlargement, impotence, premature ejaculation, and sexual dysfunction), and aesthetic TCM applications (including acne management, anti-aging, weight management, skin lifting, and edema reduction). **Precautions** Do not come in on an empty stomach, and avoid scheduling treatment immediately after a heavy meal. If you are pregnant or have severe heart disease or a bleeding disorder, use extra caution and discuss it with your practitioner. Tell your acupuncturist if you take any anti-platelet or anticoagulant medications. After treatment, stay warm, avoid cold drafts, and wait at least 4 hours before bathing.",
+        "shortDescription": "Acupuncture is a core service in our clinic, using very fine needles to support the body’s natural balance and its own healing response."
+      },
+      {
+        "id": "chinese-herbal-medicine",
+        "icon": "Leaf",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/chinese-herb-10.webp",
+        "order": 2,
+        "title": "Traditional Chinese Herbal Medicine",
+        "benefits": [
+          "Formulas are tailored to your constitution and individual health goals",
+          "Designed to work on underlying patterns, not just day-to-day symptoms",
+          "Often well tolerated, with minimal side effects for many patients",
+          "Pairs well with acupuncture and can strengthen an overall treatment plan",
+          "A helpful option for ongoing support with chronic and long-term concerns",
+          "Helps support immune system resilience and responsiveness",
+          "Promotes healthy function of the body’s internal organs",
+          "Encourages steady, long-term wellness and balance"
+        ],
+        "whatToExpect": "Your care begins with an in-depth intake and TCM evaluation to understand the whole picture. Based on that diagnosis, we create a customized herbal formula and walk you through exactly how to prepare and take it. Over time, we check in and refine the formula as needed so it continues to match your symptoms and progress.",
+        "fullDescription": "Chinese Herbal Medicine relies on carefully chosen herbal formulas, prescribed through TCM syndrome differentiation, to help bring the organs’ Yin, Yang, Qi, and blood into better balance. **Scope of Application** Internal medicine conditions (including stomach complaints, liver disease, and cardiovascular disease), gynecological concerns (such as menstrual disorders, infertility, and menopause), pediatric issues (including colds and indigestion), men's health (including kidney deficiency and impotence), recovery from chronic illness, and anti-aging and wellness support. **Precautions** Herbal formulas should be used under the guidance of a qualified TCM practitioner. If you are taking Western medications, let your practitioner know so the herbal prescription can be modified appropriately. Pregnant women and people with special health circumstances should follow their practitioner’s directions carefully.",
+        "shortDescription": "Individualized herbal formulas created to support the root of your concerns and to work alongside your body’s natural healing process."
+      },
+      {
+        "id": "cupping-therapy",
+        "icon": "Circle",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/cupping-10.jpg",
+        "order": 3,
+        "title": "Cupping Therapy Session",
+        "benefits": [
+          "Helps release stubborn, deeper muscle tightness",
+          "Supports circulation and healthy blood flow",
+          "Reduced inflammation",
+          "Pain relief",
+          "Can support recovery and healing after an injury",
+          "Respiratory support",
+          "Detoxification",
+          "Immune system boost"
+        ],
+        "whatToExpect": "Your practitioner places glass or silicone cups on areas that feel tight or sore and creates gentle suction. Most patients feel a strong pulling or lifting sensation rather than pain. The cups may stay in one spot for 5–15 minutes or be moved slowly along the skin. It’s common to see round marks afterward; these are expected and usually fade within a few days.",
+        "fullDescription": "Cupping therapy applies negative pressure so the cups adhere to the skin, helping expand small capillaries near the surface to encourage circulation, reduce stagnation, and support the release of wind and cold. **Scope of Application** Colds, coughs, asthma, rheumatic joint pain, and muscle tension in the neck, shoulders, and back arising from wind-cold pathogens. **Precautions** Do not use cupping over broken or inflamed skin. It is not appropriate for people with bleeding disorders, and pregnant women should avoid cupping over the abdomen and lower back. Extra caution is recommended for elderly patients. After your session, stay protected from cold exposure, avoid intense exercise, and wait before bathing to help prevent wind-cold from entering through open pores.",
+        "shortDescription": "Cupping therapy uses suction to help ease muscle tightness, encourage circulation, and support the body’s natural recovery process."
+      },
+      {
+        "id": "moxibustion",
+        "icon": "Flame",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/blog/moxibustion-2.jpeg",
+        "order": 4,
+        "title": "Moxibustion Therapy",
+        "benefits": [
+          "Supports and strengthens healthy immune function",
+          "Helps promote energy, stamina, and a greater sense of vitality",
+          "Improves circulation",
+          "Relieves cold-type pain",
+          "Encourages comfortable, healthy digestion",
+          "Turns breech babies",
+          "Warms cold extremities",
+          "Tonifies deficiency"
+        ],
+        "whatToExpect": "In a moxibustion session, your practitioner holds burning moxa near selected points to deliver steady, soothing warmth. Many people find the heat deeply relaxing—often described as feeling like gentle sunlight on the skin. You may also notice the herb’s earthy scent throughout the treatment, which some patients find calming.",
+        "fullDescription": "Moxibustion uses heat from burning moxa leaves to stimulate acupuncture points, warm the meridians, and help nourish vital energy. **Scope of Application** Deficiency-cold constitutions, menstrual cramps, chronic gastrointestinal conditions, rheumatic pain, asthma, and general fatigue or cold extremities. **Precautions** Preventing burns is essential, and treatment must be performed with care. Moxibustion is not suitable for people with high fever or with constitutions characterized by excess heat. Individuals with diabetic neuropathy should use extreme caution. Pregnant women should not receive moxibustion over the abdomen or sacral area.",
+        "shortDescription": "A warming therapy using dried mugwort to help nourish vital energy, support circulation, and ease internal cold."
+      },
+      {
+        "id": "tuina-massage",
+        "icon": "Hand",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/blog/acupuncture-pain.jpg",
+        "order": 5,
+        "title": "Tui Na Therapeutic Medical Massage",
+        "benefits": [
+          "Helps reduce muscle soreness and relieve ongoing tightness",
+          "Improved joint mobility",
+          "Encourages improved posture and better structural alignment",
+          "Enhanced circulation",
+          "Stress reduction",
+          "Injury recovery support",
+          "May reduce how often headaches and migraines occur and how intense they feel",
+          "Digestive improvement"
+        ],
+        "whatToExpect": "Depending on your needs and constitution, Tui Na may be slow and relaxing or more active and invigorating. You’ll stay fully clothed while your practitioner uses hands and fingers—and at times elbows or feet—to apply a range of techniques. Most appointments run about 30 to 60 minutes.",
+        "fullDescription": "Tui Na uses specialized hands-on techniques along the meridians, muscles, and joints to help regulate Qi and blood, ease tendon tightness, and improve circulation where support is needed. **Scope of Application** Neck, shoulder, back, and leg pain, muscle strain, sports injuries, indigestion, and pediatric conditions such as cough or constipation. **Precautions** Avoid Tui Na over open wounds, active skin infections, or areas affected by bone tumors. Deep pressure on the abdomen is not appropriate during pregnancy. For elderly patients or anyone with osteoporosis, only gentle methods should be used.",
+        "shortDescription": "Tui Na Medical Massage is a traditional Chinese medicine approach that combines acupressure, guided stretching, and joint mobilization in one integrated session."
+      },
+      {
+        "id": "gua-sha",
+        "icon": "Shield",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/blog/gua-sha-22.png",
+        "order": 6,
+        "title": "Gua Sha Therapy",
+        "benefits": [
+          "Rapid pain relief",
+          "Reduced muscle tension",
+          "Decreased inflammation",
+          "Supports healthy immune system function",
+          "Enhanced circulation",
+          "Can support a smoother recovery process after illness",
+          "Relief from headaches",
+          "Helps release built-up tightness in the neck and shoulders"
+        ],
+        "whatToExpect": "Your practitioner will start by applying oil to the area being treated. Using a smooth-edged tool, they’ll work over tight spots with firm strokes in a downward direction. You’ll feel a distinct scraping pressure that may be intense at first, but many people find it manageable as the session continues. It’s also common for red or purple marks to show up during treatment; these usually fade naturally within about 2 to 7 days.",
+        "fullDescription": "Gua Sha is a technique that uses a smooth tool to create gentle friction along the skin. This approach is used to encourage circulation, help open the meridians, and move areas of stagnation toward the surface—supporting the body’s natural ability to clear pathogens. **Scope of Application** Gua Sha is often used when addressing colds, fever, sore throat, heatstroke, hypertension, and tension or stiffness in the neck, shoulders, and back. **Precautions** Do not perform Gua Sha over broken skin or moles. This therapy is not suitable for people with bleeding disorders, and it should be avoided on the abdomen during pregnancy. After treatment, keep the area warm and covered, and avoid cold exposure or bathing right away.",
+        "shortDescription": "A traditional scraping technique used to ease muscle tightness, promote healthy circulation, and support the body’s natural inflammatory response."
+      },
+      {
+        "id": "dietary-therapy",
+        "icon": "Apple",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/chinese-dietary-10.jpg",
+        "order": 7,
+        "title": "Herbal Plaster (Topical) Therapy",
+        "benefits": [],
+        "whatToExpect": "",
+        "fullDescription": "In Herbal Plaster Therapy, a custom-prepared herbal paste or powder is placed directly on specific acupoints or areas of discomfort. The herbs are absorbed through the skin, offering localized support as part of the healing process. **Scope of Application** This method is commonly used for rheumatic joint pain, ongoing waist and leg pain, asthma, rhinitis, pediatric cough conditions (including San-Fu-Tie), and various skin concerns. **Precautions** Take extra care if you have sensitive skin. Do not apply over broken skin or open wounds. If you experience notable redness, swelling, or itching, remove the plaster and stop use right away.",
+        "shortDescription": "Herbal applications placed on targeted points or painful areas to provide topical support, guided by Traditional Chinese Medicine."
+      },
+      {
+        "id": "lifestyle-counseling",
+        "icon": "Heart",
+        "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/tcm-network/services/gua-sha.jpg",
+        "order": 8,
+        "title": "Lifestyle & Wellness Coaching",
+        "benefits": [
+          "Support for lasting, real-world health improvements",
+          "Better sleep quality",
+          "Practical tools you can use daily to manage stress",
+          "More consistent energy and a stronger sense of vitality",
+          "Emotional balance",
+          "Helpful habits that may reduce the likelihood of future illness",
+          "Better alignment and support across your overall treatment plan",
+          "Personalized, long-term strategies to help you stay well"
+        ],
+        "whatToExpect": "As part of your care, we’ll review key parts of your day-to-day routine and share clear, doable recommendations you can start using right away. Depending on your needs, we may cover breathing practices, meditation, sleep-supportive habits, seasonal adjustments, and stress approaches that fit your life. Our goal is to support you step by step, so the changes you make feel realistic and sustainable.",
+        "fullDescription": "Long-term wellbeing is shaped by what you do between appointments—not only what happens in the clinic. Our lifestyle counseling looks at the bigger picture of your health, including sleep, movement, stress patterns, and the everyday habits that influence how you feel. Recommendations are based on TCM principles and adapted to your individual constitution and current circumstances.",
+        "shortDescription": "Whole-person support for sleep, movement, stress, and daily routines—coordinated to help you build sustainable, long-term wellness."
+      }
+    ],
+    "title": "Traditional Chinese Medicine Services We Provide",
+    "variant": "detail-alternating",
+    "subtitle": "A wide range of therapeutic options—each one tailored to your needs and goals"
+  },
+  "relatedReading": {
+    "title": "Keep Reading",
+    "subtitle": "Explore articles and guides that connect with the services on this page.",
+    "viewAllText": "See all articles",
+    "preferredSlugs": [
+      "acupuncture-pain-relief-science",
+      "chinese-herbal-formulas",
+      "first-visit-acupuncture-guide"
+    ],
+    "defaultCategory": "Guide"
+  },
+  "heroPlaceholder": {
+    "emoji": "🧘",
+    "title": "Our Services",
+    "subtitle": "Personalized care plans designed around your health goals and individual needs"
+  }
+}

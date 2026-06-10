@@ -1,0 +1,83 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约就诊",
+    "backLink": {
+      "href": "/zh/acupuncture-middletown-ny",
+      "text": "了解更多Middletown针灸服务"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "中草药治疗主要通过内服药物调理身体内在机能，适合慢性疾病和体质调理。针灸则通过刺激穴位疏通经络，起效较快，适合急性症状和疼痛治疗。两者可以结合使用，相得益彰，提高整体疗效。",
+        "question": "中草药治疗与针灸治疗有什么区别？"
+      },
+      {
+        "answer": "大多数患者服用中草药后感觉良好，可能会有轻微的药味。初期可能出现排毒反应，如大便次数增加或轻微腹胀，这是正常现象。如有任何不适，请及时联系Dr. Huang医师调整用药。草药治疗过程温和，副作用极少。",
+        "question": "服用中草药会有什么感觉吗？"
+      },
+      {
+        "answer": "中草药治疗的起效时间因人而异，通常急性症状1-2周内可见改善，慢性疾病需要4-8周或更长时间。Dr. Huang医师会根据您的具体情况制定治疗计划，并在治疗过程中定期评估疗效，适时调整处方以确保最佳治疗效果。",
+        "question": "中草药治疗需要多长时间见效？"
+      },
+      {
+        "answer": "当然可以。在Dr. Huang Clinic，我们经常将中草药治疗与针灸、推拿、拔罐等其他中医疗法结合使用。这种综合治疗方法能够发挥各种疗法的优势，提高整体疗效。Dr. Huang医师会根据您的具体情况设计最适合的综合治疗方案。",
+        "question": "中草药治疗可以与其他中医疗法结合吗？"
+      }
+    ],
+    "heading": "Chinese Herbal Medicine — 常见问题"
+  },
+  "seo": {
+    "h1": "Middletown, NY中草药治疗 - Dr. Huang Clinic专业中医药服务",
+    "title": "Dr. Huang Clinic Middletown NY中草药治疗服务",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Dr. Huang Clinic位于Middletown, NY，专业提供传统中草药治疗服务。经验丰富的Dr. Huang医师采用纯天然草药配方，针对各种慢性疾病和亚健康状态提供个性化治疗方案。",
+    "canonicalUrl": "/zh/chinese-herbal-medicine-middletown-ny"
+  },
+  "hero": {
+    "h1": "Middletown, NY中草药治疗 - Dr. Huang Clinic专业中医药服务",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "预约Chinese Herbal Medicine咨询",
+    "description": "Dr. Huang Clinic位于Middletown, NY，由经验丰富的Dr. Huang医师主诊，专注于传统中草药治疗。我们采用纯天然、无副作用的中草药配方，结合现代科学诊断方法，为每位患者量身定制个性化治疗方案。无论是慢性疾病调理还是亚健康状态改善，我们的中草药治疗都能帮助您重获健康活力，实现身心平衡。"
+  },
+  "service": "chinese-herbal-medicine",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "中草药治疗是传统中医学的核心组成部分，拥有数千年的临床应用历史。Dr. Huang医师在Middletown, NY的诊所中，运用丰富的中医理论知识和临床经验，精心挑选优质天然草药，根据患者的具体症状、体质特点和病情发展阶段，制定个性化的草药配方。中草药治疗注重整体调理，通过调和阴阳、补益气血、疏通经络等方式，从根本上改善身体机能，增强自愈能力。与西医治疗相比，中草药治疗副作用小，疗效持久，特别适合慢性疾病的调理和预防保健。",
+    "heading": "什么是Chinese Herbal Medicine？"
+  },
+  "howItWorks": {
+    "body": "在Dr. Huang Clinic，中草药治疗流程始于详细的中医诊断，包括望、闻、问、切四诊合参。Dr. Huang医师会仔细了解您的症状、病史、生活习惯和体质特点，然后根据中医辨证论治的原则，为您开具个性化草药处方。我们选用的草药均来自可靠供应商，确保质量和安全性。患者按照医师指导正确煎煮和服用草药，通常需要定期复诊以调整处方。整个治疗过程中，我们会密切监测疗效，适时调整用药，确保达到最佳治疗效果。",
+    "heading": "在Dr. Huang Clinic体验Chinese Herbal Medicine"
+  },
+  "whatItTreats": {
+    "heading": "Chinese Herbal Medicine可以治疗哪些病症",
+    "conditions": [
+      {
+        "name": "消化系统疾病"
+      },
+      {
+        "name": "呼吸系统疾病"
+      },
+      {
+        "name": "失眠焦虑"
+      },
+      {
+        "name": "妇科疾病"
+      },
+      {
+        "name": "慢性疲劳综合征"
+      },
+      {
+        "name": "免疫力低下"
+      }
+    ]
+  }
+}

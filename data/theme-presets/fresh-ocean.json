@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#f0f9ff",
+      "100": "#e0f2fe",
+      "light": "#7dd3fc",
+      "DEFAULT": "#0369a1",
+      "dark": "#075985"
+    },
+    "secondary": {
+      "50": "#fff7ed",
+      "light": "#fdba74",
+      "DEFAULT": "#ea580c",
+      "dark": "#c2410c"
+    },
+    "backdrop": {
+      "primary": "#f0f9ff",
+      "secondary": "#fff7ed"
+    }
+  },
+  "typography": {
+    "display": "3rem",
+    "heading": "2.25rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Poppins, system-ui, sans-serif",
+      "heading": "Poppins, system-ui, sans-serif",
+      "subheading": "Poppins, system-ui, sans-serif",
+      "body": "Inter, system-ui, sans-serif",
+      "small": "Inter, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "10px",
+    "shadow": "0 4px 20px rgba(3, 105, 161, 0.10)"
+  },
+  "layout": {
+    "heroVariant": "split",
+    "featureVariant": "grid",
+    "spacingDensity": "comfortable"
+  },
+  "_preset": {
+    "id": "fresh-ocean",
+    "name": "Fresh Ocean",
+    "category": "fresh",
+    "description": "Clean blue-forward style with approachable modern type."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "business": {
+    "name": "Flushing Acupuncture & TCM",
+    "ownerName": "Dr. Jiang",
+    "credentials": "L.Ac., DAOM",
+    "languages": ["English", "Chinese", "Mandarin"],
+    "foundedYear": "15+"
+  },
+  "location": {
+    "city": "Flushing",
+    "state": "NY",
+    "citySlug": "flushing",
+    "stateLower": "ny",
+    "address": "123 Main Street",
+    "zip": "11354",
+    "phone": "(718) 555-0000"
+  },
+  "services": {
+    "primary": "acupuncture",
+    "modalities": [
+      { "name": "Chinese Herbal Medicine", "slug": "chinese-herbal-medicine" },
+      { "name": "Cupping Therapy", "slug": "cupping-therapy" },
+      { "name": "Moxibustion", "slug": "moxibustion" },
+      { "name": "Tui Na Massage", "slug": "tui-na-massage" }
+    ]
+  },
+  "seo": {
+    "primaryService": "acupuncture",
+    "specialties": ["back pain", "insomnia", "fertility", "anxiety"],
+    "serviceAreaCities": ["Flushing", "Queens", "Forest Hills", "Jamaica"]
+  }
+}

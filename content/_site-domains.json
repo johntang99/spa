@@ -1,0 +1,34 @@
+{
+  "domains": [
+    {
+      "siteId": "dr-huang-clinic",
+      "domain": "drhuangclinic.com",
+      "environment": "prod",
+      "enabled": true
+    },
+    {
+      "siteId": "acu-flushing",
+      "domain": "acupunctureflushing.com",
+      "environment": "prod",
+      "enabled": true
+    },
+    {
+      "siteId": "acu-flushing",
+      "domain": "acu-flushing.local",
+      "environment": "dev",
+      "enabled": true
+    },
+    {
+      "siteId": "acu-gangshi",
+      "domain": "shiacupuncture.com",
+      "environment": "prod",
+      "enabled": true
+    },
+    {
+      "siteId": "acu-gangshi",
+      "domain": "gangshi.local",
+      "environment": "dev",
+      "enabled": true
+    }
+  ]
+}

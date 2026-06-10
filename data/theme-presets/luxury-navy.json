@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#eff6ff",
+      "100": "#dbeafe",
+      "light": "#93c5fd",
+      "DEFAULT": "#1e3a8a",
+      "dark": "#1e2d6e"
+    },
+    "secondary": {
+      "50": "#fef2f2",
+      "light": "#fca5a5",
+      "DEFAULT": "#dc2626",
+      "dark": "#b91c1c"
+    },
+    "backdrop": {
+      "primary": "#f8faff",
+      "secondary": "#fef2f2"
+    }
+  },
+  "typography": {
+    "display": "3.5rem",
+    "heading": "2.5rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Cormorant Garamond, Georgia, serif",
+      "heading": "Cormorant Garamond, Georgia, serif",
+      "subheading": "Inter, system-ui, sans-serif",
+      "body": "Inter, system-ui, sans-serif",
+      "small": "Inter, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "2px",
+    "shadow": "0 8px 40px rgba(0, 0, 0, 0.12)"
+  },
+  "layout": {
+    "heroVariant": "fullbleed",
+    "featureVariant": "alternating",
+    "spacingDensity": "spacious"
+  },
+  "_preset": {
+    "id": "luxury-navy",
+    "name": "Luxury Navy",
+    "category": "luxury",
+    "description": "Deep navy with sharp edges and elegant serif typography."
+  }
+}

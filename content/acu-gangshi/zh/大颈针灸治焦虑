@@ -1,0 +1,76 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约就诊"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "焦虑调理通常需要8-12次疗程。轻度焦虑可能6-8次见效，慢性或反复发作情况则可能需要更长时间。",
+        "question": "针灸治疗焦虑需要多少次？"
+      },
+      {
+        "answer": "针灸可协助降低恐慌发作的频率与强度。建议在发作间歇期持续治疗，整体效果通常更稳定。",
+        "question": "针灸能帮助恐慌发作吗？"
+      },
+      {
+        "answer": "针灸可以与抗焦虑药物并行使用。请主动告知目前用药，我们会配合您的整体医疗计划调整疗程。",
+        "question": "针灸可以和抗焦虑药同时使用吗？"
+      },
+      {
+        "answer": "多数患者在治疗时会感到逐渐放松和平静，进针感通常轻微。许多人在疗程中会有想睡或进入深度放松的感受。",
+        "question": "焦虑患者做针灸是什么感觉？"
+      }
+    ],
+    "heading": "焦虑针灸 — 常见问题"
+  },
+  "seo": {
+    "h1": "大颈针灸治焦虑",
+    "title": "大颈针灸治焦虑｜Gang Shi Acupuncture",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "大颈（Great Neck）专业针灸调理焦虑与压力症状。石刚医师经验丰富，帮助缓解紧张、心悸与睡眠问题，天然无成瘾性。",
+    "canonicalUrl": "/zh/大颈针灸治焦虑"
+  },
+  "hero": {
+    "h1": "大颈针灸治焦虑",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "预约咨询",
+    "openingParagraph": "焦虑与压力问题常伴随失眠、心悸、胸闷与情绪起伏。石刚医师在Great Neck透过中医辨证与针灸调理，协助患者逐步恢复身心稳定，提升日常生活品质。"
+  },
+  "pageType": "seo-condition",
+  "condition": "anxiety",
+  "howItWorks": {
+    "body": "中医认为焦虑常与心神不宁、肝气郁结等失衡相关。针灸透过刺激特定穴位，有助于疏肝解郁、安神定志。现代研究也指出，针灸可影响与情绪调节相关的神经传导物质。治疗时我们会依症状表现和体质做个人化调整。",
+    "heading": "大颈针灸治焦虑的原理"
+  },
+  "testimonial": {
+    "heading": "Great Neck患者的真实回馈"
+  },
+  "whatToExpect": {
+    "body": "初诊会评估症状频率、诱发因素与生活压力来源。疗程约30-45分钟，治疗过程以舒缓放松为主。通常在3-4次后，焦虑与睡眠问题会逐步改善。",
+    "heading": "Gang Shi Acupuncture治疗流程"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "大颈针灸治腰痛",
+        "label": "针灸治疗腰痛"
+      },
+      {
+        "slug": "大颈失眠针灸",
+        "label": "针灸治疗失眠"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "助孕针灸"
+      }
+    ],
+    "heading": "Gang Shi Acupuncture治疗的其他病症"
+  }
+}

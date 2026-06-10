@@ -1,0 +1,179 @@
+{
+  "cta": {
+    "title": "准备开始您的康复之旅？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "预约咨询"
+    },
+    "description": "安排您的初次咨询，讨论您的健康目标，并了解中医如何帮助您恢复到最佳状态。",
+    "secondaryCta": {
+      "link": "tel:+15164664018",
+      "text": "今天致电我们"
+    }
+  },
+  "hero": {
+    "title": "认识Dr. Gang Shi",
+    "variant": "centered",
+    "subtitle": "致力于通过传统中医为您的健康和保健服务",
+    "description": "以历久弥新的智慧与个性化关怀，陪伴您的康复之路。",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/dr-huang-lecture-20.png"
+  },
+  "clinic": {
+    "title": "关于我们的诊所",
+    "values": [
+      {
+        "icon": "Heart",
+        "title": "富有同情心的护理",
+        "description": "我们以尊重、同情和对其福祉的真诚关怀对待每位患者。"
+      },
+      {
+        "icon": "Award",
+        "title": "临床卓越",
+        "description": "我们保持最高的实践标准，使用优质草药和无菌技术。"
+      },
+      {
+        "icon": "Users",
+        "title": "以患者为中心",
+        "description": "您的需求、关切和目标是我们所做一切的核心。"
+      },
+      {
+        "icon": "Leaf",
+        "title": "自然愈合",
+        "description": "我们相信支持身体自我愈合的自然能力。"
+      }
+    ],
+    "variant": "split",
+    "features": [
+      "无障碍通道",
+      "停车便利",
+      "多语言服务（英语、中文）",
+      "接受新患者",
+      "干净、现代的治疗室",
+      "宁静、舒缓的环境"
+    ],
+    "description": [
+      "石刚医师诊所（Gang Shi Acupuncture）成立于1994年，使命简单：为大颈（Great Neck）与纽约地区社区提供便捷、高品质的传统中医护理。",
+      "从一个小诊所开始，已经发展成为一个值得信赖的健康中心，帮助1,000多名患者自然实现更好的健康。"
+    ],
+    "environment": "我们的诊所提供宁静、温馨的环境，旨在促进放松和愈合。从您进入的那一刻起，您就会感受到不同——宁静的色彩、舒适的治疗室和温暖、友好的氛围让患者感到轻松自在。"
+  },
+  "journey": {
+    "story": "Gang Shi Acupuncture was founded in 1994 with a simple yet profound mission: to bring the ancient wisdom of Traditional Chinese Medicine to the Great Neck community. What began as a small practice has grown into a trusted healing sanctuary where East meets West, offering hope and restoration to countless individuals seeking natural alternatives to their health challenges.\n\nFor thirty years, our clinic has remained rooted in the timeless principles of TCM while adapting to serve the diverse needs of Long Island families. We've witnessed remarkable transformations—from chronic pain sufferers finding relief through acupuncture to anxious patients discovering inner peace through our holistic approach. Each success story strengthens our commitment to preserving these ancient healing arts.\n\nToday, Gang Shi Acupuncture stands as a beacon of authentic traditional medicine in Great Neck, where every patient receives personalized care that honors both their unique constitution and the profound healing wisdom passed down through generations of Chinese medicine masters.",
+    "title": "我的中医之路",
+    "variant": "prose"
+  },
+  "profile": {
+    "bio": "Dr. Gang Shi's journey into Traditional Chinese Medicine began over three decades ago, driven by a deep reverence for the profound healing wisdom of his ancestors. After earning his Master of Science in Traditional Chinese Medicine from the American College of Traditional Chinese Medicine in San Francisco, he became board-certified by the National Certification Commission for Acupuncture and Oriental Medicine (NCCAOM), establishing himself as a trusted practitioner in the field.\n\nWith 32 years of clinical experience, Dr. Gang Shi has developed particular expertise in treating complex conditions including chronic pain management, anxiety and panic disorders, women's health issues, respiratory conditions, and immune system imbalances. His approach seamlessly weaves together multiple modalities—acupuncture, Chinese herbal medicine, cupping, moxibustion, and Tuina massage—creating individualized treatment protocols that address not just symptoms, but the root energetic imbalances within each patient.\n\nDr. Gang Shi believes that true healing occurs when we work in harmony with the body's innate wisdom rather than against it. Fluent in both English and Chinese, he serves as a bridge between ancient Eastern healing traditions and modern wellness needs, guiding each patient toward optimal health through the gentle yet powerful principles of qi cultivation, meridian balance, and constitutional harmony.",
+    "name": "Dr. Gang Shi",
+    "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-gangshi/onboarding-overrides/1773091212756-b489bbebcad7eea57f3cbf9b5cbb0eea-jpg.avif",
+    "quote": "The body holds infinite wisdom to heal itself when we simply provide the right conditions for balance to flourish.",
+    "title": "L.Ac., NCCAOM",
+    "variant": "split",
+    "signature": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/signature.png"
+  },
+  "philosophy": {
+    "title": "治疗理念",
+    "variant": "cards",
+    "principles": [
+      {
+        "title": "治疗整个人",
+        "description": "中医认识到身体症状通常与情绪、精神和心灵因素相关。石刚医师从整体著眼，关注健康的各个面向，而不仅仅是孤立的症状。"
+      },
+      {
+        "title": "找到根本原因",
+        "description": "治疗不仅仅是抑制症状，而是专注于识别和解决造成疾病的潜在失衡。这种方法带来持久的结果。"
+      },
+      {
+        "title": "个性化护理",
+        "description": "没有两个患者是相同的。每个治疗计划都是根据您独特的体质、健康史和当前状况精心定制的。"
+      },
+      {
+        "title": "患者教育",
+        "description": "了解您的身体和状况使您能够在治疗中发挥积极作用。石刚医师会花时间用清晰、易懂的说明解释您的诊断与治疗。"
+      },
+      {
+        "title": "与西医结合",
+        "description": "中医可以与传统医疗护理完美配合。石刚医师会与其他医疗保健提供者合作，确保全面、协调的治疗。"
+      },
+      {
+        "title": "预防和保健",
+        "description": "最好的医学是在疾病发生前预防它。治疗包括饮食、生活方式和自我保健实践的指导，以保持长期健康。"
+      }
+    ],
+    "introduction": "石刚医师的治疗方法植根于传统中医的基本原则，同时融合现代临床理解。"
+  },
+  "credentials": {
+    "items": [
+      {
+        "icon": "Award",
+        "year": "",
+        "location": "纽约",
+        "credential": "NCBAHM",
+        "institution": "ACTCM"
+      }
+    ],
+    "title": "教育和资质",
+    "variant": "list"
+  },
+  "affiliations": {
+    "title": "专业会员资格和附属机构",
+    "variant": "compact",
+    "organizations": [
+      {
+        "name": "NCCAOM",
+        "role": "Member"
+      }
+    ]
+  },
+  "specializations": {
+    "areas": [
+      {
+        "icon": "Activity",
+        "title": "Pain Management",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Mental Health",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Women's Health",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Anxiety & Panic Disorders",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Respiratory Issues",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Immune System",
+        "description": ""
+      }
+    ],
+    "title": "专业领域",
+    "variant": "grid-2",
+    "description": "通过多年的临床实践和继续教育，石刚医师在几个关键领域发展了特殊的专业知识："
+  },
+  "continuingEducation": {
+    "items": [
+      "高级运动医学针灸认证（2019年）",
+      "生育和生殖健康专业化（2016年）",
+      "与 Heiner Fruehauf 博士的经典中药研讨会",
+      "每年参加国家中医会议",
+      "与当地中医执业者的定期学习小组",
+      "每年 30+ 小时的继续教育（要求：每 3 年 30 小时）"
+    ],
+    "title": "继续教育和培训",
+    "variant": "compact",
+    "description": "石刚医师积极参与中医社区，并定期寻求高级培训："
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "brand": {
+    "logoText": "BIZ",
+    "name": "Business Name",
+    "description": "以高品质、专业的服务支持客户需求。"
+  },
+  "quickLinks": [
+    {
+      "text": "关于我们",
+      "url": "/zh/about"
+    },
+    {
+      "text": "服务项目",
+      "url": "/zh/services"
+    },
+    {
+      "text": "治疗病症",
+      "url": "/zh/conditions"
+    },
+    {
+      "text": "案例研究",
+      "url": "/zh/case-studies"
+    },
+    {
+      "text": "新用户指南",
+      "url": "/zh/new-patients"
+    },
+    {
+      "text": "博客",
+      "url": "/zh/blog"
+    },
+    {
+      "text": "联系我们",
+      "url": "/zh/contact"
+    }
+  ],
+  "services": [
+    {
+      "text": "特色服务",
+      "url": "/zh/services"
+    },
+    {
+      "text": "方案与套餐",
+      "url": "/zh/services"
+    },
+    {
+      "text": "服务流程",
+      "url": "/zh/services"
+    },
+    {
+      "text": "支持与帮助",
+      "url": "/zh/contact"
+    }
+  ],
+  "contact": {
+    "addressLines": [
+      "地址第一行",
+      "城市, 省/州 邮编"
+    ],
+    "phone": "(000) 000-0000",
+    "phoneLink": "tel:+10000000000",
+    "email": "info@example.com",
+    "emailLink": "mailto:info@example.com"
+  },
+  "hours": [
+    "Mon-Fri: 9:00 AM - 6:00 PM",
+    "Sat: 10:00 AM - 2:00 PM"
+  ],
+  "legalLinks": [
+    {
+      "text": "隐私政策",
+      "url": "/zh/privacy"
+    },
+    {
+      "text": "服务条款",
+      "url": "/zh/terms"
+    }
+  ],
+  "copyright": "© {year} Business Name. 版权所有。"
+}

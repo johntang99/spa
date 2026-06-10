@@ -1,0 +1,47 @@
+{
+  "home": {
+    "title": "Kingsfoil Acupuncture | Acupuncturist in Goshen, NY",
+    "description": "Professional Goshen acupuncture and Chinese medicine services. Specializing in herbal therapy, cupping, and tuina massage. Schedule your consultation!"
+  },
+  "pages": {
+    "blog": {
+      "title": "TCM & Wellness Blog | Kingsfoil Acupuncture",
+      "description": "Expert insights on traditional Chinese medicine, acupuncture benefits, and wellness tips from Kingsfoil Acupuncture practitioners in Goshen, NY."
+    },
+    "about": {
+      "title": "About Our Practice | Kingsfoil Acupuncture",
+      "description": "Learn about Kingsfoil Acupuncture's approach to traditional Chinese medicine in Goshen, NY. Experienced practitioners dedicated to your wellness journey."
+    },
+    "cases": {
+      "title": "Patient Success Stories | Kingsfoil Acupuncture",
+      "description": "Real patient success stories from Kingsfoil Acupuncture in Goshen, NY. Discover how acupuncture and TCM treatments transformed lives. Read testimonials."
+    },
+    "contact": {
+      "title": "Contact Us | Kingsfoil Acupuncture | Goshen, NY",
+      "description": "Contact Kingsfoil Acupuncture in Goshen, NY. Call 845-682-0809 to schedule your acupuncture consultation. Convenient location and flexible appointments."
+    },
+    "gallery": {
+      "title": "Clinic Gallery | Kingsfoil Acupuncture",
+      "description": "Explore our peaceful acupuncture clinic in Goshen, NY. See treatment rooms and traditional Chinese medicine facilities at Kingsfoil Acupuncture."
+    },
+    "pricing": {
+      "title": "Treatment Pricing | Kingsfoil Acupuncture | Goshen",
+      "description": "Transparent pricing for acupuncture and Chinese medicine services in Goshen, NY. Kingsfoil Acupuncture offers affordable, quality TCM treatments."
+    },
+    "services": {
+      "title": "Acupuncture & TCM Services in Goshen | Kingsfoil Acupuncture",
+      "description": "Comprehensive TCM services in Goshen including acupuncture, herbal medicine, cupping, moxibustion, and gua sha. Discover natural healing solutions today."
+    },
+    "conditions": {
+      "title": "Conditions We Treat | Kingsfoil Acupuncture | Goshen",
+      "description": "Kingsfoil Acupuncture treats various conditions in Goshen using TCM methods. From pain management to digestive issues, find natural healing solutions."
+    },
+    "new-patients": {
+      "title": "New Patients | Kingsfoil Acupuncture | Goshen",
+      "description": "Welcome to Kingsfoil Acupuncture in Goshen, NY. New patient information, intake forms, and what to expect during your first TCM consultation visit."
+    }
+  },
+  "title": "Kingsfoil Acupuncture | Acupuncture & TCM in Goshen, NY",
+  "ogImage": "/images/og-default.jpg",
+  "description": "Expert acupuncture and Chinese herbal medicine in Goshen, NY. Kingsfoil Acupuncture offers cupping, moxibustion, and holistic healing. Book today!"
+}

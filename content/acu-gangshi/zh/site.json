@@ -1,0 +1,44 @@
+{
+  "zip": "11021",
+  "city": "Great Neck",
+  "email": "shigangusus@yahoo.com",
+  "hours": {
+    "friday": "9:00 AM - 5:00 PM",
+    "monday": "9:00 AM - 5:00 PM",
+    "sunday": "Closed",
+    "tuesday": "9:00 AM - 5:00 PM",
+    "saturday": "9:00 AM - 1:00 PM",
+    "thursday": "9:00 AM - 5:00 PM",
+    "wednesday": "9:00 AM - 5:00 PM"
+  },
+  "phone": "516-466-4018",
+  "state": "NY",
+  "social": {
+    "google": "",
+    "wechat": "",
+    "youtube": "https://youtube.com",
+    "facebook": "https://facebook.com",
+    "instagram": "https://instagram.com"
+  },
+  "address": "935 Northern Boulevard, Suite Number 303",
+  "tagline": "传统中医与针灸",
+  "languages": [
+    {
+      "code": "en",
+      "flag": "US",
+      "label": "English",
+      "enabled": true
+    },
+    {
+      "code": "zh",
+      "flag": "CN",
+      "label": "中文",
+      "enabled": true
+    }
+  ],
+  "clinicName": "Gang Shi Acupuncture",
+  "description": "在纽约州大颈（Great Neck）通过传统中医进行整体诊疗",
+  "addressMapUrl": "https://maps.google.com/?q=935+Northern+Boulevard+Suite+Number+303+Great+Neck+NY+11021",
+  "headerVariant": "stacked",
+  "iconCharacter": "SHI"
+}

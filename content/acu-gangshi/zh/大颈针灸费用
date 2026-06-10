@@ -1,0 +1,89 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约首次就诊"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "治疗次数依个人情况而异。急性问题通常4-6次，慢性病症可能需要10-15次。我们会在疗程中评估进展并调整治疗计划。",
+        "question": "我需要做多少次针灸治疗？"
+      },
+      {
+        "answer": "我们接受多数主要保险。许多保险计划涵盖针灸疗程，通常每年提供一定次数。建议预约前先确认您的保单细节。",
+        "question": "纽约健康保险覆盖针灸吗？"
+      },
+      {
+        "answer": "可以。针灸费用一般可使用HSA（健康储蓄帐户）或FSA（弹性支出帐户）支付，属于常见合规医疗支出。",
+        "question": "可以用HSA或FSA支付针灸费用吗？"
+      },
+      {
+        "answer": "我们提供新患者初诊咨询与疗程规划。具体优惠与方案可直接来电询问。",
+        "question": "首次就诊有优惠吗？"
+      },
+      {
+        "answer": "初诊通常包含完整病史评估、体质辨证、疗程设计与首次治疗，因此费用较高；后续疗程以持续治疗为主，费用通常较低。",
+        "question": "初诊和复诊费用为何不同？"
+      }
+    ],
+    "heading": "针灸费用 — 常见问题"
+  },
+  "seo": {
+    "h1": "大颈针灸费用说明",
+    "title": "大颈针灸费用｜Gang Shi Acupuncture收费",
+    "schema": [
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.7,
+    "description": "大颈（Great Neck）针灸收费透明。初诊与复诊费用依疗程安排，接受多种保险，HSA/FSA可用。石刚医师亲诊。",
+    "canonicalUrl": "/zh/大颈针灸费用"
+  },
+  "worthIt": {
+    "body": "针灸是对长期健康的投入。相较只压症状的短期方案，针灸更重视整体调理与复发预防。许多患者在完整疗程后可减少对止痛或助眠药物的依赖，改善生活品质。",
+    "heading": "针灸是否值得投资？",
+    "testimonial": null
+  },
+  "pageType": "seo-resource",
+  "insurance": {
+    "body": "我们接受多数主要保险计划，包括Aetna、Blue Cross Blue Shield、Cigna、UnitedHealthcare等。建议预约前先确认针灸给付范围，我们也可协助说明常见理赔流程。",
+    "heading": "保险是否覆盖针灸？"
+  },
+  "directAnswer": {
+    "h1": "大颈针灸费用说明",
+    "body": "在Gang Shi Acupuncture，初诊通常包含完整评估与首次治疗，后续疗程依次数与时长安排收费。我们接受多数主要保险，能帮助降低自付金额。",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "查看新患者方案"
+  },
+  "resourceType": "cost",
+  "priceBreakdown": {
+    "items": [
+      {
+        "label": "初诊咨询+治疗（90分钟）",
+        "price": "$[X]"
+      },
+      {
+        "label": "复诊治疗（60分钟）",
+        "price": "$[X]"
+      },
+      {
+        "label": "复诊治疗（45分钟）",
+        "price": "$[X]"
+      },
+      {
+        "label": "5次疗程方案",
+        "price": "$[X]"
+      },
+      {
+        "label": "中药处方（如需）",
+        "price": "$[X]/formula"
+      }
+    ],
+    "heading": "Gang Shi Acupuncture收费项目"
+  },
+  "whatAffectsCost": {
+    "body": "费用通常取决于病情复杂度、疗程时长、是否需加做拔罐/推拿等附加疗法，以及您的保险覆盖范围。我们维持透明收费，治疗前会先说明。",
+    "heading": "影响针灸费用的主要因素"
+  }
+}

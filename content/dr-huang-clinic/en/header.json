@@ -1,0 +1,73 @@
+{
+  "cta": {
+    "link": "/en/book",
+    "text": "Book Online"
+  },
+  "menu": {
+    "logo": {
+      "text": "Dr Huang Clinic",
+      "emoji": "",
+      "image": {
+        "alt": "Dr Huang Clinic",
+        "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/home/drhuang-2.svg"
+      },
+      "subtext": "Traditional Chinese Medicine & Acupuncture"
+    },
+    "items": [
+      {
+        "url": "/en",
+        "text": "Home"
+      },
+      {
+        "url": "/en/acupuncture-middletown-ny",
+        "text": "Acupuncture"
+      },
+      {
+        "url": "/en/services",
+        "text": "Services"
+      },
+      {
+        "url": "/en/conditions",
+        "text": "Conditions"
+      },
+      {
+        "url": "/en/about",
+        "text": "About"
+      },
+      {
+        "url": "/en/case-studies",
+        "text": "Case Studies"
+      },
+      {
+        "url": "/en/pricing",
+        "text": "Pricing"
+      },
+      {
+        "url": "/en/blog",
+        "text": "Blog"
+      },
+      {
+        "url": "/en/gallery",
+        "text": "Gallery"
+      },
+      {
+        "url": "/en/contact",
+        "text": "Contact"
+      }
+    ],
+    "variant": "transparent",
+    "fontWeight": "semibold"
+  },
+  "topbar": {
+    "badge": "Accepting New Patients",
+    "hours": "Closed Thu · Other days 10:30am–5:00pm",
+    "phone": "(845) 381-1106",
+    "address": "71 East Main Street, Middletown, NY 10940",
+    "phoneHref": "tel:+18453811106",
+    "addressHref": "https://maps.google.com/?q=71+East+Main+Street,+Middletown,+NY+10940"
+  },
+  "languages": [
+    "en",
+    "zh"
+  ]
+}

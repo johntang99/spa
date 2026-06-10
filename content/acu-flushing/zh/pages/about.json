@@ -1,0 +1,179 @@
+{
+  "cta": {
+    "title": "准备开始您的康复之旅？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "预约咨询"
+    },
+    "description": "安排您的初次咨询，讨论您的健康目标，并了解中医如何帮助您恢复到最佳状态。",
+    "secondaryCta": {
+      "link": "tel:+19172291229",
+      "text": "今天致电我们"
+    }
+  },
+  "hero": {
+    "title": "认识 Dr. Jiang",
+    "variant": "centered",
+    "subtitle": "致力于通过传统中医为您的健康和保健服务",
+    "description": "以历久弥新的智慧与个性化关怀，陪伴您的康复之路。",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/dr-huang-lecture-20.png"
+  },
+  "clinic": {
+    "title": "关于我们的诊所",
+    "values": [
+      {
+        "icon": "Heart",
+        "title": "富有同情心的护理",
+        "description": "我们以尊重、同情和对其福祉的真诚关怀对待每位患者。"
+      },
+      {
+        "icon": "Award",
+        "title": "临床卓越",
+        "description": "我们保持最高的实践标准，使用优质草药和无菌技术。"
+      },
+      {
+        "icon": "Users",
+        "title": "以患者为中心",
+        "description": "您的需求、关切和目标是我们所做一切的核心。"
+      },
+      {
+        "icon": "Leaf",
+        "title": "自然愈合",
+        "description": "我们相信支持身体自我愈合的自然能力。"
+      }
+    ],
+    "variant": "split",
+    "features": [
+      "无障碍通道",
+      "停车便利",
+      "多语言服务（英语、中文）",
+      "接受新患者",
+      "干净、现代的治疗室",
+      "宁静、舒缓的环境"
+    ],
+    "description": [
+      "",
+      "从一个小诊所开始，已经发展成为一个值得信赖的健康中心，帮助1,000多名患者自然实现更好的健康。"
+    ],
+    "environment": "我们的诊所提供宁静、温馨的环境，旨在促进放松和愈合。从您进入的那一刻起，您就会感受到不同——宁静的色彩、舒适的治疗室和温暖、友好的氛围让患者感到轻松自在。"
+  },
+  "journey": {
+    "story": "Founded in 2006, Flushing Acupuncture emerged from Dr. Jiang's deep commitment to bringing authentic Traditional Chinese Medicine to the vibrant, multicultural community of Flushing, New York. Having witnessed the profound healing potential of TCM during her own family's health journey, Dr. Jiang was inspired to create a sanctuary where ancient wisdom meets modern wellness needs.\n\nFor eighteen years, our clinic has become a cornerstone of holistic health in Queens, serving patients from all walks of life who seek natural, effective alternatives to conventional treatments. We've watched children grow into adults, supported families through health challenges, and celebrated countless healing victories alongside our patients.\n\nRooted in the rich cultural tapestry of Flushing, we honor both traditional Chinese healing practices and the diverse healthcare needs of our community. Our bilingual approach ensures that every patient feels understood and comfortable, whether they prefer to communicate in English or Chinese, creating a bridge between Eastern wisdom and Western accessibility.",
+    "title": "我的中医之路",
+    "variant": "prose"
+  },
+  "profile": {
+    "bio": "江医师简介\n\n江医师早年于中国接受系统性的中医医学教育，毕业于北京中医药大学，完成五年制中医本科专业课程，并于 1996 年顺利毕业。该课程属于正规医学教育体系，内容涵盖中医基础理论、中药学、针灸学等多个医学领域，奠定了她扎实而全面的中医专业基础。\n\n赴美之后，江医师持续进修深造，研习分子生物学与生物统计学，并取得相关专业硕士学位。毕业后，她曾于大型制药企业任职约五年，从事生物医药相关研究与专业工作，累积了现代生物科学与医药领域的实务经验。\n\n尽管在生物医药领域拥有良好的职涯发展机会，江医师始终对中医、中药与针灸治疗怀抱深厚热忱。经过审慎思考后，她最终选择回归自己最初热爱的医学道路，取得相关执照，专注于中医与针灸临床诊疗工作。\n\n江医师融合中医医学与现代生物科学的学习背景与研究经验，在临床上重视整体调理与辨证施治的理念，期望透过中医针灸与中药调养，协助患者改善健康状况，提升生活品质。\n\n经过多年临床实践，江医师累积了丰富的诊疗经验，对各类常见疾病及慢性疾病的调理，已形成成熟、稳健且具个人特色的诊疗思路。多年来，她已成功帮助许多患者改善健康、减轻症状，甚至恢复良好生活状态。众多患者在治疗后，对江医师的医术与医德皆给予高度肯定与信任。\n\n在长期诊疗过程中，不少患者于康复之后，仍持续与江医师保持联系，怀著感恩之心分享生活中的转变，甚至成为彼此信任的朋友。来自患者的这份认可与信赖，也成为江医师持续投入中医事业、精进医术的重要力量。\n\n江医师始终相信，中医不仅是一门医学，更是一种帮助人们恢复身心平衡、提升整体生活品质的医疗理念。她希望凭借自身的专业与经验，帮助更多患者获得健康、安心与更好的生活。",
+    "name": "Dr. Jiang",
+    "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/acu-flushing/onboarding-overrides/1773046663898-1771604339255-dr-jiang-acu-flushing-2.webp",
+    "quote": "When we support the body's natural wisdom with ancient healing principles, profound transformation becomes possible.",
+    "title": "L.Ac., NCCAOM",
+    "variant": "split",
+    "signature": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/signature.png"
+  },
+  "philosophy": {
+    "title": "治疗理念",
+    "variant": "cards",
+    "principles": [
+      {
+        "title": "治疗整个人",
+        "description": "中医认识到身体症状通常与情绪、精神和心灵因素相关。黄医生解决健康的所有方面，而不仅仅是孤立的症状。"
+      },
+      {
+        "title": "找到根本原因",
+        "description": "治疗不仅仅是抑制症状，而是专注于识别和解决造成疾病的潜在失衡。这种方法带来持久的结果。"
+      },
+      {
+        "title": "个性化护理",
+        "description": "没有两个患者是相同的。每个治疗计划都是根据您独特的体质、健康史和当前状况精心定制的。"
+      },
+      {
+        "title": "患者教育",
+        "description": "了解您的身体和状况使您能够在治疗中发挥积极作用。黄医生花时间用清晰、易懂的术语解释您的诊断和治疗。"
+      },
+      {
+        "title": "与西医结合",
+        "description": "中医可以与传统医疗护理完美配合。黄医生与其他医疗保健提供者合作，确保全面、协调的治疗。"
+      },
+      {
+        "title": "预防和保健",
+        "description": "最好的医学是在疾病发生前预防它。治疗包括饮食、生活方式和自我保健实践的指导，以保持长期健康。"
+      }
+    ],
+    "introduction": "黄医生的治疗方法植根于传统中医的基本原则，同时融合现代临床理解。"
+  },
+  "credentials": {
+    "items": [
+      {
+        "icon": "Award",
+        "year": "2000",
+        "location": "San Francisco",
+        "credential": "MSTCM",
+        "institution": "ACTCM"
+      }
+    ],
+    "title": "教育和资质",
+    "variant": "list"
+  },
+  "affiliations": {
+    "title": "专业会员资格和附属机构",
+    "variant": "compact",
+    "organizations": [
+      {
+        "name": "NCCAOM",
+        "role": "Member"
+      }
+    ]
+  },
+  "specializations": {
+    "areas": [
+      {
+        "icon": "Activity",
+        "title": "Pain Management",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Mental Health",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Women's Health",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Anxiety & Panic Disorders",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Respiratory Issues",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Immune System",
+        "description": ""
+      }
+    ],
+    "title": "专业领域",
+    "variant": "grid-2",
+    "description": "通过多年的临床实践和继续教育，黄医生在几个关键领域发展了特殊的专业知识："
+  },
+  "continuingEducation": {
+    "items": [
+      "高级运动医学针灸认证（2019年）",
+      "生育和生殖健康专业化（2016年）",
+      "与 Heiner Fruehauf 博士的经典中药研讨会",
+      "每年参加国家中医会议",
+      "与当地中医执业者的定期学习小组",
+      "每年 30+ 小时的继续教育（要求：每 3 年 30 小时）"
+    ],
+    "title": "继续教育和培训",
+    "variant": "compact",
+    "description": "黄医生积极参与中医社区，并定期寻求高级培训："
+  }
+}

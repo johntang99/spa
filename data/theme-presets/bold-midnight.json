@@ -1,0 +1,50 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#f0fdf4",
+      "100": "#dcfce7",
+      "light": "#4ade80",
+      "DEFAULT": "#15803d",
+      "dark": "#0f5f2d"
+    },
+    "secondary": {
+      "50": "#fdf4ff",
+      "light": "#c084fc",
+      "DEFAULT": "#7c3aed",
+      "dark": "#5b21b6"
+    },
+    "backdrop": {
+      "primary": "#0f172a",
+      "secondary": "#1e293b"
+    }
+  },
+  "typography": {
+    "display": "4rem",
+    "heading": "2.75rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem",
+    "fonts": {
+      "display": "Syne, system-ui, sans-serif",
+      "heading": "Syne, system-ui, sans-serif",
+      "subheading": "Manrope, system-ui, sans-serif",
+      "body": "Manrope, system-ui, sans-serif",
+      "small": "Manrope, system-ui, sans-serif"
+    }
+  },
+  "shape": {
+    "radius": "4px",
+    "shadow": "0 0 30px rgba(21, 128, 61, 0.20)"
+  },
+  "layout": {
+    "heroVariant": "fullbleed",
+    "featureVariant": "masonry",
+    "spacingDensity": "spacious"
+  },
+  "_preset": {
+    "id": "bold-midnight",
+    "name": "Bold Midnight",
+    "category": "bold",
+    "description": "High-contrast dark palette with modern geometric type."
+  }
+}

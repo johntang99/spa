@@ -1,0 +1,185 @@
+{
+  "cta": {
+    "title": "準備開始您的康復之旅？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/contact",
+      "text": "預約諮詢"
+    },
+    "description": "安排您的初次諮詢，討論您的健康目標，並了解中醫如何幫助您恢復到最佳狀態。",
+    "secondaryCta": {
+      "link": "tel:+1+19178181284",
+      "text": "今天致電我們"
+    }
+  },
+  "hero": {
+    "title": "认识Mrs. Hair",
+    "variant": "centered",
+    "subtitle": "致力於通過傳統中醫為您的健康和保健服務",
+    "description": "以歷久彌新的智慧與個性化關懷，陪伴您的康復之路。",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/dr-huang-lecture-20.png"
+  },
+  "clinic": {
+    "title": "關於我們的診所",
+    "values": [
+      {
+        "icon": "Heart",
+        "title": "富有同情心的護理",
+        "description": "我們以尊重、同情和對其福祉的真誠關懷對待每位患者。"
+      },
+      {
+        "icon": "Award",
+        "title": "臨床卓越",
+        "description": "我們保持最高的實踐標準，使用優質草藥和無菌技術。"
+      },
+      {
+        "icon": "Users",
+        "title": "以患者為中心",
+        "description": "您的需求、關切和目標是我們所做一切的核心。"
+      },
+      {
+        "icon": "Leaf",
+        "title": "自然癒合",
+        "description": "我們相信支持身體自我癒合的自然能力。"
+      }
+    ],
+    "variant": "split",
+    "features": [
+      "無障礙通道",
+      "停車便利",
+      "多語言服務（英語、中文）",
+      "接受新患者",
+      "乾淨、現代的治療室",
+      "寧靜、舒緩的環境"
+    ],
+    "description": [
+      "Smith 醫生診所成立於2010年，使命簡單：為米德爾敦（New York）社區提供便捷、高品質的傳統中醫護理。",
+      "從一個小診所開始，已經發展成為一個值得信賴的健康中心，幫助1,000多名患者自然實現更好的健康。"
+    ],
+    "environment": "我們的診所提供寧靜、溫馨的環境，旨在促進放鬆和癒合。從您進入的那一刻起，您就會感受到不同——寧靜的色彩、舒適的治療室和溫暖、友好的氛圍讓患者感到輕鬆自在。"
+  },
+  "journey": {
+    "story": "Founded in 2022, Everyday Hair Design emerged from a simple belief: everyone deserves access to natural, effective healing in their daily lives. Mrs. Hair opened our doors in New York City with a vision to make Traditional Chinese Medicine an approachable part of modern wellness routines for young professionals, busy parents, and anyone seeking balance in the city that never sleeps.\n\nOur clinic was born from witnessing too many people struggling with stress, chronic pain, and fatigue while juggling demanding careers and family responsibilities. We saw the need for a healing space that understood the unique pressures of New York life and could offer both immediate relief and long-term wellness solutions rooted in thousands of years of proven practice.\n\nToday, we're proud to serve our diverse community with compassionate care that honors both ancient wisdom and contemporary lifestyles. Whether you're dealing with work stress, seeking natural fertility support, or simply wanting to maintain optimal health, we're here to guide you on your journey to wellness using time-tested methods that work in harmony with your body's natural healing abilities.",
+    "title": "我的中醫之路",
+    "variant": "prose"
+  },
+  "profile": {
+    "bio": "Mrs. Hair has dedicated over four years to mastering the art and science of Traditional Chinese Medicine, driven by a profound respect for the body's innate wisdom to heal itself. Her journey into TCM began with her own transformative experience with acupuncture, which sparked a passion for helping others discover the profound benefits of natural healing approaches. She believes that true wellness comes from addressing not just symptoms, but the root patterns that create imbalance in our lives.\n\nWith extensive training in classical acupuncture techniques, Chinese herbal medicine, and complementary therapies like cupping and tuina massage, Mrs. Hair brings a comprehensive approach to each patient's care. Her practice philosophy centers on meeting people exactly where they are in their healing journey, whether they're new to TCM or longtime believers in natural medicine. She takes special joy in helping busy New Yorkers discover how ancient practices can seamlessly integrate into modern life.\n\nWhat sets Mrs. Hair apart is her ability to translate complex TCM principles into practical, accessible guidance that empowers patients to take an active role in their wellness. She understands that each person's path to health is unique, and she crafts personalized treatment plans that honor individual constitutions, lifestyles, and health goals. Her warm, down-to-earth approach creates a safe space where healing can unfold naturally.\n\n> Your body already knows how to heal – sometimes it just needs gentle guidance to remember the way.\n\n**Mrs. Hair**",
+    "name": "Mrs. Hair",
+    "image": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/tcm-network/onboarding-overrides/1772870177894-mohamad-azaam-njtnsypoaue-unsplash.jpg",
+    "title": "L.Ac., NCCAOM",
+    "variant": "split",
+    "signature": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/about/signature.png"
+  },
+  "philosophy": {
+    "title": "治療理念",
+    "variant": "cards",
+    "principles": [
+      {
+        "title": "治療整個人",
+        "description": "中醫認識到身體症狀通常與情緒、精神和心靈因素相關。黃醫生解決健康的所有方面，而不僅僅是孤立的症狀。"
+      },
+      {
+        "title": "找到根本原因",
+        "description": "治療不僅僅是抑制症狀，而是專注於識別和解決造成疾病的潛在失衡。這種方法帶來持久的結果。"
+      },
+      {
+        "title": "個性化護理",
+        "description": "沒有兩個患者是相同的。每個治療計劃都是根據您獨特的體質、健康史和當前狀況精心定制的。"
+      },
+      {
+        "title": "患者教育",
+        "description": "了解您的身體和狀況使您能夠在治療中發揮積極作用。黃醫生花時間用清晰、易懂的術語解釋您的診斷和治療。"
+      },
+      {
+        "title": "與西醫結合",
+        "description": "中醫可以與傳統醫療護理完美配合。黃醫生與其他醫療保健提供者合作，確保全面、協調的治療。"
+      },
+      {
+        "title": "預防和保健",
+        "description": "最好的醫學是在疾病發生前預防它。治療包括飲食、生活方式和自我保健實踐的指導，以保持長期健康。"
+      }
+    ],
+    "introduction": "黃醫生的治療方法植根於傳統中醫的基本原則，同時融合現代臨床理解。"
+  },
+  "credentials": {
+    "items": [
+      {
+        "icon": "Award",
+        "year": "2010",
+        "location": "San Francisco",
+        "credential": "MSTCM",
+        "institution": "ACTCM"
+      },
+      {
+        "icon": "Award",
+        "year": "2012",
+        "location": "San Francisco",
+        "credential": "DRTCM",
+        "institution": "ACTCM"
+      }
+    ],
+    "title": "教育和資質",
+    "variant": "list"
+  },
+  "affiliations": {
+    "title": "專業會員資格和附屬機構",
+    "variant": "compact",
+    "organizations": [
+      {
+        "name": "NCCAOM",
+        "role": "Member"
+      }
+    ]
+  },
+  "specializations": {
+    "areas": [
+      {
+        "icon": "Activity",
+        "title": "Pain Management",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Mental Health",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Women's Health",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Anxiety & Panic Disorders",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Respiratory Issues",
+        "description": ""
+      },
+      {
+        "icon": "Activity",
+        "title": "Immune System",
+        "description": ""
+      }
+    ],
+    "title": "專業領域",
+    "variant": "grid-2",
+    "description": "通過多年的臨床實踐和繼續教育，黃醫生在幾個關鍵領域發展了特殊的專業知識："
+  },
+  "continuingEducation": {
+    "items": [
+      "高級運動醫學針灸認證（2019年）",
+      "生育和生殖健康專業化（2016年）",
+      "與 Heiner Fruehauf 博士的經典中藥研討會",
+      "每年參加國家中醫會議",
+      "與當地中醫執業者的定期學習小組",
+      "每年 30+ 小時的繼續教育（要求：每 3 年 30 小時）"
+    ],
+    "title": "繼續教育和培訓",
+    "variant": "compact",
+    "description": "黃醫生積極參與中醫社區，並定期尋求高級培訓："
+  }
+}

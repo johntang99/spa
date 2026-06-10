@@ -1,0 +1,269 @@
+{
+  "cta": {
+    "title": "Ready to Visit in Person?",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/en/contact",
+      "text": "Book Your Visit"
+    },
+    "description": "Schedule your appointment and experience our welcoming environment firsthand",
+    "secondaryCta": {
+      "link": "https://maps.google.com/?q=71+East+Main+Street+New York+NY+10001",
+      "text": "Get Directions"
+    }
+  },
+  "hero": {
+    "title": "Visit Our Clinic",
+    "variant": "split-photo-left",
+    "subtitle": "Take a virtual tour of our peaceful, welcoming healing space",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/hero-bg.jpg"
+  },
+  "images": [
+    {
+      "id": "exterior-1",
+      "alt": "Front entrance of Dr. Henry Smith Clinic",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/hero-bg.jpg",
+      "order": 1,
+      "title": "Clinic Entrance",
+      "category": "exterior",
+      "featured": true,
+      "description": "Our welcoming entrance at 220 W 30th Street, New York"
+    },
+    {
+      "id": "exterior-2",
+      "alt": "Clinic signage",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/exterior-sign.jpg",
+      "order": 2,
+      "title": "Easy to Find",
+      "category": "exterior",
+      "description": "Clear signage makes us easy to locate"
+    },
+    {
+      "id": "exterior-3",
+      "alt": "Parking area",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/exterior-parking.jpg",
+      "order": 3,
+      "title": "Convenient Parking",
+      "category": "exterior",
+      "description": "Ample parking available for patients"
+    },
+    {
+      "id": "reception-1",
+      "alt": "Reception desk area",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/reception-desk.jpg",
+      "order": 4,
+      "title": "Reception Desk",
+      "category": "reception",
+      "featured": true,
+      "description": "Our friendly front desk where you'll be greeted"
+    },
+    {
+      "id": "reception-2",
+      "alt": "Comfortable waiting area",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/reception-waiting.jpg",
+      "order": 5,
+      "title": "Waiting Area",
+      "category": "reception",
+      "description": "Comfortable seating while you wait"
+    },
+    {
+      "id": "reception-3",
+      "alt": "Reception area decor",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/reception-decor.jpg",
+      "order": 6,
+      "title": "Calming Atmosphere",
+      "category": "reception",
+      "description": "Thoughtful decor creates a peaceful environment"
+    },
+    {
+      "id": "reception-4",
+      "alt": "Reading materials",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/reception-reading.jpg",
+      "order": 7,
+      "title": "Educational Resources",
+      "category": "reception",
+      "description": "TCM books and health magazines available"
+    },
+    {
+      "id": "treatment-1",
+      "alt": "Main treatment room",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/treatment-room-1.jpg",
+      "order": 8,
+      "title": "Treatment Room 1",
+      "category": "treatment-rooms",
+      "featured": true,
+      "description": "Spacious, private treatment rooms for your comfort"
+    },
+    {
+      "id": "treatment-2",
+      "alt": "Second treatment room",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/treatment-room-2.jpg",
+      "order": 9,
+      "title": "Treatment Room 2",
+      "category": "treatment-rooms",
+      "description": "Each room is clean, comfortable, and private"
+    },
+    {
+      "id": "treatment-3",
+      "alt": "Comfortable treatment table",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/treatment-table.jpg",
+      "order": 10,
+      "title": "Treatment Table",
+      "category": "treatment-rooms",
+      "description": "Heated, cushioned tables for your comfort"
+    },
+    {
+      "id": "treatment-4",
+      "alt": "Soft lighting in treatment room",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/treatment-lighting.jpg",
+      "order": 11,
+      "title": "Soft Lighting",
+      "category": "treatment-rooms",
+      "description": "Adjustable lighting to help you relax"
+    },
+    {
+      "id": "treatment-5",
+      "alt": "Private treatment space",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/treatment-privacy.jpg",
+      "order": 12,
+      "title": "Your Privacy Matters",
+      "category": "treatment-rooms",
+      "description": "Fully private rooms with secure doors"
+    },
+    {
+      "id": "herbs-1",
+      "alt": "Wall of herbal medicine drawers",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/herbal-wall.jpg",
+      "order": 13,
+      "title": "Herbal Pharmacy",
+      "category": "herbal-pharmacy",
+      "featured": true,
+      "description": "Over 200 traditional Chinese herbs in stock"
+    },
+    {
+      "id": "herbs-2",
+      "alt": "Glass jars of herbs",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/herbal-jars.jpg",
+      "order": 14,
+      "title": "Premium Quality Herbs",
+      "category": "herbal-pharmacy",
+      "description": "Only the highest quality, tested herbs"
+    },
+    {
+      "id": "herbs-3",
+      "alt": "Herb preparation area",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/herbal-preparation.jpg",
+      "order": 15,
+      "title": "Custom Formulas",
+      "category": "herbal-pharmacy",
+      "description": "Herbs are carefully measured and prepared for each patient"
+    },
+    {
+      "id": "herbs-4",
+      "alt": "Packaged herbal formulas",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/herbal-packages.jpg",
+      "order": 16,
+      "title": "Ready to Take Home",
+      "category": "herbal-pharmacy",
+      "description": "Herbs packaged with clear instructions"
+    },
+    {
+      "id": "herbs-5",
+      "alt": "Chinese medicine patch",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/general/1772577279030-831fa39de1f08a403d76a0a0.jpg",
+      "order": 17,
+      "title": "Chinese Herb Patch",
+      "category": "herbal-pharmacy",
+      "description": "Classical and modern TCM texts guide our formulations"
+    },
+    {
+      "id": "equipment-1",
+      "alt": "Sterile acupuncture needles",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/needles-sterile.jpg",
+      "order": 18,
+      "title": "Sterile Needles",
+      "category": "equipment",
+      "description": "We use only single-use, sterile needles"
+    },
+    {
+      "id": "equipment-2",
+      "alt": "Cupping therapy equipment",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/cupping-set.jpg",
+      "order": 19,
+      "title": "Cupping Equipment",
+      "category": "equipment",
+      "description": "Glass and silicone cups for various techniques"
+    },
+    {
+      "id": "equipment-3",
+      "alt": "Moxibustion supplies",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/moxa-supplies.jpg",
+      "order": 20,
+      "title": "Moxibustion Supplies",
+      "category": "equipment",
+      "description": "Premium mugwort for warming therapy"
+    },
+    {
+      "id": "equipment-4",
+      "alt": "Gua sha tools",
+      "src": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/gallery/gua-sha-tools.jpg",
+      "order": 21,
+      "title": "Gua Sha Tools",
+      "category": "equipment",
+      "description": "Smooth jade and buffalo horn tools"
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "icon": "Grid",
+      "name": "All Photos",
+      "description": "View all clinic photos"
+    },
+    {
+      "id": "exterior",
+      "icon": "Home",
+      "name": "Exterior & Entrance",
+      "description": "Our building and welcoming entrance"
+    },
+    {
+      "id": "reception",
+      "icon": "Sofa",
+      "name": "Reception Area",
+      "description": "Where your healing journey begins"
+    },
+    {
+      "id": "treatment-rooms",
+      "icon": "Bed",
+      "name": "Treatment Rooms",
+      "description": "Peaceful spaces for your treatments"
+    },
+    {
+      "id": "herbal-pharmacy",
+      "icon": "Leaf",
+      "name": "Herbal Pharmacy",
+      "description": "Our extensive herbal medicine collection"
+    },
+    {
+      "id": "equipment",
+      "icon": "Syringe",
+      "name": "Equipment & Tools",
+      "description": "The tools of our trade"
+    },
+    {
+      "id": "details",
+      "icon": "Sparkles",
+      "name": "Details",
+      "description": "The little touches that make our clinic special"
+    }
+  ],
+  "virtualTour": {
+    "title": "360° Virtual Tour Coming Soon",
+    "available": false,
+    "description": "We're working on a full virtual tour so you can explore our clinic from the comfort of your home."
+  },
+  "introduction": {
+    "text": "Our clinic is designed to be a sanctuary for healing - a peaceful, comfortable environment where you can relax and focus on your wellness. Browse our gallery to get a feel for our space before your first visit.",
+    "variant": "centered"
+  }
+}

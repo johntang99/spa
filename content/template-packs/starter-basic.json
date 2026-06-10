@@ -1,0 +1,69 @@
+{
+  "packId": "starter-basic",
+  "description": "Local clinic starter for consultations, follow-ups, and treatment visits.",
+  "siteDefaults": {
+    "defaultLocale": "en",
+    "supportedLocales": ["en", "zh"],
+    "primaryCta": "Book Consultation"
+  },
+  "sectionsCatalog": [
+    "hero",
+    "services",
+    "pricing",
+    "howItWorks",
+    "serviceArea",
+    "faq",
+    "cta"
+  ],
+  "bookingServices": [
+    {
+      "id": "wash-fold-dropoff",
+      "name": "Follow-up Visit",
+      "serviceType": "dropoff",
+      "pricingModel": "by_weight",
+      "unitLabel": "lb",
+      "durationMinutes": 30,
+      "price": 1.75,
+      "leadTimeHours": 2,
+      "capacityPerSlot": 6,
+      "active": true
+    },
+    {
+      "id": "wash-fold-pickup",
+      "name": "Initial Consultation",
+      "serviceType": "pickup_delivery",
+      "pricingModel": "by_weight",
+      "unitLabel": "lb",
+      "durationMinutes": 45,
+      "price": 1.95,
+      "minOrderValue": 35,
+      "leadTimeHours": 12,
+      "capacityPerSlot": 3,
+      "active": true
+    },
+    {
+      "id": "dry-cleaning",
+      "name": "Herbal Medicine Consultation",
+      "serviceType": "dropoff",
+      "pricingModel": "by_item",
+      "unitLabel": "item",
+      "durationMinutes": 30,
+      "price": 6.5,
+      "leadTimeHours": 24,
+      "capacityPerSlot": 4,
+      "active": true
+    }
+  ],
+  "bookingSettings": {
+    "timezone": "America/New_York",
+    "bufferMinutes": 15,
+    "minNoticeHours": 4,
+    "maxDaysAhead": 45,
+    "defaultServiceType": "pickup_delivery",
+    "serviceAreaZips": ["10940", "10941"],
+    "blackoutWindows": [],
+    "rushLeadHours": 6,
+    "maxOrdersPerSlot": 3,
+    "recurringEnabled": false
+  }
+}

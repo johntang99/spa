@@ -1,0 +1,92 @@
+{
+  "packId": "starter-pro",
+  "description": "Advanced clinic template with consultations, follow-ups, and provider capacity controls.",
+  "siteDefaults": {
+    "defaultLocale": "en",
+    "supportedLocales": ["en", "zh"],
+    "primaryCta": "Book Consultation"
+  },
+  "sectionsCatalog": [
+    "hero",
+    "serviceGridHybrid",
+    "howItWorksPickup",
+    "howItWorksCommercial",
+    "pricingCards",
+    "slaMatrix",
+    "serviceAreaMap",
+    "industriesServed",
+    "faq",
+    "ctaDual"
+  ],
+  "bookingServices": [
+    {
+      "id": "wash-fold-pickup",
+      "name": "Initial Consultation",
+      "serviceType": "pickup_delivery",
+      "pricingModel": "by_weight",
+      "unitLabel": "lb",
+      "durationMinutes": 60,
+      "price": 1.95,
+      "minOrderValue": 35,
+      "leadTimeHours": 12,
+      "capacityPerSlot": 4,
+      "recurringEligible": true,
+      "active": true
+    },
+    {
+      "id": "wash-fold-dropoff",
+      "name": "Follow-up Visit",
+      "serviceType": "dropoff",
+      "pricingModel": "by_weight",
+      "unitLabel": "lb",
+      "durationMinutes": 30,
+      "price": 1.75,
+      "leadTimeHours": 2,
+      "capacityPerSlot": 8,
+      "recurringEligible": true,
+      "active": true
+    },
+    {
+      "id": "self-service-reservation",
+      "name": "Acupuncture Session",
+      "serviceType": "self_service",
+      "pricingModel": "flat",
+      "unitLabel": "load",
+      "durationMinutes": 90,
+      "price": 14,
+      "leadTimeHours": 1,
+      "capacityPerSlot": 10,
+      "active": true
+    },
+    {
+      "id": "commercial-account",
+      "name": "Corporate Wellness Program",
+      "serviceType": "commercial",
+      "pricingModel": "quote",
+      "durationMinutes": 45,
+      "price": 0,
+      "leadTimeHours": 24,
+      "capacityPerSlot": 4,
+      "commercialEligible": true,
+      "recurringEligible": true,
+      "active": true
+    }
+  ],
+  "bookingSettings": {
+    "timezone": "America/New_York",
+    "bufferMinutes": 15,
+    "minNoticeHours": 4,
+    "maxDaysAhead": 60,
+    "defaultServiceType": "pickup_delivery",
+    "serviceAreaZips": ["10940", "10941", "10924", "10918", "10950"],
+    "blackoutWindows": [],
+    "rushLeadHours": 6,
+    "maxOrdersPerSlot": 4,
+    "recurringEnabled": true
+  },
+  "pricingPlaybook": {
+    "residential": ["by_weight", "subscription"],
+    "selfService": ["flat_per_load"],
+    "commercial": ["quote_only_with_sla"]
+  }
+}

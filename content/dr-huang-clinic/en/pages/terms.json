@@ -1,0 +1,27 @@
+{
+  "intro": "By using this website, you agree to the following terms. If you do not agree, please do not use this site.",
+  "title": "Terms of Use",
+  "sections": [
+    {
+      "body": "Information on this site is provided for general educational purposes and does not replace professional medical advice.",
+      "heading": "Website Use"
+    },
+    {
+      "body": "Submitting a request does not guarantee an appointment. We will confirm availability directly with you.",
+      "heading": "Appointments and Services"
+    },
+    {
+      "body": "All content, design, and materials on this site are owned by Dr Huang Clinic unless otherwise stated.",
+      "heading": "Intellectual Property"
+    },
+    {
+      "body": "We are not responsible for any damages resulting from the use of this website or reliance on its content.",
+      "heading": "Limitation of Liability"
+    },
+    {
+      "body": "We may update these terms periodically. The latest version will always be available on this page.",
+      "heading": "Changes to Terms"
+    }
+  ],
+  "updatedAt": "2026-02-10"
+}

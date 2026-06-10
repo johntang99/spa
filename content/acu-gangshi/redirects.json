@@ -1,0 +1,105 @@
+{
+  "hreflang": [
+    { "en": "acupuncture-great-neck-ny", "zh": "大颈中医针灸" },
+    { "en": "acupuncture-for-back-pain-great-neck-ny", "zh": "大颈针灸治腰痛" },
+    { "en": "acupuncture-for-insomnia-great-neck-ny", "zh": "大颈失眠针灸" },
+    { "en": "acupuncture-for-anxiety-great-neck-ny", "zh": "大颈针灸治焦虑" },
+    { "en": "chinese-herbal-medicine-great-neck-ny", "zh": "大颈中药" },
+    { "en": "cupping-therapy-great-neck-ny", "zh": "大颈拔罐" },
+    { "en": "moxibustion-great-neck-ny", "zh": "大颈艾灸" },
+    { "en": "tui-na-massage-great-neck-ny", "zh": "大颈推拿" },
+    { "en": "acupuncture-cost-great-neck-ny", "zh": "大颈针灸费用" }
+  ],
+  "redirects": [
+    {
+      "source": "/zh/acupuncture-great-neck-ny",
+      "destination": "/zh/大颈中医针灸",
+      "permanent": true
+    },
+    {
+      "source": "/zh/acupuncture-for-back-pain-great-neck-ny",
+      "destination": "/zh/大颈针灸治腰痛",
+      "permanent": true
+    },
+    {
+      "source": "/zh/acupuncture-for-insomnia-great-neck-ny",
+      "destination": "/zh/大颈失眠针灸",
+      "permanent": true
+    },
+    {
+      "source": "/zh/acupuncture-for-anxiety-great-neck-ny",
+      "destination": "/zh/大颈针灸治焦虑",
+      "permanent": true
+    },
+    {
+      "source": "/zh/chinese-herbal-medicine-great-neck-ny",
+      "destination": "/zh/大颈中药",
+      "permanent": true
+    },
+    {
+      "source": "/zh/cupping-therapy-great-neck-ny",
+      "destination": "/zh/大颈拔罐",
+      "permanent": true
+    },
+    {
+      "source": "/zh/moxibustion-great-neck-ny",
+      "destination": "/zh/大颈艾灸",
+      "permanent": true
+    },
+    {
+      "source": "/zh/tui-na-massage-great-neck-ny",
+      "destination": "/zh/大颈推拿",
+      "permanent": true
+    },
+    {
+      "source": "/zh/acupuncture-cost-great-neck-ny",
+      "destination": "/zh/大颈针灸费用",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸中醫針灸",
+      "destination": "/zh/大颈中医针灸",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸針灸治腰痛",
+      "destination": "/zh/大颈针灸治腰痛",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸失眠針灸",
+      "destination": "/zh/大颈失眠针灸",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸針灸治焦慮",
+      "destination": "/zh/大颈针灸治焦虑",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸中藥",
+      "destination": "/zh/大颈中药",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸拔罐",
+      "destination": "/zh/大颈拔罐",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸艾灸",
+      "destination": "/zh/大颈艾灸",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸推拿",
+      "destination": "/zh/大颈推拿",
+      "permanent": true
+    },
+    {
+      "source": "/zh/大頸針灸費用",
+      "destination": "/zh/大颈针灸费用",
+      "permanent": true
+    }
+  ]
+}

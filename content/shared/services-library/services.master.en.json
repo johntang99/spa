@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "locale": "en",
+  "modalities": [
+    {
+      "id": "acupuncture",
+      "title": "Acupuncture",
+      "shortDescriptionCore": "A core Traditional Chinese Medicine modality using fine, sterile needles to support pain relief, stress regulation, and whole-body balance.",
+      "fullDescriptionCore": "Acupuncture stimulates specific points to help regulate circulation, calm the nervous system, and support the body's natural recovery processes. Treatment plans are individualized based on your symptoms, health history, and response over time.",
+      "whatToExpectCore": "Your visit includes intake, point selection, and a rest phase while needles are retained. Most patients report minimal discomfort and deep relaxation during treatment.",
+      "benefitsCore": [
+        "Supports non-pharmaceutical pain management",
+        "Helps reduce stress and tension",
+        "May improve sleep quality",
+        "Supports circulation and recovery"
+      ]
+    },
+    {
+      "id": "chinese-herbal-medicine",
+      "title": "Chinese Herbal Medicine",
+      "shortDescriptionCore": "Customized herbal formulas selected to match your presentation, constitution, and treatment goals.",
+      "fullDescriptionCore": "Chinese herbal medicine combines multiple botanicals in balanced formulas. Prescriptions are adjusted as your condition changes, with attention to symptom patterns, digestion, sleep, and energy levels.",
+      "whatToExpectCore": "After assessment, you receive a tailored formula and clear dosing guidance. Follow-up visits are used to monitor response and adjust the prescription when needed.",
+      "benefitsCore": [
+        "Personalized formulation strategy",
+        "Supports chronic and functional concerns",
+        "Can complement acupuncture care",
+        "Focuses on pattern-based treatment"
+      ]
+    },
+    {
+      "id": "cupping-therapy",
+      "title": "Cupping Therapy",
+      "shortDescriptionCore": "Suction-based therapy used to release muscle tightness, support circulation, and ease stagnation-related discomfort.",
+      "fullDescriptionCore": "Cupping uses negative pressure to mobilize soft tissue and improve local blood flow. Techniques may be static or moving, depending on your condition and comfort.",
+      "whatToExpectCore": "You may feel a strong pull or pressure. Temporary circular marks can appear and usually fade over several days.",
+      "benefitsCore": [
+        "Helps release muscular tension",
+        "Supports local circulation",
+        "Can reduce stiffness after strain",
+        "May support respiratory comfort"
+      ]
+    },
+    {
+      "id": "moxibustion",
+      "title": "Moxibustion",
+      "shortDescriptionCore": "Warming therapy using mugwort heat at targeted points to support circulation, energy, and cold-pattern conditions.",
+      "fullDescriptionCore": "Moxibustion applies therapeutic heat to selected points to warm channels and support qi movement. It is commonly used for cold sensitivity, fatigue, and certain chronic patterns.",
+      "whatToExpectCore": "You experience gentle, sustained warmth with close practitioner monitoring for comfort and safety.",
+      "benefitsCore": [
+        "Provides focused warming support",
+        "May improve cold-type discomfort",
+        "Supports circulation and vitality",
+        "Can complement acupuncture protocols"
+      ]
+    },
+    {
+      "id": "tuina-massage",
+      "title": "Tui Na Medical Massage",
+      "shortDescriptionCore": "Manual Chinese medicine bodywork combining acupressure and mobilization techniques for pain and function support.",
+      "fullDescriptionCore": "Tui Na uses structured hand techniques along channels and affected areas to reduce tension, improve movement quality, and support rehabilitation goals.",
+      "whatToExpectCore": "Treatment intensity can be adjusted from gentle to firm. Sessions are tailored to your tolerance and clinical goals.",
+      "benefitsCore": [
+        "Supports joint and soft-tissue mobility",
+        "Helps reduce neck, shoulder, and back tension",
+        "Can assist recovery from overuse",
+        "Integrates well with acupuncture care"
+      ]
+    },
+    {
+      "id": "gua-sha",
+      "title": "Gua Sha",
+      "shortDescriptionCore": "Instrument-assisted scraping technique used to release fascial tension and improve circulation in targeted regions.",
+      "fullDescriptionCore": "Gua Sha applies repeated strokes with a smooth-edged tool to address tight tissue and stagnation. It is often selected for neck, shoulder, and upper back tension patterns.",
+      "whatToExpectCore": "A lubricated area is treated with controlled strokes. Temporary redness may appear and usually resolves in a few days.",
+      "benefitsCore": [
+        "Helps reduce localized muscle tightness",
+        "Supports tissue circulation",
+        "May reduce headache-related tension",
+        "Can aid postural stress recovery"
+      ]
+    },
+    {
+      "id": "dietary-therapy",
+      "title": "Chinese Dietary Therapy",
+      "shortDescriptionCore": "Food-as-medicine guidance based on TCM pattern differentiation, constitution, and seasonal context.",
+      "fullDescriptionCore": "Dietary recommendations are tailored to symptom pattern, digestion, and lifestyle realities. Plans focus on practical adjustments that are sustainable and culturally flexible.",
+      "whatToExpectCore": "You receive clear food priorities, cooking-direction guidance, and simple habit updates that align with your treatment plan.",
+      "benefitsCore": [
+        "Supports digestive resilience",
+        "Reinforces clinical treatment goals",
+        "Encourages sustainable daily habits",
+        "Adapts to seasonal and individual needs"
+      ]
+    },
+    {
+      "id": "lifestyle-counseling",
+      "title": "Lifestyle & Wellness Counseling",
+      "shortDescriptionCore": "Structured guidance on sleep, stress, activity, and recovery habits to improve long-term treatment outcomes.",
+      "fullDescriptionCore": "Lifestyle counseling translates TCM principles into practical routines for rest, pacing, movement, and stress regulation. Recommendations are personalized and adjusted as progress changes.",
+      "whatToExpectCore": "You receive focused, actionable steps between visits with follow-up on adherence, barriers, and measurable progress.",
+      "benefitsCore": [
+        "Supports treatment consistency",
+        "Improves recovery habits",
+        "Helps manage stress load",
+        "Builds sustainable wellness routines"
+      ]
+    }
+  ]
+}

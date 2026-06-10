@@ -1,0 +1,31 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "profile"
+    },
+    {
+      "id": "credentials"
+    },
+    {
+      "id": "specializations"
+    },
+    {
+      "id": "philosophy"
+    },
+    {
+      "id": "journey"
+    },
+    {
+      "id": "affiliationsEducation"
+    },
+    {
+      "id": "clinic"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}

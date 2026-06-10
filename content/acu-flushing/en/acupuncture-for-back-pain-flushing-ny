@@ -1,0 +1,78 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Many patients achieve lasting relief from back pain, especially when combining acupuncture with lifestyle modifications Dr. Jiang recommends. While results vary by individual, regular maintenance sessions can help prevent flare-ups and maintain the improvements you've gained.",
+        "question": "Can acupuncture fix back pain permanently?"
+      },
+      {
+        "answer": "Most back pain conditions show significant improvement within 6-10 sessions. Acute injuries often respond faster than chronic conditions that have persisted for years.",
+        "question": "How many sessions do I need for back pain?"
+      },
+      {
+        "answer": "Acupuncture and physical therapy work wonderfully together. While PT strengthens muscles and improves mechanics, acupuncture excels at reducing inflammation and addressing the energetic imbalances that contribute to recurring pain patterns.",
+        "question": "Is acupuncture better than physiotherapy for back pain?"
+      },
+      {
+        "answer": "The needles used for acupuncture are extremely fine - much thinner than injection needles. Most patients describe the sensation as a mild tingling or dull ache. Many find the treatment so relaxing they drift off to sleep.",
+        "question": "Does acupuncture for back pain hurt?"
+      }
+    ],
+    "heading": "Back Pain Acupuncture — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Back Pain in Flushing, NY",
+    "title": "Acupuncture for Back Pain in Flushing, NY | Dr. Jiang",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Natural back pain relief in Flushing, NY. Dr. Jiang's acupuncture treatment addresses root causes of chronic pain. Schedule your consultation today.",
+    "canonicalUrl": "/en/acupuncture-for-back-pain-flushing-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture for Back Pain in Flushing, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Consultation",
+    "openingParagraph": "Back pain affects over 80% of adults at some point, but you don't have to accept chronic discomfort as normal. Traditional Chinese Medicine views back pain as disrupted energy flow and blood circulation in specific meridian pathways. At Flushing Acupuncture & TCM, Dr. Jiang has successfully helped hundreds of patients find lasting relief by addressing the underlying imbalances that contribute to pain, not just masking symptoms with temporary solutions."
+  },
+  "pageType": "seo-condition",
+  "condition": "back-pain",
+  "howItWorks": {
+    "body": "Acupuncture stimulates specific points to restore proper qi flow and reduce inflammation in affected tissues. We treat various types of back pain including lower back strain, herniated discs, sciatica, and muscle spasms. During treatment, fine needles are inserted at precise points along your back, legs, and sometimes arms to rebalance your body's natural healing mechanisms. Most patients notice reduced pain intensity and improved mobility within the first few sessions, with cumulative improvements over 6-10 treatments.",
+    "heading": "How Acupuncture Treats Back Pa— How It Works"
+  },
+  "testimonial": {
+    "quote": "I had suffered from lower back pain for three years after a work injury. After just six sessions with Dr. Jiang, I was able to return to my favorite activities pain-free. The treatment was gentle and effective.",
+    "heading": "Real Results for Flushing Patients",
+    "attribution": "David, Flushing"
+  },
+  "whatToExpect": {
+    "body": "Your first visit includes a detailed assessment of your pain patterns, posture, and lifestyle factors. Dr. Jiang will examine your spine alignment and identify tender points before placing ultra-thin needles at specific locations. You'll rest comfortably for 20-30 minutes while the needles work to reduce inflammation and restore proper function. Many patients feel immediate relief and improved range of motion after their first session.",
+    "heading": "What to Expect at Flushing Acupuncture & TCM"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-insomnia-flushing-ny",
+        "label": "Acupuncture for Insomnia"
+      },
+      {
+        "slug": "acupuncture-for-anxiety-flushing-ny",
+        "label": "Acupuncture for Anxiety"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "Fertility Acupuncture"
+      }
+    ],
+    "heading": "Other Conditions We Treat at Flushing Acupuncture & TCM"
+  }
+}

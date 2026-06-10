@@ -1,0 +1,78 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Many patients achieve lasting relief from back pain with acupuncture, especially when combined with lifestyle modifications. While some may need occasional maintenance treatments, most find their pain significantly reduced or eliminated after a full course of treatment. Results depend on the underlying cause and individual healing response.",
+        "question": "Can acupuncture fix back pain permanently?"
+      },
+      {
+        "answer": "Most back pain patients need 6-10 sessions for optimal results. Acute injuries may resolve more quickly, while chronic conditions typically require consistent treatment over 8-12 weeks.",
+        "question": "How many sessions do I need for back pain?"
+      },
+      {
+        "answer": "Acupuncture and physical therapy work beautifully together. While PT focuses on strengthening and mobility, acupuncture excels at reducing inflammation and addressing the energetic imbalances that contribute to recurring pain. Many patients use both modalities for comprehensive healing.",
+        "question": "Is acupuncture better than physiotherapy for back pain?"
+      },
+      {
+        "answer": "The needles used are extremely fine and cause minimal discomfort. Most patients describe the sensation as a slight pinch followed by deep relaxation. Many are surprised by how comfortable and calming the treatment feels.",
+        "question": "Does acupuncture for back pain hurt?"
+      }
+    ],
+    "heading": "Back Pain Acupuncture — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Back Pain in Middletown, NY",
+    "title": "Acupuncture for Back Pain Middletown, NY | Dr. Huang",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Natural back pain relief in Middletown, NY. Dr. Huang's acupuncture targets root causes of chronic pain. 20+ years experience. Book today.",
+    "canonicalUrl": "/en/acupuncture-for-back-pain-middletown-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture for Back Pain in Middletown, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Consultation",
+    "openingParagraph": "Back pain affects over 80% of adults at some point, often becoming chronic due to stress, poor posture, or underlying imbalances. Unlike pain medications that mask symptoms, acupuncture addresses the root causes of back pain by improving circulation, reducing inflammation, and releasing muscle tension. At Dr. Huang Clinic in Middletown, patients have found lasting relief from both acute injuries and chronic pain conditions through personalized treatment plans that restore the body's natural healing mechanisms."
+  },
+  "pageType": "seo-condition",
+  "condition": "back-pain",
+  "howItWorks": {
+    "body": "Acupuncture stimulates specific points along energy pathways to release endorphins, reduce inflammation, and improve blood flow to affected areas. Dr. Huang treats various types of back pain including lower back pain, sciatica, herniated discs, and muscle strain. During treatment, fine needles are placed at strategic points to relax tight muscles and calm overactive nerves. Many patients experience immediate relief, with cumulative benefits building over subsequent sessions. The treatment is often combined with cupping or herbal medicine for enhanced healing.",
+    "heading": "How Acupuncture Treats Back Pa— How It Works"
+  },
+  "testimonial": {
+    "quote": "I suffered from chronic lower back pain for three years before seeing Dr. Huang. After just six sessions, I could play with my kids again without wincing. Her expertise and gentle care made all the difference.",
+    "heading": "Real Results for Middletown Patients",
+    "attribution": "Michael, Middletown"
+  },
+  "whatToExpect": {
+    "body": "Your first visit includes a detailed assessment of your pain patterns, posture, and lifestyle factors. Dr. Huang will examine your tongue and pulse to identify underlying imbalances contributing to your pain. During treatment, needles are gently inserted into specific points, often away from the pain site. Most patients find the experience deeply relaxing, with many falling asleep during the 30-minute needle retention period.",
+    "heading": "What to Expect at Dr. Huang Clinic"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-insomnia-middletown-ny",
+        "label": "Acupuncture for Insomnia"
+      },
+      {
+        "slug": "acupuncture-for-anxiety-middletown-ny",
+        "label": "Acupuncture for Anxiety"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "Fertility Acupuncture"
+      }
+    ],
+    "heading": "Other Conditions We Treat at Dr. Huang Clinic"
+  }
+}

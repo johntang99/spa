@@ -1,0 +1,94 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your Appointment"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Most anxiety patients achieve significant improvement with 8-12 acupuncture sessions over 2-3 months. Some people notice increased calm after their first treatment, while full results develop as the nervous system learns new patterns of relaxation and emotional regulation.",
+        "question": "How many sessions does it take to help anxiety?"
+      },
+      {
+        "answer": "Acupuncture can help reduce the frequency and intensity of panic attacks by regulating nervous system responses. However, acupuncture is not emergency intervention—if you're experiencing acute panic, please seek immediate medical attention or contact your healthcare provider.",
+        "question": "Can acupuncture help panic attacks?"
+      },
+      {
+        "answer": "Acupuncture is generally safe alongside anxiety medications and may help enhance their effectiveness. Many patients find they need lower doses as their natural coping mechanisms improve. Always consult your prescribing physician before making medication changes.",
+        "question": "Is acupuncture safe alongside anti-anxiety medication?"
+      },
+      {
+        "answer": "Acupuncture needles are extremely fine and most patients experience minimal sensation during insertion. The treatment itself feels deeply calming and restorative—many people fall asleep during sessions as their nervous system shifts into a peaceful, meditative state.",
+        "question": "What does acupuncture feel like for an anxious person?"
+      },
+      {
+        "answer": "Response speed varies by severity, chronicity, sleep quality, stress load, and overall health history. Some patients feel early improvement in the first few sessions, while complex or long-standing cases usually require a structured multi-week plan.",
+        "question": "How quickly can acupuncture help anxiety?"
+      },
+      {
+        "answer": "Not always. Many patients complete a focused treatment phase and then transition to maintenance only as needed. The goal is to build durable improvement and reduce relapse frequency, not keep you on an indefinite intensive schedule.",
+        "question": "Will I need ongoing care for anxiety?"
+      },
+      {
+        "answer": "Positive signs include lower symptom intensity, fewer flare-ups, better sleep quality, improved daily activity tolerance, and reduced fear of triggering episodes. We track these markers over time to ensure progress is practical and meaningful.",
+        "question": "What signs show that treatment for anxiety is working?"
+      },
+      {
+        "answer": "Yes. Sleep regularity, stress regulation, movement pacing, and hydration can significantly improve treatment carryover. We provide simple, realistic guidance to reinforce your in-clinic progress.",
+        "question": "Can lifestyle changes improve outcomes for anxiety?"
+      }
+    ],
+    "heading": "Acupuncture for Anxiety — Common Questions"
+  },
+  "seo": {
+    "h1": "Acupuncture for Anxiety in Goshen, NY",
+    "title": "Acupuncture for Anxiety Goshen, NY | Kingsfoil",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "Natural anxiety relief through acupuncture in Goshen, NY. Dr. Liang helps calm stress & worry. Peaceful mind, balanced life. Book consultation.",
+    "canonicalUrl": "/en/acupuncture-for-anxiety-goshen-ny"
+  },
+  "hero": {
+    "h1": "Acupuncture for Anxiety in Goshen, NY",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "Book a Consultation",
+    "openingParagraph": "Anxiety can affect concentration, sleep quality, activity tolerance, and overall confidence in daily life. At Kingsfoil Acupuncture, we use acupuncture and integrative Chinese medicine strategies in Goshen, NY to reduce symptom intensity while improving resilience between flare-ups. Your treatment plan is tailored to your symptom history, trigger profile, and recovery goals, so care remains specific and actionable rather than generic. Patients receive clear milestone checkpoints so progress is easy to evaluate and adjust."
+  },
+  "pageType": "seo-condition",
+  "condition": "anxiety",
+  "howItWorks": {
+    "body": "Acupuncture for anxiety focuses on improving circulation, regulating nervous system overactivation, and reducing inflammatory or stress-related amplification patterns that can keep symptoms persistent.\n\nIn clinical practice, we combine point selection with treatment pacing based on how your body responds week to week. Early sessions often prioritize symptom reduction, while later sessions emphasize stability and recurrence prevention.\n\nWhen appropriate, we also include adjunctive methods and home-care guidance so improvements continue outside the clinic, especially for patients managing high workloads, poor sleep, or repeated stress exposure.\n\nThis layered approach helps improve consistency so gains are not dependent on one single treatment day.",
+    "heading": "How Acupuncture Treats Anxiety — How It Works"
+  },
+  "testimonial": {
+    "quote": "After weeks of inconsistent relief, I finally had a plan that made sense. The team explained each step, adjusted treatment as my symptoms changed, and I began noticing steadier progress in my daily routine.",
+    "heading": "Real Results for Goshen Patients",
+    "attribution": "David, Goshen"
+  },
+  "whatToExpect": {
+    "body": "Your first visit includes a full intake, timeline review, and treatment plan discussion so expectations are clear from day one.\n\nMost sessions last about 45-60 minutes including reassessment. Depending on severity and chronicity, we may recommend a short intensive phase before spacing visits farther apart.\n\nProgress is evaluated using practical outcomes: symptom frequency, symptom intensity, sleep quality, mobility, and day-to-day function. If response is slower than expected, we refine protocol instead of repeating the same approach.\n\nOur emphasis is on predictable, steady progress that remains workable with your real-life schedule.",
+    "heading": "What to Expect at Kingsfoil Acupuncture"
+  },
+  "relatedConditions": {
+    "links": [
+      {
+        "slug": "acupuncture-for-back-pain-goshen-ny",
+        "label": "Acupuncture for Back Pain"
+      },
+      {
+        "slug": "acupuncture-for-insomnia-goshen-ny",
+        "label": "Acupuncture for Insomnia"
+      },
+      {
+        "slug": "conditions#gynecology",
+        "label": "Fertility Acupuncture"
+      }
+    ],
+    "heading": "Other Conditions We Treat at Kingsfoil Acupuncture"
+  }
+}

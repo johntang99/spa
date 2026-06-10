@@ -1,0 +1,92 @@
+{
+  "cta": {
+    "href": "/en/contact",
+    "label": "Book Your First Visit"
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "Most conditions respond well within 6-10 sessions. Acute issues may resolve faster, while chronic conditions that have persisted for years typically require the full treatment course for lasting results.",
+        "question": "How many acupuncture sessions will I need?"
+      },
+      {
+        "answer": "Some insurance plans do cover acupuncture, particularly for documented chronic pain conditions. Coverage varies by provider and specific plan details. We recommend verifying your benefits before your first appointment.",
+        "question": "Is acupuncture covered by health insurance in NY?"
+      },
+      {
+        "answer": "Yes, acupuncture is a qualified medical expense for both HSA and FSA accounts. We accept these cards for payment, making treatment more affordable by using pre-tax dollars.",
+        "question": "Can I use my HSA or FSA for acupuncture?"
+      },
+      {
+        "answer": "We offer new patient specials and payment plans to make initial treatment more accessible. Contact our office to learn about current promotions and flexible payment options.",
+        "question": "Do you offer a first-visit discount?"
+      },
+      {
+        "answer": "Initial consultations are 90 minutes and include comprehensive intake, diagnosis, and first treatment, typically costing $120-$150. Follow-up sessions are 45-60 minutes and range from $75-$100, focusing primarily on treatment.",
+        "question": "What is the difference between the initial visit and a follow-up?"
+      }
+    ],
+    "heading": "Acupuncture Cost — Common Questions"
+  },
+  "seo": {
+    "h1": "How Much Does Acupuncture Cost in Flushing, NY?",
+    "title": "Acupuncture Cost in Flushing, NY | Affordable Treatment",
+    "schema": [
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.7,
+    "description": "Acupuncture costs $75-$150 per session in Flushing, NY. Insurance may cover treatment. HSA/FSA accepted. Schedule affordable care today.",
+    "canonicalUrl": "/en/acupuncture-cost-flushing-ny"
+  },
+  "worthIt": {
+    "body": "When compared to ongoing medication costs or repeated medical visits, a complete acupuncture treatment course often provides excellent value. Many patients find lasting relief that reduces their need for pain medications or sleep aids, creating long-term savings while improving their quality of life.",
+    "heading": "Is Acupuncture Worth the Cost?",
+    "testimonial": {
+      "quote": "The investment in my acupuncture treatment was worth every penny. I was spending more on pain medications and doctor visits before finding lasting relief with Dr. Jiang.",
+      "attribution": "Sarah, Flushing"
+    }
+  },
+  "pageType": "seo-resource",
+  "insurance": {
+    "body": "Insurance coverage for acupuncture varies significantly in New York. Some plans cover acupuncture for specific conditions like chronic pain, while others exclude it entirely. We recommend calling your insurance provider to verify your benefits before your first visit. We gladly accept HSA and FSA cards since acupuncture is a qualified medical expense, making treatment more affordable for many patients.",
+    "heading": "Does Insurance Cover Acupuncture in NY?"
+  },
+  "directAnswer": {
+    "h1": "How Much Does Acupuncture Cost in Flushing, NY?",
+    "body": "Acupuncture in Flushing typically costs between $75-$150 per session, with initial consultations at the higher end due to comprehensive intake and diagnosis. Follow-up treatments are generally less expensive. Most conditions require 6-10 sessions for optimal results, making the total investment for a complete treatment course $450-$1,500 at Flushing Acupuncture & TCM.",
+    "ctaHref": "/en/contact",
+    "ctaLabel": "See New Patient Specials"
+  },
+  "resourceType": "cost",
+  "priceBreakdown": {
+    "items": [
+      {
+        "label": "Initial Consultation + Treatment (90 min)",
+        "price": "$[X]"
+      },
+      {
+        "label": "Follow-up Session (60 min)",
+        "price": "$[X]"
+      },
+      {
+        "label": "Follow-up Session (45 min)",
+        "price": "$[X]"
+      },
+      {
+        "label": "Package of 5 Sessions",
+        "price": "$[X]"
+      },
+      {
+        "label": "Chinese Herbal Medicine (if prescribed)",
+        "price": "$[X]/formula"
+      }
+    ],
+    "heading": "Flushing Acupuncture & TCM Acupuncture Pricing"
+  },
+  "whatAffectsCost": {
+    "body": "Several factors influence treatment cost including session length, condition complexity, and whether herbal medicine is recommended. Initial visits are longer (90 minutes) and cost more than follow-up sessions (45-60 minutes). Treating complex chronic conditions may require more sessions than acute issues. Custom herbal formulas, when prescribed, add approximately $30-$50 per week to treatment costs.",
+    "heading": "What Affects Acupuncture Costs in NY?"
+  }
+}

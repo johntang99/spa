@@ -1,0 +1,83 @@
+{
+  "cta": {
+    "href": "/zh/contact",
+    "label": "预约就诊",
+    "backLink": {
+      "href": "/zh/大颈中医针灸",
+      "text": "了解更多大颈针灸服务"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "拔罐透过负压刺激体表循环与筋膜放松，针灸则以穴位刺激调整经络气血。两者机制不同，但常能互补使用。",
+        "question": "拔罐和针灸有什么差别？"
+      },
+      {
+        "answer": "治疗时多为可接受的牵拉感或温热感，通常不会明显疼痛。治疗后可能出现暂时性印痕，通常数日内消退。",
+        "question": "拔罐会很痛吗？"
+      },
+      {
+        "answer": "急性不适可能1-3次有感，慢性问题常需6-10次或以上。实际次数会依您的病情与反应调整。",
+        "question": "拔罐需要做几次才有效？"
+      },
+      {
+        "answer": "可以。拔罐可与针灸、推拿、中药等搭配使用，形成更完整的治疗组合。",
+        "question": "拔罐可以和其他中医疗法一起做吗？"
+      }
+    ],
+    "heading": "大颈拔罐疗法 — 常见问题"
+  },
+  "seo": {
+    "h1": "大颈拔罐疗法｜Gang Shi Acupuncture",
+    "title": "大颈拔罐疗法｜中医循环调理服务",
+    "schema": [
+      "Service",
+      "FAQPage",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "priority": 0.8,
+    "description": "大颈（Great Neck）专业拔罐疗法。可用于肩颈紧绷、腰背酸痛与循环调理。石刚医师亲诊，安全评估后治疗。",
+    "canonicalUrl": "/zh/大颈拔罐"
+  },
+  "hero": {
+    "h1": "大颈拔罐疗法｜Gang Shi Acupuncture",
+    "ctaHref": "/zh/contact",
+    "ctaLabel": "预约拔罐咨询",
+    "description": "Gang Shi Acupuncture位于Great Neck，提供正规中医拔罐疗法。透过可控负压刺激体表循环与筋膜放松，协助改善常见肌肉筋骨不适。"
+  },
+  "service": "cupping-therapy",
+  "pageType": "seo-service",
+  "whatIsIt": {
+    "body": "拔罐是中医传统外治法，利用负压使罐体贴附皮肤，达到活血通络与放松紧绷组织的目的。现代临床多采用更安全、可控的操作方式。",
+    "heading": "什么是拔罐疗法？"
+  },
+  "howItWorks": {
+    "body": "石刚医师会先评估体质与症状，再决定部位、强度与时间。疗程通常约10-20分钟，期间会留意皮肤与身体反应，必要时调整治疗策略。",
+    "heading": "在Gang Shi Acupuncture接受拔罐疗程"
+  },
+  "whatItTreats": {
+    "heading": "拔罐可协助哪些常见问题",
+    "conditions": [
+      {
+        "name": "肩颈疼痛"
+      },
+      {
+        "name": "腰背酸痛"
+      },
+      {
+        "name": "关节不适"
+      },
+      {
+        "name": "消化机能调理"
+      },
+      {
+        "name": "感冒初期不适"
+      },
+      {
+        "name": "失眠与压力紧绷"
+      }
+    ]
+  }
+}

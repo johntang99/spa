@@ -1,0 +1,86 @@
+{
+  "brand": {
+    "name": "自然堂中医针灸诊所",
+    "logoText": "TCM",
+    "description": "以传统中医和针灸为社区提供整体治疗。"
+  },
+  "hours": [
+    "周一：上午9:00 - 晚上7:00",
+    "周二：上午9:00 - 晚上7:00",
+    "周三：上午9:00 - 晚上7:00",
+    "周四：上午9:00 - 晚上7:00",
+    "周五：上午9:00 - 晚上7:00",
+    "周六：上午9:00 - 下午5:00",
+    "周日：休息"
+  ],
+  "contact": {
+    "email": "acupuncture41ave@gmail.com",
+    "phone": "(718) 888-9512",
+    "emailLink": "mailto:acupuncture41ave@gmail.com",
+    "phoneLink": "tel:+17188889512",
+    "addressLines": [
+      "143-26 41st Ave",
+      "Flushing, NY 11355"
+    ]
+  },
+  "services": [
+    {
+      "url": "/zh/services#acupuncture",
+      "text": "针灸"
+    },
+    {
+      "url": "/zh/services#herbs",
+      "text": "中药"
+    },
+    {
+      "url": "/zh/services#cupping",
+      "text": "拔罐"
+    },
+    {
+      "url": "/zh/services#tuina",
+      "text": "推拿"
+    }
+  ],
+  "copyright": "© 2026 自然堂中医针灸诊所。保留所有权利。",
+  "disclaimer": "本网站提供的信息仅供教育参考用途，不构成医疗建议、诊断或治疗。针灸及中医为辅助性健康疗法，不可替代专业医疗照护。如需诊断或治疗任何疾病，请咨询您的持照医师或医疗专业人员。自然堂中医针灸诊所持有纽约州教育厅颁发之执照，由持照针灸师（L.Ac.）提供服务。",
+  "legalLinks": [
+    {
+      "url": "/zh/privacy",
+      "text": "隐私政策"
+    },
+    {
+      "url": "/zh/terms",
+      "text": "服务条款"
+    }
+  ],
+  "quickLinks": [
+    {
+      "url": "/zh/about",
+      "text": "关于我们"
+    },
+    {
+      "url": "/zh/services",
+      "text": "服务项目"
+    },
+    {
+      "url": "/zh/conditions",
+      "text": "治疗病症"
+    },
+    {
+      "url": "/zh/case-studies",
+      "text": "案例研究"
+    },
+    {
+      "url": "/zh/new-patients",
+      "text": "首次就诊"
+    },
+    {
+      "url": "/zh/blog",
+      "text": "部落格"
+    },
+    {
+      "url": "/zh/contact",
+      "text": "联系我们"
+    }
+  ]
+}

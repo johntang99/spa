@@ -1,0 +1,285 @@
+{
+  "cta": {
+    "note": "New patients: Your first visit is a comprehensive 90-minute consultation including treatment ($120)",
+    "title": "Ready to Get Started?",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/en/contact",
+      "text": "Schedule Consultation ($120)"
+    },
+    "description": "Book your initial consultation and take the first step toward better health",
+    "secondaryCta": {
+      "link": "tel:+19172291229",
+      "text": "Questions? Call Us"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "answer": "This varies by condition. Acute issues may improve in 3-6 sessions, while chronic conditions typically require 10-15 treatments or more. We'll create a personalized treatment plan during your initial consultation and adjust based on your progress.",
+        "question": "How many treatments will I need?"
+      },
+      {
+        "answer": "We accept most major insurance plans that include acupuncture coverage. We'll verify your benefits and handle billing. Even if we're out-of-network, we can provide detailed superbills for reimbursement.",
+        "question": "Can I use my insurance?"
+      },
+      {
+        "answer": "No, packages are optional. You can pay per visit if you prefer. However, packages offer significant savings and are recommended for chronic conditions that require multiple treatments.",
+        "question": "Are packages required?"
+      },
+      {
+        "answer": "Packages must be used within the specified timeframe, but we're flexible if you have a valid reason for delay (illness, travel, etc.). Unused sessions can be transferred to immediate family members.",
+        "question": "What if I don't use all my package sessions?"
+      },
+      {
+        "answer": "For patients without insurance, we can discuss payment plan options on a case-by-case basis. Please speak with us about your situation.",
+        "question": "Do you offer payment plans?"
+      },
+      {
+        "answer": "Herbal formulas typically cost $20-$60 for a 1-2 week supply, depending on the herbs used. Raw herbs are less expensive than pills or powders. The consultation fee is separate from the herb cost.",
+        "question": "How much do herbs cost?"
+      },
+      {
+        "answer": "We offer sliding scale community acupuncture on Wednesdays ($35-$55) which is accessible to all. For regular appointments, insurance coverage or package discounts are the best way to reduce costs.",
+        "question": "Is there a senior or student discount?"
+      }
+    ],
+    "title": "Pricing FAQs",
+    "variant": "accordion"
+  },
+  "hero": {
+    "title": "Transparent Pricing",
+    "variant": "centered",
+    "subtitle": "Affordable, high-quality Traditional Chinese Medicine care with flexible payment options",
+    "backgroundImage": "https://oakahkxpbmmodpcpocio.supabase.co/storage/v1/object/public/chinesemedicine-media/dr-huang-clinic/pricing/hero-bg.jpg"
+  },
+  "packages": {
+    "items": [
+      {
+        "name": "Starter Package",
+        "bestFor": "Acute conditions, first-time patients",
+        "popular": false,
+        "savings": "$25",
+        "includes": [
+          "5 follow-up acupuncture sessions",
+          "Valid for 3 months",
+          "Can add modalities for additional cost"
+        ],
+        "sessions": 5,
+        "totalPrice": "$400",
+        "description": "Perfect for trying TCM or addressing acute issues",
+        "regularPrice": "$425",
+        "perSessionPrice": "$80"
+      },
+      {
+        "name": "Wellness Package",
+        "bestFor": "Chronic pain, fertility support, ongoing wellness",
+        "popular": true,
+        "savings": "$100",
+        "includes": [
+          "10 follow-up acupuncture sessions",
+          "1 free cupping or gua sha add-on",
+          "Valid for 6 months",
+          "10% discount on herbal formulas"
+        ],
+        "sessions": 10,
+        "totalPrice": "$750",
+        "description": "Our most popular choice for addressing chronic conditions",
+        "regularPrice": "$850",
+        "perSessionPrice": "$75"
+      },
+      {
+        "name": "Healing Journey Package",
+        "bestFor": "Complex chronic conditions, preventive care, optimal health",
+        "popular": false,
+        "savings": "$300",
+        "includes": [
+          "20 follow-up acupuncture sessions",
+          "3 free add-on modalities (cupping, gua sha, or moxa)",
+          "Valid for 12 months",
+          "15% discount on herbal formulas",
+          "Free dietary therapy consultation ($75 value)"
+        ],
+        "sessions": 20,
+        "totalPrice": "$1,400",
+        "description": "Comprehensive care for complex or long-standing conditions",
+        "regularPrice": "$1,700",
+        "perSessionPrice": "$70"
+      },
+      {
+        "name": "Monthly Maintenance",
+        "bestFor": "Long-term wellness, prevention, chronic condition management",
+        "popular": false,
+        "savings": "$40",
+        "includes": [
+          "4 sessions per month (once weekly)",
+          "Auto-renews monthly",
+          "Can pause or cancel anytime",
+          "Priority scheduling"
+        ],
+        "sessions": 4,
+        "totalPrice": "$300",
+        "description": "Ongoing care to maintain health and prevent illness",
+        "regularPrice": "$340",
+        "perSessionPrice": "$75"
+      }
+    ],
+    "title": "Treatment Packages",
+    "variant": "grid-3",
+    "subtitle": "Save money with our package deals - the more you commit to your health, the more you save"
+  },
+  "policies": {
+    "title": "Policies",
+    "variant": "grid",
+    "packages": {
+      "title": "Package Policy",
+      "policy": "Treatment packages must be used within the specified timeframe. Packages are non-refundable but can be transferred to immediate family members. If you need to pause your package due to extended illness or travel, please speak with us."
+    },
+    "lateArrival": {
+      "title": "Late Arrival",
+      "policy": "Please arrive 5-10 minutes before your scheduled appointment. If you arrive more than 15 minutes late, we may need to shorten your treatment or reschedule, and the full fee will apply."
+    },
+    "newPatients": {
+      "title": "New Patient Forms",
+      "policy": "Please complete new patient forms before your first visit (available on our website) or arrive 15 minutes early to fill them out."
+    },
+    "cancellation": {
+      "title": "Cancellation Policy",
+      "policy": "We understand that schedules change. Please provide at least 24 hours notice if you need to cancel or reschedule your appointment. Late cancellations (less than 24 hours) or no-shows will be charged 50% of the treatment fee. Exceptions made for emergencies."
+    }
+  },
+  "insurance": {
+    "hsa": {
+      "title": "HSA/FSA Eligible",
+      "description": "All our treatments are eligible for payment using Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA). We provide detailed receipts for your records."
+    },
+    "title": "Insurance & Payment",
+    "variant": "split",
+    "insuranceInfo": {
+      "title": "Insurance Coverage",
+      "weProvide": [
+        "Verification of insurance benefits",
+        "Direct billing to insurance (for in-network plans)",
+        "Detailed superbills for out-of-network reimbursement",
+        "Assistance with pre-authorization if required"
+      ],
+      "whatToAsk": [
+        "Do I have acupuncture coverage?",
+        "How many visits are covered per year?",
+        "What is my copay or coinsurance?",
+        "Do I need a referral from my primary care doctor?",
+        "Are there any pre-authorization requirements?"
+      ],
+      "description": "Many insurance plans now cover acupuncture for certain conditions. Coverage varies by plan, so we recommend calling your insurance company to verify your benefits before your first visit."
+    },
+    "paymentMethods": {
+      "title": "Accepted Payment Methods",
+      "methods": [
+        "Cash",
+        "Credit/Debit Cards (Visa, Mastercard, Amex, Discover)",
+        "HSA/FSA Cards",
+        "Check",
+        "Venmo, Zelle (for returning patients)"
+      ]
+    },
+    "acceptedInsurance": [
+      "Aetna",
+      "Blue Cross Blue Shield",
+      "Cigna",
+      "United Healthcare",
+      "Empire BCBS",
+      "Oxford",
+      "Medicare (with supplemental acupuncture coverage)",
+      "Most major insurance plans with acupuncture benefits"
+    ]
+  },
+  "introduction": {
+    "note": "Invest in your health today - the cost of prevention is far less than the cost of illness.",
+    "text": "We believe healing should be accessible. Our pricing is straightforward with no hidden fees. We offer package discounts to make ongoing care more affordable, and we work with most insurance plans.",
+    "variant": "centered"
+  },
+  "individualTreatments": {
+    "items": [
+      {
+        "name": "Initial Consultation & Treatment",
+        "notes": "Includes treatment plan and recommendations",
+        "price": "$120",
+        "duration": "90 minutes",
+        "description": "Comprehensive 90-minute first visit including full health history, TCM diagnosis, and first acupuncture treatment"
+      },
+      {
+        "name": "Follow-up Acupuncture Session",
+        "notes": "Most common treatment type",
+        "price": "$85",
+        "duration": "60 minutes",
+        "description": "Standard acupuncture treatment with brief check-in"
+      },
+      {
+        "name": "Extended Acupuncture Session",
+        "notes": "Includes additional modalities as needed",
+        "price": "$105",
+        "duration": "75 minutes",
+        "description": "Longer session for complex conditions or multiple areas"
+      },
+      {
+        "name": "Cupping Therapy (Add-on)",
+        "notes": "Great for muscle tension",
+        "price": "$20",
+        "duration": "15 minutes",
+        "description": "Cupping added to acupuncture session"
+      },
+      {
+        "name": "Cupping Therapy (Standalone)",
+        "notes": null,
+        "price": "$65",
+        "duration": "45 minutes",
+        "description": "Cupping therapy session without acupuncture"
+      },
+      {
+        "name": "Gua Sha (Add-on)",
+        "notes": null,
+        "price": "$15",
+        "duration": "10 minutes",
+        "description": "Gua sha added to acupuncture session"
+      },
+      {
+        "name": "Tui Na Medical Massage",
+        "notes": "Can be combined with acupuncture",
+        "price": "$95",
+        "duration": "60 minutes",
+        "description": "Traditional Chinese therapeutic massage"
+      },
+      {
+        "name": "Moxibustion (Add-on)",
+        "notes": "Especially good for cold conditions",
+        "price": "$15",
+        "duration": "15 minutes",
+        "description": "Warming therapy added to treatment"
+      },
+      {
+        "name": "Chinese Herbal Consultation",
+        "notes": "Price depends on formula complexity. Herb cost separate.",
+        "price": "$45-$95",
+        "duration": "30 minutes",
+        "description": "Herbal formula consultation and dispensing"
+      },
+      {
+        "name": "Dietary Therapy Consultation",
+        "notes": "Includes custom dietary plan",
+        "price": "$75",
+        "duration": "45 minutes",
+        "description": "Personalized nutrition guidance based on TCM principles"
+      },
+      {
+        "name": "Community Acupuncture",
+        "notes": "Sliding scale based on ability to pay. Wednesdays only.",
+        "price": "$35-$55",
+        "duration": "45 minutes",
+        "description": "Affordable acupuncture in a shared, peaceful space"
+      }
+    ],
+    "title": "Individual Treatment Pricing",
+    "variant": "grid-3",
+    "subtitle": "Pay-per-visit options for all our services"
+  }
+}

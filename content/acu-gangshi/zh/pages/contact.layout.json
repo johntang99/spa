@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "id": "hero"
+    },
+    {
+      "id": "introduction"
+    },
+    {
+      "id": "emergency"
+    },
+    {
+      "id": "contactMethods"
+    },
+    {
+      "id": "formMap"
+    },
+    {
+      "id": "cta"
+    }
+  ]
+}
