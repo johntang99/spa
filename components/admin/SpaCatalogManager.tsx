@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
 import type { SiteConfig } from '@/lib/types';
 import { Button } from '@/components/ui';
+import { ImagePickerModal } from '@/components/admin/ImagePickerModal';
 
 interface Tier { minutes: number; price: number }
 interface Category { id: string; name: string; intro?: string; image?: string; order: number }
@@ -52,6 +53,8 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
   const [tab, setTab] = useState<'categories' | 'services' | 'addons' | 'json'>('categories');
   const [jsonText, setJsonText] = useState('');
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  // Image picker: holds the apply-callback for whichever image field opened it.
+  const [picker, setPicker] = useState<{ apply: (url: string) => void } | null>(null);
 
   const selectedSite = sites.find((s) => s.id === siteId);
   const supportedLocales = (selectedSite?.supportedLocales as string[] | undefined) || ['en'];
@@ -414,8 +417,13 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
                   </div>
                   <div className="grid gap-3 md:grid-cols-2">
                     <div>
-                      <label className={labelCls}>Image URL</label>
-                      <input className={input} value={c.image || ''} placeholder="(blank = gradient placeholder)" onChange={(e) => patchCategory(c.id, { image: e.target.value })} />
+                      <label className={labelCls}>Image</label>
+                      <ImageField
+                        value={c.image || ''}
+                        input={input}
+                        onChange={(v) => patchCategory(c.id, { image: v })}
+                        onChoose={() => setPicker({ apply: (url) => patchCategory(c.id, { image: url }) })}
+                      />
                     </div>
                     <div>
                       <label className={labelCls}>{servicesByCat.get(c.id)?.length || 0} treatments in this category</label>
@@ -457,6 +465,7 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
                         onAddTier={() => addTier(s.id)}
                         onRemoveTier={(idx) => removeTier(s.id, idx)}
                         onPatchTier={(idx, patch) => patchTier(s.id, idx, patch)}
+                        onPickImage={() => setPicker({ apply: (url) => patchService(s.id, { image: url }) })}
                       />
                     ))}
                   </div>
@@ -473,6 +482,7 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
                       onRemove={() => removeService(s.id)} onMove={() => {}}
                       onAddTier={() => addTier(s.id)} onRemoveTier={(idx) => removeTier(s.id, idx)}
                       onPatchTier={(idx, patch) => patchTier(s.id, idx, patch)}
+                      onPickImage={() => setPicker({ apply: (url) => patchService(s.id, { image: url }) })}
                     />
                   ))}
                 </div>
@@ -519,6 +529,37 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
           )}
         </>
       )}
+
+      <ImagePickerModal
+        open={!!picker}
+        siteId={siteId}
+        onClose={() => setPicker(null)}
+        onSelect={(url) => {
+          picker?.apply(url);
+          setPicker(null);
+        }}
+      />
+    </div>
+  );
+}
+
+// ---- Reusable image field: thumbnail preview + URL input + Choose/Clear ----
+function ImageField({
+  value, input, onChange, onChoose,
+}: { value: string; input: string; onChange: (v: string) => void; onChoose: () => void }) {
+  return (
+    <div className="flex items-center gap-2">
+      {value ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={value} alt="" className="h-10 w-10 shrink-0 rounded object-cover border border-gray-200" />
+      ) : (
+        <div className="h-10 w-10 shrink-0 rounded border border-dashed border-gray-300 bg-gray-50" />
+      )}
+      <input className={input} value={value} placeholder="(blank = gradient placeholder)" onChange={(e) => onChange(e.target.value)} />
+      <button type="button" className="shrink-0 px-3 py-2 text-xs rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50" onClick={onChoose}>Choose</button>
+      {value && (
+        <button type="button" className="shrink-0 px-3 py-2 text-xs rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50" onClick={() => onChange('')}>Clear</button>
+      )}
     </div>
   );
 }
@@ -526,13 +567,13 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
 // ---- Service card (collapsible) ----
 function ServiceCard({
   s, index, count, expanded, categories, input, labelCls,
-  onToggle, onPatch, onRemove, onMove, onAddTier, onRemoveTier, onPatchTier,
+  onToggle, onPatch, onRemove, onMove, onAddTier, onRemoveTier, onPatchTier, onPickImage,
 }: {
   s: Service; index: number; count: number; expanded: boolean; categories: Category[];
   input: string; labelCls: string;
   onToggle: () => void; onPatch: (p: Partial<Service>) => void; onRemove: () => void;
   onMove: (dir: -1 | 1) => void; onAddTier: () => void; onRemoveTier: (idx: number) => void;
-  onPatchTier: (idx: number, p: Partial<Tier>) => void;
+  onPatchTier: (idx: number, p: Partial<Tier>) => void; onPickImage: () => void;
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl">
@@ -590,8 +631,8 @@ function ServiceCard({
               <input className={input} value={(s.goalTags || []).join(', ')} onChange={(e) => onPatch({ goalTags: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) })} />
             </div>
             <div>
-              <label className={labelCls}>Image URL</label>
-              <input className={input} value={s.image || ''} placeholder="(blank = gradient placeholder)" onChange={(e) => onPatch({ image: e.target.value })} />
+              <label className={labelCls}>Image</label>
+              <ImageField value={s.image || ''} input={input} onChange={(v) => onPatch({ image: v })} onChoose={onPickImage} />
             </div>
           </div>
           {/* Tiers */}
