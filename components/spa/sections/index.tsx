@@ -61,7 +61,7 @@ const Section: React.FC<{ mode?: string; id?: string; className?: string; childr
 
 // Renders a real image when a URL is set, else the labelled gradient placeholder (.ph).
 // Keeps the same box dimensions either way (callers pass aspectRatio/borderRadius via style).
-function Media({ image, label, phClass, style }: { image?: string; label?: string; phClass: string; style?: React.CSSProperties }) {
+export function Media({ image, label, phClass, style }: { image?: string; label?: string; phClass: string; style?: React.CSSProperties }) {
   if (image) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={image} alt={label || ''} style={{ width: '100%', objectFit: 'cover', display: 'block', ...style }} />;
@@ -306,7 +306,7 @@ export function TeamGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
         <div className="grid cols-4">
           {list.map((m, i) => (
             <div key={i} className="reveal" style={{ textAlign: 'center' }}>
-              <Media image={m.image} label={m.name} phClass="ph ph-light" style={{ aspectRatio: '1', borderRadius: 'var(--radius-card)', marginBottom: 10 }} />
+              <Media image={m.photo || m.image} label={m.name} phClass="ph ph-light" style={{ aspectRatio: '1', borderRadius: 'var(--radius-card)', marginBottom: 10 }} />
               <h4 style={{ margin: 0 }}>{m.name}</h4>
               <p className="small">{m.credential}</p>
             </div>
@@ -333,7 +333,7 @@ export function NapHours({ data, ctx }: { data: any; ctx: SectionCtx }) {
           </address>
           {data.note && <p className="small">{data.note}</p>}
         </div>
-        <div className="ph ph-light" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} data-label="Map" />
+        <Media image={data.image} label={t(ctx.locale, 'Map', '地图')} phClass="ph ph-light" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} />
       </div>
     </Section>
   );

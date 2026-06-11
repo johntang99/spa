@@ -1,15 +1,45 @@
 {
-  "napHours": { "variant": "full", "heading": "到访天堂水疗", "note": "现场免费停车。距米德尔敦市中心及17号/I-84公路仅几分钟车程。" },
-  "mapBlock": { "variant": "directions", "heading": "找到我们", "lazy": true },
-  "contactForm": { "heading": "给我们留言", "successMessage": "谢谢——我们会在一个工作小时内回复。若想最快预约，请点击「立即预约」。" },
-  "faq": { "variant": "mini", "heading": "到访前须知", "source": { "scopeTag": "location", "limit": 4 } },
+  "napHours": {
+    "variant": "full",
+    "heading": "到访天堂水疗",
+    "note": "现场免费停车。距米德尔敦市中心及17号/I-84公路仅几分钟车程。",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg"
+  },
+  "mapBlock": {
+    "variant": "directions",
+    "heading": "找到我们",
+    "lazy": true
+  },
+  "contactForm": {
+    "heading": "给我们留言",
+    "successMessage": "谢谢——我们会在一个工作小时内回复。若想最快预约，请点击「立即预约」。"
+  },
+  "faq": {
+    "variant": "mini",
+    "heading": "到访前须知",
+    "source": {
+      "scopeTag": "location",
+      "limit": 4
+    }
+  },
   "seo": {
     "title": "联系方式与营业时间 | 天堂水疗 米德尔敦",
     "description": "天堂水疗——纽约州米德尔敦 12 Grove St。电话 (845) 800-6600。每天 9:00–21:00 营业。路线、停车与联系表单。",
     "h1": "到访天堂水疗",
     "canonicalUrl": "/zh/contact",
-    "schema": ["LocalBusiness", "ContactPage"],
-    "keywords": ["天堂水疗 联系", "米德尔敦水疗 营业时间", "米德尔敦按摩 地址"],
-    "noindex": false, "changefreq": "yearly", "priority": 0.6, "keywordCluster": "contact", "pageType": "contact"
+    "schema": [
+      "LocalBusiness",
+      "ContactPage"
+    ],
+    "keywords": [
+      "天堂水疗 联系",
+      "米德尔敦水疗 营业时间",
+      "米德尔敦按摩 地址"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.6,
+    "keywordCluster": "contact",
+    "pageType": "contact"
   }
 }

@@ -1,9 +1,56 @@
 {
   "items": [
-    { "id": "gc-50", "type": "denomination", "label": "$50 Gift Card", "amount": 50, "image": "", "stripeLink": "", "active": true, "order": 1 },
-    { "id": "gc-100", "type": "denomination", "label": "$100 Gift Card", "amount": 100, "image": "", "stripeLink": "", "active": true, "order": 2 },
-    { "id": "gc-150", "type": "denomination", "label": "$150 Gift Card", "amount": 150, "image": "", "stripeLink": "", "active": true, "order": 3 },
-    { "id": "gift-signature-facial", "type": "treatment", "label": "Signature Facial Gift", "amount": 75, "serviceRef": "signature-facial", "image": "", "stripeLink": "", "active": true, "order": 4 },
-    { "id": "gift-couples-massage", "type": "treatment", "label": "Couples Massage Gift (60 min)", "amount": 170, "serviceRef": "couples-massage", "image": "", "stripeLink": "", "active": true, "order": 5 }
+    {
+      "id": "gc-50",
+      "type": "denomination",
+      "label": "$50 Gift Card",
+      "amount": 50,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172708197-photo-1669342357971-30fce98569c7.jpg",
+      "stripeLink": "",
+      "active": true,
+      "order": 1
+    },
+    {
+      "id": "gc-100",
+      "type": "denomination",
+      "label": "$100 Gift Card",
+      "amount": 100,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172439294-photo-1767976592687-71b152f279de.jpg",
+      "stripeLink": "",
+      "active": true,
+      "order": 2
+    },
+    {
+      "id": "gc-150",
+      "type": "denomination",
+      "label": "$150 Gift Card",
+      "amount": 150,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172440728-photo-1608755728617-aefab37d2edd.jpg",
+      "stripeLink": "",
+      "active": true,
+      "order": 3
+    },
+    {
+      "id": "gift-signature-facial",
+      "type": "treatment",
+      "label": "Signature Facial Gift",
+      "amount": 75,
+      "serviceRef": "signature-facial",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172441740-photo-1555820585-c5ae44394b79.jpg",
+      "stripeLink": "",
+      "active": true,
+      "order": 4
+    },
+    {
+      "id": "gift-couples-massage",
+      "type": "treatment",
+      "label": "Couples Massage Gift (60 min)",
+      "amount": 170,
+      "serviceRef": "couples-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172442654-photo-1741522509438-a120c0bb5e88.jpg",
+      "stripeLink": "",
+      "active": true,
+      "order": 5
+    }
   ]
 }

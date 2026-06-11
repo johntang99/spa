@@ -1,15 +1,45 @@
 {
-  "napHours": { "variant": "full", "heading": "Visit Spa Paradise", "note": "Free parking on-site. A short drive from downtown Middletown and Route 17 / I-84." },
-  "mapBlock": { "variant": "directions", "heading": "Find us", "lazy": true },
-  "contactForm": { "heading": "Send us a message", "successMessage": "Thanks — we'll reply within one business hour. For the fastest booking, use Book Now." },
-  "faq": { "variant": "mini", "heading": "Before you visit", "source": { "scopeTag": "location", "limit": 4 } },
+  "napHours": {
+    "variant": "full",
+    "heading": "Visit Spa Paradise",
+    "note": "Free parking on-site. A short drive from downtown Middletown and Route 17 / I-84.",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg"
+  },
+  "mapBlock": {
+    "variant": "directions",
+    "heading": "Find us",
+    "lazy": true
+  },
+  "contactForm": {
+    "heading": "Send us a message",
+    "successMessage": "Thanks — we'll reply within one business hour. For the fastest booking, use Book Now."
+  },
+  "faq": {
+    "variant": "mini",
+    "heading": "Before you visit",
+    "source": {
+      "scopeTag": "location",
+      "limit": 4
+    }
+  },
   "seo": {
     "title": "Contact & Hours | Spa Paradise Middletown, NY",
     "description": "Spa Paradise — 12 Grove St, Middletown, NY 10940. Call (845) 800-6600. Open every day 9am–9pm. Directions, parking, and contact form.",
     "h1": "Visit Spa Paradise",
     "canonicalUrl": "/en/contact",
-    "schema": ["LocalBusiness", "ContactPage"],
-    "keywords": ["spa paradise contact", "spa middletown ny hours", "massage middletown ny address"],
-    "noindex": false, "changefreq": "yearly", "priority": 0.6, "keywordCluster": "contact", "pageType": "contact"
+    "schema": [
+      "LocalBusiness",
+      "ContactPage"
+    ],
+    "keywords": [
+      "spa paradise contact",
+      "spa middletown ny hours",
+      "massage middletown ny address"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.6,
+    "keywordCluster": "contact",
+    "pageType": "contact"
   }
 }

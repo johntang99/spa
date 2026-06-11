@@ -103,7 +103,8 @@
   "napHours": {
     "note": "Free parking at 12 Grove St.",
     "heading": "Visit us",
-    "variant": "visit"
+    "variant": "visit",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg"
   },
   "teamGrid": {
     "refs": "all",

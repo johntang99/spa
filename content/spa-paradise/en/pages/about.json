@@ -72,6 +72,10 @@
     "collections": [
       "rooms",
       "details"
+    ],
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg"
     ]
   },
   "iconGrid": {

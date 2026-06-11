@@ -2,6 +2,7 @@
 // from the collection by productRefs. Stripe is DEFERRED: when stripeLink is empty the buy
 // button is disabled with a "call to purchase" note (contract: disabled + flagged).
 import type { SectionCtx } from './index';
+import { Media } from './index';
 import { fmtPrice } from '@/lib/spa/catalog';
 
 export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
@@ -20,7 +21,7 @@ export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx 
             const canBuy = !!p.stripeLink && p.active;
             return (
               <div key={p.id} className="card reveal">
-                <div className="ph ph-warm" style={{ aspectRatio: '16/9' }} data-label={p.label} />
+                <Media image={p.image} label={p.label} phClass="ph ph-warm" style={{ aspectRatio: '16/9' }} />
                 <div className="card-body">
                   <h3 style={{ marginBottom: 4 }}>{p.label}</h3>
                   <p className="num" style={{ fontFamily: 'var(--s-font-display)', fontSize: '1.6rem', color: 'var(--candle-deep)' }}>{fmtPrice(p.amount)}</p>

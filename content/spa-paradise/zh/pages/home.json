@@ -103,7 +103,8 @@
   "napHours": {
     "note": "12 Grove St 提供免费停车。",
     "heading": "到访我们",
-    "variant": "visit"
+    "variant": "visit",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg"
   },
   "teamGrid": {
     "refs": "all",

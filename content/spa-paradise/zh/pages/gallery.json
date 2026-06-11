@@ -1,14 +1,50 @@
 {
-  "galleryGrid": { "variant": "filtered", "heading": "走进天堂水疗", "collections": ["rooms", "treatments", "details"] },
-  "galleryGridVideo": { "variant": "video", "heading": "环境一览" },
-  "ctaBanner": { "variant": "solid-token", "heading": "欢迎亲临体验。", "ctaPrimary": { "label": "立即预约", "href": "/book" } },
+  "galleryGrid": {
+    "variant": "filtered",
+    "heading": "走进天堂水疗",
+    "collections": [
+      "rooms",
+      "treatments",
+      "details"
+    ],
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172444709-photo-1693578538512-fc66f318c833.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172447386-photo-1611920630905-426e08849c32.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172448407-photo-1630835425197-50feeba99ecd.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172449312-photo-1603077864615-538e955d1ad1.jpg"
+    ]
+  },
+  "galleryGridVideo": {
+    "variant": "video",
+    "heading": "环境一览"
+  },
+  "ctaBanner": {
+    "variant": "solid-token",
+    "heading": "欢迎亲临体验。",
+    "ctaPrimary": {
+      "label": "立即预约",
+      "href": "/book"
+    }
+  },
   "seo": {
     "title": "环境相册 | 天堂水疗 米德尔敦",
     "description": "走进天堂水疗——护理房、情侣房、足部反射疗法休息区与细节。纽约米德尔敦的真实店面。",
     "h1": "走进天堂水疗",
     "canonicalUrl": "/zh/gallery",
-    "schema": ["ImageGallery"],
-    "keywords": ["天堂水疗 相册", "米德尔敦日间水疗 照片", "米德尔敦按摩房"],
-    "noindex": false, "changefreq": "monthly", "priority": 0.5, "keywordCluster": "gallery", "pageType": "gallery"
+    "schema": [
+      "ImageGallery"
+    ],
+    "keywords": [
+      "天堂水疗 相册",
+      "米德尔敦日间水疗 照片",
+      "米德尔敦按摩房"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.5,
+    "keywordCluster": "gallery",
+    "pageType": "gallery"
   }
 }

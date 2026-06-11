@@ -1,14 +1,50 @@
 {
-  "galleryGrid": { "variant": "filtered", "heading": "Inside Spa Paradise", "collections": ["rooms", "treatments", "details"] },
-  "galleryGridVideo": { "variant": "video", "heading": "A look around" },
-  "ctaBanner": { "variant": "solid-token", "heading": "Come experience it in person.", "ctaPrimary": { "label": "Book Now", "href": "/book" } },
+  "galleryGrid": {
+    "variant": "filtered",
+    "heading": "Inside Spa Paradise",
+    "collections": [
+      "rooms",
+      "treatments",
+      "details"
+    ],
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172444709-photo-1693578538512-fc66f318c833.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172447386-photo-1611920630905-426e08849c32.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172448407-photo-1630835425197-50feeba99ecd.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172449312-photo-1603077864615-538e955d1ad1.jpg"
+    ]
+  },
+  "galleryGridVideo": {
+    "variant": "video",
+    "heading": "A look around"
+  },
+  "ctaBanner": {
+    "variant": "solid-token",
+    "heading": "Come experience it in person.",
+    "ctaPrimary": {
+      "label": "Book Now",
+      "href": "/book"
+    }
+  },
   "seo": {
     "title": "Gallery | Spa Paradise Middletown, NY",
     "description": "Step inside Spa Paradise — our treatment rooms, couples room, foot reflexology lounge, and details. Real premises in Middletown, NY.",
     "h1": "Inside Spa Paradise",
     "canonicalUrl": "/en/gallery",
-    "schema": ["ImageGallery"],
-    "keywords": ["spa paradise gallery", "day spa middletown ny photos", "massage rooms middletown"],
-    "noindex": false, "changefreq": "monthly", "priority": 0.5, "keywordCluster": "gallery", "pageType": "gallery"
+    "schema": [
+      "ImageGallery"
+    ],
+    "keywords": [
+      "spa paradise gallery",
+      "day spa middletown ny photos",
+      "massage rooms middletown"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.5,
+    "keywordCluster": "gallery",
+    "pageType": "gallery"
   }
 }
