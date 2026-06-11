@@ -282,7 +282,7 @@ export function SpaCatalogManager({ sites, selectedSiteId, selectedLocale }: Pro
         }
         await putFile(other, reconcileSibling(catalog, sibling));
       }
-      setStatus(others.length ? `Saved · synced prices & structure to ${others.join(', ')}` : 'Saved');
+      setStatus(others.length ? `Saved · synced shared fields (prices, images, structure) to ${others.join(', ')}` : 'Saved');
       router.refresh();
     } catch (e: any) {
       setError(e?.message || 'Save failed');

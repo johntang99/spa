@@ -59,6 +59,16 @@ const Section: React.FC<{ mode?: string; id?: string; className?: string; childr
   <section id={id} className={`section on-${mode} ${className}`}>{children}</section>
 );
 
+// Renders a real image when a URL is set, else the labelled gradient placeholder (.ph).
+// Keeps the same box dimensions either way (callers pass aspectRatio/borderRadius via style).
+function Media({ image, label, phClass, style }: { image?: string; label?: string; phClass: string; style?: React.CSSProperties }) {
+  if (image) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={image} alt={label || ''} style={{ width: '100%', objectFit: 'cover', display: 'block', ...style }} />;
+  }
+  return <div className={phClass} style={style} data-label={label} />;
+}
+
 function TierChips({ service, locale }: { service: Service; locale: string }) {
   return (
     <div className="menu-tiers">
@@ -141,7 +151,7 @@ export function CategoryGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
             const pf = priceFrom(ctx.catalog, c.id);
             return (
               <Link key={c.id} href={`/${ctx.locale}/services/${c.id}`} className="card reveal" style={{ textDecoration: 'none' }}>
-                <div className="ph ph-light" style={{ aspectRatio: '4/3' }} data-label={c.name} />
+                <Media image={c.image} label={c.name} phClass="ph ph-light" style={{ aspectRatio: '4/3' }} />
                 <div className="card-body">
                   <h3 style={{ marginBottom: 4 }}>{c.name}</h3>
                   {c.intro && <p className="small">{c.intro}</p>}
@@ -169,7 +179,7 @@ export function ServiceCards({ data, ctx }: { data: any; ctx: SectionCtx }) {
         <div className="grid cols-3">
           {services.map((s) => (
             <div key={s.id} className="card reveal">
-              <div className="ph" style={{ aspectRatio: '4/3' }} data-label={s.name} />
+              <Media image={s.image} label={s.name} phClass="ph" style={{ aspectRatio: '4/3' }} />
               <div className="card-body">
                 <h3 style={{ marginBottom: 4 }}>{s.name}{s.badge ? <span className="pill-tag" style={{ marginLeft: 8 }}>{badgeLabel(s.badge, ctx.locale)}</span> : null}</h3>
                 <p className="small" style={{ marginBottom: 12 }}>{s.short}</p>
@@ -230,7 +240,7 @@ export function FeaturePanel({ data, ctx }: { data: any; ctx: SectionCtx }) {
   return (
     <Section mode={ctx.mode}>
       <div className={`container split-75 ${flip ? 'flip' : ''}`}>
-        {flip && <div className="ph ph-warm" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} data-label={data.heading} />}
+        {flip && <Media image={data.media} label={data.heading} phClass="ph ph-warm" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} />}
         <div className="reveal">
           {data.eyebrow && <p className="eyebrow">{data.eyebrow}</p>}
           <h2>{data.heading}</h2>
@@ -238,7 +248,7 @@ export function FeaturePanel({ data, ctx }: { data: any; ctx: SectionCtx }) {
           {data.bullets?.length ? <ul>{data.bullets.map((b: string, i: number) => <li key={i}>{b}</li>)}</ul> : null}
           {data.cta && <Link className="btn btn-outline" href={linkHref(data.cta.href, ctx.locale)}>{data.cta.label}</Link>}
         </div>
-        {!flip && <div className="ph ph-warm" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} data-label={data.heading} />}
+        {!flip && <Media image={data.media} label={data.heading} phClass="ph ph-warm" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} />}
       </div>
     </Section>
   );
@@ -294,7 +304,7 @@ export function TeamGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
         <div className="grid cols-4">
           {list.map((m, i) => (
             <div key={i} className="reveal" style={{ textAlign: 'center' }}>
-              <div className="ph ph-light" style={{ aspectRatio: '1', borderRadius: 'var(--radius-card)', marginBottom: 10 }} data-label={m.name} />
+              <Media image={m.image} label={m.name} phClass="ph ph-light" style={{ aspectRatio: '1', borderRadius: 'var(--radius-card)', marginBottom: 10 }} />
               <h4 style={{ margin: 0 }}>{m.name}</h4>
               <p className="small">{m.credential}</p>
             </div>
