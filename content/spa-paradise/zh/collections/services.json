@@ -395,8 +395,12 @@
       "short": "传统刮痧手法，可于任意60分钟以上按摩中加做。",
       "tiers": [
         {
-          "price": 15,
-          "minutes": 30
+          "minutes": 30,
+          "price": 40
+        },
+        {
+          "minutes": 60,
+          "price": 70
         }
       ],
       "enabled": true,
