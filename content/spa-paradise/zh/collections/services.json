@@ -25,29 +25,36 @@
       "id": "facials",
       "name": "面部护理",
       "intro": "适合各种肤质的清洁、护理与补水。",
-      "order": 4,
+      "order": 5,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165401427-photo-1570172619644-dfd03ed5d881.jpg"
     },
     {
       "id": "body-treatments",
       "name": "身体护理",
       "intro": "磨砂、裹敷与背部护理，焕活全身。",
-      "order": 5,
+      "order": 6,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165795832-photo-1630381260593-45e8f922997b.jpg"
     },
     {
       "id": "combos-packages",
       "name": "套组与套餐",
       "intro": "精心搭配的多重护理与超值套餐。",
-      "order": 6,
+      "order": 7,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165404502-photo-1643122966676-29e8597257f7.jpg"
     },
     {
       "id": "add-ons",
       "name": "附加项目",
       "intro": "为任意符合条件的护理升级加分。",
-      "order": 7,
+      "order": 8,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165405211-photo-1624454002302-36b824d7bd0a.jpg"
+    },
+    {
+      "id": "acupuncture",
+      "name": "针灸",
+      "intro": "由纽约州持牌针灸师 (L.Ac.) 施针——在特定穴位施以细针，带来深层放松。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168899730-photo-1598555763574-dca77e10427e.jpg",
+      "order": 4
     }
   ],
   "services": [
@@ -522,6 +529,157 @@
       ],
       "intensity": 1,
       "categoryId": "body-treatments"
+    },
+    {
+      "id": "tiger-balm-massage",
+      "categoryId": "massage",
+      "name": "虎标万金油按摩",
+      "slug": "tiger-balm-massage",
+      "short": "配合温热虎标万金油，舒缓疲惫紧绷的肌肉。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168900781-photo-1544161515-4ab6ce6db874.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 75
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "pain-relief",
+        "recovery"
+      ],
+      "intensity": 2,
+      "enabled": true,
+      "order": 10
+    },
+    {
+      "id": "scalp-massage-service",
+      "categoryId": "massage",
+      "name": "头皮按摩",
+      "slug": "scalp-massage-service",
+      "short": "舒缓的头部、头皮与颈部按摩，化解紧张。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168930008-photo-1598901986949-f593ff2a31a6.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 78
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "relaxation",
+        "stress-relief"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 11
+    },
+    {
+      "id": "seaweed-mask-facial",
+      "categoryId": "facials",
+      "name": "海藻面膜护理",
+      "slug": "seaweed-mask-facial",
+      "short": "富含矿物质的海藻面膜护理，补水焕活肌肤。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168901953-photo-1761718210089-ba3bb5ccb54f.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 89
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "skin"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "acne-facial",
+      "categoryId": "facials",
+      "name": "祛痘面部护理",
+      "slug": "acne-facial",
+      "short": "深层清洁护理，适合易长痘与油性肌肤。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168903178-photo-1670201203208-055d6d79db4a.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 89
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "skin"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 5
+    },
+    {
+      "id": "deluxe-facial",
+      "categoryId": "facials",
+      "name": "尊享面部护理",
+      "slug": "deluxe-facial",
+      "short": "最完整的面部护理——清洁、去角质、敷膜、按摩与补水。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168904565-photo-1555820585-c5ae44394b79.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 119
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "skin"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 6
+    },
+    {
+      "id": "acupuncture-pain-relief",
+      "categoryId": "acupuncture",
+      "name": "针灸 — 疼痛与紧张缓解",
+      "slug": "acupuncture-pain-relief",
+      "short": "针对性针灸，舒缓日常酸痛与肌肉紧张。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168905266-photo-1587337905415-bb0d87a75610.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 80
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "pain-relief",
+        "recovery"
+      ],
+      "intensity": 2,
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "fertility-acupuncture",
+      "categoryId": "acupuncture",
+      "name": "备孕舒缓针灸",
+      "slug": "fertility-acupuncture",
+      "short": "舒缓的针灸疗程，在备孕旅程中助您放松身心。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168906381-photo-1765100478804-62091eb17a90.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 80
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "relaxation",
+        "wellness"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 2
     }
   ],
   "addons": [
