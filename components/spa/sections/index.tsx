@@ -97,8 +97,10 @@ function TrustCluster({ ctx }: { ctx: SectionCtx }) {
 
 /* ---- S01 hero ---- */
 export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
+  // Scrim (0–100) darkens the photo so the headline/subline stay legible over any image.
+  const scrim = Math.min(0.85, Math.max(0, (data.media?.scrim ?? 45) / 100));
   const bg = data.media?.image
-    ? { backgroundImage: `url(${data.media.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+    ? { backgroundImage: `linear-gradient(rgba(20,30,26,${scrim}), rgba(20,30,26,${scrim})), url(${data.media.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
     : {};
   return (
     <section className="section on-dark hero-anim" style={{ position: 'relative', ...bg }}>
@@ -358,8 +360,11 @@ export function MapBlock({ data, ctx }: { data: any; ctx: SectionCtx }) {
 
 /* ---- S15 ctaBanner ---- */
 export function CtaBanner({ data, ctx }: { data: any; ctx: SectionCtx }) {
+  const bg = data.media
+    ? { backgroundImage: `linear-gradient(rgba(20,30,26,0.74), rgba(20,30,26,0.74)), url(${data.media})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+    : {};
   return (
-    <section className="section on-dark">
+    <section className="section on-dark" style={bg}>
       <div className="container reveal" style={{ textAlign: 'center' }}>
         <h2 style={{ maxWidth: '24ch', margin: '0 auto 12px' }}>{data.heading}</h2>
         {data.subline && <p style={{ color: 'var(--text-inverse-muted)', marginBottom: 18 }}>{data.subline}</p>}

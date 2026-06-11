@@ -4,25 +4,58 @@
     "eyebrow": "The menu",
     "headline": "Every treatment, one destination.",
     "subline": "Massage, foot reflexology, East Asian therapies, facials, and body care — all under one roof, all transparently priced.",
-    "ctaPrimary": { "label": "See pricing", "href": "/pricing" },
-    "ctaSecondary": { "label": "Book Now", "href": "/book" },
-    "media": { "image": "", "scrim": 40 }
+    "ctaPrimary": {
+      "label": "See pricing",
+      "href": "/pricing"
+    },
+    "ctaSecondary": {
+      "label": "Book Now",
+      "href": "/book"
+    },
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167871696-photo-1696841212541-449ca29397cc.jpg",
+      "scrim": 40
+    }
   },
-  "categoryGrid": { "variant": "panels", "intro": "Browse by what you need today.", "categories": "all", "showCounts": true, "showPriceFrom": true },
-  "treatmentSelector": { "variant": "inline", "heading": "Not sure where to start?", "intro": "Answer three quick questions and we'll suggest the right treatment." },
+  "categoryGrid": {
+    "variant": "panels",
+    "intro": "Browse by what you need today.",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "treatmentSelector": {
+    "variant": "inline",
+    "heading": "Not sure where to start?",
+    "intro": "Answer three quick questions and we'll suggest the right treatment."
+  },
   "ctaBanner": {
     "variant": "solid-token",
     "heading": "Ready when you are.",
     "subline": "Book online in under a minute — no payment required.",
-    "ctaPrimary": { "label": "Book Now", "href": "/book" }
+    "ctaPrimary": {
+      "label": "Book Now",
+      "href": "/book"
+    }
   },
   "seo": {
     "title": "Spa Services & Treatments | Spa Paradise Middletown",
     "description": "Massage, foot reflexology, East Asian therapies, facials & body treatments in Middletown, NY. One menu, transparent pricing, open every day.",
     "h1": "Every treatment, one destination.",
     "canonicalUrl": "/en/services",
-    "schema": ["OfferCatalog", "BreadcrumbList"],
-    "keywords": ["spa services middletown ny", "massage services middletown", "facials middletown ny"],
-    "noindex": false, "changefreq": "monthly", "priority": 0.9, "keywordCluster": "services-hub", "pageType": "services"
+    "schema": [
+      "OfferCatalog",
+      "BreadcrumbList"
+    ],
+    "keywords": [
+      "spa services middletown ny",
+      "massage services middletown",
+      "facials middletown ny"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.9,
+    "keywordCluster": "services-hub",
+    "pageType": "services"
   }
 }

@@ -5,7 +5,7 @@
     "headline": "米德尔敦真正的日间水疗。",
     "subline": "我们创立天堂水疗，是想为街坊带来一家安静、专业、价格透明的水疗——提供中英文服务，每天营业。",
     "media": {
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167880628-photo-1637730826933-54287f79e1c3.jpg",
       "scrim": 40
     }
   },
@@ -114,7 +114,7 @@
       "label": "联系我们",
       "href": "/contact"
     },
-    "media": ""
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167881721-photo-1646909106850-8c426285ed2a.jpg"
   },
   "seo": {
     "title": "关于我们 | 天堂水疗 米德尔敦",

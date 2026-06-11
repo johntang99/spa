@@ -5,7 +5,7 @@
     "headline": "A real day spa for Middletown.",
     "subline": "We built Spa Paradise to be the calm, professional, transparently-priced spa our neighbors deserve — in English and Chinese, open every day.",
     "media": {
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167880628-photo-1637730826933-54287f79e1c3.jpg",
       "scrim": 40
     }
   },
@@ -114,7 +114,7 @@
       "label": "Contact us",
       "href": "/contact"
     },
-    "media": ""
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167881721-photo-1646909106850-8c426285ed2a.jpg"
   },
   "seo": {
     "title": "About Us | Spa Paradise Middletown, NY",

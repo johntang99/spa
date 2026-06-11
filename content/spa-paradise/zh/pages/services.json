@@ -4,25 +4,58 @@
     "eyebrow": "护理菜单",
     "headline": "所有护理，一站尽享。",
     "subline": "按摩、足部反射疗法、东方传统疗法、面部与身体护理——尽在一处，价格透明。",
-    "ctaPrimary": { "label": "查看价格", "href": "/pricing" },
-    "ctaSecondary": { "label": "立即预约", "href": "/book" },
-    "media": { "image": "", "scrim": 40 }
+    "ctaPrimary": {
+      "label": "查看价格",
+      "href": "/pricing"
+    },
+    "ctaSecondary": {
+      "label": "立即预约",
+      "href": "/book"
+    },
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167871696-photo-1696841212541-449ca29397cc.jpg",
+      "scrim": 40
+    }
   },
-  "categoryGrid": { "variant": "panels", "intro": "按今天的需要来浏览。", "categories": "all", "showCounts": true, "showPriceFrom": true },
-  "treatmentSelector": { "variant": "inline", "heading": "不知从何选起？", "intro": "回答三个简单的问题，我们为您推荐合适的护理。" },
+  "categoryGrid": {
+    "variant": "panels",
+    "intro": "按今天的需要来浏览。",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "treatmentSelector": {
+    "variant": "inline",
+    "heading": "不知从何选起？",
+    "intro": "回答三个简单的问题，我们为您推荐合适的护理。"
+  },
   "ctaBanner": {
     "variant": "solid-token",
     "heading": "随时为您准备。",
     "subline": "在线预约不到一分钟——无需付款。",
-    "ctaPrimary": { "label": "立即预约", "href": "/book" }
+    "ctaPrimary": {
+      "label": "立即预约",
+      "href": "/book"
+    }
   },
   "seo": {
     "title": "水疗护理项目 | 天堂水疗 米德尔敦",
     "description": "纽约米德尔敦的按摩、足部反射疗法、东方传统疗法、面部与身体护理。一份菜单，价格透明，每天营业。",
     "h1": "所有护理，一站尽享。",
     "canonicalUrl": "/zh/services",
-    "schema": ["OfferCatalog", "BreadcrumbList"],
-    "keywords": ["米德尔敦水疗项目", "米德尔敦按摩服务", "米德尔敦面部护理"],
-    "noindex": false, "changefreq": "monthly", "priority": 0.9, "keywordCluster": "services-hub", "pageType": "services"
+    "schema": [
+      "OfferCatalog",
+      "BreadcrumbList"
+    ],
+    "keywords": [
+      "米德尔敦水疗项目",
+      "米德尔敦按摩服务",
+      "米德尔敦面部护理"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.9,
+    "keywordCluster": "services-hub",
+    "pageType": "services"
   }
 }
