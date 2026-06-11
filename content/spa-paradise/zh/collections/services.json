@@ -776,6 +776,28 @@
       "intensity": 1,
       "enabled": true,
       "order": 5
+    },
+    {
+      "id": "revive-with-rose",
+      "categoryId": "facials",
+      "name": "玫瑰焕活面部护理",
+      "slug": "revive-with-rose",
+      "short": "温和的玫瑰面部护理，舒缓并焕活敏感肌肤。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781170270549-photo-1585768750637-ada36319a484.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 89
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "skin",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 7
     }
   ],
   "addons": [
