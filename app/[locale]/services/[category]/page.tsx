@@ -19,7 +19,7 @@ const FAQ_SCOPE: Record<string, string> = {
 
 export async function generateStaticParams() {
   // Category ids are stable across locales; emit the 5 treatment categories per locale.
-  const cats = ['massage', 'foot-reflexology', 'east-asian-therapies', 'facials', 'body-treatments'];
+  const cats = ['massage', 'foot-reflexology', 'east-asian-therapies', 'acupuncture', 'facials', 'body-treatments'];
   return locales.flatMap((locale) => cats.map((category) => ({ locale, category })));
 }
 
@@ -62,7 +62,7 @@ export default async function CategoryPage({ params }: PageProps) {
       subline: cat.intro,
       ctaPrimary: { label: locale === 'zh' ? '立即预约' : 'Book Now', href: '/book' },
       ctaSecondary: { label: locale === 'zh' ? '查看价格' : 'See pricing', href: '/pricing' },
-      media: { image: '', scrim: 40 },
+      media: { image: cat.image || '', scrim: 45 },
     },
     serviceCards: {
       variant: 'grid',
