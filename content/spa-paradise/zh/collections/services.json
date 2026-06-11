@@ -680,6 +680,102 @@
       "intensity": 1,
       "enabled": true,
       "order": 2
+    },
+    {
+      "id": "thai-massage",
+      "categoryId": "massage",
+      "name": "泰式按摩",
+      "slug": "thai-massage",
+      "short": "传统泰式手法，配合助力伸展与有节奏的指压。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169316412-photo-1591343395082-e120087004b4.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 85
+        },
+        {
+          "minutes": 90,
+          "price": 120
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "recovery",
+        "flexibility"
+      ],
+      "intensity": 3,
+      "enabled": true,
+      "order": 12
+    },
+    {
+      "id": "turkish-massage",
+      "categoryId": "massage",
+      "name": "土耳其按摩",
+      "slug": "turkish-massage",
+      "short": "温暖的土耳其浴式仪式——清洁、去角质与全身按摩。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169317465-photo-1582295525215-cacf275639d8.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 95
+        },
+        {
+          "minutes": 90,
+          "price": 135
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "relaxation",
+        "skin"
+      ],
+      "intensity": 2,
+      "enabled": true,
+      "order": 13
+    },
+    {
+      "id": "salt-aroma-treatment",
+      "categoryId": "body-treatments",
+      "name": "海盐芳香护理",
+      "slug": "salt-aroma-treatment",
+      "short": "海盐磨砂搭配芳香精油，焕活身心。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169319064-photo-1659022320136-b9bb379878a1.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 80
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "skin",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "hydrotherapy",
+      "categoryId": "body-treatments",
+      "name": "水疗放松护理",
+      "slug": "hydrotherapy",
+      "short": "舒缓的水疗放松，让身体彻底休息。",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169339927-photo-1603077864615-538e955d1ad1.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 85
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "relaxation",
+        "recovery"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 5
     }
   ],
   "addons": [

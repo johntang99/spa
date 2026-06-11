@@ -680,6 +680,102 @@
       "intensity": 1,
       "enabled": true,
       "order": 2
+    },
+    {
+      "id": "thai-massage",
+      "categoryId": "massage",
+      "name": "Thai Massage",
+      "slug": "thai-massage",
+      "short": "Traditional Thai bodywork with assisted stretching and rhythmic acupressure.",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169316412-photo-1591343395082-e120087004b4.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 85
+        },
+        {
+          "minutes": 90,
+          "price": 120
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "recovery",
+        "flexibility"
+      ],
+      "intensity": 3,
+      "enabled": true,
+      "order": 12
+    },
+    {
+      "id": "turkish-massage",
+      "categoryId": "massage",
+      "name": "Turkish Massage",
+      "slug": "turkish-massage",
+      "short": "A warm hammam-style ritual — cleansing, exfoliation, and a full-body massage.",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169317465-photo-1582295525215-cacf275639d8.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 95
+        },
+        {
+          "minutes": 90,
+          "price": 135
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "relaxation",
+        "skin"
+      ],
+      "intensity": 2,
+      "enabled": true,
+      "order": 13
+    },
+    {
+      "id": "salt-aroma-treatment",
+      "categoryId": "body-treatments",
+      "name": "Salt & Aroma",
+      "slug": "salt-aroma-treatment",
+      "short": "A sea-salt body polish with aromatic oils to renew and refresh.",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169319064-photo-1659022320136-b9bb379878a1.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 80
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "skin",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "hydrotherapy",
+      "categoryId": "body-treatments",
+      "name": "Hydro",
+      "slug": "hydrotherapy",
+      "short": "A soothing hydrotherapy session to relax and let the body fully rest.",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169339927-photo-1603077864615-538e955d1ad1.jpg",
+      "tiers": [
+        {
+          "minutes": 60,
+          "price": 85
+        }
+      ],
+      "badge": null,
+      "goalTags": [
+        "relaxation",
+        "recovery"
+      ],
+      "intensity": 1,
+      "enabled": true,
+      "order": 5
     }
   ],
   "addons": [
