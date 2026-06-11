@@ -3,7 +3,7 @@
     {
       "id": "massage",
       "name": "按摩",
-      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781163851953-photo-1544161515-4ab6ce6db874.jpg",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165397654-photo-1741522509438-a120c0bb5e88.jpg",
       "intro": "持证理疗按摩——放松、恢复与舒缓。",
       "order": 1
     },
@@ -11,37 +11,43 @@
       "id": "foot-reflexology",
       "name": "足部与反射疗法",
       "intro": "躺椅休息区的足部穴位疗法。",
-      "order": 2
+      "order": 2,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165399248-photo-1611073615830-9f76902c10fe.jpg"
     },
     {
       "id": "east-asian-therapies",
       "name": "东方传统疗法",
       "intro": "传统的拔罐、刮痧与推拿理疗。",
-      "order": 3
+      "order": 3,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165400352-photo-1598555748505-ccca0d9b9f7b.jpg"
     },
     {
       "id": "facials",
       "name": "面部护理",
       "intro": "适合各种肤质的清洁、护理与补水。",
-      "order": 4
+      "order": 4,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165401427-photo-1570172619644-dfd03ed5d881.jpg"
     },
     {
       "id": "body-treatments",
       "name": "身体护理",
       "intro": "磨砂、裹敷与背部护理，焕活全身。",
-      "order": 5
+      "order": 5,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165795832-photo-1630381260593-45e8f922997b.jpg"
     },
     {
       "id": "combos-packages",
       "name": "套组与套餐",
       "intro": "精心搭配的多重护理与超值套餐。",
-      "order": 6
+      "order": 6,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165404502-photo-1643122966676-29e8597257f7.jpg"
     },
     {
       "id": "add-ons",
       "name": "附加项目",
       "intro": "为任意符合条件的护理升级加分。",
-      "order": 7
+      "order": 7,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165405211-photo-1624454002302-36b824d7bd0a.jpg"
     }
   ],
   "services": [
@@ -50,7 +56,7 @@
       "name": "瑞典式按摩",
       "slug": "swedish-massage",
       "badge": "popular",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165611982-photo-1745327883508-b6cd32e5dde5.jpg",
       "order": 1,
       "short": "舒缓流畅的手法，带来全身放松。",
       "tiers": [
@@ -80,7 +86,7 @@
       "name": "深层组织按摩",
       "slug": "deep-tissue-massage",
       "badge": "popular",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165426705-photo-1603309288253-08db72e5117d.jpg",
       "order": 2,
       "short": "缓慢而集中的力度，化解顽固的紧绷与结节。",
       "tiers": [
@@ -114,7 +120,7 @@
       "id": "hot-stone-massage",
       "name": "热石按摩",
       "slug": "hot-stone-massage",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165543970-photo-1600334089648-b0d9d3028eb2.jpg",
       "order": 3,
       "short": "温热玄武岩层层融化紧张。",
       "tiers": [
@@ -140,7 +146,7 @@
       "name": "情侣按摩",
       "slug": "couples-massage",
       "badge": "popular",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165483321-photo-1611920630418-f587fdc3bf94.jpg",
       "order": 4,
       "short": "在私密情侣房中并肩享受。每对价格。",
       "tiers": [
@@ -166,7 +172,7 @@
       "id": "prenatal-massage",
       "name": "孕期按摩",
       "slug": "prenatal-massage",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165430602-photo-1457342813143-a1ae27448a82.jpg",
       "order": 5,
       "short": "持证侧卧护理，适合孕期第4–9个月。",
       "tiers": [
@@ -194,7 +200,7 @@
       "id": "sports-massage",
       "name": "运动按摩",
       "slug": "sports-massage",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165431633-photo-1649751361457-01d3a696c7e6.jpg",
       "order": 6,
       "short": "针对训练与赛事的恢复手法。",
       "tiers": [
@@ -224,7 +230,7 @@
       "id": "chair-massage",
       "name": "椅式按摩",
       "slug": "chair-massage",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165432498-photo-1611769446317-3e7a467fb35e.jpg",
       "order": 7,
       "short": "着装快速的颈肩背放松。",
       "tiers": [
@@ -245,7 +251,7 @@
       "id": "tui-na-bodywork",
       "name": "推拿",
       "slug": "tui-na-bodywork",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165433323-photo-1519823551278-64ac92734fb1.jpg",
       "order": 8,
       "short": "传统中式理疗按摩。",
       "tiers": [
@@ -274,7 +280,7 @@
       "id": "aromatherapy-massage",
       "name": "芳香精油按摩",
       "slug": "aromatherapy-massage",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165434172-photo-1515377905703-c4788e51af15.jpg",
       "order": 9,
       "short": "瑞典式手法搭配精油调配。",
       "tiers": [
@@ -300,7 +306,7 @@
       "name": "足部反射疗法",
       "slug": "foot-reflexology",
       "badge": "popular",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165544975-photo-1675159364623-6938e10245f0.jpg",
       "order": 10,
       "short": "躺椅休息区的足部穴位疗法。",
       "tiers": [
@@ -326,7 +332,7 @@
       "id": "foot-body-combo",
       "name": "足部+身体套组",
       "slug": "foot-body-combo",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165455684-photo-1675159364615-38e1f6b62282.jpg",
       "order": 11,
       "short": "30分钟足疗，30分钟背肩。",
       "tiers": [
@@ -348,7 +354,7 @@
       "id": "massage-cupping",
       "name": "按摩+拔罐",
       "slug": "massage-cupping",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165546072-photo-1603309288245-c9b16e639aaf.jpg",
       "order": 12,
       "short": "理疗按摩后以传统拔罐收尾。",
       "tiers": [
@@ -377,7 +383,7 @@
       "id": "gua-sha",
       "name": "刮痧护理",
       "slug": "gua-sha",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165457440-photo-1600428877878-1a0fd85beda8.jpg",
       "order": 13,
       "short": "传统刮痧手法，可于任意60分钟以上按摩中加做。",
       "tiers": [
@@ -398,7 +404,7 @@
       "name": "招牌面部护理",
       "slug": "signature-facial",
       "badge": "popular",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165458346-photo-1643684391140-c5056cfd3436.jpg",
       "order": 14,
       "short": "清洁、去角质、护理、补水。",
       "tiers": [
@@ -419,7 +425,7 @@
       "id": "deep-cleansing-facial",
       "name": "深层清洁面部护理",
       "slug": "deep-cleansing-facial",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165563562-photo-1596755389378-c31d21fd1273.jpg",
       "order": 15,
       "short": "适合易堵塞或油性肌肤。",
       "tiers": [
@@ -439,7 +445,7 @@
       "id": "anti-aging-facial",
       "name": "抗衰老面部护理",
       "slug": "anti-aging-facial",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165460102-photo-1616394584738-fc6e612e71b9.jpg",
       "order": 16,
       "short": "紧致护理搭配针对性精华。",
       "tiers": [
@@ -459,7 +465,7 @@
       "id": "body-scrub",
       "name": "身体磨砂",
       "slug": "body-scrub",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165461051-photo-1683944433023-027a3f443ae4.jpg",
       "order": 17,
       "short": "全身去角质，并以补水收尾。",
       "tiers": [
@@ -480,7 +486,7 @@
       "id": "body-wrap",
       "name": "身体裹敷",
       "slug": "body-wrap",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165480629-photo-1630595632518-8217c0bceb8f.jpg",
       "order": 18,
       "short": "温热裹敷，柔软肌肤、促进循环。",
       "tiers": [
@@ -501,7 +507,7 @@
       "id": "back-treatment",
       "name": "背部护理",
       "slug": "back-treatment",
-      "image": "",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165481919-photo-1639162906614-0603b0ae95fd.jpg",
       "order": 19,
       "short": "专为背部设计的“面部护理”。",
       "tiers": [
