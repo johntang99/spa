@@ -1,12 +1,12 @@
 import { getSites } from '@/lib/sites';
-import { ContentEditor } from '@/components/admin/ContentEditor';
+import { SpaCatalogManager } from '@/components/admin/SpaCatalogManager';
 import { getSession } from '@/lib/admin/auth';
 import { filterSitesForUser } from '@/lib/admin/permissions';
 
 export default async function AdminServicesPage({
   searchParams,
 }: {
-  searchParams?: { siteId?: string; locale?: string; file?: string };
+  searchParams?: { siteId?: string; locale?: string };
 }) {
   const session = await getSession();
   const sites = await getSites();
@@ -18,17 +18,12 @@ export default async function AdminServicesPage({
   const selectedSiteId = selectedSite?.id || '';
   const selectedLocale =
     searchParams?.locale || selectedSite?.defaultLocale || 'en';
-  const initialFilePath = searchParams?.file;
 
   return (
-    <ContentEditor
+    <SpaCatalogManager
       sites={visibleSites}
       selectedSiteId={selectedSiteId}
       selectedLocale={selectedLocale}
-      initialFilePath={initialFilePath}
-      fileFilter="servicesItems"
-      titleOverride="Services"
-      basePath="/admin/services"
     />
   );
 }

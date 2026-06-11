@@ -476,6 +476,11 @@ export function resolveContentPath(siteId: string, locale: string, filePath: str
     return path.join(CONTENT_DIR, siteId, locale, filePath);
   }
 
+  // Collection files (catalog, testimonials, faqs, team, packages, etc.) live per-locale.
+  if (filePath.startsWith('collections/') && !filePath.includes('..')) {
+    return path.join(CONTENT_DIR, siteId, locale, filePath);
+  }
+
   if (filePath.startsWith('blog/') || filePath.startsWith('blog-scheduled/')) {
     return path.join(CONTENT_DIR, siteId, locale, filePath);
   }
