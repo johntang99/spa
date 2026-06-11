@@ -1,5 +1,5 @@
 import { getSites } from '@/lib/sites';
-import { ContentEditor } from '@/components/admin/ContentEditor';
+import { SpaPageEditor } from '@/components/admin/SpaPageEditor';
 import { getSession } from '@/lib/admin/auth';
 import { filterSitesForUser } from '@/lib/admin/permissions';
 
@@ -21,7 +21,7 @@ export default async function AdminContentPage({
   const initialFilePath = searchParams?.file;
 
   return (
-    <ContentEditor
+    <SpaPageEditor
       sites={visibleSites}
       selectedSiteId={selectedSiteId}
       selectedLocale={selectedLocale}

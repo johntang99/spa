@@ -1,80 +1,204 @@
 {
-  "hero": {
-    "variant": "full-bleed-image",
-    "eyebrow": "米德尔敦日间水疗",
-    "headline": "走出喧嚣，步入静谧。",
-    "subline": "持牌按摩、足部反射疗法、面部护理与身体护理，一站式服务——价格透明、在线预约、每天营业。",
-    "badges": [
-      { "iconKey": "star", "label": "4.8 · 212条评价" },
-      { "iconKey": "shield", "label": "纽约州持牌理疗师" },
-      { "iconKey": "clock", "label": "每天营业" }
+  "seo": {
+    "h1": "走出喧嚣，步入静谧。",
+    "title": "纽约米德尔敦日间水疗与按摩 | 天堂水疗",
+    "schema": [
+      "DaySpa",
+      "LocalBusiness"
     ],
-    "ctaPrimary": { "label": "立即预约", "href": "/book" },
-    "ctaSecondary": { "label": "查看价目", "href": "/pricing" },
-    "media": { "image": "", "scrim": 45 },
+    "noindex": false,
+    "keywords": [
+      "米德尔敦水疗",
+      "米德尔敦按摩",
+      "天堂水疗"
+    ],
+    "pageType": "home",
+    "priority": 1,
+    "changefreq": "weekly",
+    "description": "纽约米德尔敦的持牌按摩、足部反射疗法、面部与身体护理。价格透明、在线预约、每天营业，提供中英文服务。",
+    "canonicalUrl": "/zh",
+    "keywordCluster": "home"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781166950020-photo-1761470575018-135c213340eb.jpg",
+      "scrim": 45
+    },
+    "badges": [
+      {
+        "label": "4.8 · 212条评价",
+        "iconKey": "star"
+      },
+      {
+        "label": "纽约州持牌理疗师",
+        "iconKey": "shield"
+      },
+      {
+        "label": "每天营业",
+        "iconKey": "clock"
+      }
+    ],
+    "eyebrow": "米德尔敦日间水疗",
+    "subline": "持牌按摩、足部反射疗法、面部护理与身体护理，一站式服务——价格透明、在线预约、每天营业。",
+    "variant": "full-bleed-image",
+    "headline": "走出喧嚣，步入静谧。",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    },
+    "ctaSecondary": {
+      "href": "/pricing",
+      "label": "查看价目"
+    },
     "campaignAware": true
   },
-  "trustBar": {
-    "variant": "bar",
-    "items": [
-      { "type": "rating" },
-      { "type": "licensed", "label": "纽约州持牌理疗师" },
-      { "type": "hygiene", "label": "每次更换干净布草" },
-      { "type": "bilingual", "label": "中文 & English" },
-      { "type": "hours", "label": "每天营业" }
-    ]
-  },
-  "categoryGrid": { "variant": "tiles", "intro": "一份菜单，一站式目的地。", "categories": "all", "showCounts": true, "showPriceFrom": true },
-  "serviceCards": { "variant": "signature", "heading": "招牌护理", "source": { "mode": "tag", "tag": "popular", "limit": 6 }, "showTierChips": true, "bookCta": true },
   "steps": {
-    "variant": "horizontal",
-    "heading": "预约轻松简单",
     "items": [
-      { "title": "选择护理", "body": "挑选项目与时长——每个价格都公开透明。" },
-      { "title": "选择时间", "body": "在线预约不到一分钟，预约无需付款。" },
-      { "title": "尽情放松", "body": "到店、放松，护理结束后再付款。" }
-    ]
+      {
+        "body": "挑选项目与时长——每个价格都公开透明。",
+        "title": "选择护理"
+      },
+      {
+        "body": "在线预约不到一分钟，预约无需付款。",
+        "title": "选择时间"
+      },
+      {
+        "body": "到店、放松，护理结束后再付款。",
+        "title": "尽情放松"
+      }
+    ],
+    "heading": "预约轻松简单",
+    "variant": "horizontal"
   },
   "iconGrid": {
-    "variant": "pillars",
-    "heading": "为什么选择天堂水疗",
     "items": [
-      { "iconKey": "license", "title": "持牌专业护理", "body": "每位理疗师均持纽约州执照，专业盖布与洁净房间是基本标准。" },
-      { "iconKey": "menu", "title": "完整菜单，一站式目的地", "body": "按摩、反射疗法、面部与身体护理——无需奔波于三个不同的地方。" },
-      { "iconKey": "tag", "title": "诚实透明的价格", "body": "公开标价，人人一致。没有推销，没有意外加价。" },
-      { "iconKey": "globe", "title": "双语贴心服务", "body": "全程可用中文或英文预约与接受服务——每天营业。" }
-    ]
+      {
+        "body": "每位理疗师均持纽约州执照，专业盖布与洁净房间是基本标准。",
+        "title": "持牌专业护理",
+        "iconKey": "license"
+      },
+      {
+        "body": "按摩、反射疗法、面部与身体护理——无需奔波于三个不同的地方。",
+        "title": "完整菜单，一站式目的地",
+        "iconKey": "menu"
+      },
+      {
+        "body": "公开标价，人人一致。没有推销，没有意外加价。",
+        "title": "诚实透明的价格",
+        "iconKey": "tag"
+      },
+      {
+        "body": "全程可用中文或英文预约与接受服务——每天营业。",
+        "title": "双语贴心服务",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "为什么选择天堂水疗",
+    "variant": "pillars"
   },
-  "featurePanel": {
-    "variant": "couples",
-    "eyebrow": "双人时光",
-    "heading": "私密情侣房",
-    "body": "在安静私密的房间中并肩享受按摩——可加茶点，悠然度过一个下午。纪念日、生日，或只是想犒赏自己，都是人气之选。",
-    "bullets": ["两位理疗师并肩服务", "可加茶点服务", "轻松作为礼物"],
-    "media": "",
-    "mediaSide": "right",
-    "cta": { "label": "了解情侣护理", "href": "/services/massage" }
+  "mapBlock": {
+    "lazy": true,
+    "variant": "embed"
   },
-  "promoStrip": { "variant": "gift", "heading": "把一个悠闲的下午送给所爱之人", "subline": "礼品卡永不过期，一分钟即可送出。", "cta": { "label": "赠送礼品卡", "href": "/gift-cards" }, "campaignAware": true },
-  "testimonials": { "variant": "wall", "heading": "客人怎么说", "filter": { "limit": 6 }, "showSource": true },
-  "teamGrid": { "variant": "preview", "heading": "认识您的理疗师", "refs": "all" },
-  "napHours": { "variant": "visit", "heading": "到访我们", "note": "12 Grove St 提供免费停车。" },
-  "mapBlock": { "variant": "embed", "lazy": true },
+  "napHours": {
+    "note": "12 Grove St 提供免费停车。",
+    "heading": "到访我们",
+    "variant": "visit"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "认识您的理疗师",
+    "variant": "preview"
+  },
+  "trustBar": {
+    "items": [
+      {
+        "type": "rating"
+      },
+      {
+        "type": "licensed",
+        "label": "纽约州持牌理疗师"
+      },
+      {
+        "type": "hygiene",
+        "label": "每次更换干净布草"
+      },
+      {
+        "type": "bilingual",
+        "label": "中文 & English"
+      },
+      {
+        "type": "hours",
+        "label": "每天营业"
+      }
+    ],
+    "variant": "bar"
+  },
   "ctaBanner": {
-    "variant": "image-bg",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167124234-photo-1454262041357-5d96f50a2f27.jpg",
     "heading": "您的护理之席，已为您备好。",
     "subline": "米德尔敦按摩——一分钟在线预约。",
-    "ctaPrimary": { "label": "立即预约", "href": "/book" },
-    "ctaSecondary": { "label": "致电 (845) 800-6600", "href": "tel:8458006600" },
-    "media": ""
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    },
+    "ctaSecondary": {
+      "href": "tel:8458006600",
+      "label": "致电 (845) 800-6600"
+    }
   },
-  "seo": {
-    "title": "纽约米德尔敦日间水疗与按摩 | 天堂水疗",
-    "description": "纽约米德尔敦的持牌按摩、足部反射疗法、面部与身体护理。价格透明、在线预约、每天营业，提供中英文服务。",
-    "h1": "走出喧嚣，步入静谧。",
-    "canonicalUrl": "/zh",
-    "schema": ["DaySpa", "LocalBusiness"],
-    "keywords": ["米德尔敦水疗", "米德尔敦按摩", "天堂水疗"],
-    "noindex": false, "changefreq": "weekly", "priority": 1, "keywordCluster": "home", "pageType": "home"
+  "promoStrip": {
+    "cta": {
+      "href": "/gift-cards",
+      "label": "赠送礼品卡"
+    },
+    "heading": "把一个悠闲的下午送给所爱之人",
+    "subline": "礼品卡永不过期，一分钟即可送出。",
+    "variant": "gift",
+    "campaignAware": true
+  },
+  "categoryGrid": {
+    "intro": "一份菜单，一站式目的地。",
+    "variant": "tiles",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/services/massage",
+      "label": "了解情侣护理"
+    },
+    "body": "在安静私密的房间中并肩享受按摩——可加茶点，悠然度过一个下午。纪念日、生日，或只是想犒赏自己，都是人气之选。",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167023713-photo-1737352777897-e22953991a32.jpg",
+    "bullets": [
+      "两位理疗师并肩服务",
+      "可加茶点服务",
+      "轻松作为礼物"
+    ],
+    "eyebrow": "双人时光",
+    "heading": "私密情侣房",
+    "variant": "couples",
+    "mediaSide": "right"
+  },
+  "serviceCards": {
+    "source": {
+      "tag": "popular",
+      "mode": "tag",
+      "limit": 6
+    },
+    "bookCta": true,
+    "heading": "招牌护理",
+    "variant": "signature",
+    "showTierChips": true
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 6
+    },
+    "heading": "客人怎么说",
+    "variant": "wall",
+    "showSource": true
   }
 }

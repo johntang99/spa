@@ -1,80 +1,204 @@
 {
-  "hero": {
-    "variant": "full-bleed-image",
-    "eyebrow": "Middletown Day Spa",
-    "headline": "Step out of the day, into the quiet.",
-    "subline": "Licensed massage, foot reflexology, facials, and body care under one roof — transparent pricing, online booking, open every day.",
-    "badges": [
-      { "iconKey": "star", "label": "4.8 · 212 reviews" },
-      { "iconKey": "shield", "label": "Licensed NY therapists" },
-      { "iconKey": "clock", "label": "Open every day" }
+  "seo": {
+    "h1": "Step out of the day, into the quiet.",
+    "title": "Day Spa & Massage in Middletown, NY | Spa Paradise",
+    "schema": [
+      "DaySpa",
+      "LocalBusiness"
     ],
-    "ctaPrimary": { "label": "Book Now", "href": "/book" },
-    "ctaSecondary": { "label": "View the menu", "href": "/pricing" },
-    "media": { "image": "", "scrim": 45 },
+    "noindex": false,
+    "keywords": [
+      "day spa middletown ny",
+      "massage middletown ny",
+      "spa paradise"
+    ],
+    "pageType": "home",
+    "priority": 1,
+    "changefreq": "weekly",
+    "description": "Licensed massage, foot reflexology, facials & body care in Middletown, NY. Transparent pricing, online booking, open every day. English & 中文.",
+    "canonicalUrl": "/en",
+    "keywordCluster": "home"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781166950020-photo-1761470575018-135c213340eb.jpg",
+      "scrim": 45
+    },
+    "badges": [
+      {
+        "label": "4.8 · 212 reviews",
+        "iconKey": "star"
+      },
+      {
+        "label": "Licensed NY therapists",
+        "iconKey": "shield"
+      },
+      {
+        "label": "Open every day",
+        "iconKey": "clock"
+      }
+    ],
+    "eyebrow": "Middletown Day Spa",
+    "subline": "Licensed massage, foot reflexology, facials, and body care under one roof — transparent pricing, online booking, open every day.",
+    "variant": "full-bleed-image",
+    "headline": "Step out of the day, into the quiet.",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    },
+    "ctaSecondary": {
+      "href": "/pricing",
+      "label": "View the menu"
+    },
     "campaignAware": true
   },
-  "trustBar": {
-    "variant": "bar",
-    "items": [
-      { "type": "rating" },
-      { "type": "licensed", "label": "Licensed NY therapists" },
-      { "type": "hygiene", "label": "Fresh linens every session" },
-      { "type": "bilingual", "label": "English & 中文" },
-      { "type": "hours", "label": "Open every day" }
-    ]
-  },
-  "categoryGrid": { "variant": "tiles", "intro": "One menu, one destination.", "categories": "all", "showCounts": true, "showPriceFrom": true },
-  "serviceCards": { "variant": "signature", "heading": "Signature treatments", "source": { "mode": "tag", "tag": "popular", "limit": 6 }, "showTierChips": true, "bookCta": true },
   "steps": {
-    "variant": "horizontal",
-    "heading": "Booking is effortless",
     "items": [
-      { "title": "Choose your treatment", "body": "Pick a service and length — every price is published." },
-      { "title": "Pick a time", "body": "Book online in under a minute. No payment required to reserve." },
-      { "title": "Relax", "body": "Arrive, unwind, and pay after your treatment." }
-    ]
+      {
+        "body": "Pick a service and length — every price is published.",
+        "title": "Choose your treatment"
+      },
+      {
+        "body": "Book online in under a minute. No payment required to reserve.",
+        "title": "Pick a time"
+      },
+      {
+        "body": "Arrive, unwind, and pay after your treatment.",
+        "title": "Relax"
+      }
+    ],
+    "heading": "Booking is effortless",
+    "variant": "horizontal"
   },
   "iconGrid": {
-    "variant": "pillars",
-    "heading": "Why Spa Paradise",
     "items": [
-      { "iconKey": "license", "title": "Licensed, professional care", "body": "Every therapist is licensed by New York State, with professional draping and clean rooms as standard." },
-      { "iconKey": "menu", "title": "A complete menu, one destination", "body": "Massage, reflexology, facials, and body care — no need to drive to three different places." },
-      { "iconKey": "tag", "title": "Honest, transparent pricing", "body": "Published prices, the same for everyone. No upsells, no surprise add-ons." },
-      { "iconKey": "globe", "title": "Bilingual hospitality", "body": "Book and be served entirely in English or 中文 — open every day." }
-    ]
+      {
+        "body": "Every therapist is licensed by New York State, with professional draping and clean rooms as standard.",
+        "title": "Licensed, professional care",
+        "iconKey": "license"
+      },
+      {
+        "body": "Massage, reflexology, facials, and body care — no need to drive to three different places.",
+        "title": "A complete menu, one destination",
+        "iconKey": "menu"
+      },
+      {
+        "body": "Published prices, the same for everyone. No upsells, no surprise add-ons.",
+        "title": "Honest, transparent pricing",
+        "iconKey": "tag"
+      },
+      {
+        "body": "Book and be served entirely in English or 中文 — open every day.",
+        "title": "Bilingual hospitality",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "Why Spa Paradise",
+    "variant": "pillars"
   },
-  "featurePanel": {
-    "variant": "couples",
-    "eyebrow": "For two",
-    "heading": "Our private couples room",
-    "body": "Side-by-side massage in a calm, private room — add tea service and make an afternoon of it. A favorite for anniversaries, birthdays, and just-because.",
-    "bullets": ["Two therapists, side by side", "Tea service available", "Easy to gift"],
-    "media": "",
-    "mediaSide": "right",
-    "cta": { "label": "Explore couples", "href": "/services/massage" }
+  "mapBlock": {
+    "lazy": true,
+    "variant": "embed"
   },
-  "promoStrip": { "variant": "gift", "heading": "Give the gift of an afternoon off", "subline": "Gift cards never expire and take a minute to send.", "cta": { "label": "Send a gift card", "href": "/gift-cards" }, "campaignAware": true },
-  "testimonials": { "variant": "wall", "heading": "What guests say", "filter": { "limit": 6 }, "showSource": true },
-  "teamGrid": { "variant": "preview", "heading": "Meet your therapists", "refs": "all" },
-  "napHours": { "variant": "visit", "heading": "Visit us", "note": "Free parking at 12 Grove St." },
-  "mapBlock": { "variant": "embed", "lazy": true },
+  "napHours": {
+    "note": "Free parking at 12 Grove St.",
+    "heading": "Visit us",
+    "variant": "visit"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "Meet your therapists",
+    "variant": "preview"
+  },
+  "trustBar": {
+    "items": [
+      {
+        "type": "rating"
+      },
+      {
+        "type": "licensed",
+        "label": "Licensed NY therapists"
+      },
+      {
+        "type": "hygiene",
+        "label": "Fresh linens every session"
+      },
+      {
+        "type": "bilingual",
+        "label": "English & 中文"
+      },
+      {
+        "type": "hours",
+        "label": "Open every day"
+      }
+    ],
+    "variant": "bar"
+  },
   "ctaBanner": {
-    "variant": "image-bg",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167124234-photo-1454262041357-5d96f50a2f27.jpg",
     "heading": "Your table is waiting.",
     "subline": "Massage in Middletown, NY — book in under a minute.",
-    "ctaPrimary": { "label": "Book Now", "href": "/book" },
-    "ctaSecondary": { "label": "Call (845) 800-6600", "href": "tel:8458006600" },
-    "media": ""
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    },
+    "ctaSecondary": {
+      "href": "tel:8458006600",
+      "label": "Call (845) 800-6600"
+    }
   },
-  "seo": {
-    "title": "Day Spa & Massage in Middletown, NY | Spa Paradise",
-    "description": "Licensed massage, foot reflexology, facials & body care in Middletown, NY. Transparent pricing, online booking, open every day. English & 中文.",
-    "h1": "Step out of the day, into the quiet.",
-    "canonicalUrl": "/en",
-    "schema": ["DaySpa", "LocalBusiness"],
-    "keywords": ["day spa middletown ny", "massage middletown ny", "spa paradise"],
-    "noindex": false, "changefreq": "weekly", "priority": 1, "keywordCluster": "home", "pageType": "home"
+  "promoStrip": {
+    "cta": {
+      "href": "/gift-cards",
+      "label": "Send a gift card"
+    },
+    "heading": "Give the gift of an afternoon off",
+    "subline": "Gift cards never expire and take a minute to send.",
+    "variant": "gift",
+    "campaignAware": true
+  },
+  "categoryGrid": {
+    "intro": "One menu, one destination.",
+    "variant": "tiles",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/services/massage",
+      "label": "Explore couples"
+    },
+    "body": "Side-by-side massage in a calm, private room — add tea service and make an afternoon of it. A favorite for anniversaries, birthdays, and just-because.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167023713-photo-1737352777897-e22953991a32.jpg",
+    "bullets": [
+      "Two therapists, side by side",
+      "Tea service available",
+      "Easy to gift"
+    ],
+    "eyebrow": "For two",
+    "heading": "Our private couples room",
+    "variant": "couples",
+    "mediaSide": "right"
+  },
+  "serviceCards": {
+    "source": {
+      "tag": "popular",
+      "mode": "tag",
+      "limit": 6
+    },
+    "bookCta": true,
+    "heading": "Signature treatments",
+    "variant": "signature",
+    "showTierChips": true
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 6
+    },
+    "heading": "What guests say",
+    "variant": "wall",
+    "showSource": true
   }
 }
