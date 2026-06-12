@@ -30,7 +30,7 @@ export function BookingsManager({ sites, selectedSiteId, selectedLocale }: Booki
   const [siteId, setSiteId] = useState(selectedSiteId);
   const [locale, setLocale] = useState<Locale>(selectedLocale as Locale);
   const [from, setFrom] = useState(getDateOffset(0));
-  const [to, setTo] = useState(getDateOffset(30));
+  const [to, setTo] = useState(getDateOffset(90));
   const [bookings, setBookings] = useState<BookingRecord[]>([]);
   const [services, setServices] = useState<BookingService[]>([]);
   const [drafts, setDrafts] = useState<Record<string, BookingRecord>>({});

@@ -74,15 +74,14 @@ export async function loadBookingServicesDb(siteId: string): Promise<BookingServ
     .eq('site_id', siteId)
     .maybeSingle();
   if (error) {
-    console.error('Supabase loadBookingServicesDb error:', error);
-    return [];
+    throw new Error(`Supabase loadBookingServicesDb error: ${error.message}`);
   }
   return (data?.services as BookingService[]) || [];
 }
 
 export async function saveBookingServicesDb(siteId: string, services: BookingService[]) {
   const supabase = getSupabaseServerClient();
-  if (!supabase) return;
+  if (!supabase) throw new Error('Supabase client is not configured');
 
   const { error } = await supabase
     .from('booking_services')
@@ -95,7 +94,7 @@ export async function saveBookingServicesDb(siteId: string, services: BookingSer
       { onConflict: 'site_id' }
     );
   if (error) {
-    console.error('Supabase saveBookingServicesDb error:', error);
+    throw new Error(`Supabase saveBookingServicesDb error: ${error.message}`);
   }
 }
 
@@ -111,15 +110,14 @@ export async function loadBookingSettingsDb(
     .eq('site_id', siteId)
     .maybeSingle();
   if (error) {
-    console.error('Supabase loadBookingSettingsDb error:', error);
-    return null;
+    throw new Error(`Supabase loadBookingSettingsDb error: ${error.message}`);
   }
   return (data?.settings as BookingSettings) || null;
 }
 
 export async function saveBookingSettingsDb(siteId: string, settings: BookingSettings) {
   const supabase = getSupabaseServerClient();
-  if (!supabase) return;
+  if (!supabase) throw new Error('Supabase client is not configured');
 
   const { error } = await supabase
     .from('booking_settings')
@@ -132,7 +130,7 @@ export async function saveBookingSettingsDb(siteId: string, settings: BookingSet
       { onConflict: 'site_id' }
     );
   if (error) {
-    console.error('Supabase saveBookingSettingsDb error:', error);
+    throw new Error(`Supabase saveBookingSettingsDb error: ${error.message}`);
   }
 }
 
@@ -151,15 +149,14 @@ export async function listBookingsDb(
     .gte('date', startDate)
     .lte('date', endDate);
   if (error) {
-    console.error('Supabase listBookingsDb error:', error);
-    return [];
+    throw new Error(`Supabase listBookingsDb error: ${error.message}`);
   }
   return (data || []).map((row) => mapBookingRow(row as BookingRow));
 }
 
 export async function upsertBookingDb(siteId: string, booking: BookingRecord) {
   const supabase = getSupabaseServerClient();
-  if (!supabase) return;
+  if (!supabase) throw new Error('Supabase client is not configured');
 
   const basePayload = {
     id: booking.id,
@@ -202,6 +199,6 @@ export async function upsertBookingDb(siteId: string, booking: BookingRecord) {
     .from('bookings')
     .upsert(basePayload, { onConflict: 'id' });
   if (retryError) {
-    console.error('Supabase upsertBookingDb retry error:', retryError);
+    throw new Error(`Supabase upsertBookingDb retry error: ${retryError.message}`);
   }
 }

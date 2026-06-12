@@ -6,8 +6,16 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import OpenNowBadge from './OpenNowBadge';
-import type { HoursEntry } from '@/lib/spa/hours';
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock3,
+  Facebook,
+  Instagram,
+  Youtube,
+  MessageCircle,
+} from 'lucide-react';
 
 export interface SpaNavItem { url: string; text: string }
 export interface SpaCategory { id: string; name: string }
@@ -18,18 +26,32 @@ export default function SpaHeader({
   navItems,
   ctaLabel,
   ctaHref,
-  hours,
-  timezone,
   categories,
+  topbar,
+  email,
+  social,
 }: {
   locale: 'en' | 'zh';
   logoText: string;
   navItems: SpaNavItem[];
   ctaLabel: string;
   ctaHref: string;
-  hours: HoursEntry[];
-  timezone: string;
   categories: SpaCategory[];
+  topbar?: {
+    phone?: string;
+    phoneHref?: string;
+    address?: string;
+    addressHref?: string;
+    hours?: string;
+    badge?: string;
+  };
+  email?: string;
+  social?: {
+    facebook?: string;
+    instagram?: string;
+    youtube?: string;
+    wechat?: string;
+  };
 }) {
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
@@ -41,9 +63,81 @@ export default function SpaHeader({
   segments[1] = other;
   const otherHref = segments.join('/') || `/${other}`;
   const otherLabel = other === 'zh' ? '中文' : 'EN';
+  const topbarPhone = topbar?.phone || '';
+  const topbarPhoneHref = topbar?.phoneHref || (topbarPhone ? `tel:${topbarPhone}` : '');
+  const topbarAddress = topbar?.address || '';
+  const topbarAddressHref = topbar?.addressHref || '';
+  const topbarHours = topbar?.hours || '';
+  const topbarBadge = topbar?.badge || '';
+  const hasTopbarContent = Boolean(
+    topbarPhone ||
+      topbarAddress ||
+      topbarHours ||
+      topbarBadge ||
+      email ||
+      social?.facebook ||
+      social?.instagram ||
+      social?.youtube ||
+      social?.wechat
+  );
 
   return (
     <header className="site-header">
+      {hasTopbarContent && (
+        <div className="site-topbar">
+          <div className="container topbar-row">
+            <div className="topbar-left">
+              {topbarAddress && (
+                <a href={topbarAddressHref || '#'} className="topbar-item">
+                  <MapPin className="topbar-icon" aria-hidden />
+                  <span>{topbarAddress}</span>
+                </a>
+              )}
+              {topbarPhone && (
+                <a href={topbarPhoneHref || '#'} className="topbar-item">
+                  <Phone className="topbar-icon" aria-hidden />
+                  <span>{topbarPhone}</span>
+                </a>
+              )}
+              {email && (
+                <a href={`mailto:${email}`} className="topbar-item">
+                  <Mail className="topbar-icon" aria-hidden />
+                  <span>{email}</span>
+                </a>
+              )}
+              {!topbarAddress && !topbarPhone && topbarHours && (
+                <span className="topbar-item">
+                  <Clock3 className="topbar-icon" aria-hidden />
+                  <span>{topbarHours}</span>
+                </span>
+              )}
+            </div>
+            <div className="topbar-right">
+              {social?.facebook && (
+                <a href={social.facebook} target="_blank" rel="noreferrer" className="topbar-social" aria-label="Facebook">
+                  <Facebook className="topbar-social-icon" aria-hidden />
+                </a>
+              )}
+              {social?.instagram && (
+                <a href={social.instagram} target="_blank" rel="noreferrer" className="topbar-social" aria-label="Instagram">
+                  <Instagram className="topbar-social-icon" aria-hidden />
+                </a>
+              )}
+              {social?.youtube && (
+                <a href={social.youtube} target="_blank" rel="noreferrer" className="topbar-social" aria-label="YouTube">
+                  <Youtube className="topbar-social-icon" aria-hidden />
+                </a>
+              )}
+              {social?.wechat && (
+                <a href={social.wechat} target="_blank" rel="noreferrer" className="topbar-social" aria-label="WeChat">
+                  <MessageCircle className="topbar-social-icon" aria-hidden />
+                </a>
+              )}
+              {topbarBadge && <span className="topbar-badge">{topbarBadge}</span>}
+            </div>
+          </div>
+        </div>
+      )}
       <div className="container bar">
         <Link className="logo" href={`/${locale}`}>
           <span>{logoText}</span>
@@ -102,7 +196,6 @@ export default function SpaHeader({
         </nav>
 
         <div className="header-actions">
-          <OpenNowBadge hours={hours} timezone={timezone} locale={locale} />
           <Link className="lang-switch" href={otherHref} title={other === 'zh' ? '切换到中文' : 'Switch to English'}>
             {otherLabel}
           </Link>

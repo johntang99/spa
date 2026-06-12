@@ -169,8 +169,12 @@ async function loadFallbackBookingServices(siteId: string): Promise<BookingServi
 
 export async function loadBookingServices(siteId: string): Promise<BookingService[]> {
   if (canUseBookingDb()) {
-    const services = await loadBookingServicesDb(siteId);
-    if (services.length) return services;
+    try {
+      const services = await loadBookingServicesDb(siteId);
+      if (services.length) return services;
+    } catch (error) {
+      console.warn('Booking DB unavailable; falling back to local services JSON.', error);
+    }
   }
   const localServices = await readJsonFile<BookingService[]>(getServicesPath(siteId), []);
   if (localServices.length > 0) return localServices;
@@ -179,16 +183,24 @@ export async function loadBookingServices(siteId: string): Promise<BookingServic
 
 export async function saveBookingServices(siteId: string, services: BookingService[]) {
   if (canUseBookingDb()) {
-    await saveBookingServicesDb(siteId, services);
-    return;
+    try {
+      await saveBookingServicesDb(siteId, services);
+      return;
+    } catch (error) {
+      console.warn('Booking DB save failed; writing services to local JSON.', error);
+    }
   }
   await writeJsonFile(getServicesPath(siteId), services);
 }
 
 export async function loadBookingSettings(siteId: string): Promise<BookingSettings | null> {
   if (canUseBookingDb()) {
-    const settings = await loadBookingSettingsDb(siteId);
-    if (settings) return settings;
+    try {
+      const settings = await loadBookingSettingsDb(siteId);
+      if (settings) return settings;
+    } catch (error) {
+      console.warn('Booking DB unavailable; falling back to local settings JSON.', error);
+    }
   }
   const localSettings = await readJsonFile<BookingSettings | null>(getSettingsPath(siteId), null);
   if (localSettings) return localSettings;
@@ -197,8 +209,12 @@ export async function loadBookingSettings(siteId: string): Promise<BookingSettin
 
 export async function saveBookingSettings(siteId: string, settings: BookingSettings) {
   if (canUseBookingDb()) {
-    await saveBookingSettingsDb(siteId, settings);
-    return;
+    try {
+      await saveBookingSettingsDb(siteId, settings);
+      return;
+    } catch (error) {
+      console.warn('Booking DB save failed; writing settings to local JSON.', error);
+    }
   }
   await writeJsonFile(getSettingsPath(siteId), settings);
 }
@@ -244,7 +260,11 @@ export async function listBookings(
   endDate: string
 ): Promise<BookingRecord[]> {
   if (canUseBookingDb()) {
-    return listBookingsDb(siteId, startDate, endDate);
+    try {
+      return await listBookingsDb(siteId, startDate, endDate);
+    } catch (error) {
+      console.warn('Booking DB query failed; falling back to local bookings JSON.', error);
+    }
   }
   const monthKeys = listMonthKeysBetween(startDate, endDate);
   const all = await Promise.all(
@@ -257,8 +277,12 @@ export async function listBookings(
 
 export async function addBooking(siteId: string, booking: BookingRecord) {
   if (canUseBookingDb()) {
-    await upsertBookingDb(siteId, booking);
-    return;
+    try {
+      await upsertBookingDb(siteId, booking);
+      return;
+    } catch (error) {
+      console.warn('Booking DB write failed; falling back to local bookings JSON.', error);
+    }
   }
   const monthKey = getMonthKey(booking.date);
   const bookings = await loadBookingsForMonth(siteId, monthKey);
@@ -268,8 +292,12 @@ export async function addBooking(siteId: string, booking: BookingRecord) {
 
 export async function updateBooking(siteId: string, updated: BookingRecord) {
   if (canUseBookingDb()) {
-    await upsertBookingDb(siteId, updated);
-    return;
+    try {
+      await upsertBookingDb(siteId, updated);
+      return;
+    } catch (error) {
+      console.warn('Booking DB update failed; falling back to local bookings JSON.', error);
+    }
   }
   const monthKey = getMonthKey(updated.date);
   const bookings = await loadBookingsForMonth(siteId, monthKey);
@@ -288,8 +316,12 @@ export async function moveBooking(
   updated: BookingRecord
 ) {
   if (canUseBookingDb()) {
-    await upsertBookingDb(siteId, updated);
-    return;
+    try {
+      await upsertBookingDb(siteId, updated);
+      return;
+    } catch (error) {
+      console.warn('Booking DB move failed; falling back to local bookings JSON.', error);
+    }
   }
   const originalKey = getMonthKey(originalDate);
   const newKey = getMonthKey(updated.date);

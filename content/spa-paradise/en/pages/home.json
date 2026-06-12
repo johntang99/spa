@@ -22,7 +22,15 @@
   "hero": {
     "media": {
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781166950020-photo-1761470575018-135c213340eb.jpg",
-      "scrim": 45
+      "scrim": 45,
+      "height": 800,
+      "gallery": [
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293601214-img-9147.jpeg",
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293924672-pexels-photo-4599376.jpeg",
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165543970-photo-1600334089648-b0d9d3028eb2.jpg"
+      ],
+      "overlayOpacity": 0.1,
+      "contentPosition": "left"
     },
     "badges": [
       {
@@ -39,9 +47,9 @@
       }
     ],
     "eyebrow": "Middletown Day Spa",
-    "subline": "Licensed massage, foot reflexology, facials, and body care under one roof — transparent pricing, online booking, open every day.",
-    "variant": "split-photo-right",
-    "headline": "Step out of the day, into the quiet.",
+    "subline": "",
+    "variant": "gallery-background",
+    "headline": "Step out of the day, into the quiet",
     "ctaPrimary": {
       "href": "/book",
       "label": "Book Now"
@@ -102,9 +110,9 @@
   },
   "napHours": {
     "note": "Free parking at 12 Grove St.",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293601214-img-9147.jpeg",
     "heading": "Visit us",
-    "variant": "visit",
-    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg"
+    "variant": "visit"
   },
   "teamGrid": {
     "refs": "all",
@@ -160,7 +168,7 @@
     "campaignAware": true
   },
   "categoryGrid": {
-    "intro": "One menu, one destination.",
+    "intro": "One menu, one destination",
     "variant": "tiles",
     "categories": "all",
     "showCounts": true,

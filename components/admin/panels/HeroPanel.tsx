@@ -7,6 +7,11 @@ interface HeroPanelProps {
 }
 
 export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelProps) {
+  const hasOwn = (key: string) => Object.prototype.hasOwnProperty.call(hero, key);
+  const hasMediaObject =
+    !!hero.media && typeof hero.media === 'object' && !Array.isArray(hero.media);
+  const media = hasMediaObject ? (hero.media as Record<string, any>) : {};
+
   const getPreviewUrl = (value: unknown) => {
     if (typeof value !== 'string') return '';
     const trimmed = value.trim();
@@ -15,44 +20,119 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
   };
 
   const backgroundPreviewUrl = getPreviewUrl(hero.backgroundImage);
-  const imagePreviewUrl = getPreviewUrl(hero.image);
+  const imageValue =
+    typeof hero.image === 'string'
+      ? hero.image
+      : typeof media.image === 'string'
+        ? media.image
+        : '';
+  const imagePreviewUrl = getPreviewUrl(imageValue);
+  const imagePath = hasOwn('image') ? ['hero', 'image'] : ['hero', 'media', 'image'];
+  const galleryPath = Array.isArray(hero.gallery)
+    ? ['hero', 'gallery']
+    : ['hero', 'media', 'gallery'];
   const overlayOpacityValue =
-    typeof hero.photoOverlayOpacity === 'number' ? hero.photoOverlayOpacity : 0.2;
+    typeof hero.photoOverlayOpacity === 'number'
+      ? hero.photoOverlayOpacity
+      : typeof media.overlayOpacity === 'number'
+        ? media.overlayOpacity
+        : typeof media.scrim === 'number'
+          ? media.scrim / 100
+          : 0.2;
   const screenwideDesktopHeightValue =
-    typeof hero.screenwideHeightDesktop === 'number' ? hero.screenwideHeightDesktop : 600;
+    typeof hero.screenwideHeightDesktop === 'number'
+      ? hero.screenwideHeightDesktop
+      : typeof media.height === 'number'
+        ? media.height
+        : 600;
   const contentPositionValue =
     hero.photoContentPosition === 'center' ||
     hero.photoContentPosition === 'center-below' ||
     hero.photoContentPosition === 'left' ||
     hero.photoContentPosition === 'left-below'
       ? hero.photoContentPosition
-      : hero.photoContentPosition === 'lower'
+      : media.contentPosition === 'center' ||
+          media.contentPosition === 'center-below' ||
+          media.contentPosition === 'left' ||
+          media.contentPosition === 'left-below'
+        ? media.contentPosition
+        : hero.photoContentPosition === 'lower' || media.contentPosition === 'lower'
         ? 'left-below'
         : 'left-below';
   const galleryImages = Array.isArray(hero.gallery)
     ? hero.gallery.filter((item) => typeof item === 'string')
+    : Array.isArray(media.gallery)
+      ? media.gallery.filter((item) => typeof item === 'string')
     : [];
+  const overlayOpacityPath = hasOwn('photoOverlayOpacity')
+    ? ['hero', 'photoOverlayOpacity']
+    : ['hero', 'media', 'overlayOpacity'];
+  const contentPositionPath = hasOwn('photoContentPosition')
+    ? ['hero', 'photoContentPosition']
+    : ['hero', 'media', 'contentPosition'];
+  const screenwideHeightPath = hasOwn('screenwideHeightDesktop')
+    ? ['hero', 'screenwideHeightDesktop']
+    : ['hero', 'media', 'height'];
+  const titlePath = hasOwn('title') ? ['hero', 'title'] : ['hero', 'headline'];
+  const subtitlePath = hasOwn('subtitle') ? ['hero', 'subtitle'] : ['hero', 'subline'];
+  const primaryCtaPath = hasOwn('ctaPrimary')
+    ? ['hero', 'ctaPrimary']
+    : hasOwn('primaryCta')
+      ? ['hero', 'primaryCta']
+      : ['hero', 'ctaPrimary'];
+  const secondaryCtaPath = hasOwn('ctaSecondary')
+    ? ['hero', 'ctaSecondary']
+    : hasOwn('secondaryCta')
+      ? ['hero', 'secondaryCta']
+      : ['hero', 'ctaSecondary'];
+  const primaryCta = (getPath(primaryCtaPath) as Record<string, any> | undefined) || {};
+  const secondaryCta = (getPath(secondaryCtaPath) as Record<string, any> | undefined) || {};
+  const primaryLabelKey = hasOwn('ctaPrimary') ? 'label' : hasOwn('primaryCta') ? 'text' : 'label';
+  const primaryHrefKey = hasOwn('ctaPrimary') ? 'href' : hasOwn('primaryCta') ? 'link' : 'href';
+  const secondaryLabelKey = hasOwn('ctaSecondary')
+    ? 'label'
+    : hasOwn('secondaryCta')
+      ? 'text'
+      : 'label';
+  const secondaryHrefKey = hasOwn('ctaSecondary')
+    ? 'href'
+    : hasOwn('secondaryCta')
+      ? 'link'
+      : 'href';
+  const badgesPath = ['hero', 'badges'];
+  const badges = Array.isArray(hero.badges)
+    ? hero.badges.filter((item) => item && typeof item === 'object')
+    : [];
+
+  function getPath(path: string[]) {
+    let cursor: any = hero;
+    for (const segment of path) {
+      if (!cursor || typeof cursor !== 'object') return undefined;
+      cursor = cursor[segment];
+    }
+    return cursor;
+  }
 
   return (
     <div className="border border-gray-200 rounded-lg p-4">
       <div className="text-xs font-semibold text-gray-500 uppercase mb-3">Hero</div>
-      {'title' in hero && (
+      {(hasOwn('title') || hasOwn('headline')) && (
         <div className="mb-3">
           <label className="block text-xs text-gray-500">Title</label>
           <input
             className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
-            value={hero.title || ''}
-            onChange={(event) => updateFormValue(['hero', 'title'], event.target.value)}
+            value={hero.title || hero.headline || ''}
+            onChange={(event) => updateFormValue(titlePath, event.target.value)}
           />
         </div>
       )}
-      {'subtitle' in hero && (
+      {(hasOwn('subtitle') || hasOwn('subline')) && (
         <div className="mb-3">
           <label className="block text-xs text-gray-500">Subtitle</label>
           <input
             className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
-            value={hero.subtitle || ''}
-            onChange={(event) => updateFormValue(['hero', 'subtitle'], event.target.value)}
+            value={hero.subtitle || hero.subline || ''}
+            onChange={(event) => updateFormValue(subtitlePath, event.target.value)}
           />
         </div>
       )}
@@ -91,6 +171,94 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
           />
         </div>
       )}
+      <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="rounded-md border border-gray-100 p-3">
+          <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Primary CTA</div>
+          <label className="block text-xs text-gray-500">Label</label>
+          <input
+            className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+            value={String(primaryCta[primaryLabelKey] || '')}
+            onChange={(event) =>
+              updateFormValue([...primaryCtaPath, primaryLabelKey], event.target.value)
+            }
+          />
+          <label className="mt-2 block text-xs text-gray-500">URL</label>
+          <input
+            className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+            value={String(primaryCta[primaryHrefKey] || '')}
+            onChange={(event) =>
+              updateFormValue([...primaryCtaPath, primaryHrefKey], event.target.value)
+            }
+          />
+        </div>
+        <div className="rounded-md border border-gray-100 p-3">
+          <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Secondary CTA</div>
+          <label className="block text-xs text-gray-500">Label</label>
+          <input
+            className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+            value={String(secondaryCta[secondaryLabelKey] || '')}
+            onChange={(event) =>
+              updateFormValue([...secondaryCtaPath, secondaryLabelKey], event.target.value)
+            }
+          />
+          <label className="mt-2 block text-xs text-gray-500">URL</label>
+          <input
+            className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+            value={String(secondaryCta[secondaryHrefKey] || '')}
+            onChange={(event) =>
+              updateFormValue([...secondaryCtaPath, secondaryHrefKey], event.target.value)
+            }
+          />
+        </div>
+      </div>
+      <div className="mt-3">
+        <div className="flex items-center justify-between mb-2">
+          <label className="block text-xs text-gray-500">Badge Pills (top row)</label>
+          <button
+            type="button"
+            onClick={() =>
+              updateFormValue(badgesPath, [...badges, { label: '', iconKey: 'star' }])
+            }
+            className="rounded-md border border-gray-200 px-2.5 py-1 text-xs hover:bg-gray-50"
+          >
+            Add Badge
+          </button>
+        </div>
+        <div className="space-y-2">
+          {badges.map((badge: any, index: number) => (
+            <div key={`badge-${index}`} className="grid grid-cols-1 md:grid-cols-[1fr_180px_auto] gap-2 items-center">
+              <input
+                className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                value={String(badge?.label || '')}
+                placeholder="Badge text"
+                onChange={(event) =>
+                  updateFormValue([...badgesPath, String(index), 'label'], event.target.value)
+                }
+              />
+              <input
+                className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                value={String(badge?.iconKey || '')}
+                placeholder="iconKey (optional)"
+                onChange={(event) =>
+                  updateFormValue([...badgesPath, String(index), 'iconKey'], event.target.value)
+                }
+              />
+              <button
+                type="button"
+                onClick={() =>
+                  updateFormValue(
+                    badgesPath,
+                    badges.filter((_, badgeIndex) => badgeIndex !== index)
+                  )
+                }
+                className="px-3 rounded-md border border-red-200 text-xs text-red-600 hover:bg-red-50"
+              >
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
       {'backgroundImage' in hero && (
         <div>
           <label className="block text-xs text-gray-500">Background Image</label>
@@ -120,18 +288,18 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
           )}
         </div>
       )}
-      {'image' in hero && (
+      {(hasOwn('image') || hasMediaObject) && (
         <div className="mt-3">
           <label className="block text-xs text-gray-500">Image</label>
           <div className="mt-1 flex gap-2">
             <input
               className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
-              value={hero.image || ''}
-              onChange={(event) => updateFormValue(['hero', 'image'], event.target.value)}
+              value={imageValue}
+              onChange={(event) => updateFormValue(imagePath, event.target.value)}
             />
             <button
               type="button"
-              onClick={() => openImagePicker(['hero', 'image'])}
+              onClick={() => openImagePicker(imagePath)}
               className="px-3 rounded-md border border-gray-200 text-xs"
             >
               Choose
@@ -156,7 +324,7 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
           <button
             type="button"
             onClick={() =>
-              updateFormValue(['hero', 'gallery'], [...galleryImages, ''])
+              updateFormValue(galleryPath, [...galleryImages, ''])
             }
             className="rounded-md border border-gray-200 px-2.5 py-1 text-xs hover:bg-gray-50"
           >
@@ -171,12 +339,12 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
                   className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
                   value={imageUrl || ''}
                   onChange={(event) =>
-                    updateFormValue(['hero', 'gallery', String(index)], event.target.value)
+                    updateFormValue([...galleryPath, String(index)], event.target.value)
                   }
                 />
                 <button
                   type="button"
-                  onClick={() => openImagePicker(['hero', 'gallery', String(index)])}
+                  onClick={() => openImagePicker([...galleryPath, String(index)])}
                   className="px-3 rounded-md border border-gray-200 text-xs"
                 >
                   Choose
@@ -185,7 +353,7 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
                   type="button"
                   onClick={() =>
                     updateFormValue(
-                      ['hero', 'gallery'],
+                      galleryPath,
                       galleryImages.filter((_, imageIndex) => imageIndex !== index)
                     )
                   }
@@ -222,7 +390,7 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
               const normalized = Number.isFinite(next)
                 ? Math.min(1, Math.max(0, next))
                 : 0.2;
-              updateFormValue(['hero', 'photoOverlayOpacity'], normalized);
+              updateFormValue(overlayOpacityPath, normalized);
             }}
           />
         </div>
@@ -232,7 +400,7 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
             className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm bg-white"
             value={contentPositionValue}
             onChange={(event) =>
-              updateFormValue(['hero', 'photoContentPosition'], event.target.value)
+              updateFormValue(contentPositionPath, event.target.value)
             }
           >
             <option value="center">Center</option>
@@ -257,7 +425,7 @@ export function HeroPanel({ hero, updateFormValue, openImagePicker }: HeroPanelP
               const normalized = Number.isFinite(next)
                 ? Math.min(1200, Math.max(320, Math.round(next)))
                 : 600;
-              updateFormValue(['hero', 'screenwideHeightDesktop'], normalized);
+              updateFormValue(screenwideHeightPath, normalized);
             }}
           />
           <p className="mt-1 text-[11px] text-gray-500">

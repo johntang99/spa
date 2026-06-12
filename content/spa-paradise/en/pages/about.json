@@ -1,143 +1,165 @@
 {
-  "hero": {
-    "variant": "story",
-    "eyebrow": "Our story",
-    "headline": "A real day spa for Middletown.",
-    "subline": "We built Spa Paradise to be the calm, professional, transparently-priced spa our neighbors deserve — in English and Chinese, open every day.",
-    "media": {
-      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167880628-photo-1637730826933-54287f79e1c3.jpg",
-      "scrim": 40
-    }
-  },
-  "statsBand": {
-    "items": [
-      {
-        "value": "4.8",
-        "label": "Average rating",
-        "source": "rating"
-      },
-      {
-        "value": "",
-        "suffix": "+",
-        "label": "Five-star reviews",
-        "source": "reviewCount"
-      },
-      {
-        "value": "",
-        "label": "Licensed therapists",
-        "source": "teamCount"
-      },
-      {
-        "value": "",
-        "label": "Treatments on the menu",
-        "source": "servicesCount"
-      }
-    ],
-    "animate": true
-  },
-  "teamGrid": {
-    "variant": "cards",
-    "heading": "Our licensed therapists",
-    "refs": "all"
-  },
-  "checklist": {
-    "variant": "standards",
-    "heading": "Our standards",
-    "items": [
-      {
-        "iconKey": "license",
-        "label": "Every therapist licensed by New York State"
-      },
-      {
-        "iconKey": "linen",
-        "label": "Fresh linens and sanitized rooms every session"
-      },
-      {
-        "iconKey": "drape",
-        "label": "Professional draping, always"
-      },
-      {
-        "iconKey": "tag",
-        "label": "Published prices — the same for everyone"
-      },
-      {
-        "iconKey": "globe",
-        "label": "Service in English and 中文"
-      }
-    ]
-  },
-  "galleryGrid": {
-    "variant": "strip",
-    "heading": "Inside the spa",
-    "collections": [
-      "rooms",
-      "details"
-    ],
-    "images": [
-      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
-      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg"
-    ]
-  },
-  "iconGrid": {
-    "variant": "values",
-    "heading": "What we believe",
-    "items": [
-      {
-        "iconKey": "heart",
-        "title": "Care over upsell",
-        "body": "We recommend what helps you, not what costs more."
-      },
-      {
-        "iconKey": "calm",
-        "title": "Calm is the product",
-        "body": "Quiet rooms, unhurried sessions, no clock-watching."
-      },
-      {
-        "iconKey": "welcome",
-        "title": "Everyone is welcome",
-        "body": "Bilingual hospitality, open every day, no membership required."
-      }
-    ]
-  },
-  "testimonials": {
-    "variant": "spotlight",
-    "heading": "In our guests' words",
-    "filter": {
-      "limit": 3
-    },
-    "showSource": true
-  },
-  "ctaBanner": {
-    "variant": "image-bg",
-    "heading": "Come see for yourself.",
-    "ctaPrimary": {
-      "label": "Book Now",
-      "href": "/book"
-    },
-    "ctaSecondary": {
-      "label": "Contact us",
-      "href": "/contact"
-    },
-    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167881721-photo-1646909106850-8c426285ed2a.jpg"
-  },
   "seo": {
-    "title": "About Us | Spa Paradise Middletown, NY",
-    "description": "Meet the licensed therapists behind Spa Paradise — Middletown's transparent, bilingual day spa. Our story, standards, and team.",
     "h1": "A real day spa for Middletown.",
-    "canonicalUrl": "/en/about",
+    "title": "About Us | Spa Paradise Middletown, NY",
     "schema": [
       "AboutPage",
       "Person"
     ],
+    "noindex": false,
     "keywords": [
       "spa paradise about",
       "massage therapists middletown ny",
       "day spa middletown ny"
     ],
-    "noindex": false,
-    "changefreq": "yearly",
+    "pageType": "about",
     "priority": 0.6,
-    "keywordCluster": "about",
-    "pageType": "about"
+    "changefreq": "yearly",
+    "description": "Meet the licensed therapists behind Spa Paradise — Middletown's transparent, bilingual day spa. Our story, standards, and team.",
+    "canonicalUrl": "/en/about",
+    "keywordCluster": "about"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167880628-photo-1637730826933-54287f79e1c3.jpg",
+      "scrim": 40
+    },
+    "eyebrow": "Our story",
+    "subline": "We built Spa Paradise to be the calm, professional, transparently-priced spa our neighbors deserve — in English and Chinese, open every day.",
+    "variant": "story",
+    "headline": "A real day spa for Middletown."
+  },
+  "iconGrid": {
+    "items": [
+      {
+        "body": "We recommend what helps you, not what costs more.",
+        "title": "Care over upsell",
+        "iconKey": "heart"
+      },
+      {
+        "body": "Quiet rooms, unhurried sessions, no clock-watching.",
+        "title": "Calm is the product",
+        "iconKey": "calm"
+      },
+      {
+        "body": "Bilingual hospitality, open every day, no membership required.",
+        "title": "Everyone is welcome",
+        "iconKey": "welcome"
+      }
+    ],
+    "heading": "What we believe",
+    "variant": "values"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "Our licensed therapists",
+    "variant": "cards"
+  },
+  "checklist": {
+    "items": [
+      {
+        "label": "Every therapist licensed by New York State",
+        "iconKey": "license"
+      },
+      {
+        "label": "Fresh linens and sanitized rooms every session",
+        "iconKey": "linen"
+      },
+      {
+        "label": "Professional draping, always",
+        "iconKey": "drape"
+      },
+      {
+        "label": "Published prices — the same for everyone",
+        "iconKey": "tag"
+      },
+      {
+        "label": "Service in English and 中文",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "Our standards",
+    "variant": "standards"
+  },
+  "ctaBanner": {
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167881721-photo-1646909106850-8c426285ed2a.jpg",
+    "heading": "Come see for yourself.",
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    },
+    "ctaSecondary": {
+      "href": "/contact",
+      "label": "Contact us"
+    }
+  },
+  "statsBand": {
+    "items": [
+      {
+        "label": "Average rating",
+        "value": "4.8",
+        "source": "rating"
+      },
+      {
+        "label": "Five-star reviews",
+        "value": "",
+        "source": "reviewCount",
+        "suffix": "+"
+      },
+      {
+        "label": "Licensed therapists",
+        "value": "",
+        "source": "teamCount"
+      },
+      {
+        "label": "Treatments on the menu",
+        "value": "",
+        "source": "servicesCount"
+      }
+    ],
+    "animate": true
+  },
+  "galleryGrid": {
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg"
+    ],
+    "heading": "Inside the spa",
+    "variant": "strip",
+    "collections": [
+      "rooms",
+      "details"
+    ],
+    "photos": [
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+        "alt": "",
+        "description": ""
+      },
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+        "alt": "",
+        "description": ""
+      },
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781163607351-photo-1630835425197-50feeba99ecd.jpg",
+        "alt": "",
+        "description": ""
+      },
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165480629-photo-1630595632518-8217c0bceb8f.jpg",
+        "alt": "",
+        "description": ""
+      }
+    ]
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 3
+    },
+    "heading": "In our guests' words",
+    "variant": "spotlight",
+    "showSource": true
   }
 }

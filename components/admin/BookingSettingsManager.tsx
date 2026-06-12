@@ -37,6 +37,20 @@ const DEFAULT_SETTINGS: BookingSettings = {
   notificationPhones: [],
 };
 
+const SERVICE_TYPE_OPTIONS: Array<{
+  value: BookingService['serviceType'];
+  label: string;
+}> = [
+  { value: 'appointment', label: 'Appointment (in clinic)' },
+  { value: 'onsite', label: 'On-site (provider visits client)' },
+  { value: 'remote', label: 'Remote / virtual' },
+  { value: 'delivery', label: 'Delivery' },
+  { value: 'pickup_delivery', label: 'Pickup & Delivery' },
+  { value: 'dropoff', label: 'Drop-off' },
+  { value: 'self_service', label: 'Self-service' },
+  { value: 'commercial', label: 'Commercial' },
+];
+
 export function BookingSettingsManager({
   sites,
   selectedSiteId,
@@ -343,17 +357,18 @@ export function BookingSettingsManager({
                     />
                     <select
                       className="rounded-md border border-gray-200 px-3 py-2 text-sm"
-                      value={service.serviceType || 'pickup_delivery'}
+                      value={service.serviceType || 'appointment'}
                       onChange={(event) =>
                         updateService(index, {
                           serviceType: event.target.value as BookingService['serviceType'],
                         })
                       }
                     >
-                      <option value="pickup_delivery">Pickup & Delivery</option>
-                      <option value="dropoff">Drop-off</option>
-                      <option value="self_service">Self-service</option>
-                      <option value="commercial">Commercial</option>
+                      {SERVICE_TYPE_OPTIONS.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
                     </select>
                     <select
                       className="rounded-md border border-gray-200 px-3 py-2 text-sm"
@@ -502,17 +517,18 @@ export function BookingSettingsManager({
                 <label className="block text-xs text-gray-500">Default service type</label>
                 <select
                   className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
-                  value={settings.defaultServiceType || 'pickup_delivery'}
+                  value={settings.defaultServiceType || 'appointment'}
                   onChange={(event) =>
                     updateSettings({
                       defaultServiceType: event.target.value as BookingSettings['defaultServiceType'],
                     })
                   }
                 >
-                  <option value="pickup_delivery">Pickup & Delivery</option>
-                  <option value="dropoff">Drop-off</option>
-                  <option value="self_service">Self-service</option>
-                  <option value="commercial">Commercial</option>
+                  {SERVICE_TYPE_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </div>
               <div>

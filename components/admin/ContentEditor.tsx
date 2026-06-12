@@ -20,6 +20,7 @@ import { AboutAdditionalPanel } from '@/components/admin/panels/AboutAdditionalP
 import { AboutStaffsPanel } from '@/components/admin/panels/AboutStaffsPanel';
 import { AboutCredentialsPanel } from '@/components/admin/panels/AboutCredentialsPanel';
 import { AboutAffiliationsPanel } from '@/components/admin/panels/AboutAffiliationsPanel';
+import { AboutSpaGalleryPanel } from '@/components/admin/panels/AboutSpaGalleryPanel';
 import { normalizeAboutFormData, finalizeAboutFormForSave } from '@/lib/admin/about-form-normalize';
 import { GalleryPhotosPanel } from '@/components/admin/panels/GalleryPhotosPanel';
 import { CtaPanel } from '@/components/admin/panels/CtaPanel';
@@ -47,6 +48,7 @@ import { ContactNotificationPanel } from '@/components/admin/panels/ContactNotif
 import { SECTION_VARIANT_OPTIONS, SITE_SETTINGS_PATHS } from '@/components/admin/utils/editorConstants';
 import { getPathValue, toTitleCase } from '@/components/admin/utils/editorHelpers';
 import type { ThemePreset } from '@/lib/theme-presets';
+import { resolveMediaUrl } from '@/lib/media-url';
 
 interface ContentFileItem {
   id: string;
@@ -124,6 +126,9 @@ export function ContentEditor({
   const [caseStudiesItemJsonDraft, setCaseStudiesItemJsonDraft] = useState('');
   const [caseStudiesItemJsonError, setCaseStudiesItemJsonError] = useState<string | null>(null);
   const [activeSeoLocation, setActiveSeoLocation] = useState('');
+  const [collapsedHomeSections, setCollapsedHomeSections] = useState<Record<string, boolean>>(
+    {}
+  );
 
   const withThemeDefaults = (input: Record<string, any>) => {
     const next = JSON.parse(JSON.stringify(input || {}));
@@ -999,6 +1004,52 @@ export function ContentEditor({
     updateFormValue(path, value);
   };
 
+  const IMAGE_FIELD_KEYS = new Set([
+    'image',
+    'images',
+    'src',
+    'photo',
+    'photos',
+    'backgroundimage',
+    'thumbnail',
+    'avatar',
+    'ogimage',
+    'gallery',
+    'media',
+    'logo',
+    'icon',
+    'imageurl',
+    'background',
+    'background_image',
+  ]);
+
+  const isImageFieldPath = (path: string[]) => {
+    const key = String(path[path.length - 1] || '').toLowerCase();
+    const parentKey = String(path[path.length - 2] || '').toLowerCase();
+    const normalizedKey = key.replace(/[^a-z0-9]/g, '');
+    const normalizedParentKey = parentKey.replace(/[^a-z0-9]/g, '');
+    const keyLooksImage =
+      IMAGE_FIELD_KEYS.has(key) ||
+      /(image|photo|thumbnail|avatar|logo|banner|background|cover|gallery|media|src)$/.test(normalizedKey);
+    const parentLooksImage =
+      IMAGE_FIELD_KEYS.has(parentKey) ||
+      /(image|photo|thumbnail|avatar|logo|banner|background|cover|gallery|media|src)$/.test(normalizedParentKey);
+    if (keyLooksImage) return true;
+    if (/^\d+$/.test(key) && parentLooksImage) return true;
+    return false;
+  };
+
+  const isLikelyImageValue = (rawValue: string, path: string[]) => {
+    if (isImageFieldPath(path)) return true;
+    const trimmed = rawValue.trim();
+    if (!trimmed) return false;
+    if (trimmed.startsWith('data:image/')) return true;
+    if (/\.(avif|gif|jpe?g|png|svg|webp)(\?.*)?$/i.test(trimmed)) return true;
+    if (/supabase\.co\/storage\/v1\/object/i.test(trimmed)) return true;
+    if (trimmed.startsWith('/uploads/') || trimmed.startsWith('uploads/')) return true;
+    return false;
+  };
+
   const addArrayItemAtPath = (path: string[]) => {
     if (!formData) return;
     const current = getPathValue(formData, path);
@@ -1092,11 +1143,48 @@ export function ContentEditor({
     }
 
     const stringValue = value == null ? '' : String(value);
-    const useTextarea = typeof value === 'string' && stringValue.length > 80;
+    const imageLike = (typeof value === 'string' || value == null) && isLikelyImageValue(stringValue, path);
+    const previewUrl = imageLike ? resolveMediaUrl(stringValue.trim()) : '';
+    const useTextarea = typeof value === 'string' && stringValue.length > 80 && !imageLike;
     return (
       <div key={key}>
         <label className="block text-xs text-gray-500">{title}</label>
-        {useTextarea ? (
+        {imageLike ? (
+          <div className="mt-1 grid items-start gap-2 md:grid-cols-[1fr_64px_auto_auto]">
+            <input
+              type="text"
+              className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+              value={stringValue}
+              onChange={(event) => setValueAtPath(path, parsePrimitiveInput(event.target.value, value))}
+              placeholder="/uploads/... or https://..."
+            />
+            <div className="h-12 w-16 shrink-0 rounded-md border border-gray-200 bg-gray-50 overflow-hidden">
+              {previewUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={previewUrl}
+                  alt={`${title} preview`}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              ) : null}
+            </div>
+            <button
+              type="button"
+              onClick={() => openImagePicker(path)}
+              className="px-3 py-2 rounded-md border border-gray-200 text-xs"
+            >
+              Choose
+            </button>
+            <button
+              type="button"
+              onClick={() => setValueAtPath(path, '')}
+              className="px-3 py-2 rounded-md border border-gray-200 text-xs"
+            >
+              Clear
+            </button>
+          </div>
+        ) : useTextarea ? (
           <textarea
             className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
             rows={3}
@@ -1120,6 +1208,7 @@ export function ContentEditor({
   const isBlogPostFile = isBlogManagedPath(activeFile?.path);
   const isHeaderFile = activeFile?.path === 'header.json';
   const isThemeFile = activeFile?.path === 'theme.json';
+  const isLayoutFile = Boolean(activeFile?.path?.endsWith('.layout.json'));
   const isHomePageFile = activeFile?.path === 'pages/home.json';
   const isContactPageFile = activeFile?.path === 'pages/contact.json';
   const isPricingPageFile = activeFile?.path === 'pages/pricing.json';
@@ -1640,7 +1729,66 @@ export function ContentEditor({
     collectFields(formData);
     return fields;
   }, [isHomePageFile, formData]);
+  const homeNonHeroSections = useMemo(() => {
+    if (!isHomePageFile || !formData || Array.isArray(formData)) {
+      return [] as Array<[string, any]>;
+    }
+    return Object.entries(formData).filter(
+      ([sectionKey]) => sectionKey !== 'hero' && sectionKey !== '_meta'
+    );
+  }, [isHomePageFile, formData]);
+  const homeNonHeroSectionKeys = useMemo(
+    () => homeNonHeroSections.map(([sectionKey]) => sectionKey),
+    [homeNonHeroSections]
+  );
+  const featuredHomeSectionKeys = useMemo(
+    () => new Set(['napHours', 'featurePanel']),
+    []
+  );
+  const getHomeSectionTitle = (sectionKey: string, sectionValue: any) => {
+    if (sectionKey === 'napHours') {
+      const heading = typeof sectionValue?.heading === 'string' ? sectionValue.heading.trim() : '';
+      return heading ? `${heading} (Visit section)` : 'Visit Us (Visit section)';
+    }
+    if (sectionKey === 'featurePanel') {
+      const heading = typeof sectionValue?.heading === 'string' ? sectionValue.heading.trim() : '';
+      return heading ? `${heading} (Feature section)` : 'Private Couples Room (Feature section)';
+    }
+    return toTitleCase(sectionKey);
+  };
+  useEffect(() => {
+    setCollapsedHomeSections((current) => {
+      if (homeNonHeroSectionKeys.length === 0) {
+        if (Object.keys(current).length === 0) return current;
+        return {};
+      }
+      let changed = Object.keys(current).length !== homeNonHeroSectionKeys.length;
+      const next: Record<string, boolean> = {};
+      homeNonHeroSectionKeys.forEach((sectionKey) => {
+        const defaultCollapsed = featuredHomeSectionKeys.has(sectionKey) ? false : true;
+        const value = current[sectionKey] ?? defaultCollapsed;
+        next[sectionKey] = value;
+        if (!(sectionKey in current)) changed = true;
+      });
+      return changed ? next : current;
+    });
+  }, [featuredHomeSectionKeys, homeNonHeroSectionKeys]);
 
+  const setAllHomeSectionsCollapsed = (collapsed: boolean) => {
+    if (homeNonHeroSectionKeys.length === 0) return;
+    const next: Record<string, boolean> = {};
+    homeNonHeroSectionKeys.forEach((sectionKey) => {
+      next[sectionKey] = collapsed;
+    });
+    setCollapsedHomeSections(next);
+  };
+
+  const toggleHomeSectionCollapsed = (sectionKey: string) => {
+    setCollapsedHomeSections((current) => ({
+      ...current,
+      [sectionKey]: !(current[sectionKey] ?? true),
+    }));
+  };
   const addSeoPage = () => {
     if (!formData) return;
     const slug = window.prompt('Page slug (example: services)');
@@ -2797,6 +2945,18 @@ export function ContentEditor({
                 </div>
               )}
 
+              {isLayoutFile && formData && (
+                <div className="border border-gray-200 rounded-lg p-4 space-y-3">
+                  <div className="text-xs font-semibold text-gray-500 uppercase">
+                    Layout Sections
+                  </div>
+                  <p className="text-xs text-gray-500">
+                    Edit section order and `mode` values in Form view.
+                  </p>
+                  {renderGenericFormNode(formData.sections ?? [], ['sections'], 'Sections')}
+                </div>
+              )}
+
               {isSeoFile && formData && (
                 <SeoPanel
                   formData={formData}
@@ -2862,6 +3022,63 @@ export function ContentEditor({
                 />
               )}
 
+              {isHomePageFile && formData && homeNonHeroSections.length > 0 && (
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <div className="text-xs font-semibold text-gray-500 uppercase mb-3">
+                    Other Home Sections
+                  </div>
+                  <p className="mb-3 text-xs text-gray-500">
+                    Section-by-section form editor for `pages/home.json` (excluding Hero).
+                  </p>
+                  <p className="mb-3 text-xs text-gray-500">
+                    Quick access: <strong>Visit Us</strong> and <strong>Private Couples Room</strong> are expanded by default.
+                  </p>
+                  <div className="mb-3 flex items-center gap-2">
+                    <button
+                      type="button"
+                      className="rounded-md border border-gray-200 px-2.5 py-1 text-xs text-gray-700 hover:bg-gray-50"
+                      onClick={() => setAllHomeSectionsCollapsed(false)}
+                    >
+                      Expand all
+                    </button>
+                    <button
+                      type="button"
+                      className="rounded-md border border-gray-200 px-2.5 py-1 text-xs text-gray-700 hover:bg-gray-50"
+                      onClick={() => setAllHomeSectionsCollapsed(true)}
+                    >
+                      Collapse all
+                    </button>
+                  </div>
+                  <div className="space-y-4">
+                    {homeNonHeroSections.map(([sectionKey, sectionValue]) => (
+                      <div key={`home-extra-section-${sectionKey}`} className="rounded-lg border border-gray-100 p-3">
+                        <button
+                          type="button"
+                          className="w-full flex items-center justify-between gap-3 text-left"
+                          onClick={() => toggleHomeSectionCollapsed(sectionKey)}
+                        >
+                          <div className="text-sm font-semibold text-gray-900">
+                            {getHomeSectionTitle(sectionKey, sectionValue)}
+                          </div>
+                          <span className="text-xs text-gray-500">
+                            {(collapsedHomeSections[sectionKey] ?? true) ? '▶' : '▼'}
+                          </span>
+                        </button>
+                        {!(collapsedHomeSections[sectionKey] ?? true) && (
+                          <div className="mt-3">
+                            {renderGenericFormNode(
+                              sectionValue,
+                              [sectionKey],
+                              toTitleCase(sectionKey)
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {showSharedPanels && isContactPageFile && formData?.form && (
                 <ContactNotificationPanel
                   form={formData.form}
@@ -2913,6 +3130,13 @@ export function ContentEditor({
                     formData={formData}
                     updateFormValue={updateFormValue}
                   />
+                  {formData.galleryGrid ? (
+                    <AboutSpaGalleryPanel
+                      galleryGrid={formData.galleryGrid}
+                      updateFormValue={updateFormValue}
+                      openImagePicker={openImagePicker}
+                    />
+                  ) : null}
                 </>
               )}
 
@@ -3139,6 +3363,7 @@ export function ContentEditor({
               {formData &&
                 !isSiteInfoFile &&
                 !isPricingPageFile &&
+                !isLayoutFile &&
                 !isSeoPageFileActive &&
                 !formData.hero &&
                 !formData.introduction &&

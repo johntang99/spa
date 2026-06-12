@@ -83,16 +83,29 @@ function TierChips({ service, locale }: { service: Service; locale: string }) {
   );
 }
 
-function TrustCluster({ ctx }: { ctx: SectionCtx }) {
+function TrustCluster({ ctx, data }: { ctx: SectionCtx; data?: any }) {
   const gbp = ctx.siteInfo?.gbp || {};
+  const trust = data?.trustCluster || {};
+  const reviewsLabel =
+    typeof trust.reviewsLabel === 'string' && trust.reviewsLabel.trim()
+      ? trust.reviewsLabel.trim()
+      : t(ctx.locale, 'reviews', '条评价');
+  const licensedText =
+    typeof trust.licensedLabel === 'string' && trust.licensedLabel.trim()
+      ? trust.licensedLabel.trim()
+      : t(ctx.locale, 'Licensed NY therapists', '纽约州持牌理疗师');
+  const bookingText =
+    typeof trust.bookingLabel === 'string' && trust.bookingLabel.trim()
+      ? trust.bookingLabel.trim()
+      : t(ctx.locale, 'No payment required to book', '预约无需付款');
   return (
     <div className="trust-cluster">
       {shouldRenderRating(gbp.reviewCount) && (
-        <><span><span className="stars">★★★★★</span> {gbp.rating} · {gbp.reviewCount} {t(ctx.locale, 'reviews', '条评价')}</span><span className="sep">·</span></>
+        <><span><span className="stars">★★★★★</span> {gbp.rating} · {gbp.reviewCount} {reviewsLabel}</span><span className="sep">·</span></>
       )}
-      <span>{t(ctx.locale, 'Licensed NY therapists', '纽约州持牌理疗师')}</span>
+      <span>{licensedText}</span>
       <span className="sep">·</span>
-      <span>{t(ctx.locale, 'No payment required to book', '预约无需付款')}</span>
+      <span>{bookingText}</span>
     </div>
   );
 }
@@ -119,7 +132,6 @@ function HeroBody({ data, ctx, center = false, onDark = true }: { data: any; ctx
         {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
         {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
       </div>
-      <div style={{ display: 'flex', justifyContent: j }}><TrustCluster ctx={ctx} /></div>
     </div>
   );
 }
@@ -164,7 +176,6 @@ export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
             {data.badges.map((b: any, i: number) => <span key={i} className="badge"><span className="dot" />{b.label}</span>)}
           </div>
         ) : null}
-        <div style={{ marginTop: 18 }}><TrustCluster ctx={ctx} /></div>
       </div>
     );
     return (
@@ -272,8 +283,20 @@ export function CategoryGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
           {cats.map((c) => {
             const pf = priceFrom(ctx.catalog, c.id);
             return (
-              <Link key={c.id} href={`/${ctx.locale}/services/${c.id}`} className="card reveal" style={{ textDecoration: 'none' }}>
-                <Media image={c.image} label={c.name} phClass="ph ph-light" style={{ aspectRatio: '4/3' }} />
+              <Link
+                key={c.id}
+                href={`/${ctx.locale}/services/${c.id}`}
+                className="card reveal"
+                style={{ textDecoration: 'none', display: 'block', padding: 0 }}
+              >
+                <div style={{ width: '100%', aspectRatio: '4/3', overflow: 'hidden' }}>
+                  <Media
+                    image={c.image}
+                    label={c.name}
+                    phClass="ph ph-light"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
                 <div className="card-body">
                   <h3 style={{ marginBottom: 4 }}>{c.name}</h3>
                   {c.intro && <p className="small">{c.intro}</p>}

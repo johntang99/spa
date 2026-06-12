@@ -243,9 +243,10 @@ ${primitivesCss}
           navItems={headerAny?.menu?.items || []}
           ctaLabel={headerAny?.cta?.text || (spaLocale === 'zh' ? '立即预约' : 'Book Now')}
           ctaHref={headerAny?.cta?.link || `/${spaLocale}/book`}
-          hours={siteAny.hours || []}
-          timezone={siteAny.timezone || 'America/New_York'}
           categories={megaCategories}
+          topbar={headerAny?.topbar || {}}
+          email={siteAny.email || ''}
+          social={siteAny.social || {}}
         />
         <div id="main-content" tabIndex={-1} className="flex-grow">
           {children}

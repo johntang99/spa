@@ -423,6 +423,7 @@
 .spa-site .card {
   background: var(--card-bg); border-radius: var(--card-radius);
   border: 1px solid var(--border-light); overflow: hidden;
+  padding: 0;
   transition: transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 .spa-site .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-1); }
@@ -443,6 +444,65 @@
   position: sticky; top: 0; z-index: 60;
   background: rgba(247,244,238,.92); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
+}
+.spa-site .site-topbar {
+  background: #8f1e22;
+  color: #fdf8ef;
+  border-bottom: 1px solid rgba(255,255,255,.16);
+}
+.spa-site .topbar-row {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.spa-site .topbar-left, .spa-site .topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.spa-site .topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+  font-size: .8rem;
+  line-height: 1.2;
+  opacity: .97;
+}
+.spa-site .topbar-item:hover { opacity: 1; text-decoration: underline; }
+.spa-site .topbar-icon {
+  width: 14px;
+  height: 14px;
+  opacity: .95;
+  flex-shrink: 0;
+}
+.spa-site .topbar-social {
+  color: inherit;
+  text-decoration: none;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+}
+.spa-site .topbar-social-icon { width: 12px; height: 12px; }
+.spa-site .topbar-social:hover { background: rgba(255,255,255,.12); }
+.spa-site .topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.20);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .04em;
 }
 .spa-site .site-header .bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
 .spa-site .logo { font-family: var(--s-font-display); font-size: 1.45rem; letter-spacing: .02em; text-decoration: none; color: var(--ink-pine); display: flex; align-items: baseline; gap: 10px; }
@@ -521,6 +581,7 @@
   .spa-site .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
+  .spa-site .site-topbar { display: none; }
   .spa-site .section { padding: var(--sect-pad-m) 0; }
   .spa-site .nav { display: none; position: absolute; top: 76px; left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
