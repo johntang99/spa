@@ -140,13 +140,36 @@ export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
   const bandH = Number.isFinite(customH) ? `${clampPx(customH, 280, 900)}px` : 'clamp(320px, 52vh, 560px)';
   const variant = resolveHeroVariant(data.variant, hasMedia);
 
-  // ----- split-photo (text + image side by side) -----
+  // ----- split-photo (text + framed photo side by side) — mirrors drhuang's home hero:
+  // badge pill → headline → description → CTAs → trust tags on the left, framed photo card right.
   if (variant === 'split-photo-right' || variant === 'split-photo-left') {
-    const photo = <Media image={image} label={data.headline} phClass="ph ph-light" style={{ aspectRatio: '4/5', borderRadius: 'var(--radius-card)' }} />;
-    const body = <div><HeroBody data={data} ctx={ctx} onDark={false} /></div>;
+    const photo = (
+      <div style={{ background: 'var(--surface-well)', borderRadius: 'var(--radius-card)', boxShadow: 'var(--shadow-1)', overflow: 'hidden', width: '100%', maxWidth: 540, margin: '0 auto' }}>
+        <Media image={image} label={data.headline} phClass="ph ph-light" style={{ aspectRatio: '4/5' }} />
+      </div>
+    );
+    const body = (
+      <div style={{ maxWidth: 560 }}>
+        {data.eyebrow && (
+          <span className="reveal" style={{ display: 'inline-block', background: 'var(--surface-well)', color: 'var(--candle-deep)', borderRadius: 999, padding: '5px 14px', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.07em', textTransform: 'uppercase' }}>{data.eyebrow}</span>
+        )}
+        <h1 className="reveal" style={{ marginTop: data.eyebrow ? 16 : 0 }}>{data.headline}</h1>
+        {data.subline && <p className="reveal" style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', marginTop: 14, maxWidth: '54ch' }}>{data.subline}</p>}
+        <div className="reveal" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 24 }}>
+          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
+          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
+        </div>
+        {data.badges?.length ? (
+          <div className="reveal" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 22 }}>
+            {data.badges.map((b: any, i: number) => <span key={i} className="badge"><span className="dot" />{b.label}</span>)}
+          </div>
+        ) : null}
+        <div style={{ marginTop: 18 }}><TrustCluster ctx={ctx} /></div>
+      </div>
+    );
     return (
       <section className="section on-light hero-anim">
-        <div className="container grid cols-2" style={{ alignItems: 'center', gap: 48 }}>
+        <div className="container grid cols-2" style={{ alignItems: 'center', gap: 56 }}>
           {variant === 'split-photo-left' ? <>{photo}{body}</> : <>{body}{photo}</>}
         </div>
       </section>
