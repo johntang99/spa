@@ -8,6 +8,8 @@ import {
   bookHref, resolveServiceSource, getService,
 } from '@/lib/spa/catalog';
 import { shouldRenderRating } from '@/lib/contracts/validation-rules';
+import { resolveHeroVariant } from '@/lib/spa/hero-variants';
+import { HeroBackdrop } from './HeroBackdrop';
 import TreatmentSelector from './TreatmentSelector';
 import Faq from './Faq';
 import RelatedLinks from './RelatedLinks';
@@ -95,39 +97,124 @@ function TrustCluster({ ctx }: { ctx: SectionCtx }) {
   );
 }
 
-/* ---- S01 hero ---- */
+/* ---- S01 hero (variant system ported from chinese-medicine) ---- */
+const clampPx = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, Math.round(n)));
+
+// Shared content block (eyebrow / headline / subline / badges / CTAs / trust), alignable.
+function HeroBody({ data, ctx, center = false, onDark = true }: { data: any; ctx: SectionCtx; center?: boolean; onDark?: boolean }) {
+  const j = center ? 'center' : 'flex-start';
+  return (
+    <div style={{ textAlign: center ? 'center' : 'left' }}>
+      {data.eyebrow && <p className="eyebrow reveal">{data.eyebrow}</p>}
+      <h1 className="reveal">{data.headline}</h1>
+      {data.subline && (
+        <p className="reveal" style={{ fontSize: '1.15rem', maxWidth: '60ch', margin: center ? '0 auto' : '0', color: onDark ? 'var(--text-inverse-muted)' : 'var(--text-secondary)' }}>{data.subline}</p>
+      )}
+      {data.badges?.length ? (
+        <div className="reveal" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', margin: '18px 0', justifyContent: j }}>
+          {data.badges.map((b: any, i: number) => <span key={i} className="badge"><span className="dot" />{b.label}</span>)}
+        </div>
+      ) : null}
+      <div className="reveal" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8, justifyContent: j }}>
+        {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
+        {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
+      </div>
+      <div style={{ display: 'flex', justifyContent: j }}><TrustCluster ctx={ctx} /></div>
+    </div>
+  );
+}
+
 export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
-  const hasImage = !!data.media?.image;
-  // Scrim (0–100) darkens the photo so the headline/subline stay legible over any image.
-  const scrim = Math.min(0.85, Math.max(0, (data.media?.scrim ?? 45) / 100));
-  const bg = hasImage
-    ? { backgroundImage: `linear-gradient(rgba(20,30,26,${scrim}), rgba(20,30,26,${scrim})), url(${data.media.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+  const media = data.media || {};
+  const image: string = media.image || '';
+  const gallery: string[] = Array.isArray(media.gallery) ? media.gallery.filter(Boolean) : [];
+  const video: string = media.video || '';
+  const hasMedia = !!image || gallery.length > 0 || !!video;
+  // Accept either media.overlayOpacity (0–1, clinic-style) or media.scrim (0–100, legacy spa).
+  const rawScrim = media.overlayOpacity != null ? Number(media.overlayOpacity) : (media.scrim != null ? Number(media.scrim) / 100 : 0.45);
+  const scrim = Math.min(0.88, Math.max(0, Number.isFinite(rawScrim) ? rawScrim : 0.45));
+  const pos = String(media.contentPosition || 'center');
+  const alignCenter = pos === 'center' || pos === 'center-below';
+  const customH = Number(media.height);
+  const tallH = Number.isFinite(customH) ? `${clampPx(customH, 360, 1000)}px` : 'clamp(480px, 76vh, 820px)';
+  const bandH = Number.isFinite(customH) ? `${clampPx(customH, 280, 900)}px` : 'clamp(320px, 52vh, 560px)';
+  const variant = resolveHeroVariant(data.variant, hasMedia);
+
+  // ----- split-photo (text + image side by side) -----
+  if (variant === 'split-photo-right' || variant === 'split-photo-left') {
+    const photo = <Media image={image} label={data.headline} phClass="ph ph-light" style={{ aspectRatio: '4/5', borderRadius: 'var(--radius-card)' }} />;
+    const body = <div><HeroBody data={data} ctx={ctx} onDark={false} /></div>;
+    return (
+      <section className="section on-light hero-anim">
+        <div className="container grid cols-2" style={{ alignItems: 'center', gap: 48 }}>
+          {variant === 'split-photo-left' ? <>{photo}{body}</> : <>{body}{photo}</>}
+        </div>
+      </section>
+    );
+  }
+
+  // ----- screenwide-top (media banner above, content below) -----
+  if (variant === 'photo-screenwide-top' || variant === 'gallery-screenwide-top') {
+    const isGallery = variant === 'gallery-screenwide-top';
+    return (
+      <>
+        <div style={{ position: 'relative', width: '100%', height: bandH, overflow: 'hidden' }}>
+          {isGallery
+            ? <HeroBackdrop images={gallery.length ? gallery : [image]} scrim={scrim * 0.6} />
+            : <Media image={image} phClass="ph ph-warm" style={{ width: '100%', height: '100%' }} />}
+        </div>
+        <section className="section on-light hero-anim">
+          <div className="container" style={{ maxWidth: 820, margin: alignCenter ? '0 auto' : '0' }}>
+            <HeroBody data={data} ctx={ctx} center={alignCenter} onDark={false} />
+          </div>
+        </section>
+      </>
+    );
+  }
+
+  // ----- overlap (image with a content card overlapping its lower edge) -----
+  if (variant === 'overlap') {
+    return (
+      <section className="section on-light" style={{ paddingTop: 0 }}>
+        <div style={{ position: 'relative', width: '100%', height: 'clamp(360px, 56vh, 620px)', overflow: 'hidden' }}>
+          <Media image={image} phClass="ph" style={{ width: '100%', height: '100%' }} />
+          <div style={{ position: 'absolute', inset: 0, background: `rgba(20,30,26,${scrim * 0.5})` }} />
+        </div>
+        <div className="container" style={{ position: 'relative', zIndex: 2, marginTop: -110 }}>
+          <div style={{ background: 'var(--surface-page)', borderRadius: 'var(--radius-card)', boxShadow: 'var(--shadow-1)', padding: 32, maxWidth: 720 }}>
+            <HeroBody data={data} ctx={ctx} onDark={false} />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // ----- centered with no media (clean light hero) -----
+  if (variant === 'centered' && !hasMedia) {
+    return (
+      <section className="section on-light hero-anim">
+        <div className="container" style={{ maxWidth: 760, margin: '0 auto' }}>
+          <HeroBody data={data} ctx={ctx} center onDark={false} />
+        </div>
+      </section>
+    );
+  }
+
+  // ----- photo-background / gallery-background / video-background / centered+media -----
+  // Full-bleed dark hero; content overlaid and vertically centred.
+  const center = alignCenter || variant === 'centered';
+  const useBackdrop = variant === 'gallery-background' || variant === 'video-background' || gallery.length > 0 || !!video;
+  const cssBg = !useBackdrop && image
+    ? { backgroundImage: `linear-gradient(rgba(20,30,26,${scrim}), rgba(20,30,26,${scrim})), url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
     : {};
-  // Background heroes need real height so the photo reads. Editable via media.height (px,
-  // clamped 360–1000); defaults to a responsive ~76vh band. Content is vertically centred.
-  const customH = Number(data.media?.height);
-  const minHeight = hasImage
-    ? (Number.isFinite(customH) ? `${Math.min(1000, Math.max(360, Math.round(customH)))}px` : 'clamp(480px, 76vh, 820px)')
-    : undefined;
   return (
     <section
       className="section on-dark hero-anim"
-      style={{ position: 'relative', ...(hasImage ? { display: 'flex', alignItems: 'center', minHeight } : {}), ...bg }}
+      style={{ position: 'relative', display: 'flex', alignItems: 'center', minHeight: tallH, overflow: 'hidden', ...cssBg }}
     >
-      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: 820 }}>
-        {data.eyebrow && <p className="eyebrow reveal">{data.eyebrow}</p>}
-        <h1 className="reveal">{data.headline}</h1>
-        <p className="reveal" style={{ fontSize: '1.15rem', maxWidth: '60ch', color: 'var(--text-inverse-muted)' }}>{data.subline}</p>
-        {data.badges?.length ? (
-          <div className="reveal" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', margin: '18px 0' }}>
-            {data.badges.map((b: any, i: number) => <span key={i} className="badge"><span className="dot" />{b.label}</span>)}
-          </div>
-        ) : null}
-        <div className="reveal" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8 }}>
-          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
-          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
-        </div>
-        <TrustCluster ctx={ctx} />
+      {useBackdrop && <HeroBackdrop images={gallery.length ? gallery : (image ? [image] : [])} video={video} scrim={scrim} />}
+      <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: 820, margin: center ? '0 auto' : '0' }}>
+        <HeroBody data={data} ctx={ctx} center={center} onDark />
       </div>
     </section>
   );

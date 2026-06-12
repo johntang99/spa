@@ -11,6 +11,15 @@ import type { Locale } from '@/lib/i18n';
 import type { SiteConfig } from '@/lib/types';
 import { Button } from '@/components/ui';
 import { ImagePickerModal } from '@/components/admin/ImagePickerModal';
+import { HERO_VARIANTS, HERO_CONTENT_POSITIONS } from '@/lib/spa/hero-variants';
+
+// Fields rendered as a dropdown instead of free text (key → options). `variant` is
+// only treated as a hero-variant select when it sits directly under the `hero` section.
+const SELECT_OPTIONS: Record<string, readonly string[]> = {
+  contentPosition: HERO_CONTENT_POSITIONS,
+  mediaSide: ['left', 'right'],
+};
+const IMAGE_ARRAY_KEYS = new Set(['gallery', 'images', 'photos']);
 
 interface FileItem { id: string; label: string; path: string }
 interface Props {
@@ -213,6 +222,19 @@ export function SpaPageEditor({ sites, selectedSiteId, selectedLocale, initialFi
       );
     }
     if (typeof value === 'string') {
+      // Enum dropdowns: hero variant (only under the `hero` section) + known enum keys.
+      const options = (k === 'variant' && path[0] === 'hero') ? HERO_VARIANTS : SELECT_OPTIONS[k];
+      if (options) {
+        return (
+          <div>
+            <label className={labelCls}>{label}</label>
+            <select className={input} value={value} onChange={(e) => update(path, e.target.value)}>
+              {!options.includes(value) && value && <option value={value}>{value}</option>}
+              {options.map((o) => <option key={o} value={o}>{o}</option>)}
+            </select>
+          </div>
+        );
+      }
       const long = LONG_TEXT_KEYS.has(k) || value.length > 70;
       return (
         <div>
@@ -242,7 +264,9 @@ export function SpaPageEditor({ sites, selectedSiteId, selectedLocale, initialFi
                 </div>
                 {typeof item === 'object' && item !== null
                   ? <div className="space-y-2">{Object.entries(item).map(([ck, cv]) => <Field key={ck} k={ck} value={cv} path={[...path, i, ck]} />)}</div>
-                  : <Field k={String(i)} value={item} path={[...path, i]} />}
+                  : IMAGE_ARRAY_KEYS.has(k) && typeof item === 'string'
+                    ? <ImageField value={item} input={input} onChange={(v) => update([...path, i], v)} onChoose={() => setPicker({ apply: (url) => update([...path, i], url) })} />
+                    : <Field k={String(i)} value={item} path={[...path, i]} />}
               </div>
             ))}
             <button type="button" className="text-xs text-[var(--primary)] hover:underline" onClick={() => addItem(path, structuredClone(template))}>+ Add {label.replace(/s$/, '') || 'item'}</button>
