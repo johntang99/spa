@@ -97,13 +97,23 @@ function TrustCluster({ ctx }: { ctx: SectionCtx }) {
 
 /* ---- S01 hero ---- */
 export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
+  const hasImage = !!data.media?.image;
   // Scrim (0–100) darkens the photo so the headline/subline stay legible over any image.
   const scrim = Math.min(0.85, Math.max(0, (data.media?.scrim ?? 45) / 100));
-  const bg = data.media?.image
+  const bg = hasImage
     ? { backgroundImage: `linear-gradient(rgba(20,30,26,${scrim}), rgba(20,30,26,${scrim})), url(${data.media.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }
     : {};
+  // Background heroes need real height so the photo reads. Editable via media.height (px,
+  // clamped 360–1000); defaults to a responsive ~76vh band. Content is vertically centred.
+  const customH = Number(data.media?.height);
+  const minHeight = hasImage
+    ? (Number.isFinite(customH) ? `${Math.min(1000, Math.max(360, Math.round(customH)))}px` : 'clamp(480px, 76vh, 820px)')
+    : undefined;
   return (
-    <section className="section on-dark hero-anim" style={{ position: 'relative', ...bg }}>
+    <section
+      className="section on-dark hero-anim"
+      style={{ position: 'relative', ...(hasImage ? { display: 'flex', alignItems: 'center', minHeight } : {}), ...bg }}
+    >
       <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: 820 }}>
         {data.eyebrow && <p className="eyebrow reveal">{data.eyebrow}</p>}
         <h1 className="reveal">{data.headline}</h1>
