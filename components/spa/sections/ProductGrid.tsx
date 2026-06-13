@@ -1,6 +1,6 @@
 // S25 productGrid (GiftCardCommerce) — denominations | treatments. Renders gift products
-// from the collection by productRefs. Stripe is DEFERRED: when stripeLink is empty the buy
-// button is disabled with a "call to purchase" note (contract: disabled + flagged).
+// from the collection by productRefs. Buy goes to either an explicit Stripe payment link
+// (if configured) or the internal Stripe Checkout session endpoint.
 import type { SectionCtx } from './index';
 import { Media } from './index';
 import { fmtPrice } from '@/lib/spa/catalog';
@@ -18,7 +18,16 @@ export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx 
         {data.intro && <p className="reveal small" style={{ marginBottom: 20 }}>{data.intro}</p>}
         <div className="grid cols-3">
           {products.map((p: any) => {
-            const canBuy = !!p.stripeLink && p.active;
+            const canBuy = p.active !== false;
+            const externalStripeLink =
+              typeof p.stripeLink === 'string' && /^https?:\/\//.test(p.stripeLink)
+                ? p.stripeLink
+                : '';
+            const checkoutLink = externalStripeLink
+              ? externalStripeLink
+              : `/api/gift-cards/checkout?productRef=${encodeURIComponent(
+                  String(p.id || '')
+                )}&locale=${encodeURIComponent(ctx.locale)}`;
             return (
               <div key={p.id} className="card reveal">
                 <Media image={p.image} label={p.label} phClass="ph ph-warm" style={{ aspectRatio: '16/9' }} />
@@ -26,11 +35,23 @@ export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx 
                   <h3 style={{ marginBottom: 4 }}>{p.label}</h3>
                   <p className="num" style={{ fontFamily: 'var(--s-font-display)', fontSize: '1.6rem', color: 'var(--candle-deep)' }}>{fmtPrice(p.amount)}</p>
                   {canBuy ? (
-                    <a className="btn btn-primary btn-sm" href={p.stripeLink}>{tr('Buy', '购买')}</a>
+                    <a
+                      className="btn btn-primary btn-sm"
+                      href={checkoutLink}
+                      target={externalStripeLink ? '_blank' : undefined}
+                      rel={externalStripeLink ? 'noreferrer' : undefined}
+                    >
+                      {tr('Buy', '购买')}
+                    </a>
                   ) : (
                     <>
                       <button className="btn btn-outline btn-sm" disabled>{tr('Buy', '购买')}</button>
-                      <p className="small" style={{ marginTop: 8 }}>{tr('Online purchase coming soon — call (845) 800-6600 to buy.', '在线购买即将上线——致电 (845) 800-6600 购买。')}</p>
+                      <p className="small" style={{ marginTop: 8 }}>
+                        {tr(
+                          'This gift card is temporarily unavailable.',
+                          '该礼品卡当前暂不可购买。'
+                        )}
+                      </p>
                     </>
                   )}
                 </div>

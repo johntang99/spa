@@ -7,6 +7,7 @@
       "amount": 50,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172708197-photo-1669342357971-30fce98569c7.jpg",
       "stripeLink": "",
+      "stripePriceId": "",
       "active": true,
       "order": 1
     },
@@ -17,6 +18,7 @@
       "amount": 100,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172439294-photo-1767976592687-71b152f279de.jpg",
       "stripeLink": "",
+      "stripePriceId": "",
       "active": true,
       "order": 2
     },
@@ -27,6 +29,7 @@
       "amount": 150,
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172440728-photo-1608755728617-aefab37d2edd.jpg",
       "stripeLink": "",
+      "stripePriceId": "",
       "active": true,
       "order": 3
     },
@@ -38,6 +41,7 @@
       "serviceRef": "signature-facial",
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172441740-photo-1555820585-c5ae44394b79.jpg",
       "stripeLink": "",
+      "stripePriceId": "",
       "active": true,
       "order": 4
     },
@@ -49,6 +53,7 @@
       "serviceRef": "couples-massage",
       "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172442654-photo-1741522509438-a120c0bb5e88.jpg",
       "stripeLink": "",
+      "stripePriceId": "",
       "active": true,
       "order": 5
     }
