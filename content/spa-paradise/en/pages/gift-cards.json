@@ -35,23 +35,23 @@
   },
   "steps": {
     "variant": "horizontal",
-    "heading": "How to buy and redeem (step by step)",
+    "heading": "How to gift and redeem (step by step)",
     "items": [
       {
         "title": "Choose a gift card",
         "body": "Pick $50, $100, $150, or a treatment gift card, then click Buy under the option you want."
       },
       {
+        "title": "Enter recipient details",
+        "body": "In the gift popup, enter the recipient's name and email so we can deliver the certificate directly."
+      },
+      {
         "title": "Checkout securely",
-        "body": "On Stripe Checkout, enter your email, apply a promo code if you have one, and complete the order."
+        "body": "Continue to Stripe Checkout, enter buyer contact info, apply a promo code if needed, and complete the order."
       },
       {
-        "title": "Receive certificate details",
-        "body": "After payment, you return to a success page and receive a gift certificate code by email. You can forward that email to the recipient."
-      },
-      {
-        "title": "Redeem at Spa Paradise",
-        "body": "Book any service online, by phone, or in person, then show the certificate code at check-in. We'll apply it at the front desk."
+        "title": "Recipient redeems",
+        "body": "The recipient gets a gift card email with certificate code and balance link. They can book online/by phone and show the code at check-in."
       }
     ]
   },
