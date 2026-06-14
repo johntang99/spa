@@ -112,11 +112,11 @@ function normalizeBaseUrl(input: string) {
 }
 
 async function resolveGiftCardBaseUrl(siteId: string) {
-  const envUrl = normalizeBaseUrl(process.env.NEXT_PUBLIC_SITE_URL || '');
-  if (envUrl) return envUrl;
   const site = await getSiteById(siteId);
   const siteDomain = normalizeBaseUrl(site?.domain || '');
   if (siteDomain) return siteDomain;
+  const envUrl = normalizeBaseUrl(process.env.NEXT_PUBLIC_SITE_URL || '');
+  if (envUrl && !/localhost|127\.0\.0\.1|0\.0\.0\.0/i.test(envUrl)) return envUrl;
   return 'https://www.spaparadisenewyork.com';
 }
 
@@ -994,7 +994,7 @@ async function sendGiftCardCertificateEmail(args: {
 }) {
   if (!process.env.RESEND_API_KEY) return;
   const resendFrom =
-    process.env.RESEND_FROM || 'No-Reply <no-reply@baamplatform.com>';
+    process.env.RESEND_FROM || 'Spa Paradise <no-reply@baamplatform.com>';
   const resend = new Resend(process.env.RESEND_API_KEY);
   const amountText = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -1034,6 +1034,8 @@ async function sendGiftCardCertificateEmail(args: {
         args.viewUrl ? `View gift card: ${args.viewUrl}` : '',
       ];
   const safeName = escapeHtml(args.recipientName);
+  const safeBuyerName = escapeHtml(args.buyerName);
+  const safeRecipientEmail = escapeHtml(args.recipientEmail);
   const safeCode = escapeHtml(args.certificateCode);
   const safeProduct = escapeHtml(args.productLabel);
   const safeAmount = escapeHtml(amountText);
@@ -1095,6 +1097,57 @@ async function sendGiftCardCertificateEmail(args: {
         </div>
       </div>
     `;
+  const buyerHtml = isZh
+    ? `
+      <div style="font-family: Arial, sans-serif; background:#f6f7f8; padding:24px;">
+        <div style="max-width:620px; margin:0 auto; background:#ffffff; border-radius:14px; overflow:hidden; border:1px solid #e5e7eb;">
+          <div style="background:#0f766e; color:#fff; padding:20px 24px;">
+            <div style="font-size:20px; font-weight:700;">Spa Paradise 礼品卡</div>
+            <div style="opacity:0.9; margin-top:4px;">礼品卡已发送给收礼人</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="margin:0 0 12px;">${safeBuyerName} 您好，</p>
+            <p style="margin:0 0 16px;">您的礼品卡已发送至 ${safeRecipientEmail}。</p>
+            <div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-bottom:16px; background:#fafafa;">
+              <div style="font-size:12px; color:#6b7280; margin-bottom:4px;">礼券代码</div>
+              <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:22px; font-weight:700; letter-spacing:1px; color:#111827;">${safeCode}</div>
+              <div style="margin-top:12px; font-size:14px; color:#374151;">礼品：${safeProduct}</div>
+              <div style="font-size:14px; color:#374151;">金额：${safeAmount}</div>
+            </div>
+            ${
+              safeViewUrl
+                ? `<a href="${safeViewUrl}" style="display:inline-block; background:#111827; color:#fff; text-decoration:none; border-radius:8px; padding:11px 16px; font-weight:600; margin-bottom:14px;">查看礼品卡</a>`
+                : ''
+            }
+          </div>
+        </div>
+      </div>
+    `
+    : `
+      <div style="font-family: Arial, sans-serif; background:#f6f7f8; padding:24px;">
+        <div style="max-width:620px; margin:0 auto; background:#ffffff; border-radius:14px; overflow:hidden; border:1px solid #e5e7eb;">
+          <div style="background:#0f766e; color:#fff; padding:20px 24px;">
+            <div style="font-size:20px; font-weight:700;">Spa Paradise Gift Card</div>
+            <div style="opacity:0.9; margin-top:4px;">Gift card sent to recipient</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="margin:0 0 12px;">Hi ${safeBuyerName},</p>
+            <p style="margin:0 0 16px;">Your gift card was sent to ${safeRecipientEmail}.</p>
+            <div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-bottom:16px; background:#fafafa;">
+              <div style="font-size:12px; color:#6b7280; margin-bottom:4px;">Certificate code</div>
+              <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:22px; font-weight:700; letter-spacing:1px; color:#111827;">${safeCode}</div>
+              <div style="margin-top:12px; font-size:14px; color:#374151;">Gift: ${safeProduct}</div>
+              <div style="font-size:14px; color:#374151;">Amount: ${safeAmount}</div>
+            </div>
+            ${
+              safeViewUrl
+                ? `<a href="${safeViewUrl}" style="display:inline-block; background:#111827; color:#fff; text-decoration:none; border-radius:8px; padding:11px 16px; font-weight:600; margin-bottom:14px;">View Gift Card</a>`
+                : ''
+            }
+          </div>
+        </div>
+      </div>
+    `;
 
   try {
     await resend.emails.send({
@@ -1132,6 +1185,7 @@ async function sendGiftCardCertificateEmail(args: {
               `Amount: ${amountText}`,
               args.viewUrl ? `View gift card: ${args.viewUrl}` : '',
             ].join('\n'),
+        html: buyerHtml,
       });
     }
   } catch (error) {
@@ -1181,7 +1235,7 @@ async function sendGiftCardRedemptionEmail(args: {
   if (!process.env.RESEND_API_KEY) return;
   const resend = new Resend(process.env.RESEND_API_KEY);
   const resendFrom =
-    process.env.RESEND_FROM || 'No-Reply <no-reply@baamplatform.com>';
+    process.env.RESEND_FROM || 'Spa Paradise <no-reply@baamplatform.com>';
   const redeemedText = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: (args.currency || 'usd').toUpperCase(),
