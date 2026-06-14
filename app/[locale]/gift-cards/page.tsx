@@ -43,14 +43,15 @@ export default async function GiftCardsPage({ params, searchParams }: PageProps)
         localeHint: locale,
       });
       if (finalized.ok) {
+        const deliveredTo = finalized.recipientEmail || finalized.buyerEmail;
         notice = {
           tone: 'success',
           title:
             locale === 'zh' ? '礼品卡购买成功' : 'Gift card purchase successful',
           body:
             locale === 'zh'
-              ? `礼券代码 ${finalized.certificateCode} 已发送到 ${finalized.buyerEmail}。`
-              : `Certificate code ${finalized.certificateCode} was sent to ${finalized.buyerEmail}.`,
+              ? `礼券代码 ${finalized.certificateCode} 已发送到 ${deliveredTo}。`
+              : `Certificate code ${finalized.certificateCode} was sent to ${deliveredTo}.`,
         };
       } else {
         notice = {

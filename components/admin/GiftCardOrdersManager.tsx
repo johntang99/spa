@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
 import type { SiteConfig } from '@/lib/types';
@@ -40,6 +40,20 @@ function formatCurrency(amount: number, currency: string) {
   }
 }
 
+function getOriginalAmount(order: GiftCardOrder) {
+  return Number(order.original_amount ?? order.amount ?? 0);
+}
+
+function getRedeemedAmount(order: GiftCardOrder) {
+  return Number(order.redeemed_amount ?? 0);
+}
+
+function getRemainingAmount(order: GiftCardOrder) {
+  const explicit = Number(order.remaining_amount);
+  if (Number.isFinite(explicit)) return explicit;
+  return Math.max(getOriginalAmount(order) - getRedeemedAmount(order), 0);
+}
+
 function formatStatus(status: GiftCardOrderStatus) {
   if (status === 'paid') return 'Paid';
   if (status === 'fulfilled') return 'Fulfilled';
@@ -66,8 +80,11 @@ export function GiftCardOrdersManager({
   const [to, setTo] = useState(() => getDateOffset(90));
   const [status, setStatus] = useState<GiftCardOrderStatus | 'all'>('all');
   const [orders, setOrders] = useState<GiftCardOrder[]>([]);
+  const [redeemInputs, setRedeemInputs] = useState<Record<string, string>>({});
+  const [redeemNotes, setRedeemNotes] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string>('');
+  const [messageTone, setMessageTone] = useState<'error' | 'success'>('error');
 
   const currentSite = useMemo(
     () => sites.find((entry) => entry.id === siteId),
@@ -96,6 +113,7 @@ export function GiftCardOrdersManager({
     if (!siteId) return;
     setLoading(true);
     setMessage('');
+    setMessageTone('error');
     try {
       const params = new URLSearchParams({
         siteId,
@@ -115,6 +133,7 @@ export function GiftCardOrdersManager({
       const errorMessage =
         error instanceof Error ? error.message : 'Failed to load gift card orders.';
       setMessage(errorMessage);
+      setMessageTone('error');
       setOrders([]);
     } finally {
       setLoading(false);
@@ -123,6 +142,7 @@ export function GiftCardOrdersManager({
 
   async function updateOrderStatus(order: GiftCardOrder, next: GiftCardOrderStatus) {
     setMessage('');
+    setMessageTone('error');
     try {
       const response = await fetch(`/api/admin/gift-card-orders/${order.id}`, {
         method: 'PATCH',
@@ -146,6 +166,62 @@ export function GiftCardOrdersManager({
       const errorMessage =
         error instanceof Error ? error.message : 'Failed to update order status.';
       setMessage(errorMessage);
+      setMessageTone('error');
+    }
+  }
+
+  async function redeemAmount(order: GiftCardOrder, useFullRemaining = false) {
+    const remaining = getRemainingAmount(order);
+    const raw = useFullRemaining
+      ? remaining.toFixed(2)
+      : String(redeemInputs[order.id] || '').trim();
+    const amount = Number(raw);
+    if (!Number.isFinite(amount) || amount <= 0) {
+      setMessage('Enter a valid redeem amount.');
+      setMessageTone('error');
+      return;
+    }
+    if (amount > remaining + 0.0001) {
+      setMessage('Redeem amount cannot exceed remaining balance.');
+      setMessageTone('error');
+      return;
+    }
+
+    const note = String(redeemNotes[order.id] || '').trim();
+    setMessage('');
+    setMessageTone('error');
+    try {
+      const response = await fetch(`/api/admin/gift-card-orders/${order.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          siteId,
+          redeemAmount: amount,
+          note,
+        }),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(payload?.message || 'Failed to redeem gift card amount.');
+      }
+      const updated = payload.order as GiftCardOrder;
+      setOrders((prev) =>
+        prev.map((entry) => (entry.id === updated.id ? updated : entry))
+      );
+      setRedeemInputs((prev) => ({ ...prev, [order.id]: '' }));
+      setRedeemNotes((prev) => ({ ...prev, [order.id]: '' }));
+      const remainingAfter = getRemainingAmount(updated);
+      setMessage(
+        `Redeemed ${formatCurrency(amount, order.currency)}. Remaining ${formatCurrency(remainingAfter, order.currency)}.`
+      );
+      setMessageTone('success');
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to redeem gift card amount.';
+      setMessage(errorMessage);
+      setMessageTone('error');
     }
   }
 
@@ -159,7 +235,7 @@ export function GiftCardOrdersManager({
       <header className="space-y-1">
         <h1 className="text-2xl font-semibold text-gray-900">Gift Card Orders</h1>
         <p className="text-sm text-gray-600">
-          Track paid gift cards and mark them fulfilled or redeemed.
+          Track balances and redeem gift cards by partial amount or full amount.
         </p>
       </header>
 
@@ -235,7 +311,10 @@ export function GiftCardOrdersManager({
           {loading ? 'Loading...' : 'Refresh'}
         </Button>
         {message && (
-          <p className="text-sm text-rose-600" role="status">
+          <p
+            className={`text-sm ${messageTone === 'success' ? 'text-emerald-700' : 'text-rose-600'}`}
+            role="status"
+          >
             {message}
           </p>
         )}
@@ -255,7 +334,13 @@ export function GiftCardOrdersManager({
                 Product
               </th>
               <th className="px-4 py-3 text-left font-semibold text-gray-700">
-                Amount
+                Original
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Redeemed
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Remaining
               </th>
               <th className="px-4 py-3 text-left font-semibold text-gray-700">
                 Status
@@ -271,57 +356,147 @@ export function GiftCardOrdersManager({
           <tbody className="divide-y divide-gray-100">
             {orders.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-4 py-6 text-center text-gray-500">
+                <td colSpan={9} className="px-4 py-6 text-center text-gray-500">
                   No gift card orders found for the selected filters.
                 </td>
               </tr>
             ) : (
-              orders.map((order) => (
-                <tr key={order.id}>
-                  <td className="px-4 py-3">
-                    <p className="font-medium text-gray-900">{order.buyer_name}</p>
-                    <p className="text-gray-500">{order.buyer_email}</p>
-                  </td>
-                  <td className="px-4 py-3 font-mono text-xs text-gray-800">
-                    {order.certificate_code}
-                  </td>
-                  <td className="px-4 py-3 text-gray-700">{order.product_ref}</td>
-                  <td className="px-4 py-3 text-gray-700">
-                    {formatCurrency(order.amount, order.currency)}
-                  </td>
-                  <td className="px-4 py-3">
-                    <span
-                      className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${badgeClass(order.status)}`}
-                    >
-                      {formatStatus(order.status)}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 text-gray-600">
-                    {new Date(order.created_at).toLocaleString()}
-                  </td>
-                  <td className="px-4 py-3">
-                    <div className="flex flex-wrap gap-2">
-                      {order.status === 'paid' && (
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() => updateOrderStatus(order, 'fulfilled')}
+              orders.map((order) => {
+                const history = order.redemptions || [];
+                return (
+                  <Fragment key={order.id}>
+                    <tr>
+                      <td className="px-4 py-3">
+                        <p className="font-medium text-gray-900">{order.buyer_name}</p>
+                        <p className="text-gray-500">{order.buyer_email}</p>
+                        {order.recipient_email ? (
+                          <p className="text-xs text-gray-500">
+                            Recipient: {order.recipient_name || 'Guest'} ({order.recipient_email})
+                          </p>
+                        ) : null}
+                      </td>
+                      <td className="px-4 py-3 font-mono text-xs text-gray-800">
+                        {order.certificate_code}
+                      </td>
+                      <td className="px-4 py-3 text-gray-700">{order.product_ref}</td>
+                      <td className="px-4 py-3 text-gray-700">
+                        {formatCurrency(getOriginalAmount(order), order.currency)}
+                      </td>
+                      <td className="px-4 py-3 text-gray-700">
+                        {formatCurrency(getRedeemedAmount(order), order.currency)}
+                      </td>
+                      <td className="px-4 py-3 text-gray-700">
+                        {formatCurrency(getRemainingAmount(order), order.currency)}
+                      </td>
+                      <td className="px-4 py-3">
+                        <span
+                          className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${badgeClass(order.status)}`}
                         >
-                          Mark Fulfilled
-                        </Button>
-                      )}
-                      {order.status !== 'redeemed' && (
-                        <Button
-                          size="sm"
-                          onClick={() => updateOrderStatus(order, 'redeemed')}
-                        >
-                          Mark Redeemed
-                        </Button>
-                      )}
-                    </div>
-                  </td>
-                </tr>
-              ))
+                          {formatStatus(order.status)}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 text-gray-600">
+                        {new Date(order.created_at).toLocaleString()}
+                      </td>
+                      <td className="px-4 py-3">
+                        <div className="flex flex-wrap gap-2">
+                          {order.status === 'paid' && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              onClick={() => updateOrderStatus(order, 'fulfilled')}
+                            >
+                              Mark Fulfilled
+                            </Button>
+                          )}
+                          {getRemainingAmount(order) > 0 ? (
+                            <>
+                              <input
+                                type="number"
+                                min="0.01"
+                                step="0.01"
+                                max={getRemainingAmount(order).toFixed(2)}
+                                placeholder="Amount"
+                                className="w-24 rounded-lg border border-gray-300 px-2 py-1 text-xs"
+                                value={redeemInputs[order.id] || ''}
+                                onChange={(event) =>
+                                  setRedeemInputs((prev) => ({
+                                    ...prev,
+                                    [order.id]: event.target.value,
+                                  }))
+                                }
+                              />
+                          <input
+                            type="text"
+                            placeholder="Description (e.g. Swedish 60m)"
+                            className="w-52 rounded-lg border border-gray-300 px-2 py-1 text-xs"
+                            maxLength={120}
+                            value={redeemNotes[order.id] || ''}
+                            onChange={(event) =>
+                              setRedeemNotes((prev) => ({
+                                ...prev,
+                                [order.id]: event.target.value,
+                              }))
+                            }
+                          />
+                              <Button
+                                size="sm"
+                                onClick={() => redeemAmount(order)}
+                              >
+                                Redeem Amount
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() => redeemAmount(order, true)}
+                              >
+                                Redeem Full
+                              </Button>
+                            </>
+                          ) : (
+                            <span className="text-xs font-semibold text-emerald-700">
+                              Fully redeemed
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50/40">
+                      <td colSpan={9} className="px-4 py-3">
+                        <details>
+                          <summary className="cursor-pointer text-xs font-semibold text-gray-700">
+                            Redemption history ({history.length})
+                          </summary>
+                          <div className="mt-2 space-y-1">
+                            {history.length === 0 ? (
+                              <p className="text-xs text-gray-500">
+                                No redemptions yet.
+                              </p>
+                            ) : (
+                              history.map((item) => (
+                                <div
+                                  key={item.id}
+                                  className="text-xs text-gray-700"
+                                >
+                                  <span className="font-semibold">
+                                    {formatCurrency(item.amount, item.currency)}
+                                  </span>{' '}
+                                  redeemed on{' '}
+                                  {new Date(item.redeemed_at).toLocaleString()}
+                                  {item.redeemed_by
+                                    ? ` by ${item.redeemed_by}`
+                                    : ''}
+                                  {item.note ? ` — ${item.note}` : ''}
+                                </div>
+                              ))
+                            )}
+                          </div>
+                        </details>
+                      </td>
+                    </tr>
+                  </Fragment>
+                );
+              })
             )}
           </tbody>
         </table>
