@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { finalizeGiftCardSession } from '@/lib/gift-cards/commerce';
+import { getRequestSiteId } from '@/lib/content';
+import {
+  finalizeGiftCardSession,
+  handleGiftCardChargeEvent,
+} from '@/lib/gift-cards/commerce';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -44,6 +48,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    const fallbackSiteId = await getRequestSiteId();
+    const stripeAccountId =
+      typeof event.account === 'string' ? String(event.account).trim() : '';
     if (
       event.type === 'checkout.session.completed' ||
       event.type === 'checkout.session.async_payment_succeeded'
@@ -53,7 +60,35 @@ export async function POST(request: NextRequest) {
       await finalizeGiftCardSession({
         sessionId: session.id,
         localeHint,
+        siteIdHint: String(session.metadata?.siteId || fallbackSiteId),
+        stripeAccountId,
+        session,
       });
+    } else if (event.type === 'charge.refunded') {
+      const charge = event.data.object as Stripe.Charge;
+      const paymentIntentId =
+        typeof charge.payment_intent === 'string'
+          ? charge.payment_intent
+          : '';
+      await handleGiftCardChargeEvent({
+        siteId: fallbackSiteId,
+        stripeAccountId,
+        paymentIntentId,
+        chargeId: charge.id,
+        status: charge.refunded ? 'refunded' : 'frozen',
+        refundedAmount: Number(charge.amount_refunded || 0) / 100,
+      });
+    } else if (event.type === 'charge.dispute.created') {
+      const dispute = event.data.object as Stripe.Dispute;
+      const chargeId = String(dispute.charge || '').trim();
+      if (chargeId) {
+        await handleGiftCardChargeEvent({
+          siteId: fallbackSiteId,
+          stripeAccountId,
+          chargeId,
+          status: 'frozen',
+        });
+      }
     }
   } catch (error) {
     console.error('Stripe webhook handler failed:', error);

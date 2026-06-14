@@ -10,7 +10,13 @@ import {
 } from '@/lib/gift-cards/commerce';
 
 function parseStatus(value: string | null): GiftCardOrderStatus | 'all' {
-  if (value === 'paid' || value === 'fulfilled' || value === 'redeemed') {
+  if (
+    value === 'paid' ||
+    value === 'fulfilled' ||
+    value === 'redeemed' ||
+    value === 'frozen' ||
+    value === 'refunded'
+  ) {
     return value;
   }
   return 'all';

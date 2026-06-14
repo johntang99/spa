@@ -4,6 +4,7 @@
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
 import SectionRenderer from '@/components/spa/SectionRenderer';
+import { getRequestSiteId } from '@/lib/content';
 import { loadSpaPage, spaPageMetadata } from '@/lib/spa/page-data';
 import { finalizeGiftCardSession } from '@/lib/gift-cards/commerce';
 
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function GiftCardsPage({ params, searchParams }: PageProps) {
   const locale = params.locale === 'zh' ? 'zh' : 'en';
+  const siteId = await getRequestSiteId();
   let notice: GiftCardNotice | null = null;
   const checkoutState = readParam(searchParams, 'checkout');
   const sessionId = readParam(searchParams, 'session_id');
@@ -41,6 +43,7 @@ export default async function GiftCardsPage({ params, searchParams }: PageProps)
       const finalized = await finalizeGiftCardSession({
         sessionId,
         localeHint: locale,
+        siteIdHint: siteId,
       });
       if (finalized.ok) {
         const deliveredTo = finalized.recipientEmail || finalized.buyerEmail;

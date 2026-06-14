@@ -171,7 +171,7 @@ export const orderSchema = z.object({
   buyerEmail: z.string().email(),
   buyerLocale: z.enum(['en', 'zh']),
   certificateCode: z.string().min(1), // unique
-  status: z.enum(['paid', 'fulfilled', 'redeemed']).default('paid'),
+  status: z.enum(['paid', 'fulfilled', 'redeemed', 'frozen', 'refunded']).default('paid'),
 });
 
 export const COLLECTION_SCHEMAS = {

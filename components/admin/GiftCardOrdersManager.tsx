@@ -27,6 +27,8 @@ const STATUS_OPTIONS: Array<GiftCardOrderStatus | 'all'> = [
   'paid',
   'fulfilled',
   'redeemed',
+  'frozen',
+  'refunded',
 ];
 
 function formatCurrency(amount: number, currency: string) {
@@ -57,13 +59,17 @@ function getRemainingAmount(order: GiftCardOrder) {
 function formatStatus(status: GiftCardOrderStatus) {
   if (status === 'paid') return 'Paid';
   if (status === 'fulfilled') return 'Fulfilled';
-  return 'Redeemed';
+  if (status === 'redeemed') return 'Redeemed';
+  if (status === 'frozen') return 'Frozen';
+  return 'Refunded';
 }
 
 function badgeClass(status: GiftCardOrderStatus) {
   if (status === 'paid') return 'bg-amber-100 text-amber-800';
   if (status === 'fulfilled') return 'bg-sky-100 text-sky-800';
-  return 'bg-emerald-100 text-emerald-800';
+  if (status === 'redeemed') return 'bg-emerald-100 text-emerald-800';
+  if (status === 'frozen') return 'bg-orange-100 text-orange-800';
+  return 'bg-rose-100 text-rose-800';
 }
 
 export function GiftCardOrdersManager({
@@ -79,6 +85,7 @@ export function GiftCardOrdersManager({
   const [from, setFrom] = useState(() => getDateOffset(-90));
   const [to, setTo] = useState(() => getDateOffset(90));
   const [status, setStatus] = useState<GiftCardOrderStatus | 'all'>('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [orders, setOrders] = useState<GiftCardOrder[]>([]);
   const [redeemInputs, setRedeemInputs] = useState<Record<string, string>>({});
   const [redeemNotes, setRedeemNotes] = useState<Record<string, string>>({});
@@ -90,6 +97,44 @@ export function GiftCardOrdersManager({
     () => sites.find((entry) => entry.id === siteId),
     [sites, siteId]
   );
+  const visibleOrders = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) return orders;
+    return orders.filter((order) => {
+      const fields = [
+        order.certificate_code,
+        order.buyer_email,
+        order.buyer_name,
+        order.recipient_email || '',
+        order.recipient_name || '',
+        order.product_ref,
+      ]
+        .join(' ')
+        .toLowerCase();
+      return fields.includes(query);
+    });
+  }, [orders, searchQuery]);
+
+  const summary = useMemo(() => {
+    const totals = {
+      cards: visibleOrders.length,
+      face: 0,
+      redeemed: 0,
+      remaining: 0,
+      gross: 0,
+      fee: 0,
+      reimburse: 0,
+    };
+    for (const order of visibleOrders) {
+      totals.face += getOriginalAmount(order);
+      totals.redeemed += getRedeemedAmount(order);
+      totals.remaining += getRemainingAmount(order);
+      totals.gross += Number(order.gross_collected_amount || 0);
+      totals.fee += Number(order.stripe_fee_amount || 0);
+      totals.reimburse += Number(order.reimbursement_due_amount || 0);
+    }
+    return totals;
+  }, [visibleOrders]);
 
   useEffect(() => {
     if (!currentSite) return;
@@ -225,6 +270,36 @@ export function GiftCardOrdersManager({
     }
   }
 
+  async function resendCertificate(order: GiftCardOrder) {
+    setMessage('');
+    setMessageTone('error');
+    try {
+      const response = await fetch(`/api/admin/gift-card-orders/${order.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          siteId,
+          action: 'resend_certificate',
+        }),
+      });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(payload?.message || 'Failed to resend gift card email.');
+      }
+      setMessage(
+        `Gift card email resent to ${order.recipient_email || order.buyer_email}.`
+      );
+      setMessageTone('success');
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to resend gift card email.';
+      setMessage(errorMessage);
+      setMessageTone('error');
+    }
+  }
+
   useEffect(() => {
     void loadOrders();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -306,6 +381,17 @@ export function GiftCardOrdersManager({
         </label>
       </div>
 
+      <label className="block space-y-1 text-sm text-gray-700">
+        <span className="font-medium">Front-desk search</span>
+        <input
+          type="text"
+          className="w-full rounded-xl border border-gray-300 px-3 py-2"
+          placeholder="Certificate code, recipient email, buyer email, name..."
+          value={searchQuery}
+          onChange={(event) => setSearchQuery(event.target.value)}
+        />
+      </label>
+
       <div className="flex items-center gap-3">
         <Button onClick={loadOrders} disabled={loading || !siteId}>
           {loading ? 'Loading...' : 'Refresh'}
@@ -318,6 +404,59 @@ export function GiftCardOrdersManager({
             {message}
           </p>
         )}
+      </div>
+
+      <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+        <table className="min-w-full divide-y divide-gray-200 text-sm">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Cards
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Face Amount
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Redeemed
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Remaining Liability
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Gross Collected
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Stripe Fees
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-gray-700">
+                Reimbursement Due
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="px-4 py-3 text-gray-800">{summary.cards}</td>
+              <td className="px-4 py-3 text-gray-800">
+                {formatCurrency(summary.face, 'usd')}
+              </td>
+              <td className="px-4 py-3 text-gray-800">
+                {formatCurrency(summary.redeemed, 'usd')}
+              </td>
+              <td className="px-4 py-3 text-gray-800">
+                {formatCurrency(summary.remaining, 'usd')}
+              </td>
+              <td className="px-4 py-3 text-gray-800">
+                {formatCurrency(summary.gross, 'usd')}
+              </td>
+              <td className="px-4 py-3 text-gray-800">
+                {formatCurrency(summary.fee, 'usd')}
+              </td>
+              <td className="px-4 py-3 font-semibold text-emerald-700">
+                {formatCurrency(summary.reimburse, 'usd')}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
@@ -354,14 +493,14 @@ export function GiftCardOrdersManager({
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {orders.length === 0 ? (
+            {visibleOrders.length === 0 ? (
               <tr>
                 <td colSpan={9} className="px-4 py-6 text-center text-gray-500">
-                  No gift card orders found for the selected filters.
+                  No gift card orders found for the selected filters/search.
                 </td>
               </tr>
             ) : (
-              orders.map((order) => {
+              visibleOrders.map((order) => {
                 const history = order.redemptions || [];
                 return (
                   <Fragment key={order.id}>
@@ -409,7 +548,9 @@ export function GiftCardOrdersManager({
                               Mark Fulfilled
                             </Button>
                           )}
-                          {getRemainingAmount(order) > 0 ? (
+                      {getRemainingAmount(order) > 0 &&
+                      order.status !== 'frozen' &&
+                      order.status !== 'refunded' ? (
                             <>
                               <input
                                 type="number"
@@ -452,11 +593,39 @@ export function GiftCardOrdersManager({
                               >
                                 Redeem Full
                               </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => resendCertificate(order)}
+                          >
+                            Resend Email
+                          </Button>
                             </>
                           ) : (
-                            <span className="text-xs font-semibold text-emerald-700">
-                              Fully redeemed
-                            </span>
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={`text-xs font-semibold ${
+                              order.status === 'frozen'
+                                ? 'text-orange-700'
+                                : order.status === 'refunded'
+                                  ? 'text-rose-700'
+                                  : 'text-emerald-700'
+                            }`}
+                          >
+                            {order.status === 'frozen'
+                              ? 'Frozen by payment event'
+                              : order.status === 'refunded'
+                                ? 'Refunded'
+                                : 'Fully redeemed'}
+                          </span>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => resendCertificate(order)}
+                          >
+                            Resend Email
+                          </Button>
+                        </div>
                           )}
                         </div>
                       </td>

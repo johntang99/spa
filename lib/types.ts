@@ -28,6 +28,8 @@ export interface SiteConfig {
   herbStoreSlug?: string;
   /** GTM container ID (e.g., 'GTM-XXXXXXX'). When set, the GTM snippet is injected on every page. */
   gtmContainerId?: string;
+  /** Optional Stripe Connect account ID (acct_*) for per-site branded checkout. */
+  stripeConnectedAccountId?: string;
   createdAt: string;
   updatedAt: string;
 }

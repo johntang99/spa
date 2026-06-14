@@ -18,7 +18,12 @@ type GiftCardProduct = {
   stripePriceId?: string;
 };
 
-export type GiftCardOrderStatus = 'paid' | 'fulfilled' | 'redeemed';
+export type GiftCardOrderStatus =
+  | 'paid'
+  | 'fulfilled'
+  | 'redeemed'
+  | 'refunded'
+  | 'frozen';
 
 export type GiftCardOrder = {
   id: string;
@@ -45,6 +50,10 @@ export type GiftCardOrder = {
   redemption_count?: number;
   last_redeemed_at?: string | null;
   redemptions?: GiftCardRedemption[];
+  gross_collected_amount?: number;
+  net_collected_amount?: number;
+  stripe_fee_amount?: number;
+  reimbursement_due_amount?: number;
 };
 
 export type GiftCardRedemption = {
@@ -71,6 +80,22 @@ type GiftCardRecipientProfile = {
   updated_at: string;
 };
 
+type GiftCardFinanceRecord = {
+  id: string;
+  order_id?: string;
+  stripe_session_id: string;
+  payment_intent_id?: string;
+  charge_id?: string;
+  currency: string;
+  gross_amount: number;
+  net_amount: number;
+  stripe_fee_amount: number;
+  reimbursement_due_amount: number;
+  refunded_amount?: number;
+  status?: 'paid' | 'refunded' | 'frozen';
+  updated_at: string;
+};
+
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripe = stripeSecretKey
   ? new Stripe(stripeSecretKey, {
@@ -82,6 +107,8 @@ const REDEMPTIONS_CONTENT_PATH = 'commerce/gift-card-redemptions.json';
 const REDEMPTIONS_CONTENT_LOCALE: 'en' = 'en';
 const RECIPIENTS_CONTENT_PATH = 'commerce/gift-card-recipients.json';
 const RECIPIENTS_CONTENT_LOCALE: 'en' = 'en';
+const FINANCE_CONTENT_PATH = 'commerce/gift-card-finance.json';
+const FINANCE_CONTENT_LOCALE: 'en' = 'en';
 
 function toCents(value: number) {
   return Math.max(0, Math.round(Number(value || 0) * 100));
@@ -122,6 +149,35 @@ async function resolveGiftCardBaseUrl(siteId: string) {
 
 function normalizeLocale(input?: string): 'en' | 'zh' {
   return input === 'zh' ? 'zh' : 'en';
+}
+
+function normalizeStripeAccountId(input?: string | null) {
+  const value = String(input || '').trim();
+  return /^acct_[A-Za-z0-9]+$/.test(value) ? value : '';
+}
+
+function siteIdEnvSuffix(siteId: string) {
+  return String(siteId || '')
+    .trim()
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+}
+
+async function resolveConnectedStripeAccountId(siteId: string) {
+  const site = await getSiteById(siteId);
+  const fromSiteConfig = normalizeStripeAccountId(
+    (site as { stripeConnectedAccountId?: string } | null)?.stripeConnectedAccountId
+  );
+  if (fromSiteConfig) return fromSiteConfig;
+
+  const suffix = siteIdEnvSuffix(siteId);
+  const siteScoped = normalizeStripeAccountId(
+    process.env[`STRIPE_CONNECTED_ACCOUNT_ID_${suffix}`]
+  );
+  if (siteScoped) return siteScoped;
+
+  return normalizeStripeAccountId(process.env.STRIPE_CONNECTED_ACCOUNT_ID);
 }
 
 async function loadGiftCards(siteId: string, locale: 'en' | 'zh') {
@@ -193,6 +249,16 @@ function getLocalRecipientsPath(siteId: string) {
     siteId,
     'commerce',
     'gift-card-recipients.json'
+  );
+}
+
+function getLocalFinancePath(siteId: string) {
+  return path.join(
+    process.cwd(),
+    'content',
+    siteId,
+    'commerce',
+    'gift-card-finance.json'
   );
 }
 
@@ -275,6 +341,60 @@ function normalizeRecipientsPayload(payload: unknown): GiftCardRecipientProfile[
     .filter((entry): entry is GiftCardRecipientProfile => Boolean(entry));
 }
 
+function normalizeFinancePayload(payload: unknown): GiftCardFinanceRecord[] {
+  const source = Array.isArray(payload)
+    ? payload
+    : payload && typeof payload === 'object'
+      ? Array.isArray((payload as { records?: unknown[] }).records)
+        ? (payload as { records: unknown[] }).records
+        : Array.isArray((payload as { items?: unknown[] }).items)
+          ? (payload as { items: unknown[] }).items
+          : []
+      : [];
+  return source
+    .map<GiftCardFinanceRecord | null>((entry) => {
+      if (!entry || typeof entry !== 'object') return null;
+      const row = entry as Record<string, unknown>;
+      const sessionId = String(row.stripe_session_id || '').trim();
+      if (!sessionId) return null;
+      const grossAmount = Number(row.gross_amount || 0);
+      const netAmount = Number(row.net_amount || 0);
+      const feeAmount = Number(row.stripe_fee_amount || 0);
+      const reimbursement = Number(row.reimbursement_due_amount || feeAmount || 0);
+      const record: GiftCardFinanceRecord = {
+        id:
+          String(row.id || '').trim() ||
+          `fin_${Date.now()}_${randomBytes(2).toString('hex')}`,
+        stripe_session_id: sessionId,
+        currency: String(row.currency || 'usd').toLowerCase(),
+        gross_amount: Number.isFinite(grossAmount) ? grossAmount : 0,
+        net_amount: Number.isFinite(netAmount) ? netAmount : 0,
+        stripe_fee_amount: Number.isFinite(feeAmount) ? feeAmount : 0,
+        reimbursement_due_amount: Number.isFinite(reimbursement)
+          ? reimbursement
+          : 0,
+        updated_at:
+          String(row.updated_at || '').trim() || new Date().toISOString(),
+      };
+      const orderId = String(row.order_id || '').trim();
+      const paymentIntentId = String(row.payment_intent_id || '').trim();
+      const chargeId = String(row.charge_id || '').trim();
+      const refundedAmount = Number(row.refunded_amount);
+      const status = String(row.status || '').trim();
+      if (orderId) record.order_id = orderId;
+      if (paymentIntentId) record.payment_intent_id = paymentIntentId;
+      if (chargeId) record.charge_id = chargeId;
+      if (Number.isFinite(refundedAmount) && refundedAmount >= 0) {
+        record.refunded_amount = refundedAmount;
+      }
+      if (status === 'paid' || status === 'refunded' || status === 'frozen') {
+        record.status = status;
+      }
+      return record;
+    })
+    .filter((entry): entry is GiftCardFinanceRecord => Boolean(entry));
+}
+
 async function readLocalOrders(siteId: string): Promise<GiftCardOrder[]> {
   try {
     const filePath = getLocalOrdersPath(siteId);
@@ -338,6 +458,25 @@ async function writeLocalRecipients(
     JSON.stringify({ recipients }, null, 2),
     'utf-8'
   );
+}
+
+async function readLocalFinance(siteId: string): Promise<GiftCardFinanceRecord[]> {
+  try {
+    const filePath = getLocalFinancePath(siteId);
+    const raw = await fs.readFile(filePath, 'utf-8');
+    return normalizeFinancePayload(JSON.parse(raw));
+  } catch {
+    return [];
+  }
+}
+
+async function writeLocalFinance(
+  siteId: string,
+  records: GiftCardFinanceRecord[]
+) {
+  const filePath = getLocalFinancePath(siteId);
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  await fs.writeFile(filePath, JSON.stringify({ records }, null, 2), 'utf-8');
 }
 
 async function readGiftCardRedemptions(siteId: string) {
@@ -420,6 +559,43 @@ async function writeGiftCardRecipients(
     if (!error) return;
   }
   await writeLocalRecipients(siteId, recipients);
+}
+
+async function readGiftCardFinance(siteId: string) {
+  const supabase = getSupabaseServerClient();
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('content_entries')
+      .select('data')
+      .eq('site_id', siteId)
+      .eq('locale', FINANCE_CONTENT_LOCALE)
+      .eq('path', FINANCE_CONTENT_PATH)
+      .maybeSingle();
+    if (!error && data) {
+      return normalizeFinancePayload((data as { data?: unknown }).data);
+    }
+  }
+  return readLocalFinance(siteId);
+}
+
+async function writeGiftCardFinance(siteId: string, records: GiftCardFinanceRecord[]) {
+  const supabase = getSupabaseServerClient();
+  if (supabase) {
+    const { error } = await supabase
+      .from('content_entries')
+      .upsert(
+        {
+          site_id: siteId,
+          locale: FINANCE_CONTENT_LOCALE,
+          path: FINANCE_CONTENT_PATH,
+          data: { records },
+          updated_by: 'gift-card-system',
+        },
+        { onConflict: 'site_id,locale,path' }
+      );
+    if (!error) return;
+  }
+  await writeLocalFinance(siteId, records);
 }
 
 async function upsertGiftCardRecipientProfile(args: {
@@ -524,6 +700,86 @@ export async function getGiftCardPublicView(args: {
         '',
     },
   };
+}
+
+async function upsertGiftCardFinanceRecord(args: {
+  siteId: string;
+  orderId?: string;
+  stripeSessionId: string;
+  paymentIntentId?: string;
+  chargeId?: string;
+  currency: string;
+  grossAmount: number;
+  netAmount: number;
+  stripeFeeAmount: number;
+  reimbursementDueAmount?: number;
+  refundedAmount?: number;
+  status?: 'paid' | 'refunded' | 'frozen';
+}) {
+  const records = await readGiftCardFinance(args.siteId);
+  const matchIndex = records.findIndex(
+    (entry) =>
+      entry.stripe_session_id === args.stripeSessionId ||
+      (args.orderId && entry.order_id === args.orderId) ||
+      (args.paymentIntentId &&
+        entry.payment_intent_id === args.paymentIntentId) ||
+      (args.chargeId && entry.charge_id === args.chargeId)
+  );
+  const now = new Date().toISOString();
+  const next: GiftCardFinanceRecord = {
+    id:
+      matchIndex >= 0
+        ? records[matchIndex].id
+        : `fin_${Date.now()}_${randomBytes(3).toString('hex')}`,
+    stripe_session_id: args.stripeSessionId,
+    currency: String(args.currency || 'usd').toLowerCase(),
+    gross_amount: Number(args.grossAmount || 0),
+    net_amount: Number(args.netAmount || 0),
+    stripe_fee_amount: Number(args.stripeFeeAmount || 0),
+    reimbursement_due_amount: Number(
+      args.reimbursementDueAmount ?? args.stripeFeeAmount ?? 0
+    ),
+    updated_at: now,
+  };
+  if (args.orderId) next.order_id = args.orderId;
+  if (args.paymentIntentId) next.payment_intent_id = args.paymentIntentId;
+  if (args.chargeId) next.charge_id = args.chargeId;
+  if (Number.isFinite(Number(args.refundedAmount))) {
+    next.refunded_amount = Number(args.refundedAmount || 0);
+  }
+  if (args.status) next.status = args.status;
+  if (matchIndex >= 0) {
+    records[matchIndex] = {
+      ...records[matchIndex],
+      ...next,
+    };
+  } else {
+    records.push(next);
+  }
+  await writeGiftCardFinance(args.siteId, records);
+  return next;
+}
+
+async function findStripeSessionIdByPaymentIntent(args: {
+  paymentIntentId: string;
+  stripeAccountId?: string;
+}) {
+  if (!stripe) return '';
+  try {
+    const requestOptions = args.stripeAccountId
+      ? { stripeAccount: args.stripeAccountId }
+      : undefined;
+    const sessions = await stripe.checkout.sessions.list(
+      {
+        payment_intent: args.paymentIntentId,
+        limit: 1,
+      },
+      requestOptions
+    );
+    return String(sessions.data?.[0]?.id || '').trim();
+  } catch {
+    return '';
+  }
 }
 
 async function getGiftCardViewTokenForOrder(
@@ -653,9 +909,10 @@ async function enrichGiftCardOrders(
   orders: GiftCardOrder[]
 ) {
   if (orders.length === 0) return [];
-  const [redemptions, recipients, amountMap] = await Promise.all([
+  const [redemptions, recipients, finances, amountMap] = await Promise.all([
     readGiftCardRedemptions(siteId),
     readGiftCardRecipients(siteId),
+    readGiftCardFinance(siteId),
     loadGiftCardAmountMap(siteId),
   ]);
   const byOrderId = new Map<string, GiftCardRedemption[]>();
@@ -682,6 +939,14 @@ async function enrichGiftCardOrders(
       recipientByCertificate.set(recipient.certificate_code, recipient);
     }
   }
+  const financeByOrder = new Map<string, GiftCardFinanceRecord>();
+  const financeBySession = new Map<string, GiftCardFinanceRecord>();
+  for (const finance of finances) {
+    if (finance.order_id) financeByOrder.set(finance.order_id, finance);
+    if (finance.stripe_session_id) {
+      financeBySession.set(finance.stripe_session_id, finance);
+    }
+  }
 
   return orders.map((order) => {
     const faceAmount =
@@ -699,10 +964,12 @@ async function enrichGiftCardOrders(
     const originalCents = toCents(faceAmount);
     const remainingCents = Math.max(originalCents - redeemedCents, 0);
     let status = order.status;
-    if (redeemedCents > 0 && remainingCents <= 0) {
-      status = 'redeemed';
-    } else if (redeemedCents > 0 && status !== 'redeemed') {
-      status = 'fulfilled';
+    if (status !== 'refunded' && status !== 'frozen') {
+      if (redeemedCents > 0 && remainingCents <= 0) {
+        status = 'redeemed';
+      } else if (redeemedCents > 0 && status !== 'redeemed') {
+        status = 'fulfilled';
+      }
     }
     const sortedRedemptions = [...redemptionsForOrder].sort((a, b) =>
       b.redeemed_at.localeCompare(a.redeemed_at)
@@ -720,12 +987,26 @@ async function enrichGiftCardOrders(
       String(order.buyer_email || '').trim();
     const recipientEmail =
       isValidEmail(recipientEmailRaw) ? recipientEmailRaw.toLowerCase() : '';
+    const finance =
+      financeByOrder.get(order.id) || financeBySession.get(order.stripe_session_id);
+    const grossCollected = Number(
+      finance?.gross_amount ?? order.amount ?? faceAmount
+    );
+    const netCollected = Number(finance?.net_amount ?? order.amount ?? faceAmount);
+    const stripeFee = Number(finance?.stripe_fee_amount || 0);
+    const reimbursementDue = Number(
+      finance?.reimbursement_due_amount ?? stripeFee ?? 0
+    );
     return {
       ...order,
       amount: faceAmount || Number(order.amount || 0),
       status,
       recipient_name: recipientName,
       recipient_email: recipientEmail || order.buyer_email,
+      gross_collected_amount: grossCollected,
+      net_collected_amount: netCollected,
+      stripe_fee_amount: stripeFee,
+      reimbursement_due_amount: reimbursementDue,
       original_amount: fromCents(originalCents),
       redeemed_amount: fromCents(redeemedCents),
       remaining_amount: fromCents(remainingCents),
@@ -882,6 +1163,35 @@ async function getGiftCardOrderById(args: { siteId: string; orderId: string }) {
   return enriched || found;
 }
 
+async function getGiftCardOrderBySessionId(args: {
+  siteId: string;
+  stripeSessionId: string;
+}) {
+  const supabase = getSupabaseServerClient();
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('orders')
+      .select('id,site_id,stripe_session_id,certificate_code,buyer_email,buyer_name,amount,currency,status,product_ref,product_kind,buyer_locale,created_at,updated_at,fulfilled_at,redeemed_at')
+      .eq('site_id', args.siteId)
+      .eq('stripe_session_id', args.stripeSessionId)
+      .eq('product_kind', 'gift_card')
+      .maybeSingle();
+    if (!error && data) {
+      const [enriched] = await enrichGiftCardOrders(args.siteId, [
+        data as GiftCardOrder,
+      ]);
+      return enriched || (data as GiftCardOrder);
+    }
+  }
+  const localOrders = await readLocalOrders(args.siteId);
+  const found = localOrders.find(
+    (order) => order.stripe_session_id === args.stripeSessionId
+  );
+  if (!found) return null;
+  const [enriched] = await enrichGiftCardOrders(args.siteId, [found]);
+  return enriched || found;
+}
+
 export async function redeemGiftCardOrder(args: {
   siteId: string;
   orderId: string;
@@ -976,6 +1286,154 @@ export async function redeemGiftCardOrder(args: {
     ok: true as const,
     order: updated,
     redemption,
+  };
+}
+
+export async function resendGiftCardCertificateEmail(args: {
+  siteId: string;
+  orderId: string;
+  localeHint?: 'en' | 'zh';
+}) {
+  const order = await getGiftCardOrderById({
+    siteId: args.siteId,
+    orderId: args.orderId,
+  });
+  if (!order) {
+    return { ok: false as const, message: 'Gift card order not found.' };
+  }
+
+  const locale = order.buyer_locale || args.localeHint || 'en';
+  const product = await loadGiftCardProduct(
+    args.siteId,
+    locale === 'zh' ? 'zh' : 'en',
+    order.product_ref
+  );
+  const productLabel = product?.label || order.product_ref;
+  const recipientName =
+    String(order.recipient_name || '').trim() || order.buyer_name || 'Guest';
+  const recipientEmail =
+    String(order.recipient_email || '').trim().toLowerCase() ||
+    String(order.buyer_email || '').trim().toLowerCase();
+  if (!isValidEmail(recipientEmail)) {
+    return { ok: false as const, message: 'Recipient email is missing or invalid.' };
+  }
+  const viewToken = await getGiftCardViewTokenForOrder(args.siteId, order);
+  const viewUrl = await buildGiftCardViewUrl({
+    siteId: args.siteId,
+    locale: locale === 'zh' ? 'zh' : 'en',
+    viewToken,
+  });
+  await sendGiftCardCertificateEmail({
+    siteId: args.siteId,
+    locale: locale === 'zh' ? 'zh' : 'en',
+    buyerName: order.buyer_name || 'Guest',
+    buyerEmail: order.buyer_email || '',
+    recipientName,
+    recipientEmail,
+    certificateCode: order.certificate_code,
+    productLabel,
+    amount: Number(order.original_amount ?? order.amount ?? 0),
+    currency: order.currency || 'usd',
+    viewUrl,
+  });
+  return { ok: true as const };
+}
+
+export async function handleGiftCardChargeEvent(args: {
+  siteId?: string;
+  stripeAccountId?: string;
+  paymentIntentId?: string;
+  chargeId?: string;
+  status: 'refunded' | 'frozen';
+  refundedAmount?: number;
+}) {
+  const stripeAccountId = normalizeStripeAccountId(args.stripeAccountId);
+  const requestOptions = stripeAccountId
+    ? { stripeAccount: stripeAccountId }
+    : undefined;
+  let paymentIntentId = String(args.paymentIntentId || '').trim();
+  const chargeId = String(args.chargeId || '').trim();
+  let sessionId = '';
+  if (paymentIntentId) {
+    sessionId = await findStripeSessionIdByPaymentIntent({
+      paymentIntentId,
+      stripeAccountId: stripeAccountId || undefined,
+    });
+  }
+  if (!sessionId && chargeId && stripe) {
+    try {
+      const charge = await stripe.charges.retrieve(chargeId, {}, requestOptions);
+      const chargePaymentIntent =
+        typeof charge.payment_intent === 'string'
+          ? charge.payment_intent
+          : String(charge.payment_intent || '');
+      if (chargePaymentIntent) {
+        paymentIntentId = paymentIntentId || chargePaymentIntent;
+        sessionId = await findStripeSessionIdByPaymentIntent({
+          paymentIntentId: chargePaymentIntent,
+          stripeAccountId: stripeAccountId || undefined,
+        });
+      }
+    } catch {
+      // ignore
+    }
+  }
+  if (!sessionId) {
+    return { ok: false as const, message: 'Checkout session not found for event.' };
+  }
+  let resolvedSiteId = String(args.siteId || '').trim();
+  try {
+    if (stripe) {
+      const session = await stripe.checkout.sessions.retrieve(
+        sessionId,
+        {},
+        requestOptions
+      );
+      const metadataSiteId = String(session.metadata?.siteId || '').trim();
+      if (metadataSiteId) {
+        resolvedSiteId = metadataSiteId;
+      }
+    }
+  } catch {
+    // keep fallback siteId passed from caller
+  }
+  if (!resolvedSiteId) {
+    return { ok: false as const, message: 'Site id is missing for charge event.' };
+  }
+  const order = await getGiftCardOrderBySessionId({
+    siteId: resolvedSiteId,
+    stripeSessionId: sessionId,
+  });
+  if (!order) {
+    return { ok: false as const, message: 'Gift card order not found for event.' };
+  }
+
+  await updateGiftCardOrderStatus({
+    siteId: resolvedSiteId,
+    orderId: order.id,
+    status: args.status,
+  });
+  await upsertGiftCardFinanceRecord({
+    siteId: resolvedSiteId,
+    orderId: order.id,
+    stripeSessionId: sessionId,
+    paymentIntentId: paymentIntentId || undefined,
+    chargeId: chargeId || undefined,
+    currency: order.currency || 'usd',
+    grossAmount: Number(order.gross_collected_amount ?? 0),
+    netAmount: Number(order.net_collected_amount ?? 0),
+    stripeFeeAmount: Number(order.stripe_fee_amount ?? 0),
+    reimbursementDueAmount:
+      args.status === 'refunded' ? 0 : Number(order.reimbursement_due_amount ?? 0),
+    refundedAmount:
+      Number(args.refundedAmount ?? 0) > 0 ? Number(args.refundedAmount || 0) : undefined,
+    status: args.status,
+  });
+
+  return {
+    ok: true as const,
+    orderId: order.id,
+    stripeSessionId: sessionId,
   };
 }
 
@@ -1392,46 +1850,54 @@ export async function createGiftCardCheckoutSession(args: {
 
   const successUrl = `${args.origin}/${locale}/gift-cards?checkout=success&session_id={CHECKOUT_SESSION_ID}`;
   const cancelUrl = `${args.origin}/${locale}/gift-cards?checkout=cancelled`;
+  const connectedAccountId = await resolveConnectedStripeAccountId(args.siteId);
+  const requestOptions = connectedAccountId
+    ? { stripeAccount: connectedAccountId }
+    : undefined;
 
-  const session = await stripe.checkout.sessions.create({
-    mode: 'payment',
-    success_url: successUrl,
-    cancel_url: cancelUrl,
-    customer_creation: 'always',
-    allow_promotion_codes: true,
-    line_items: stripePriceId
-      ? [
-          {
-            quantity: 1,
-            price: stripePriceId,
-          },
-        ]
-      : [
-          {
-            quantity: 1,
-            price_data: {
-              currency: 'usd',
-              unit_amount: amountCents,
-              product_data: {
-                name: product.label,
-                description:
-                  product.type === 'treatment'
-                    ? 'Spa Paradise treatment gift card'
-                    : 'Spa Paradise denomination gift card',
+  const session = await stripe.checkout.sessions.create(
+    {
+      mode: 'payment',
+      success_url: successUrl,
+      cancel_url: cancelUrl,
+      customer_creation: 'always',
+      allow_promotion_codes: true,
+      line_items: stripePriceId
+        ? [
+            {
+              quantity: 1,
+              price: stripePriceId,
+            },
+          ]
+        : [
+            {
+              quantity: 1,
+              price_data: {
+                currency: 'usd',
+                unit_amount: amountCents,
+                product_data: {
+                  name: product.label,
+                  description:
+                    product.type === 'treatment'
+                      ? 'Spa Paradise treatment gift card'
+                      : 'Spa Paradise denomination gift card',
+                },
               },
             },
-          },
-        ],
-    metadata: {
-      siteId: args.siteId,
-      locale,
-      productRef: product.id,
-      productType: product.type,
-      productLabel: product.label,
-      recipientName,
-      recipientEmail,
+          ],
+      metadata: {
+        siteId: args.siteId,
+        locale,
+        productRef: product.id,
+        productType: product.type,
+        productLabel: product.label,
+        recipientName,
+        recipientEmail,
+        stripeAccountId: connectedAccountId,
+      },
     },
-  });
+    requestOptions
+  );
 
   if (!session.url) {
     throw new Error('Could not create checkout session.');
@@ -1440,15 +1906,81 @@ export async function createGiftCardCheckoutSession(args: {
   return { url: session.url };
 }
 
+async function deriveFinanceFromCheckoutSession(
+  session: Stripe.Checkout.Session,
+  stripeAccountId?: string
+) {
+  const currency = String(session.currency || 'usd').toLowerCase();
+  let grossAmount = Number(session.amount_total || 0) / 100;
+  let netAmount = grossAmount;
+  let stripeFeeAmount = 0;
+  let paymentIntentId = '';
+  let chargeId = '';
+
+  const rawPaymentIntent = session.payment_intent;
+  if (typeof rawPaymentIntent === 'string' && rawPaymentIntent) {
+    paymentIntentId = rawPaymentIntent;
+  }
+  if (paymentIntentId && stripe) {
+    try {
+      const requestOptions = stripeAccountId
+        ? { stripeAccount: stripeAccountId }
+        : undefined;
+      const paymentIntent = await stripe.paymentIntents.retrieve(
+        paymentIntentId,
+        {
+          expand: ['latest_charge.balance_transaction'],
+        },
+        requestOptions
+      );
+      const latestCharge = paymentIntent.latest_charge;
+      if (latestCharge && typeof latestCharge !== 'string') {
+        chargeId = latestCharge.id;
+        const balanceTransaction = latestCharge.balance_transaction;
+        if (balanceTransaction && typeof balanceTransaction !== 'string') {
+          grossAmount = Number(balanceTransaction.amount || 0) / 100;
+          netAmount = Number(balanceTransaction.net || 0) / 100;
+          stripeFeeAmount = Number(balanceTransaction.fee || 0) / 100;
+        }
+      }
+    } catch {
+      // keep fallback totals from checkout session
+    }
+  }
+
+  return {
+    currency,
+    grossAmount: Number.isFinite(grossAmount) ? grossAmount : 0,
+    netAmount: Number.isFinite(netAmount) ? netAmount : 0,
+    stripeFeeAmount: Number.isFinite(stripeFeeAmount) ? stripeFeeAmount : 0,
+    paymentIntentId,
+    chargeId,
+  };
+}
+
 export async function finalizeGiftCardSession(args: {
   sessionId: string;
   localeHint?: string;
+  siteIdHint?: string;
+  stripeAccountId?: string;
+  session?: Stripe.Checkout.Session;
 }) {
   if (!stripe) {
     return { ok: false as const, message: 'Gift card checkout is not configured.' };
   }
 
-  const session = await stripe.checkout.sessions.retrieve(args.sessionId);
+  const explicitStripeAccountId = normalizeStripeAccountId(args.stripeAccountId);
+  let inferredStripeAccountId = explicitStripeAccountId;
+  if (!inferredStripeAccountId && args.siteIdHint) {
+    inferredStripeAccountId = await resolveConnectedStripeAccountId(args.siteIdHint);
+  }
+
+  const retrieveOptions = inferredStripeAccountId
+    ? { stripeAccount: inferredStripeAccountId }
+    : undefined;
+  const session =
+    args.session ||
+    (await stripe.checkout.sessions.retrieve(args.sessionId, {}, retrieveOptions));
   if (!session) {
     return { ok: false as const, message: 'Checkout session not found.' };
   }
@@ -1457,7 +1989,7 @@ export async function finalizeGiftCardSession(args: {
   }
 
   const metadata = session.metadata || {};
-  const siteId = String(metadata.siteId || '').trim();
+  const siteId = String(metadata.siteId || args.siteIdHint || '').trim();
   const productRef = String(metadata.productRef || '').trim();
   const locale = normalizeLocale(
     String(metadata.locale || args.localeHint || 'en').trim()
@@ -1487,6 +2019,13 @@ export async function finalizeGiftCardSession(args: {
     : buyerEmail;
   const amount = Number(product.amount || 0);
   const currency = String(session.currency || 'usd').toLowerCase();
+  const metadataAccountId = normalizeStripeAccountId(
+    String(metadata.stripeAccountId || '')
+  );
+  const effectiveStripeAccountId =
+    explicitStripeAccountId ||
+    metadataAccountId ||
+    (await resolveConnectedStripeAccountId(siteId));
 
   const upserted = await upsertGiftCardOrder({
     siteId,
@@ -1510,6 +2049,23 @@ export async function finalizeGiftCardSession(args: {
     recipientEmail,
     buyerName,
     buyerEmail,
+  });
+  const finance = await deriveFinanceFromCheckoutSession(
+    session,
+    effectiveStripeAccountId || undefined
+  );
+  await upsertGiftCardFinanceRecord({
+    siteId,
+    orderId: upserted.order.id,
+    stripeSessionId: session.id,
+    paymentIntentId: finance.paymentIntentId,
+    chargeId: finance.chargeId,
+    currency: finance.currency || currency,
+    grossAmount: finance.grossAmount,
+    netAmount: finance.netAmount,
+    stripeFeeAmount: finance.stripeFeeAmount,
+    reimbursementDueAmount: finance.stripeFeeAmount,
+    status: 'paid',
   });
   const viewUrl = await buildGiftCardViewUrl({
     siteId,

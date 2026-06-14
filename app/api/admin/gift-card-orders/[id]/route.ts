@@ -6,12 +6,18 @@ import {
 } from '@/lib/admin/permissions';
 import {
   redeemGiftCardOrder,
+  resendGiftCardCertificateEmail,
   updateGiftCardOrderStatus,
   type GiftCardOrderStatus,
 } from '@/lib/gift-cards/commerce';
 
 function parseStatus(value: unknown): GiftCardOrderStatus | null {
-  if (value === 'fulfilled' || value === 'redeemed') {
+  if (
+    value === 'fulfilled' ||
+    value === 'redeemed' ||
+    value === 'frozen' ||
+    value === 'refunded'
+  ) {
     return value;
   }
   return null;
@@ -34,6 +40,7 @@ export async function PATCH(
   }
   const siteId = String(payload?.siteId || '').trim();
   const status = parseStatus(payload?.status);
+  const action = String(payload?.action || '').trim();
   const redeemAmount = Number(payload?.redeemAmount);
   const hasRedeemAmount =
     payload?.redeemAmount !== undefined &&
@@ -70,6 +77,16 @@ export async function PATCH(
       order: redeemed.order,
       redemption: redeemed.redemption,
     });
+  }
+  if (action === 'resend_certificate') {
+    const resent = await resendGiftCardCertificateEmail({
+      siteId,
+      orderId: params.id,
+    });
+    if (!resent.ok) {
+      return NextResponse.json({ message: resent.message }, { status: 400 });
+    }
+    return NextResponse.json({ ok: true });
   }
   if (!status) {
     return NextResponse.json(
