@@ -5,6 +5,7 @@ import Stripe from 'stripe';
 import { Resend } from 'resend';
 import { loadContent } from '@/lib/content';
 import { getSupabaseServerClient } from '@/lib/supabase/server';
+import { getSiteById } from '@/lib/sites';
 import type { Locale } from '@/lib/i18n';
 
 type GiftCardProduct = {
@@ -66,6 +67,7 @@ type GiftCardRecipientProfile = {
   recipient_name: string;
   buyer_email?: string;
   buyer_name?: string;
+  view_token?: string;
   updated_at: string;
 };
 
@@ -91,6 +93,31 @@ function fromCents(value: number) {
 
 function isValidEmail(input: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.trim());
+}
+
+function escapeHtml(input: string) {
+  return String(input || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function normalizeBaseUrl(input: string) {
+  const trimmed = String(input || '').trim();
+  if (!trimmed) return '';
+  if (/^https?:\/\//i.test(trimmed)) return trimmed.replace(/\/+$/, '');
+  return `https://${trimmed.replace(/\/+$/, '')}`;
+}
+
+async function resolveGiftCardBaseUrl(siteId: string) {
+  const envUrl = normalizeBaseUrl(process.env.NEXT_PUBLIC_SITE_URL || '');
+  if (envUrl) return envUrl;
+  const site = await getSiteById(siteId);
+  const siteDomain = normalizeBaseUrl(site?.domain || '');
+  if (siteDomain) return siteDomain;
+  return 'https://www.spaparadisenewyork.com';
 }
 
 function normalizeLocale(input?: string): 'en' | 'zh' {
@@ -236,11 +263,13 @@ function normalizeRecipientsPayload(payload: unknown): GiftCardRecipientProfile[
       const certificateCode = String(row.certificate_code || '').trim();
       const buyerEmail = String(row.buyer_email || '').trim();
       const buyerName = String(row.buyer_name || '').trim();
+      const viewToken = String(row.view_token || '').trim();
       if (orderId) profile.order_id = orderId;
       if (sessionId) profile.stripe_session_id = sessionId;
       if (certificateCode) profile.certificate_code = certificateCode;
       if (buyerEmail) profile.buyer_email = buyerEmail;
       if (buyerName) profile.buyer_name = buyerName;
+      if (viewToken) profile.view_token = viewToken;
       return profile;
     })
     .filter((entry): entry is GiftCardRecipientProfile => Boolean(entry));
@@ -425,6 +454,10 @@ async function upsertGiftCardRecipientProfile(args: {
     recipient_name: args.recipientName.trim() || 'Guest',
     buyer_email: args.buyerEmail.trim().toLowerCase(),
     buyer_name: args.buyerName.trim() || 'Guest',
+    view_token:
+      matchIndex >= 0 && recipients[matchIndex].view_token
+        ? recipients[matchIndex].view_token
+        : `gcv_${randomBytes(18).toString('hex')}`,
     updated_at: now,
   };
   if (matchIndex >= 0) {
@@ -433,6 +466,88 @@ async function upsertGiftCardRecipientProfile(args: {
     recipients.push(next);
   }
   await writeGiftCardRecipients(args.siteId, recipients);
+  return next;
+}
+
+async function buildGiftCardViewUrl(args: {
+  siteId: string;
+  locale: 'en' | 'zh';
+  viewToken?: string;
+}) {
+  const token = String(args.viewToken || '').trim();
+  if (!token) return '';
+  const baseUrl = await resolveGiftCardBaseUrl(args.siteId);
+  return `${baseUrl}/${args.locale}/gift-cards/view?token=${encodeURIComponent(
+    token
+  )}`;
+}
+
+export async function getGiftCardPublicView(args: {
+  siteId: string;
+  token: string;
+}) {
+  const token = String(args.token || '').trim();
+  if (!token) return null;
+  const recipients = await readGiftCardRecipients(args.siteId);
+  const recipient = recipients.find((entry) => entry.view_token === token);
+  if (!recipient) return null;
+  const orders = await listGiftCardOrders({
+    siteId: args.siteId,
+    status: 'all',
+  });
+  const order = orders.find((entry) => {
+    if (recipient.order_id && entry.id === recipient.order_id) return true;
+    if (
+      recipient.stripe_session_id &&
+      entry.stripe_session_id === recipient.stripe_session_id
+    ) {
+      return true;
+    }
+    if (
+      recipient.certificate_code &&
+      entry.certificate_code === recipient.certificate_code
+    ) {
+      return true;
+    }
+    return false;
+  });
+  if (!order) return null;
+  return {
+    order,
+    recipient: {
+      name:
+        recipient.recipient_name || order.recipient_name || order.buyer_name || 'Guest',
+      email:
+        recipient.recipient_email ||
+        order.recipient_email ||
+        order.buyer_email ||
+        '',
+    },
+  };
+}
+
+async function getGiftCardViewTokenForOrder(
+  siteId: string,
+  order: GiftCardOrder
+) {
+  const recipients = await readGiftCardRecipients(siteId);
+  const found = recipients.find((entry) => {
+    if (entry.order_id && entry.order_id === order.id) return true;
+    if (
+      entry.stripe_session_id &&
+      entry.stripe_session_id === order.stripe_session_id
+    ) {
+      return true;
+    }
+    if (
+      entry.certificate_code &&
+      entry.certificate_code === order.certificate_code
+    ) {
+      return true;
+    }
+    return false;
+  });
+  return String(found?.view_token || '').trim();
 }
 
 async function upsertGiftCardOrder(args: {
@@ -833,6 +948,12 @@ export async function redeemGiftCardOrder(args: {
       String(updated.recipient_email || '').trim().toLowerCase() ||
       String(updated.buyer_email || '').trim().toLowerCase();
     if (isValidEmail(recipientEmailRaw)) {
+      const viewToken = await getGiftCardViewTokenForOrder(args.siteId, updated);
+      const viewUrl = await buildGiftCardViewUrl({
+        siteId: args.siteId,
+        locale: updated.buyer_locale || 'en',
+        viewToken,
+      });
       await sendGiftCardRedemptionEmail({
         locale: updated.buyer_locale || 'en',
         buyerName: updated.buyer_name || 'Guest',
@@ -844,6 +965,7 @@ export async function redeemGiftCardOrder(args: {
         remainingAmount: Number(updated.remaining_amount ?? 0),
         currency: updated.currency || 'usd',
         note: redemption.note,
+        viewUrl,
       });
     }
   } catch (error) {
@@ -868,6 +990,7 @@ async function sendGiftCardCertificateEmail(args: {
   productLabel: string;
   amount: number;
   currency: string;
+  viewUrl?: string;
 }) {
   if (!process.env.RESEND_API_KEY) return;
   const resendFrom =
@@ -894,6 +1017,7 @@ async function sendGiftCardCertificateEmail(args: {
         '法律说明：礼品卡永不过期，不收取任何休眠费、服务费或维护费；未使用余额会保留在卡内。',
         '',
         '若需帮助，请致电 (845) 800-6600。',
+        args.viewUrl ? `查看礼品卡：${args.viewUrl}` : '',
       ]
     : [
         `Hi ${args.recipientName},`,
@@ -907,7 +1031,70 @@ async function sendGiftCardCertificateEmail(args: {
         'Legal notice: gift cards do not expire and carry no dormancy, service, or maintenance fees; any remaining balance stays on the card.',
         '',
         'Need help? Call us at (845) 800-6600.',
+        args.viewUrl ? `View gift card: ${args.viewUrl}` : '',
       ];
+  const safeName = escapeHtml(args.recipientName);
+  const safeCode = escapeHtml(args.certificateCode);
+  const safeProduct = escapeHtml(args.productLabel);
+  const safeAmount = escapeHtml(amountText);
+  const safeViewUrl = escapeHtml(args.viewUrl || '');
+  const html = isZh
+    ? `
+      <div style="font-family: Arial, sans-serif; background:#f6f7f8; padding:24px;">
+        <div style="max-width:620px; margin:0 auto; background:#ffffff; border-radius:14px; overflow:hidden; border:1px solid #e5e7eb;">
+          <div style="background:#0f766e; color:#fff; padding:20px 24px;">
+            <div style="font-size:20px; font-weight:700;">Spa Paradise 礼品卡</div>
+            <div style="opacity:0.9; margin-top:4px;">您收到了一张数字礼品卡</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="margin:0 0 12px;">${safeName} 您好，</p>
+            <p style="margin:0 0 16px;">您收到了一张 Spa Paradise 礼品卡，详情如下：</p>
+            <div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-bottom:16px; background:#fafafa;">
+              <div style="font-size:12px; color:#6b7280; margin-bottom:4px;">礼券代码</div>
+              <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:22px; font-weight:700; letter-spacing:1px; color:#111827;">${safeCode}</div>
+              <div style="margin-top:12px; font-size:14px; color:#374151;">礼品：${safeProduct}</div>
+              <div style="font-size:14px; color:#374151;">金额：${safeAmount}</div>
+            </div>
+            ${
+              safeViewUrl
+                ? `<a href="${safeViewUrl}" style="display:inline-block; background:#111827; color:#fff; text-decoration:none; border-radius:8px; padding:11px 16px; font-weight:600; margin-bottom:14px;">查看礼品卡</a>`
+                : ''
+            }
+            <p style="margin:0 0 8px; color:#374151;">使用方式：预约任意护理，在到店时出示礼券代码即可兑换。</p>
+            <p style="margin:0 0 8px; color:#374151;">礼品卡永不过期，不收取任何休眠费、服务费或维护费；未使用余额会保留在卡内。</p>
+            <p style="margin:14px 0 0; color:#111827;">需要帮助？请致电 (845) 800-6600。</p>
+          </div>
+        </div>
+      </div>
+    `
+    : `
+      <div style="font-family: Arial, sans-serif; background:#f6f7f8; padding:24px;">
+        <div style="max-width:620px; margin:0 auto; background:#ffffff; border-radius:14px; overflow:hidden; border:1px solid #e5e7eb;">
+          <div style="background:#0f766e; color:#fff; padding:20px 24px;">
+            <div style="font-size:20px; font-weight:700;">Spa Paradise Gift Card</div>
+            <div style="opacity:0.9; margin-top:4px;">You received a digital gift card</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="margin:0 0 12px;">Hi ${safeName},</p>
+            <p style="margin:0 0 16px;">You received a Spa Paradise gift card. Here are your details:</p>
+            <div style="border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-bottom:16px; background:#fafafa;">
+              <div style="font-size:12px; color:#6b7280; margin-bottom:4px;">Certificate code</div>
+              <div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:22px; font-weight:700; letter-spacing:1px; color:#111827;">${safeCode}</div>
+              <div style="margin-top:12px; font-size:14px; color:#374151;">Gift: ${safeProduct}</div>
+              <div style="font-size:14px; color:#374151;">Amount: ${safeAmount}</div>
+            </div>
+            ${
+              safeViewUrl
+                ? `<a href="${safeViewUrl}" style="display:inline-block; background:#111827; color:#fff; text-decoration:none; border-radius:8px; padding:11px 16px; font-weight:600; margin-bottom:14px;">View Gift Card</a>`
+                : ''
+            }
+            <p style="margin:0 0 8px; color:#374151;">How to redeem: book any service and present this certificate code at check-in.</p>
+            <p style="margin:0 0 8px; color:#374151;">Gift cards do not expire and carry no dormancy, service, or maintenance fees; any remaining balance stays on the card.</p>
+            <p style="margin:14px 0 0; color:#111827;">Need help? Call us at (845) 800-6600.</p>
+          </div>
+        </div>
+      </div>
+    `;
 
   try {
     await resend.emails.send({
@@ -915,6 +1102,7 @@ async function sendGiftCardCertificateEmail(args: {
       to: args.recipientEmail,
       subject,
       text: lines.join('\n'),
+      html,
     });
     const buyerEmail = String(args.buyerEmail || '').trim().toLowerCase();
     const recipientEmail = String(args.recipientEmail || '').trim().toLowerCase();
@@ -933,6 +1121,7 @@ async function sendGiftCardCertificateEmail(args: {
               `礼券代码：${args.certificateCode}`,
               `礼品：${args.productLabel}`,
               `金额：${amountText}`,
+              args.viewUrl ? `查看礼品卡：${args.viewUrl}` : '',
             ].join('\n')
           : [
               `Hi ${args.buyerName},`,
@@ -941,6 +1130,7 @@ async function sendGiftCardCertificateEmail(args: {
               `Certificate code: ${args.certificateCode}`,
               `Gift: ${args.productLabel}`,
               `Amount: ${amountText}`,
+              args.viewUrl ? `View gift card: ${args.viewUrl}` : '',
             ].join('\n'),
       });
     }
@@ -986,6 +1176,7 @@ async function sendGiftCardRedemptionEmail(args: {
   remainingAmount: number;
   currency: string;
   note?: string;
+  viewUrl?: string;
 }) {
   if (!process.env.RESEND_API_KEY) return;
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -1011,6 +1202,7 @@ async function sendGiftCardRedemptionEmail(args: {
         `您的礼品卡（代码：${args.certificateCode}）已使用 ${redeemedText}。`,
         `剩余余额：${remainingText}`,
         args.note ? `本次使用说明：${args.note}` : '',
+        args.viewUrl ? `查看礼品卡：${args.viewUrl}` : '',
         '',
         '如有疑问，请致电 (845) 800-6600。',
       ]
@@ -1020,9 +1212,57 @@ async function sendGiftCardRedemptionEmail(args: {
         `Your gift card (${args.certificateCode}) was redeemed for ${redeemedText}.`,
         `Remaining balance: ${remainingText}`,
         args.note ? `Redeem note: ${args.note}` : '',
+        args.viewUrl ? `View gift card: ${args.viewUrl}` : '',
         '',
         'Questions? Call us at (845) 800-6600.',
       ];
+  const safeName = escapeHtml(args.recipientName);
+  const safeCode = escapeHtml(args.certificateCode);
+  const safeRedeemed = escapeHtml(redeemedText);
+  const safeRemaining = escapeHtml(remainingText);
+  const safeNote = escapeHtml(args.note || '');
+  const safeViewUrl = escapeHtml(args.viewUrl || '');
+  const html = isZh
+    ? `
+      <div style="font-family: Arial, sans-serif; background:#f6f7f8; padding:24px;">
+        <div style="max-width:620px; margin:0 auto; background:#fff; border-radius:14px; border:1px solid #e5e7eb; overflow:hidden;">
+          <div style="background:#1f2937; color:#fff; padding:18px 24px;">
+            <div style="font-size:19px; font-weight:700;">礼品卡使用通知</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="margin:0 0 12px;">${safeName} 您好，</p>
+            <p style="margin:0 0 8px;">礼品卡（${safeCode}）已使用 <strong>${safeRedeemed}</strong>。</p>
+            <p style="margin:0 0 12px;">剩余余额：<strong>${safeRemaining}</strong></p>
+            ${safeNote ? `<p style="margin:0 0 12px; color:#374151;">本次使用说明：${safeNote}</p>` : ''}
+            ${
+              safeViewUrl
+                ? `<a href="${safeViewUrl}" style="display:inline-block; background:#111827; color:#fff; text-decoration:none; border-radius:8px; padding:10px 14px; font-weight:600;">查看礼品卡</a>`
+                : ''
+            }
+          </div>
+        </div>
+      </div>
+    `
+    : `
+      <div style="font-family: Arial, sans-serif; background:#f6f7f8; padding:24px;">
+        <div style="max-width:620px; margin:0 auto; background:#fff; border-radius:14px; border:1px solid #e5e7eb; overflow:hidden;">
+          <div style="background:#1f2937; color:#fff; padding:18px 24px;">
+            <div style="font-size:19px; font-weight:700;">Gift Card Redemption Update</div>
+          </div>
+          <div style="padding:24px;">
+            <p style="margin:0 0 12px;">Hi ${safeName},</p>
+            <p style="margin:0 0 8px;">Gift card (${safeCode}) was redeemed for <strong>${safeRedeemed}</strong>.</p>
+            <p style="margin:0 0 12px;">Remaining balance: <strong>${safeRemaining}</strong></p>
+            ${safeNote ? `<p style="margin:0 0 12px; color:#374151;">Redeem note: ${safeNote}</p>` : ''}
+            ${
+              safeViewUrl
+                ? `<a href="${safeViewUrl}" style="display:inline-block; background:#111827; color:#fff; text-decoration:none; border-radius:8px; padding:10px 14px; font-weight:600;">View Gift Card</a>`
+                : ''
+            }
+          </div>
+        </div>
+      </div>
+    `;
 
   const buyerBody = isZh
     ? [
@@ -1031,6 +1271,7 @@ async function sendGiftCardRedemptionEmail(args: {
         `礼品卡（代码：${args.certificateCode}）已使用 ${redeemedText}。`,
         `剩余余额：${remainingText}`,
         args.note ? `本次使用说明：${args.note}` : '',
+        args.viewUrl ? `查看礼品卡：${args.viewUrl}` : '',
       ]
     : [
         `Hi ${args.buyerName},`,
@@ -1038,6 +1279,7 @@ async function sendGiftCardRedemptionEmail(args: {
         `Gift card (${args.certificateCode}) was redeemed for ${redeemedText}.`,
         `Remaining balance: ${remainingText}`,
         args.note ? `Redeem note: ${args.note}` : '',
+        args.viewUrl ? `View gift card: ${args.viewUrl}` : '',
       ];
 
   try {
@@ -1046,6 +1288,7 @@ async function sendGiftCardRedemptionEmail(args: {
       to: args.recipientEmail,
       subject,
       text: recipientBody.filter(Boolean).join('\n'),
+      html,
     });
     const buyerEmail = String(args.buyerEmail || '').trim().toLowerCase();
     const recipientEmail = String(args.recipientEmail || '').trim().toLowerCase();
@@ -1204,7 +1447,7 @@ export async function finalizeGiftCardSession(args: {
     recipientEmail,
   });
 
-  await upsertGiftCardRecipientProfile({
+  const recipientProfile = await upsertGiftCardRecipientProfile({
     siteId,
     orderId: upserted.order.id,
     stripeSessionId: session.id,
@@ -1213,6 +1456,11 @@ export async function finalizeGiftCardSession(args: {
     recipientEmail,
     buyerName,
     buyerEmail,
+  });
+  const viewUrl = await buildGiftCardViewUrl({
+    siteId,
+    locale,
+    viewToken: recipientProfile.view_token,
   });
 
   if (upserted.created) {
@@ -1227,6 +1475,7 @@ export async function finalizeGiftCardSession(args: {
       productLabel: product.label,
       amount,
       currency,
+      viewUrl,
     });
   }
 
@@ -1236,6 +1485,7 @@ export async function finalizeGiftCardSession(args: {
     certificateCode: upserted.order.certificate_code,
     buyerEmail,
     recipientEmail,
+    viewUrl,
     productLabel: product.label,
   };
 }
