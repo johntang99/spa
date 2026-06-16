@@ -129,6 +129,12 @@ export function ContentEditor({
   const [collapsedHomeSections, setCollapsedHomeSections] = useState<Record<string, boolean>>(
     {}
   );
+  const [giftCardsCollectionData, setGiftCardsCollectionData] = useState<Record<string, any> | null>(null);
+  const [giftCardsCollectionLoading, setGiftCardsCollectionLoading] = useState(false);
+  const [giftCardsCollectionSaving, setGiftCardsCollectionSaving] = useState(false);
+  const [giftCardsCollectionStatus, setGiftCardsCollectionStatus] = useState<string | null>(null);
+  const [giftCardsImageFieldPath, setGiftCardsImageFieldPath] = useState<string[] | null>(null);
+  const [giftCardsCollectionLoadedKey, setGiftCardsCollectionLoadedKey] = useState('');
 
   const withThemeDefaults = (input: Record<string, any>) => {
     const next = JSON.parse(JSON.stringify(input || {}));
@@ -948,12 +954,132 @@ export function ContentEditor({
     setStatus(`Applied theme preset: ${preset._preset.name}. Click Save to persist.`);
   };
 
+  const setNestedValue = (source: Record<string, any>, path: string[], value: any) => {
+    let cursor: any = source;
+    path.forEach((key, index) => {
+      if (index === path.length - 1) {
+        cursor[key] = value;
+      } else {
+        cursor[key] = cursor[key] ?? {};
+        cursor = cursor[key];
+      }
+    });
+  };
+
+  const loadGiftCardsCollectionForPage = async () => {
+    if (!siteId || !locale) return;
+    setGiftCardsCollectionLoading(true);
+    setGiftCardsCollectionStatus(null);
+    try {
+      const response = await fetch(
+        `/api/admin/content/file?siteId=${siteId}&locale=${locale}&path=collections/gift-cards.json`
+      );
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.message || 'Failed to load gift card collection.');
+      }
+      const parsed = JSON.parse(String(payload.content || '{}'));
+      setGiftCardsCollectionData(parsed && typeof parsed === 'object' ? parsed : { items: [] });
+      setGiftCardsCollectionLoadedKey(`${siteId}:${locale}`);
+    } catch (error: any) {
+      setGiftCardsCollectionData({ items: [] });
+      setGiftCardsCollectionStatus(
+        error?.message || 'Could not load gift card collection.'
+      );
+    } finally {
+      setGiftCardsCollectionLoading(false);
+    }
+  };
+
+  const updateGiftCardsCollectionValue = (path: string[], value: any) => {
+    setGiftCardsCollectionData((current) => {
+      const next = JSON.parse(JSON.stringify(current || { items: [] }));
+      setNestedValue(next, path, value);
+      return next;
+    });
+  };
+
+  const addGiftCardCollectionItem = () => {
+    setGiftCardsCollectionData((current) => {
+      const next = JSON.parse(JSON.stringify(current || { items: [] }));
+      const items = Array.isArray(next.items) ? next.items : [];
+      const sample = items[0] && typeof items[0] === 'object' ? items[0] : {};
+      const template: Record<string, any> = {
+        id: '',
+        type: 'denomination',
+        label: '',
+        amount: 0,
+        image: '',
+        stripeLink: '',
+        stripePriceId: '',
+        active: true,
+        order: items.length + 1,
+      };
+      Object.keys(sample).forEach((key) => {
+        if (template[key] !== undefined) return;
+        const value = sample[key];
+        if (typeof value === 'number') template[key] = 0;
+        else if (typeof value === 'boolean') template[key] = false;
+        else if (Array.isArray(value)) template[key] = [];
+        else if (value && typeof value === 'object') template[key] = {};
+        else template[key] = '';
+      });
+      next.items = [...items, template];
+      return next;
+    });
+  };
+
+  const removeGiftCardCollectionItem = (index: number) => {
+    setGiftCardsCollectionData((current) => {
+      const next = JSON.parse(JSON.stringify(current || { items: [] }));
+      const items = Array.isArray(next.items) ? [...next.items] : [];
+      items.splice(index, 1);
+      next.items = items;
+      return next;
+    });
+  };
+
+  const saveGiftCardsCollectionForPage = async () => {
+    if (!giftCardsCollectionData) return;
+    setGiftCardsCollectionSaving(true);
+    setGiftCardsCollectionStatus(null);
+    try {
+      const response = await fetch('/api/admin/content/file', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          siteId,
+          locale,
+          path: 'collections/gift-cards.json',
+          content: JSON.stringify(giftCardsCollectionData, null, 2),
+        }),
+      });
+      const payload = await response.json();
+      if (!response.ok) {
+        throw new Error(payload.message || 'Failed to save gift card collection.');
+      }
+      setGiftCardsCollectionStatus('Gift card details saved.');
+    } catch (error: any) {
+      setGiftCardsCollectionStatus(
+        error?.message || 'Failed to save gift card details.'
+      );
+    } finally {
+      setGiftCardsCollectionSaving(false);
+    }
+  };
+
   const openImagePicker = (path: string[]) => {
     setImageFieldPath(path);
+    setGiftCardsImageFieldPath(null);
     setShowImagePicker(true);
   };
 
   const handleImageSelect = (url: string) => {
+    if (giftCardsImageFieldPath) {
+      updateGiftCardsCollectionValue(giftCardsImageFieldPath, url);
+      setGiftCardsImageFieldPath(null);
+      return;
+    }
     if (!imageFieldPath) return;
     updateFormValue(imageFieldPath, url);
   };
@@ -1055,10 +1181,41 @@ export function ContentEditor({
     const current = getPathValue(formData, path);
     const list = Array.isArray(current) ? [...current] : [];
     const first = list[0];
+    const createTemplateFromSample = (sample: any): any => {
+      if (Array.isArray(sample)) return [];
+      if (sample && typeof sample === 'object') {
+        const template: Record<string, any> = {};
+        Object.entries(sample).forEach(([sampleKey, sampleValue]) => {
+          if (Array.isArray(sampleValue)) {
+            template[sampleKey] = [];
+            return;
+          }
+          if (sampleValue && typeof sampleValue === 'object') {
+            template[sampleKey] = createTemplateFromSample(sampleValue);
+            return;
+          }
+          if (typeof sampleValue === 'number') {
+            template[sampleKey] = 0;
+            return;
+          }
+          if (typeof sampleValue === 'boolean') {
+            template[sampleKey] = false;
+            return;
+          }
+          template[sampleKey] = '';
+        });
+        return template;
+      }
+      if (typeof sample === 'number') return 0;
+      if (typeof sample === 'boolean') return false;
+      return '';
+    };
     let nextValue: any = '';
     if (typeof first === 'number') nextValue = 0;
     else if (typeof first === 'boolean') nextValue = false;
-    else if (first && typeof first === 'object' && !Array.isArray(first)) nextValue = {};
+    else if (first && typeof first === 'object' && !Array.isArray(first)) {
+      nextValue = createTemplateFromSample(first);
+    }
     else if (Array.isArray(first)) nextValue = [];
     list.push(nextValue);
     setValueAtPath(path, list);
@@ -1210,6 +1367,7 @@ export function ContentEditor({
   const isThemeFile = activeFile?.path === 'theme.json';
   const isLayoutFile = Boolean(activeFile?.path?.endsWith('.layout.json'));
   const isHomePageFile = activeFile?.path === 'pages/home.json';
+  const isGiftCardsPageFile = activeFile?.path === 'pages/gift-cards.json';
   const isContactPageFile = activeFile?.path === 'pages/contact.json';
   const isPricingPageFile = activeFile?.path === 'pages/pricing.json';
   const isConditionsPageFile = activeFile?.path === 'pages/conditions.json';
@@ -1319,6 +1477,9 @@ export function ContentEditor({
     !isCaseStudiesItemsMode || isCaseStudiesPageSettingsSelected;
   const showSharedPanels =
     showGlobalPanels && showConditionsGlobalPanels && showCaseStudiesGlobalPanels && !isSeoPageFileActive;
+  const giftCardItems = Array.isArray(giftCardsCollectionData?.items)
+    ? giftCardsCollectionData.items
+    : [];
   const scopedActionPaths = useMemo(() => {
     if (fileFilter === 'services' || fileFilter === 'servicesItems') {
       return ['pages/services.json', 'pages/services.layout.json'];
@@ -1351,6 +1512,20 @@ export function ContentEditor({
               ? 'SEO Pages'
             : 'Current Section'
     : 'Current Section';
+
+  useEffect(() => {
+    if (!isGiftCardsPageFile || activeTab !== 'form') return;
+    const key = `${siteId}:${locale}`;
+    if (giftCardsCollectionLoadedKey === key && giftCardsCollectionData) return;
+    void loadGiftCardsCollectionForPage();
+  }, [
+    isGiftCardsPageFile,
+    activeTab,
+    siteId,
+    locale,
+    giftCardsCollectionLoadedKey,
+    giftCardsCollectionData,
+  ]);
 
   useEffect(() => {
     if (!isSeoProgramsMode) return;
@@ -3022,6 +3197,297 @@ export function ContentEditor({
                 />
               )}
 
+              {isGiftCardsPageFile && (
+                <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 space-y-4">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <div className="text-sm font-semibold text-amber-900">
+                        Card Details (from Collection)
+                      </div>
+                      <p className="mt-1 text-xs text-amber-800">
+                        Edit card items here by default. These fields save to{' '}
+                        <code>collections/gift-cards.json</code> and power this page.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      className="rounded-md border border-amber-300 bg-white px-3 py-2 text-xs font-medium text-amber-900 hover:bg-amber-100"
+                      onClick={() => {
+                        const collectionFile =
+                          files.find((file) => file.path === 'collections/gift-cards.json') ||
+                          null;
+                        if (collectionFile) {
+                          setActiveFile(collectionFile);
+                          setStatus(
+                            'Opened Collection: Gift Cards. Manage card items in Form tab.'
+                          );
+                        } else {
+                          setStatus(
+                            'Collection file not found. Refresh files and try again.'
+                          );
+                        }
+                      }}
+                    >
+                      Open Collection File
+                    </button>
+                  </div>
+
+                  {giftCardsCollectionStatus && (
+                    <div className="rounded border border-amber-300 bg-white px-3 py-2 text-xs text-amber-900">
+                      {giftCardsCollectionStatus}
+                    </div>
+                  )}
+
+                  {giftCardsCollectionLoading ? (
+                    <div className="text-xs text-amber-900">Loading card details...</div>
+                  ) : (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div className="text-xs font-semibold uppercase tracking-wide text-amber-900">
+                          Gift Card Items
+                        </div>
+                        <button
+                          type="button"
+                          className="rounded-md border border-amber-300 bg-white px-3 py-1.5 text-xs font-medium text-amber-900 hover:bg-amber-100"
+                          onClick={addGiftCardCollectionItem}
+                        >
+                          Add Card
+                        </button>
+                      </div>
+
+                      {giftCardItems.length === 0 ? (
+                        <div className="rounded border border-dashed border-amber-300 bg-white px-3 py-3 text-xs text-amber-900">
+                          No gift card items yet. Click Add Card.
+                        </div>
+                      ) : (
+                        <div className="space-y-3">
+                          {giftCardItems.map((item: any, index: number) => {
+                            const imageValue = String(item?.image || '');
+                            const imagePreview = resolveMediaUrl(imageValue.trim());
+                            return (
+                              <div
+                                key={`gift-card-inline-${index}`}
+                                className="rounded-lg border border-amber-200 bg-white p-3 space-y-3"
+                              >
+                                <div className="flex items-center justify-between gap-3">
+                                  <div className="text-xs font-semibold text-gray-700">
+                                    Card {index + 1}
+                                  </div>
+                                  <button
+                                    type="button"
+                                    className="text-xs text-red-600 hover:text-red-700"
+                                    onClick={() => removeGiftCardCollectionItem(index)}
+                                  >
+                                    Remove
+                                  </button>
+                                </div>
+
+                                <div className="grid gap-3 md:grid-cols-2">
+                                  <div>
+                                    <label className="block text-xs text-gray-500">ID</label>
+                                    <input
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={String(item?.id || '')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'id'],
+                                          event.target.value
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Type</label>
+                                    <select
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={String(item?.type || 'denomination')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'type'],
+                                          event.target.value
+                                        )
+                                      }
+                                    >
+                                      <option value="denomination">denomination</option>
+                                      <option value="treatment">treatment</option>
+                                    </select>
+                                  </div>
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Label</label>
+                                    <input
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={String(item?.label || '')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'label'],
+                                          event.target.value
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Amount</label>
+                                    <input
+                                      type="number"
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={Number(item?.amount || 0)}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'amount'],
+                                          Number(event.target.value || 0)
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Order</label>
+                                    <input
+                                      type="number"
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={Number(item?.order || 0)}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'order'],
+                                          Number(event.target.value || 0)
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                  <label className="flex items-center gap-2 pt-6 text-sm text-gray-700">
+                                    <input
+                                      type="checkbox"
+                                      checked={Boolean(item?.active)}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'active'],
+                                          event.target.checked
+                                        )
+                                      }
+                                    />
+                                    Active
+                                  </label>
+                                </div>
+
+                                <div>
+                                  <label className="block text-xs text-gray-500">Image</label>
+                                  <div className="mt-1 grid items-start gap-2 md:grid-cols-[1fr_64px_auto_auto]">
+                                    <input
+                                      className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={imageValue}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'image'],
+                                          event.target.value
+                                        )
+                                      }
+                                      placeholder="/uploads/... or https://..."
+                                    />
+                                    <div className="h-12 w-16 shrink-0 overflow-hidden rounded-md border border-gray-200 bg-gray-50">
+                                      {imagePreview ? (
+                                        // eslint-disable-next-line @next/next/no-img-element
+                                        <img
+                                          src={imagePreview}
+                                          alt={`Gift card ${index + 1} preview`}
+                                          className="h-full w-full object-cover"
+                                          loading="lazy"
+                                        />
+                                      ) : null}
+                                    </div>
+                                    <button
+                                      type="button"
+                                      className="rounded-md border border-gray-200 px-3 py-2 text-xs"
+                                      onClick={() => {
+                                        setGiftCardsImageFieldPath([
+                                          'items',
+                                          String(index),
+                                          'image',
+                                        ]);
+                                        setImageFieldPath(null);
+                                        setShowImagePicker(true);
+                                      }}
+                                    >
+                                      Choose
+                                    </button>
+                                    <button
+                                      type="button"
+                                      className="rounded-md border border-gray-200 px-3 py-2 text-xs"
+                                      onClick={() =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'image'],
+                                          ''
+                                        )
+                                      }
+                                    >
+                                      Clear
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <div className="grid gap-3 md:grid-cols-2">
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Stripe Link</label>
+                                    <input
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={String(item?.stripeLink || '')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'stripeLink'],
+                                          event.target.value
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Stripe Price ID</label>
+                                    <input
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={String(item?.stripePriceId || '')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'stripePriceId'],
+                                          event.target.value
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                </div>
+
+                                {String(item?.type || '') === 'treatment' && (
+                                  <div>
+                                    <label className="block text-xs text-gray-500">Service Ref</label>
+                                    <input
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={String(item?.serviceRef || '')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'serviceRef'],
+                                          event.target.value
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      <div className="flex items-center gap-2">
+                        <Button
+                          onClick={saveGiftCardsCollectionForPage}
+                          disabled={giftCardsCollectionSaving}
+                        >
+                          {giftCardsCollectionSaving
+                            ? 'Saving Card Details...'
+                            : 'Save Card Details'}
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {isHomePageFile && formData && homeNonHeroSections.length > 0 && (
                 <div className="border border-gray-200 rounded-lg p-4">
                   <div className="text-xs font-semibold text-gray-500 uppercase mb-3">
@@ -3368,8 +3834,15 @@ export function ContentEditor({
                 !formData.hero &&
                 !formData.introduction &&
                 !formData.cta && (
-                <div className="text-sm text-gray-500">
-                  No schema panels available for this file yet. Use the JSON tab.
+                <div className="space-y-4">
+                  <div className="text-sm font-semibold text-gray-900">
+                    Generic Form Editor
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    Full form mode for this file. You can add/remove items and use
+                    image picker controls where image fields are detected.
+                  </div>
+                  {renderGenericFormNode(formData)}
                 </div>
               )}
             </div>
@@ -3513,7 +3986,11 @@ export function ContentEditor({
       <ImagePickerModal
         open={showImagePicker}
         siteId={siteId}
-        onClose={() => setShowImagePicker(false)}
+        onClose={() => {
+          setShowImagePicker(false);
+          setImageFieldPath(null);
+          setGiftCardsImageFieldPath(null);
+        }}
         onSelect={handleImageSelect}
       />
     </div>

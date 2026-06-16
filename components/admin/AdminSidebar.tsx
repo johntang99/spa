@@ -48,6 +48,13 @@ const navigation: Array<{
   { name: 'Components', href: '/admin/components', iconKey: 'layoutGrid', group: 'system', preserveContext: false },
   { name: 'Variants', href: '/admin/variants', iconKey: 'layers', group: 'system', preserveContext: false },
   { name: 'Users', href: '/admin/users', iconKey: 'users', group: 'system', preserveContext: false },
+  {
+    name: 'Stripe Connect Setup',
+    href: '/admin/stripe-connect-setup',
+    iconKey: 'bookOpen',
+    group: 'system',
+    preserveContext: false,
+  },
   { name: 'Settings', href: '/admin/settings', iconKey: 'settings', group: 'system', preserveContext: false },
 ];
 

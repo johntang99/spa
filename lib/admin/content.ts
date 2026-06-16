@@ -257,6 +257,17 @@ export async function listContentFiles(
         return;
       }
 
+      if (entry.path.startsWith('collections/') && entry.path.endsWith('.json')) {
+        const slug = entry.path.replace('collections/', '').replace('.json', '');
+        addItem({
+          id: `collection-${slug}`,
+          label: `Collection: ${titleCase(slug)}`,
+          path: entry.path,
+          scope: 'locale',
+        });
+        return;
+      }
+
       if (
         (entry.path.startsWith('blog/') || entry.path.startsWith('blog-scheduled/')) &&
         entry.path.endsWith('.json')
@@ -363,6 +374,24 @@ export async function listContentFiles(
         });
     } catch (error) {
       // ignore missing pages directory
+    }
+
+    const collectionsDir = path.join(CONTENT_DIR, siteId, locale, 'collections');
+    try {
+      const files = await fs.readdir(collectionsDir);
+      files
+        .filter((file) => file.endsWith('.json'))
+        .forEach((file) => {
+          const slug = file.replace('.json', '');
+          addItem({
+            id: `collection-${slug}`,
+            label: `Collection: ${titleCase(slug)}`,
+            path: `collections/${file}`,
+            scope: 'locale',
+          });
+        });
+    } catch (error) {
+      // ignore missing collections directory
     }
 
     for (const directory of ['blog', 'blog-scheduled'] as const) {

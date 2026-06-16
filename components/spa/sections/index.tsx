@@ -274,18 +274,46 @@ export function TrustBar({ data, ctx }: { data: any; ctx: SectionCtx }) {
 
 /* ---- S03 categoryGrid ---- */
 export function CategoryGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
-  const cats = (ctx.catalog.categories || []).filter((c) => !['combos-packages', 'add-ons'].includes(c.id));
+  const allCats = [...(ctx.catalog.categories || [])].sort(
+    (a, b) => Number(a.order || 0) - Number(b.order || 0)
+  );
+  const catRefs = data?.categories;
+  const cats =
+    Array.isArray(catRefs) && catRefs.length
+      ? catRefs
+          .map((id: string) => allCats.find((c) => c.id === id))
+          .filter((entry): entry is Catalog['categories'][number] => Boolean(entry))
+      : allCats;
+  const addons = Array.isArray(ctx.catalog.addons) ? ctx.catalog.addons : [];
+  const addonsCount = addons.length;
+  const addonsFromPrice = addonsCount
+    ? Math.min(...addons.map((entry: any) => Number(entry?.price || 0)).filter((n) => Number.isFinite(n)))
+    : null;
+  const categoryHref = (categoryId: string) => {
+    if (categoryId === 'add-ons') {
+      return `/${ctx.locale}/pricing#add-ons`;
+    }
+    if (categoryId === 'combos-packages') {
+      return `/${ctx.locale}/packages`;
+    }
+    return `/${ctx.locale}/services/${categoryId}`;
+  };
+  const categoryCount = (categoryId: string) =>
+    categoryId === 'add-ons' ? addonsCount : serviceCount(ctx.catalog, categoryId);
+  const categoryPriceFrom = (categoryId: string) =>
+    categoryId === 'add-ons' ? addonsFromPrice : priceFrom(ctx.catalog, categoryId);
   return (
     <Section mode={ctx.mode}>
       <div className="container">
         {data.intro && <h2 className="reveal" style={{ textAlign: 'center', marginBottom: 32 }}>{data.intro}</h2>}
         <div className="grid cols-3">
           {cats.map((c) => {
-            const pf = priceFrom(ctx.catalog, c.id);
+            const pf = categoryPriceFrom(c.id);
+            const count = categoryCount(c.id);
             return (
               <Link
                 key={c.id}
-                href={`/${ctx.locale}/services/${c.id}`}
+                href={categoryHref(c.id)}
                 className="card reveal"
                 style={{ textDecoration: 'none', display: 'block', padding: 0 }}
               >
@@ -301,7 +329,11 @@ export function CategoryGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
                   <h3 style={{ marginBottom: 4 }}>{c.name}</h3>
                   {c.intro && <p className="small">{c.intro}</p>}
                   <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
-                    {data.showCounts && <span className="pill-tag">{serviceCount(ctx.catalog, c.id)} {t(ctx.locale, 'treatments', '项护理')}</span>}
+                    {data.showCounts && (
+                      <span className="pill-tag">
+                        {count} {c.id === 'add-ons' ? t(ctx.locale, 'add-ons', '附加项目') : t(ctx.locale, 'treatments', '项护理')}
+                      </span>
+                    )}
                     {data.showPriceFrom && pf != null && <span className="pill-tag">{t(ctx.locale, 'from', '起')} {fmtPrice(pf)}</span>}
                   </div>
                 </div>

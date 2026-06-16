@@ -13,5 +13,31 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function ServicesPage({ params }: PageProps) {
   const { page, layout, ctx } = await loadSpaPage('services', params.locale);
   if (!page) notFound();
-  return <SectionRenderer page={page} layout={layout} ctx={ctx} />;
+  const nextPage = { ...page } as Record<string, any>;
+  const nextLayout = {
+    sections: [...(layout?.sections || [])],
+  };
+
+  const hasAddons = Array.isArray(ctx.catalog?.addons) && ctx.catalog.addons.length > 0;
+  const hasAddOnsSection = nextLayout.sections.some((section) => section.id === 'addOnsList');
+  if (hasAddons) {
+    if (!nextPage.addOnsList) {
+      nextPage.addOnsList = {
+        variant: 'full',
+        heading: params.locale === 'zh' ? '附加项目' : 'Add-ons',
+      };
+    }
+    if (!hasAddOnsSection) {
+      const categoryIndex = nextLayout.sections.findIndex(
+        (section) => section.id === 'categoryGrid'
+      );
+      const insertIndex = categoryIndex >= 0 ? categoryIndex + 1 : nextLayout.sections.length;
+      nextLayout.sections.splice(insertIndex, 0, {
+        id: 'addOnsList',
+        mode: 'well',
+      });
+    }
+  }
+
+  return <SectionRenderer page={nextPage} layout={nextLayout} ctx={ctx} />;
 }

@@ -6,7 +6,7 @@ export default function AddOnsList({ data, ctx }: { data: any; ctx: SectionCtx }
   const addons = ctx.catalog.addons || [];
   if (!addons.length) return null;
   return (
-    <section className={`section on-${ctx.mode || 'well'}`}>
+    <section id="add-ons" className={`section on-${ctx.mode || 'well'}`}>
       <div className="container">
         {data.heading && <h2 className="reveal" style={{ marginBottom: 8 }}>{data.heading}</h2>}
         <p className="small" style={{ marginBottom: 16 }}>
