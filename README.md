@@ -2,6 +2,8 @@
 
 
 admin@spaparadise.local / SpaParadise!2026
+
+
 admin@spa.com/admin123
 
 

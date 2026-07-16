@@ -19,6 +19,7 @@
       { "url": "/zh/pricing", "text": "价格" },
       { "url": "/zh/gift-cards", "text": "礼品卡" },
       { "url": "/zh/packages", "text": "套餐" },
+      { "url": "/zh/gallery", "text": "诊所环境" },
       { "url": "/zh/about", "text": "关于我们" },
       { "url": "/zh/contact", "text": "联系我们" }
     ],

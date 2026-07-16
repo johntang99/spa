@@ -9,10 +9,6 @@
       "mode": "light"
     },
     {
-      "id": "teamGrid",
-      "mode": "light"
-    },
-    {
       "id": "checklist",
       "mode": "well"
     },

@@ -19,6 +19,7 @@
       { "url": "/en/pricing", "text": "Pricing" },
       { "url": "/en/gift-cards", "text": "Gift Cards" },
       { "url": "/en/packages", "text": "Packages" },
+      { "url": "/en/gallery", "text": "Gallery" },
       { "url": "/en/about", "text": "About" },
       { "url": "/en/contact", "text": "Contact" }
     ],
