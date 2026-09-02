@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Deep-Cleansing Facial in Brooklyn, NY",
+    "title": "Deep-Cleansing Facial in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "deep-cleansing facial middletown ny",
+      "deep-cleansing facial near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "For congested or oil-prone skin. Deep-Cleansing Facial in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/deep-cleansing-facial-middletown-ny",
+    "keywordCluster": "service-deep-cleansing-facial"
+  },
+  "slug": "deep-cleansing-facial-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Deep-Cleansing Facial in Brooklyn, NY",
+        "serviceRef": "deep-cleansing-facial"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "deep-cleansing-facial",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-cleansing-facial"
+}

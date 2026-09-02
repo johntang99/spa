@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦身体裹敷",
+    "title": "纽约米德尔敦身体裹敷 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦身体裹敷",
+      "身体裹敷"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "温热裹敷，柔软肌肤、促进循环。 天堂水疗的身体裹敷——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/body-wrap-middletown-ny",
+    "keywordCluster": "service-body-wrap"
+  },
+  "slug": "body-wrap-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦身体裹敷",
+        "serviceRef": "body-wrap"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "body-wrap",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "body-wrap"
+}

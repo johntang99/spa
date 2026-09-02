@@ -1,0 +1,65 @@
+{
+  "cta": {
+    "link": "/zh/book",
+    "text": "立即预约"
+  },
+  "menu": {
+    "logo": {
+      "text": "Golden",
+      "emoji": "",
+      "image": {
+        "alt": "Golden Practice",
+        "src": "https://images.unsplash.com/photo-1620194545737-6df87c1f46ef?auto=format&fit=crop&w=400&q=80"
+      },
+      "subtext": "Calm care for modern city life."
+    },
+    "items": [
+      {
+        "url": "/zh",
+        "text": "首页"
+      },
+      {
+        "url": "/zh/services",
+        "text": "护理项目"
+      },
+      {
+        "url": "/zh/pricing",
+        "text": "价格"
+      },
+      {
+        "url": "/zh/gift-cards",
+        "text": "礼品卡"
+      },
+      {
+        "url": "/zh/packages",
+        "text": "套餐"
+      },
+      {
+        "url": "/zh/gallery",
+        "text": "诊所环境"
+      },
+      {
+        "url": "/zh/about",
+        "text": "关于我们"
+      },
+      {
+        "url": "/zh/contact",
+        "text": "联系我们"
+      }
+    ],
+    "variant": "mega",
+    "fontWeight": "semibold"
+  },
+  "topbar": {
+    "badge": "Now Welcoming New Patients",
+    "hours": "每天 9:00–21:00",
+    "phone": "(718) 555-2901",
+    "address": "245 Atlantic Ave Suite 3B, Brooklyn, NY 11201",
+    "phoneHref": "tel:+17185552901",
+    "addressHref": "https://maps.google.com/?q=245+Atlantic+Ave+Brooklyn+NY+11201"
+  },
+  "languages": [
+    "en",
+    "zh"
+  ]
+}

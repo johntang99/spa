@@ -1,0 +1,61 @@
+{
+  "seo": {
+    "h1": "所有护理，一站尽享。",
+    "title": "天堂水疗 米德尔敦 | 水疗护理服务",
+    "schema": [
+      "OfferCatalog",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦水疗项目",
+      "米德尔敦按摩服务",
+      "米德尔敦面部护理"
+    ],
+    "pageType": "services",
+    "priority": 0.9,
+    "changefreq": "monthly",
+    "description": "位于纽约米德尔敦，提供按摩、足部反射疗法、东方传统疗法以及面部和身体护理。项目菜单清晰明了，价格公开透明，全年每日营业。",
+    "canonicalUrl": "/zh/services",
+    "keywordCluster": "services-hub"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167871696-photo-1696841212541-449ca29397cc.jpg",
+      "scrim": 40
+    },
+    "eyebrow": "护理菜单",
+    "subline": "在同一地点即可体验按摩、足部反射疗法、东方传统疗法，以及面部与身体护理，收费清楚透明。",
+    "variant": "split",
+    "headline": "所需护理，在这里一次找到。",
+    "ctaPrimary": {
+      "href": "/pricing",
+      "label": "查看价格"
+    },
+    "ctaSecondary": {
+      "href": "/book",
+      "label": "立即预约"
+    }
+  },
+  "ctaBanner": {
+    "heading": "随时为您准备。",
+    "subline": "在线预约不到一分钟——无需付款。",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    }
+  },
+  "categoryGrid": {
+    "intro": "根据您今天的需求来选择护理项目。",
+    "variant": "panels",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "treatmentSelector": {
+    "intro": "只需回答三个简短问题，我们会帮您匹配更合适的护理项目。",
+    "heading": "不知从何选起？",
+    "variant": "inline"
+  }
+}

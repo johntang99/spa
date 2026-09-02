@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦招牌面部护理",
+    "title": "纽约米德尔敦招牌面部护理 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦招牌面部护理",
+      "招牌面部护理"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "清洁、去角质、护理、补水。 天堂水疗的招牌面部护理——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/signature-facial-middletown-ny",
+    "keywordCluster": "service-signature-facial"
+  },
+  "slug": "signature-facial-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦招牌面部护理",
+        "serviceRef": "signature-facial"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "signature-facial",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "signature-facial"
+}

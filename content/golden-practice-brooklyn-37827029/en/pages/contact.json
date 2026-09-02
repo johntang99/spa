@@ -1,0 +1,45 @@
+{
+  "faq": {
+    "source": {
+      "limit": 4,
+      "scopeTag": "location"
+    },
+    "heading": "Before you visit",
+    "variant": "mini"
+  },
+  "seo": {
+    "h1": "Visit Golden Practice",
+    "title": "Contact & Hours | Golden Practice Brooklyn, NY",
+    "schema": [
+      "LocalBusiness",
+      "ContactPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa paradise contact",
+      "spa middletown ny hours",
+      "massage middletown ny address"
+    ],
+    "pageType": "contact",
+    "priority": 0.6,
+    "changefreq": "yearly",
+    "description": "Golden Practice — 245 Atlantic Ave Suite 3B. Call (718) 555-2901. Open every day 9am–9pm. Directions, parking, and contact form.",
+    "canonicalUrl": "/en/contact",
+    "keywordCluster": "contact"
+  },
+  "mapBlock": {
+    "lazy": true,
+    "heading": "Find us",
+    "variant": "directions"
+  },
+  "napHours": {
+    "note": "Free parking on-site. A short drive from downtown Brooklyn and Route 17 / I-84.",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg",
+    "heading": "Visit Golden Practice",
+    "variant": "full"
+  },
+  "contactForm": {
+    "heading": "Send us a message",
+    "successMessage": "Thanks — we'll reply within one business hour. For the fastest booking, use Book Now."
+  }
+}

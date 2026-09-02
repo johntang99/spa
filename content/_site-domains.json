@@ -5,6 +5,30 @@
       "domain": "spaparadise.local",
       "environment": "dev",
       "enabled": true
+    },
+    {
+      "siteId": "golden-practice-brooklyn-37827029",
+      "domain": "golden-practice-brooklyn-37827029.example.com",
+      "environment": "prod",
+      "enabled": true
+    },
+    {
+      "siteId": "golden-practice-brooklyn-37827029",
+      "domain": "golden-practice-brooklyn-37827029.local",
+      "environment": "dev",
+      "enabled": true
+    },
+    {
+      "siteId": "golden-practice-brooklyn-37827029",
+      "domain": "golden-practice.local",
+      "environment": "dev",
+      "enabled": true
+    },
+    {
+      "siteId": "golden-practice-brooklyn-37827029",
+      "domain": "golden-practice.lvh.me",
+      "environment": "dev",
+      "enabled": true
     }
   ]
 }

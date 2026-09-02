@@ -1,0 +1,76 @@
+{
+  "faq": {
+    "source": {
+      "scopeTag": "pricing"
+    },
+    "heading": "价格相关问题",
+    "variant": "accordion"
+  },
+  "seo": {
+    "h1": "每个价格，公开透明。",
+    "title": "水疗与按摩价目表 | 天堂水疗 米德尔敦",
+    "schema": [
+      "OfferCatalog",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦按摩价格",
+      "米德尔敦水疗价格",
+      "米德尔敦按摩多少钱"
+    ],
+    "pageType": "pricing",
+    "priority": 0.9,
+    "changefreq": "monthly",
+    "description": "纽约米德尔敦透明的水疗与按摩价格。瑞典式、深层组织、热石、情侣、面部护理等。公开标价，绝无意外。",
+    "canonicalUrl": "/zh/pricing",
+    "keywordCluster": "pricing"
+  },
+  "richText": {
+    "body": "没有隐藏费用，没有在护理台上的推销，也没有“请咨询价格”。点击任意价格即可预约该护理与时长。公开标价，人人一致。",
+    "heading": "每个价格，公开透明。",
+    "variant": "intro"
+  },
+  "ctaBanner": {
+    "heading": "选好了吗？预约只需一分钟。",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    }
+  },
+  "menuTable": {
+    "variant": "table",
+    "categories": "all",
+    "showAddOns": true,
+    "bookCtaLabel": "预约"
+  },
+  "addOnsList": {
+    "heading": "附加项目",
+    "variant": "full"
+  },
+  "promoStrip": {
+    "cta": {
+      "href": "/gift-cards",
+      "label": "礼品卡"
+    },
+    "heading": "赠送一次护理",
+    "subline": "永不过期，一分钟送出。",
+    "variant": "gift"
+  },
+  "richTextPolicies": {
+    "body": "预约时不收取任何费用——护理结束后再付款。取消：提前4小时通知，免收费用。小费由您自愿，从不强制。我们支持刷卡、现金、Apple Pay 与天堂水疗礼品卡。",
+    "heading": "温馨提示",
+    "variant": "policies"
+  },
+  "promoStripPackages": {
+    "cta": {
+      "href": "/packages",
+      "label": "查看套餐"
+    },
+    "heading": "套餐更划算",
+    "subline": "为常客准备的套组与多次套票。",
+    "variant": "packages"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "faq": {
+    "source": {
+      "scopeTag": "packages"
+    },
+    "heading": "套餐与会员问题",
+    "variant": "accordion"
+  },
+  "seo": {
+    "h1": "更多享受，更超值。",
+    "title": "水疗套餐与会员 | 天堂水疗 米德尔敦",
+    "schema": [
+      "Product",
+      "Offer"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦水疗套餐",
+      "米德尔敦水疗会员",
+      "米德尔敦水疗一日套餐"
+    ],
+    "pageType": "packages",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "纽约米德尔敦的水疗一日套餐、情侣静享、按摩三次套票与月度会员。为常客带来更超值的选择，价格透明。",
+    "canonicalUrl": "/zh/packages",
+    "keywordCluster": "packages"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167877485-photo-1488345979593-09db0f85545f.jpg",
+      "scrim": 40
+    },
+    "eyebrow": "套餐与会员",
+    "subline": "为常来的人准备的精选组合与会员价。",
+    "variant": "split",
+    "headline": "更多享受，更超值。",
+    "ctaPrimary": {
+      "href": "#packages",
+      "label": "查看套餐"
+    }
+  },
+  "ctaBanner": {
+    "heading": "把放松变成习惯。",
+    "subline": "从一份套餐开始，或在下次到访时咨询会员。",
+    "variant": "split-offer",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    }
+  },
+  "packageGrid": {
+    "refs": "all",
+    "heading": "我们的套餐"
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/book?package=monthly-membership",
+      "label": "咨询会员"
+    },
+    "body": "每月一次60分钟按摩，享会员价，其余项目也都享折扣。店内办理，随时取消。",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167878190-photo-1630595632518-8217c0bceb8f.jpg",
+    "eyebrow": "会员",
+    "heading": "月度会员",
+    "variant": "membership",
+    "mediaSide": "right",
+    "packageRef": "monthly-membership"
+  },
+  "comparisonTable": {
+    "heading": "会员价 vs. 普通价",
+    "packageRef": "monthly-membership"
+  }
+}

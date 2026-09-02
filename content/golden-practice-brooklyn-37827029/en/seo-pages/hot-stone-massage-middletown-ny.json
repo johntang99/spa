@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Hot Stone Massage in Brooklyn, NY",
+    "title": "Hot Stone Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "hot stone massage middletown ny",
+      "hot stone massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Warm basalt stones melt tension layer by layer. Hot Stone Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online boo…",
+    "canonicalUrl": "/en/hot-stone-massage-middletown-ny",
+    "keywordCluster": "service-hot-stone-massage"
+  },
+  "slug": "hot-stone-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Hot Stone Massage in Brooklyn, NY",
+        "serviceRef": "hot-stone-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "hot-stone-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "hot-stone-massage"
+}

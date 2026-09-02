@@ -1,0 +1,166 @@
+{
+  "brand": {
+    "fonts": {
+      "body": "Inter",
+      "display": "Playfair Display"
+    },
+    "variant": "teal-gold",
+    "primaryColor": "#8A5A2B",
+    "secondaryColor": "#CFA96A"
+  },
+  "hours": {
+    "friday": "10:00 AM - 8:00 PM",
+    "monday": "10:00 AM - 8:00 PM",
+    "sunday": "10:00 AM - 6:00 PM",
+    "tuesday": "10:00 AM - 8:00 PM",
+    "saturday": "9:00 AM - 7:00 PM",
+    "thursday": "10:00 AM - 8:00 PM",
+    "wednesday": "10:00 AM - 8:00 PM"
+  },
+  "media": {
+    "logoImageUrl": "https://images.unsplash.com/photo-1620194545737-6df87c1f46ef?auto=format&fit=crop&w=400&q=80",
+    "aboutBioImageUrl": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    "homeHeroImageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1600&q=80"
+  },
+  "stats": [
+    {
+      "icon": "calendar",
+      "label": "Years Experience",
+      "number": "12+"
+    },
+    {
+      "icon": "users",
+      "label": "Sessions Completed",
+      "number": "8,500+"
+    },
+    {
+      "icon": "star",
+      "label": "Guest Rating",
+      "number": "4.9"
+    },
+    {
+      "icon": "award",
+      "label": "Signature Treatments",
+      "number": "7"
+    }
+  ],
+  "skipAi": false,
+  "social": {
+    "google": "https://g.page/r/golden-practice-brooklyn",
+    "wechat": "GoldenPracticeBK",
+    "youtube": "https://youtube.com/@goldenpracticebrooklyn",
+    "facebook": "https://facebook.com/goldenpracticebrooklyn",
+    "instagram": "https://instagram.com/goldenpracticebk"
+  },
+  "booking": {
+    "bookingUrl": "/book",
+    "onlineBookingEnabled": true
+  },
+  "domains": {
+    "dev": "golden-practice-brooklyn-37827029.local",
+    "production": "golden-practice-brooklyn-37827029.example.com"
+  },
+  "locales": {
+    "default": "en",
+    "supported": [
+      "en",
+      "zh"
+    ]
+  },
+  "business": {
+    "name": "Golden Practice",
+    "tagline": "Calm care for modern city life.",
+    "ownerName": "Dr. Mei Lin",
+    "ownerTitle": "Founder and Lead Therapist",
+    "description": "Golden Practice offers therapeutic massage and wellness-focused bodywork with transparent pricing and bilingual service in Brooklyn.",
+    "foundedYear": 2015,
+    "teamMembers": [
+      {
+        "name": "Jenna Huang",
+        "role": "Massage Therapist",
+        "title": "Senior Therapist",
+        "languages": [
+          "English",
+          "Chinese"
+        ],
+        "specializations": [
+          "Deep Tissue",
+          "Prenatal Massage"
+        ]
+      }
+    ],
+    "ownerLanguages": [
+      "English",
+      "Chinese"
+    ],
+    "yearsExperience": "12+",
+    "ownerCredentials": [
+      {
+        "year": "2013",
+        "location": "New York",
+        "credential": "MSTCM",
+        "institution": "Pacific College"
+      },
+      {
+        "year": "2014",
+        "location": "New York",
+        "credential": "L.Ac.",
+        "institution": "NYS Board"
+      }
+    ],
+    "ownerCertifications": [
+      "NCCAOM",
+      "NY State Licensed Acupuncturist"
+    ],
+    "ownerSpecializations": [
+      "Stress Recovery",
+      "Chronic Pain Support",
+      "Sleep and Fatigue Care"
+    ],
+    "ownerNameWithCredentials": "Dr. Mei Lin, L.Ac., MSTCM"
+  },
+  "clientId": "golden-practice-brooklyn-37827029",
+  "industry": "chinese-medicine",
+  "location": {
+    "zip": "11201",
+    "city": "Brooklyn",
+    "email": "hello@goldenpractice.example.com",
+    "phone": "(718) 555-2901",
+    "state": "NY",
+    "address": "245 Atlantic Ave Suite 3B",
+    "addressMapUrl": "https://maps.google.com/?q=245+Atlantic+Ave+Brooklyn+NY+11201",
+    "phoneEmergency": "(718) 555-2911",
+    "emailAppointments": "appointments@goldenpractice.example.com"
+  },
+  "services": {
+    "enabled": [
+      "acupuncture",
+      "chinese-herbal-medicine",
+      "cupping-therapy",
+      "moxibustion",
+      "tuina-massage",
+      "gua-sha"
+    ]
+  },
+  "insurance": {
+    "financingNote": "Package plans and monthly wellness memberships available.",
+    "inNetworkNote": "Selected plans accepted for therapeutic acupuncture services.",
+    "membershipName": "Golden Balance Membership",
+    "acceptsInsurance": true,
+    "membershipEnabled": true
+  },
+  "contentTone": {
+    "voice": "warm-professional",
+    "targetDemographic": "Working adults, parents, and wellness-focused professionals in Brooklyn",
+    "uniqueSellingPoints": [
+      "Evening and weekend availability",
+      "Bilingual English/Chinese communication",
+      "Personalized care plans with clear next-step guidance"
+    ]
+  },
+  "rewriteMode": "aggressive",
+  "templateSiteId": "spa-paradise",
+  "rewriteProvider": "openai",
+  "rewriteAutoApply": true,
+  "rewriteStrictness": "strict-medical"
+}

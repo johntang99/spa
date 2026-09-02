@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "蒙哥马利附近的按摩",
+    "title": "蒙哥马利附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "蒙哥马利按摩",
+      "蒙哥马利附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务蒙哥马利的持牌按摩——距米德尔敦约20分钟（沿Route 211）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-montgomery-ny",
+    "keywordCluster": "near-montgomery"
+  },
+  "slug": "massage-montgomery-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "蒙哥马利附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "从历史悠久的蒙哥马利村出发，沿211公路约二十分钟即达——一段沿沃尔基尔河的宜人车程，恰好以一场从容平静的护理收尾。对于喜欢顺道出游的人来说，这是深受欢迎的放松之选。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

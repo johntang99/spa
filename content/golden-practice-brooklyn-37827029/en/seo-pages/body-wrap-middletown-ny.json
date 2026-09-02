@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Body Wrap in Brooklyn, NY",
+    "title": "Body Wrap in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "body wrap middletown ny",
+      "body wrap near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Warm wrap for softening and circulation. Body Wrap in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/body-wrap-middletown-ny",
+    "keywordCluster": "service-body-wrap"
+  },
+  "slug": "body-wrap-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Body Wrap in Brooklyn, NY",
+        "serviceRef": "body-wrap"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "body-wrap",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "body-wrap"
+}

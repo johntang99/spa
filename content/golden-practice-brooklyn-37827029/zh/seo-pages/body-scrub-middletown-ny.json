@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦身体磨砂",
+    "title": "纽约米德尔敦身体磨砂 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦身体磨砂",
+      "身体磨砂"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "全身去角质，并以补水收尾。 天堂水疗的身体磨砂——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/body-scrub-middletown-ny",
+    "keywordCluster": "service-body-scrub"
+  },
+  "slug": "body-scrub-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦身体磨砂",
+        "serviceRef": "body-scrub"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "body-scrub",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "body-scrub"
+}

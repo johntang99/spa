@@ -1,0 +1,186 @@
+{
+  "items": [
+    {
+      "id": "t-deep-1",
+      "date": "2026-04-12",
+      "quote": "Best deep tissue I've had in Orange County. Mei-Lin actually found the knot I've been complaining about for a year.",
+      "author": "Daniel R.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "deep-tissue-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-couples-1",
+      "date": "2026-03-28",
+      "quote": "We booked the couples retreat for our anniversary and it was perfect — private room, tea, totally unhurried.",
+      "author": "Priya & Sam",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "gift"
+      ],
+      "serviceRef": "couples-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-reflex-1",
+      "date": "2026-02-19",
+      "quote": "The foot reflexology lounge is my weekly treat after long shifts. I leave feeling like I have new feet.",
+      "author": "Karen L.",
+      "rating": 5,
+      "source": "yelp",
+      "featured": false,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "foot-reflexology",
+      "categoryTag": "foot-reflexology"
+    },
+    {
+      "id": "t-prenatal-1",
+      "date": "2026-04-02",
+      "quote": "Sofia made me feel completely safe during my prenatal massage. The side-lying setup was so comfortable.",
+      "author": "Megan T.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [],
+      "serviceRef": "prenatal-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-pricing-1",
+      "date": "2026-01-30",
+      "quote": "What I love most: the price online is the price you pay. No upsells, no 'ask at the desk'.",
+      "author": "Anthony V.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "categoryTag": "general"
+    },
+    {
+      "id": "t-sports-1",
+      "date": "2026-03-10",
+      "quote": "James knows recovery. My calves were wrecked before a half marathon and his sports work got me to the start line.",
+      "author": "Chris M.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [],
+      "serviceRef": "sports-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-facial-1",
+      "date": "2026-02-08",
+      "quote": "Grace tailored the facial to my skin instead of pushing products. My skin looked calm for my wedding.",
+      "author": "Olivia S.",
+      "rating": 5,
+      "source": "yelp",
+      "featured": false,
+      "scopeTags": [
+        "gift"
+      ],
+      "serviceRef": "signature-facial",
+      "categoryTag": "facials"
+    },
+    {
+      "id": "t-cupping-1",
+      "date": "2026-03-22",
+      "quote": "The massage and cupping combo is the only thing that loosens my shoulders. Worth every minute.",
+      "author": "Wei H.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [],
+      "serviceRef": "massage-cupping",
+      "categoryTag": "east-asian-therapies"
+    },
+    {
+      "id": "t-hotstone-1",
+      "date": "2026-01-18",
+      "quote": "Hot stone with Sofia is pure melt. I booked a series and it's the best self-care decision I've made.",
+      "author": "Rachel K.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [],
+      "serviceRef": "hot-stone-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-local-1",
+      "date": "2026-02-26",
+      "quote": "Finally a real spa in Brooklyn that feels calm and professional, not a strip-mall rush job.",
+      "author": "Jennifer P.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "categoryTag": "general"
+    },
+    {
+      "id": "t-gift-1",
+      "date": "2026-03-05",
+      "quote": "Bought a gift card for my mom and the whole thing took two minutes. She booked a facial the next day.",
+      "author": "Brandon W.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [
+        "gift"
+      ],
+      "categoryTag": "general"
+    },
+    {
+      "id": "t-swedish-1",
+      "date": "2026-04-15",
+      "quote": "A simple 60-minute Swedish here beats the fancy chains I used to drive to. Easy booking, real therapists.",
+      "author": "Nicole B.",
+      "rating": 5,
+      "source": "yelp",
+      "featured": false,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "swedish-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-bilingual-1",
+      "date": "2026-02-14",
+      "quote": "They switched to Mandarin the moment my mother arrived. She felt so at home — that means everything to us.",
+      "author": "Helen C.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "categoryTag": "general"
+    },
+    {
+      "id": "t-back-1",
+      "date": "2026-03-18",
+      "quote": "The back treatment was a surprise favorite. My desk-bound shoulders have never felt better.",
+      "author": "Tom D.",
+      "rating": 4,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [],
+      "serviceRef": "back-treatment",
+      "categoryTag": "body-treatments"
+    }
+  ]
+}

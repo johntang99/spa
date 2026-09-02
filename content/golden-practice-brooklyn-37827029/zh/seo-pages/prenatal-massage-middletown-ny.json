@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦孕期按摩",
+    "title": "纽约米德尔敦孕期按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦孕期按摩",
+      "孕期按摩"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "持证侧卧护理，适合孕期第4–9个月。 天堂水疗的孕期按摩——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/prenatal-massage-middletown-ny",
+    "keywordCluster": "service-prenatal-massage"
+  },
+  "slug": "prenatal-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦孕期按摩",
+        "serviceRef": "prenatal-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "prenatal-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "prenatal-massage"
+}

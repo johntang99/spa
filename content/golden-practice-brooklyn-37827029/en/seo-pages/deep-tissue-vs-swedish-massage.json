@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "Deep Tissue vs. Swedish Massage: Which Is Right for You?",
+    "title": "Deep Tissue vs. Swedish Massage | Golden Practice",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "deep tissue vs swedish massage",
+      "massage middletown ny"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Swedish massage is gentle and relaxing; deep tissue uses firmer, focused pressure for stubborn tension. Here is how to choose.",
+    "canonicalUrl": "/en/deep-tissue-vs-swedish-massage",
+    "keywordCluster": "resource-deep-vs-swedish"
+  },
+  "slug": "deep-tissue-vs-swedish-massage",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "Deep Tissue vs. Swedish Massage: Which Is Right for You?",
+        "directAnswer": "Choose Swedish massage for whole-body relaxation with long, gentle strokes. Choose deep tissue if you want slower, firmer, focused pressure to work through stubborn knots and tension. Not sure? Tell your therapist your goal and they will adjust."
+      }
+    },
+    {
+      "richText": {
+        "body": "## Swedish massage\nLong, flowing strokes and light-to-medium pressure for stress relief and overall relaxation. A great default if you simply want to unwind.\n\n## Deep tissue massage\nSlower strokes and firmer, targeted pressure that reaches deeper muscle layers. Best for chronic tightness, knots, and recovery work.\n\n## How to decide\nThink about your goal, not just the name. You can always ask your therapist to go lighter or firmer during the session — your comfort guides the work.",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

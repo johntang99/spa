@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Chester, NY",
+    "title": "Massage near Chester, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage chester ny",
+      "massage near chester"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Chester, NY — about 15 min from Brooklyn via Routes 17 & 94. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-chester-ny",
+    "keywordCluster": "near-chester"
+  },
+  "slug": "massage-chester-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Chester, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "Chester is a straightforward fifteen minutes via Routes 17 and 94. If you commute through the Chester train station, we're an easy stop on the way home — trade the platform for a warm room and some hard-earned quiet.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Otisville, NY",
+    "title": "Massage near Otisville, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage otisville ny",
+      "massage near otisville"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Otisville, NY — about 12 min from Brooklyn via Route 211 West. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-otisville-ny",
+    "keywordCluster": "near-otisville"
+  },
+  "slug": "massage-otisville-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Otisville, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "Otisville is a short twelve-minute hop east on Route 211. Whether you're driving in from the hamlet for foot reflexology after a long shift or a deep-tissue session on the weekend, we keep things simple, transparent, and easy to book.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

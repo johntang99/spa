@@ -1,0 +1,70 @@
+{
+  "seo": {
+    "h1": "Book your visit",
+    "title": "Book a Massage or Spa Treatment | Golden Practice Brooklyn",
+    "schema": [
+      "LocalBusiness"
+    ],
+    "noindex": false,
+    "keywords": [
+      "book massage middletown ny",
+      "spa booking middletown",
+      "massage appointment middletown"
+    ],
+    "pageType": "book",
+    "priority": 0.9,
+    "changefreq": "monthly",
+    "description": "Book massage, reflexology, facials & more in Brooklyn, NY. Online booking in under a minute — no payment required. Open every day, English & 中文.",
+    "canonicalUrl": "/en/book",
+    "keywordCluster": "book"
+  },
+  "steps": {
+    "items": [
+      {
+        "body": "Tell us your goals and any areas to focus on or avoid.",
+        "title": "Arrive a few minutes early"
+      },
+      {
+        "body": "Your therapist adjusts pressure to your comfort throughout.",
+        "title": "Relax into your treatment"
+      },
+      {
+        "body": "Nothing is charged to book; gratuity is always your choice.",
+        "title": "Pay after, tip if you like"
+      }
+    ],
+    "heading": "What to expect",
+    "variant": "expect"
+  },
+  "altPaths": {
+    "showCall": true,
+    "showWechat": true,
+    "showExternal": true
+  },
+  "trustBar": {
+    "items": [
+      {
+        "type": "rating"
+      },
+      {
+        "type": "licensed",
+        "label": "Licensed NY therapists"
+      },
+      {
+        "type": "hygiene",
+        "label": "No payment required to book"
+      },
+      {
+        "type": "custom",
+        "label": "We reply within 1 business hour",
+        "iconKey": "clock"
+      }
+    ],
+    "variant": "column"
+  },
+  "bookingForm": {
+    "variant": "full",
+    "successBody": "We've sent a confirmation. No payment was taken; you'll pay after your treatment. Need to change it? Just call (718) 555-2901.",
+    "successHeading": "You're booked — see you soon."
+  }
+}

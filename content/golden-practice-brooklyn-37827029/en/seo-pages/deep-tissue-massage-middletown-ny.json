@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Deep Tissue Massage in Brooklyn, NY",
+    "title": "Deep Tissue Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "deep tissue massage middletown ny",
+      "deep tissue massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Slow, focused pressure for stubborn knots. Deep Tissue Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online bookin…",
+    "canonicalUrl": "/en/deep-tissue-massage-middletown-ny",
+    "keywordCluster": "service-deep-tissue-massage"
+  },
+  "slug": "deep-tissue-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Deep Tissue Massage in Brooklyn, NY",
+        "serviceRef": "deep-tissue-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "deep-tissue-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

@@ -1,0 +1,61 @@
+{
+  "showRatings": true,
+  "displayCount": 6,
+  "testimonials": [
+    {
+      "id": "t001",
+      "date": "2026-08-10",
+      "text": "Dr. Lin took time to understand my stress, sleep, and tension as part of the same picture. The acupuncture visits felt thoughtful and unhurried, and I always left knowing what the next step would be.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "language": "en",
+      "patientName": "Rachel Kim",
+      "serviceCategory": "acupuncture"
+    },
+    {
+      "id": "t002",
+      "date": "2026-07-26",
+      "text": "I appreciated being able to discuss my herbal plan in both Chinese and English. Dr. Lin explained how the formula fit my TCM pattern clearly and adjusted the approach as my needs changed.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "language": "en",
+      "patientName": "Daniel Chen",
+      "serviceCategory": "herbal-medicine"
+    },
+    {
+      "id": "t003",
+      "date": "2026-05-26",
+      "text": "I came in looking for support with ongoing neck and shoulder discomfort. The combination of acupuncture and cupping was personalized each visit, and the evening appointments made regular care possible with my work schedule.",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "language": "en",
+      "patientName": "Marisol Rivera",
+      "serviceCategory": "cupping"
+    },
+    {
+      "id": "t004",
+      "date": "2026-05-22",
+      "text": "I felt heard from my first visit, especially when describing pain that had been affecting my routine for a long time. Dr. Lin's calm explanations and clear care plan gave me a practical way to approach ongoing pain management.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "language": "en",
+      "patientName": "James Patel",
+      "serviceCategory": "pain-management"
+    },
+    {
+      "id": "t005",
+      "date": "2026-04-26",
+      "text": "Tuina became a welcome part of my wellness routine during a demanding stretch at work. The care is attentive and personalized, and weekend availability makes appointments much easier to fit into my life.",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "language": "en",
+      "patientName": "Alicia Thompson",
+      "serviceCategory": "massage"
+    }
+  ]
+}

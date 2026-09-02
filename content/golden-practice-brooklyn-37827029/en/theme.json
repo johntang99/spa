@@ -1,0 +1,34 @@
+{
+  "colors": {
+    "primary": {
+      "50": "#e4c5a7",
+      "100": "#d8ac81",
+      "dark": "#5b3c1c",
+      "light": "#c7884a",
+      "DEFAULT": "#8A5A2B"
+    },
+    "backdrop": {
+      "primary": "#F8FAFA",
+      "secondary": "#FFF8E7"
+    },
+    "secondary": {
+      "50": "#ffffff",
+      "dark": "#be8e3d",
+      "light": "#e5d1af",
+      "DEFAULT": "#CFA96A"
+    }
+  },
+  "typography": {
+    "body": "1rem",
+    "fonts": {
+      "body": "'Inter', -apple-system, sans-serif",
+      "small": "'Inter', -apple-system, sans-serif",
+      "display": "'Playfair Display', Georgia, serif",
+      "heading": "'Playfair Display', Georgia, serif"
+    },
+    "small": "0.875rem",
+    "display": "3rem",
+    "heading": "2.25rem",
+    "subheading": "1.25rem"
+  }
+}

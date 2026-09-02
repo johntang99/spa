@@ -1,0 +1,84 @@
+{
+  "redemptions": [
+    {
+      "id": "red_1781407915837_916b40",
+      "note": "",
+      "amount": 30,
+      "currency": "usd",
+      "order_id": "a98d2b9c-3e0a-4aa9-b9d7-b4cde104f614",
+      "redeemed_at": "2026-06-14T03:31:55.791Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-EC70D39382"
+    },
+    {
+      "id": "red_1781408392447_5cb367",
+      "note": "",
+      "amount": 20,
+      "currency": "usd",
+      "order_id": "a98d2b9c-3e0a-4aa9-b9d7-b4cde104f614",
+      "redeemed_at": "2026-06-14T03:39:52.409Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-EC70D39382"
+    },
+    {
+      "id": "red_1781408402173_4fd445",
+      "note": "",
+      "amount": 10,
+      "currency": "usd",
+      "order_id": "a98d2b9c-3e0a-4aa9-b9d7-b4cde104f614",
+      "redeemed_at": "2026-06-14T03:40:02.132Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-EC70D39382"
+    },
+    {
+      "id": "red_1781408594939_7f26cf",
+      "note": "Message on feet",
+      "amount": 15,
+      "currency": "usd",
+      "order_id": "a98d2b9c-3e0a-4aa9-b9d7-b4cde104f614",
+      "redeemed_at": "2026-06-14T03:43:14.898Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-EC70D39382"
+    },
+    {
+      "id": "red_1781413049203_3e69c1",
+      "note": "",
+      "amount": 30,
+      "currency": "usd",
+      "order_id": "2765f8cc-c669-48ef-924f-86db7ae069c6",
+      "redeemed_at": "2026-06-14T04:57:29.162Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-08F3F40975"
+    },
+    {
+      "id": "red_1781415367116_c2f9c6",
+      "note": "",
+      "amount": 50,
+      "currency": "usd",
+      "order_id": "613880c2-e29d-4c44-babd-74d92e0fdea8",
+      "redeemed_at": "2026-06-14T05:36:07.057Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-D74A37585E"
+    },
+    {
+      "id": "red_1781557861700_aa5225",
+      "note": "Foot massage",
+      "amount": 50,
+      "currency": "usd",
+      "order_id": "c9d4a100-63c0-4bee-b165-2b2f739fe4e9",
+      "redeemed_at": "2026-06-15T21:11:01.635Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-8636C058D3"
+    },
+    {
+      "id": "red_1781558011484_094bef",
+      "note": "",
+      "amount": 100,
+      "currency": "usd",
+      "order_id": "c9d4a100-63c0-4bee-b165-2b2f739fe4e9",
+      "redeemed_at": "2026-06-15T21:13:31.420Z",
+      "redeemed_by": "admin@spa.com",
+      "certificate_code": "SPA-8636C058D3"
+    }
+  ]
+}

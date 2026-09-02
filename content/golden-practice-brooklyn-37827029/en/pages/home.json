@@ -1,0 +1,239 @@
+{
+  "seo": {
+    "h1": "Step out of the day, into the quiet.",
+    "title": "Day Spa & Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "DaySpa",
+      "LocalBusiness"
+    ],
+    "noindex": false,
+    "keywords": [
+      "day spa middletown ny",
+      "massage middletown ny",
+      "spa paradise"
+    ],
+    "pageType": "home",
+    "priority": 1,
+    "changefreq": "weekly",
+    "description": "Licensed massage, foot reflexology, facials & body care in Brooklyn, NY. Transparent pricing, online booking, open every day. English & 中文.",
+    "canonicalUrl": "/en",
+    "keywordCluster": "home"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781166950020-photo-1761470575018-135c213340eb.jpg",
+      "scrim": 45,
+      "height": 800,
+      "gallery": [
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293601214-img-9147.jpeg",
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293924672-pexels-photo-4599376.jpeg",
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165543970-photo-1600334089648-b0d9d3028eb2.jpg"
+      ],
+      "overlayOpacity": 0.1,
+      "contentPosition": "left"
+    },
+    "stats": [
+      {
+        "icon": "calendar",
+        "label": "Years Experience",
+        "number": "12+"
+      },
+      {
+        "icon": "users",
+        "label": "Sessions Completed",
+        "number": "8,500+"
+      },
+      {
+        "icon": "star",
+        "label": "Guest Rating",
+        "number": "4.9"
+      },
+      {
+        "icon": "award",
+        "label": "Signature Treatments",
+        "number": "7"
+      }
+    ],
+    "title": "Traditional Chinese Medicine Care in Brooklyn, NY",
+    "badges": [
+      {
+        "label": "4.8 · 212 reviews",
+        "iconKey": "star"
+      },
+      {
+        "label": "Licensed NY therapists",
+        "iconKey": "shield"
+      },
+      {
+        "label": "Open every day",
+        "iconKey": "clock"
+      }
+    ],
+    "eyebrow": "Brooklyn Day Spa",
+    "subline": "",
+    "tagline": "Brooklyn TCM Care, Made Personal",
+    "variant": "gallery-background",
+    "headline": "Step out of the day, into the quiet",
+    "clinicName": "Golden Practice in Brooklyn, NY",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    },
+    "description": "Golden Practice offers acupuncture, Chinese herbal medicine, and traditional therapies in Brooklyn, with care available in English and Chinese. Personalized treatment plans help busy adults and families find greater balance, comfort, and everyday well-being.",
+    "ctaSecondary": {
+      "href": "/pricing",
+      "label": "View the menu"
+    },
+    "campaignAware": true
+  },
+  "steps": {
+    "items": [
+      {
+        "body": "Pick a service and length — every price is published.",
+        "title": "Choose your treatment"
+      },
+      {
+        "body": "Book online in under a minute. No payment required to reserve.",
+        "title": "Pick a time"
+      },
+      {
+        "body": "Arrive, unwind, and pay after your treatment.",
+        "title": "Relax"
+      }
+    ],
+    "heading": "Booking is effortless",
+    "variant": "horizontal"
+  },
+  "iconGrid": {
+    "items": [
+      {
+        "body": "Every therapist is licensed by New York State, with professional draping and clean rooms as standard.",
+        "title": "Licensed, professional care",
+        "iconKey": "license"
+      },
+      {
+        "body": "Massage, reflexology, facials, and body care — no need to drive to three different places.",
+        "title": "A complete menu, one destination",
+        "iconKey": "menu"
+      },
+      {
+        "body": "Published prices, the same for everyone. No upsells, no surprise add-ons.",
+        "title": "Honest, transparent pricing",
+        "iconKey": "tag"
+      },
+      {
+        "body": "Book and be served entirely in English or 中文 — open every day.",
+        "title": "Bilingual hospitality",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "Why Golden Practice",
+    "variant": "pillars"
+  },
+  "mapBlock": {
+    "lazy": true,
+    "variant": "embed"
+  },
+  "napHours": {
+    "note": "Free parking at 12 Grove St.",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293601214-img-9147.jpeg",
+    "heading": "Visit us",
+    "variant": "visit"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "Meet your therapists",
+    "variant": "preview"
+  },
+  "trustBar": {
+    "items": [
+      {
+        "type": "rating"
+      },
+      {
+        "type": "licensed",
+        "label": "Licensed NY therapists"
+      },
+      {
+        "type": "hygiene",
+        "label": "Fresh linens every session"
+      },
+      {
+        "type": "bilingual",
+        "label": "English & 中文"
+      },
+      {
+        "type": "hours",
+        "label": "Open every day"
+      }
+    ],
+    "variant": "bar"
+  },
+  "ctaBanner": {
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167124234-photo-1454262041357-5d96f50a2f27.jpg",
+    "heading": "Your table is waiting.",
+    "subline": "Massage in Brooklyn, NY — book in under a minute.",
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    },
+    "ctaSecondary": {
+      "href": "tel:8458006600",
+      "label": "Call (718) 555-2901"
+    }
+  },
+  "promoStrip": {
+    "cta": {
+      "href": "/gift-cards",
+      "label": "Send a gift card"
+    },
+    "heading": "Give the gift of an afternoon off",
+    "subline": "Gift cards never expire and take a minute to send.",
+    "variant": "gift",
+    "campaignAware": true
+  },
+  "categoryGrid": {
+    "intro": "One menu, one destination",
+    "variant": "tiles",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/services/massage",
+      "label": "Explore couples"
+    },
+    "body": "Side-by-side massage in a calm, private room — add tea service and make an afternoon of it. A favorite for anniversaries, birthdays, and just-because.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167023713-photo-1737352777897-e22953991a32.jpg",
+    "bullets": [
+      "Two therapists, side by side",
+      "Tea service available",
+      "Easy to gift"
+    ],
+    "eyebrow": "For two",
+    "heading": "Our private couples room",
+    "variant": "couples",
+    "mediaSide": "right"
+  },
+  "serviceCards": {
+    "source": {
+      "tag": "popular",
+      "mode": "tag",
+      "limit": 6
+    },
+    "bookCta": true,
+    "heading": "Signature treatments",
+    "variant": "signature",
+    "showTierChips": true
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 6
+    },
+    "heading": "What guests say",
+    "variant": "wall",
+    "showSource": true
+  }
+}

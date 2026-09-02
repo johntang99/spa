@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Wallkill, NY",
+    "title": "Massage near Wallkill, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage wallkill ny",
+      "massage near wallkill"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Wallkill, NY — about 15 min from Brooklyn via Route 208. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-wallkill-ny",
+    "keywordCluster": "near-wallkill"
+  },
+  "slug": "massage-wallkill-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Wallkill, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "From the Wallkill area it's a relaxed fifteen-minute drive down Route 208 into town. Guests come from across the Wallkill River valley — some after a morning on the rail trail — for licensed therapists and the kind of published, no-surprise pricing that's hard to find nearby.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

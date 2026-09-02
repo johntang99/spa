@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "id": "fin_1781415048429_3adc98",
+      "status": "paid",
+      "currency": "usd",
+      "order_id": "d3acf01b-de99-4e78-80c9-5650a0e6b0d5",
+      "net_amount": 0,
+      "updated_at": "2026-06-14T07:37:42.248Z",
+      "gross_amount": 0,
+      "stripe_fee_amount": 0,
+      "stripe_session_id": "cs_live_b1Ih9PZSPnYcwztOK4xEjGhGIA8ictuC59LuLHZ1LxK8fhhkZ7njhkt6i5",
+      "reimbursement_due_amount": 0
+    },
+    {
+      "id": "fin_1781415050596_387020",
+      "status": "paid",
+      "currency": "usd",
+      "order_id": "6658e799-0a81-4663-8dc2-123eb6dd32a3",
+      "net_amount": 0,
+      "updated_at": "2026-06-14T07:37:41.886Z",
+      "gross_amount": 0,
+      "stripe_fee_amount": 0,
+      "stripe_session_id": "cs_live_b1isjPucFDgf2KjggLmBgnumcNPDqXXSqcVgHDvYTFq65oUO65RMQajKIj",
+      "reimbursement_due_amount": 0
+    },
+    {
+      "id": "fin_1781415050765_ae3eca",
+      "status": "paid",
+      "currency": "usd",
+      "order_id": "e1766696-1929-41b5-8935-c09d6f1fbe1c",
+      "net_amount": 0,
+      "updated_at": "2026-06-14T07:37:42.133Z",
+      "gross_amount": 0,
+      "stripe_fee_amount": 0,
+      "stripe_session_id": "cs_live_b1WMcHH0IRxkRxaUHuQnhHcXjSiokqo4HxE6DXB8RWmWssIfZPlum1BUxK",
+      "reimbursement_due_amount": 0
+    },
+    {
+      "id": "fin_1781416037086_7fc071",
+      "status": "paid",
+      "currency": "usd",
+      "order_id": "1ed15962-97f8-4e5a-bd2e-7f29d0fc21c4",
+      "net_amount": 0,
+      "updated_at": "2026-06-14T05:47:17.086Z",
+      "gross_amount": 0,
+      "stripe_fee_amount": 0,
+      "stripe_session_id": "cs_live_b1yyMCA4hy0HoYHMUevJQW46zTKx6HHXJQUNAxqw24URt0BsPyckaWJJKG",
+      "reimbursement_due_amount": 0
+    },
+    {
+      "id": "fin_1781422659837_8e6281",
+      "status": "paid",
+      "currency": "usd",
+      "order_id": "890be101-50b7-4d76-b573-f9d1926385f5",
+      "net_amount": 0,
+      "updated_at": "2026-06-14T07:37:39.837Z",
+      "gross_amount": 0,
+      "stripe_fee_amount": 0,
+      "stripe_session_id": "cs_live_b1F931D4YTTISUO5O9FJYkvghV5p6rj9HOPOe9F9Kk3ij4haeSkwdyfN5i",
+      "reimbursement_due_amount": 0
+    },
+    {
+      "id": "fin_1781557628391_746337",
+      "status": "paid",
+      "currency": "usd",
+      "order_id": "c9d4a100-63c0-4bee-b165-2b2f739fe4e9",
+      "net_amount": 0,
+      "updated_at": "2026-06-15T21:07:08.391Z",
+      "gross_amount": 0,
+      "stripe_fee_amount": 0,
+      "stripe_session_id": "cs_live_b1nlz3HkPhcH21UpGaoWuxbcXZKtd8SXLWc6GqDlSAio2xe0PtWdmMgRsX",
+      "reimbursement_due_amount": 0
+    }
+  ]
+}

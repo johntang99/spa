@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "拔罐有哪些好处？",
+    "title": "拔罐有哪些好处 | 天堂水疗",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "拔罐有哪些好处？",
+      "米德尔敦按摩"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "拔罐通过温和的吸力舒缓肌肉紧张、促进循环，常与按摩搭配进行。",
+    "canonicalUrl": "/zh/benefits-of-cupping",
+    "keywordCluster": "resource-cupping"
+  },
+  "slug": "benefits-of-cupping",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "拔罐有哪些好处？",
+        "directAnswer": "拔罐通过温和的吸力帮助舒缓肌肉紧张、促进循环。许多人觉得它是按摩的放松补充。可能会留下暂时的圆形印记，通常几天内自行消退。"
+      }
+    },
+    {
+      "richText": {
+        "body": "## 拔罐的感受\n将温罐或吸罐置于皮肤上，产生温和的牵拉感，许多人觉得十分放松。\n\n## 人们何时选择拔罐\n拔罐常加入按摩中，用于顽固紧绷的部位，尤其是背部与肩部。\n\n## 温馨提示\n暂时的圆形印记属正常现象，通常几天内消退。如有任何身体顾虑，请先咨询医生。",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "massage-cupping"
+}

@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "What Is Foot Reflexology Good For?",
+    "title": "What Is Foot Reflexology Good For? | Golden Practice",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "what is foot reflexology",
+      "massage middletown ny"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Foot reflexology applies pressure to points on the feet for a deeply relaxing experience — done fully clothed in a recliner lounge.",
+    "canonicalUrl": "/en/what-is-foot-reflexology",
+    "keywordCluster": "resource-reflexology"
+  },
+  "slug": "what-is-foot-reflexology",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "What Is Foot Reflexology Good For?",
+        "directAnswer": "Foot reflexology applies gentle pressure to specific points on the feet for a deeply relaxing experience. It is a favorite after long days on your feet, done fully clothed from the ankle up in our recliner lounge."
+      }
+    },
+    {
+      "richText": {
+        "body": "## What it is\nReflexology focuses on the feet with pressure-point work that many find calming and restorative.\n\n## Why people love it\nIt is a low-key, comfortable treatment — perfect after a long shift or a lot of walking, and an easy first spa experience.\n\n## What to expect\nYou relax in a recliner, clothed from the ankle up, while your therapist works on your feet. Sessions run 30 or 60 minutes.",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-reflexology"
+}

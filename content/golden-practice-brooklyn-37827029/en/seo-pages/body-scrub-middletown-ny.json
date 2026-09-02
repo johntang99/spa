@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Body Scrub in Brooklyn, NY",
+    "title": "Body Scrub in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "body scrub middletown ny",
+      "body scrub near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Full-body exfoliation, finished with hydration. Body Scrub in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/body-scrub-middletown-ny",
+    "keywordCluster": "service-body-scrub"
+  },
+  "slug": "body-scrub-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Body Scrub in Brooklyn, NY",
+        "serviceRef": "body-scrub"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "body-scrub",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "body-scrub"
+}

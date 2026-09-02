@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Monroe, NY",
+    "title": "Massage near Monroe, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage monroe ny",
+      "massage near monroe"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Monroe, NY — about 20 min from Brooklyn via Route 17. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-monroe-ny",
+    "keywordCluster": "near-monroe"
+  },
+  "slug": "massage-monroe-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Monroe, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "Coming from Monroe, Route 17 west brings you over in about twenty minutes. Many guests turn a day near Museum Village into an afternoon for two, booking our private couples room with tea service and making the drive part of the treat.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

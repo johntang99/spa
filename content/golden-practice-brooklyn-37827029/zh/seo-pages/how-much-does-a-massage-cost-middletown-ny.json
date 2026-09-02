@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦按摩多少钱？",
+    "title": "纽约米德尔敦按摩多少钱？",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "纽约米德尔敦按摩多少钱？",
+      "米德尔敦按摩"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "纽约米德尔敦按摩价格的清晰指南——每项护理与时长，绝无隐藏收费。",
+    "canonicalUrl": "/zh/how-much-does-a-massage-cost-middletown-ny",
+    "keywordCluster": "resource-cost"
+  },
+  "slug": "how-much-does-a-massage-cost-middletown-ny",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "纽约米德尔敦按摩多少钱？",
+        "directAnswer": "在天堂水疗，纽约米德尔敦的按摩价格约为 {priceMin} 至 {priceMax}，取决于护理类型与时长。每个价格都公开透明——所见即所付，没有服务费，小费始终自愿。"
+      }
+    },
+    {
+      "richText": {
+        "body": "## 您需要支付什么\n我们的菜单为每项护理与时长都标明价格，从30分钟的快速放松到90分钟的深层护理。预约时不收取任何费用，护理结束后再付款。\n\n## 哪些因素影响价格\n时长是最主要的因素，其次是护理类型——热石或情侣等专门护理会比标准瑞典式更贵。热石或拔罐等附加项目为小额固定费用。\n\n## 小费与费用\n小费我们心存感谢，但从不强制；没有服务费，也没有意外加价。菜单价格就是护理价格。",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

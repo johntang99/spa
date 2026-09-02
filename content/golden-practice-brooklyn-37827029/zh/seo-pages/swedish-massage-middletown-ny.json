@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦瑞典式按摩",
+    "title": "纽约米德尔敦瑞典式按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦瑞典式按摩",
+      "瑞典式按摩"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "舒缓流畅的手法，带来全身放松。 天堂水疗的瑞典式按摩——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/swedish-massage-middletown-ny",
+    "keywordCluster": "service-swedish-massage"
+  },
+  "slug": "swedish-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦瑞典式按摩",
+        "serviceRef": "swedish-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "swedish-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

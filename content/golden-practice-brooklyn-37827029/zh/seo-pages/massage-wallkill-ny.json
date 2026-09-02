@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "沃尔基尔附近的按摩",
+    "title": "沃尔基尔附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "沃尔基尔按摩",
+      "沃尔基尔附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务沃尔基尔的持牌按摩——距米德尔敦约15分钟（沿Route 208）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-wallkill-ny",
+    "keywordCluster": "near-wallkill"
+  },
+  "slug": "massage-wallkill-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "沃尔基尔附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "从沃尔基尔一带沿208公路进城，是一段轻松的十五分钟车程。客人们从沃尔基尔河谷各处赶来——有些人是在铁路步道上晨练之后——只为持牌理疗师，以及周边难得一见的公开、透明、无意外的价格。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

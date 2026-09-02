@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "第一次按摩会是怎样的体验",
+    "title": "第一次按摩会是怎样 | 天堂水疗",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "第一次按摩会是怎样的体验",
+      "米德尔敦按摩"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "提前几分钟到达，说明您的目标，只需脱至自己舒适的程度。以下是第一次按摩的完整流程。",
+    "canonicalUrl": "/zh/what-to-expect-first-massage",
+    "keywordCluster": "resource-first-visit"
+  },
+  "slug": "what-to-expect-first-massage",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "第一次按摩会是怎样的体验",
+        "directAnswer": "请提前几分钟到达，告诉我们您的目标以及需重点处理或避开的部位，只需脱至自己舒适的程度——全程都有专业盖布遮护。理疗师会全程关注力度，护理结束后再付款。"
+      }
+    },
+    {
+      "richText": {
+        "body": "## 护理之前\n提前几分钟到达以便安顿。我们会询问您的目标以及需重点处理或避开的部位。\n\n## 按摩过程中\n您只需脱至自己舒适的程度，全程以盖布覆盖，仅露出正在护理的部位。力度或温度如有需要请随时告知。\n\n## 护理之后\n慢慢起身，喝些水，到前台付款。小费始终自愿。",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

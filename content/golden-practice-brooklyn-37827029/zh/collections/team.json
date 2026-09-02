@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": "mei-lin-chen",
+      "bio": "美琳兼修西式理疗按摩与传统推拿，主理我们的东方传统疗法。许多客人专程前来，请她处理长期积累的紧绷。",
+      "name": "陈美琳",
+      "order": 1,
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172433637-photo-1580489944761-15a19d654956.jpg",
+      "years": 12,
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "credential": "纽约州持证按摩师 (LMT) · 12年",
+      "specialties": [
+        "deep-tissue-massage",
+        "tui-na-bodywork",
+        "massage-cupping"
+      ]
+    },
+    {
+      "id": "james-park",
+      "bio": "曾任运动训练师的在民，专长于运动与恢复手法，深受橙县跑者、健身爱好者与周末运动者的信赖。",
+      "name": "朴在民",
+      "order": 2,
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172434779-photo-1560250097-0b93528c311a.jpg",
+      "years": 8,
+      "languages": [
+        "en"
+      ],
+      "credential": "纽约州持证按摩师 (LMT) · 8年",
+      "specialties": [
+        "sports-massage",
+        "deep-tissue-massage"
+      ]
+    },
+    {
+      "id": "sofia-reyes",
+      "bio": "持有孕期按摩认证的索菲娅，为孕期客人营造安心的侧卧护理，也是热石与瑞典式放松的人气之选。",
+      "name": "索菲娅·雷耶斯",
+      "order": 3,
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172435832-photo-1573497019940-1c28c88b4f3e.jpg",
+      "years": 10,
+      "languages": [
+        "en",
+        "es"
+      ],
+      "credential": "纽约州持证按摩师 (LMT) · 10年",
+      "specialties": [
+        "prenatal-massage",
+        "swedish-massage",
+        "hot-stone-massage"
+      ]
+    },
+    {
+      "id": "grace-wong",
+      "bio": "雅诗主理面部与护肤项目，针对每位客人的真实肤况量身调整，而非套用单一流程。",
+      "name": "黄雅诗",
+      "order": 4,
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172437248-photo-1593636677199-11450abb6e7b.jpg",
+      "years": 9,
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "credential": "持证美容师 · 9年",
+      "specialties": [
+        "signature-facial",
+        "anti-aging-facial",
+        "deep-cleansing-facial"
+      ]
+    }
+  ]
+}

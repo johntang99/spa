@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Signature Facial in Brooklyn, NY",
+    "title": "Signature Facial in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "signature facial middletown ny",
+      "signature facial near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Cleanse, exfoliate, treat, hydrate. Signature Facial in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/signature-facial-middletown-ny",
+    "keywordCluster": "service-signature-facial"
+  },
+  "slug": "signature-facial-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Signature Facial in Brooklyn, NY",
+        "serviceRef": "signature-facial"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "signature-facial",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "signature-facial"
+}

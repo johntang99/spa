@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Foot + Body Combo in Brooklyn, NY",
+    "title": "Foot + Body Combo in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "foot + body combo middletown ny",
+      "foot + body combo near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "30 min reflexology, 30 min back & shoulders. Foot + Body Combo in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online bookin…",
+    "canonicalUrl": "/en/foot-body-combo-middletown-ny",
+    "keywordCluster": "service-foot-body-combo"
+  },
+  "slug": "foot-body-combo-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Foot + Body Combo in Brooklyn, NY",
+        "serviceRef": "foot-body-combo"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "foot-body-combo",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-body-combo"
+}

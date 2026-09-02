@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near New Hampton, NY",
+    "title": "Massage near New Hampton, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage new hampton ny",
+      "massage near new hampton"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving New Hampton, NY — about 10 min from Brooklyn via Route 17M West. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-new-hampton-ny",
+    "keywordCluster": "near-new-hampton"
+  },
+  "slug": "massage-new-hampton-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near New Hampton, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "New Hampton is just ten minutes west on Route 17M. From the crossroads you're only minutes from a full menu of massage, reflexology, and body care — close enough to make a standing weekly appointment genuinely effortless.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

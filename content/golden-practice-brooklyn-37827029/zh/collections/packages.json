@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "id": "massage-facial-combo",
+      "kind": "package",
+      "name": "按摩 + 招牌面部护理套组",
+      "order": 1,
+      "price": 145,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "signature-facial",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "couples-retreat",
+      "kind": "package",
+      "name": "情侣静享套餐",
+      "order": 2,
+      "perks": [
+        "90分钟情侣按摩",
+        "双人茶点服务",
+        "私密情侣房"
+      ],
+      "price": 260,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "couples-massage",
+          "tierMinutes": 90
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "spa-day",
+      "kind": "package",
+      "name": "水疗一日",
+      "order": 3,
+      "perks": [
+        "按摩",
+        "招牌面部护理",
+        "身体磨砂",
+        "午餐休息"
+      ],
+      "price": 210,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "signature-facial",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "body-scrub",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "relax-renew-3pack",
+      "kind": "package",
+      "name": "放松焕新三次套票",
+      "order": 4,
+      "perks": [
+        "三次60分钟按摩",
+        "6个月内使用",
+        "可与亲友共享"
+      ],
+      "price": 225,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "monthly-membership",
+      "kind": "membership",
+      "name": "月度会员",
+      "order": 5,
+      "perks": [
+        "每月一次60分钟按摩，享会员价",
+        "所有额外护理均享折扣",
+        "当月未用按摩可顺延",
+        "店内办理——随时取消"
+      ],
+      "price": 69,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "inquiry"
+    }
+  ]
+}

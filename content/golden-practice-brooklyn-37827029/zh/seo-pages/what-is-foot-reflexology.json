@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "足部反射疗法有什么好处？",
+    "title": "足部反射疗法有什么好处 | 天堂水疗",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "足部反射疗法有什么好处？",
+      "米德尔敦按摩"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "足部反射疗法按压足部穴位，带来深度放松——在躺椅休息区进行，全程着装。",
+    "canonicalUrl": "/zh/what-is-foot-reflexology",
+    "keywordCluster": "resource-reflexology"
+  },
+  "slug": "what-is-foot-reflexology",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "足部反射疗法有什么好处？",
+        "directAnswer": "足部反射疗法对足部特定穴位施以温和按压，带来深度放松。它是长时间站立后的人气之选，在我们的躺椅休息区进行，脚踝以上保持着装。"
+      }
+    },
+    {
+      "richText": {
+        "body": "## 这是什么\n反射疗法专注于足部的穴位手法，许多人觉得宁静而舒缓。\n\n## 人们为何喜欢\n这是一种轻松舒适的护理——长时间值班或步行后尤其适合，也是很好的初次水疗体验。\n\n## 护理流程\n您在躺椅上放松，脚踝以上着装，理疗师为您处理双脚。护理时长为30或60分钟。",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-reflexology"
+}

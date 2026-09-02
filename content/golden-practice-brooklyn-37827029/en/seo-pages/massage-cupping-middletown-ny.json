@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Massage + Cupping in Brooklyn, NY",
+    "title": "Massage + Cupping in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage + cupping middletown ny",
+      "massage + cupping near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Bodywork finished with traditional cupping. Massage + Cupping in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/massage-cupping-middletown-ny",
+    "keywordCluster": "service-massage-cupping"
+  },
+  "slug": "massage-cupping-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Massage + Cupping in Brooklyn, NY",
+        "serviceRef": "massage-cupping"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "massage-cupping",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "massage-cupping"
+}

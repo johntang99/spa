@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "Massage for Tired, Aching Feet in Brooklyn, NY",
+    "title": "Massage for Tired, Aching Feet in Brooklyn, NY",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage for tired, aching feet middletown ny",
+      "tired, aching feet massage near me"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Soothing, licensed massage in Brooklyn, NY for tired, aching feet. Wellness-focused relief — book online, English & 中文.",
+    "canonicalUrl": "/en/massage-for-tired-feet-middletown-ny",
+    "keywordCluster": "condition-tired-feet"
+  },
+  "slug": "massage-for-tired-feet-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "Massage for Tired, Aching Feet in Brooklyn, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-reflexology"
+}

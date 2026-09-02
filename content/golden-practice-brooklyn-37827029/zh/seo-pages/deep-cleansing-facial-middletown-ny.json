@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦深层清洁面部护理",
+    "title": "纽约米德尔敦深层清洁面部护理 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦深层清洁面部护理",
+      "深层清洁面部护理"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "适合易堵塞或油性肌肤。 天堂水疗的深层清洁面部护理——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/deep-cleansing-facial-middletown-ny",
+    "keywordCluster": "service-deep-cleansing-facial"
+  },
+  "slug": "deep-cleansing-facial-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦深层清洁面部护理",
+        "serviceRef": "deep-cleansing-facial"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "deep-cleansing-facial",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-cleansing-facial"
+}

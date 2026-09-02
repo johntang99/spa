@@ -1,0 +1,47 @@
+{
+  "home": {
+    "title": "Golden Practice | Brooklyn Acupuncture & Chinese Medicine",
+    "description": "Explore Brooklyn acupuncture and Chinese medicine at Golden Practice, with personalized TCM care in English and Chinese. Contact us to book your visit."
+  },
+  "pages": {
+    "blog": {
+      "title": "TCM & Wellness Blog | Golden Practice",
+      "description": "Read TCM and wellness insights from Golden Practice in Brooklyn, covering acupuncture, herbal medicine, and healthy living. Explore our latest articles today."
+    },
+    "about": {
+      "title": "About Our Practice | Golden Practice",
+      "description": "Learn about Golden Practice in Brooklyn and our approach to acupuncture, herbal medicine, and personalized TCM care. Contact us to schedule a consultation."
+    },
+    "cases": {
+      "title": "Patient Success Stories | Golden Practice",
+      "description": "Explore patient stories from Golden Practice in Brooklyn and learn about experiences with acupuncture and personalized TCM care. Contact us to learn more today."
+    },
+    "contact": {
+      "title": "Contact Us | Golden Practice | Brooklyn, NY",
+      "description": "Contact Golden Practice in Brooklyn for acupuncture and Chinese medicine care in English or Chinese. Call (718) 555-2901 today to schedule your visit."
+    },
+    "gallery": {
+      "title": "Clinic Gallery | Golden Practice",
+      "description": "View the Golden Practice clinic gallery and discover our welcoming Brooklyn setting for acupuncture, Chinese medicine, and TCM care. Contact us to visit today."
+    },
+    "pricing": {
+      "title": "Treatment Pricing | Golden Practice | Brooklyn",
+      "description": "Explore treatment pricing at Golden Practice in Brooklyn for acupuncture and TCM services, including herbal medicine and cupping. Contact us for details today."
+    },
+    "services": {
+      "title": "Acupuncture & TCM Services in Brooklyn | Golden Practice",
+      "description": "Explore acupuncture, herbal medicine, cupping, moxibustion, tuina, and gua sha services at our Brooklyn TCM clinic. Contact us to schedule your visit."
+    },
+    "conditions": {
+      "title": "Conditions We Treat | Golden Practice | Brooklyn",
+      "description": "Learn about conditions addressed with acupuncture, herbal medicine, and TCM care at Golden Practice in Brooklyn. Contact us to discuss your health needs today."
+    },
+    "new-patients": {
+      "title": "New Patients | Golden Practice | Brooklyn",
+      "description": "New to Golden Practice in Brooklyn? Learn what to expect from acupuncture and TCM visits, with care in English and Chinese. Contact us to schedule your first visit."
+    }
+  },
+  "title": "Golden Practice | Acupuncture & TCM in Brooklyn, NY",
+  "ogImage": "/images/og-default.jpg",
+  "description": "Discover acupuncture and herbal medicine at Golden Practice in Brooklyn, with TCM care available in English and Chinese. Call today to schedule a visit."
+}

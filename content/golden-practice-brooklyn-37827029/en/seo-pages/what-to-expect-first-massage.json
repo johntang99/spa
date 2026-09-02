@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "What to Expect at Your First Massage",
+    "title": "What to Expect at Your First Massage | Golden Practice",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "what to expect first massage",
+      "massage middletown ny"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Arrive a few minutes early, share your goals, and undress only to your comfort. Here is exactly how your first massage works.",
+    "canonicalUrl": "/en/what-to-expect-first-massage",
+    "keywordCluster": "resource-first-visit"
+  },
+  "slug": "what-to-expect-first-massage",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "What to Expect at Your First Massage",
+        "directAnswer": "Arrive a few minutes early, tell us your goals and any areas to focus on or avoid, and undress only to your comfort — you are always professionally draped. Your therapist checks in on pressure throughout, and you pay after."
+      }
+    },
+    {
+      "richText": {
+        "body": "## Before your session\nArrive a few minutes early to settle in. We will ask about your goals and any areas to focus on or avoid.\n\n## During the massage\nYou undress only to your comfort and are covered with a sheet the whole time; only the area being worked on is exposed. Speak up anytime about pressure or temperature.\n\n## After\nTake your time getting up, drink some water, and pay at the desk. Gratuity is always optional.",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦芳香精油按摩",
+    "title": "纽约米德尔敦芳香精油按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦芳香精油按摩",
+      "芳香精油按摩"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "瑞典式手法搭配精油调配。 天堂水疗的芳香精油按摩——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/aromatherapy-massage-middletown-ny",
+    "keywordCluster": "service-aromatherapy-massage"
+  },
+  "slug": "aromatherapy-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦芳香精油按摩",
+        "serviceRef": "aromatherapy-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "aromatherapy-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "aromatherapy-massage"
+}

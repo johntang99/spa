@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "How Often Should You Get a Massage?",
+    "title": "How Often Should You Get a Massage? | Golden Practice",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "how often should you get a massage",
+      "massage middletown ny"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "For general wellness, many people enjoy a massage every 4–6 weeks; for specific tension or training, more often can help.",
+    "canonicalUrl": "/en/how-often-should-you-get-a-massage",
+    "keywordCluster": "resource-how-often"
+  },
+  "slug": "how-often-should-you-get-a-massage",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "How Often Should You Get a Massage?",
+        "directAnswer": "For general relaxation and wellbeing, many people enjoy a massage every four to six weeks. If you are managing specific tension or training hard, a session every one to two weeks for a while can help — then settle into a maintenance rhythm."
+      }
+    },
+    {
+      "richText": {
+        "body": "## For general wellness\nA monthly massage is a comfortable rhythm for most people to stay relaxed and loosen everyday tension.\n\n## For specific tension or training\nDuring a busy or active stretch, weekly or biweekly sessions can help you stay ahead of tightness, then ease back to monthly.\n\n## Finding your rhythm\nThere is no one-size-fits-all answer. Notice how you feel between visits — our membership makes a regular monthly massage easy and affordable.",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

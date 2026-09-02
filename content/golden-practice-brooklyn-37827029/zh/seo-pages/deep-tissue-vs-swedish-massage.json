@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "深层组织 vs. 瑞典式按摩：哪种适合您？",
+    "title": "深层组织 vs. 瑞典式按摩 | 天堂水疗",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "深层组织 vs. 瑞典式按摩：哪种适合您？",
+      "米德尔敦按摩"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "瑞典式按摩温和放松；深层组织以更坚实、集中的力度处理顽固紧绷。以下是如何选择。",
+    "canonicalUrl": "/zh/deep-tissue-vs-swedish-massage",
+    "keywordCluster": "resource-deep-vs-swedish"
+  },
+  "slug": "deep-tissue-vs-swedish-massage",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "深层组织 vs. 瑞典式按摩：哪种适合您？",
+        "directAnswer": "若想全身放松，选择以舒缓长推手法为主的瑞典式按摩。若想以更慢、更坚实、集中的力度化解顽固结节与紧绷，则选择深层组织。不确定？告诉理疗师您的目标，他们会随之调整。"
+      }
+    },
+    {
+      "richText": {
+        "body": "## 瑞典式按摩\n舒缓流畅的长推手法，轻到中等力度，适合减压与整体放松。如果只是想放松，这是很好的默认选择。\n\n## 深层组织按摩\n更慢的手法与更坚实、针对性的力度，可触及更深的肌肉层。最适合长期紧绷、结节与恢复需求。\n\n## 如何决定\n关注您的目标，而非名称本身。护理过程中您随时可以请理疗师调轻或调重——您的舒适决定手法力度。",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

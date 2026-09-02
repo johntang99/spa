@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦运动恢复按摩",
+    "title": "纽约米德尔敦运动恢复按摩",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "运动恢复按摩",
+      "米德尔敦运动恢复"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "米德尔敦针对运动恢复的舒缓持牌按摩。以放松与舒缓为本——在线预约，提供中英文服务。",
+    "canonicalUrl": "/zh/massage-for-sports-recovery-middletown-ny",
+    "keywordCluster": "condition-sports-recovery"
+  },
+  "slug": "massage-for-sports-recovery-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "纽约米德尔敦运动恢复按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "sports-massage"
+}

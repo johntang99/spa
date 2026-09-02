@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦抗衰老面部护理",
+    "title": "纽约米德尔敦抗衰老面部护理 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦抗衰老面部护理",
+      "抗衰老面部护理"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "紧致护理搭配针对性精华。 天堂水疗的抗衰老面部护理——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/anti-aging-facial-middletown-ny",
+    "keywordCluster": "service-anti-aging-facial"
+  },
+  "slug": "anti-aging-facial-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦抗衰老面部护理",
+        "serviceRef": "anti-aging-facial"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "anti-aging-facial",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "anti-aging-facial"
+}

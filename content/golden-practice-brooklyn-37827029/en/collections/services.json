@@ -1,0 +1,839 @@
+{
+  "addons": [
+    {
+      "id": "hot-stones",
+      "name": "Hot stones",
+      "price": 15,
+      "appliesTo": "all"
+    },
+    {
+      "id": "aromatherapy",
+      "name": "Aromatherapy",
+      "price": 10,
+      "appliesTo": "all"
+    },
+    {
+      "id": "cupping-finish",
+      "name": "Cupping finish",
+      "price": 20,
+      "appliesTo": "all"
+    },
+    {
+      "id": "scalp-massage",
+      "name": "Scalp massage",
+      "price": 10,
+      "appliesTo": "all"
+    },
+    {
+      "id": "extra-30",
+      "name": "Extra 30 min",
+      "price": 35,
+      "appliesTo": "all"
+    }
+  ],
+  "services": [
+    {
+      "id": "swedish-massage",
+      "name": "Swedish Massage",
+      "slug": "swedish-massage",
+      "badge": "popular",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165611982-photo-1745327883508-b6cd32e5dde5.jpg",
+      "order": 1,
+      "short": "Long, flowing strokes for whole-body relaxation.",
+      "tiers": [
+        {
+          "price": 35,
+          "minutes": 30
+        },
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "stress-relief"
+      ],
+      "intensity": 1,
+      "categoryId": "massage"
+    },
+    {
+      "id": "deep-tissue-massage",
+      "name": "Deep Tissue Massage",
+      "slug": "deep-tissue-massage",
+      "badge": "popular",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165426705-photo-1603309288253-08db72e5117d.jpg",
+      "order": 2,
+      "short": "Slow, focused pressure for stubborn knots.",
+      "tiers": [
+        {
+          "price": 35,
+          "minutes": 30
+        },
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "pain-relief",
+        "muscle-tension",
+        "recovery"
+      ],
+      "intensity": 3,
+      "categoryId": "massage",
+      "relatedConditionRefs": [
+        "massage-for-back-pain-middletown-ny",
+        "massage-for-neck-shoulder-tension-middletown-ny"
+      ]
+    },
+    {
+      "id": "hot-stone-massage",
+      "name": "Hot Stone Massage",
+      "slug": "hot-stone-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165543970-photo-1600334089648-b0d9d3028eb2.jpg",
+      "order": 3,
+      "short": "Warm basalt stones melt tension layer by layer.",
+      "tiers": [
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "muscle-tension"
+      ],
+      "intensity": 2,
+      "categoryId": "massage"
+    },
+    {
+      "id": "couples-massage",
+      "name": "Couples Massage",
+      "slug": "couples-massage",
+      "badge": "popular",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165483321-photo-1611920630418-f587fdc3bf94.jpg",
+      "order": 4,
+      "short": "Side by side in our private couples room. Per couple.",
+      "tiers": [
+        {
+          "price": 120,
+          "minutes": 60
+        },
+        {
+          "price": 180,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "couples",
+        "relaxation",
+        "occasion"
+      ],
+      "intensity": 1,
+      "categoryId": "massage"
+    },
+    {
+      "id": "prenatal-massage",
+      "name": "Prenatal Massage",
+      "slug": "prenatal-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165430602-photo-1457342813143-a1ae27448a82.jpg",
+      "order": 5,
+      "short": "Certified, side-lying comfort for months 4–9.",
+      "tiers": [
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "prenatal",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "categoryId": "massage",
+      "relatedConditionRefs": [
+        "massage-for-prenatal-comfort-middletown-ny"
+      ]
+    },
+    {
+      "id": "sports-massage",
+      "name": "Sports Massage",
+      "slug": "sports-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165431633-photo-1649751361457-01d3a696c7e6.jpg",
+      "order": 6,
+      "short": "Targeted recovery work for training and events.",
+      "tiers": [
+        {
+          "price": 35,
+          "minutes": 30
+        },
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "recovery",
+        "pain-relief",
+        "muscle-tension"
+      ],
+      "intensity": 3,
+      "categoryId": "massage"
+    },
+    {
+      "id": "chair-massage",
+      "name": "Chair Massage",
+      "slug": "chair-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165432498-photo-1611769446317-3e7a467fb35e.jpg",
+      "order": 7,
+      "short": "Clothed, express neck-shoulder-back reset.",
+      "tiers": [
+        {
+          "price": 35,
+          "minutes": 30
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "quick",
+        "stress-relief"
+      ],
+      "intensity": 2,
+      "categoryId": "massage"
+    },
+    {
+      "id": "tui-na-bodywork",
+      "name": "Tui Na Bodywork",
+      "slug": "tui-na-bodywork",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165433323-photo-1519823551278-64ac92734fb1.jpg",
+      "order": 8,
+      "short": "Traditional Chinese therapeutic massage.",
+      "tiers": [
+        {
+          "price": 35,
+          "minutes": 30
+        },
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "pain-relief",
+        "muscle-tension"
+      ],
+      "intensity": 3,
+      "categoryId": "massage"
+    },
+    {
+      "id": "aromatherapy-massage",
+      "name": "Aromatherapy Massage",
+      "slug": "aromatherapy-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165434172-photo-1515377905703-c4788e51af15.jpg",
+      "order": 9,
+      "short": "Swedish base with an essential-oil blend.",
+      "tiers": [
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "stress-relief"
+      ],
+      "intensity": 1,
+      "categoryId": "massage"
+    },
+    {
+      "id": "foot-reflexology",
+      "name": "Foot Reflexology",
+      "slug": "foot-reflexology",
+      "badge": "popular",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165544975-photo-1675159364623-6938e10245f0.jpg",
+      "order": 10,
+      "short": "Pressure-point therapy in our recliner lounge.",
+      "tiers": [
+        {
+          "price": 35,
+          "minutes": 30
+        },
+        {
+          "price": 65,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "foot",
+        "quick"
+      ],
+      "intensity": 2,
+      "categoryId": "foot-reflexology"
+    },
+    {
+      "id": "foot-body-combo",
+      "name": "Foot + Body Combo",
+      "slug": "foot-body-combo",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165455684-photo-1675159364615-38e1f6b62282.jpg",
+      "order": 11,
+      "short": "30 min reflexology, 30 min back & shoulders.",
+      "tiers": [
+        {
+          "price": 75,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "foot",
+        "muscle-tension"
+      ],
+      "intensity": 2,
+      "categoryId": "foot-reflexology"
+    },
+    {
+      "id": "massage-cupping",
+      "name": "Massage + Cupping",
+      "slug": "massage-cupping",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165546072-photo-1603309288245-c9b16e639aaf.jpg",
+      "order": 12,
+      "short": "Bodywork finished with traditional cupping.",
+      "tiers": [
+        {
+          "price": 45,
+          "minutes": 30
+        },
+        {
+          "price": 90,
+          "minutes": 60
+        },
+        {
+          "price": 125,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "muscle-tension",
+        "recovery"
+      ],
+      "intensity": 3,
+      "categoryId": "east-asian-therapies"
+    },
+    {
+      "id": "gua-sha",
+      "name": "Gua Sha Treatment",
+      "slug": "gua-sha",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165457440-photo-1600428877878-1a0fd85beda8.jpg",
+      "order": 13,
+      "short": "Traditional scraping technique, applied within any 60+ min massage.",
+      "tiers": [
+        {
+          "price": 40,
+          "minutes": 30
+        },
+        {
+          "price": 70,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "muscle-tension"
+      ],
+      "intensity": 2,
+      "categoryId": "east-asian-therapies"
+    },
+    {
+      "id": "signature-facial",
+      "name": "Signature Facial",
+      "slug": "signature-facial",
+      "badge": "popular",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165458346-photo-1643684391140-c5056cfd3436.jpg",
+      "order": 14,
+      "short": "Cleanse, exfoliate, treat, hydrate.",
+      "tiers": [
+        {
+          "price": 119,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skincare",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    },
+    {
+      "id": "deep-cleansing-facial",
+      "name": "Deep-Cleansing Facial",
+      "slug": "deep-cleansing-facial",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165563562-photo-1596755389378-c31d21fd1273.jpg",
+      "order": 15,
+      "short": "For congested or oil-prone skin.",
+      "tiers": [
+        {
+          "price": 89,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skincare"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    },
+    {
+      "id": "anti-aging-facial",
+      "name": "Anti-Aging Facial",
+      "slug": "anti-aging-facial",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165460102-photo-1616394584738-fc6e612e71b9.jpg",
+      "order": 16,
+      "short": "Firming treatment with targeted serums.",
+      "tiers": [
+        {
+          "price": 95,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skincare"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    },
+    {
+      "id": "body-scrub",
+      "name": "Body Scrub",
+      "slug": "body-scrub",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165461051-photo-1683944433023-027a3f443ae4.jpg",
+      "order": 17,
+      "short": "Full-body exfoliation, finished with hydration.",
+      "tiers": [
+        {
+          "price": 70,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skincare",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "categoryId": "body-treatments"
+    },
+    {
+      "id": "body-wrap",
+      "name": "Body Wrap",
+      "slug": "body-wrap",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165480629-photo-1630595632518-8217c0bceb8f.jpg",
+      "order": 18,
+      "short": "Warm wrap for softening and circulation.",
+      "tiers": [
+        {
+          "price": 85,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skincare",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "categoryId": "body-treatments"
+    },
+    {
+      "id": "back-treatment",
+      "name": "Back Treatment",
+      "slug": "back-treatment",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165481919-photo-1639162906614-0603b0ae95fd.jpg",
+      "order": 19,
+      "short": "A facial — for your back.",
+      "tiers": [
+        {
+          "price": 45,
+          "minutes": 30
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skincare"
+      ],
+      "intensity": 1,
+      "categoryId": "body-treatments"
+    },
+    {
+      "id": "tiger-balm-massage",
+      "name": "Tiger Balm Massage",
+      "slug": "tiger-balm-massage",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168900781-photo-1544161515-4ab6ce6db874.jpg",
+      "order": 10,
+      "short": "Massage with warming Tiger Balm to soothe tired, tight muscles.",
+      "tiers": [
+        {
+          "price": 65,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "pain-relief",
+        "recovery"
+      ],
+      "intensity": 2,
+      "categoryId": "massage"
+    },
+    {
+      "id": "scalp-massage-service",
+      "name": "Scalp Massage",
+      "slug": "scalp-massage-service",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168930008-photo-1598901986949-f593ff2a31a6.jpg",
+      "order": 11,
+      "short": "A calming head, scalp, and neck massage to melt away tension.",
+      "tiers": [
+        {
+          "price": 78,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "stress-relief"
+      ],
+      "intensity": 1,
+      "categoryId": "massage"
+    },
+    {
+      "id": "seaweed-mask-facial",
+      "name": "Seaweed Mask Facial",
+      "slug": "seaweed-mask-facial",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168901953-photo-1761718210089-ba3bb5ccb54f.jpg",
+      "order": 4,
+      "short": "A mineral-rich seaweed mask facial to hydrate and refresh the skin.",
+      "tiers": [
+        {
+          "price": 89,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skin"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    },
+    {
+      "id": "acne-facial",
+      "name": "Acne Facial",
+      "slug": "acne-facial",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168903178-photo-1670201203208-055d6d79db4a.jpg",
+      "order": 5,
+      "short": "A deep-cleansing facial for blemish-prone and oily skin.",
+      "tiers": [
+        {
+          "price": 89,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skin"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    },
+    {
+      "id": "deluxe-facial",
+      "name": "Deluxe Facial",
+      "slug": "deluxe-facial",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168904565-photo-1555820585-c5ae44394b79.jpg",
+      "order": 6,
+      "short": "Our most complete facial — cleanse, exfoliate, mask, massage, and hydrate.",
+      "tiers": [
+        {
+          "price": 119,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skin"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    },
+    {
+      "id": "acupuncture-pain-relief",
+      "name": "Acupuncture — Pain & Tension Relief",
+      "slug": "acupuncture-pain-relief",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168905266-photo-1587337905415-bb0d87a75610.jpg",
+      "order": 1,
+      "short": "Targeted acupuncture to ease everyday aches and muscle tension.",
+      "tiers": [
+        {
+          "price": 80,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "pain-relief",
+        "recovery"
+      ],
+      "intensity": 2,
+      "categoryId": "acupuncture"
+    },
+    {
+      "id": "fertility-acupuncture",
+      "name": "Fertility Support Acupuncture",
+      "slug": "fertility-acupuncture",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168906381-photo-1765100478804-62091eb17a90.jpg",
+      "order": 2,
+      "short": "Calming acupuncture sessions to support relaxation and wellbeing on your fertility journey.",
+      "tiers": [
+        {
+          "price": 80,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "wellness"
+      ],
+      "intensity": 1,
+      "categoryId": "acupuncture"
+    },
+    {
+      "id": "thai-massage",
+      "name": "Thai Massage",
+      "slug": "thai-massage",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169316412-photo-1591343395082-e120087004b4.jpg",
+      "order": 12,
+      "short": "Traditional Thai bodywork with assisted stretching and rhythmic acupressure.",
+      "tiers": [
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 109,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "recovery",
+        "flexibility"
+      ],
+      "intensity": 3,
+      "categoryId": "massage"
+    },
+    {
+      "id": "turkish-massage",
+      "name": "Turkish Massage",
+      "slug": "turkish-massage",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169317465-photo-1582295525215-cacf275639d8.jpg",
+      "order": 13,
+      "short": "A warm hammam-style ritual — cleansing, exfoliation, and a full-body massage.",
+      "tiers": [
+        {
+          "price": 65,
+          "minutes": 60
+        },
+        {
+          "price": 100,
+          "minutes": 90
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "skin"
+      ],
+      "intensity": 2,
+      "categoryId": "massage"
+    },
+    {
+      "id": "salt-aroma-treatment",
+      "name": "Salt & Aroma",
+      "slug": "salt-aroma-treatment",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169319064-photo-1659022320136-b9bb379878a1.jpg",
+      "order": 4,
+      "short": "A sea-salt body polish with aromatic oils to renew and refresh.",
+      "tiers": [
+        {
+          "price": 80,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skin",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "categoryId": "body-treatments"
+    },
+    {
+      "id": "hydrotherapy",
+      "name": "Hydro",
+      "slug": "hydrotherapy",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781169339927-photo-1603077864615-538e955d1ad1.jpg",
+      "order": 5,
+      "short": "A soothing hydrotherapy session to relax and let the body fully rest.",
+      "tiers": [
+        {
+          "price": 85,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "relaxation",
+        "recovery"
+      ],
+      "intensity": 1,
+      "categoryId": "body-treatments"
+    },
+    {
+      "id": "revive-with-rose",
+      "name": "Revive with Rose",
+      "slug": "revive-with-rose",
+      "badge": null,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781170270549-photo-1585768750637-ada36319a484.jpg",
+      "order": 7,
+      "short": "A gentle rose facial to calm and revive sensitive skin.",
+      "tiers": [
+        {
+          "price": 89,
+          "minutes": 60
+        }
+      ],
+      "enabled": true,
+      "goalTags": [
+        "skin",
+        "relaxation"
+      ],
+      "intensity": 1,
+      "categoryId": "facials"
+    }
+  ],
+  "categories": [
+    {
+      "id": "massage",
+      "name": "Massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165397654-photo-1741522509438-a120c0bb5e88.jpg",
+      "intro": "Licensed therapeutic massage — relaxation, recovery, and relief.",
+      "order": 1
+    },
+    {
+      "id": "foot-reflexology",
+      "name": "Foot & Reflexology",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165399248-photo-1611073615830-9f76902c10fe.jpg",
+      "intro": "Pressure-point foot therapy in our recliner lounge.",
+      "order": 2
+    },
+    {
+      "id": "east-asian-therapies",
+      "name": "East Asian Therapies",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165458346-photo-1643684391140-c5056cfd3436.jpg",
+      "intro": "Cupping, gua sha, and Tui Na bodywork in the traditional style.",
+      "order": 3
+    },
+    {
+      "id": "facials",
+      "name": "Facials",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165401427-photo-1570172619644-dfd03ed5d881.jpg",
+      "intro": "Cleanse, treat, and hydrate for every skin type.",
+      "order": 5
+    },
+    {
+      "id": "scalp-massage",
+      "name": "Scalp Massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172433637-photo-1580489944761-15a19d654956.jpg",
+      "intro": "A calming head, scalp, and neck massage to melt away tension.",
+      "order": 6
+    },
+    {
+      "id": "combos-packages",
+      "name": "Combos & Packages",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165404502-photo-1643122966676-29e8597257f7.jpg",
+      "intro": "Curated multi-treatment experiences and value bundles.",
+      "order": 7
+    },
+    {
+      "id": "add-ons",
+      "name": "Add-Ons",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165405211-photo-1624454002302-36b824d7bd0a.jpg",
+      "intro": "Enhance any qualifying treatment.",
+      "order": 8
+    },
+    {
+      "id": "acupuncture",
+      "name": "Acupuncture",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781168899730-photo-1598555763574-dca77e10427e.jpg",
+      "intro": "Acupuncture by a New York State licensed acupuncturist (L.Ac.) — fine needles at targeted points for deep relaxation.",
+      "order": 4
+    }
+  ]
+}

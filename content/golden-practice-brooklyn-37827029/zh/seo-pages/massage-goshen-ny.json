@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "戈申附近的按摩",
+    "title": "戈申附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "戈申按摩",
+      "戈申附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务戈申的持牌按摩——距米德尔敦约10分钟（沿Route 17M）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-goshen-ny",
+    "keywordCluster": "near-goshen"
+  },
+  "slug": "massage-goshen-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "戈申附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "沿17M公路向上，戈申距我们门口仅约十分钟——近到许多戈申常客会趁午休顺道而来。若您在橙县政府中心一带工作，或在主街附近购物，向南到米德尔敦稍作停留，便能享受一次从容的按摩或面部护理。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

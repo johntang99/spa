@@ -1,0 +1,61 @@
+{
+  "seo": {
+    "h1": "Your complete treatment menu, all in one place.",
+    "title": "Spa Treatments & Services | Golden Practice Brooklyn",
+    "schema": [
+      "OfferCatalog",
+      "BreadcrumbList"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa treatments middletown ny",
+      "massage therapy middletown",
+      "facials middletown ny"
+    ],
+    "pageType": "services",
+    "priority": 0.9,
+    "changefreq": "monthly",
+    "description": "Explore massage, foot reflexology, East Asian therapies, facials, and body treatments in Brooklyn, NY. Clear pricing, one convenient menu, and open daily.",
+    "canonicalUrl": "/en/services",
+    "keywordCluster": "services-hub"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167871696-photo-1696841212541-449ca29397cc.jpg",
+      "scrim": 40
+    },
+    "eyebrow": "The menu",
+    "subline": "From massage and foot reflexology to East Asian therapies, facials, and body care, you’ll find everything in one place with clear, upfront pricing.",
+    "variant": "split",
+    "headline": "All your treatments in one place.",
+    "ctaPrimary": {
+      "href": "/pricing",
+      "label": "See pricing"
+    },
+    "ctaSecondary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  },
+  "ctaBanner": {
+    "heading": "Ready when you are.",
+    "subline": "Schedule online in less than a minute — no payment needed to book.",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  },
+  "categoryGrid": {
+    "intro": "Find the service that fits what you need today.",
+    "variant": "panels",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "treatmentSelector": {
+    "intro": "Answer three brief questions, and we’ll help point you to the most suitable treatment.",
+    "heading": "Not sure which treatment to choose?",
+    "variant": "inline"
+  }
+}

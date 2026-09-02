@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "marathon-recovery",
+      "order": 1,
+      "photo": "",
+      "title": "马拉松后的恢复",
+      "outcome": "赛前一周的90分钟运动按摩让步伐重新舒展——此后更养成每月固定预约的习惯。",
+      "situation": "备战瓦尔基尔半程马拉松，小腿紧绷、髂胫束隐隐作痛。",
+      "treatmentRef": "sports-massage"
+    },
+    {
+      "id": "date-night-reset",
+      "order": 2,
+      "photo": "",
+      "title": "约会之夜的放松",
+      "outcome": "并肩享受的90分钟情侣按摩搭配茶点，成了最容易一再重复的礼物。",
+      "situation": "两人日程都很忙，纪念日却没时间精心安排。",
+      "treatmentRef": "couples-massage"
+    },
+    {
+      "id": "first-trimester-calm",
+      "order": 3,
+      "photo": "",
+      "title": "孕早期的安宁",
+      "outcome": "持证的侧卧孕期护理，终于让人感到安心而真正得到休息。",
+      "situation": "腰背承压，漫长一周后难以放松入睡。",
+      "treatmentRef": "prenatal-massage"
+    },
+    {
+      "id": "desk-bound-no-more",
+      "order": 4,
+      "photo": "",
+      "title": "告别久坐",
+      "outcome": "针对性的深层组织按摩，加上简单可坚持的日常建议，效果持续。",
+      "situation": "多年伏案工作让颈肩僵硬难解。",
+      "treatmentRef": "deep-tissue-massage"
+    },
+    {
+      "id": "bridal-glow",
+      "order": 5,
+      "photo": "",
+      "title": "新娘光采",
+      "outcome": "量身定制的招牌面部护理——没有意外、没有刺激性焕肤，只有自然光采。",
+      "situation": "新娘希望婚礼前一周肌肤安定、透亮。",
+      "treatmentRef": "signature-facial"
+    },
+    {
+      "id": "on-her-feet-all-day",
+      "order": 6,
+      "photo": "",
+      "title": "整日站立之后",
+      "outcome": "躺椅区的足部反射疗法成了每周的放松仪式，也让值班变得可以承受。",
+      "situation": "一位护士连上十二小时班，双脚酸痛浮肿。",
+      "treatmentRef": "foot-reflexology"
+    }
+  ]
+}

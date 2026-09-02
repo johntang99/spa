@@ -1,0 +1,67 @@
+{
+  "seo": {
+    "h1": "Inside Golden Practice",
+    "title": "Gallery | Golden Practice Brooklyn, NY",
+    "schema": [
+      "ImageGallery"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa paradise gallery",
+      "day spa middletown ny photos",
+      "massage rooms middletown"
+    ],
+    "pageType": "gallery",
+    "priority": 0.5,
+    "changefreq": "monthly",
+    "description": "Step inside Golden Practice — our treatment rooms, couples room, foot reflexology lounge, and details. Real premises in Brooklyn, NY.",
+    "canonicalUrl": "/en/gallery",
+    "keywordCluster": "gallery"
+  },
+  "ctaBanner": {
+    "heading": "Come experience it in person.",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  },
+  "galleryGrid": {
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172444709-photo-1693578538512-fc66f318c833.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172447386-photo-1611920630905-426e08849c32.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172448407-photo-1630835425197-50feeba99ecd.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172449312-photo-1603077864615-538e955d1ad1.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240081144-014.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240222850-025.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240244079-063.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240264216-098.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240784604-030.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240803424-036.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784240864073-043.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241702792-055.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241739043-072.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241790063-081.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241830207-093.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241858200-106.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241885799-112.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241906570-128.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1784241927505-134.jpg",
+      "",
+      ""
+    ],
+    "heading": "Inside Golden Practice",
+    "variant": "filtered",
+    "collections": [
+      "rooms",
+      "treatments",
+      "details"
+    ]
+  },
+  "galleryGridVideo": {
+    "heading": "A look around",
+    "variant": "video"
+  }
+}

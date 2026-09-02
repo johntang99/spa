@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦运动按摩",
+    "title": "纽约米德尔敦运动按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦运动按摩",
+      "运动按摩"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "针对训练与赛事的恢复手法。 天堂水疗的运动按摩——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/sports-massage-middletown-ny",
+    "keywordCluster": "service-sports-massage"
+  },
+  "slug": "sports-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦运动按摩",
+        "serviceRef": "sports-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "sports-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "sports-massage"
+}

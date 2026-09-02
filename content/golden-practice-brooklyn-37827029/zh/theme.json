@@ -1,0 +1,70 @@
+{
+  "shape": {
+    "radius": "16px",
+    "shadow": "0 8px 28px rgba(30,45,40,0.10)"
+  },
+  "colors": {
+    "primary": {
+      "50": "#E7ECEA",
+      "100": "#C7D2CD",
+      "dark": "#16221E",
+      "light": "#2C4138",
+      "DEFAULT": "#1E2D28"
+    },
+    "backdrop": {
+      "primary": "#F7F4EE",
+      "secondary": "#ECE6DC"
+    },
+    "secondary": {
+      "50": "#F6EEDD",
+      "dark": "#A98444",
+      "light": "#D9B873",
+      "DEFAULT": "#C9A35C"
+    }
+  },
+  "layout": {
+    "heroVariant": "full-bleed-image",
+    "featureVariant": "grid",
+    "spacingDensity": "comfortable"
+  },
+  "tokens": {
+    "divider": "ripple-curve",
+    "primitives": {
+      "char": "#23211D",
+      "mist": "#9FB0A9",
+      "linen": "#ECE6DC",
+      "white": "#FFFFFF",
+      "candle": "#C9A35C",
+      "ink-pine": "#1E2D28",
+      "char-soft": "#4A463E",
+      "pine-deep": "#16221E",
+      "pine-soft": "#2C4138",
+      "porcelain": "#F7F4EE",
+      "linen-deep": "#E2DACB",
+      "blush-stone": "#C98D7B",
+      "candle-deep": "#A98444",
+      "mist-strong": "#7E948B",
+      "candle-bright": "#D9B873"
+    }
+  },
+  "_preset": {
+    "id": "jade-hour",
+    "name": "Jade Hour",
+    "category": "luxury",
+    "description": "Dusk calm, East-meets-West premium. Porcelain/ink-pine surfaces, candle gold accent."
+  },
+  "typography": {
+    "body": "1.0625rem",
+    "fonts": {
+      "body": "var(--font-schibsted), 'Noto Sans SC', var(--font-noto-sans-sc), sans-serif",
+      "small": "var(--font-schibsted), sans-serif",
+      "display": "var(--font-marcellus), 'Noto Serif SC', var(--font-noto-serif-sc), serif",
+      "heading": "var(--font-marcellus), 'Noto Serif SC', var(--font-noto-serif-sc), serif",
+      "subheading": "var(--font-schibsted), sans-serif"
+    },
+    "small": "0.875rem",
+    "display": "clamp(2.4rem, 5vw, 4.2rem)",
+    "heading": "clamp(1.7rem, 3vw, 2.4rem)",
+    "subheading": "1.35rem"
+  }
+}

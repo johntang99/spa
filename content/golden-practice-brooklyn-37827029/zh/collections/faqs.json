@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "id": "do-i-need-appointment",
+      "order": 1,
+      "answer": "有空档时欢迎直接到店，但提前预约能确保您的时间与指定理疗师。在线预约不到一分钟即可完成。",
+      "question": "需要预约吗？还是可以直接到店？",
+      "scopeTags": [
+        "general",
+        "booking"
+      ]
+    },
+    {
+      "id": "open-hours",
+      "order": 2,
+      "answer": "我们每天营业，上午9:00至晚上9:00——包括周末和大多数节假日。",
+      "question": "营业时间是几点？",
+      "scopeTags": [
+        "general",
+        "location"
+      ]
+    },
+    {
+      "id": "languages",
+      "order": 3,
+      "answer": "会——我们多位理疗师与前台都会说普通话和粤语。您可以全程以中文或英文预约与接受服务。",
+      "question": "你们会说中文吗？",
+      "scopeTags": [
+        "general"
+      ]
+    },
+    {
+      "id": "first-visit-what-to-expect",
+      "order": 4,
+      "answer": "请提前几分钟到达，告诉我们您的目标以及需要重点处理或避开的部位，我们会为您匹配合适的理疗师与力度。您只需脱至自己舒适的程度，全程都会有专业的盖布遮护。",
+      "question": "第一次到店有哪些流程？",
+      "scopeTags": [
+        "general",
+        "massage"
+      ]
+    },
+    {
+      "id": "how-to-pay",
+      "order": 5,
+      "answer": "支持刷卡、现金、Apple Pay 以及天堂水疗礼品卡。预约时不收取任何费用——护理结束后再付款。",
+      "question": "如何付款？",
+      "scopeTags": [
+        "pricing",
+        "booking"
+      ]
+    },
+    {
+      "id": "gratuity-included",
+      "order": 6,
+      "answer": "不包含——小费我们心存感谢，但完全由您自愿。没有服务费，也没有额外加价；菜单价格就是护理价格。",
+      "question": "价格包含小费吗？",
+      "scopeTags": [
+        "pricing"
+      ]
+    },
+    {
+      "id": "cancellation-policy",
+      "order": 7,
+      "answer": "生活总有意外。提前4小时通知我们即可，永不收费。多次爽约者可能需要预付。",
+      "question": "取消政策是怎样的？",
+      "scopeTags": [
+        "pricing",
+        "booking"
+      ]
+    },
+    {
+      "id": "prices-same-for-everyone",
+      "order": 8,
+      "answer": "一样。公开标价，无论是新客、常客，还是说英文或中文——所见即所付。",
+      "question": "所有人价格都一样吗？",
+      "scopeTags": [
+        "pricing"
+      ]
+    },
+    {
+      "id": "memberships",
+      "order": 9,
+      "answer": "有——月度会员包含每月一次60分钟按摩（享会员价），其余项目也都享折扣。可在前台咨询或查看套餐页面。",
+      "question": "你们有会员吗？",
+      "scopeTags": [
+        "pricing",
+        "packages"
+      ]
+    },
+    {
+      "id": "deep-vs-swedish",
+      "order": 10,
+      "answer": "瑞典式以舒缓流畅的手法带来全身放松；深层组织则以更慢、更集中的力度处理顽固的紧绷与结节。不确定选哪种？告诉理疗师您的目标，他们会随之调整。",
+      "question": "深层组织按摩和瑞典式按摩有什么区别？",
+      "scopeTags": [
+        "massage"
+      ]
+    },
+    {
+      "id": "massage-pressure",
+      "order": 11,
+      "answer": "随时告诉我们——在过程中提出最好。您的舒适决定手法力度，调整力度是再正常不过的事。",
+      "question": "如果力度太轻或太重怎么办？",
+      "scopeTags": [
+        "massage"
+      ]
+    },
+    {
+      "id": "couples-room",
+      "order": 12,
+      "answer": "有。私密情侣房可容纳两位理疗师并肩服务，您还可在「情侣静享套餐」中加入茶点服务。",
+      "question": "你们有情侣房吗？",
+      "scopeTags": [
+        "couples",
+        "massage"
+      ]
+    },
+    {
+      "id": "prenatal-safe",
+      "order": 13,
+      "answer": "我们的孕期按摩由持证理疗师以安全的侧卧姿势进行，一般适合孕期第4至9个月。若属高危妊娠或有任何顾虑，请先咨询您的医生。",
+      "question": "孕期按摩安全吗？",
+      "scopeTags": [
+        "prenatal",
+        "massage"
+      ]
+    },
+    {
+      "id": "what-is-cupping",
+      "order": 14,
+      "answer": "拔罐通过温和的吸力舒缓肌肉紧张、促进循环。可能会留下暂时的圆形印记，通常几天内自行消退。",
+      "question": "什么是拔罐？会留下印记吗？",
+      "scopeTags": [
+        "cupping",
+        "massage"
+      ]
+    },
+    {
+      "id": "what-is-reflexology",
+      "order": 15,
+      "answer": "反射疗法通过按压足部特定穴位，带来深度放松。在我们的躺椅休息区进行，脚踝以上保持着装。",
+      "question": "什么是足部反射疗法？",
+      "scopeTags": [
+        "foot",
+        "massage"
+      ]
+    },
+    {
+      "id": "facial-skin-types",
+      "order": 16,
+      "answer": "招牌面部护理适合大多数肤质；深层清洁面部护理针对堵塞与油性肌肤；抗衰老面部护理侧重紧致。我们的美容师会在当天为您量身调整。",
+      "question": "哪种面部护理适合我的肤质？",
+      "scopeTags": [
+        "facial"
+      ]
+    },
+    {
+      "id": "gift-card-how",
+      "order": 17,
+      "answer": "第1步：选择金额或指定护理礼品卡。第2步：在线安全结账（可在结账页输入优惠码）。第3步：支付后我们会通过邮件发送礼券代码。第4步：收礼人预约任意服务并在前台出示代码即可使用。",
+      "question": "礼品卡如何使用？",
+      "scopeTags": [
+        "gift"
+      ]
+    },
+    {
+      "id": "gift-card-redeem",
+      "order": 18,
+      "answer": "可在线、电话或到店预约，来店后在前台出示礼券代码，我们会为您核销使用。",
+      "question": "如何兑换礼品卡？",
+      "scopeTags": [
+        "gift"
+      ]
+    },
+    {
+      "id": "corporate-gifting",
+      "order": 19,
+      "answer": "可以——我们提供企业与批量礼赠。请在礼品卡页面填写咨询表单，我们会协助您安排。",
+      "question": "可以为团队或客户批量购买礼品卡吗？",
+      "scopeTags": [
+        "gift"
+      ]
+    },
+    {
+      "id": "parking",
+      "order": 20,
+      "answer": "有——12 Grove St 提供免费停车，距米德尔敦市中心及17号/I-84公路仅几分钟车程。",
+      "question": "有停车位吗？",
+      "scopeTags": [
+        "location"
+      ]
+    }
+  ]
+}

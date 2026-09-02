@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦热石按摩",
+    "title": "纽约米德尔敦热石按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦热石按摩",
+      "热石按摩"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "温热玄武岩层层融化紧张。 天堂水疗的热石按摩——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/hot-stone-massage-middletown-ny",
+    "keywordCluster": "service-hot-stone-massage"
+  },
+  "slug": "hot-stone-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦热石按摩",
+        "serviceRef": "hot-stone-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "hot-stone-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "hot-stone-massage"
+}

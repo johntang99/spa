@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Gua Sha Treatment in Brooklyn, NY",
+    "title": "Gua Sha Treatment in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "gua sha treatment middletown ny",
+      "gua sha treatment near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Traditional scraping technique, applied within any 60+ min massage. Gua Sha Treatment in Brooklyn, NY at Golden Practice — licensed therapists, transparent…",
+    "canonicalUrl": "/en/gua-sha-middletown-ny",
+    "keywordCluster": "service-gua-sha"
+  },
+  "slug": "gua-sha-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Gua Sha Treatment in Brooklyn, NY",
+        "serviceRef": "gua-sha"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "gua-sha",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "gua-sha"
+}

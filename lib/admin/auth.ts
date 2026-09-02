@@ -129,7 +129,11 @@ export async function authenticate(email: string, password: string): Promise<Ses
 
 export async function verifyAuth(token: string): Promise<Session | null> {
   try {
-    const decoded = jwt.verify(token, JWT_SECRET) as { email: string; exp: number };
+    // Allow small clock skew between auth issuer and verifier processes.
+    const decoded = jwt.verify(token, JWT_SECRET, { clockTolerance: 120 }) as {
+      email: string;
+      exp: number;
+    };
     const user = await findUserByEmail(decoded.email);
     if (!user) return null;
 

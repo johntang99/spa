@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Washingtonville, NY",
+    "title": "Massage near Washingtonville, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage washingtonville ny",
+      "massage near washingtonville"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Washingtonville, NY — about 20 min from Brooklyn via Routes 208 & 94. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-washingtonville-ny",
+    "keywordCluster": "near-washingtonville"
+  },
+  "slug": "massage-washingtonville-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Washingtonville, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "From Washingtonville, Routes 208 and 94 bring you over in about twenty minutes. It's an easy add-on to a day at Brotherhood Winery — swap the tasting room for a treatment room and let a massage or facial round out the afternoon.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦推拿",
+    "title": "纽约米德尔敦推拿 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦推拿",
+      "推拿"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "传统中式理疗按摩。 天堂水疗的推拿——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/tui-na-bodywork-middletown-ny",
+    "keywordCluster": "service-tui-na-bodywork"
+  },
+  "slug": "tui-na-bodywork-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦推拿",
+        "serviceRef": "tui-na-bodywork"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "tui-na-bodywork",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "tui-na-bodywork"
+}

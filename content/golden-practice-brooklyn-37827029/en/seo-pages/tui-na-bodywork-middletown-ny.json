@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Tui Na Bodywork in Brooklyn, NY",
+    "title": "Tui Na Bodywork in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "tui na bodywork middletown ny",
+      "tui na bodywork near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Traditional Chinese therapeutic massage. Tui Na Bodywork in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/tui-na-bodywork-middletown-ny",
+    "keywordCluster": "service-tui-na-bodywork"
+  },
+  "slug": "tui-na-bodywork-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Tui Na Bodywork in Brooklyn, NY",
+        "serviceRef": "tui-na-bodywork"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "tui-na-bodywork",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "tui-na-bodywork"
+}

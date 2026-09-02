@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Chair Massage in Brooklyn, NY",
+    "title": "Chair Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "chair massage middletown ny",
+      "chair massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Clothed, express neck-shoulder-back reset. Chair Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/chair-massage-middletown-ny",
+    "keywordCluster": "service-chair-massage"
+  },
+  "slug": "chair-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Chair Massage in Brooklyn, NY",
+        "serviceRef": "chair-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "chair-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "chair-massage"
+}

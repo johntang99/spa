@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "新汉普顿附近的按摩",
+    "title": "新汉普顿附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "新汉普顿按摩",
+      "新汉普顿附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务新汉普顿的持牌按摩——距米德尔敦约10分钟（沿Route 17M West）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-new-hampton-ny",
+    "keywordCluster": "near-new-hampton"
+  },
+  "slug": "massage-new-hampton-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "新汉普顿附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "新汉普顿沿17M公路向西仅约十分钟。从十字路口出发，您距离按摩、反射疗法与身体护理的完整菜单只有几分钟之遥——近到把每周固定预约真正变成轻而易举的事。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

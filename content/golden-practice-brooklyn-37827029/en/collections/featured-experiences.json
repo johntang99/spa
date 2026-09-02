@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "marathon-recovery",
+      "order": 1,
+      "photo": "",
+      "title": "Marathon Recovery",
+      "outcome": "A 90-minute sports session before race week loosened the stride — and a standing monthly slot since.",
+      "situation": "Training for the Wallkill half-marathon left tight calves and a nagging IT band.",
+      "treatmentRef": "sports-massage"
+    },
+    {
+      "id": "date-night-reset",
+      "order": 2,
+      "photo": "",
+      "title": "Date-Night Reset",
+      "outcome": "A side-by-side 90-minute couples massage with tea service became the easiest gift to repeat.",
+      "situation": "An anniversary with two busy schedules and no time to plan something special.",
+      "treatmentRef": "couples-massage"
+    },
+    {
+      "id": "first-trimester-calm",
+      "order": 3,
+      "photo": "",
+      "title": "First-Trimester Calm",
+      "outcome": "Certified side-lying prenatal work that finally felt safe and genuinely restful.",
+      "situation": "Lower-back pressure and trouble settling at the end of a long week.",
+      "treatmentRef": "prenatal-massage"
+    },
+    {
+      "id": "desk-bound-no-more",
+      "order": 4,
+      "photo": "",
+      "title": "Desk-Bound No More",
+      "outcome": "Focused deep-tissue work plus simple between-visit advice that actually stuck.",
+      "situation": "Years of laptop work had locked up the neck and shoulders.",
+      "treatmentRef": "deep-tissue-massage"
+    },
+    {
+      "id": "bridal-glow",
+      "order": 5,
+      "photo": "",
+      "title": "Bridal Glow",
+      "outcome": "A tailored signature facial — no surprises, no harsh peels, just glow.",
+      "situation": "A bride wanting calm, clear skin the week before the wedding.",
+      "treatmentRef": "signature-facial"
+    },
+    {
+      "id": "on-her-feet-all-day",
+      "order": 6,
+      "photo": "",
+      "title": "On Her Feet All Day",
+      "outcome": "Reflexology in the recliner lounge became the weekly reset that made the shifts bearable.",
+      "situation": "A nurse finishing twelve-hour shifts with aching, swollen feet.",
+      "treatmentRef": "foot-reflexology"
+    }
+  ]
+}

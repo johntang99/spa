@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Anti-Aging Facial in Brooklyn, NY",
+    "title": "Anti-Aging Facial in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "anti-aging facial middletown ny",
+      "anti-aging facial near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Firming treatment with targeted serums. Anti-Aging Facial in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/anti-aging-facial-middletown-ny",
+    "keywordCluster": "service-anti-aging-facial"
+  },
+  "slug": "anti-aging-facial-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Anti-Aging Facial in Brooklyn, NY",
+        "serviceRef": "anti-aging-facial"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "anti-aging-facial",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "anti-aging-facial"
+}

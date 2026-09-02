@@ -1,0 +1,53 @@
+{
+  "seo": {
+    "h1": "Terms of Service",
+    "title": "Terms of Service | Golden Practice Brooklyn, NY",
+    "schema": [
+      "WebPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa paradise terms of service"
+    ],
+    "pageType": "terms",
+    "priority": 0.2,
+    "changefreq": "yearly",
+    "description": "Booking, cancellation, pricing, gift-card, and wellness terms for Golden Practice in Brooklyn, NY.",
+    "canonicalUrl": "/en/terms",
+    "keywordCluster": "terms"
+  },
+  "intro": "By using this website and booking with Golden Practice, you agree to the following terms. This is a template provided for review; please confirm it with your own legal counsel before launch.",
+  "title": "Terms of Service",
+  "sections": [
+    {
+      "body": "No payment is required to book — you pay after your treatment. If you need to cancel or reschedule, please give us at least 4 hours' notice and there is no charge. Repeated no-shows may be asked to prepay for future appointments.",
+      "heading": "Bookings & Cancellations"
+    },
+    {
+      "body": "All prices are published on our menu and are the same for everyone. Gratuity is appreciated but never required, and there is no service charge. We accept card, cash, Apple Pay, and Golden Practice gift cards.",
+      "heading": "Pricing & Payment"
+    },
+    {
+      "body": "Golden Practice gift cards and gift certificates do not expire and carry no dormancy, service, or maintenance fees, consistent with New York State law. Any remaining balance stays on the card for future use. Gift cards are redeemable for services and are not redeemable for cash except where required by law.",
+      "bullets": [
+        "No expiration date",
+        "No fees of any kind",
+        "Remaining balance carries over"
+      ],
+      "heading": "Gift Cards"
+    },
+    {
+      "body": "Our services are provided for relaxation and general wellness. They are not medical care and are not a substitute for professional medical advice from a qualified healthcare provider. If you have a medical condition, are pregnant, or have any health concerns, please consult your doctor before booking, and let your therapist know so we can keep you comfortable and safe.",
+      "heading": "Health & Wellness Notice"
+    },
+    {
+      "body": "We are a professional, licensed establishment. All treatments are non-sexual in nature. We reserve the right to end a session and decline service for inappropriate conduct.",
+      "heading": "Conduct & Safety"
+    },
+    {
+      "body": "We may update these terms from time to time; the current version is always posted here. Questions? Contact Golden Practice at 245 Atlantic Ave Suite 3B, (718) 555-2901, or hello@goldenpractice.example.com.",
+      "heading": "Changes & Contact"
+    }
+  ],
+  "updatedAt": "2026-06-10"
+}

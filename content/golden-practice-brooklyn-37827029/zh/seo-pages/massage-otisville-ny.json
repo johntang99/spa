@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "奥蒂斯维尔附近的按摩",
+    "title": "奥蒂斯维尔附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "奥蒂斯维尔按摩",
+      "奥蒂斯维尔附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务奥蒂斯维尔的持牌按摩——距米德尔敦约12分钟（沿Route 211 West）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-otisville-ny",
+    "keywordCluster": "near-otisville"
+  },
+  "slug": "massage-otisville-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "奥蒂斯维尔附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "奥蒂斯维尔沿211公路向东，仅约十二分钟的短途车程。无论您是值完长班后从村里赶来做足部反射疗法，还是周末来一场深层组织按摩，我们都让一切保持简单、透明、易于预约。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦背部护理",
+    "title": "纽约米德尔敦背部护理 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦背部护理",
+      "背部护理"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "专为背部设计的“面部护理”。 天堂水疗的背部护理——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/back-treatment-middletown-ny",
+    "keywordCluster": "service-back-treatment"
+  },
+  "slug": "back-treatment-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦背部护理",
+        "serviceRef": "back-treatment"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "back-treatment",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "back-treatment"
+}

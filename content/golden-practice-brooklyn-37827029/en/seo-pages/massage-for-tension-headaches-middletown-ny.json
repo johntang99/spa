@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "Massage for Tension Headaches in Brooklyn, NY",
+    "title": "Massage for Tension Headaches in Brooklyn, NY",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage for tension headaches middletown ny",
+      "tension headaches massage near me"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Soothing, licensed massage in Brooklyn, NY for tension headaches. Wellness-focused relief — book online, English & 中文.",
+    "canonicalUrl": "/en/massage-for-tension-headaches-middletown-ny",
+    "keywordCluster": "condition-tension-headaches"
+  },
+  "slug": "massage-for-tension-headaches-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "Massage for Tension Headaches in Brooklyn, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

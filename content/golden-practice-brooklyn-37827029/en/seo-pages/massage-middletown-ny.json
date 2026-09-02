@@ -1,0 +1,48 @@
+{
+  "seo": {
+    "h1": "Massage in Brooklyn, NY",
+    "title": "Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage middletown ny",
+      "massage near me middletown",
+      "day spa middletown ny"
+    ],
+    "pageType": "seo-local-landing",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage in Brooklyn, NY — Swedish, deep tissue, hot stone, couples & more. Transparent pricing, open every day, English & 中文.",
+    "canonicalUrl": "/en/massage-middletown-ny",
+    "keywordCluster": "local-massage-middletown"
+  },
+  "slug": "massage-middletown-ny",
+  "pageType": "seo-local-landing",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Massage in Brooklyn, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": null
+}

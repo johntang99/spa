@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "华盛顿维尔附近的按摩",
+    "title": "华盛顿维尔附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "华盛顿维尔按摩",
+      "华盛顿维尔附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务华盛顿维尔的持牌按摩——距米德尔敦约20分钟（沿Routes 208 & 94）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-washingtonville-ny",
+    "keywordCluster": "near-washingtonville"
+  },
+  "slug": "massage-washingtonville-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "华盛顿维尔附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "从华盛顿维尔经208号与94号公路过来约二十分钟。把它顺道加进兄弟会酒庄的一日行程再合适不过——将品酒室换作护理室，让一场按摩或面部护理为午后画上句点。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

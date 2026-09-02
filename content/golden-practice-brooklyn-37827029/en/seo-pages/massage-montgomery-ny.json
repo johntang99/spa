@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Montgomery, NY",
+    "title": "Massage near Montgomery, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage montgomery ny",
+      "massage near montgomery"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Montgomery, NY — about 20 min from Brooklyn via Route 211. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-montgomery-ny",
+    "keywordCluster": "near-montgomery"
+  },
+  "slug": "massage-montgomery-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Montgomery, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "From the historic Village of Montgomery, Route 211 leads to us in about twenty minutes — a pleasant drive along the Wallkill that ends, fittingly, in a calm and unhurried treatment. It's a favorite reset for folks who like to make an outing of it.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

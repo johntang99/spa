@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "切斯特附近的按摩",
+    "title": "切斯特附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "切斯特按摩",
+      "切斯特附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务切斯特的持牌按摩——距米德尔敦约15分钟（沿Routes 17 & 94）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-chester-ny",
+    "keywordCluster": "near-chester"
+  },
+  "slug": "massage-chester-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "切斯特附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "从切斯特经17号与94号公路过来，约十五分钟便捷直达。若您每天经切斯特火车站通勤，我们正是回家路上顺道的一站——把站台换成一间温暖的房间，享受来之不易的宁静。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

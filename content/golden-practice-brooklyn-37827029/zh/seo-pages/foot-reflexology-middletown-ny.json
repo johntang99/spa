@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦足部反射疗法",
+    "title": "纽约米德尔敦足部反射疗法 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦足部反射疗法",
+      "足部反射疗法"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "躺椅休息区的足部穴位疗法。 天堂水疗的足部反射疗法——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/foot-reflexology-middletown-ny",
+    "keywordCluster": "service-foot-reflexology"
+  },
+  "slug": "foot-reflexology-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦足部反射疗法",
+        "serviceRef": "foot-reflexology"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "foot-reflexology",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-reflexology"
+}

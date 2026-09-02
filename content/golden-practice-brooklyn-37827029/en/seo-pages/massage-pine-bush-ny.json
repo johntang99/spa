@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Pine Bush, NY",
+    "title": "Massage near Pine Bush, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage pine bush ny",
+      "massage near pine bush"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Pine Bush, NY — about 20 min from Brooklyn via Route 302. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-pine-bush-ny",
+    "keywordCluster": "near-pine-bush"
+  },
+  "slug": "massage-pine-bush-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Pine Bush, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "Pine Bush guests reach us in roughly twenty minutes along Route 302. It's worth the drive from the village for a spa that publishes every price, speaks both English and 中文, and keeps the same menu open seven days a week.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

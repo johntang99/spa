@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "id": "hero",
+      "mode": "dark"
+    },
+    {
+      "id": "statsBand",
+      "mode": "light"
+    },
+    {
+      "id": "checklist",
+      "mode": "well"
+    },
+    {
+      "id": "galleryGrid",
+      "mode": "light"
+    },
+    {
+      "id": "iconGrid",
+      "mode": "dark"
+    },
+    {
+      "id": "testimonials",
+      "mode": "light"
+    },
+    {
+      "id": "ctaBanner",
+      "mode": "dark"
+    }
+  ]
+}

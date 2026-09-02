@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Goshen, NY",
+    "title": "Massage near Goshen, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage goshen ny",
+      "massage near goshen"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Goshen, NY — about 10 min from Brooklyn via Route 17M. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-goshen-ny",
+    "keywordCluster": "near-goshen"
+  },
+  "slug": "massage-goshen-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Goshen, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "Just up Route 17M, Goshen sits barely ten minutes from our door — close enough that plenty of Goshen regulars stop in on a lunch break. If you work near the Orange County government center or shop along Main Street, an unhurried massage or facial is only a short hop south into Brooklyn.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

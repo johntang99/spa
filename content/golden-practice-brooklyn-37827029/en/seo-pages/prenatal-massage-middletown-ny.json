@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Prenatal Massage in Brooklyn, NY",
+    "title": "Prenatal Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "prenatal massage middletown ny",
+      "prenatal massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Certified, side-lying comfort for months 4–9. Prenatal Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online bookin…",
+    "canonicalUrl": "/en/prenatal-massage-middletown-ny",
+    "keywordCluster": "service-prenatal-massage"
+  },
+  "slug": "prenatal-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Prenatal Massage in Brooklyn, NY",
+        "serviceRef": "prenatal-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "prenatal-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "prenatal-massage"
+}

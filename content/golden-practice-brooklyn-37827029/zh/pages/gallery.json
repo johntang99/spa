@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "走进天堂水疗",
+    "title": "环境相册 | 天堂水疗 米德尔敦",
+    "schema": [
+      "ImageGallery"
+    ],
+    "noindex": false,
+    "keywords": [
+      "天堂水疗 相册",
+      "米德尔敦日间水疗 照片",
+      "米德尔敦按摩房"
+    ],
+    "pageType": "gallery",
+    "priority": 0.5,
+    "changefreq": "monthly",
+    "description": "走进天堂水疗——护理房、情侣房、足部反射疗法休息区与细节。纽约米德尔敦的真实店面。",
+    "canonicalUrl": "/zh/gallery",
+    "keywordCluster": "gallery"
+  },
+  "ctaBanner": {
+    "heading": "欢迎亲临体验。",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    }
+  },
+  "galleryGrid": {
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172444709-photo-1693578538512-fc66f318c833.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172447386-photo-1611920630905-426e08849c32.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172448407-photo-1630835425197-50feeba99ecd.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172449312-photo-1603077864615-538e955d1ad1.jpg"
+    ],
+    "heading": "走进天堂水疗",
+    "variant": "filtered",
+    "collections": [
+      "rooms",
+      "treatments",
+      "details"
+    ]
+  },
+  "galleryGridVideo": {
+    "heading": "环境一览",
+    "variant": "video"
+  }
+}

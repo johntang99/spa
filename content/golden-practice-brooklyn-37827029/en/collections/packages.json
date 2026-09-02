@@ -1,0 +1,121 @@
+{
+  "items": [
+    {
+      "id": "massage-facial-combo",
+      "kind": "package",
+      "name": "Massage + Facial Signature Combo",
+      "order": 1,
+      "price": 145,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "signature-facial",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "couples-retreat",
+      "kind": "package",
+      "name": "Couples Retreat",
+      "order": 2,
+      "perks": [
+        "90-minute couples massage",
+        "Tea service for two",
+        "Private couples room"
+      ],
+      "price": 260,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "couples-massage",
+          "tierMinutes": 90
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "spa-day",
+      "kind": "package",
+      "name": "Spa Day",
+      "order": 3,
+      "perks": [
+        "Massage",
+        "Signature facial",
+        "Body scrub",
+        "Lunch break"
+      ],
+      "price": 210,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "signature-facial",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "body-scrub",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "relax-renew-3pack",
+      "kind": "package",
+      "name": "Relax & Renew 3-Pack",
+      "order": 4,
+      "perks": [
+        "Three 60-minute massages",
+        "Use within 6 months",
+        "Shareable"
+      ],
+      "price": 225,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        },
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "stripe"
+    },
+    {
+      "id": "monthly-membership",
+      "kind": "membership",
+      "name": "Monthly Membership",
+      "order": 5,
+      "perks": [
+        "One 60-minute massage each month at member rate",
+        "Discounts on all additional treatments",
+        "Rollover of unused monthly massage",
+        "Set up in spa — cancel anytime"
+      ],
+      "price": 69,
+      "active": true,
+      "includes": [
+        {
+          "serviceRef": "swedish-massage",
+          "tierMinutes": 60
+        }
+      ],
+      "purchaseMode": "inquiry"
+    }
+  ]
+}

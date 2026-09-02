@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦刮痧护理",
+    "title": "纽约米德尔敦刮痧护理 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦刮痧护理",
+      "刮痧护理"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "传统刮痧手法，可于任意60分钟以上按摩中加做。 天堂水疗的刮痧护理——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/gua-sha-middletown-ny",
+    "keywordCluster": "service-gua-sha"
+  },
+  "slug": "gua-sha-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦刮痧护理",
+        "serviceRef": "gua-sha"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "gua-sha",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "gua-sha"
+}

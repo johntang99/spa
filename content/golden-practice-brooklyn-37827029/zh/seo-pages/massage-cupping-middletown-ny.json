@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦按摩+拔罐",
+    "title": "纽约米德尔敦按摩+拔罐 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦按摩+拔罐",
+      "按摩+拔罐"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "理疗按摩后以传统拔罐收尾。 天堂水疗的按摩+拔罐——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/massage-cupping-middletown-ny",
+    "keywordCluster": "service-massage-cupping"
+  },
+  "slug": "massage-cupping-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦按摩+拔罐",
+        "serviceRef": "massage-cupping"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "massage-cupping",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "massage-cupping"
+}

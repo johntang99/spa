@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦紧张性头痛按摩",
+    "title": "纽约米德尔敦紧张性头痛按摩",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "紧张性头痛按摩",
+      "米德尔敦紧张性头痛"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "米德尔敦针对紧张性头痛的舒缓持牌按摩。以放松与舒缓为本——在线预约，提供中英文服务。",
+    "canonicalUrl": "/zh/massage-for-tension-headaches-middletown-ny",
+    "keywordCluster": "condition-tension-headaches"
+  },
+  "slug": "massage-for-tension-headaches-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "纽约米德尔敦紧张性头痛按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

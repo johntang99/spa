@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Couples Massage in Brooklyn, NY",
+    "title": "Couples Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "couples massage middletown ny",
+      "couples massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Side by side in our private couples room. Per couple. Couples Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online…",
+    "canonicalUrl": "/en/couples-massage-middletown-ny",
+    "keywordCluster": "service-couples-massage"
+  },
+  "slug": "couples-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Couples Massage in Brooklyn, NY",
+        "serviceRef": "couples-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "couples-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "couples-massage"
+}

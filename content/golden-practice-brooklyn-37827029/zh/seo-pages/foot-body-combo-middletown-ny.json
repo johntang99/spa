@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦足部+身体套组",
+    "title": "纽约米德尔敦足部+身体套组 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦足部+身体套组",
+      "足部+身体套组"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "30分钟足疗，30分钟背肩。 天堂水疗的足部+身体套组——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/foot-body-combo-middletown-ny",
+    "keywordCluster": "service-foot-body-combo"
+  },
+  "slug": "foot-body-combo-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦足部+身体套组",
+        "serviceRef": "foot-body-combo"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "foot-body-combo",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-body-combo"
+}

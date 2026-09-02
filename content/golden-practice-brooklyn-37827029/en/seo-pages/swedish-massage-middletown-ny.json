@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Swedish Massage in Brooklyn, NY",
+    "title": "Swedish Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "swedish massage middletown ny",
+      "swedish massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Long, flowing strokes for whole-body relaxation. Swedish Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online book…",
+    "canonicalUrl": "/en/swedish-massage-middletown-ny",
+    "keywordCluster": "service-swedish-massage"
+  },
+  "slug": "swedish-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Swedish Massage in Brooklyn, NY",
+        "serviceRef": "swedish-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "swedish-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "id": "t-zh-reflex-1",
+      "date": "2026-03-20",
+      "quote": "足疗做得非常专业，按到位又舒服。下班后来一次，整个人都轻松了。前台还能说中文，特别方便。",
+      "author": "李女士",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "foot-reflexology",
+      "categoryTag": "foot-reflexology"
+    },
+    {
+      "id": "t-zh-cupping-1",
+      "date": "2026-02-22",
+      "quote": "按摩加拔罐是我肩颈僵硬的救星，师傅手法很地道。价格透明，不会乱加项目。",
+      "author": "王先生",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "massage-cupping",
+      "categoryTag": "east-asian-therapies"
+    },
+    {
+      "id": "t-zh-deep-1",
+      "date": "2026-04-01",
+      "quote": "深层组织按摩力度刚好，陈师傅找到了我多年的老结。米德尔敦终于有一家这么靠谱的水疗。",
+      "author": "张先生",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "deep-tissue-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-zh-couples-1",
+      "date": "2026-03-12",
+      "quote": "纪念日订了情侣套餐，私密房间加茶点，非常用心。两个人都很放松。",
+      "author": "陈小姐",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [
+        "gift"
+      ],
+      "serviceRef": "couples-massage",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-zh-tuina-1",
+      "date": "2026-01-26",
+      "quote": "推拿很地道，跟国内的手法一样到位。能用中文沟通，长辈来也很安心。",
+      "author": "刘女士",
+      "rating": 5,
+      "source": "yelp",
+      "featured": false,
+      "scopeTags": [
+        "local"
+      ],
+      "serviceRef": "tui-na-bodywork",
+      "categoryTag": "massage"
+    },
+    {
+      "id": "t-zh-facial-1",
+      "date": "2026-02-28",
+      "quote": "面部护理根据我的肤质来做，不会一味推销产品。皮肤状态明显变好。",
+      "author": "周女士",
+      "rating": 5,
+      "source": "google",
+      "featured": false,
+      "scopeTags": [],
+      "serviceRef": "signature-facial",
+      "categoryTag": "facials"
+    },
+    {
+      "id": "t-zh-pricing-1",
+      "date": "2026-03-30",
+      "quote": "网上写多少就是多少，没有隐藏收费，也不催着加钟。这点最让人放心。",
+      "author": "黄先生",
+      "rating": 5,
+      "source": "google",
+      "featured": true,
+      "scopeTags": [
+        "local"
+      ],
+      "categoryTag": "general"
+    }
+  ]
+}

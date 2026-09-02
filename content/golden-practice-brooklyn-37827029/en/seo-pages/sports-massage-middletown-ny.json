@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Sports Massage in Brooklyn, NY",
+    "title": "Sports Massage in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "sports massage middletown ny",
+      "sports massage near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Targeted recovery work for training and events. Sports Massage in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online bookin…",
+    "canonicalUrl": "/en/sports-massage-middletown-ny",
+    "keywordCluster": "service-sports-massage"
+  },
+  "slug": "sports-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Sports Massage in Brooklyn, NY",
+        "serviceRef": "sports-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "sports-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "sports-massage"
+}

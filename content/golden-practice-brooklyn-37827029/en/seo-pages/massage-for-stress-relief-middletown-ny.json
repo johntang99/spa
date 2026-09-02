@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "Massage for Stress Relief in Brooklyn, NY",
+    "title": "Massage for Stress Relief in Brooklyn, NY",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage for stress relief middletown ny",
+      "stress relief massage near me"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Soothing, licensed massage in Brooklyn, NY for stress relief. Wellness-focused relief — book online, English & 中文.",
+    "canonicalUrl": "/en/massage-for-stress-relief-middletown-ny",
+    "keywordCluster": "condition-stress-relief"
+  },
+  "slug": "massage-for-stress-relief-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "Massage for Stress Relief in Brooklyn, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

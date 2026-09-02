@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Back Treatment in Brooklyn, NY",
+    "title": "Back Treatment in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "back treatment middletown ny",
+      "back treatment near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "A facial — for your back. Back Treatment in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booking.",
+    "canonicalUrl": "/en/back-treatment-middletown-ny",
+    "keywordCluster": "service-back-treatment"
+  },
+  "slug": "back-treatment-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Back Treatment in Brooklyn, NY",
+        "serviceRef": "back-treatment"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "back-treatment",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "back-treatment"
+}

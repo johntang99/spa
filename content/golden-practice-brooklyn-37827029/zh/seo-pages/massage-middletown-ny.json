@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦按摩",
+    "title": "纽约米德尔敦按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦按摩",
+      "米德尔敦水疗"
+    ],
+    "pageType": "seo-local-landing",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "米德尔敦的持牌按摩——瑞典式、深层组织、热石、情侣按摩等。价格透明，每天营业，提供中英文服务。",
+    "canonicalUrl": "/zh/massage-middletown-ny",
+    "keywordCluster": "local-massage-middletown"
+  },
+  "slug": "massage-middletown-ny",
+  "pageType": "seo-local-landing",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": null
+}

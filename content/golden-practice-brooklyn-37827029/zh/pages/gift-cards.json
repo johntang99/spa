@@ -1,0 +1,107 @@
+{
+  "faq": {
+    "source": {
+      "scopeTag": "gift"
+    },
+    "heading": "礼品卡问题",
+    "variant": "accordion"
+  },
+  "seo": {
+    "h1": "把一个悠闲的下午送给所爱之人。",
+    "title": "水疗礼品卡 | 天堂水疗 米德尔敦",
+    "schema": [
+      "Product",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦水疗礼品卡",
+      "米德尔敦按摩礼品卡",
+      "水疗礼券"
+    ],
+    "pageType": "gift-cards",
+    "priority": 0.8,
+    "changefreq": "monthly",
+    "description": "购买纽约米德尔敦的水疗与按摩礼品卡。永不过期、无费用、一分钟邮件送达。可选金额或指定护理，支持企业礼赠。",
+    "canonicalUrl": "/zh/gift-cards",
+    "keywordCluster": "gift-cards"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167875787-photo-1543134968-8752069dbf58.jpg",
+      "scrim": 45
+    },
+    "eyebrow": "礼品卡",
+    "subline": "天堂水疗礼品卡永不过期、无任何费用，一分钟即可通过电子邮件送达。",
+    "variant": "seasonal",
+    "headline": "把一个悠闲的下午送给所爱之人。",
+    "ctaPrimary": {
+      "href": "#denominations",
+      "label": "选择金额"
+    },
+    "campaignAware": true
+  },
+  "steps": {
+    "items": [
+      {
+        "body": "选择 $50、$100、$150，或指定护理礼品卡，然后点击对应的购买按钮。",
+        "title": "选择礼品卡"
+      },
+      {
+        "body": "在礼赠弹窗中填写收礼人姓名和邮箱，我们会将礼券直接发送给收礼人。",
+        "title": "填写收礼人信息"
+      },
+      {
+        "body": "继续进入 Stripe 结账，填写购买人联系方式；如有优惠码可先输入，再完成下单。",
+        "title": "安全结账"
+      },
+      {
+        "body": "收礼人会收到包含礼券代码与余额链接的邮件，可在线/电话预约，并在到店时出示代码由前台核销。",
+        "title": "收礼人兑换"
+      }
+    ],
+    "heading": "赠送与兑换步骤",
+    "variant": "horizontal"
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/contact",
+      "label": "提交咨询"
+    },
+    "body": "以天堂水疗礼品卡感谢团队或答谢客户。告诉我们您的需求，我们来安排。",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167876617-photo-1674620213535-9b2a2553ef40.jpg",
+    "eyebrow": "企业礼赠",
+    "heading": "企业与批量礼赠",
+    "variant": "corporate",
+    "mediaSide": "left"
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 4,
+      "scopeTag": "gift"
+    },
+    "heading": "送礼之选",
+    "variant": "carousel",
+    "showSource": true
+  },
+  "productGridTreatments": {
+    "intro": "送上一次特定的体验。",
+    "heading": "赠送护理",
+    "variant": "treatments",
+    "productRefs": [
+      "gift-signature-facial",
+      "gift-couples-massage"
+    ]
+  },
+  "productGridDenominations": {
+    "intro": "由对方自由选择护理。",
+    "heading": "赠送金额",
+    "variant": "denominations",
+    "productRefs": [
+      "gc-50",
+      "gc-100",
+      "gc-150"
+    ]
+  }
+}

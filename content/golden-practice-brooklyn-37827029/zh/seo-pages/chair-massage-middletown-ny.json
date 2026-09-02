@@ -1,0 +1,49 @@
+{
+  "seo": {
+    "h1": "纽约米德尔敦椅式按摩",
+    "title": "纽约米德尔敦椅式按摩 | 天堂水疗",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "米德尔敦椅式按摩",
+      "椅式按摩"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "着装快速的颈肩背放松。 天堂水疗的椅式按摩——持牌理疗师、价格透明、在线预约。",
+    "canonicalUrl": "/zh/chair-massage-middletown-ny",
+    "keywordCluster": "service-chair-massage"
+  },
+  "slug": "chair-massage-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "纽约米德尔敦椅式按摩",
+        "serviceRef": "chair-massage"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "chair-massage",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "chair-massage"
+}

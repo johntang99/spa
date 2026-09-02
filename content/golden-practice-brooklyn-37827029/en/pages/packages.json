@@ -1,0 +1,73 @@
+{
+  "faq": {
+    "source": {
+      "scopeTag": "packages"
+    },
+    "heading": "Package & membership questions",
+    "variant": "accordion"
+  },
+  "seo": {
+    "h1": "More spa, better value.",
+    "title": "Spa Packages & Membership | Golden Practice Brooklyn",
+    "schema": [
+      "Product",
+      "Offer"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa packages middletown ny",
+      "spa membership middletown",
+      "spa day package middletown"
+    ],
+    "pageType": "packages",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Spa day packages, couples retreats, massage 3-packs, and monthly membership in Brooklyn, NY. Better value for regulars — transparent pricing.",
+    "canonicalUrl": "/en/packages",
+    "keywordCluster": "packages"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167877485-photo-1488345979593-09db0f85545f.jpg",
+      "scrim": 40
+    },
+    "eyebrow": "Packages & memberships",
+    "subline": "Curated combinations and member pricing for the people who make us a habit.",
+    "variant": "split",
+    "headline": "More spa, better value.",
+    "ctaPrimary": {
+      "href": "#packages",
+      "label": "See packages"
+    }
+  },
+  "ctaBanner": {
+    "heading": "Make it a habit.",
+    "subline": "Start with a package or ask about membership at your next visit.",
+    "variant": "split-offer",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  },
+  "packageGrid": {
+    "refs": "all",
+    "heading": "Our packages"
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/book?package=monthly-membership",
+      "label": "Ask about membership"
+    },
+    "body": "One 60-minute massage each month at a member rate, plus discounts on everything else. Set up in spa, cancel anytime.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167878190-photo-1630595632518-8217c0bceb8f.jpg",
+    "eyebrow": "Membership",
+    "heading": "Monthly Membership",
+    "variant": "membership",
+    "mediaSide": "right",
+    "packageRef": "monthly-membership"
+  },
+  "comparisonTable": {
+    "heading": "Member vs. regular",
+    "packageRef": "monthly-membership"
+  }
+}

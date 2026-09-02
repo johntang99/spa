@@ -1,0 +1,68 @@
+{
+  "brand": {
+    "name": "Golden Practice",
+    "logoText": "Spa",
+    "description": "Golden Practice offers therapeutic massage and wellness-focused bodywork with transparent pricing and bilingual service in Brooklyn."
+  },
+  "hours": [
+    "Mon: 10:00 AM - 8:00 PM",
+    "Tue: 10:00 AM - 8:00 PM",
+    "Wed: 10:00 AM - 8:00 PM",
+    "Thu: 10:00 AM - 8:00 PM",
+    "Fri: 10:00 AM - 8:00 PM",
+    "Sat: 9:00 AM - 7:00 PM",
+    "Sun: 10:00 AM - 6:00 PM"
+  ],
+  "contact": {
+    "email": "hello@goldenpractice.example.com",
+    "phone": "(718) 555-2901",
+    "emailLink": "mailto:hello@goldenpractice.example.com",
+    "phoneLink": "tel:+17185552901",
+    "addressLines": [
+      "245 Atlantic Ave Suite 3B",
+      "Brooklyn, NY 11201"
+    ]
+  },
+  "services": [],
+  "copyright": "© 2026 Golden Practice. All rights reserved.",
+  "legalLinks": [
+    {
+      "url": "/zh/privacy",
+      "text": "隐私政策"
+    },
+    {
+      "url": "/zh/terms",
+      "text": "服务条款"
+    }
+  ],
+  "quickLinks": [
+    {
+      "url": "/zh/about",
+      "text": "关于我们"
+    },
+    {
+      "url": "/zh/services",
+      "text": "护理项目"
+    },
+    {
+      "url": "/zh/pricing",
+      "text": "价格"
+    },
+    {
+      "url": "/zh/gift-cards",
+      "text": "礼品卡"
+    },
+    {
+      "url": "/zh/packages",
+      "text": "套餐"
+    },
+    {
+      "url": "/zh/gallery",
+      "text": "图片集"
+    },
+    {
+      "url": "/zh/contact",
+      "text": "联系我们"
+    }
+  ]
+}

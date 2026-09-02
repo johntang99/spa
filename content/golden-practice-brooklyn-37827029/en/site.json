@@ -1,0 +1,61 @@
+{
+  "gbp": {
+    "rating": 4.8,
+    "reviewCount": 212
+  },
+  "geo": {
+    "lat": 41.4459,
+    "lng": -74.4229
+  },
+  "zip": "11201",
+  "city": "Brooklyn",
+  "email": "hello@goldenpractice.example.com",
+  "hours": {
+    "friday": "10:00 AM - 8:00 PM",
+    "monday": "10:00 AM - 8:00 PM",
+    "sunday": "10:00 AM - 6:00 PM",
+    "tuesday": "10:00 AM - 8:00 PM",
+    "saturday": "9:00 AM - 7:00 PM",
+    "thursday": "10:00 AM - 8:00 PM",
+    "wednesday": "10:00 AM - 8:00 PM"
+  },
+  "phone": "(718) 555-2901",
+  "state": "NY",
+  "social": {
+    "google": "https://g.page/r/golden-practice-brooklyn",
+    "wechat": "GoldenPracticeBK",
+    "youtube": "https://youtube.com/@goldenpracticebrooklyn",
+    "facebook": "https://facebook.com/goldenpracticebrooklyn",
+    "instagram": "https://instagram.com/goldenpracticebk"
+  },
+  "address": "245 Atlantic Ave Suite 3B",
+  "tagline": "Calm care for modern city life.",
+  "timezone": "America/New_York",
+  "wechatId": "",
+  "languages": [
+    {
+      "code": "en",
+      "flag": "US",
+      "label": "English",
+      "enabled": true
+    },
+    {
+      "code": "zh",
+      "flag": "CN",
+      "label": "中文",
+      "enabled": true
+    }
+  ],
+  "clinicName": "Golden Practice",
+  "description": "Golden Practice offers therapeutic massage and wellness-focused bodywork with transparent pricing and bilingual service in Brooklyn.",
+  "licenseLine": "All therapists licensed by New York State (LMT)",
+  "addressMapUrl": "https://maps.google.com/?q=245+Atlantic+Ave+Brooklyn+NY+11201",
+  "headerVariant": "stacked",
+  "iconCharacter": "S",
+  "languagesSpoken": [
+    "en",
+    "zh"
+  ],
+  "responsePromise": "We reply within 1 business hour",
+  "externalBookingUrl": ""
+}

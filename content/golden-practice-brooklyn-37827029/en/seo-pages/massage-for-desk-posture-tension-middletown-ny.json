@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "Massage for Desk & Posture Tension in Brooklyn, NY",
+    "title": "Massage for Desk & Posture Tension in Brooklyn, NY",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage for desk & posture tension middletown ny",
+      "desk & posture tension massage near me"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Soothing, licensed massage in Brooklyn, NY for desk & posture tension. Wellness-focused relief — book online, English & 中文.",
+    "canonicalUrl": "/en/massage-for-desk-posture-tension-middletown-ny",
+    "keywordCluster": "condition-desk-posture-tension"
+  },
+  "slug": "massage-for-desk-posture-tension-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "Massage for Desk & Posture Tension in Brooklyn, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

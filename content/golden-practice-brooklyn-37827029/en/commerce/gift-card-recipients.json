@@ -1,0 +1,121 @@
+{
+  "recipients": [
+    {
+      "id": "rcp_1781410132292_a5721f",
+      "order_id": "6658e799-0a81-4663-8dc2-123eb6dd32a3",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T07:37:41.721Z",
+      "view_token": "gcv_177b0331be7239b8eb21ecb105b7ddcdd3d4",
+      "buyer_email": "buyer.test@example.com",
+      "recipient_name": "Amy Test",
+      "recipient_email": "amy.recipient.test@example.com",
+      "certificate_code": "SPA-4B9F99D07D",
+      "stripe_session_id": "cs_live_b1isjPucFDgf2KjggLmBgnumcNPDqXXSqcVgHDvYTFq65oUO65RMQajKIj"
+    },
+    {
+      "id": "rcp_1781410316462_567f1f",
+      "order_id": "613880c2-e29d-4c44-babd-74d92e0fdea8",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T04:11:56.462Z",
+      "buyer_email": "buyer.test@example.com",
+      "recipient_name": "Amy Prod",
+      "recipient_email": "amy.prod.recipient@example.com",
+      "certificate_code": "SPA-D74A37585E",
+      "stripe_session_id": "cs_live_b1JAPP0cStcnTvf5nlj1FjRhqXveRTiyE7k1CvaXC85oFZIPq3s1SH423B"
+    },
+    {
+      "id": "rcp_1781410317609_f3933b",
+      "order_id": "a98d2b9c-3e0a-4aa9-b9d7-b4cde104f614",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T04:11:57.609Z",
+      "buyer_email": "test.buyer@example.com",
+      "recipient_name": "Guest",
+      "recipient_email": "test.buyer@example.com",
+      "certificate_code": "SPA-EC70D39382",
+      "stripe_session_id": "cs_live_b1cb1OFAb6nBcl5gJNZmE5YypRWFnrvlyh9tS6wNVKV8nTWlev3GLUXqW8"
+    },
+    {
+      "id": "rcp_1781410756392_49b5fb",
+      "order_id": "62a65201-5f04-4833-8ed3-a9d723856888",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T04:19:16.392Z",
+      "buyer_email": "support@baamplatform.com",
+      "recipient_name": "John Tang",
+      "recipient_email": "john.tang2025@gmail.com",
+      "certificate_code": "SPA-DF2561AD6B",
+      "stripe_session_id": "cs_live_b1pyp0LNr3jbkxOzXZhGqhV35H9MOFoC668W1tRGeDDD5IM1AdbZUkZksb"
+    },
+    {
+      "id": "rcp_1781412554429_9335e6",
+      "order_id": "e1766696-1929-41b5-8935-c09d6f1fbe1c",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T07:37:42.020Z",
+      "view_token": "gcv_ff3b8af823bcdd6c9345b8133759705194e7",
+      "buyer_email": "buyer@test.com",
+      "recipient_name": "Test Recipient",
+      "recipient_email": "test@example.com",
+      "certificate_code": "SPA-45A0A9AE61",
+      "stripe_session_id": "cs_live_b1WMcHH0IRxkRxaUHuQnhHcXjSiokqo4HxE6DXB8RWmWssIfZPlum1BUxK"
+    },
+    {
+      "id": "rcp_1781412899747_01ac97",
+      "order_id": "2765f8cc-c669-48ef-924f-86db7ae069c6",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T05:17:22.373Z",
+      "view_token": "gcv_b5f0e1f069887d0b978fb02058b0eb672129",
+      "buyer_email": "baamplatform@gmail.com",
+      "recipient_name": "John Tang",
+      "recipient_email": "john.tang2025@gmail.com",
+      "certificate_code": "SPA-08F3F40975",
+      "stripe_session_id": "cs_live_b1MByGXkopQIsAC4e8nfsbx6jt9ko018UuDVkPNLDEscAGORHeTFeD8SyW"
+    },
+    {
+      "id": "rcp_1781415048309_0537a3",
+      "order_id": "d3acf01b-de99-4e78-80c9-5650a0e6b0d5",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T07:37:42.143Z",
+      "view_token": "gcv_d6331dc8d859f5946b16438c7dc9aa7f71e6",
+      "buyer_email": "buyer@example.com",
+      "recipient_name": "Test Recipient",
+      "recipient_email": "test@example.com",
+      "certificate_code": "SPA-466D0D2099",
+      "stripe_session_id": "cs_live_b1Ih9PZSPnYcwztOK4xEjGhGIA8ictuC59LuLHZ1LxK8fhhkZ7njhkt6i5"
+    },
+    {
+      "id": "rcp_1781416036963_c3ed03",
+      "order_id": "1ed15962-97f8-4e5a-bd2e-7f29d0fc21c4",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T05:47:16.963Z",
+      "view_token": "gcv_db48f728937956f8ca225be60191f00304f5",
+      "buyer_email": "baamplatform@gmail.com",
+      "recipient_name": "John Tang",
+      "recipient_email": "john.tang2025@gmail.com",
+      "certificate_code": "SPA-CE68008CF4",
+      "stripe_session_id": "cs_live_b1yyMCA4hy0HoYHMUevJQW46zTKx6HHXJQUNAxqw24URt0BsPyckaWJJKG"
+    },
+    {
+      "id": "rcp_1781422659747_730b0e",
+      "order_id": "890be101-50b7-4d76-b573-f9d1926385f5",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-14T07:37:39.747Z",
+      "view_token": "gcv_129599760183ed08484f883c58ef3755de19",
+      "buyer_email": "buyer@example.com",
+      "recipient_name": "John Doe",
+      "recipient_email": "test@example.com",
+      "certificate_code": "SPA-18D80BA50B",
+      "stripe_session_id": "cs_live_b1F931D4YTTISUO5O9FJYkvghV5p6rj9HOPOe9F9Kk3ij4haeSkwdyfN5i"
+    },
+    {
+      "id": "rcp_1781557628307_e1cbff",
+      "order_id": "c9d4a100-63c0-4bee-b165-2b2f739fe4e9",
+      "buyer_name": "Guest",
+      "updated_at": "2026-06-15T21:07:08.307Z",
+      "view_token": "gcv_d9160e01370616596ba4f50f4b47b6fea17f",
+      "buyer_email": "john.tang2025@gmail.com",
+      "recipient_name": "Joson Xiao",
+      "recipient_email": "jasonjinxiao@gmail.com",
+      "certificate_code": "SPA-8636C058D3",
+      "stripe_session_id": "cs_live_b1nlz3HkPhcH21UpGaoWuxbcXZKtd8SXLWc6GqDlSAio2xe0PtWdmMgRsX"
+    }
+  ]
+}

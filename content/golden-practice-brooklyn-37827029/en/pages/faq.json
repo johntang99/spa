@@ -1,0 +1,53 @@
+{
+  "faq": {
+    "source": {},
+    "heading": "Frequently asked questions",
+    "variant": "search"
+  },
+  "seo": {
+    "h1": "Questions, answered.",
+    "title": "FAQ | Golden Practice Brooklyn, NY",
+    "schema": [
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa paradise faq",
+      "massage middletown ny questions",
+      "spa middletown faq"
+    ],
+    "pageType": "faq",
+    "priority": 0.5,
+    "changefreq": "monthly",
+    "description": "Answers about booking, pricing, treatments, and gift cards at Golden Practice in Brooklyn, NY. Open every day, English & 中文.",
+    "canonicalUrl": "/en/faq",
+    "keywordCluster": "faq"
+  },
+  "hero": {
+    "media": {
+      "image": "",
+      "scrim": 40
+    },
+    "eyebrow": "Help",
+    "subline": "Booking, pricing, treatments, gift cards — search or browse. Still stuck? Call (718) 555-2901.",
+    "variant": "split",
+    "headline": "Questions, answered.",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  },
+  "ctaBanner": {
+    "heading": "Didn't find your answer?",
+    "subline": "We're happy to help — call or send a message.",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/contact",
+      "label": "Contact us"
+    },
+    "ctaSecondary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  }
+}

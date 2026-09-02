@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "h1": "Foot Reflexology in Brooklyn, NY",
+    "title": "Foot Reflexology in Brooklyn, NY | Golden Practice",
+    "schema": [
+      "Service",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "foot reflexology middletown ny",
+      "foot reflexology near me",
+      "spa paradise"
+    ],
+    "pageType": "seo-service",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Pressure-point therapy in our recliner lounge. Foot Reflexology in Brooklyn, NY at Golden Practice — licensed therapists, transparent pricing, online booki…",
+    "canonicalUrl": "/en/foot-reflexology-middletown-ny",
+    "keywordCluster": "service-foot-reflexology"
+  },
+  "slug": "foot-reflexology-middletown-ny",
+  "pageType": "seo-service",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "service",
+        "headline": "Foot Reflexology in Brooklyn, NY",
+        "serviceRef": "foot-reflexology"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "whatItIs"
+      }
+    },
+    {
+      "menuTable": {
+        "variant": "compact",
+        "serviceRef": "foot-reflexology",
+        "showAddOns": false
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "foot-reflexology"
+}

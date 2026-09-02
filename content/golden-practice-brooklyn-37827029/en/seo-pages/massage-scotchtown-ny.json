@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "Massage near Scotchtown, NY",
+    "title": "Massage near Scotchtown, NY | Golden Practice",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage scotchtown ny",
+      "massage near scotchtown"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Licensed massage serving Scotchtown, NY — about 8 min from Brooklyn via Route 211. Transparent pricing, open every day.",
+    "canonicalUrl": "/en/massage-scotchtown-ny",
+    "keywordCluster": "near-scotchtown"
+  },
+  "slug": "massage-scotchtown-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "Massage near Scotchtown, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "Scotchtown is practically next door — about eight minutes south on Route 211, our closest neighborhood of all. It's the easiest trip in the area, whether you're squeezing in a quick reflexology session or settling in for a full ninety-minute massage.",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

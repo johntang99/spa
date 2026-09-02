@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "h1": "派恩布什附近的按摩",
+    "title": "派恩布什附近的按摩 | 天堂水疗",
+    "schema": [
+      "LocalBusiness",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "派恩布什按摩",
+      "派恩布什附近按摩"
+    ],
+    "pageType": "seo-near-location",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "服务派恩布什的持牌按摩——距米德尔敦约20分钟（沿Route 302）。价格透明，每天营业。",
+    "canonicalUrl": "/zh/massage-pine-bush-ny",
+    "keywordCluster": "near-pine-bush"
+  },
+  "slug": "massage-pine-bush-ny",
+  "pageType": "seo-near-location",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "local",
+        "headline": "派恩布什附近的按摩"
+      }
+    },
+    {
+      "richText": {
+        "body": "派恩布什的客人沿302公路约二十分钟即可抵达。为了一家公开每项价格、中英文皆通、且全周无休保持同一菜单的水疗，从镇上专程一趟也十分值得。",
+        "variant": "driveContext"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

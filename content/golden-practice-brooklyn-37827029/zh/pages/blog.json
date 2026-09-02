@@ -1,0 +1,57 @@
+{
+  "cta": {
+    "title": "准备好放松了吗？",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/zh/book",
+      "text": "立即预约"
+    },
+    "description": "浏览我们的菜单并预约护理——纽约米德尔敦，每天营业。",
+    "secondaryCta": {
+      "link": "/zh/services",
+      "text": "查看我们的服务"
+    }
+  },
+  "hero": {
+    "title": "天堂水疗手札",
+    "variant": "split-photo-right",
+    "subtitle": "放松小贴士、护理指南，以及米德尔敦日间水疗的幕后一瞥。",
+    "backgroundImage": ""
+  },
+  "categories": [
+    {
+      "id": "all",
+      "name": "全部文章",
+      "slug": "all"
+    },
+    {
+      "id": "massage",
+      "name": "按摩",
+      "slug": "massage"
+    },
+    {
+      "id": "wellness",
+      "name": "健康与自我护理",
+      "slug": "wellness"
+    },
+    {
+      "id": "skincare",
+      "name": "护肤与面部",
+      "slug": "skincare"
+    },
+    {
+      "id": "guides",
+      "name": "指南",
+      "slug": "guides"
+    },
+    {
+      "id": "seasonal",
+      "name": "季节专题",
+      "slug": "seasonal"
+    }
+  ],
+  "introduction": {
+    "text": "关于放松、恢复与自我护理的小贴士，以及我们护理项目的指南——来自天堂水疗的持牌团队。",
+    "variant": "centered"
+  }
+}

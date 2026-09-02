@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "多久按摩一次比较好？",
+    "title": "多久按摩一次比较好 | 天堂水疗",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "多久按摩一次比较好？",
+      "米德尔敦按摩"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "若为日常保健，许多人每4–6周按摩一次；若针对特定紧绷或训练，频率高一些会有帮助。",
+    "canonicalUrl": "/zh/how-often-should-you-get-a-massage",
+    "keywordCluster": "resource-how-often"
+  },
+  "slug": "how-often-should-you-get-a-massage",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "多久按摩一次比较好？",
+        "directAnswer": "若为日常放松与健康，许多人每四到六周按摩一次。若正在处理特定紧绷或进行高强度训练，一段时间内每一到两周一次会有帮助——之后再回到保养的节奏。"
+      }
+    },
+    {
+      "richText": {
+        "body": "## 日常保健\n每月一次按摩对大多数人来说是舒适的节奏，有助于保持放松、缓解日常紧绷。\n\n## 针对特定紧绷或训练\n在忙碌或活动量大的阶段，每周或每两周一次有助于提前化解紧绷，之后再回到每月一次。\n\n## 找到您的节奏\n没有一刀切的答案。留意两次之间的身体感受——我们的会员让每月规律按摩变得轻松又实惠。",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

@@ -1,0 +1,45 @@
+{
+  "seo": {
+    "h1": "How Much Does a Massage Cost in Brooklyn, NY?",
+    "title": "How Much Does a Massage Cost in Brooklyn, NY?",
+    "schema": [
+      "Article",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "how much does a massage cost middletown ny",
+      "massage middletown ny"
+    ],
+    "pageType": "seo-resource",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "A clear guide to massage prices in Brooklyn, NY — every treatment and length, with no hidden fees.",
+    "canonicalUrl": "/en/how-much-does-a-massage-cost-middletown-ny",
+    "keywordCluster": "resource-cost"
+  },
+  "slug": "how-much-does-a-massage-cost-middletown-ny",
+  "pageType": "seo-resource",
+  "sections": [
+    {
+      "articleHero": {
+        "headline": "How Much Does a Massage Cost in Brooklyn, NY?",
+        "directAnswer": "At Golden Practice, massage in Brooklyn, NY ranges from about {priceMin} to {priceMax} depending on the treatment and length. Every price is published — what you see is what you pay, with no service charge and gratuity always optional."
+      }
+    },
+    {
+      "richText": {
+        "body": "## What you pay\nOur menu lists a price for every treatment and length, from a 30-minute reset to a 90-minute deep session. Nothing is charged when you book; you pay after your treatment.\n\n## What affects the price\nLength is the biggest factor, followed by the type of work — a specialized treatment like hot stone or couples costs more than a standard Swedish. Add-ons such as hot stones or cupping are a small flat fee.\n\n## Tipping and fees\nGratuity is appreciated but never required, and there is no service charge or surprise add-on. The menu price is the treatment price.",
+        "variant": "article"
+      }
+    },
+    {
+      "reviewedBy": {
+        "teamRef": "mei-lin-chen",
+        "dateReviewed": "2026-06-01"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "swedish-massage"
+}

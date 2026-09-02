@@ -1,0 +1,76 @@
+{
+  "faq": {
+    "source": {
+      "scopeTag": "pricing"
+    },
+    "heading": "Pricing questions",
+    "variant": "accordion"
+  },
+  "seo": {
+    "h1": "Every price, published.",
+    "title": "Spa Menu & Massage Prices | Golden Practice Brooklyn",
+    "schema": [
+      "OfferCatalog",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage prices middletown ny",
+      "spa pricing middletown",
+      "how much is a massage middletown"
+    ],
+    "pageType": "pricing",
+    "priority": 0.9,
+    "changefreq": "monthly",
+    "description": "Transparent spa & massage pricing in Brooklyn, NY. Swedish, deep tissue, hot stone, couples, facials & more. Published prices, no surprises.",
+    "canonicalUrl": "/en/pricing",
+    "keywordCluster": "pricing"
+  },
+  "richText": {
+    "body": "No hidden fees, no pressure on the table, no \"ask for pricing.\" Tap any price to book that treatment and length. Published prices, the same for everyone.",
+    "heading": "Every price, published.",
+    "variant": "intro"
+  },
+  "ctaBanner": {
+    "heading": "Found the one? It takes a minute to book.",
+    "variant": "solid-token",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Book Now"
+    }
+  },
+  "menuTable": {
+    "variant": "table",
+    "categories": "all",
+    "showAddOns": true,
+    "bookCtaLabel": "Book"
+  },
+  "addOnsList": {
+    "heading": "Add-ons",
+    "variant": "full"
+  },
+  "promoStrip": {
+    "cta": {
+      "href": "/gift-cards",
+      "label": "Gift cards"
+    },
+    "heading": "Gift a treatment",
+    "subline": "Never expires, sent in a minute.",
+    "variant": "gift"
+  },
+  "richTextPolicies": {
+    "body": "Nothing is charged at booking — pay after your treatment. Cancellation: 4 hours' notice, no charge. Gratuity is at your discretion and never required. We accept card, cash, Apple Pay and Golden Practice gift cards.",
+    "heading": "Good to know",
+    "variant": "policies"
+  },
+  "promoStripPackages": {
+    "cta": {
+      "href": "/packages",
+      "label": "See packages"
+    },
+    "heading": "Save with a package",
+    "subline": "Bundles and 3-packs for regulars.",
+    "variant": "packages"
+  }
+}

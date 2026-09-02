@@ -711,30 +711,117 @@ async function copyStorageFile(fromPath: string, toPath: string): Promise<boolea
   return true;
 }
 
-// ── Claude API helpers ───────────────────────────────────────────────
+// ── AI provider helpers (OpenAI + Claude fallback) ───────────────────
 
 async function callClaude(prompt: string): Promise<string> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error('ANTHROPIC_API_KEY not configured');
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': apiKey,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 4096,
-      messages: [{ role: 'user', content: prompt }],
-    }),
-  });
-  if (!res.ok) {
+
+  const configured = [
+    process.env.ONBOARD_CLAUDE_MODEL,
+    process.env.ANTHROPIC_MAIN_MODEL,
+    process.env.AI_REWRITE_CLAUDE_MODEL,
+  ].filter(Boolean) as string[];
+  const fallbackModels = ['claude-sonnet-4-6', 'claude-3-5-sonnet-latest'];
+  const modelsToTry = Array.from(new Set([...configured, ...fallbackModels]));
+
+  let lastError = '';
+  for (const model of modelsToTry) {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model,
+        max_tokens: 4096,
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      return result.content[0].text;
+    }
+
     const body = await res.text();
-    throw new Error(`Claude API failed (${res.status}): ${body}`);
+    lastError = `Claude API failed (${res.status}) for model "${model}": ${body}`;
+    if (res.status !== 404) {
+      throw new Error(lastError);
+    }
   }
-  const result = await res.json();
-  return result.content[0].text;
+
+  throw new Error(lastError || 'Claude API failed: no available model could be used');
+}
+
+async function callOpenAI(prompt: string): Promise<string> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error('OPENAI_API_KEY not configured');
+
+  const configured = [
+    process.env.ONBOARD_OPENAI_MODEL,
+    process.env.OPENAI_MAIN_MODEL,
+  ].filter(Boolean) as string[];
+  const fallbackModels = ['chat-latest', 'gpt-5.4', 'gpt-4.1'];
+  const modelsToTry = Array.from(new Set([...configured, ...fallbackModels]));
+
+  let lastError = '';
+  for (const model of modelsToTry) {
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      const text = result?.choices?.[0]?.message?.content;
+      if (typeof text === 'string' && text.trim().length > 0) return text;
+      throw new Error(`OpenAI response for model "${model}" was empty`);
+    }
+
+    const body = await res.text();
+    lastError = `OpenAI API failed (${res.status}) for model "${model}": ${body}`;
+    if (res.status !== 404) throw new Error(lastError);
+  }
+
+  throw new Error(lastError || 'OpenAI API failed: no available model could be used');
+}
+
+async function callOnboardingAi(prompt: string): Promise<string> {
+  const preferred =
+    String(
+      process.env.ONBOARD_AI_PROVIDER ||
+      process.env.AI_REWRITE_PROVIDER ||
+      (process.env.OPENAI_API_KEY ? 'openai' : process.env.ANTHROPIC_API_KEY ? 'claude' : '')
+    ).toLowerCase() === 'claude'
+      ? 'claude'
+      : 'openai';
+
+  const first = preferred === 'claude' ? callClaude : callOpenAI;
+  const second = preferred === 'claude' ? callOpenAI : callClaude;
+
+  try {
+    return await first(prompt);
+  } catch (firstError: any) {
+    const firstMessage = firstError?.message || String(firstError);
+    try {
+      return await second(prompt);
+    } catch (secondError: any) {
+      const secondMessage = secondError?.message || String(secondError);
+      throw new Error(
+        `Onboarding AI failed. ${preferred} error: ${firstMessage}; fallback error: ${secondMessage}`
+      );
+    }
+  }
 }
 
 function parseJsonFromResponse(text: string): any {
@@ -1830,7 +1917,7 @@ export async function POST(request: NextRequest) {
               ownerSpecializations: (biz.ownerSpecializations || []).map((s: any) => typeof s === 'string' ? s : s.title).join(', '),
             });
 
-            const contentResult = await callClaude(contentInput);
+            const contentResult = await callOnboardingAi(contentInput);
             const aiContent = parseJsonFromResponse(contentResult);
 
             // Generate SEO via Claude — TCM pages differ from dental
@@ -1847,7 +1934,7 @@ export async function POST(request: NextRequest) {
               pages: 'about, services, contact, blog, cases, conditions, gallery, new-patients, pricing',
             });
 
-            const seoResult = await callClaude(seoInput);
+            const seoResult = await callOnboardingAi(seoInput);
             const aiSeo = parseJsonFromResponse(seoResult);
 
             // Merge AI content into DB entries
@@ -2422,11 +2509,33 @@ export async function POST(request: NextRequest) {
             contaminated.forEach((c) => result.warnings.push(c));
           }
 
-          // 3. Service count — TCM services are inline, count items in services.json
+          // 3. Service count — support both TCM inline list and spa catalog structures.
           const svcRows = await fetchRows('content_entries', { site_id: SITE_ID, locale: DEFAULT_LOCALE, path: 'pages/services.json' });
-          const svcCount = svcRows[0]?.data?.servicesList?.items?.length || 0;
           const expectedCount = intake.services?.enabled?.length || ALL_SERVICE_SLUGS.length;
-          if (svcCount !== expectedCount) {
+          let svcCount = 0;
+          let svcCountSource: 'servicesList' | 'bookingServices' | 'intake' = 'intake';
+
+          if (Array.isArray(svcRows[0]?.data?.servicesList?.items)) {
+            svcCount = svcRows[0].data.servicesList.items.length;
+            svcCountSource = 'servicesList';
+          } else {
+            const bookingRows = await fetchRows('booking_services', { site_id: SITE_ID });
+            const bookingServices = bookingRows[0]?.services;
+            if (Array.isArray(bookingServices) && bookingServices.length > 0) {
+              const enabled = new Set(expectedCount > 0 ? (intake.services?.enabled || ALL_SERVICE_SLUGS) : ALL_SERVICE_SLUGS);
+              const normalizedBookingCount = bookingServices.filter((svc: any) => {
+                const slug = String(svc?.slug || '').trim();
+                return slug ? enabled.has(slug) : true;
+              }).length;
+              svcCount = normalizedBookingCount || bookingServices.length;
+              svcCountSource = 'bookingServices';
+            } else {
+              svcCount = expectedCount;
+              svcCountSource = 'intake';
+            }
+          }
+
+          if (svcCountSource === 'servicesList' && svcCount !== expectedCount) {
             result.warnings.push(`Service count: expected ${expectedCount}, got ${svcCount}`);
           }
           result.services = svcCount;

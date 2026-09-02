@@ -1,0 +1,47 @@
+{
+  "seo": {
+    "h1": "Massage for Back Pain in Brooklyn, NY",
+    "title": "Massage for Back Pain in Brooklyn, NY",
+    "schema": [
+      "Service",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "massage for back pain middletown ny",
+      "back pain massage near me"
+    ],
+    "pageType": "seo-condition",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "description": "Soothing, licensed massage in Brooklyn, NY for back pain. Wellness-focused relief — book online, English & 中文.",
+    "canonicalUrl": "/en/massage-for-back-pain-middletown-ny",
+    "keywordCluster": "condition-back-pain"
+  },
+  "slug": "massage-for-back-pain-middletown-ny",
+  "pageType": "seo-condition",
+  "sections": [
+    {
+      "hero": {
+        "subline": "",
+        "variant": "empathy",
+        "headline": "Massage for Back Pain in Brooklyn, NY"
+      }
+    },
+    {
+      "richText": {
+        "body": "",
+        "variant": "howHelps"
+      }
+    },
+    {
+      "protectedNotice": {
+        "body": "If your symptoms are severe, worsening, or new, please see a doctor first. Massage is a wellness service and not a substitute for medical care.",
+        "locked": true,
+        "variant": "seeDoctor"
+      }
+    }
+  ],
+  "published": true,
+  "serviceRef": "deep-tissue-massage"
+}

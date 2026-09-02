@@ -1,0 +1,144 @@
+{
+  "seo": {
+    "h1": "米德尔敦真正的日间水疗。",
+    "title": "关于我们 | 天堂水疗 米德尔敦",
+    "schema": [
+      "AboutPage",
+      "Person"
+    ],
+    "noindex": false,
+    "keywords": [
+      "天堂水疗 关于",
+      "米德尔敦按摩师",
+      "米德尔敦日间水疗"
+    ],
+    "pageType": "about",
+    "priority": 0.6,
+    "changefreq": "yearly",
+    "description": "认识天堂水疗背后的持牌理疗师——米德尔敦透明、双语的日间水疗。我们的故事、标准与团队。",
+    "canonicalUrl": "/zh/about",
+    "keywordCluster": "about"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167880628-photo-1637730826933-54287f79e1c3.jpg",
+      "scrim": 40
+    },
+    "title": "认识Dr. Mei Lin",
+    "eyebrow": "我们的故事",
+    "subline": "我们创立天堂水疗，是想为街坊带来一家安静、专业、价格透明的水疗——提供中英文服务，每天营业。",
+    "variant": "story",
+    "headline": "米德尔敦真正的日间水疗。"
+  },
+  "iconGrid": {
+    "items": [
+      {
+        "body": "我们推荐对您有帮助的，而不是更贵的。",
+        "title": "用心而非推销",
+        "iconKey": "heart"
+      },
+      {
+        "body": "安静的房间、从容的护理、不催时间。",
+        "title": "宁静本身就是产品",
+        "iconKey": "calm"
+      },
+      {
+        "body": "双语贴心服务，每天营业，无需会员。",
+        "title": "欢迎每一位",
+        "iconKey": "welcome"
+      }
+    ],
+    "heading": "我们的理念",
+    "variant": "values"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "我们的持牌理疗师",
+    "variant": "cards"
+  },
+  "checklist": {
+    "items": [
+      {
+        "label": "每位理疗师均持纽约州执照",
+        "iconKey": "license"
+      },
+      {
+        "label": "每次更换干净布草、消毒房间",
+        "iconKey": "linen"
+      },
+      {
+        "label": "始终使用专业盖布",
+        "iconKey": "drape"
+      },
+      {
+        "label": "公开标价——人人一致",
+        "iconKey": "tag"
+      },
+      {
+        "label": "提供中英文服务",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "我们的标准",
+    "variant": "standards"
+  },
+  "ctaBanner": {
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167881721-photo-1646909106850-8c426285ed2a.jpg",
+    "heading": "欢迎亲自来体验。",
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "立即预约"
+    },
+    "ctaSecondary": {
+      "href": "/contact",
+      "label": "联系我们"
+    }
+  },
+  "statsBand": {
+    "items": [
+      {
+        "label": "平均评分",
+        "value": "4.8",
+        "source": "rating"
+      },
+      {
+        "label": "五星好评",
+        "value": "",
+        "source": "reviewCount",
+        "suffix": "+"
+      },
+      {
+        "label": "持牌理疗师",
+        "value": "",
+        "source": "teamCount"
+      },
+      {
+        "label": "菜单护理项目",
+        "value": "",
+        "source": "servicesCount"
+      }
+    ],
+    "animate": true
+  },
+  "galleryGrid": {
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg"
+    ],
+    "heading": "走进水疗",
+    "variant": "strip",
+    "collections": [
+      "rooms",
+      "details"
+    ]
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 3
+    },
+    "heading": "客人的真实评价",
+    "variant": "spotlight",
+    "showSource": true
+  }
+}

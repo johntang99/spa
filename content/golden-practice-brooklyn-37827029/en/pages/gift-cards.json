@@ -1,0 +1,107 @@
+{
+  "faq": {
+    "source": {
+      "scopeTag": "gift"
+    },
+    "heading": "Gift card questions",
+    "variant": "accordion"
+  },
+  "seo": {
+    "h1": "Give the gift of an afternoon off.",
+    "title": "Spa Gift Cards | Golden Practice Brooklyn, NY",
+    "schema": [
+      "Product",
+      "Offer",
+      "FAQPage"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa gift card middletown ny",
+      "massage gift card middletown",
+      "spa gift certificate"
+    ],
+    "pageType": "gift-cards",
+    "priority": 0.8,
+    "changefreq": "monthly",
+    "description": "Buy spa & massage gift cards in Brooklyn, NY. Never expire, no fees, emailed in a minute. Amounts or specific treatments — corporate gifting available.",
+    "canonicalUrl": "/en/gift-cards",
+    "keywordCluster": "gift-cards"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167875787-photo-1543134968-8752069dbf58.jpg",
+      "scrim": 45
+    },
+    "eyebrow": "Gift cards",
+    "subline": "Golden Practice gift cards never expire, carry no fees, and arrive by email in a minute.",
+    "variant": "seasonal",
+    "headline": "Give the gift of an afternoon off.",
+    "ctaPrimary": {
+      "href": "#denominations",
+      "label": "Choose an amount"
+    },
+    "campaignAware": true
+  },
+  "steps": {
+    "items": [
+      {
+        "body": "Pick $50, $100, $150, or a treatment gift card, then click Buy under the option you want.",
+        "title": "Choose a gift card"
+      },
+      {
+        "body": "In the gift popup, enter the recipient's name and email so we can deliver the certificate directly.",
+        "title": "Enter recipient details"
+      },
+      {
+        "body": "Continue to Stripe Checkout, enter buyer contact info, apply a promo code if needed, and complete the order.",
+        "title": "Checkout securely"
+      },
+      {
+        "body": "The recipient gets a gift card email with certificate code and balance link. They can book online/by phone and show the code at check-in.",
+        "title": "Recipient redeems"
+      }
+    ],
+    "heading": "How to gift and redeem (step by step)",
+    "variant": "horizontal"
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/contact",
+      "label": "Make an inquiry"
+    },
+    "body": "Thank a team or delight clients with Golden Practice gift cards. Tell us what you need and we'll set it up.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167876617-photo-1674620213535-9b2a2553ef40.jpg",
+    "eyebrow": "For business",
+    "heading": "Corporate & bulk gifting",
+    "variant": "corporate",
+    "mediaSide": "left"
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 4,
+      "scopeTag": "gift"
+    },
+    "heading": "Loved by gift-givers",
+    "variant": "carousel",
+    "showSource": true
+  },
+  "productGridTreatments": {
+    "intro": "Give a specific experience.",
+    "heading": "Gift a treatment",
+    "variant": "treatments",
+    "productRefs": [
+      "gift-signature-facial",
+      "gift-couples-massage"
+    ]
+  },
+  "productGridDenominations": {
+    "intro": "They choose the treatment.",
+    "heading": "Gift an amount",
+    "variant": "denominations",
+    "productRefs": [
+      "gc-50",
+      "gc-100",
+      "gc-150"
+    ]
+  }
+}
