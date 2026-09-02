@@ -39,7 +39,7 @@ Production-ready multi-site Traditional Chinese Medicine template with admin CMS
   - follow-up visits
   - treatment planning
   - provider operations support
-- Clone-safe docs and starter seed packs
+
 
 ## Local development
 
