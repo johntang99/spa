@@ -38,7 +38,7 @@ Production-ready multi-site Traditional Chinese Medicine template with admin CMS
   - consultation booking
   - follow-up visits
   - treatment planning
-  - provider operations support
+  - provider operation
 
 
 ## Local development
