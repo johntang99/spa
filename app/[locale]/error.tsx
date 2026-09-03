@@ -22,7 +22,7 @@ export default function RouteError({
       <div style={{ maxWidth: 520, textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'var(--s-font-display)', marginBottom: 12 }}>This page is being finalized</h1>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 24 }}>
-          We're putting the finishing touches on this page. Please check back shortly, or reach us directly.
+          We&apos;re putting the finishing touches on this page. Please check back shortly, or reach us directly.
         </p>
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
           <a className="btn btn-primary" href="/">Back to home</a>

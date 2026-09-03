@@ -412,7 +412,7 @@ export function SiteForm({ site, mode = 'edit', sites = [] }: SiteFormProps) {
           </div>
           <div className="rounded-md border border-green-200 bg-white p-3 text-xs text-gray-600 space-y-1">
             <p className="font-semibold text-gray-700">How routing works:</p>
-            <p>1. This site's domains (above) map to this store slug in <code>lib/store-map.ts</code></p>
+            <p>1. This site&apos;s domains (above) map to this store slug in <code>lib/store-map.ts</code></p>
             <p>2. Shop requests are proxied to pureherbhealth with <code>x-store-slug</code> header</p>
             <p>3. After saving, update <code>lib/store-map.ts</code> if domains changed</p>
           </div>

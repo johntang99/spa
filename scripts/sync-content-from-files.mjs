@@ -109,6 +109,16 @@ async function collectCandidates(siteId) {
     } catch {
       /* no blog */
     }
+
+    const collectionsDir = path.join(localeRoot, 'collections');
+    try {
+      const collectionFiles = await fs.readdir(collectionsDir);
+      for (const file of collectionFiles.filter((f) => f.endsWith('.json'))) {
+        await add(locale, `collections/${file}`, path.join(collectionsDir, file));
+      }
+    } catch {
+      /* no collections */
+    }
   }
 
   const themePath = path.join(CONTENT_DIR, siteId, 'theme.json');
