@@ -8,7 +8,12 @@ import { forwardToLeadHub } from '@/lib/lead-hub-forward';
 import fs from 'fs';
 import path from 'path';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  if (!apiKey) return null;
+  return new Resend(apiKey);
+}
+
 const SITES_CONFIG_PATH = path.join(process.cwd(), 'content', '_sites.json');
 
 interface ContactFormData {
@@ -434,27 +439,37 @@ export async function POST(request: NextRequest) {
     const emailHTML = createEmailHTML({ name, email, phone, reason, message, locale }, context);
     const autoReplyHTML = createAutoReplyHTML(name, context);
 
-    // Send notification email to business inbox
-    const notificationEmail = await resend.emails.send({
-      from: senderFrom,
-      to: notificationRecipients,
-      cc: ccRecipients.length > 0 ? ccRecipients : undefined,
-      reply_to: email,
-      subject: `New Contact: ${reasonLabel} - ${name}`,
-      html: emailHTML,
-    });
+    let notificationEmailId: string | null = null;
+    let autoReplyEmailId: string | null = null;
+    const resend = getResendClient();
+    if (resend) {
+      // Send notification email to business inbox
+      const notificationEmail = await resend.emails.send({
+        from: senderFrom,
+        to: notificationRecipients,
+        cc: ccRecipients.length > 0 ? ccRecipients : undefined,
+        reply_to: email,
+        subject: `New Contact: ${reasonLabel} - ${name}`,
+        html: emailHTML,
+      });
 
-    // Send auto-reply to customer
-    const autoReplyEmail = await resend.emails.send({
-      from: senderFrom,
-      to: email,
-      subject: locale === 'zh' ? `感谢联系${businessName}` : `Thank you for contacting ${businessName}`,
-      html: autoReplyHTML,
-    });
+      // Send auto-reply to customer
+      const autoReplyEmail = await resend.emails.send({
+        from: senderFrom,
+        to: email,
+        subject: locale === 'zh' ? `感谢联系${businessName}` : `Thank you for contacting ${businessName}`,
+        html: autoReplyHTML,
+      });
+
+      notificationEmailId = notificationEmail.data?.id ?? null;
+      autoReplyEmailId = autoReplyEmail.data?.id ?? null;
+    } else {
+      console.warn('RESEND_API_KEY is not set; skipping email delivery for contact form.');
+    }
 
     console.log('Emails sent successfully:', {
-      notification: notificationEmail.data?.id,
-      autoReply: autoReplyEmail.data?.id,
+      notification: notificationEmailId,
+      autoReply: autoReplyEmailId,
       timestamp: new Date().toISOString(),
     });
 
