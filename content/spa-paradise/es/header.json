@@ -1,0 +1,66 @@
+{
+  "cta": {
+    "link": "/es/book",
+    "text": "Reservar ahora"
+  },
+  "menu": {
+    "logo": {
+      "text": "Spa Paradise",
+      "emoji": "",
+      "image": {
+        "alt": "Spa Paradise",
+        "src": ""
+      },
+      "subtext": "Spa de día en Middletown"
+    },
+    "items": [
+      {
+        "url": "/es",
+        "text": "Inicio"
+      },
+      {
+        "url": "/es/services",
+        "text": "Servicios"
+      },
+      {
+        "url": "/es/pricing",
+        "text": "Precios"
+      },
+      {
+        "url": "/es/gift-cards",
+        "text": "Tarjetas de regalo"
+      },
+      {
+        "url": "/es/packages",
+        "text": "Paquetes"
+      },
+      {
+        "url": "/es/gallery",
+        "text": "Galería"
+      },
+      {
+        "url": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "url": "/es/contact",
+        "text": "Contacto"
+      }
+    ],
+    "variant": "mega",
+    "fontWeight": "semibold"
+  },
+  "topbar": {
+    "badge": "Aceptando nuevos clientes",
+    "hours": "Abierto todos los días, de 9:00 a. m. a 9:00 p. m.",
+    "phone": "(845) 800-6600",
+    "address": "12 Grove St, Middletown, NY 10940",
+    "phoneHref": "tel:+18458006600",
+    "addressHref": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940"
+  },
+  "languages": [
+    "en",
+    "zh",
+    "es"
+  ]
+}

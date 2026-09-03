@@ -10,7 +10,8 @@ interface FaqItem { id: string; question: string; answer: string; scopeTags: str
 export default function Faq({ data, ctx }: { data: any; ctx: SectionCtx }) {
   const source = data.source || {};
   const variant = data.variant || 'accordion';
-  const tr = (en: string, zh: string) => (ctx.locale === 'zh' ? zh : en);
+  const tr = (en: string, zh: string, es: string) =>
+    ctx.locale === 'zh' ? zh : ctx.locale === 'es' ? es : en;
 
   const base: FaqItem[] = useMemo(() => {
     let items: FaqItem[] = ctx.faqs || [];
@@ -39,7 +40,7 @@ export default function Faq({ data, ctx }: { data: any; ctx: SectionCtx }) {
         {data.heading && <h2 className="reveal" style={{ marginBottom: 16 }}>{data.heading}</h2>}
         {variant === 'search' && (
           <div className="field reveal">
-            <input type="search" placeholder={tr('Search questions…', '搜索问题…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={tr('Search FAQs', '搜索常见问题')} />
+            <input type="search" placeholder={tr('Search questions…', '搜索问题…', 'Buscar preguntas…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={tr('Search FAQs', '搜索常见问题', 'Buscar preguntas frecuentes')} />
           </div>
         )}
         <div className="reveal">
@@ -48,7 +49,7 @@ export default function Faq({ data, ctx }: { data: any; ctx: SectionCtx }) {
             return (
               <div key={f.id} className={`acc-item${isOpen ? ' open' : ''}`}>
                 <button className="acc-btn" aria-expanded={isOpen} onClick={() => setOpen(isOpen ? null : i)}>
-                  <span>{f.question}</span><span className="ico" aria-hidden>+</span>
+                  <span>{f.question}</span><span className="ico" aria-hidden>{isOpen ? '−' : '+'}</span>
                 </button>
                 <div className="acc-panel" style={{ maxHeight: isOpen ? 400 : 0 }}>
                   <div className="acc-panel-inner">{f.answer}</div>
@@ -56,7 +57,7 @@ export default function Faq({ data, ctx }: { data: any; ctx: SectionCtx }) {
               </div>
             );
           })}
-          {!items.length && <p className="small">{tr('No matching questions — call us at (845) 800-6600.', '没有匹配的问题——请致电 (845) 800-6600。')}</p>}
+          {!items.length && <p className="small">{tr('No matching questions — call us at (845) 800-6600.', '没有匹配的问题——请致电 (845) 800-6600。', 'No hay preguntas coincidentes — llámanos al (845) 800-6600.')}</p>}
         </div>
       </div>
       {data.emitSchema !== false && (

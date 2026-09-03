@@ -846,7 +846,7 @@ export function ContentEditor({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           siteId,
-          locales: site?.supportedLocales || ['en', 'zh'],
+          locales: site?.supportedLocales || ['en', 'zh', 'es'],
           startDate,
           intervalDays,
           onlyDrafts,

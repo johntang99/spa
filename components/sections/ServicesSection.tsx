@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { Card, CardHeader, CardTitle, CardContent, Badge, Tabs, Accordion, Icon } from '@/components/ui';
 import { ServicesVariant, getSectionClasses } from '@/lib/section-variants';
 import { Service } from '@/lib/types';
+import type { Locale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
 function normalizeServiceMarkdown(text: string): string {
@@ -58,7 +59,7 @@ export interface ServicesSectionProps {
   badge?: string;
   title: string;
   subtitle?: string;
-  locale?: 'en' | 'zh';
+  locale?: Locale;
   legacyLabels?: {
     servicePrefix?: string;
     keyBenefitsTitle?: string;

@@ -1,0 +1,45 @@
+{
+  "napHours": {
+    "variant": "full",
+    "heading": "Visita Spa Paradise",
+    "note": "Estacionamiento gratis en el lugar. A pocos minutos del centro de Middletown y de la Ruta 17 / I-84.",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172450381-photo-1758448511255-ac2a24a135d7.jpg"
+  },
+  "mapBlock": {
+    "variant": "directions",
+    "heading": "Encuéntranos",
+    "lazy": true
+  },
+  "contactForm": {
+    "heading": "Envíanos un mensaje",
+    "successMessage": "Gracias. Te responderemos en menos de una hora hábil. Para reservar más rápido, usa el botón \"Reservar ahora\"."
+  },
+  "faq": {
+    "variant": "mini",
+    "heading": "Antes de tu visita",
+    "source": {
+      "scopeTag": "location",
+      "limit": 4
+    }
+  },
+  "seo": {
+    "title": "Contacto y horarios | Spa Paradise Middletown, NY",
+    "description": "Spa Paradise: 12 Grove St, Middletown, NY 10940. Llama al (845) 800-6600. Abierto todos los días de 9am a 9pm. Direcciones, estacionamiento y formulario de contacto.",
+    "h1": "Visita Spa Paradise",
+    "canonicalUrl": "/es/contact",
+    "schema": [
+      "LocalBusiness",
+      "ContactPage"
+    ],
+    "keywords": [
+      "contacto de spa paradise",
+      "horarios de spa en middletown ny",
+      "dirección de spa en middletown ny"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.6,
+    "keywordCluster": "contact",
+    "pageType": "contact"
+  }
+}

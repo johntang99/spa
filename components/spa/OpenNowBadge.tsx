@@ -4,12 +4,13 @@
 // Computes on the client so it stays correct across hour boundaries regardless of ISR caching.
 import { useEffect, useState } from 'react';
 import { computeOpenState, label12, type HoursEntry } from '@/lib/spa/hours';
+import type { Locale } from '@/lib/i18n';
 
 const DAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const DAY_ZH = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
 
 // Localized clock label: EN "9pm" / ZH "晚上9点" (上午/下午/晚上 X点).
-function timeLabel(hhmm: string, locale: 'en' | 'zh'): string {
+function timeLabel(hhmm: string, locale: Locale): string {
   if (locale !== 'zh') return label12(hhmm);
   const [h, m] = hhmm.split(':').map(Number);
   const period = h < 12 ? '上午' : h < 18 ? '下午' : '晚上';
@@ -25,7 +26,7 @@ export default function OpenNowBadge({
 }: {
   hours: HoursEntry[];
   timezone: string;
-  locale: 'en' | 'zh';
+  locale: Locale;
   className?: string;
 }) {
   const [label, setLabel] = useState<string | null>(null);

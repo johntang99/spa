@@ -29,9 +29,10 @@ import ComparisonTable from './ComparisonTable';
 import ArticleHero from './ArticleHero';
 import ReviewedBy from './ReviewedBy';
 import Toc from './Toc';
+import type { Locale } from '@/lib/i18n';
 
 export interface SectionCtx {
-  locale: 'en' | 'zh';
+  locale: Locale;
   siteInfo: Record<string, any>;
   catalog: Catalog;
   testimonials: any[];

@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "id": "hero",
+      "mode": "dark"
+    },
+    {
+      "id": "productGridDenominations",
+      "mode": "light"
+    },
+    {
+      "id": "productGridTreatments",
+      "mode": "well"
+    },
+    {
+      "id": "steps",
+      "mode": "light"
+    },
+    {
+      "id": "featurePanel",
+      "mode": "dark"
+    },
+    {
+      "id": "faq",
+      "mode": "light"
+    },
+    {
+      "id": "testimonials",
+      "mode": "well"
+    }
+  ]
+}

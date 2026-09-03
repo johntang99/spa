@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Spa de día y masajes en Middletown, NY | Spa Paradise",
+    "description": "Masajes terapéuticos con licencia, reflexología podal, faciales y cuidado corporal en Middletown, NY. Precios transparentes, reserva en línea y abierto todos los días."
+  },
+  "pages": {
+    "about": {
+      "title": "Nosotros | Spa Paradise Middletown",
+      "description": "Conoce a nuestros terapeutas con licencia y la historia detrás del spa de día integral de Middletown."
+    },
+    "services": {
+      "title": "Servicios y tratamientos de spa | Spa Paradise Middletown",
+      "description": "Masajes, reflexología podal, faciales, tratamientos corporales y más: un solo menú, un solo destino, precios transparentes."
+    }
+  },
+  "titleTemplate": "%s | Spa Paradise Middletown",
+  "title": "Spa Paradise Middletown",
+  "description": "El destino completo de spa de día en Middletown: masajes con licencia, reflexología, faciales y cuidado corporal en inglés, chino y español."
+}

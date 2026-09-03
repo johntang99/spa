@@ -1,0 +1,53 @@
+{
+  "zip": "10940",
+  "city": "Middletown",
+  "email": "spa.paradise.middletown@gmail.com",
+  "phone": "(845) 800-6600",
+  "state": "NY",
+  "social": {
+    "wechat": "https://wechat.com/",
+    "youtube": "https://youtube.com/",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/"
+  },
+  "address": "12 Grove St, Middletown, NY 10940",
+  "tagline": "El destino completo de spa de día en Middletown",
+  "clinicName": "Spa Paradise",
+  "description": "Masajes terapéuticos con licencia, reflexología podal, faciales y cuidado corporal en un solo lugar: precios transparentes, reserva en línea y abierto todos los días.",
+  "addressMapUrl": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940",
+  "headerVariant": "stacked",
+  "iconCharacter": "S",
+  "timezone": "America/New_York",
+  "hours": [
+    {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00"
+    }
+  ],
+  "languagesSpoken": [
+    "en",
+    "zh",
+    "es"
+  ],
+  "wechatId": "",
+  "externalBookingUrl": "",
+  "responsePromise": "Respondemos en menos de una hora hábil",
+  "licenseLine": "Todos los terapeutas cuentan con licencia del estado de Nueva York (LMT)",
+  "geo": {
+    "lat": 41.4459,
+    "lng": -74.4229
+  },
+  "gbp": {
+    "rating": 4.8,
+    "reviewCount": 212
+  }
+}

@@ -2,7 +2,7 @@
 // TYPE DEFINITIONS FOR MULTI-SITE CONTENT SYSTEM
 // ============================================
 
-export type Locale = 'en' | 'zh';
+export type Locale = 'en' | 'zh' | 'es';
 export type RuntimeEnvironment = 'dev' | 'staging' | 'prod';
 
 export interface SiteDomainAlias {

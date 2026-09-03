@@ -3,7 +3,8 @@ import { getRequestSiteId } from '@/lib/content';
 import { createGiftCardCheckoutSession } from '@/lib/gift-cards/commerce';
 
 function normalizeLocale(input: string | null) {
-  return input === 'zh' ? 'zh' : 'en';
+  if (input === 'zh' || input === 'es') return input;
+  return 'en';
 }
 
 function safeMessage(message: string) {

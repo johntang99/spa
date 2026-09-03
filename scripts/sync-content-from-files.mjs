@@ -16,7 +16,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const CONTENT_DIR = path.join(ROOT, 'content');
-const LOCALES = ['en', 'zh'];
+const LOCALES = ['en', 'zh', 'es'];
 const KNOWN_ROOT_ENTRIES = new Set(['pages', 'blog', 'blog-scheduled', '_history']);
 
 const envPath = path.join(ROOT, '.env.local');

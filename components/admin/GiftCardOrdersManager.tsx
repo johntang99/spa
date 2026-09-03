@@ -80,7 +80,7 @@ export function GiftCardOrdersManager({
   const router = useRouter();
   const [siteId, setSiteId] = useState(selectedSiteId);
   const [locale, setLocale] = useState<Locale>(
-    selectedLocale === 'zh' ? 'zh' : 'en'
+    selectedLocale === 'zh' || selectedLocale === 'es' ? selectedLocale : 'en'
   );
   const [from, setFrom] = useState(() => getDateOffset(-90));
   const [to, setTo] = useState(() => getDateOffset(90));
@@ -138,9 +138,9 @@ export function GiftCardOrdersManager({
 
   useEffect(() => {
     if (!currentSite) return;
-    const supported: Locale[] = currentSite.supportedLocales.includes('zh')
-      ? ['en', 'zh']
-      : ['en'];
+    const supported = (currentSite.supportedLocales?.length
+      ? currentSite.supportedLocales
+      : ['en']) as Locale[];
     if (!supported.includes(locale)) {
       setLocale(supported[0]);
     }
@@ -335,7 +335,11 @@ export function GiftCardOrdersManager({
             className="w-full rounded-xl border border-gray-300 px-3 py-2"
             value={locale}
             onChange={(event) =>
-              setLocale(event.target.value === 'zh' ? 'zh' : 'en')
+              setLocale(
+                event.target.value === 'zh' || event.target.value === 'es'
+                  ? event.target.value
+                  : 'en'
+              )
             }
           >
             {(currentSite?.supportedLocales || ['en']).map((code: Locale) => (

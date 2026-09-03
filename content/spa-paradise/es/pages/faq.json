@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "variant": "split",
+    "eyebrow": "Ayuda",
+    "headline": "Preguntas resueltas.",
+    "subline": "Reserva, precios, tratamientos y tarjetas de regalo. Busca o explora. ¿Aún tienes dudas? Llama al (845) 800-6600.",
+    "ctaPrimary": {
+      "label": "Reservar ahora",
+      "href": "/book"
+    },
+    "media": {
+      "image": "",
+      "scrim": 40
+    }
+  },
+  "faq": {
+    "variant": "search",
+    "heading": "Preguntas frecuentes",
+    "source": {}
+  },
+  "ctaBanner": {
+    "variant": "solid-token",
+    "heading": "¿No encontraste tu respuesta?",
+    "subline": "Con gusto te ayudamos. Llama o envía un mensaje.",
+    "ctaPrimary": {
+      "label": "Contáctanos",
+      "href": "/contact"
+    },
+    "ctaSecondary": {
+      "label": "Reservar ahora",
+      "href": "/book"
+    }
+  },
+  "seo": {
+    "title": "FAQ | Spa Paradise Middletown, NY",
+    "description": "Respuestas sobre reservas, precios, tratamientos y tarjetas de regalo en Spa Paradise, Middletown, NY. Abierto todos los días, atención en inglés, español y chino.",
+    "h1": "Preguntas resueltas.",
+    "canonicalUrl": "/es/faq",
+    "schema": [
+      "FAQPage"
+    ],
+    "keywords": [
+      "preguntas frecuentes spa paradise",
+      "preguntas sobre masajes en middletown ny",
+      "faq de spa en middletown"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.5,
+    "keywordCluster": "faq",
+    "pageType": "faq"
+  }
+}

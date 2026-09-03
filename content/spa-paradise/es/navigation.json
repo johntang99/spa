@@ -1,0 +1,44 @@
+{
+  "cta": {
+    "link": "/es/contact",
+    "text": "Reservar cita"
+  },
+  "main": [
+    {
+      "url": "/es",
+      "text": "Inicio"
+    },
+    {
+      "url": "/es/services",
+      "text": "Servicios"
+    },
+    {
+      "url": "/es/conditions",
+      "text": "Condiciones"
+    },
+    {
+      "url": "/es/about",
+      "text": "Nosotros"
+    },
+    {
+      "url": "/es/case-studies",
+      "text": "Casos"
+    },
+    {
+      "url": "/es/gallery",
+      "text": "Galería"
+    },
+    {
+      "url": "/es/new-patients",
+      "text": "Primera visita"
+    },
+    {
+      "url": "/es/blog",
+      "text": "Blog"
+    },
+    {
+      "url": "/es/contact",
+      "text": "Contacto"
+    }
+  ]
+}

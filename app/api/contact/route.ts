@@ -42,7 +42,8 @@ interface ContactPageEmailConfig {
 }
 
 function toLocale(rawLocale: unknown): Locale {
-  return rawLocale === 'zh' ? 'zh' : 'en';
+  if (rawLocale === 'zh' || rawLocale === 'es') return rawLocale;
+  return 'en';
 }
 
 function uniqueEmails(values: string[]): string[] {
@@ -188,7 +189,8 @@ function createEmailHTML(data: ContactFormData, context: ContactEmailContext): s
   const { name, email, phone, reason, message } = data;
   const { businessName, locale, notificationMessage } = context;
   const reasonLabel = getReasonLabel(reason);
-  const timestamp = new Date().toLocaleString(locale === 'zh' ? 'zh-CN' : 'en-US', { 
+  const localeTag = locale === 'zh' ? 'zh-CN' : locale === 'es' ? 'es-ES' : 'en-US';
+  const timestamp = new Date().toLocaleString(localeTag, { 
     timeZone: 'America/New_York',
     dateStyle: 'full',
     timeStyle: 'short'
@@ -468,7 +470,7 @@ export async function POST(request: NextRequest) {
           name,
           phone,
           email,
-          language_preference: locale === 'zh' ? 'zh' : 'en',
+          language_preference: locale,
         },
         service_requested: reasonLabel,
         message,

@@ -3,7 +3,7 @@
   "description": "Advanced clinic template with consultations, follow-ups, and provider capacity controls.",
   "siteDefaults": {
     "defaultLocale": "en",
-    "supportedLocales": ["en", "zh"],
+    "supportedLocales": ["en", "zh", "es"],
     "primaryCta": "Book Consultation"
   },
   "sectionsCatalog": [

@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "variant": "seasonal",
+    "eyebrow": "Tarjetas de regalo",
+    "headline": "Regala una tarde de descanso.",
+    "subline": "Las tarjetas de regalo de Spa Paradise no vencen, no tienen cargos y llegan por correo en un minuto.",
+    "ctaPrimary": {
+      "label": "Elegir monto",
+      "href": "#denominations"
+    },
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167875787-photo-1543134968-8752069dbf58.jpg",
+      "scrim": 45
+    },
+    "campaignAware": true
+  },
+  "productGridDenominations": {
+    "variant": "denominations",
+    "heading": "Regala un monto",
+    "intro": "Ellos eligen el tratamiento.",
+    "productRefs": [
+      "gc-50",
+      "gc-100",
+      "gc-150",
+      "gc-200",
+      "gc-250",
+      "gc-500"
+    ]
+  },
+  "productGridTreatments": {
+    "variant": "treatments",
+    "heading": "Regala un tratamiento",
+    "intro": "Regala una experiencia específica.",
+    "productRefs": [
+      "gift-signature-facial",
+      "gift-couples-massage"
+    ]
+  },
+  "steps": {
+    "variant": "horizontal",
+    "heading": "Cómo regalar y canjear (paso a paso)",
+    "items": [
+      {
+        "title": "Elige una tarjeta",
+        "body": "Selecciona $50, $100, $150, $200, $250, $500 o una tarjeta de tratamiento, luego haz clic en Comprar debajo de la opción que quieras."
+      },
+      {
+        "title": "Ingresa los datos del destinatario",
+        "body": "En la ventana de regalo, ingresa el nombre y correo del destinatario para enviarle el certificado directamente."
+      },
+      {
+        "title": "Paga de forma segura",
+        "body": "Continúa al pago seguro de Stripe, ingresa los datos del comprador, aplica un código promocional si tienes y completa la compra."
+      },
+      {
+        "title": "El destinatario canjea",
+        "body": "El destinatario recibe un correo con el código del certificado y un enlace de saldo. Puede reservar en línea o por teléfono y mostrar el código al llegar."
+      }
+    ]
+  },
+  "featurePanel": {
+    "variant": "corporate",
+    "eyebrow": "Para empresas",
+    "heading": "Regalos corporativos y por volumen",
+    "body": "Agradece a tu equipo o sorprende a tus clientes con tarjetas de regalo de Spa Paradise. Dinos lo que necesitas y lo organizamos.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167876617-photo-1674620213535-9b2a2553ef40.jpg",
+    "mediaSide": "left",
+    "cta": {
+      "label": "Enviar consulta",
+      "href": "/contact"
+    }
+  },
+  "faq": {
+    "variant": "accordion",
+    "heading": "Preguntas sobre tarjetas de regalo",
+    "source": {
+      "scopeTag": "gift"
+    }
+  },
+  "testimonials": {
+    "variant": "carousel",
+    "heading": "Preferidas por quienes regalan",
+    "filter": {
+      "scopeTag": "gift",
+      "limit": 4
+    },
+    "showSource": true
+  },
+  "seo": {
+    "title": "Tarjetas de regalo de spa | Spa Paradise Middletown, NY",
+    "description": "Compra tarjetas de regalo de spa y masaje en Middletown, NY. No vencen, sin cargos y por correo en un minuto. Montos o tratamientos específicos; disponible para empresas.",
+    "h1": "Regala una tarde de descanso.",
+    "canonicalUrl": "/es/gift-cards",
+    "schema": [
+      "Product",
+      "Offer",
+      "FAQPage"
+    ],
+    "keywords": [
+      "tarjeta de regalo de spa en middletown ny",
+      "tarjeta de regalo de masaje en middletown",
+      "certificado de regalo de spa"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.8,
+    "keywordCluster": "gift-cards",
+    "pageType": "gift-cards"
+  }
+}

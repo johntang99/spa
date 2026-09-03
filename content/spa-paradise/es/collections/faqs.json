@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "id": "do-i-need-appointment",
+      "question": "¿Necesito cita o puedo llegar sin reservar?",
+      "answer": "Aceptamos clientes sin cita cuando hay disponibilidad, pero reservar con anticipación garantiza tu horario y terapeuta. Puedes reservar en línea en menos de un minuto.",
+      "scopeTags": [
+        "general",
+        "booking"
+      ],
+      "order": 1
+    },
+    {
+      "id": "open-hours",
+      "question": "¿Cuáles son sus horarios?",
+      "answer": "Abrimos todos los días, de 9:00am a 9:00pm, incluidos fines de semana y la mayoría de los días festivos.",
+      "scopeTags": [
+        "general",
+        "location"
+      ],
+      "order": 2
+    },
+    {
+      "id": "languages",
+      "question": "¿Hablan chino?",
+      "answer": "Sí. Varios de nuestros terapeutas y del equipo de recepción hablan mandarín y cantonés. Puedes reservar y recibir atención en inglés, español o chino.",
+      "scopeTags": [
+        "general"
+      ],
+      "order": 3
+    },
+    {
+      "id": "first-visit-what-to-expect",
+      "question": "¿Qué puedo esperar en mi primera visita?",
+      "answer": "Llega unos minutos antes, cuéntanos tus objetivos y las zonas que quieres tratar o evitar, y te asignaremos el terapeuta y la presión adecuados. Solo te descubres hasta donde te sientas cómodo y siempre con drapeado profesional.",
+      "scopeTags": [
+        "general",
+        "massage"
+      ],
+      "order": 4
+    },
+    {
+      "id": "how-to-pay",
+      "question": "¿Cómo puedo pagar?",
+      "answer": "Tarjeta, efectivo, Apple Pay y tarjetas de regalo de Spa Paradise. No se cobra nada al reservar; pagas después del tratamiento.",
+      "scopeTags": [
+        "pricing",
+        "booking"
+      ],
+      "order": 5
+    },
+    {
+      "id": "gratuity-included",
+      "question": "¿Los precios incluyen propina?",
+      "answer": "No. La propina se agradece, pero siempre queda a tu criterio. No hay cargo por servicio ni extras sorpresa; el precio del menú es el precio del tratamiento.",
+      "scopeTags": [
+        "pricing"
+      ],
+      "order": 6
+    },
+    {
+      "id": "cancellation-policy",
+      "question": "¿Cuál es la política de cancelación?",
+      "answer": "Sabemos que pueden surgir imprevistos. Avísanos con 4 horas de anticipación y no hay cargo. Ausencias repetidas pueden requerir pago anticipado.",
+      "scopeTags": [
+        "pricing",
+        "booking"
+      ],
+      "order": 7
+    },
+    {
+      "id": "prices-same-for-everyone",
+      "question": "¿Los precios son iguales para todos?",
+      "answer": "Sí. Los precios publicados son los mismos para clientes sin cita, frecuentes y en cualquier idioma. Lo que ves es lo que pagas.",
+      "scopeTags": [
+        "pricing"
+      ],
+      "order": 8
+    },
+    {
+      "id": "memberships",
+      "question": "¿Ofrecen membresías?",
+      "answer": "Sí. Nuestra membresía mensual incluye un masaje de 60 minutos con tarifa de miembro y descuentos en lo demás. Pregunta en recepción o visita la página de paquetes.",
+      "scopeTags": [
+        "pricing",
+        "packages"
+      ],
+      "order": 9
+    },
+    {
+      "id": "deep-vs-swedish",
+      "question": "¿Cuál es la diferencia entre masaje sueco y tejido profundo?",
+      "answer": "El masaje sueco usa movimientos largos y fluidos para relajación general. El de tejido profundo usa presión más lenta y focalizada para tensión persistente y nudos. ¿No sabes cuál elegir? Cuéntale a tu terapeuta tu objetivo y lo ajustará.",
+      "scopeTags": [
+        "massage"
+      ],
+      "order": 10
+    },
+    {
+      "id": "massage-pressure",
+      "question": "¿Qué pasa si la presión es muy suave o muy fuerte?",
+      "answer": "Solo dilo durante la sesión. Tu comodidad guía el trabajo y ajustar la presión es completamente normal.",
+      "scopeTags": [
+        "massage"
+      ],
+      "order": 11
+    },
+    {
+      "id": "couples-room",
+      "question": "¿Tienen sala para parejas?",
+      "answer": "Sí. Nuestra sala privada para parejas permite dos terapeutas lado a lado, y puedes agregar servicio de té con el paquete Retiro en pareja.",
+      "scopeTags": [
+        "couples",
+        "massage"
+      ],
+      "order": 12
+    },
+    {
+      "id": "prenatal-safe",
+      "question": "¿Es seguro el masaje prenatal?",
+      "answer": "Nuestro masaje prenatal lo realiza un terapeuta certificado con posición lateral segura y suele ser adecuado entre los meses 4 y 9. Si tienes embarazo de alto riesgo o dudas, consulta primero con tu médico.",
+      "scopeTags": [
+        "prenatal",
+        "massage"
+      ],
+      "order": 13
+    },
+    {
+      "id": "what-is-cupping",
+      "question": "¿Qué es la ventosaterapia y deja marcas?",
+      "answer": "La ventosaterapia usa succión suave para aliviar tensión muscular y apoyar la circulación. Puede dejar marcas circulares temporales que suelen desvanecerse en pocos días.",
+      "scopeTags": [
+        "cupping",
+        "massage"
+      ],
+      "order": 14
+    },
+    {
+      "id": "what-is-reflexology",
+      "question": "¿Qué es la reflexología podal?",
+      "answer": "La reflexología aplica presión en puntos específicos de los pies para una experiencia de relajación profunda. Se realiza en nuestra sala con sillones reclinables, con ropa puesta de tobillo hacia arriba.",
+      "scopeTags": [
+        "foot",
+        "massage"
+      ],
+      "order": 15
+    },
+    {
+      "id": "facial-skin-types",
+      "question": "¿Qué facial es mejor para mi piel?",
+      "answer": "Nuestro Facial Signature funciona para la mayoría de pieles, el Facial de Limpieza Profunda se enfoca en congestión y grasa, y el Facial Antiedad en firmeza. Nuestra esteticista adapta cualquiera de ellos a tu piel ese día.",
+      "scopeTags": [
+        "facial"
+      ],
+      "order": 16
+    },
+    {
+      "id": "gift-card-how",
+      "question": "¿Cómo funcionan las tarjetas de regalo?",
+      "answer": "Paso 1: elige un monto o una tarjeta de tratamiento. Paso 2: completa el pago seguro en línea (puedes ingresar códigos promocionales durante el pago). Paso 3: enviamos por correo el código del certificado tras la compra. Paso 4: el destinatario reserva cualquier servicio y presenta el código en recepción.",
+      "scopeTags": [
+        "gift"
+      ],
+      "order": 17
+    },
+    {
+      "id": "gift-card-redeem",
+      "question": "¿Cómo se canjea una tarjeta de regalo?",
+      "answer": "Reserva en línea, por teléfono o en persona, y presenta el código del certificado al llegar. En recepción aplicamos el saldo a la visita.",
+      "scopeTags": [
+        "gift"
+      ],
+      "order": 18
+    },
+    {
+      "id": "corporate-gifting",
+      "question": "¿Puedo comprar tarjetas de regalo para mi equipo o clientes?",
+      "answer": "Sí. Ofrecemos regalos corporativos y por volumen. Usa el formulario de consulta en la página de tarjetas de regalo y te ayudamos a organizarlo.",
+      "scopeTags": [
+        "gift"
+      ],
+      "order": 19
+    },
+    {
+      "id": "parking",
+      "question": "¿Hay estacionamiento?",
+      "answer": "Sí. Hay estacionamiento gratis en 12 Grove St, y estamos a pocos minutos en auto del centro de Middletown y de la Ruta 17/I-84.",
+      "scopeTags": [
+        "location"
+      ],
+      "order": 20
+    }
+  ]
+}

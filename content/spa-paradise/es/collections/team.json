@@ -1,0 +1,75 @@
+{
+  "items": [
+    {
+      "id": "mei-lin-chen",
+      "name": "Mei-Lin Chen",
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172433637-photo-1580489944761-15a19d654956.jpg",
+      "credential": "NY LMT · 12 años",
+      "years": 12,
+      "specialties": [
+        "deep-tissue-massage",
+        "tui-na-bodywork",
+        "massage-cupping"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "zh"
+      ],
+      "bio": "Mei-Lin se formó en masaje terapéutico occidental y en Tui Na tradicional, y lidera nuestras terapias de Asia oriental. Sus clientes la buscan para trabajo profundo y focalizado en tensión de larga data.",
+      "order": 1
+    },
+    {
+      "id": "james-park",
+      "name": "James Park",
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172434779-photo-1560250097-0b93528c311a.jpg",
+      "credential": "NY LMT · 8 años",
+      "years": 8,
+      "specialties": [
+        "sports-massage",
+        "deep-tissue-massage"
+      ],
+      "languages": [
+        "en"
+      ],
+      "bio": "Ex entrenador atlético, James se especializa en trabajo deportivo y de recuperación para corredores, levantadores y atletas de fin de semana en Orange County.",
+      "order": 2
+    },
+    {
+      "id": "sofia-reyes",
+      "name": "Sofia Reyes",
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172435832-photo-1573497019940-1c28c88b4f3e.jpg",
+      "credential": "NY LMT · 10 años",
+      "years": 10,
+      "specialties": [
+        "prenatal-massage",
+        "swedish-massage",
+        "hot-stone-massage"
+      ],
+      "languages": [
+        "en",
+        "es"
+      ],
+      "bio": "Certificada en masaje prenatal, Sofia crea una experiencia tranquila y cómoda en posición lateral para clientes embarazadas y es favorita en masaje con piedras calientes y masaje sueco de relajación.",
+      "order": 3
+    },
+    {
+      "id": "grace-wong",
+      "name": "Grace Wong",
+      "photo": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172437248-photo-1593636677199-11450abb6e7b.jpg",
+      "credential": "Esteticista con licencia · 9 años",
+      "years": 9,
+      "specialties": [
+        "signature-facial",
+        "anti-aging-facial",
+        "deep-cleansing-facial"
+      ],
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "bio": "Grace lidera nuestro menú de faciales y cuidado de la piel, adaptando cada tratamiento a la piel real de la persona en lugar de aplicar un protocolo único para todos.",
+      "order": 4
+    }
+  ]
+}

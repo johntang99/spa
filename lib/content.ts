@@ -80,6 +80,12 @@ export async function loadContent<T>(
     if (entry?.data) {
       return entry.data as T;
     }
+    if (locale !== defaultLocale) {
+      const fallbackEntry = await fetchContentEntry(siteId, defaultLocale, contentPath);
+      if (fallbackEntry?.data) {
+        return fallbackEntry.data as T;
+      }
+    }
   }
 
   try {
@@ -87,6 +93,13 @@ export async function loadContent<T>(
     
     // Check if file exists
     if (!fs.existsSync(filePath)) {
+      if (locale !== defaultLocale) {
+        const fallbackPath = path.join(CONTENT_DIR, siteId, defaultLocale, contentPath);
+        if (fs.existsSync(fallbackPath)) {
+          const fallbackData = await fs.promises.readFile(fallbackPath, 'utf-8');
+          return JSON.parse(fallbackData) as T;
+        }
+      }
       console.warn(`Content file not found: ${filePath}`);
       return null;
     }
@@ -176,20 +189,36 @@ export async function loadAllItems<T>(
 ): Promise<T[]> {
   if (canUseContentDb()) {
     const resolvedSiteId = await resolveSiteId(siteId);
-    const entries = await listContentEntriesByPrefix(
+    let entries = await listContentEntriesByPrefix(
       resolvedSiteId,
       locale,
       `${directory}/`
     );
+    if (entries.length === 0 && locale !== defaultLocale) {
+      entries = await listContentEntriesByPrefix(
+        resolvedSiteId,
+        defaultLocale,
+        `${directory}/`
+      );
+    }
     return entries.map((entry) => entry.data as T);
   }
 
   try {
     const resolvedSiteId = await resolveSiteId(siteId);
-    const dirPath = path.join(CONTENT_DIR, resolvedSiteId, locale, directory);
+    let dirPath = path.join(CONTENT_DIR, resolvedSiteId, locale, directory);
     
     if (!fs.existsSync(dirPath)) {
-      return [];
+      if (locale !== defaultLocale) {
+        const fallbackDirPath = path.join(CONTENT_DIR, resolvedSiteId, defaultLocale, directory);
+        if (fs.existsSync(fallbackDirPath)) {
+          dirPath = fallbackDirPath;
+        } else {
+          return [];
+        }
+      } else {
+        return [];
+      }
     }
     
     const files = await fs.promises.readdir(dirPath);

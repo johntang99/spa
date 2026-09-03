@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import type { BookingRecord, BookingService } from '@/lib/types';
+import type { Locale } from '@/lib/i18n';
 import { Button } from '@/components/ui';
 
 interface BookingLookupProps {
-  locale: 'en' | 'zh';
+  locale: Locale;
 }
 
 export function BookingLookup({ locale }: BookingLookupProps) {

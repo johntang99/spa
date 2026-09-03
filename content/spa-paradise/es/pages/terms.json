@@ -1,0 +1,53 @@
+{
+  "title": "Términos de servicio",
+  "intro": "Al usar este sitio web y reservar con Spa Paradise, aceptas los siguientes términos. Esta es una plantilla para revisión; confirma el texto final con tu asesoría legal antes del lanzamiento.",
+  "sections": [
+    {
+      "heading": "Reservas y cancelaciones",
+      "body": "No se requiere pago para reservar; pagas después del tratamiento. Si necesitas cancelar o reprogramar, avísanos con al menos 4 horas de anticipación y no hay cargo. Ausencias repetidas pueden requerir pago anticipado para citas futuras."
+    },
+    {
+      "heading": "Precios y pago",
+      "body": "Todos los precios están publicados en nuestro menú y son iguales para todos. La propina se agradece pero nunca es obligatoria, y no existe cargo por servicio. Aceptamos tarjeta, efectivo, Apple Pay y tarjetas de regalo de Spa Paradise."
+    },
+    {
+      "heading": "Tarjetas de regalo",
+      "body": "Las tarjetas y certificados de regalo de Spa Paradise no vencen y no tienen cargos por inactividad, servicio o mantenimiento, conforme a la ley del estado de Nueva York. Cualquier saldo restante permanece en la tarjeta para uso futuro. Las tarjetas se canjean por servicios y no por efectivo, salvo cuando la ley lo exija.",
+      "bullets": [
+        "Sin fecha de vencimiento",
+        "Sin cargos de ningún tipo",
+        "El saldo restante se conserva"
+      ]
+    },
+    {
+      "heading": "Aviso de salud y bienestar",
+      "body": "Nuestros servicios se ofrecen para relajación y bienestar general. No son atención médica ni sustituyen el consejo profesional de un proveedor de salud calificado. Si tienes una condición médica, estás embarazada o tienes inquietudes de salud, consulta a tu médico antes de reservar y avisa a tu terapeuta para mantener tu comodidad y seguridad."
+    },
+    {
+      "heading": "Conducta y seguridad",
+      "body": "Somos un establecimiento profesional y con licencia. Todos los tratamientos son de naturaleza no sexual. Nos reservamos el derecho de terminar una sesión y rechazar el servicio ante conducta inapropiada."
+    },
+    {
+      "heading": "Cambios y contacto",
+      "body": "Podemos actualizar estos términos ocasionalmente; la versión vigente siempre se publica aquí. ¿Preguntas? Contacta a Spa Paradise en 12 Grove St, Middletown, NY 10940, al (845) 800-6600 o en spa.paradise.middletown@gmail.com."
+    }
+  ],
+  "updatedAt": "2026-06-10",
+  "seo": {
+    "title": "Términos de servicio | Spa Paradise Middletown, NY",
+    "description": "Términos de reserva, cancelación, precios, tarjetas de regalo y bienestar para Spa Paradise en Middletown, NY.",
+    "h1": "Términos de servicio",
+    "canonicalUrl": "/es/terms",
+    "schema": [
+      "WebPage"
+    ],
+    "keywords": [
+      "términos de servicio spa paradise"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.2,
+    "keywordCluster": "terms",
+    "pageType": "terms"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "variant": "split",
+    "eyebrow": "Paquetes y membresías",
+    "headline": "Más spa, mejor valor.",
+    "subline": "Combinaciones seleccionadas y precios de membresía para quienes nos visitan con frecuencia.",
+    "ctaPrimary": {
+      "label": "Ver paquetes",
+      "href": "#packages"
+    },
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167877485-photo-1488345979593-09db0f85545f.jpg",
+      "scrim": 40
+    }
+  },
+  "packageGrid": {
+    "heading": "Nuestros paquetes",
+    "refs": "all"
+  },
+  "featurePanel": {
+    "variant": "membership",
+    "eyebrow": "Membresía",
+    "heading": "Membresía mensual",
+    "body": "Un masaje de 60 minutos cada mes con tarifa de miembro, más descuentos en todo lo demás. Se activa en el spa y puedes cancelar cuando quieras.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167878190-photo-1630595632518-8217c0bceb8f.jpg",
+    "mediaSide": "right",
+    "cta": {
+      "label": "Preguntar por la membresía",
+      "href": "/book?package=monthly-membership"
+    },
+    "packageRef": "monthly-membership"
+  },
+  "comparisonTable": {
+    "heading": "Miembro vs regular",
+    "packageRef": "monthly-membership"
+  },
+  "faq": {
+    "variant": "accordion",
+    "heading": "Preguntas sobre paquetes y membresía",
+    "source": {
+      "scopeTag": "packages"
+    }
+  },
+  "ctaBanner": {
+    "variant": "split-offer",
+    "heading": "Hazlo parte de tu rutina.",
+    "subline": "Comienza con un paquete o pregunta por la membresía en tu próxima visita.",
+    "ctaPrimary": {
+      "label": "Reservar ahora",
+      "href": "/book"
+    }
+  },
+  "seo": {
+    "title": "Paquetes de spa y membresía | Spa Paradise Middletown",
+    "description": "Paquetes de spa, experiencias para parejas, paquetes de 3 masajes y membresía mensual en Middletown, NY. Mejor valor para clientes frecuentes y precios transparentes.",
+    "h1": "Más spa, mejor valor.",
+    "canonicalUrl": "/es/packages",
+    "schema": [
+      "Product",
+      "Offer"
+    ],
+    "keywords": [
+      "paquetes de spa en middletown ny",
+      "membresía de spa en middletown",
+      "paquete de día de spa en middletown"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.7,
+    "keywordCluster": "packages",
+    "pageType": "packages"
+  }
+}

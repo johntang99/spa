@@ -3,7 +3,7 @@
   "description": "Advanced clinic operation with provider scheduling, recurring care plans, and higher slot capacity.",
   "siteTemplate": {
     "defaultLocale": "en",
-    "supportedLocales": ["en", "zh"],
+    "supportedLocales": ["en", "zh", "es"],
     "enabled": true
   },
   "userTemplate": [

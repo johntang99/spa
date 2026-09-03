@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "marathon-recovery",
+      "title": "Recuperación de maratón",
+      "treatmentRef": "sports-massage",
+      "situation": "Entrenar para el medio maratón de Wallkill dejó las pantorrillas tensas y la banda iliotibial molesta.",
+      "outcome": "Una sesión deportiva de 90 minutos antes de la semana de carrera soltó la zancada, y desde entonces mantiene una cita mensual fija.",
+      "photo": "",
+      "order": 1
+    },
+    {
+      "id": "date-night-reset",
+      "title": "Reinicio para cita en pareja",
+      "treatmentRef": "couples-massage",
+      "situation": "Un aniversario con agendas llenas y sin tiempo para planear algo especial.",
+      "outcome": "Un masaje de pareja de 90 minutos, lado a lado y con servicio de té, se volvió el regalo más fácil de repetir.",
+      "photo": "",
+      "order": 2
+    },
+    {
+      "id": "first-trimester-calm",
+      "title": "Calma prenatal",
+      "treatmentRef": "prenatal-massage",
+      "situation": "Presión lumbar y dificultad para relajarse al final de una semana larga.",
+      "outcome": "Trabajo prenatal certificado en posición lateral que por fin se sintió seguro y verdaderamente reparador.",
+      "photo": "",
+      "order": 3
+    },
+    {
+      "id": "desk-bound-no-more",
+      "title": "Sin tensión de escritorio",
+      "treatmentRef": "deep-tissue-massage",
+      "situation": "Años de trabajo frente a la computadora portátil habían bloqueado cuello y hombros.",
+      "outcome": "Trabajo focalizado de tejido profundo más consejos simples entre visitas que realmente funcionaron.",
+      "photo": "",
+      "order": 4
+    },
+    {
+      "id": "bridal-glow",
+      "title": "Brillo de novia",
+      "treatmentRef": "signature-facial",
+      "situation": "Una novia que buscaba piel calmada y limpia la semana previa a la boda.",
+      "outcome": "Un facial signature personalizado, sin sorpresas ni exfoliaciones agresivas, solo brillo.",
+      "photo": "",
+      "order": 5
+    },
+    {
+      "id": "on-her-feet-all-day",
+      "title": "De pie todo el día",
+      "treatmentRef": "foot-reflexology",
+      "situation": "Una enfermera terminando turnos de doce horas con pies doloridos e hinchados.",
+      "outcome": "La reflexología en sillones reclinables se volvió el reinicio semanal que hizo los turnos más llevaderos.",
+      "photo": "",
+      "order": 6
+    }
+  ]
+}

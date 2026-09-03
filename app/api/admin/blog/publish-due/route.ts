@@ -13,6 +13,7 @@ import { normalizeBlogPostForPublish, isBlogPostDue } from '@/lib/blog';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 const SITES_CONFIG_PATH = path.join(CONTENT_DIR, '_sites.json');
+const BLOG_LOCALES = ['en', 'zh', 'es'] as const;
 
 async function listSiteIds(): Promise<string[]> {
   try {
@@ -31,7 +32,7 @@ async function listBlogFilesForSite(
   directory: 'blog' | 'blog-scheduled' = 'blog'
 ): Promise<Array<{ locale: string; path: string; data: any; sourceDirectory: 'blog' | 'blog-scheduled' }>> {
   const results: Array<{ locale: string; path: string; data: any; sourceDirectory: 'blog' | 'blog-scheduled' }> = [];
-  for (const locale of ['en', 'zh']) {
+  for (const locale of BLOG_LOCALES) {
     const blogDir = path.join(CONTENT_DIR, siteId, locale, directory);
     try {
       const files = await fs.readdir(blogDir);

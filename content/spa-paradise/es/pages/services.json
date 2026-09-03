@@ -1,0 +1,61 @@
+{
+  "hero": {
+    "variant": "split",
+    "eyebrow": "El menú",
+    "headline": "Todos los tratamientos, en un solo lugar.",
+    "subline": "Masajes, reflexología podal, terapias de Asia oriental, faciales y cuidado corporal: todo bajo un mismo techo y con precios transparentes.",
+    "ctaPrimary": {
+      "label": "Ver precios",
+      "href": "/pricing"
+    },
+    "ctaSecondary": {
+      "label": "Reservar ahora",
+      "href": "/book"
+    },
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167871696-photo-1696841212541-449ca29397cc.jpg",
+      "scrim": 40
+    }
+  },
+  "categoryGrid": {
+    "variant": "panels",
+    "intro": "Explora según lo que necesites hoy.",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "treatmentSelector": {
+    "variant": "inline",
+    "heading": "¿No sabes por dónde empezar?",
+    "intro": "Responde tres preguntas rápidas y te sugeriremos el tratamiento ideal."
+  },
+  "ctaBanner": {
+    "variant": "solid-token",
+    "heading": "Estamos listos cuando tú lo estés.",
+    "subline": "Reserva en línea en menos de un minuto, sin pago por adelantado.",
+    "ctaPrimary": {
+      "label": "Reservar ahora",
+      "href": "/book"
+    }
+  },
+  "seo": {
+    "title": "Servicios y tratamientos de spa | Spa Paradise Middletown",
+    "description": "Masajes, reflexología podal, terapias de Asia oriental, faciales y tratamientos corporales en Middletown, NY. Un solo menú, precios transparentes y abierto todos los días.",
+    "h1": "Todos los tratamientos, en un solo lugar.",
+    "canonicalUrl": "/es/services",
+    "schema": [
+      "OfferCatalog",
+      "BreadcrumbList"
+    ],
+    "keywords": [
+      "servicios de spa en middletown ny",
+      "servicios de masaje en middletown",
+      "faciales en middletown ny"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.9,
+    "keywordCluster": "services-hub",
+    "pageType": "services"
+  }
+}

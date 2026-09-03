@@ -44,6 +44,8 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function CategoryPage({ params }: PageProps) {
   const { locale, category } = params;
+  const tr = (en: string, zh: string, es: string) =>
+    locale === 'zh' ? zh : locale === 'es' ? es : en;
   const ctx = await loadSpaContext(locale);
   const cat = ctx.catalog.categories.find((c) => c.id === category);
   if (!cat) notFound();
@@ -57,29 +59,29 @@ export default async function CategoryPage({ params }: PageProps) {
   const page: Record<string, any> = {
     hero: {
       variant: 'split',
-      eyebrow: locale === 'zh' ? '护理项目' : 'Services',
+      eyebrow: tr('Services', '护理项目', 'Servicios'),
       headline: cat.name,
       subline: cat.intro,
-      ctaPrimary: { label: locale === 'zh' ? '立即预约' : 'Book Now', href: '/book' },
-      ctaSecondary: { label: locale === 'zh' ? '查看价格' : 'See pricing', href: '/pricing' },
+      ctaPrimary: { label: tr('Book Now', '立即预约', 'Reservar ahora'), href: '/book' },
+      ctaSecondary: { label: tr('See pricing', '查看价格', 'Ver precios'), href: '/pricing' },
       media: { image: cat.image || '', scrim: 45 },
     },
     serviceCards: {
       variant: 'grid',
-      heading: locale === 'zh' ? `${cat.name}护理` : `${cat.name} treatments`,
+      heading: locale === 'zh' ? `${cat.name}护理` : locale === 'es' ? `Tratamientos de ${cat.name}` : `${cat.name} treatments`,
       source: { mode: 'category', category },
       showTierChips: true,
       bookCta: true,
     },
-    faq: { variant: 'accordion', heading: locale === 'zh' ? '常见问题' : 'Common questions', source: { scopeTag: FAQ_SCOPE[category] || 'general' } },
+    faq: { variant: 'accordion', heading: tr('Common questions', '常见问题', 'Preguntas frecuentes'), source: { scopeTag: FAQ_SCOPE[category] || 'general' } },
     conditionLinks: conditionSlugs.length
-      ? { variant: 'conditions', heading: locale === 'zh' ? '相关调理' : 'Related conditions', refs: conditionSlugs }
+      ? { variant: 'conditions', heading: tr('Related conditions', '相关调理', 'Condiciones relacionadas'), refs: conditionSlugs }
       : undefined,
-    testimonials: { variant: 'carousel', heading: locale === 'zh' ? '客人评价' : 'What guests say', filter: { categoryTag: category, limit: 3 }, showSource: true },
+    testimonials: { variant: 'carousel', heading: tr('What guests say', '客人评价', 'Lo que dicen los clientes'), filter: { categoryTag: category, limit: 3 }, showSource: true },
     ctaBanner: {
       variant: 'solid-token',
-      heading: locale === 'zh' ? '预约只需一分钟。' : 'Booking takes a minute.',
-      ctaPrimary: { label: locale === 'zh' ? '立即预约' : 'Book Now', href: '/book' },
+      heading: tr('Booking takes a minute.', '预约只需一分钟。', 'Reservar toma un minuto.'),
+      ctaPrimary: { label: tr('Book Now', '立即预约', 'Reservar ahora'), href: '/book' },
     },
   };
 

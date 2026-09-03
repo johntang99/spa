@@ -1,0 +1,76 @@
+{
+  "richText": {
+    "variant": "intro",
+    "heading": "Todos los precios publicados.",
+    "body": "Sin cargos ocultos, sin presión en cabina y sin \"consulta el precio\". Toca cualquier precio para reservar ese tratamiento y duración. Precios publicados e iguales para todos."
+  },
+  "menuTable": {
+    "variant": "table",
+    "categories": "all",
+    "showAddOns": true,
+    "bookCtaLabel": "Reservar"
+  },
+  "addOnsList": {
+    "variant": "full",
+    "heading": "Extras"
+  },
+  "promoStripPackages": {
+    "variant": "packages",
+    "heading": "Ahorra con un paquete",
+    "subline": "Combos y paquetes de 3 para clientes frecuentes.",
+    "cta": {
+      "label": "Ver paquetes",
+      "href": "/packages"
+    }
+  },
+  "promoStrip": {
+    "variant": "gift",
+    "heading": "Regala un tratamiento",
+    "subline": "No vence y se envía en un minuto.",
+    "cta": {
+      "label": "Tarjetas de regalo",
+      "href": "/gift-cards"
+    }
+  },
+  "richTextPolicies": {
+    "variant": "policies",
+    "heading": "Información útil",
+    "body": "No se cobra nada al reservar; pagas después del tratamiento. Cancelación: avisa con 4 horas y sin cargo. La propina es opcional y nunca obligatoria. Aceptamos tarjeta, efectivo, Apple Pay y tarjetas de regalo de Spa Paradise."
+  },
+  "faq": {
+    "variant": "accordion",
+    "heading": "Preguntas sobre precios",
+    "source": {
+      "scopeTag": "pricing"
+    }
+  },
+  "ctaBanner": {
+    "variant": "solid-token",
+    "heading": "¿Encontraste el ideal? Reserva en un minuto.",
+    "ctaPrimary": {
+      "label": "Reservar ahora",
+      "href": "/book"
+    }
+  },
+  "seo": {
+    "title": "Menú de spa y precios de masaje | Spa Paradise Middletown",
+    "description": "Precios transparentes de spa y masajes en Middletown, NY. Sueco, tejido profundo, piedras calientes, parejas, faciales y más. Precios publicados, sin sorpresas.",
+    "h1": "Todos los precios publicados.",
+    "canonicalUrl": "/es/pricing",
+    "schema": [
+      "OfferCatalog",
+      "Offer",
+      "FAQPage"
+    ],
+    "keywords": [
+      "precios de masaje en middletown ny",
+      "precios de spa en middletown",
+      "cuánto cuesta un masaje en middletown"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.9,
+    "keywordCluster": "pricing",
+    "pageType": "pricing"
+  }
+}

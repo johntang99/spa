@@ -4,6 +4,7 @@ import { getSiteByHost } from '@/lib/sites';
 import { fetchLandingPage } from '@/lib/landingPagesDb';
 import LandingPageRenderer from '@/components/landing-page/LandingPageRenderer';
 import type { LandingPageJsonV2 } from '@/lib/landingPageTypes';
+import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,8 +33,12 @@ export default async function LandingPagePage({
   const site = await getSiteByHost(host);
   if (!site) notFound();
 
-  const language = locale === 'zh' ? 'zh' : 'en';
-  const lp = await fetchLandingPage(site.id, slug, language);
+  const language: Locale = isValidLocale(locale) ? locale : defaultLocale;
+  const lp =
+    (await fetchLandingPage(site.id, slug, language)) ||
+    (language !== defaultLocale
+      ? await fetchLandingPage(site.id, slug, defaultLocale)
+      : null);
   if (!lp) notFound();
 
   return (

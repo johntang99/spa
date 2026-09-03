@@ -3,7 +3,7 @@
   "description": "Local clinic starter for consultations, follow-ups, and treatment visits.",
   "siteDefaults": {
     "defaultLocale": "en",
-    "supportedLocales": ["en", "zh"],
+    "supportedLocales": ["en", "zh", "es"],
     "primaryCta": "Book Consultation"
   },
   "sectionsCatalog": [

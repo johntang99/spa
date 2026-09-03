@@ -29,7 +29,7 @@ function fmtMoney(amount: number, currency: string) {
 }
 
 export default async function GiftCardViewPage({ params, searchParams }: Props) {
-  const locale = params.locale === 'zh' ? 'zh' : 'en';
+  const locale = params.locale;
   const token = String(readParam(searchParams, 'token') || '').trim();
   if (!token) notFound();
 

@@ -21,7 +21,10 @@
     "productRefs": [
       "gc-50",
       "gc-100",
-      "gc-150"
+      "gc-150",
+      "gc-200",
+      "gc-250",
+      "gc-500"
     ]
   },
   "productGridTreatments": {
@@ -39,7 +42,7 @@
     "items": [
       {
         "title": "Choose a gift card",
-        "body": "Pick $50, $100, $150, or a treatment gift card, then click Buy under the option you want."
+        "body": "Pick $50, $100, $150, $200, $250, $500, or a treatment gift card, then click Buy under the option you want."
       },
       {
         "title": "Enter recipient details",

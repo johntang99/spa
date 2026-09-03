@@ -1,0 +1,165 @@
+{
+  "seo": {
+    "h1": "Un verdadero spa de día para Middletown.",
+    "title": "Nosotros | Spa Paradise Middletown, NY",
+    "schema": [
+      "AboutPage",
+      "Person"
+    ],
+    "noindex": false,
+    "keywords": [
+      "sobre spa paradise",
+      "terapeutas de masaje en middletown ny",
+      "spa de día en middletown ny"
+    ],
+    "pageType": "about",
+    "priority": 0.6,
+    "changefreq": "yearly",
+    "description": "Conoce a los terapeutas con licencia detrás de Spa Paradise, el spa bilingüe y de precios transparentes de Middletown. Nuestra historia, estándares y equipo.",
+    "canonicalUrl": "/es/about",
+    "keywordCluster": "about"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167880628-photo-1637730826933-54287f79e1c3.jpg",
+      "scrim": 40
+    },
+    "eyebrow": "Nuestra historia",
+    "subline": "Creamos Spa Paradise para ser el spa tranquilo, profesional y de precios transparentes que nuestra comunidad merece, en inglés, español y chino, abierto todos los días.",
+    "variant": "story",
+    "headline": "Un verdadero spa de día para Middletown."
+  },
+  "iconGrid": {
+    "items": [
+      {
+        "body": "Recomendamos lo que te ayuda, no lo que cuesta más.",
+        "title": "Cuidado antes que venta",
+        "iconKey": "heart"
+      },
+      {
+        "body": "Salas silenciosas, sesiones sin prisa y sin mirar el reloj.",
+        "title": "La calma es el producto",
+        "iconKey": "calm"
+      },
+      {
+        "body": "Atención bilingüe, abierto todos los días y sin membresía obligatoria.",
+        "title": "Todos son bienvenidos",
+        "iconKey": "welcome"
+      }
+    ],
+    "heading": "Lo que creemos",
+    "variant": "values"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "Nuestros terapeutas con licencia",
+    "variant": "cards"
+  },
+  "checklist": {
+    "items": [
+      {
+        "label": "Cada terapeuta cuenta con licencia del estado de Nueva York",
+        "iconKey": "license"
+      },
+      {
+        "label": "Ropa limpia y salas sanitizadas en cada sesión",
+        "iconKey": "linen"
+      },
+      {
+        "label": "Drapeado profesional siempre",
+        "iconKey": "drape"
+      },
+      {
+        "label": "Precios publicados, iguales para todos",
+        "iconKey": "tag"
+      },
+      {
+        "label": "Servicio en inglés, español y chino",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "Nuestros estándares",
+    "variant": "standards"
+  },
+  "ctaBanner": {
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167881721-photo-1646909106850-8c426285ed2a.jpg",
+    "heading": "Ven a verlo por ti mismo.",
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Reservar ahora"
+    },
+    "ctaSecondary": {
+      "href": "/contact",
+      "label": "Contáctanos"
+    }
+  },
+  "statsBand": {
+    "items": [
+      {
+        "label": "Calificación promedio",
+        "value": "4.8",
+        "source": "rating"
+      },
+      {
+        "label": "Reseñas de cinco estrellas",
+        "value": "",
+        "source": "reviewCount",
+        "suffix": "+"
+      },
+      {
+        "label": "Terapeutas con licencia",
+        "value": "",
+        "source": "teamCount"
+      },
+      {
+        "label": "Tratamientos en el menú",
+        "value": "",
+        "source": "servicesCount"
+      }
+    ],
+    "animate": true
+  },
+  "galleryGrid": {
+    "images": [
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg"
+    ],
+    "heading": "Dentro del spa",
+    "variant": "strip",
+    "collections": [
+      "rooms",
+      "details"
+    ],
+    "photos": [
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+        "alt": "",
+        "description": ""
+      },
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+        "alt": "",
+        "description": ""
+      },
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781163607351-photo-1630835425197-50feeba99ecd.jpg",
+        "alt": "",
+        "description": ""
+      },
+      {
+        "src": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165480629-photo-1630595632518-8217c0bceb8f.jpg",
+        "alt": "",
+        "description": ""
+      }
+    ]
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 3
+    },
+    "heading": "En palabras de nuestros clientes",
+    "variant": "spotlight",
+    "showSource": true
+  }
+}

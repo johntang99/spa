@@ -1,0 +1,78 @@
+{
+  "brand": {
+    "name": "Spa Paradise",
+    "logoText": "Spa",
+    "description": "El destino completo de spa de día en Middletown: masajes con licencia, reflexología podal, faciales y cuidado corporal en un solo lugar, en inglés y español."
+  },
+  "hours": [
+    "Abierto todos los días: 9:00 AM - 9:00 PM"
+  ],
+  "contact": {
+    "email": "spa.paradise.middletown@gmail.com",
+    "phone": "(845) 800-6600",
+    "emailLink": "mailto:spa.paradise.middletown@gmail.com",
+    "phoneLink": "tel:+18458006600",
+    "addressLines": [
+      "12 Grove St, Middletown, NY 10940"
+    ]
+  },
+  "services": [
+    {
+      "url": "/es/services/massage",
+      "text": "Masajes"
+    },
+    {
+      "url": "/es/services/foot-reflexology",
+      "text": "Reflexología podal"
+    },
+    {
+      "url": "/es/services/facials",
+      "text": "Faciales"
+    },
+    {
+      "url": "/es/services/body-treatments",
+      "text": "Tratamientos corporales"
+    }
+  ],
+  "copyright": "© {year} Spa Paradise. Todos los derechos reservados.",
+  "legalLinks": [
+    {
+      "url": "/es/privacy",
+      "text": "Política de privacidad"
+    },
+    {
+      "url": "/es/terms",
+      "text": "Términos de servicio"
+    }
+  ],
+  "quickLinks": [
+    {
+      "url": "/es/about",
+      "text": "Nosotros"
+    },
+    {
+      "url": "/es/services",
+      "text": "Servicios"
+    },
+    {
+      "url": "/es/pricing",
+      "text": "Precios"
+    },
+    {
+      "url": "/es/gift-cards",
+      "text": "Tarjetas de regalo"
+    },
+    {
+      "url": "/es/packages",
+      "text": "Paquetes"
+    },
+    {
+      "url": "/es/gallery",
+      "text": "Galería"
+    },
+    {
+      "url": "/es/contact",
+      "text": "Contacto"
+    }
+  ]
+}

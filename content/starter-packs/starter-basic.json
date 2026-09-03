@@ -3,7 +3,7 @@
   "description": "Small neighborhood clinic with consultation, follow-up, and treatment scheduling.",
   "siteTemplate": {
     "defaultLocale": "en",
-    "supportedLocales": ["en", "zh"],
+    "supportedLocales": ["en", "zh", "es"],
     "enabled": true
   },
   "userTemplate": [

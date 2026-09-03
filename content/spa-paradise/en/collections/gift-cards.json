@@ -34,6 +34,39 @@
       "order": 3
     },
     {
+      "id": "gc-200",
+      "type": "denomination",
+      "label": "$200 Gift Card",
+      "amount": 200,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 4
+    },
+    {
+      "id": "gc-250",
+      "type": "denomination",
+      "label": "$250 Gift Card",
+      "amount": 250,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172444709-photo-1693578538512-fc66f318c833.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 5
+    },
+    {
+      "id": "gc-500",
+      "type": "denomination",
+      "label": "$500 Gift Card",
+      "amount": 500,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 6
+    },
+    {
       "id": "gift-signature-facial",
       "type": "treatment",
       "label": "Signature Facial Gift",
@@ -43,7 +76,7 @@
       "stripeLink": "",
       "stripePriceId": "",
       "active": true,
-      "order": 4
+      "order": 7
     },
     {
       "id": "gift-couples-massage",
@@ -55,7 +88,7 @@
       "stripeLink": "",
       "stripePriceId": "",
       "active": true,
-      "order": 5
+      "order": 8
     }
   ]
 }

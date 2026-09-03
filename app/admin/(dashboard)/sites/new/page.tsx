@@ -11,7 +11,7 @@ export default async function AdminSiteCreatePage() {
     domain: '',
     enabled: true,
     defaultLocale: 'en',
-    supportedLocales: ['en', 'zh'],
+    supportedLocales: ['en', 'zh', 'es'],
     createdAt: '',
     updatedAt: '',
   };

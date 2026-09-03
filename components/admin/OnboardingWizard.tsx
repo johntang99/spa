@@ -93,11 +93,12 @@ const PIPELINE_STEPS = [
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const LANGUAGE_OPTIONS = ['English', 'Chinese'];
+const LANGUAGE_OPTIONS = ['English', 'Chinese', 'Spanish'];
 
 const LOCALE_MAP: Record<string, string> = {
   en: 'English',
   zh: 'Chinese (Mandarin)',
+  es: 'Spanish',
 };
 
 const STAT_ICONS = ['calendar', 'users', 'star', 'heart', 'award', 'clock'];
@@ -1204,13 +1205,18 @@ export function OnboardingWizard({ templateSites }: OnboardingWizardProps) {
               checked={supportedLocales.includes('zh')}
               onChange={() => toggleLocale('zh')}
             />
+            <Checkbox
+              label="Spanish"
+              checked={supportedLocales.includes('es')}
+              onChange={() => toggleLocale('es')}
+            />
           </div>
         </div>
         <Select
           label="Default Locale"
           value={defaultLocale}
           onChange={e => setDefaultLocale(e.target.value)}
-          options={supportedLocales.map(l => ({ value: l, label: l.toUpperCase() }))}
+          options={supportedLocales.map(l => ({ value: l, label: LOCALE_MAP[l] || l.toUpperCase() }))}
           fullWidth
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

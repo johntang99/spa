@@ -1,0 +1,60 @@
+{
+  "title": "Política de privacidad",
+  "intro": "Esta política de privacidad explica cómo Spa Paradise recopila, usa y protege tu información cuando visitas nuestro sitio web, reservas una cita o compras una tarjeta de regalo. Esta es una política base para revisión; confirma el texto final con tu asesoría legal antes del lanzamiento.",
+  "sections": [
+    {
+      "heading": "Información que recopilamos",
+      "body": "Recopilamos información que proporcionas directamente cuando reservas, nos contactas o compras una tarjeta de regalo o paquete.",
+      "bullets": [
+        "Nombre, teléfono y correo electrónico",
+        "Detalles de reserva (tratamiento, fecha y hora preferidas, preferencia de terapeuta, notas)",
+        "Detalles de compra de tarjetas de regalo y paquetes",
+        "Datos básicos de uso (páginas visitadas y tipo de dispositivo)"
+      ]
+    },
+    {
+      "heading": "Cómo usamos tu información",
+      "body": "Usamos tu información para responder consultas, confirmar y gestionar tus reservas, completar compras de tarjetas de regalo y paquetes, y mejorar nuestro sitio web.",
+      "bullets": [
+        "Confirmar y coordinar citas",
+        "Enviar confirmaciones de reserva y certificados de regalo",
+        "Responder preguntas y solicitudes",
+        "Mejorar nuestros servicios y la experiencia del sitio"
+      ]
+    },
+    {
+      "heading": "Pagos",
+      "body": "Los pagos en línea de tarjetas de regalo y paquetes se procesan con nuestro proveedor de pagos (Stripe). No almacenamos el número completo de tu tarjeta en nuestros servidores. El manejo de datos de pago por Stripe se rige por su propia política de privacidad."
+    },
+    {
+      "heading": "Compartir información",
+      "body": "Compartimos información solo cuando es necesario para prestar servicios (por ejemplo, proveedor de pagos y proveedor de correo) o para cumplir obligaciones legales. No vendemos tu información personal ni la compartimos para marketing de terceros."
+    },
+    {
+      "heading": "Tus opciones",
+      "body": "Puedes solicitar acceso, corrección o eliminación de tu información de contacto en cualquier momento escribiendo a spa.paradise.middletown@gmail.com o llamando al (845) 800-6600. Responderemos dentro de un plazo razonable."
+    },
+    {
+      "heading": "Contacto",
+      "body": "¿Tienes preguntas sobre esta política? Contacta a Spa Paradise en 12 Grove St, Middletown, NY 10940, al (845) 800-6600 o en spa.paradise.middletown@gmail.com."
+    }
+  ],
+  "updatedAt": "2026-06-10",
+  "seo": {
+    "title": "Política de privacidad | Spa Paradise Middletown, NY",
+    "description": "Cómo Spa Paradise recopila, usa y protege tu información cuando reservas, nos contactas o compras una tarjeta de regalo en Middletown, NY.",
+    "h1": "Política de privacidad",
+    "canonicalUrl": "/es/privacy",
+    "schema": [
+      "WebPage"
+    ],
+    "keywords": [
+      "política de privacidad spa paradise"
+    ],
+    "noindex": false,
+    "changefreq": "yearly",
+    "priority": 0.2,
+    "keywordCluster": "privacy",
+    "pageType": "privacy"
+  }
+}

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function GiftCardsPage({ params, searchParams }: PageProps) {
-  const locale = params.locale === 'zh' ? 'zh' : 'en';
+  const locale = params.locale;
   const siteId = await getRequestSiteId();
   let notice: GiftCardNotice | null = null;
   const checkoutState = readParam(searchParams, 'checkout');

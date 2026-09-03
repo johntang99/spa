@@ -1,0 +1,213 @@
+{
+  "seo": {
+    "h1": "Sal del ruido del día y entra en la calma.",
+    "title": "Spa de día y masajes en Middletown, NY | Spa Paradise",
+    "schema": [
+      "DaySpa",
+      "LocalBusiness"
+    ],
+    "noindex": false,
+    "keywords": [
+      "spa de día middletown ny",
+      "masajes middletown ny",
+      "spa paradise"
+    ],
+    "pageType": "home",
+    "priority": 1,
+    "changefreq": "weekly",
+    "description": "Masajes con licencia, reflexología podal, faciales y cuidado corporal en Middletown, NY. Precios transparentes, reserva en línea y abierto todos los días.",
+    "canonicalUrl": "/es",
+    "keywordCluster": "home"
+  },
+  "hero": {
+    "media": {
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781166950020-photo-1761470575018-135c213340eb.jpg",
+      "scrim": 45,
+      "height": 800,
+      "gallery": [
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293601214-img-9147.jpeg",
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293924672-pexels-photo-4599376.jpeg",
+        "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781165543970-photo-1600334089648-b0d9d3028eb2.jpg"
+      ],
+      "overlayOpacity": 0.1,
+      "contentPosition": "left"
+    },
+    "badges": [
+      {
+        "label": "4.8 · 212 reseñas",
+        "iconKey": "star"
+      },
+      {
+        "label": "Terapeutas con licencia en NY",
+        "iconKey": "shield"
+      },
+      {
+        "label": "Abierto todos los días",
+        "iconKey": "clock"
+      }
+    ],
+    "eyebrow": "Spa de día en Middletown",
+    "subline": "",
+    "variant": "gallery-background",
+    "headline": "Sal del ritmo del día y entra en la calma",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Reservar ahora"
+    },
+    "ctaSecondary": {
+      "href": "/pricing",
+      "label": "Ver el menú"
+    },
+    "campaignAware": true
+  },
+  "steps": {
+    "items": [
+      {
+        "body": "Elige el servicio y la duración: todos los precios están publicados.",
+        "title": "Elige tu tratamiento"
+      },
+      {
+        "body": "Reserva en línea en menos de un minuto. No se requiere pago para reservar.",
+        "title": "Elige un horario"
+      },
+      {
+        "body": "Llega, relájate y paga después de tu tratamiento.",
+        "title": "Relájate"
+      }
+    ],
+    "heading": "Reservar es fácil",
+    "variant": "horizontal"
+  },
+  "iconGrid": {
+    "items": [
+      {
+        "body": "Todos los terapeutas tienen licencia del estado de Nueva York, con drapeado profesional y salas limpias como estándar.",
+        "title": "Atención profesional con licencia",
+        "iconKey": "license"
+      },
+      {
+        "body": "Masajes, reflexología, faciales y cuidado corporal: no necesitas ir a tres lugares distintos.",
+        "title": "Un menú completo, un destino",
+        "iconKey": "menu"
+      },
+      {
+        "body": "Precios publicados e iguales para todos. Sin ventas agresivas ni cargos sorpresa.",
+        "title": "Precios honestos y transparentes",
+        "iconKey": "tag"
+      },
+      {
+        "body": "Reserva y recibe atención en inglés, español o chino, con servicio todos los días.",
+        "title": "Atención multilingüe",
+        "iconKey": "globe"
+      }
+    ],
+    "heading": "Por qué Spa Paradise",
+    "variant": "pillars"
+  },
+  "mapBlock": {
+    "lazy": true,
+    "variant": "embed"
+  },
+  "napHours": {
+    "note": "Estacionamiento gratis en 12 Grove St.",
+    "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781293601214-img-9147.jpeg",
+    "heading": "Visítanos",
+    "variant": "visit"
+  },
+  "teamGrid": {
+    "refs": "all",
+    "heading": "Conoce a tus terapeutas",
+    "variant": "preview"
+  },
+  "trustBar": {
+    "items": [
+      {
+        "type": "rating"
+      },
+      {
+        "type": "licensed",
+        "label": "Terapeutas con licencia en NY"
+      },
+      {
+        "type": "hygiene",
+        "label": "Ropa limpia en cada sesión"
+      },
+      {
+        "type": "bilingual",
+        "label": "Inglés, español y chino"
+      },
+      {
+        "type": "hours",
+        "label": "Abierto todos los días"
+      }
+    ],
+    "variant": "bar"
+  },
+  "ctaBanner": {
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167124234-photo-1454262041357-5d96f50a2f27.jpg",
+    "heading": "Tu camilla te espera.",
+    "subline": "Masajes en Middletown, NY: reserva en menos de un minuto.",
+    "variant": "image-bg",
+    "ctaPrimary": {
+      "href": "/book",
+      "label": "Reservar ahora"
+    },
+    "ctaSecondary": {
+      "href": "tel:8458006600",
+      "label": "Llamar (845) 800-6600"
+    }
+  },
+  "promoStrip": {
+    "cta": {
+      "href": "/gift-cards",
+      "label": "Enviar una tarjeta de regalo"
+    },
+    "heading": "Regala una tarde de descanso",
+    "subline": "Las tarjetas de regalo no vencen y se envían en un minuto.",
+    "variant": "gift",
+    "campaignAware": true
+  },
+  "categoryGrid": {
+    "intro": "Un menú, un destino",
+    "variant": "tiles",
+    "categories": "all",
+    "showCounts": true,
+    "showPriceFrom": true
+  },
+  "featurePanel": {
+    "cta": {
+      "href": "/services/massage",
+      "label": "Ver tratamientos para parejas"
+    },
+    "body": "Masaje lado a lado en una sala privada y tranquila. Agrega servicio de té y convierte la visita en una tarde especial. Ideal para aniversarios, cumpleaños o simplemente porque sí.",
+    "media": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781167023713-photo-1737352777897-e22953991a32.jpg",
+    "bullets": [
+      "Dos terapeutas lado a lado",
+      "Servicio de té disponible",
+      "Fácil de regalar"
+    ],
+    "eyebrow": "Para dos",
+    "heading": "Nuestra sala privada para parejas",
+    "variant": "couples",
+    "mediaSide": "right"
+  },
+  "serviceCards": {
+    "source": {
+      "tag": "popular",
+      "mode": "tag",
+      "limit": 6
+    },
+    "bookCta": true,
+    "heading": "Tratamientos destacados",
+    "variant": "signature",
+    "showTierChips": true
+  },
+  "testimonials": {
+    "filter": {
+      "limit": 6
+    },
+    "heading": "Lo que dicen nuestros clientes",
+    "variant": "wall",
+    "showSource": true
+  }
+}

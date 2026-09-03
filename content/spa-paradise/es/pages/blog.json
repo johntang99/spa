@@ -1,0 +1,57 @@
+{
+  "cta": {
+    "title": "¿Listo para relajarte?",
+    "variant": "centered",
+    "primaryCta": {
+      "link": "/es/book",
+      "text": "Reservar ahora"
+    },
+    "description": "Explora nuestro menú y reserva un tratamiento. Abierto todos los días en Middletown, NY.",
+    "secondaryCta": {
+      "link": "/es/services",
+      "text": "Ver servicios"
+    }
+  },
+  "hero": {
+    "title": "El blog de Spa Paradise",
+    "variant": "split-photo-right",
+    "subtitle": "Consejos de bienestar, guías de tratamientos y un vistazo a nuestro spa de día en Middletown.",
+    "backgroundImage": ""
+  },
+  "categories": [
+    {
+      "id": "all",
+      "name": "Todos los artículos",
+      "slug": "all"
+    },
+    {
+      "id": "massage",
+      "name": "Masajes",
+      "slug": "massage"
+    },
+    {
+      "id": "wellness",
+      "name": "Bienestar y autocuidado",
+      "slug": "wellness"
+    },
+    {
+      "id": "skincare",
+      "name": "Piel y faciales",
+      "slug": "skincare"
+    },
+    {
+      "id": "guides",
+      "name": "Guías",
+      "slug": "guides"
+    },
+    {
+      "id": "seasonal",
+      "name": "Temporada",
+      "slug": "seasonal"
+    }
+  ],
+  "introduction": {
+    "text": "Consejos de relajación, recuperación y autocuidado, además de guías de nuestros tratamientos, del equipo con licencia de Spa Paradise.",
+    "variant": "centered"
+  }
+}

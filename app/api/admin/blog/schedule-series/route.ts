@@ -86,8 +86,10 @@ export async function POST(request: NextRequest) {
   const payload = await request.json().catch(() => ({}));
   const siteId = typeof payload.siteId === 'string' ? payload.siteId : '';
   const locales = Array.isArray(payload.locales)
-    ? payload.locales.filter((item: unknown) => item === 'en' || item === 'zh')
-    : ['en', 'zh'];
+    ? payload.locales.filter(
+        (item: unknown) => item === 'en' || item === 'zh' || item === 'es'
+      )
+    : ['en', 'zh', 'es'];
   const startDate = typeof payload.startDate === 'string' ? payload.startDate : '';
   const intervalDays = Number.isFinite(Number(payload.intervalDays))
     ? Number(payload.intervalDays)

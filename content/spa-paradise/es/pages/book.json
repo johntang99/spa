@@ -1,0 +1,70 @@
+{
+  "bookingForm": {
+    "variant": "full",
+    "successHeading": "Tu cita quedó reservada. Nos vemos pronto.",
+    "successBody": "Enviamos la confirmación. No se realizó ningún cobro; pagarás después del tratamiento. ¿Necesitas cambiarla? Llama al (845) 800-6600."
+  },
+  "trustBar": {
+    "variant": "column",
+    "items": [
+      {
+        "type": "rating"
+      },
+      {
+        "type": "licensed",
+        "label": "Terapeutas con licencia en NY"
+      },
+      {
+        "type": "hygiene",
+        "label": "No se requiere pago para reservar"
+      },
+      {
+        "type": "custom",
+        "label": "Respondemos en menos de una hora hábil",
+        "iconKey": "clock"
+      }
+    ]
+  },
+  "altPaths": {
+    "showCall": true,
+    "showWechat": true,
+    "showExternal": true
+  },
+  "steps": {
+    "variant": "expect",
+    "heading": "Qué esperar",
+    "items": [
+      {
+        "title": "Llega unos minutos antes",
+        "body": "Cuéntanos tus objetivos y las zonas que quieres tratar o evitar."
+      },
+      {
+        "title": "Relájate durante tu tratamiento",
+        "body": "Tu terapeuta ajustará la presión según tu comodidad en todo momento."
+      },
+      {
+        "title": "Paga después, propina opcional",
+        "body": "No se cobra nada al reservar; la propina siempre es tu decisión."
+      }
+    ]
+  },
+  "seo": {
+    "title": "Reserva un masaje o tratamiento de spa | Spa Paradise Middletown",
+    "description": "Reserva masajes, reflexología, faciales y más en Middletown, NY. Reserva en línea en menos de un minuto, sin pago por adelantado. Abierto todos los días.",
+    "h1": "Reserva tu visita",
+    "canonicalUrl": "/es/book",
+    "schema": [
+      "LocalBusiness"
+    ],
+    "keywords": [
+      "reservar masaje en middletown ny",
+      "reserva de spa en middletown",
+      "cita de masaje en middletown"
+    ],
+    "noindex": false,
+    "changefreq": "monthly",
+    "priority": 0.9,
+    "keywordCluster": "book",
+    "pageType": "book"
+  }
+}

@@ -39,7 +39,7 @@ export type GiftCardOrder = {
   status: GiftCardOrderStatus;
   product_ref: string;
   product_kind: string;
-  buyer_locale: 'en' | 'zh';
+  buyer_locale: Locale;
   created_at: string;
   updated_at: string;
   fulfilled_at?: string | null;
@@ -147,8 +147,9 @@ async function resolveGiftCardBaseUrl(siteId: string) {
   return 'https://www.spaparadisenewyork.com';
 }
 
-function normalizeLocale(input?: string): 'en' | 'zh' {
-  return input === 'zh' ? 'zh' : 'en';
+function normalizeLocale(input?: string): Locale {
+  if (input === 'zh' || input === 'es') return input;
+  return 'en';
 }
 
 function normalizeStripeAccountId(input?: string | null) {
@@ -180,7 +181,7 @@ async function resolveConnectedStripeAccountId(siteId: string) {
   return normalizeStripeAccountId(process.env.STRIPE_CONNECTED_ACCOUNT_ID);
 }
 
-async function loadGiftCards(siteId: string, locale: 'en' | 'zh') {
+async function loadGiftCards(siteId: string, locale: Locale) {
   const localCards =
     (await loadContent<{ items?: GiftCardProduct[] }>(
       siteId,
@@ -201,7 +202,7 @@ async function loadGiftCards(siteId: string, locale: 'en' | 'zh') {
 
 async function loadGiftCardProduct(
   siteId: string,
-  locale: 'en' | 'zh',
+  locale: Locale,
   productRef: string
 ) {
   const items = await loadGiftCards(siteId, locale);
@@ -209,12 +210,13 @@ async function loadGiftCardProduct(
 }
 
 async function loadGiftCardAmountMap(siteId: string) {
-  const [enItems, zhItems] = await Promise.all([
+  const [enItems, zhItems, esItems] = await Promise.all([
     loadGiftCards(siteId, 'en'),
     loadGiftCards(siteId, 'zh'),
+    loadGiftCards(siteId, 'es'),
   ]);
   const map = new Map<string, number>();
-  for (const item of [...enItems, ...zhItems]) {
+  for (const item of [...enItems, ...zhItems, ...esItems]) {
     const amount = Number(item.amount || 0);
     if (!map.has(item.id) && Number.isFinite(amount) && amount > 0) {
       map.set(item.id, amount);
@@ -647,7 +649,7 @@ async function upsertGiftCardRecipientProfile(args: {
 
 async function buildGiftCardViewUrl(args: {
   siteId: string;
-  locale: 'en' | 'zh';
+  locale: Locale;
   viewToken?: string;
 }) {
   const token = String(args.viewToken || '').trim();
@@ -814,7 +816,7 @@ async function upsertGiftCardOrder(args: {
   currency: string;
   buyerName: string;
   buyerEmail: string;
-  buyerLocale: 'en' | 'zh';
+  buyerLocale: Locale;
   recipientName?: string;
   recipientEmail?: string;
 }) {
@@ -1292,7 +1294,7 @@ export async function redeemGiftCardOrder(args: {
 export async function resendGiftCardCertificateEmail(args: {
   siteId: string;
   orderId: string;
-  localeHint?: 'en' | 'zh';
+  localeHint?: Locale;
 }) {
   const order = await getGiftCardOrderById({
     siteId: args.siteId,
@@ -1305,7 +1307,7 @@ export async function resendGiftCardCertificateEmail(args: {
   const locale = order.buyer_locale || args.localeHint || 'en';
   const product = await loadGiftCardProduct(
     args.siteId,
-    locale === 'zh' ? 'zh' : 'en',
+    normalizeLocale(locale),
     order.product_ref
   );
   const productLabel = product?.label || order.product_ref;
@@ -1320,12 +1322,12 @@ export async function resendGiftCardCertificateEmail(args: {
   const viewToken = await getGiftCardViewTokenForOrder(args.siteId, order);
   const viewUrl = await buildGiftCardViewUrl({
     siteId: args.siteId,
-    locale: locale === 'zh' ? 'zh' : 'en',
+    locale: normalizeLocale(locale),
     viewToken,
   });
   await sendGiftCardCertificateEmail({
     siteId: args.siteId,
-    locale: locale === 'zh' ? 'zh' : 'en',
+    locale: normalizeLocale(locale),
     buyerName: order.buyer_name || 'Guest',
     buyerEmail: order.buyer_email || '',
     recipientName,
@@ -1439,7 +1441,7 @@ export async function handleGiftCardChargeEvent(args: {
 
 async function sendGiftCardCertificateEmail(args: {
   siteId: string;
-  locale: 'en' | 'zh';
+  locale: Locale;
   buyerName: string;
   buyerEmail: string;
   recipientName: string;
@@ -1678,7 +1680,7 @@ async function sendGiftCardCertificateEmail(args: {
 }
 
 async function sendGiftCardRedemptionEmail(args: {
-  locale: 'en' | 'zh';
+  locale: Locale;
   buyerName: string;
   buyerEmail: string;
   recipientName: string;

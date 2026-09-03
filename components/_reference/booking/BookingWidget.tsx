@@ -2,10 +2,11 @@
 
 import { useEffect, useId, useMemo, useState } from 'react';
 import type { BookingService } from '@/lib/types';
+import type { Locale } from '@/lib/i18n';
 import { Button } from '@/components/ui';
 
 interface BookingWidgetProps {
-  locale: 'en' | 'zh';
+  locale: Locale;
 }
 
 interface BookingForm {

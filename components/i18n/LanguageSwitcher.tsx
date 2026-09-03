@@ -10,7 +10,7 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({
   currentLocale,
-  availableLocales = ['en', 'zh'],
+  availableLocales = ['en', 'zh', 'es'],
 }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const router = useRouter();
@@ -27,6 +27,12 @@ export default function LanguageSwitcher({
     router.push(newPath);
   };
 
+  const localeLabel: Record<Locale, string> = {
+    en: 'EN',
+    zh: '中文',
+    es: 'ES',
+  };
+
   return (
     <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
       {locales.map((locale) => (
@@ -39,7 +45,7 @@ export default function LanguageSwitcher({
               : 'bg-white text-gray-700 hover:bg-gray-100'
           }`}
         >
-          {locale === 'zh' ? '中文' : locale.toUpperCase()}
+          {localeLabel[locale] || locale.toUpperCase()}
         </button>
       ))}
     </div>

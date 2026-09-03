@@ -127,7 +127,7 @@ export default async function LocaleLayout({
     loadContent<HeaderConfig>(site.id, locale as Locale, 'header.json'),
     loadContent<{ categories?: Array<{ id: string; name: string }> }>(site.id, locale as Locale, 'collections/services.json'),
   ]);
-  const spaLocale = (locale === 'zh' ? 'zh' : 'en') as 'en' | 'zh';
+  const spaLocale = locale as Locale;
   const siteAny = (siteInfo ?? {}) as Record<string, any>;
   const headerAny = (headerConfig ?? {}) as Record<string, any>;
   // Mega-menu shows treatment categories (exclude the packages/add-ons meta categories).
@@ -239,6 +239,7 @@ ${primitivesCss}
       <div className="spa-site min-h-screen flex flex-col relative" lang={locale}>
         <SpaHeader
           locale={spaLocale}
+          availableLocales={(site.supportedLocales || ['en']) as Locale[]}
           logoText={headerAny?.menu?.logo?.text || siteAny.clinicName || 'Spa Paradise'}
           navItems={headerAny?.menu?.items || []}
           ctaLabel={headerAny?.cta?.text || (spaLocale === 'zh' ? '立即预约' : 'Book Now')}

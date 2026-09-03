@@ -16,12 +16,14 @@ import {
   Youtube,
   MessageCircle,
 } from 'lucide-react';
+import type { Locale } from '@/lib/i18n';
 
 export interface SpaNavItem { url: string; text: string }
 export interface SpaCategory { id: string; name: string }
 
 export default function SpaHeader({
   locale,
+  availableLocales,
   logoText,
   navItems,
   ctaLabel,
@@ -31,7 +33,8 @@ export default function SpaHeader({
   email,
   social,
 }: {
-  locale: 'en' | 'zh';
+  locale: Locale;
+  availableLocales?: Locale[];
   logoText: string;
   navItems: SpaNavItem[];
   ctaLabel: string;
@@ -56,24 +59,43 @@ export default function SpaHeader({
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const pathname = usePathname() || `/${locale}`;
+  const pathWithoutLocale = pathname.replace(/^\/(en|zh|es)(?=\/|$)/, '') || '/';
 
-  // Language switcher: swap the leading locale segment, preserve the rest of the route.
-  const other = locale === 'en' ? 'zh' : 'en';
-  const segments = pathname.split('/');
-  segments[1] = other;
-  const otherHref = segments.join('/') || `/${other}`;
-  const otherLabel = other === 'zh' ? '中文' : 'EN';
+  // Language switcher: keep current route and swap locale.
+  const activeLocales = Array.isArray(availableLocales) && availableLocales.length
+    ? availableLocales
+    : ['en', 'zh', 'es'];
+  const orderedLocales = (['en', 'es', 'zh'] as Locale[]).filter((loc) =>
+    activeLocales.includes(loc)
+  );
+  const localeSwitchLabel: Record<Locale, string> = {
+    en: 'EN',
+    zh: '中文',
+    es: 'ES',
+  };
+  const switchTitle: Record<Locale, string> = {
+    en: 'Switch to English',
+    zh: '切换到中文',
+    es: 'Cambiar a español',
+  };
+  const localeLinks = orderedLocales.map((targetLocale) => ({
+    locale: targetLocale,
+    href:
+      pathWithoutLocale === '/'
+        ? `/${targetLocale}`
+        : `/${targetLocale}${pathWithoutLocale}`,
+  }));
   const topbarPhone = topbar?.phone || '';
   const topbarPhoneHref = topbar?.phoneHref || (topbarPhone ? `tel:${topbarPhone}` : '');
   const topbarAddress = topbar?.address || '';
   const topbarAddressHref = topbar?.addressHref || '';
   const topbarHours = topbar?.hours || '';
-  const topbarBadge = topbar?.badge || '';
+  const hasLocaleSwitcher = localeLinks.length > 1;
   const hasTopbarContent = Boolean(
     topbarPhone ||
       topbarAddress ||
       topbarHours ||
-      topbarBadge ||
+    hasLocaleSwitcher ||
       email ||
       social?.facebook ||
       social?.instagram ||
@@ -133,7 +155,21 @@ export default function SpaHeader({
                   <MessageCircle className="topbar-social-icon" aria-hidden />
                 </a>
               )}
-              {topbarBadge && <span className="topbar-badge">{topbarBadge}</span>}
+              {hasLocaleSwitcher ? (
+                <div className="topbar-locales" aria-label="Language switcher">
+                  {localeLinks.map((entry) => (
+                    <Link
+                      key={entry.locale}
+                      href={entry.href}
+                      title={switchTitle[entry.locale]}
+                      className={`topbar-locale-link${entry.locale === locale ? ' is-active' : ''}`}
+                      aria-current={entry.locale === locale ? 'true' : undefined}
+                    >
+                      {localeSwitchLabel[entry.locale]}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
@@ -196,9 +232,6 @@ export default function SpaHeader({
         </nav>
 
         <div className="header-actions">
-          <Link className="lang-switch" href={otherHref} title={other === 'zh' ? '切换到中文' : 'Switch to English'}>
-            {otherLabel}
-          </Link>
           <Link className="btn btn-primary btn-sm" href={ctaHref}>{ctaLabel}</Link>
           <button
             className="nav-toggle"

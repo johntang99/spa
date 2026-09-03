@@ -72,7 +72,7 @@ export async function fetchThemeEntry(
     .select('*')
     .eq('site_id', siteId)
     .eq('path', 'theme.json')
-    .in('locale', ['en', 'zh'])
+    .in('locale', ['en', 'zh', 'es'])
     .order('updated_at', { ascending: false })
     .limit(1)
     .maybeSingle();

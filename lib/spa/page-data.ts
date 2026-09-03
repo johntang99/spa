@@ -28,7 +28,7 @@ export async function loadSpaContext(locale: Locale): Promise<SectionCtx> {
     loadSiteInfo(siteId, locale),
   ]);
   return {
-    locale: (locale === 'zh' ? 'zh' : 'en') as 'en' | 'zh',
+    locale,
     siteInfo: (siteInfo as Record<string, any>) || {},
     catalog: catalog || { categories: [], services: [], addons: [] },
     testimonials: testimonials?.items || [],

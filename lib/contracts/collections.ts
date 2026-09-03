@@ -150,12 +150,12 @@ export const leadSchema = z.object({
   name: z.string().min(1),
   phone: z.string().min(1),
   email: z.string().email().optional().or(z.literal('')),
-  languagePref: z.enum(['en', 'zh']).optional(),
+  languagePref: z.enum(['en', 'zh', 'es']).optional(),
   therapistPref: ref.optional(),
   notes: z.string().optional(),
   message: z.string().optional(), // question type
   sourcePage: z.string().optional(),
-  locale: z.enum(['en', 'zh']),
+  locale: z.enum(['en', 'zh', 'es']),
   utm: z.record(z.string(), z.string()).optional(),
   status: z.enum(['new', 'contacted', 'booked']).default('new'),
 }).refine((l) => l.type !== 'booking' || (l.service && l.preferredDate && l.timeWindow), {
@@ -169,7 +169,7 @@ export const orderSchema = z.object({
   amount: z.number().nonnegative(),
   buyerName: z.string().min(1),
   buyerEmail: z.string().email(),
-  buyerLocale: z.enum(['en', 'zh']),
+  buyerLocale: z.enum(['en', 'zh', 'es']),
   certificateCode: z.string().min(1), // unique
   status: z.enum(['paid', 'fulfilled', 'redeemed', 'frozen', 'refunded']).default('paid'),
 });

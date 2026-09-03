@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": "gc-50",
+      "type": "denomination",
+      "label": "Tarjeta de regalo de $50",
+      "amount": 50,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172708197-photo-1669342357971-30fce98569c7.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 1
+    },
+    {
+      "id": "gc-100",
+      "type": "denomination",
+      "label": "Tarjeta de regalo de $100",
+      "amount": 100,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172439294-photo-1767976592687-71b152f279de.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 2
+    },
+    {
+      "id": "gc-150",
+      "type": "denomination",
+      "label": "Tarjeta de regalo de $150",
+      "amount": 150,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172440728-photo-1608755728617-aefab37d2edd.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 3
+    },
+    {
+      "id": "gc-200",
+      "type": "denomination",
+      "label": "Tarjeta de regalo de $200",
+      "amount": 200,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172443702-photo-1758632031161-b6d7e913c2b9.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 4
+    },
+    {
+      "id": "gc-250",
+      "type": "denomination",
+      "label": "Tarjeta de regalo de $250",
+      "amount": 250,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172444709-photo-1693578538512-fc66f318c833.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 5
+    },
+    {
+      "id": "gc-500",
+      "type": "denomination",
+      "label": "Tarjeta de regalo de $500",
+      "amount": 500,
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172445822-photo-1706795033917-dee116e7cba2.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 6
+    },
+    {
+      "id": "gift-signature-facial",
+      "type": "treatment",
+      "label": "Regalo de facial signature",
+      "amount": 75,
+      "serviceRef": "signature-facial",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172441740-photo-1555820585-c5ae44394b79.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 7
+    },
+    {
+      "id": "gift-couples-massage",
+      "type": "treatment",
+      "label": "Regalo de masaje en pareja (60 min)",
+      "amount": 170,
+      "serviceRef": "couples-massage",
+      "image": "https://pwiyhvnhdyukbjohcgpc.supabase.co/storage/v1/object/public/media/spa-paradise/general/1781172442654-photo-1741522509438-a120c0bb5e88.jpg",
+      "stripeLink": "",
+      "stripePriceId": "",
+      "active": true,
+      "order": 8
+    }
+  ]
+}
