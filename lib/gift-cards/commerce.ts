@@ -157,6 +157,16 @@ function normalizeStripeAccountId(input?: string | null) {
   return /^acct_[A-Za-z0-9]+$/.test(value) ? value : '';
 }
 
+function isStripeConnectPlatformError(error: unknown) {
+  const message =
+    error && typeof error === 'object' && 'message' in error
+      ? String((error as { message?: unknown }).message || '')
+      : '';
+  return message.includes(
+    'Only Stripe Connect platforms can work with other accounts'
+  );
+}
+
 function siteIdEnvSuffix(siteId: string) {
   return String(siteId || '')
     .trim()
@@ -1857,49 +1867,68 @@ export async function createGiftCardCheckoutSession(args: {
     ? { stripeAccount: connectedAccountId }
     : undefined;
 
-  const session = await stripe.checkout.sessions.create(
-    {
-      mode: 'payment',
-      success_url: successUrl,
-      cancel_url: cancelUrl,
-      customer_creation: 'always',
-      allow_promotion_codes: true,
-      line_items: stripePriceId
-        ? [
-            {
-              quantity: 1,
-              price: stripePriceId,
-            },
-          ]
-        : [
-            {
-              quantity: 1,
-              price_data: {
-                currency: 'usd',
-                unit_amount: amountCents,
-                product_data: {
-                  name: product.label,
-                  description:
-                    product.type === 'treatment'
-                      ? 'Spa Paradise treatment gift card'
-                      : 'Spa Paradise denomination gift card',
-                },
+  const sessionPayload: Stripe.Checkout.SessionCreateParams = {
+    mode: 'payment',
+    success_url: successUrl,
+    cancel_url: cancelUrl,
+    customer_creation: 'always',
+    allow_promotion_codes: true,
+    line_items: stripePriceId
+      ? [
+          {
+            quantity: 1,
+            price: stripePriceId,
+          },
+        ]
+      : [
+          {
+            quantity: 1,
+            price_data: {
+              currency: 'usd',
+              unit_amount: amountCents,
+              product_data: {
+                name: product.label,
+                description:
+                  product.type === 'treatment'
+                    ? 'Spa Paradise treatment gift card'
+                    : 'Spa Paradise denomination gift card',
               },
             },
-          ],
-      metadata: {
-        siteId: args.siteId,
-        locale,
-        productRef: product.id,
-        productType: product.type,
-        productLabel: product.label,
-        recipientName,
-        recipientEmail,
-        stripeAccountId: connectedAccountId,
-      },
+          },
+        ],
+    metadata: {
+      siteId: args.siteId,
+      locale,
+      productRef: product.id,
+      productType: product.type,
+      productLabel: product.label,
+      recipientName,
+      recipientEmail,
+      stripeAccountId: connectedAccountId,
     },
-    requestOptions
-  );
+  };
+
+  let session: Stripe.Checkout.Session;
+  try {
+    session = await stripe.checkout.sessions.create(sessionPayload, requestOptions);
+  } catch (error) {
+    if (!requestOptions || !isStripeConnectPlatformError(error)) {
+      throw error;
+    }
+    console.warn(
+      `Stripe Connect account ${connectedAccountId} rejected checkout; retrying on platform account.`
+    );
+    session = await stripe.checkout.sessions.create(
+      {
+        ...sessionPayload,
+        metadata: {
+          ...sessionPayload.metadata,
+          stripeAccountId: '',
+        },
+      },
+      undefined
+    );
+  }
 
   if (!session.url) {
     throw new Error('Could not create checkout session.');
