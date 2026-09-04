@@ -5,6 +5,7 @@ import {
   finalizeGiftCardSession,
   handleGiftCardChargeEvent,
 } from '@/lib/gift-cards/commerce';
+import { finalizeBookingCheckoutSession as finalizeBookingPaymentSession } from '@/lib/booking/checkout';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -57,13 +58,35 @@ export async function POST(request: NextRequest) {
     ) {
       const session = event.data.object as Stripe.Checkout.Session;
       const localeHint = String(session.metadata?.locale || 'en');
-      await finalizeGiftCardSession({
-        sessionId: session.id,
-        localeHint,
-        siteIdHint: String(session.metadata?.siteId || fallbackSiteId),
-        stripeAccountId,
-        session,
-      });
+      const checkoutKind = String(session.metadata?.checkoutKind || '');
+      if (checkoutKind === 'booking') {
+        const finalized = await finalizeBookingPaymentSession({
+          sessionId: session.id,
+          localeHint,
+          siteIdHint: String(session.metadata?.siteId || fallbackSiteId),
+          stripeAccountId,
+          session,
+        });
+        if (!finalized.ok) {
+          console.error(
+            'Booking checkout finalization failed:',
+            finalized.message,
+            session.id
+          );
+          return NextResponse.json(
+            { message: finalized.message || 'Booking payment finalization failed.' },
+            { status: 400 }
+          );
+        }
+      } else {
+        await finalizeGiftCardSession({
+          sessionId: session.id,
+          localeHint,
+          siteIdHint: String(session.metadata?.siteId || fallbackSiteId),
+          stripeAccountId,
+          session,
+        });
+      }
     } else if (event.type === 'charge.refunded') {
       const charge = event.data.object as Stripe.Charge;
       const paymentIntentId =
