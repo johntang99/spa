@@ -5,7 +5,7 @@ import type { Catalog, Service, Tier } from '@/lib/spa/catalog';
 import { loadContent } from '@/lib/content';
 import { getSiteById } from '@/lib/sites';
 import { getSupabaseServerClient } from '@/lib/supabase/server';
-import { loadBookingSettings } from '@/lib/booking/storage';
+import { addBooking, loadBookingSettings } from '@/lib/booking/storage';
 import { sendBookingEmails } from '@/lib/booking/email';
 import { sendBookingSms } from '@/lib/booking/sms';
 import { forwardToLeadHub } from '@/lib/lead-hub-forward';
@@ -21,6 +21,11 @@ const stripe = stripeSecretKey
   : null;
 
 const TIME_WINDOWS: BookingTimeWindow[] = ['morning', 'afternoon', 'evening'];
+const BOOKING_TIME_BY_WINDOW: Record<BookingTimeWindow, string> = {
+  morning: '10:00',
+  afternoon: '14:00',
+  evening: '18:00',
+};
 
 export type BookingCheckoutPayload = {
   locale?: string;
@@ -129,6 +134,10 @@ function toIsoDate(value: string) {
   const trimmed = value.trim();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) return '';
   return trimmed;
+}
+
+function timeOfDayFromWindow(window: BookingTimeWindow) {
+  return BOOKING_TIME_BY_WINDOW[window] || '14:00';
 }
 
 function todayIsoDate() {
@@ -520,23 +529,64 @@ export async function finalizeBookingCheckoutSession({
     return { ok: false, created: false, message: 'Database is not configured.' };
   }
 
+  const amountPaid = Number((stripeSession.amount_total || 0) / 100);
+  const now = new Date().toISOString();
+  const paymentNote = `Stripe payment confirmed (${stripeSession.id}, ${amountPaid.toFixed(
+    2
+  )} ${String(stripeSession.currency || 'usd').toUpperCase()})`;
+  const combinedNotes = [notes, paymentNote].filter(Boolean).join('\n');
+  const bookingRecord: BookingRecord = {
+    id: `paid_${stripeSession.id}`,
+    siteId,
+    serviceId,
+    date: preferredDate,
+    time: timeOfDayFromWindow(timeWindow),
+    durationMinutes: durationTier,
+    name,
+    phone,
+    email,
+    note: combinedNotes || undefined,
+    serviceType: 'appointment',
+    details: {
+      source: 'booking_paid_checkout',
+      sourcePage,
+      timeWindow,
+      stripe_session_id: stripeSession.id,
+      amount_paid: amountPaid,
+      currency: String(stripeSession.currency || 'usd').toLowerCase(),
+      promo_code: sanitizeText(metadata.promoCode, 80) || null,
+    },
+    status: 'confirmed',
+    createdAt: now,
+    updatedAt: now,
+  };
+
   const { data: existingOrder, error: existingError } = await supabase
     .from('orders')
     .select('id')
     .eq('stripe_session_id', stripeSession.id)
     .maybeSingle();
   if (!existingError && existingOrder?.id) {
+    try {
+      await addBooking(siteId, bookingRecord);
+    } catch (error) {
+      return {
+        ok: false,
+        created: false,
+        message: `Booking sync failed: ${
+          error instanceof Error ? error.message : 'unknown error'
+        }`,
+      };
+    }
     return {
       ok: true,
       created: false,
       message: 'Booking payment already processed.',
       serviceName,
-      amountPaid: Number((stripeSession.amount_total || 0) / 100),
+      amountPaid,
     };
   }
 
-  const amountPaid = Number((stripeSession.amount_total || 0) / 100);
-  const now = new Date().toISOString();
   const { error: orderInsertError } = await supabase.from('orders').insert({
     site_id: siteId,
     stripe_session_id: stripeSession.id,
@@ -564,10 +614,6 @@ export async function finalizeBookingCheckoutSession({
     }
   }
 
-  const paymentNote = `Stripe payment confirmed (${stripeSession.id}, ${amountPaid.toFixed(
-    2
-  )} ${String(stripeSession.currency || 'usd').toUpperCase()})`;
-  const combinedNotes = [notes, paymentNote].filter(Boolean).join('\n');
   const { data: insertedLead, error: leadError } = await supabase
     .from('leads')
     .insert({
@@ -607,22 +653,19 @@ export async function finalizeBookingCheckoutSession({
       amountPaid,
     };
   }
-
-  const bookingRecord: BookingRecord = {
-    id: insertedLead?.id ? `paid_${insertedLead.id}` : `paid_${stripeSession.id}`,
-    siteId,
-    serviceId,
-    date: preferredDate,
-    time: timeWindow,
-    durationMinutes: durationTier,
-    name,
-    phone,
-    email,
-    note: combinedNotes || undefined,
-    status: 'confirmed',
-    createdAt: now,
-    updatedAt: now,
-  };
+  try {
+    await addBooking(siteId, bookingRecord);
+  } catch (error) {
+    return {
+      ok: false,
+      created: false,
+      message: `Payment received, but booking sync failed: ${
+        error instanceof Error ? error.message : 'unknown error'
+      }`,
+      serviceName,
+      amountPaid,
+    };
+  }
   const bookingService = {
     id: serviceId,
     name: serviceName,
