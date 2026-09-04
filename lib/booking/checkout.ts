@@ -247,14 +247,13 @@ async function createSessionForAccount(args: {
         requestOptions: args.requestOptions,
       })
     : null;
-
   const session = await stripe.checkout.sessions.create(
     {
       mode: 'payment',
       success_url: successUrl,
       cancel_url: cancelUrl,
       customer_creation: 'always',
-      allow_promotion_codes: true,
+      allow_promotion_codes: promotionCodeId ? undefined : true,
       discounts: promotionCodeId ? [{ promotion_code: promotionCodeId }] : undefined,
       line_items: [
         {
