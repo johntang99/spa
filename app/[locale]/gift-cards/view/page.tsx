@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { getRequestSiteId } from '@/lib/content';
+import { getRequestSiteId, loadSiteInfo } from '@/lib/content';
 import { getGiftCardPublicView } from '@/lib/gift-cards/commerce';
+import { isExternalBookingUrl, resolveBookingUrl } from '@/lib/spa/booking-url';
 
 type Props = {
   params: { locale: Locale };
@@ -34,6 +35,8 @@ export default async function GiftCardViewPage({ params, searchParams }: Props) 
   if (!token) notFound();
 
   const siteId = await getRequestSiteId();
+  const siteInfo = (await loadSiteInfo(siteId, locale)) as { externalBookingUrl?: string } | null;
+  const bookHref = resolveBookingUrl(siteInfo?.externalBookingUrl, locale);
   const data = await getGiftCardPublicView({ siteId, token });
   if (!data) {
     return (
@@ -154,9 +157,20 @@ export default async function GiftCardViewPage({ params, searchParams }: Props) 
             </div>
 
             <div style={{ marginTop: 18 }}>
-              <Link className="btn btn-primary btn-sm" href={`/${locale}/book`}>
-                {locale === 'zh' ? '预约服务' : 'Book now'}
-              </Link>
+              {isExternalBookingUrl(bookHref) ? (
+                <a
+                  className="btn btn-primary btn-sm"
+                  href={bookHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {locale === 'zh' ? '预约服务' : 'Book now'}
+                </a>
+              ) : (
+                <Link className="btn btn-primary btn-sm" href={bookHref}>
+                  {locale === 'zh' ? '预约服务' : 'Book now'}
+                </Link>
+              )}
             </div>
           </div>
         </div>

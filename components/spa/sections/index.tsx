@@ -30,6 +30,7 @@ import ArticleHero from './ArticleHero';
 import ReviewedBy from './ReviewedBy';
 import Toc from './Toc';
 import type { Locale } from '@/lib/i18n';
+import { isExternalBookingUrl } from '@/lib/spa/booking-url';
 
 export interface SectionCtx {
   locale: Locale;
@@ -52,9 +53,18 @@ const BADGE_LABELS: Record<string, { en: string; zh: string }> = {
 };
 const badgeLabel = (badge: string, loc: string) => (BADGE_LABELS[badge] ? (loc === 'zh' ? BADGE_LABELS[badge].zh : BADGE_LABELS[badge].en) : badge);
 // Locale-prefix internal paths only; leave same-page anchors (#), tel:, mailto:, and external URLs alone.
-const linkHref = (href: string | undefined, loc: string): string => {
+// Booking paths follow site.externalBookingUrl when a third-party scheduler is configured.
+const linkHref = (href: string | undefined, loc: string, externalBookingUrl?: string): string => {
   if (!href) return '#';
   if (/^(#|tel:|mailto:|https?:)/.test(href)) return href;
+  const looksLikeBook =
+    href === '/book' ||
+    href.startsWith('/book?') ||
+    href === `/${loc}/book` ||
+    href.startsWith(`/${loc}/book?`);
+  if (looksLikeBook && isExternalBookingUrl(externalBookingUrl)) {
+    return externalBookingUrl!.trim();
+  }
   if (href.startsWith('/')) return href === `/${loc}` || href.startsWith(`/${loc}/`) ? href : `/${loc}${href}`;
   return href;
 };
@@ -72,11 +82,23 @@ export function Media({ image, label, phClass, style }: { image?: string; label?
   return <div className={phClass} style={style} data-label={label} />;
 }
 
-function TierChips({ service, locale }: { service: Service; locale: string }) {
+function TierChips({
+  service,
+  locale,
+  externalBookingUrl,
+}: {
+  service: Service;
+  locale: string;
+  externalBookingUrl?: string;
+}) {
   return (
     <div className="menu-tiers">
       {service.tiers.map((tier) => (
-        <Link key={tier.minutes} className="chip" href={bookHref(locale, service.id, tier.minutes)}>
+        <Link
+          key={tier.minutes}
+          className="chip"
+          href={bookHref(locale, service.id, tier.minutes, externalBookingUrl)}
+        >
           {tier.minutes}m <strong>{fmtPrice(tier.price)}</strong>
         </Link>
       ))}
@@ -130,8 +152,8 @@ function HeroBody({ data, ctx, center = false, onDark = true }: { data: any; ctx
         </div>
       ) : null}
       <div className="reveal" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8, justifyContent: j }}>
-        {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
-        {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
+        {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.ctaPrimary.label}</Link>}
+        {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.ctaSecondary.label}</Link>}
       </div>
     </div>
   );
@@ -169,8 +191,8 @@ export function Hero({ data, ctx }: { data: any; ctx: SectionCtx }) {
         <h1 className="reveal" style={{ marginTop: data.eyebrow ? 16 : 0 }}>{data.headline}</h1>
         {data.subline && <p className="reveal" style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', marginTop: 14, maxWidth: '54ch' }}>{data.subline}</p>}
         <div className="reveal" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 24 }}>
-          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
-          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
+          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.ctaPrimary.label}</Link>}
+          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.ctaSecondary.label}</Link>}
         </div>
         {data.badges?.length ? (
           <div className="reveal" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 22 }}>
@@ -361,7 +383,13 @@ export function ServiceCards({ data, ctx }: { data: any; ctx: SectionCtx }) {
               <div className="card-body">
                 <h3 style={{ marginBottom: 4 }}>{s.name}{s.badge ? <span className="pill-tag" style={{ marginLeft: 8 }}>{badgeLabel(s.badge, ctx.locale)}</span> : null}</h3>
                 <p className="small" style={{ marginBottom: 12 }}>{s.short}</p>
-                {data.showTierChips !== false && <TierChips service={s} locale={ctx.locale} />}
+                {data.showTierChips !== false && (
+                  <TierChips
+                    service={s}
+                    locale={ctx.locale}
+                    externalBookingUrl={ctx.siteInfo?.externalBookingUrl}
+                  />
+                )}
               </div>
             </div>
           ))}
@@ -424,7 +452,7 @@ export function FeaturePanel({ data, ctx }: { data: any; ctx: SectionCtx }) {
           <h2>{data.heading}</h2>
           <p>{data.body}</p>
           {data.bullets?.length ? <ul>{data.bullets.map((b: string, i: number) => <li key={i}>{b}</li>)}</ul> : null}
-          {data.cta && <Link className="btn btn-outline" href={linkHref(data.cta.href, ctx.locale)}>{data.cta.label}</Link>}
+          {data.cta && <Link className="btn btn-outline" href={linkHref(data.cta.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.cta.label}</Link>}
         </div>
         {!flip && <Media image={data.media} label={data.heading} phClass="ph ph-warm" style={{ aspectRatio: '4/3', borderRadius: 'var(--radius-card)' }} />}
       </div>
@@ -439,7 +467,7 @@ export function PromoStrip({ data, ctx }: { data: any; ctx: SectionCtx }) {
       <div className="container reveal" style={{ textAlign: 'center' }}>
         <h2 style={{ marginBottom: 8 }}>{data.heading}</h2>
         {data.subline && <p style={{ marginBottom: 16 }}>{data.subline}</p>}
-        {data.cta && <Link className="btn btn-primary" href={linkHref(data.cta.href, ctx.locale)}>{data.cta.label}</Link>}
+        {data.cta && <Link className="btn btn-primary" href={linkHref(data.cta.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.cta.label}</Link>}
       </div>
     </Section>
   );
@@ -545,8 +573,8 @@ export function CtaBanner({ data, ctx }: { data: any; ctx: SectionCtx }) {
         <h2 style={{ maxWidth: '24ch', margin: '0 auto 12px' }}>{data.heading}</h2>
         {data.subline && <p style={{ color: 'var(--text-inverse-muted)', marginBottom: 18 }}>{data.subline}</p>}
         <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale)}>{data.ctaPrimary.label}</Link>}
-          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale)}>{data.ctaSecondary.label}</Link>}
+          {data.ctaPrimary && <Link className="btn btn-primary" href={linkHref(data.ctaPrimary.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.ctaPrimary.label}</Link>}
+          {data.ctaSecondary && <Link className="btn btn-outline" href={linkHref(data.ctaSecondary.href, ctx.locale, ctx.siteInfo?.externalBookingUrl)}>{data.ctaSecondary.label}</Link>}
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}><TrustCluster ctx={ctx} /></div>
       </div>

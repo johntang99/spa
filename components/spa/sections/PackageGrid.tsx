@@ -42,7 +42,16 @@ export default function PackageGrid({ data, ctx }: { data: any; ctx: SectionCtx 
                     {savings > 0 && <span className="small" style={{ textDecoration: 'line-through', color: 'var(--mist-strong)' }}>{fmtPrice(value)}</span>}
                     {savings > 0 && <span className="pill-tag">{tr('save', '省')} {fmtPrice(savings)}</span>}
                   </div>
-                  <Link className="btn btn-primary btn-sm" href={`/${ctx.locale}/book?package=${p.id}`}>{tr('Book this', '预约此套餐')}</Link>
+                  <Link
+                    className="btn btn-primary btn-sm"
+                    href={
+                      /^https?:\/\//i.test(String(ctx.siteInfo?.externalBookingUrl || ''))
+                        ? String(ctx.siteInfo.externalBookingUrl).trim()
+                        : `/${ctx.locale}/book?package=${p.id}`
+                    }
+                  >
+                    {tr('Book this', '预约此套餐')}
+                  </Link>
                 </div>
               </div>
             );

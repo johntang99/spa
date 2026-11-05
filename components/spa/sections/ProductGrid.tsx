@@ -13,6 +13,7 @@ type GiftProduct = {
   id: string;
   label: string;
   amount: number;
+  type?: 'denomination' | 'treatment';
   active?: boolean;
   image?: string;
   stripeLink?: string;
@@ -20,9 +21,22 @@ type GiftProduct = {
 
 export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx }) {
   const refs: string[] = data.productRefs || [];
-  const products = refs
-    .map((id) => (ctx.giftCards || []).find((p: GiftProduct) => p.id === id))
-    .filter(Boolean) as GiftProduct[];
+  const catalog = (ctx.giftCards || []) as GiftProduct[];
+  const expectedType =
+    data.variant === 'treatments' ? 'treatment' : data.variant === 'denominations' ? 'denomination' : null;
+  // Prefer the refs listed on the page, then fill any matching active cards
+  // missing from that list. Always cheapest first so managers only set price.
+  const byId = new Map(catalog.map((product) => [product.id, product]));
+  const fromRefs = refs.map((id) => byId.get(id)).filter(Boolean) as GiftProduct[];
+  const extras = catalog.filter(
+    (product) =>
+      product.active !== false &&
+      !refs.includes(product.id) &&
+      (!expectedType || product.type === expectedType)
+  );
+  const products = [...fromRefs, ...extras]
+    .filter((product) => product.active !== false)
+    .sort((a, b) => Number(a.amount || 0) - Number(b.amount || 0));
   const tr = (en: string, zh: string) => (ctx.locale === 'zh' ? zh : en);
   const [selectedProduct, setSelectedProduct] = useState<GiftProduct | null>(null);
   const [recipientName, setRecipientName] = useState('');

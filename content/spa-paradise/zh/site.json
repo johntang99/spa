@@ -18,13 +18,34 @@
   "headerVariant": "stacked",
   "timezone": "America/New_York",
   "hours": [
-    { "days": [0, 1, 2, 3, 4, 5, 6], "open": "09:00", "close": "21:00" }
+    {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00"
+    }
   ],
-  "languagesSpoken": ["en", "zh"],
+  "languagesSpoken": [
+    "en",
+    "zh"
+  ],
   "wechatId": "",
-  "externalBookingUrl": "",
+  "externalBookingUrl": "https://spaparadise-middletown.setmore.com/",
   "responsePromise": "我们将在一个工作小时内回复",
   "licenseLine": "所有理疗师均持纽约州执照 (LMT)",
-  "geo": { "lat": 41.4459, "lng": -74.4229 },
-  "gbp": { "rating": 4.8, "reviewCount": 212 }
+  "geo": {
+    "lat": 41.4459,
+    "lng": -74.4229
+  },
+  "gbp": {
+    "rating": 4.8,
+    "reviewCount": 212
+  }
 }

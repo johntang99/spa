@@ -12,7 +12,15 @@ function priceFor(s: Service, minutes: number): number | null {
   return tier ? tier.price : null;
 }
 
-function Row({ s, locale }: { s: Service; locale: string }) {
+function Row({
+  s,
+  locale,
+  externalBookingUrl,
+}: {
+  s: Service;
+  locale: string;
+  externalBookingUrl?: string;
+}) {
   return (
     <div className="menu-grid-row">
       <div>
@@ -23,7 +31,7 @@ function Row({ s, locale }: { s: Service; locale: string }) {
         const p = priceFor(s, m);
         return p != null ? (
           <span key={m} className="price num" data-min={m} style={{ textAlign: 'right', fontVariantNumeric: 'tabular-nums', fontWeight: 500 }}>
-            <Link href={bookHref(locale, s.id, m)} style={{ textDecoration: 'none', color: 'var(--char)' }}>{fmtPrice(p)}</Link>
+            <Link href={bookHref(locale, s.id, m, externalBookingUrl)} style={{ textDecoration: 'none', color: 'var(--char)' }}>{fmtPrice(p)}</Link>
           </span>
         ) : (
           <span key={m} className="price num" style={{ textAlign: 'right', color: 'var(--mist)' }}>—</span>
@@ -47,7 +55,7 @@ export default function MenuTable({ data, ctx }: { data: any; ctx: SectionCtx })
             {s.tiers.map((t) => (
               <li key={t.minutes} className="menu-row">
                 <span className="menu-name"><span>{t.minutes} {ctx.locale === 'zh' ? '分钟' : 'min'}</span><span className="leader" /></span>
-                <Link className="btn btn-primary btn-sm" href={bookHref(ctx.locale, s.id, t.minutes)}>{ctx.locale === 'zh' ? '预约' : 'Book'} {fmtPrice(t.price)}</Link>
+                <Link className="btn btn-primary btn-sm" href={bookHref(ctx.locale, s.id, t.minutes, ctx.siteInfo?.externalBookingUrl)}>{ctx.locale === 'zh' ? '预约' : 'Book'} {fmtPrice(t.price)}</Link>
               </li>
             ))}
           </ul>
@@ -73,7 +81,14 @@ export default function MenuTable({ data, ctx }: { data: any; ctx: SectionCtx })
                 <span>{ctx.locale === 'zh' ? '护理' : 'Treatment'}</span>
                 {DURATIONS.map((m) => <span key={m} style={{ textAlign: 'right' }}>{m} {ctx.locale === 'zh' ? '分钟' : 'min'}</span>)}
               </div>
-              {svcs.map((s) => <Row key={s.id} s={s} locale={ctx.locale} />)}
+              {svcs.map((s) => (
+                <Row
+                  key={s.id}
+                  s={s}
+                  locale={ctx.locale}
+                  externalBookingUrl={ctx.siteInfo?.externalBookingUrl}
+                />
+              ))}
             </div>
           );
         })}

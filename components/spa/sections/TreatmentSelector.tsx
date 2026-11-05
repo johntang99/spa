@@ -81,7 +81,10 @@ export default function TreatmentSelector({ data, ctx }: { data: any; ctx: Secti
                       <div className="card-body">
                         <h3 style={{ marginBottom: 4 }}>{s.name}</h3>
                         <p className="small" style={{ marginBottom: 10 }}>{s.short}</p>
-                        <Link className="btn btn-primary btn-sm" href={bookHref(loc, s.id, tier.minutes)}>
+                        <Link
+                          className="btn btn-primary btn-sm"
+                          href={bookHref(loc, s.id, tier.minutes, ctx.siteInfo?.externalBookingUrl)}
+                        >
                           {tr('Book', '预约')} · {tier.minutes}m {fmtPrice(tier.price)}
                         </Link>
                       </div>

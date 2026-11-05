@@ -2,6 +2,7 @@
 // (single source); columns + compliance bar from footer.json. Server component.
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
+import { isExternalBookingUrl, resolveBookingUrl } from '@/lib/spa/booking-url';
 
 interface FooterLink { url: string; text: string }
 interface FooterConfig {
@@ -13,7 +14,7 @@ interface FooterConfig {
 }
 interface SiteInfo {
   clinicName?: string; address?: string; phone?: string; phoneHref?: string;
-  email?: string; licenseLine?: string;
+  email?: string; licenseLine?: string; externalBookingUrl?: string;
 }
 
 export default function SpaFooter({
@@ -70,7 +71,16 @@ export default function SpaFooter({
 
           <div>
             <h4>{isZh ? '到访' : 'Visit'}</h4>
-            <Link href={`/${locale}/book`}>{isZh ? '立即预约' : 'Book Now'}</Link><br />
+            {(() => {
+              const bookHref = resolveBookingUrl(siteInfo?.externalBookingUrl, locale);
+              const label = isZh ? '立即预约' : 'Book Now';
+              return isExternalBookingUrl(bookHref) ? (
+                <a href={bookHref} target="_blank" rel="noopener noreferrer">{label}</a>
+              ) : (
+                <Link href={bookHref}>{label}</Link>
+              );
+            })()}
+            <br />
             <Link href={`/${locale}/contact`}>{isZh ? '联系与时间' : 'Contact & Hours'}</Link><br />
             <Link href={`/${locale}/massage-middletown-ny`}>{isZh ? '米德尔敦按摩' : 'Massage in Middletown, NY'}</Link>
           </div>

@@ -33,8 +33,15 @@ export function getService(catalog: Catalog, id: string): Service | undefined {
   return (catalog.services || []).find((s) => s.id === id && s.enabled);
 }
 
-/** Book deep-link with service + duration prefill. */
-export function bookHref(locale: string, serviceId?: string, minutes?: number): string {
+/** Book deep-link with service + duration prefill. External schedulers ignore the query. */
+export function bookHref(
+  locale: string,
+  serviceId?: string,
+  minutes?: number,
+  externalBookingUrl?: string | null
+): string {
+  const external = (externalBookingUrl || '').trim();
+  if (/^https?:\/\//i.test(external)) return external;
   const params = new URLSearchParams();
   if (serviceId) params.set('service', serviceId);
   if (minutes) params.set('duration', String(minutes));

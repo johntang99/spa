@@ -232,7 +232,13 @@ export default function SpaHeader({
         </nav>
 
         <div className="header-actions">
-          <Link className="btn btn-primary btn-sm" href={ctaHref}>{ctaLabel}</Link>
+          {/^https?:\/\//i.test(ctaHref) ? (
+            <a className="btn btn-primary btn-sm" href={ctaHref} target="_blank" rel="noopener noreferrer">
+              {ctaLabel}
+            </a>
+          ) : (
+            <Link className="btn btn-primary btn-sm" href={ctaHref}>{ctaLabel}</Link>
+          )}
           <button
             className="nav-toggle"
             aria-label="Menu"

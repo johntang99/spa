@@ -1,6 +1,6 @@
 {
   "cta": {
-    "link": "/zh/book",
+    "link": "https://spaparadise-middletown.setmore.com/",
     "text": "立即预约"
   },
   "menu": {
@@ -14,14 +14,38 @@
       "subtext": "米德尔敦日间水疗"
     },
     "items": [
-      { "url": "/zh", "text": "首页" },
-      { "url": "/zh/services", "text": "护理项目" },
-      { "url": "/zh/pricing", "text": "价格" },
-      { "url": "/zh/gift-cards", "text": "礼品卡" },
-      { "url": "/zh/packages", "text": "套餐" },
-      { "url": "/zh/gallery", "text": "诊所环境" },
-      { "url": "/zh/about", "text": "关于我们" },
-      { "url": "/zh/contact", "text": "联系我们" }
+      {
+        "url": "/zh",
+        "text": "首页"
+      },
+      {
+        "url": "/zh/services",
+        "text": "护理项目"
+      },
+      {
+        "url": "/zh/pricing",
+        "text": "价格"
+      },
+      {
+        "url": "/zh/gift-cards",
+        "text": "礼品卡"
+      },
+      {
+        "url": "/zh/packages",
+        "text": "套餐"
+      },
+      {
+        "url": "/zh/gallery",
+        "text": "诊所环境"
+      },
+      {
+        "url": "/zh/about",
+        "text": "关于我们"
+      },
+      {
+        "url": "/zh/contact",
+        "text": "联系我们"
+      }
     ],
     "variant": "mega",
     "fontWeight": "semibold"
@@ -34,5 +58,8 @@
     "phoneHref": "tel:+18458006600",
     "addressHref": "https://maps.google.com/?q=12+Grove+St,+Middletown,+NY+10940"
   },
-  "languages": ["en", "zh"]
+  "languages": [
+    "en",
+    "zh"
+  ]
 }
