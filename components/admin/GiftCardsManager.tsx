@@ -1,11 +1,12 @@
 'use client';
 
 /**
- * Gift card catalog — price + image for each card sold on /gift-cards.
+ * Gift card catalog — sold on /gift-cards.
  *
- * Stored in content/<site>/<locale>/collections/gift-cards.json. Amounts,
- * images, type, and active status are shared across languages; labels stay
- * per locale. Checkout already uses Stripe Connect with these amounts.
+ * Fields: label, description, original price, promotion price (amount), image.
+ * Stored in content/<site>/<locale>/collections/gift-cards.json. Prices, images,
+ * type, and active are shared across languages; label + description stay per
+ * locale. Stripe checkout uses the promotion price (amount).
  */
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -18,7 +19,9 @@ type GiftCardProduct = {
   id: string;
   type: 'denomination' | 'treatment';
   label: string;
+  description?: string;
   amount: number;
+  originalPrice?: number;
   image?: string;
   stripeLink?: string;
   stripePriceId?: string;
@@ -116,6 +119,7 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
         id: item.id,
         type: item.type,
         amount: item.amount,
+        originalPrice: item.originalPrice || 0,
         image: item.image || '',
         stripeLink: item.stripeLink || '',
         stripePriceId: item.stripePriceId || '',
@@ -123,6 +127,7 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
         order: index + 1,
         serviceRef: item.serviceRef || '',
         label: prev?.label || item.label,
+        description: prev?.description ?? item.description ?? '',
       };
     });
   };
@@ -136,6 +141,8 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
         .map((item, index) => ({
           ...item,
           amount: Math.max(0, Math.round(Number(item.amount) || 0)),
+          originalPrice: Math.max(0, Math.round(Number(item.originalPrice) || 0)),
+          description: String(item.description || '').trim(),
           active: item.active !== false,
           order: index + 1,
           image: item.image || '',
@@ -196,7 +203,9 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
         id,
         type: 'denomination',
         label: `$${amount} Gift Card`,
+        description: '',
         amount,
+        originalPrice: 0,
         image: '',
         stripeLink: '',
         stripePriceId: '',
@@ -219,8 +228,8 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
         <div>
           <h1 className="text-2xl font-semibold text-gray-900">Gift Cards</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Add or remove cards sold on the Gift Cards page. Checkout uses Stripe Connect
-            with the price you set here.
+            Add or remove cards sold on the Gift Cards page. Show an original price and a
+            promotion price; Stripe checkout charges the promotion price.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -307,7 +316,7 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
                 </button>
 
                 <div className="grid gap-3 sm:grid-cols-2">
-                  <div>
+                  <div className="sm:col-span-2">
                     <label className={labelCls}>Label</label>
                     <input
                       className={input}
@@ -315,8 +324,40 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
                       onChange={(event) => patch(index, { label: event.target.value })}
                     />
                   </div>
+                  <div className="sm:col-span-2">
+                    <label className={labelCls}>Description</label>
+                    <textarea
+                      className={`${input} min-h-[72px]`}
+                      rows={3}
+                      value={item.description || ''}
+                      onChange={(event) => patch(index, { description: event.target.value })}
+                      placeholder={'Half-hour Body Massage ($35)\n+ Half-hour Foot Reflexology ($35)'}
+                    />
+                    <p className="mt-1 text-[11px] text-gray-400">
+                      Shown under the title. Use line breaks for multiple lines.
+                    </p>
+                  </div>
                   <div>
-                    <label className={labelCls}>Price (USD)</label>
+                    <label className={labelCls}>Original price (USD)</label>
+                    <input
+                      className={input}
+                      type="number"
+                      min={0}
+                      step={1}
+                      value={item.originalPrice ?? ''}
+                      onChange={(event) =>
+                        patch(index, {
+                          originalPrice: Math.max(0, Number(event.target.value) || 0),
+                        })
+                      }
+                      placeholder="70"
+                    />
+                    <p className="mt-1 text-[11px] text-gray-400">
+                      Strikethrough when higher than promotion price.
+                    </p>
+                  </div>
+                  <div>
+                    <label className={labelCls}>Promotion price (USD)</label>
                     <input
                       className={input}
                       type="number"
@@ -336,6 +377,9 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
                         patch(index, next);
                       }}
                     />
+                    <p className="mt-1 text-[11px] text-gray-400">
+                      Charged at Stripe checkout.
+                    </p>
                   </div>
                   <div>
                     <label className={labelCls}>Type</label>
@@ -412,12 +456,20 @@ export function GiftCardsManager({ sites, selectedSiteId, selectedLocale }: Prop
         <div className="rounded-xl border border-gray-200 bg-white p-4">
           <h2 className="text-sm font-semibold text-gray-900">Storefront order (by price)</h2>
           <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm text-gray-600">
-            {sortedPreview.map((item) => (
-              <li key={item.id}>
-                {item.label} · ${Number(item.amount || 0)}
-                {item.active === false ? ' · hidden' : ''}
-              </li>
-            ))}
+            {sortedPreview.map((item) => {
+              const original = Number(item.originalPrice || 0);
+              const promo = Number(item.amount || 0);
+              const priceLabel =
+                original > promo
+                  ? `$${original} → $${promo}`
+                  : `$${promo}`;
+              return (
+                <li key={item.id}>
+                  {item.label} · {priceLabel}
+                  {item.active === false ? ' · hidden' : ''}
+                </li>
+              );
+            })}
           </ol>
         </div>
       ) : null}

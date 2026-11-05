@@ -1008,7 +1008,9 @@ export function ContentEditor({
         id: '',
         type: 'denomination',
         label: '',
+        description: '',
         amount: 0,
+        originalPrice: 0,
         image: '',
         stripeLink: '',
         stripePriceId: '',
@@ -3326,7 +3328,25 @@ export function ContentEditor({
                                     />
                                   </div>
                                   <div>
-                                    <label className="block text-xs text-gray-500">Amount</label>
+                                    <label className="block text-xs text-gray-500">
+                                      Original price
+                                    </label>
+                                    <input
+                                      type="number"
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      value={Number(item?.originalPrice || 0)}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'originalPrice'],
+                                          Number(event.target.value || 0)
+                                        )
+                                      }
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="block text-xs text-gray-500">
+                                      Promotion price
+                                    </label>
                                     <input
                                       type="number"
                                       className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
@@ -3337,6 +3357,21 @@ export function ContentEditor({
                                           Number(event.target.value || 0)
                                         )
                                       }
+                                    />
+                                  </div>
+                                  <div className="md:col-span-2">
+                                    <label className="block text-xs text-gray-500">Description</label>
+                                    <textarea
+                                      className="mt-1 w-full rounded-md border border-gray-200 px-3 py-2 text-sm"
+                                      rows={3}
+                                      value={String(item?.description || '')}
+                                      onChange={(event) =>
+                                        updateGiftCardsCollectionValue(
+                                          ['items', String(index), 'description'],
+                                          event.target.value
+                                        )
+                                      }
+                                      placeholder="Half-hour Body Massage ($35)&#10;+ Half-hour Foot Reflexology ($35)"
                                     />
                                   </div>
                                   <div>

@@ -428,6 +428,48 @@
 }
 .spa-site .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-1); }
 .spa-site .card-body { padding: 24px; }
+.spa-site .gift-card-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spa-site .gift-card-title {
+  margin: 0 0 8px;
+  font-family: var(--s-font-display);
+  font-size: 1.35rem;
+  color: var(--ink-pine);
+  font-weight: 400;
+}
+.spa-site .gift-card-desc {
+  margin: 0 0 12px;
+  white-space: pre-line;
+  font-family: var(--s-font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--char-soft);
+}
+.spa-site .gift-card-prices {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  font-family: var(--s-font-display);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.spa-site .gift-card-price-original {
+  color: #c0392b;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  font-size: 1.35rem;
+}
+.spa-site .gift-card-price-promo {
+  color: #e8783a;
+  font-weight: 600;
+}
 .spa-site .on-dark .card { background: var(--surface-immersion-elev); border-color: var(--border-dark); box-shadow: none; }
 
 /* ---------- MENU (signature treatment) ---------- */

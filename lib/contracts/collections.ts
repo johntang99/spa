@@ -113,7 +113,9 @@ export const giftCardProductSchema = z.object({
   id: slug,
   type: z.enum(['denomination', 'treatment']),
   label: locReq,
-  amount: z.number().nonnegative(),
+  description: z.string().optional().or(z.literal('')),
+  amount: z.number().nonnegative(), // promotion / checkout price
+  originalPrice: z.number().nonnegative().optional(), // list price; strikethrough when > amount
   serviceRef: ref.optional(),
   image: mediaRef.optional(),
   stripeLink: z.string().url().optional().or(z.literal('')), // empty → button disabled + admin flag

@@ -12,7 +12,9 @@ import Modal, { ModalFooter } from '@/components/ui/Modal';
 type GiftProduct = {
   id: string;
   label: string;
+  description?: string;
   amount: number;
+  originalPrice?: number;
   type?: 'denomination' | 'treatment';
   active?: boolean;
   image?: string;
@@ -131,25 +133,28 @@ export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx 
                 typeof p.stripeLink === 'string' && /^https?:\/\//.test(p.stripeLink)
                   ? p.stripeLink
                   : '';
+              const original = Number(p.originalPrice || 0);
+              const promo = Number(p.amount || 0);
+              const showOriginal = original > promo && promo >= 0;
+              const description = String(p.description || '').trim();
               return (
-                <div key={p.id} className="card reveal">
+                <div key={p.id} className="card reveal gift-card-tile">
                   <Media
                     image={p.image}
                     label={p.label}
                     phClass="ph ph-warm"
                     style={{ aspectRatio: '16/9' }}
                   />
-                  <div className="card-body">
-                    <h3 style={{ marginBottom: 4 }}>{p.label}</h3>
-                    <p
-                      className="num"
-                      style={{
-                        fontFamily: 'var(--s-font-display)',
-                        fontSize: '1.6rem',
-                        color: 'var(--candle-deep)',
-                      }}
-                    >
-                      {fmtPrice(p.amount)}
+                  <div className="card-body gift-card-body">
+                    <h3 className="gift-card-title">{p.label}</h3>
+                    {description ? (
+                      <p className="gift-card-desc">{description}</p>
+                    ) : null}
+                    <p className="num gift-card-prices">
+                      {showOriginal ? (
+                        <span className="gift-card-price-original">{fmtPrice(original)}</span>
+                      ) : null}
+                      <span className="gift-card-price-promo">{fmtPrice(promo)}</span>
                     </p>
                     {canBuy ? externalStripeLink ? (
                       <a
@@ -204,7 +209,15 @@ export default function ProductGrid({ data, ctx }: { data: any; ctx: SectionCtx 
       >
         <div className="space-y-3">
           <div className="text-sm text-gray-600">
-            {selectedProduct ? `${selectedProduct.label} · ${fmtPrice(selectedProduct.amount)}` : ''}
+            {selectedProduct
+              ? (() => {
+                  const original = Number(selectedProduct.originalPrice || 0);
+                  const promo = Number(selectedProduct.amount || 0);
+                  return original > promo
+                    ? `${selectedProduct.label} · ${fmtPrice(original)} → ${fmtPrice(promo)}`
+                    : `${selectedProduct.label} · ${fmtPrice(promo)}`;
+                })()
+              : ''}
           </div>
           <label className="block text-sm text-gray-700">
             <span className="font-medium">
